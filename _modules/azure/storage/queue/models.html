@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.queue.models &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.queue.models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.queue.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># pylint: disable=too-few-public-methods, too-many-instance-attributes</span>
+<span class="c1"># pylint: disable=super-init-not-called</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span> <span class="c1"># pylint: disable=unused-import</span>
+<span class="kn">from</span> <span class="nn">azure.core.paging</span> <span class="k">import</span> <span class="n">PageIterator</span>
+<span class="kn">from</span> <span class="nn">._shared.response_handlers</span> <span class="k">import</span> <span class="n">return_context_and_deserialized</span><span class="p">,</span> <span class="n">process_storage_error</span>
+<span class="kn">from</span> <span class="nn">._shared.models</span> <span class="k">import</span> <span class="n">DictMixin</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">StorageErrorException</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">AccessPolicy</span> <span class="k">as</span> <span class="n">GenAccessPolicy</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">Logging</span> <span class="k">as</span> <span class="n">GeneratedLogging</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">Metrics</span> <span class="k">as</span> <span class="n">GeneratedMetrics</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">RetentionPolicy</span> <span class="k">as</span> <span class="n">GeneratedRetentionPolicy</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">CorsRule</span> <span class="k">as</span> <span class="n">GeneratedCorsRule</span>
+
+
+<div class="viewcode-block" id="Logging"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.Logging">[docs]</a><span class="k">class</span> <span class="nc">Logging</span><span class="p">(</span><span class="n">GeneratedLogging</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Azure Analytics Logging settings.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar str version: Required. The version of Storage Analytics to configure.</span>
+<span class="sd">    :ivar bool delete: Required. Indicates whether all delete requests should be logged.</span>
+<span class="sd">    :ivar bool read: Required. Indicates whether all read requests should be logged.</span>
+<span class="sd">    :ivar bool write: Required. Indicates whether all write requests should be logged.</span>
+<span class="sd">    :ivar retention_policy: Required.</span>
+<span class="sd">        The retention policy for the metrics.</span>
+<span class="sd">    :vartype retention_policy: ~azure.storage.queue.models.RetentionPolicy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;1.0&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;read&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;write&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retention_policy</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;retention_policy&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">RetentionPolicy</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Metrics"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.Metrics">[docs]</a><span class="k">class</span> <span class="nc">Metrics</span><span class="p">(</span><span class="n">GeneratedMetrics</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A summary of request statistics grouped by API in hour or minute aggregates.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar str version: The version of Storage Analytics to configure.</span>
+<span class="sd">    :ivar bool enabled: Required. Indicates whether metrics are enabled for the service.</span>
+<span class="sd">    :ivar bool include_ap_is: Indicates whether metrics should generate summary</span>
+<span class="sd">        statistics for called API operations.</span>
+<span class="sd">    :ivar retention_policy: Required.</span>
+<span class="sd">        The retention policy for the metrics.</span>
+<span class="sd">    :vartype retention_policy: ~azure.storage.queue.models.RetentionPolicy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;1.0&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">include_apis</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;include_apis&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retention_policy</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;retention_policy&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">RetentionPolicy</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="RetentionPolicy"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.RetentionPolicy">[docs]</a><span class="k">class</span> <span class="nc">RetentionPolicy</span><span class="p">(</span><span class="n">GeneratedRetentionPolicy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The retention policy which determines how long the associated data should</span>
+<span class="sd">    persist.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param bool enabled: Required. Indicates whether a retention policy is enabled</span>
+<span class="sd">        for the storage service.</span>
+<span class="sd">    :param int days: Indicates the number of days that metrics or logging or</span>
+<span class="sd">        soft-deleted data should be retained. All data older than this value will</span>
+<span class="sd">        be deleted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="o">=</span> <span class="n">days</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;If policy is enabled, &#39;days&#39; must be specified.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CorsRule"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.CorsRule">[docs]</a><span class="k">class</span> <span class="nc">CorsRule</span><span class="p">(</span><span class="n">GeneratedCorsRule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;CORS is an HTTP feature that enables a web application running under one</span>
+<span class="sd">    domain to access resources in another domain. Web browsers implement a</span>
+<span class="sd">    security restriction known as same-origin policy that prevents a web page</span>
+<span class="sd">    from calling APIs in a different domain; CORS provides a secure way to</span>
+<span class="sd">    allow one domain (the origin domain) to call APIs in another domain.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param list(str) allowed_origins:</span>
+<span class="sd">        A list of origin domains that will be allowed via CORS, or &quot;*&quot; to allow</span>
+<span class="sd">        all domains. The list of must contain at least one entry. Limited to 64</span>
+<span class="sd">        origin domains. Each allowed origin can have up to 256 characters.</span>
+<span class="sd">    :param list(str) allowed_methods:</span>
+<span class="sd">        A list of HTTP methods that are allowed to be executed by the origin.</span>
+<span class="sd">        The list of must contain at least one entry. For Azure Storage,</span>
+<span class="sd">        permitted methods are DELETE, GET, HEAD, MERGE, POST, OPTIONS or PUT.</span>
+<span class="sd">    :param int max_age_in_seconds:</span>
+<span class="sd">        The number of seconds that the client/browser should cache a</span>
+<span class="sd">        pre-flight response.</span>
+<span class="sd">    :param list(str) exposed_headers:</span>
+<span class="sd">        Defaults to an empty list. A list of response headers to expose to CORS</span>
+<span class="sd">        clients. Limited to 64 defined headers and two prefixed headers. Each</span>
+<span class="sd">        header can be up to 256 characters.</span>
+<span class="sd">    :param list(str) allowed_headers:</span>
+<span class="sd">        Defaults to an empty list. A list of headers allowed to be part of</span>
+<span class="sd">        the cross-origin request. Limited to 64 defined headers and 2 prefixed</span>
+<span class="sd">        headers. Each header can be up to 256 characters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_origins</span><span class="p">,</span> <span class="n">allowed_methods</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_origins</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">allowed_origins</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">allowed_methods</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_headers</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;allowed_headers&#39;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exposed_headers</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;exposed_headers&#39;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_age_in_seconds</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_age_in_seconds&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AccessPolicy"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.AccessPolicy">[docs]</a><span class="k">class</span> <span class="nc">AccessPolicy</span><span class="p">(</span><span class="n">GenAccessPolicy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Access Policy class used by the set and get access policy methods.</span>
+
+<span class="sd">    A stored access policy can specify the start time, expiry time, and</span>
+<span class="sd">    permissions for the Shared Access Signatures with which it&#39;s associated.</span>
+<span class="sd">    Depending on how you want to control access to your resource, you can</span>
+<span class="sd">    specify all of these parameters within the stored access policy, and omit</span>
+<span class="sd">    them from the URL for the Shared Access Signature. Doing so permits you to</span>
+<span class="sd">    modify the associated signature&#39;s behavior at any time, as well as to revoke</span>
+<span class="sd">    it. Or you can specify one or more of the access policy parameters within</span>
+<span class="sd">    the stored access policy, and the others on the URL. Finally, you can</span>
+<span class="sd">    specify all of the parameters on the URL. In this case, you can use the</span>
+<span class="sd">    stored access policy to revoke the signature, but not to modify its behavior.</span>
+
+<span class="sd">    Together the Shared Access Signature and the stored access policy must</span>
+<span class="sd">    include all fields required to authenticate the signature. If any required</span>
+<span class="sd">    fields are missing, the request will fail. Likewise, if a field is specified</span>
+<span class="sd">    both in the Shared Access Signature URL and in the stored access policy, the</span>
+<span class="sd">    request will fail with status code 400 (Bad Request).</span>
+
+<span class="sd">    :param str permission:</span>
+<span class="sd">        The permissions associated with the shared access signature. The</span>
+<span class="sd">        user is restricted to operations allowed by the permissions.</span>
+<span class="sd">        Required unless an id is given referencing a stored access policy</span>
+<span class="sd">        which contains this field. This field must be omitted if it has been</span>
+<span class="sd">        specified in an associated stored access policy.</span>
+<span class="sd">    :param expiry:</span>
+<span class="sd">        The time at which the shared access signature becomes invalid.</span>
+<span class="sd">        Required unless an id is given referencing a stored access policy</span>
+<span class="sd">        which contains this field. This field must be omitted if it has</span>
+<span class="sd">        been specified in an associated stored access policy. Azure will always</span>
+<span class="sd">        convert values to UTC. If a date is passed in without timezone info, it</span>
+<span class="sd">        is assumed to be UTC.</span>
+<span class="sd">    :type expiry: datetime or str</span>
+<span class="sd">    :param start:</span>
+<span class="sd">        The time at which the shared access signature becomes valid. If</span>
+<span class="sd">        omitted, start time for this call is assumed to be the time when the</span>
+<span class="sd">        storage service receives the request. Azure will always convert values</span>
+<span class="sd">        to UTC. If a date is passed in without timezone info, it is assumed to</span>
+<span class="sd">        be UTC.</span>
+<span class="sd">    :type start: datetime or str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expiry</span> <span class="o">=</span> <span class="n">expiry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">permission</span> <span class="o">=</span> <span class="n">permission</span></div>
+
+
+<div class="viewcode-block" id="QueueMessage"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.QueueMessage">[docs]</a><span class="k">class</span> <span class="nc">QueueMessage</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Queue message class.</span>
+
+<span class="sd">    :ivar str id:</span>
+<span class="sd">        A GUID value assigned to the message by the Queue service that</span>
+<span class="sd">        identifies the message in the queue. This value may be used together</span>
+<span class="sd">        with the value of pop_receipt to delete a message from the queue after</span>
+<span class="sd">        it has been retrieved with the receive messages operation.</span>
+<span class="sd">    :ivar date insertion_time:</span>
+<span class="sd">        A UTC date value representing the time the messages was inserted.</span>
+<span class="sd">    :ivar date expiration_time:</span>
+<span class="sd">        A UTC date value representing the time the message expires.</span>
+<span class="sd">    :ivar int dequeue_count:</span>
+<span class="sd">        Begins with a value of 1 the first time the message is received. This</span>
+<span class="sd">        value is incremented each time the message is subsequently received.</span>
+<span class="sd">    :param obj content:</span>
+<span class="sd">        The message content. Type is determined by the decode_function set on</span>
+<span class="sd">        the service. Default is str.</span>
+<span class="sd">    :ivar str pop_receipt:</span>
+<span class="sd">        A receipt str which can be used together with the message_id element to</span>
+<span class="sd">        delete a message from the queue after it has been retrieved with the receive</span>
+<span class="sd">        messages operation. Only returned by receive messages operations. Set to</span>
+<span class="sd">        None for peek messages.</span>
+<span class="sd">    :ivar date time_next_visible:</span>
+<span class="sd">        A UTC date value representing the time the message will next be visible.</span>
+<span class="sd">        Only returned by receive messages operations. Set to None for peek messages.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insertion_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expiration_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dequeue_count</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pop_receipt</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_next_visible</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">generated</span><span class="o">.</span><span class="n">message_text</span><span class="p">)</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">message_id</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">insertion_time</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">insertion_time</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">expiration_time</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">expiration_time</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">dequeue_count</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">dequeue_count</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">generated</span><span class="p">,</span> <span class="s1">&#39;pop_receipt&#39;</span><span class="p">):</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">pop_receipt</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">pop_receipt</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">time_next_visible</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">time_next_visible</span>
+        <span class="k">return</span> <span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="MessagesPaged"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.html#azure.storage.queue.models.MessagesPaged">[docs]</a><span class="k">class</span> <span class="nc">MessagesPaged</span><span class="p">(</span><span class="n">PageIterator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An iterable of Queue Messages.</span>
+
+<span class="sd">    :ivar int results_per_page: The maximum number of results retrieved per API call.</span>
+<span class="sd">    :ivar current_page: The current page of listed results.</span>
+<span class="sd">    :vartype current_page: list(~azure.storage.queue.models.QueueMessage)</span>
+
+<span class="sd">    :param callable command: Function to retrieve the next page of items.</span>
+<span class="sd">    :param int results_per_page: The maximum number of messages to retrieve per</span>
+<span class="sd">        call.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">continuation_token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">continuation_token</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This operation does not support continuation token&quot;</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">MessagesPaged</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_next_cb</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_extract_data_cb</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="n">results_per_page</span>
+
+    <span class="k">def</span> <span class="nf">_get_next_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">continuation_token</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">(</span><span class="n">number_of_messages</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_extract_data_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">):</span> <span class="c1"># pylint: disable=no-self-use</span>
+        <span class="c1"># There is no concept of continuation token, so raising on my own condition</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">(</span><span class="s2">&quot;End of paging&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;TOKEN_IGNORED&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">QueueMessage</span><span class="o">.</span><span class="n">_from_generated</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">]</span>  <span class="c1"># pylint: disable=protected-access</span></div>
+
+
+<div class="viewcode-block" id="QueueProperties"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.QueueProperties">[docs]</a><span class="k">class</span> <span class="nc">QueueProperties</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Queue Properties.</span>
+
+<span class="sd">    :ivar str name: The name of the queue.</span>
+<span class="sd">    :ivar metadata:</span>
+<span class="sd">        A dict containing name-value pairs associated with the queue as metadata.</span>
+<span class="sd">        This var is set to None unless the include=metadata param was included</span>
+<span class="sd">        for the list queues operation. If this parameter was specified but the</span>
+<span class="sd">        queue has no metadata, metadata will be set to an empty dictionary.</span>
+<span class="sd">    :vartype metadata: dict(str, str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">approximate_message_count</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-approximate-messages-count&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="k">return</span> <span class="n">props</span></div>
+
+
+<div class="viewcode-block" id="QueuePropertiesPaged"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.html#azure.storage.queue.models.QueuePropertiesPaged">[docs]</a><span class="k">class</span> <span class="nc">QueuePropertiesPaged</span><span class="p">(</span><span class="n">PageIterator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An iterable of Queue properties.</span>
+
+<span class="sd">    :ivar str service_endpoint: The service URL.</span>
+<span class="sd">    :ivar str prefix: A queue name prefix being used to filter the list.</span>
+<span class="sd">    :ivar str marker: The continuation token of the current page of results.</span>
+<span class="sd">    :ivar int results_per_page: The maximum number of results retrieved per API call.</span>
+<span class="sd">    :ivar str next_marker: The continuation token to retrieve the next page of results.</span>
+<span class="sd">    :ivar str location_mode: The location mode being used to list results. The available</span>
+<span class="sd">        options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :ivar current_page: The current page of listed results.</span>
+<span class="sd">    :vartype current_page: list(~azure.storage.queue.models.QueueProperties)</span>
+
+<span class="sd">    :param callable command: Function to retrieve the next page of items.</span>
+<span class="sd">    :param str prefix: Filters the results to return only queues whose names</span>
+<span class="sd">        begin with the specified prefix.</span>
+<span class="sd">    :param int results_per_page: The maximum number of queue names to retrieve per</span>
+<span class="sd">        call.</span>
+<span class="sd">    :param str continuation_token: An opaque continuation token.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">continuation_token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">QueuePropertiesPaged</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_next_cb</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_extract_data_cb</span><span class="p">,</span>
+            <span class="n">continuation_token</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="n">results_per_page</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_get_next_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">continuation_token</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">(</span>
+                <span class="n">marker</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">maxresults</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_context_and_deserialized</span><span class="p">,</span>
+                <span class="n">use_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_extract_data_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_next_return</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span> <span class="o">=</span> <span class="n">get_next_return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">service_endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">marker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">max_results</span>
+        <span class="n">props_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">QueueProperties</span><span class="o">.</span><span class="n">_from_generated</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">queue_items</span><span class="p">]</span> <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">next_marker</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="n">props_list</span></div>
+
+
+<div class="viewcode-block" id="QueuePermissions"><a class="viewcode-back" href="../../../../ref/azure.storage.queue.aio.html#azure.storage.queue.models.QueuePermissions">[docs]</a><span class="k">class</span> <span class="nc">QueuePermissions</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;QueuePermissions class to be used with</span>
+<span class="sd">    :func:`~azure.storage.queue.queue_client.QueueClient.generate_shared_access_signature`</span>
+<span class="sd">    method and for the AccessPolicies used with</span>
+<span class="sd">    :func:`~azure.storage.queue.queue_client.QueueClient.set_queue_access_policy`.</span>
+
+<span class="sd">    :ivar QueuePermissions QueuePermissions.READ:</span>
+<span class="sd">        Read metadata and properties, including message count. Peek at messages.</span>
+<span class="sd">    :ivar QueuePermissions QueuePermissions.ADD:</span>
+<span class="sd">        Add messages to the queue.</span>
+<span class="sd">    :ivar QueuePermissions QueuePermissions.UPDATE:</span>
+<span class="sd">        Update messages in the queue. Note: Use the Process permission with</span>
+<span class="sd">        Update so you can first get the message you want to update.</span>
+<span class="sd">    :ivar QueuePermissions QueuePermissions.PROCESS: Delete entities.</span>
+<span class="sd">        Get and delete messages from the queue.</span>
+<span class="sd">    :param bool read:</span>
+<span class="sd">        Read metadata and properties, including message count. Peek at messages.</span>
+<span class="sd">    :param bool add:</span>
+<span class="sd">        Add messages to the queue.</span>
+<span class="sd">    :param bool update:</span>
+<span class="sd">        Update messages in the queue. Note: Use the Process permission with</span>
+<span class="sd">        Update so you can first get the message you want to update.</span>
+<span class="sd">    :param bool process:</span>
+<span class="sd">        Get and delete messages from the queue.</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the permissions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">READ</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: QueuePermissions</span>
+    <span class="n">ADD</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: QueuePermissions</span>
+    <span class="n">UPDATE</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: QueuePermissions</span>
+    <span class="n">PROCESS</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: QueuePermissions</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">process</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="o">=</span> <span class="n">read</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;r&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span> <span class="o">=</span> <span class="n">add</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="o">=</span> <span class="n">update</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;u&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">process</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;r&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;u&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span></div>
+
+
+<span class="n">QueuePermissions</span><span class="o">.</span><span class="n">READ</span> <span class="o">=</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">QueuePermissions</span><span class="o">.</span><span class="n">ADD</span> <span class="o">=</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">QueuePermissions</span><span class="o">.</span><span class="n">UPDATE</span> <span class="o">=</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">QueuePermissions</span><span class="o">.</span><span class="n">PROCESS</span> <span class="o">=</span> <span class="n">QueuePermissions</span><span class="p">(</span><span class="n">process</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

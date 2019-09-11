@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.keyvault.keys.models &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.keyvault.keys.models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.keyvault.keys.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation.</span>
+<span class="c1"># Licensed under the MIT License.</span>
+<span class="c1"># -------------------------------------</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">namedtuple</span>
+<span class="kn">from</span> <span class="nn">._shared</span> <span class="k">import</span> <span class="n">parse_vault_id</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">TYPE_CHECKING</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">TYPE_CHECKING</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="c1"># pylint:disable=unused-import</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+    <span class="kn">from</span> <span class="nn">._shared._generated.v7_0</span> <span class="k">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">_models</span>
+
+<span class="n">KeyOperationResult</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;KeyOperationResult&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+<div class="viewcode-block" id="JsonWebKey"><a class="viewcode-back" href="../../../../ref/azure.keyvault.keys.html#azure.keyvault.keys.models.JsonWebKey">[docs]</a><span class="k">class</span> <span class="nc">JsonWebKey</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="c1"># pylint:disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;As of http://tools.ietf.org/html/draft-ietf-jose-json-web-key-18. All parameters are optional.</span>
+
+<span class="sd">    :param str kid: Key identifier.</span>
+<span class="sd">    :param kty: Key Type (kty), as defined in https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40</span>
+<span class="sd">    :type kty: str or ~azure.keyvault.keys.enums.JsonWebKeyType</span>
+<span class="sd">    :param key_ops: Allowed operations for the key</span>
+<span class="sd">    :type key_ops: list(~azure.keyvault.keys.enums.JsonWebKeyOperation)</span>
+<span class="sd">    :param bytes n: RSA modulus.</span>
+<span class="sd">    :param bytes e: RSA public exponent.</span>
+<span class="sd">    :param bytes d: RSA private exponent, or the D component of an EC private key.</span>
+<span class="sd">    :param bytes dp: RSA private key parameter.</span>
+<span class="sd">    :param bytes dq: RSA private key parameter.</span>
+<span class="sd">    :param bytes qi: RSA private key parameter.</span>
+<span class="sd">    :param bytes p: RSA secret prime.</span>
+<span class="sd">    :param bytes q: RSA secret prime, with p &lt; q.</span>
+<span class="sd">    :param bytes k: Symmetric key.</span>
+<span class="sd">    :param bytes t: HSM Token, used with &#39;Bring Your Own Key&#39;.</span>
+<span class="sd">    :param crv: Elliptic curve name.</span>
+<span class="sd">    :type crv: str or ~azure.keyvault.keys.enums.JsonWebKeyCurveName</span>
+<span class="sd">    :param bytes x: X component of an EC public key.</span>
+<span class="sd">    :param bytes y: Y component of an EC public key.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (**Any) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">JsonWebKey</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;kid&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kty</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;kty&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key_ops</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key_ops&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dp</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dp&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dq</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dq&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qi</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;qi&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crv</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;crv&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="KeyBase"><a class="viewcode-back" href="../../../../ref/azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase">[docs]</a><span class="k">class</span> <span class="nc">KeyBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A key&#39;s id and attributes.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">vault_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (_models.KeyAttributes, str, **Any) -&gt; None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span> <span class="o">=</span> <span class="n">attributes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">vault_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vault_id</span> <span class="o">=</span> <span class="n">parse_vault_id</span><span class="p">(</span><span class="n">vault_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_managed</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;managed&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tags</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tags&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_key_bundle</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key_bundle</span><span class="p">):</span>
+        <span class="c1"># type: (_models.KeyBundle) -&gt; KeyBase</span>
+        <span class="sd">&quot;&quot;&quot;Construct a KeyBase from an autorest-generated KeyBundle&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span> <span class="n">key_bundle</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">kid</span><span class="p">,</span> <span class="n">managed</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">managed</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_key_item</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key_item</span><span class="p">):</span>
+        <span class="c1"># type: (_models.KeyItem) -&gt; KeyBase</span>
+        <span class="sd">&quot;&quot;&quot;Construct a KeyBase from an autorest-generated KeyItem&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">key_item</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span> <span class="n">key_item</span><span class="o">.</span><span class="n">kid</span><span class="p">,</span> <span class="n">managed</span><span class="o">=</span><span class="n">key_item</span><span class="o">.</span><span class="n">managed</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">key_item</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;:rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;:rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vault_id</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;:rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vault_id</span><span class="o">.</span><span class="n">version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;:rtype: bool&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">enabled</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">not_before</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The key&#39;s not-before time, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">not_before</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expires</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the key will expire, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">expires</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">created</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the key was created, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">created</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">updated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the key was last updated, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">updated</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vault_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        URL of the vault containing the key</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vault_id</span><span class="o">.</span><span class="n">vault_url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recovery_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The vault&#39;s deletion recovery level for keys</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="o">.</span><span class="n">recovery_level</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Dict[str, str]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Application specific metadata in the form of key-value pairs</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tags</span></div>
+
+
+<div class="viewcode-block" id="Key"><a class="viewcode-back" href="../../../../ref/azure.keyvault.keys.html#azure.keyvault.keys.models.Key">[docs]</a><span class="k">class</span> <span class="nc">Key</span><span class="p">(</span><span class="n">KeyBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A key&#39;s attributes and cryptographic material&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">vault_id</span><span class="p">,</span> <span class="n">key_material</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (_models.KeyAttributes, str, _models.JsonWebKey, **Any) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Key</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">vault_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_material</span> <span class="o">=</span> <span class="n">key_material</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_key_bundle</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key_bundle</span><span class="p">):</span>
+        <span class="c1"># type: (_models.KeyBundle) -&gt; Key</span>
+        <span class="sd">&quot;&quot;&quot;Construct a Key from an autorest-generated KeyBundle&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+            <span class="n">vault_id</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">kid</span><span class="p">,</span>
+            <span class="n">key_material</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+            <span class="n">managed</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">managed</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">key_bundle</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">key_material</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; _models.JsonWebKey</span>
+        <span class="sd">&quot;&quot;&quot;The JSON web key&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_material</span></div>
+
+
+<div class="viewcode-block" id="DeletedKey"><a class="viewcode-back" href="../../../../ref/azure.keyvault.keys.html#azure.keyvault.keys.models.DeletedKey">[docs]</a><span class="k">class</span> <span class="nc">DeletedKey</span><span class="p">(</span><span class="n">Key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A deleted key&#39;s id, attributes, and cryptographic material, as well as when it will be purged&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">attributes</span><span class="p">,</span>  <span class="c1"># type: _models.KeyAttributes</span>
+        <span class="n">vault_id</span><span class="p">,</span>  <span class="c1"># type: str</span>
+        <span class="n">key_material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: _models.JsonWebKey</span>
+        <span class="n">deleted_date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[datetime]</span>
+        <span class="n">recovery_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="n">scheduled_purge_date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[datetime]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: **Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DeletedKey</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">vault_id</span><span class="p">,</span> <span class="n">key_material</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deleted_date</span> <span class="o">=</span> <span class="n">deleted_date</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recovery_id</span> <span class="o">=</span> <span class="n">recovery_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scheduled_purge_date</span> <span class="o">=</span> <span class="n">scheduled_purge_date</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_deleted_key_bundle</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">deleted_key_bundle</span><span class="p">):</span>
+        <span class="c1"># type: (_models.DeletedKeyBundle) -&gt; DeletedKey</span>
+        <span class="sd">&quot;&quot;&quot;Construct a DeletedKey from an autorest-generated DeletedKeyBundle&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+            <span class="n">vault_id</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">kid</span><span class="p">,</span>
+            <span class="n">key_material</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+            <span class="n">deleted_date</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">deleted_date</span><span class="p">,</span>
+            <span class="n">recovery_id</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">recovery_id</span><span class="p">,</span>
+            <span class="n">scheduled_purge_date</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">scheduled_purge_date</span><span class="p">,</span>
+            <span class="n">managed</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">managed</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">deleted_key_bundle</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_deleted_key_item</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">deleted_key_item</span><span class="p">):</span>
+        <span class="c1"># type: (_models.DeletedKeyItem) -&gt; DeletedKey</span>
+        <span class="sd">&quot;&quot;&quot;Construct a DeletedKey from an autorest-generated DeletedKeyItem&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+            <span class="n">vault_id</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">kid</span><span class="p">,</span>
+            <span class="n">deleted_date</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">deleted_date</span><span class="p">,</span>
+            <span class="n">recovery_id</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">recovery_id</span><span class="p">,</span>
+            <span class="n">scheduled_purge_date</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">scheduled_purge_date</span><span class="p">,</span>
+            <span class="n">managed</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">managed</span><span class="p">,</span>
+            <span class="n">tags</span><span class="o">=</span><span class="n">deleted_key_item</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deleted_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the key was deleted, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deleted_date</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recovery_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        An identifier used to recover the deleted key</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recovery_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">scheduled_purge_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the key is scheduled to be purged, in UTC</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scheduled_purge_date</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

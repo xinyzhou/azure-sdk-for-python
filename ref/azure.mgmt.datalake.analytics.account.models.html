@@ -1,0 +1,1467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.datalake.analytics.account.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.datalake.analytics.account.operations module" href="azure.mgmt.datalake.analytics.account.operations.html" />
+    <link rel="prev" title="azure.mgmt.datalake.analytics.account package" href="azure.mgmt.datalake.analytics.account.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.datalake.analytics.account.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.operations.html">azure.mgmt.datalake.analytics.account.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html#module-azure.mgmt.datalake.analytics.account">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a> &raquo;</li>
+        
+      <li>azure.mgmt.datalake.analytics.account.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.datalake.analytics.account.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.datalake.analytics.account.models">
+<span id="azure-mgmt-datalake-analytics-account-models-module"></span><h1>azure.mgmt.datalake.analytics.account.models module<a class="headerlink" href="#module-azure.mgmt.datalake.analytics.account.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifer.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location" title="azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location"><strong>location</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource location.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">SubResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/sub_resource_py3.html#SubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The resource model definition for a nested resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeStoreAccountInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_store_account_information_py3.html#DataLakeStoreAccountInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.sub_resource_py3.SubResource</span></code></p>
+<p>Data Lake Store account information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the Data Lake Store account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.StorageAccountInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">StorageAccountInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/storage_account_information_py3.html#StorageAccountInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.StorageAccountInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.sub_resource_py3.SubResource</span></code></p>
+<p>Azure Storage account information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.ComputePolicy">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">ComputePolicy</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/compute_policy_py3.html#ComputePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.ComputePolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.sub_resource_py3.SubResource</span></code></p>
+<p>Data Lake Analytics compute policy information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD object identifier for the entity to create a
+policy for.</p></li>
+<li><p><strong>object_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="azure.mgmt.datalake.analytics.account.models.AADObjectType"><em>AADObjectType</em></a>) – The type of AAD object the object identifier refers to.
+Possible values include: ‘User’, ‘Group’, ‘ServicePrincipal’</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum degree of parallelism
+per job this user can use to submit jobs.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum priority per job this user can use
+to submit jobs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/firewall_rule_py3.html#FirewallRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.sub_resource_py3.SubResource</span></code></p>
+<p>Data Lake Analytics firewall rule information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The start IP address for the firewall rule. This
+can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The end IP address for the firewall rule. This can
+be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeAnalyticsAccount</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_py3.html#DataLakeAnalyticsAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.resource_py3.Resource</span></code></p>
+<p>A Data Lake Analytics account object, containing all information associated
+with the named Data Lake Analytics account.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifer.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location" title="azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location"><strong>location</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource location.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+<li><p><strong>account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique identifier associated with this Data Lake
+Analytics account.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus" title="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus"><em>DataLakeAnalyticsAccountStatus</em></a>) – The provisioning status of the Data Lake
+Analytics account. Possible values include: ‘Failed’, ‘Creating’,
+‘Running’, ‘Succeeded’, ‘Patching’, ‘Suspending’, ‘Resuming’, ‘Deleting’,
+‘Deleted’, ‘Undeleting’, ‘Canceled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState" title="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState"><em>DataLakeAnalyticsAccountState</em></a>) – The state of the Data Lake Analytics account. Possible values
+include: ‘Active’, ‘Suspended’</p></li>
+<li><p><strong>creation_time</strong> (<em>datetime</em>) – The account creation time.</p></li>
+<li><p><strong>last_modified_time</strong> (<em>datetime</em>) – The account last modified time.</p></li>
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full CName endpoint for this account.</p></li>
+<li><p><strong>default_data_lake_store_account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The default Data Lake Store account
+associated with this account.</p></li>
+<li><p><strong>data_lake_store_accounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation" title="azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation"><em>DataLakeStoreAccountInformation</em></a><em>]</em>) – The list of Data Lake Store accounts
+associated with this account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.storage.html#azure.mgmt.storage.StorageManagementClient.storage_accounts" title="azure.mgmt.storage.StorageManagementClient.storage_accounts"><strong>storage_accounts</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.StorageAccountInformation" title="azure.mgmt.datalake.analytics.account.models.StorageAccountInformation"><em>StorageAccountInformation</em></a><em>]</em>) – The list of Azure Blob Storage accounts associated
+with this account.</p></li>
+<li><p><strong>compute_policies</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.ComputePolicy" title="azure.mgmt.datalake.analytics.account.models.ComputePolicy"><em>ComputePolicy</em></a><em>]</em>) – The list of compute policies associated with this
+account.</p></li>
+<li><p><strong>firewall_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallRule" title="azure.mgmt.datalake.analytics.account.models.FirewallRule"><em>FirewallRule</em></a><em>]</em>) – The list of firewall rules associated with this
+account.</p></li>
+<li><p><strong>firewall_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallState" title="azure.mgmt.datalake.analytics.account.models.FirewallState"><em>FirewallState</em></a>) – The current state of the IP address firewall for
+this account. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>firewall_allow_azure_ips</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState" title="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState"><em>FirewallAllowAzureIpsState</em></a>) – The current state of allowing or
+disallowing IPs originating within Azure through the firewall. If the
+firewall is disabled, this is not enforced. Possible values include:
+‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>new_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.TierType" title="azure.mgmt.datalake.analytics.account.models.TierType"><em>TierType</em></a>) – The commitment tier for the next month. Possible values
+include: ‘Consumption’, ‘Commitment_100AUHours’, ‘Commitment_500AUHours’,
+‘Commitment_1000AUHours’, ‘Commitment_5000AUHours’,
+‘Commitment_10000AUHours’, ‘Commitment_50000AUHours’,
+‘Commitment_100000AUHours’, ‘Commitment_500000AUHours’</p></li>
+<li><p><strong>current_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.TierType" title="azure.mgmt.datalake.analytics.account.models.TierType"><em>TierType</em></a>) – The commitment tier in use for the current month.
+Possible values include: ‘Consumption’, ‘Commitment_100AUHours’,
+‘Commitment_500AUHours’, ‘Commitment_1000AUHours’,
+‘Commitment_5000AUHours’, ‘Commitment_10000AUHours’,
+‘Commitment_50000AUHours’, ‘Commitment_100000AUHours’,
+‘Commitment_500000AUHours’</p></li>
+<li><p><strong>max_job_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported jobs running under the account
+at the same time. Default value: 3 .</p></li>
+<li><p><strong>system_max_job_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The system defined maximum supported jobs
+running under the account at the same time, which restricts the maximum
+number of running jobs the user can set for the account.</p></li>
+<li><p><strong>max_degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism for this account. Default value: 30 .</p></li>
+<li><p><strong>system_max_degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The system defined maximum
+supported degree of parallelism for this account, which restricts the
+maximum value of parallelism the user can set for the account.</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism per job for this account.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum supported priority per job for
+this account.</p></li>
+<li><p><strong>query_store_retention</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of days that job metadata is
+retained. Default value: 30 .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeAnalyticsAccountBasic</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_basic_py3.html#DataLakeAnalyticsAccountBasic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.resource_py3.Resource</span></code></p>
+<p>A Data Lake Analytics account object, containing all information associated
+with the named Data Lake Analytics account.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifer.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location" title="azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location"><strong>location</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource location.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+<li><p><strong>account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique identifier associated with this Data Lake
+Analytics account.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus" title="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus"><em>DataLakeAnalyticsAccountStatus</em></a>) – The provisioning status of the Data Lake
+Analytics account. Possible values include: ‘Failed’, ‘Creating’,
+‘Running’, ‘Succeeded’, ‘Patching’, ‘Suspending’, ‘Resuming’, ‘Deleting’,
+‘Deleted’, ‘Undeleting’, ‘Canceled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState" title="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState"><em>DataLakeAnalyticsAccountState</em></a>) – The state of the Data Lake Analytics account. Possible values
+include: ‘Active’, ‘Suspended’</p></li>
+<li><p><strong>creation_time</strong> (<em>datetime</em>) – The account creation time.</p></li>
+<li><p><strong>last_modified_time</strong> (<em>datetime</em>) – The account last modified time.</p></li>
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full CName endpoint for this account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.StorageContainer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">StorageContainer</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/storage_container_py3.html#StorageContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.StorageContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.account.models.sub_resource_py3.SubResource</span></code></p>
+<p>Azure Storage blob container information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource identifier.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type.</p></li>
+<li><p><strong>last_modified_time</strong> (<em>datetime</em>) – The last modified time of the blob container.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.SasTokenInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">SasTokenInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/sas_token_information_py3.html#SasTokenInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SasTokenInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SAS token information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>access_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The access token for the associated Azure Storage
+Container.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The display information for a particular operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource provider of the operation.</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.resource" title="azure.core.polling.async_poller.AsyncPollingMethod.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type of the operation.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A friendly name of the operation.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A friendly description of the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An available operation for Data Lake Analytics.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the operation.</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.OperationDisplay" title="azure.mgmt.datalake.analytics.account.models.OperationDisplay"><em>OperationDisplay</em></a>) – The display information for the operation.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.OperationOrigin" title="azure.mgmt.datalake.analytics.account.models.OperationOrigin"><em>OperationOrigin</em></a>) – The intended executor of the operation. Possible values
+include: ‘user’, ‘system’, ‘user,system’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationListResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">OperationListResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/operation_list_result_py3.html#OperationListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The list of available operations for Data Lake Analytics.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyOperationResult.value" title="azure.keyvault.keys.models.KeyOperationResult.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.Operation" title="azure.mgmt.datalake.analytics.account.models.Operation"><em>Operation</em></a><em>]</em>) – The results of the list operation.</p></li>
+<li><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link (url) to the next page of results.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CapabilityInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CapabilityInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/capability_information_py3.html#CapabilityInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CapabilityInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Subscription-level properties and limits for Data Lake Analytics.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription credentials that uniquely
+identifies the subscription.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState" title="azure.mgmt.datalake.analytics.account.models.SubscriptionState"><em>SubscriptionState</em></a>) – The subscription state. Possible values include:
+‘Registered’, ‘Suspended’, ‘Deleted’, ‘Unregistered’, ‘Warned’</p></li>
+<li><p><strong>max_account_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported number of accounts under
+this subscription.</p></li>
+<li><p><strong>account_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The current number of accounts under this
+subscription.</p></li>
+<li><p><strong>migration_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The Boolean value of true or false to indicate the
+maintenance state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.NameAvailabilityInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">NameAvailabilityInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/name_availability_information_py3.html#NameAvailabilityInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.NameAvailabilityInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics account name availability result information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The Boolean value of true or false to indicate
+whether the Data Lake Analytics account name is available or not.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason why the Data Lake Analytics account name is not
+available, if nameAvailable is false.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The message describing why the Data Lake Analytics account
+name is not available, if nameAvailable is false.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">AddDataLakeStoreWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/add_data_lake_store_with_account_parameters_py3.html#AddDataLakeStoreWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to add a new Data Lake Store account while creating a
+new Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the Data Lake Store account to
+add.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the Data Lake Store account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.AddStorageAccountWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">AddStorageAccountWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">access_key: str</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/add_storage_account_with_account_parameters_py3.html#AddStorageAccountWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AddStorageAccountWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to add a new Azure Storage account while creating a new
+Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the Azure Storage account to
+add.</p></li>
+<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The access key associated with this Azure
+Storage account that will be used to connect to it.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CreateComputePolicyWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CreateComputePolicyWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">object_type</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/create_compute_policy_with_account_parameters_py3.html#CreateComputePolicyWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CreateComputePolicyWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to create a new compute policy while creating a new
+Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the compute policy to create.</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The AAD object identifier for the entity to
+create a policy for.</p></li>
+<li><p><strong>object_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="azure.mgmt.datalake.analytics.account.models.AADObjectType"><em>AADObjectType</em></a>) – Required. The type of AAD object the object identifier
+refers to. Possible values include: ‘User’, ‘Group’, ‘ServicePrincipal’</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum degree of
+parallelism per job this user can use to submit jobs. This property, the
+min priority per job property, or both must be passed.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum priority per job this user can
+use to submit jobs. This property, the max degree of parallelism per job
+property, or both must be passed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CreateFirewallRuleWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CreateFirewallRuleWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">start_ip_address: str</em>, <em class="sig-param">end_ip_address: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/create_firewall_rule_with_account_parameters_py3.html#CreateFirewallRuleWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CreateFirewallRuleWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to create a new firewall rule while creating a new Data
+Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the firewall rule to create.</p></li>
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The start IP address for the firewall
+rule. This can be either ipv4 or ipv6. Start and End should be in the same
+protocol.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The end IP address for the firewall rule.
+This can be either ipv4 or ipv6. Start and End should be in the same
+protocol.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CreateDataLakeAnalyticsAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CreateDataLakeAnalyticsAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">default_data_lake_store_account: str</em>, <em class="sig-param">data_lake_store_accounts</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">compute_policies=None</em>, <em class="sig-param">firewall_rules=None</em>, <em class="sig-param">firewall_state=None</em>, <em class="sig-param">firewall_allow_azure_ips=None</em>, <em class="sig-param">new_tier=None</em>, <em class="sig-param">max_job_count: int = 3</em>, <em class="sig-param">max_degree_of_parallelism: int = 30</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">query_store_retention: int = 30</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/create_data_lake_analytics_account_parameters_py3.html#CreateDataLakeAnalyticsAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CreateDataLakeAnalyticsAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters to use for creating a Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+<li><p><strong>default_data_lake_store_account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The default Data Lake
+Store account associated with this account.</p></li>
+<li><p><strong>data_lake_store_accounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreWithAccountParameters"><em>AddDataLakeStoreWithAccountParameters</em></a><em>]</em>) – Required. The list of Data Lake Store
+accounts associated with this account.</p></li>
+<li><p><strong>storage_accounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AddStorageAccountWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.AddStorageAccountWithAccountParameters"><em>AddStorageAccountWithAccountParameters</em></a><em>]</em>) – The list of Azure Blob Storage accounts
+associated with this account.</p></li>
+<li><p><strong>compute_policies</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.CreateComputePolicyWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.CreateComputePolicyWithAccountParameters"><em>CreateComputePolicyWithAccountParameters</em></a><em>]</em>) – The list of compute policies associated with this
+account.</p></li>
+<li><p><strong>firewall_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.CreateFirewallRuleWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.CreateFirewallRuleWithAccountParameters"><em>CreateFirewallRuleWithAccountParameters</em></a><em>]</em>) – The list of firewall rules associated with this
+account.</p></li>
+<li><p><strong>firewall_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallState" title="azure.mgmt.datalake.analytics.account.models.FirewallState"><em>FirewallState</em></a>) – The current state of the IP address firewall for
+this account. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>firewall_allow_azure_ips</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState" title="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState"><em>FirewallAllowAzureIpsState</em></a>) – The current state of allowing or
+disallowing IPs originating within Azure through the firewall. If the
+firewall is disabled, this is not enforced. Possible values include:
+‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>new_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.TierType" title="azure.mgmt.datalake.analytics.account.models.TierType"><em>TierType</em></a>) – The commitment tier for the next month. Possible values
+include: ‘Consumption’, ‘Commitment_100AUHours’, ‘Commitment_500AUHours’,
+‘Commitment_1000AUHours’, ‘Commitment_5000AUHours’,
+‘Commitment_10000AUHours’, ‘Commitment_50000AUHours’,
+‘Commitment_100000AUHours’, ‘Commitment_500000AUHours’</p></li>
+<li><p><strong>max_job_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported jobs running under the account
+at the same time. Default value: 3 .</p></li>
+<li><p><strong>max_degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism for this account. Default value: 30 .</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism per job for this account.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum supported priority per job for
+this account.</p></li>
+<li><p><strong>query_store_retention</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of days that job metadata is
+retained. Default value: 30 .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateDataLakeStoreWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateDataLakeStoreWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_data_lake_store_with_account_parameters_py3.html#UpdateDataLakeStoreWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateDataLakeStoreWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update a Data Lake Store account while updating a
+Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the Data Lake Store account to
+update.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the Data Lake Store account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateStorageAccountWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">access_key: str = None</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_storage_account_with_account_parameters_py3.html#UpdateStorageAccountWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update an Azure Storage account while updating a
+Data Lake Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the Azure Storage account to
+update.</p></li>
+<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The updated access key associated with this Azure
+Storage account that will be used to connect to it.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateComputePolicyWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">object_id: str = None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_compute_policy_with_account_parameters_py3.html#UpdateComputePolicyWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update a compute policy while updating a Data Lake
+Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the compute policy to update.</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD object identifier for the entity to create a
+policy for.</p></li>
+<li><p><strong>object_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="azure.mgmt.datalake.analytics.account.models.AADObjectType"><em>AADObjectType</em></a>) – The type of AAD object the object identifier refers
+to. Possible values include: ‘User’, ‘Group’, ‘ServicePrincipal’</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum degree of
+parallelism per job this user can use to submit jobs. This property, the
+min priority per job property, or both must be passed.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum priority per job this user can
+use to submit jobs. This property, the max degree of parallelism per job
+property, or both must be passed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleWithAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateFirewallRuleWithAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">start_ip_address: str = None</em>, <em class="sig-param">end_ip_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_firewall_rule_with_account_parameters_py3.html#UpdateFirewallRuleWithAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleWithAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update a firewall rule while updating a Data Lake
+Analytics account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The unique name of the firewall rule to update.</p></li>
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The start IP address for the firewall rule. This
+can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The end IP address for the firewall rule. This can
+be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateDataLakeAnalyticsAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateDataLakeAnalyticsAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">data_lake_store_accounts=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">compute_policies=None</em>, <em class="sig-param">firewall_rules=None</em>, <em class="sig-param">firewall_state=None</em>, <em class="sig-param">firewall_allow_azure_ips=None</em>, <em class="sig-param">new_tier=None</em>, <em class="sig-param">max_job_count: int = None</em>, <em class="sig-param">max_degree_of_parallelism: int = None</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">query_store_retention: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_data_lake_analytics_account_parameters_py3.html#UpdateDataLakeAnalyticsAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateDataLakeAnalyticsAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters that can be used to update an existing Data Lake Analytics
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+<li><p><strong>data_lake_store_accounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.UpdateDataLakeStoreWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.UpdateDataLakeStoreWithAccountParameters"><em>UpdateDataLakeStoreWithAccountParameters</em></a><em>]</em>) – The list of Data Lake Store accounts
+associated with this account.</p></li>
+<li><p><strong>storage_accounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountWithAccountParameters"><em>UpdateStorageAccountWithAccountParameters</em></a><em>]</em>) – The list of Azure Blob storage accounts
+associated with this account.</p></li>
+<li><p><strong>compute_policies</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyWithAccountParameters"><em>UpdateComputePolicyWithAccountParameters</em></a><em>]</em>) – The list of compute policies associated with this
+account.</p></li>
+<li><p><strong>firewall_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleWithAccountParameters" title="azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleWithAccountParameters"><em>UpdateFirewallRuleWithAccountParameters</em></a><em>]</em>) – The list of firewall rules associated with this
+account.</p></li>
+<li><p><strong>firewall_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallState" title="azure.mgmt.datalake.analytics.account.models.FirewallState"><em>FirewallState</em></a>) – The current state of the IP address firewall for
+this account. Disabling the firewall does not remove existing rules, they
+will just be ignored until the firewall is re-enabled. Possible values
+include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>firewall_allow_azure_ips</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState" title="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState"><em>FirewallAllowAzureIpsState</em></a>) – The current state of allowing or
+disallowing IPs originating within Azure through the firewall. If the
+firewall is disabled, this is not enforced. Possible values include:
+‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>new_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.TierType" title="azure.mgmt.datalake.analytics.account.models.TierType"><em>TierType</em></a>) – The commitment tier to use for next month. Possible
+values include: ‘Consumption’, ‘Commitment_100AUHours’,
+‘Commitment_500AUHours’, ‘Commitment_1000AUHours’,
+‘Commitment_5000AUHours’, ‘Commitment_10000AUHours’,
+‘Commitment_50000AUHours’, ‘Commitment_100000AUHours’,
+‘Commitment_500000AUHours’</p></li>
+<li><p><strong>max_job_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported jobs running under the account
+at the same time.</p></li>
+<li><p><strong>max_degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism for this account.</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum supported degree of
+parallelism per job for this account.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum supported priority per job for
+this account.</p></li>
+<li><p><strong>query_store_retention</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of days that job metadata is
+retained.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">AddDataLakeStoreParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/add_data_lake_store_parameters_py3.html#AddDataLakeStoreParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AddDataLakeStoreParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to add a new Data Lake Store account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the Data Lake Store account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.AddStorageAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">AddStorageAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">access_key: str</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/add_storage_account_parameters_py3.html#AddStorageAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AddStorageAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to add a new Azure Storage account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The access key associated with this Azure
+Storage account that will be used to connect to it.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateStorageAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">access_key: str = None</em>, <em class="sig-param">suffix: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_storage_account_parameters_py3.html#UpdateStorageAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateStorageAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update an Azure Storage account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The updated access key associated with this Azure
+Storage account that will be used to connect to it.</p></li>
+<li><p><strong>suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The optional suffix for the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CreateOrUpdateComputePolicyParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CreateOrUpdateComputePolicyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">object_type</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/create_or_update_compute_policy_parameters_py3.html#CreateOrUpdateComputePolicyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CreateOrUpdateComputePolicyParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to create a new compute policy.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The AAD object identifier for the entity to
+create a policy for.</p></li>
+<li><p><strong>object_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="azure.mgmt.datalake.analytics.account.models.AADObjectType"><em>AADObjectType</em></a>) – Required. The type of AAD object the object identifier
+refers to. Possible values include: ‘User’, ‘Group’, ‘ServicePrincipal’</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum degree of
+parallelism per job this user can use to submit jobs. This property, the
+min priority per job property, or both must be passed.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum priority per job this user can
+use to submit jobs. This property, the max degree of parallelism per job
+property, or both must be passed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateComputePolicyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_id: str = None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">max_degree_of_parallelism_per_job: int = None</em>, <em class="sig-param">min_priority_per_job: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_compute_policy_parameters_py3.html#UpdateComputePolicyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateComputePolicyParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update a compute policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD object identifier for the entity to create a
+policy for.</p></li>
+<li><p><strong>object_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="azure.mgmt.datalake.analytics.account.models.AADObjectType"><em>AADObjectType</em></a>) – The type of AAD object the object identifier refers
+to. Possible values include: ‘User’, ‘Group’, ‘ServicePrincipal’</p></li>
+<li><p><strong>max_degree_of_parallelism_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum degree of
+parallelism per job this user can use to submit jobs. This property, the
+min priority per job property, or both must be passed.</p></li>
+<li><p><strong>min_priority_per_job</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum priority per job this user can
+use to submit jobs. This property, the max degree of parallelism per job
+property, or both must be passed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CreateOrUpdateFirewallRuleParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CreateOrUpdateFirewallRuleParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_ip_address: str</em>, <em class="sig-param">end_ip_address: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/create_or_update_firewall_rule_parameters_py3.html#CreateOrUpdateFirewallRuleParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CreateOrUpdateFirewallRuleParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to create a new firewall rule.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The start IP address for the firewall
+rule. This can be either ipv4 or ipv6. Start and End should be in the same
+protocol.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The end IP address for the firewall rule.
+This can be either ipv4 or ipv6. Start and End should be in the same
+protocol.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">UpdateFirewallRuleParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_ip_address: str = None</em>, <em class="sig-param">end_ip_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/update_firewall_rule_parameters_py3.html#UpdateFirewallRuleParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.UpdateFirewallRuleParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to update a firewall rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The start IP address for the firewall rule. This
+can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The end IP address for the firewall rule. This can
+be either ipv4 or ipv6. Start and End should be in the same protocol.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.CheckNameAvailabilityParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">CheckNameAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/check_name_availability_parameters_py3.html#CheckNameAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CheckNameAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics account name availability check parameters.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The Data Lake Analytics name to check availability
+for.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resource type. Note: This should not be set by
+the user, as the constant value is Microsoft.DataLakeAnalytics/accounts.
+Default value: “Microsoft.DataLakeAnalytics/accounts” .</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.CheckNameAvailabilityParameters.type">
+<code class="sig-name descname">type</code><em class="property"> = 'Microsoft.DataLakeAnalytics/accounts'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.CheckNameAvailabilityParameters.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasicPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeAnalyticsAccountBasicPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_basic_paged.html#DataLakeAnalyticsAccountBasicPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasicPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasic" title="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountBasic"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLakeAnalyticsAccountBasic</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeStoreAccountInformationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_store_account_information_paged.html#DataLakeStoreAccountInformationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation" title="azure.mgmt.datalake.analytics.account.models.DataLakeStoreAccountInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLakeStoreAccountInformation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.StorageAccountInformationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">StorageAccountInformationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/storage_account_information_paged.html#StorageAccountInformationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.StorageAccountInformationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.StorageAccountInformation" title="azure.mgmt.datalake.analytics.account.models.StorageAccountInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageAccountInformation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.StorageContainerPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">StorageContainerPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/storage_container_paged.html#StorageContainerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.StorageContainerPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.StorageContainer" title="azure.mgmt.datalake.analytics.account.models.StorageContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageContainer</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.SasTokenInformationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">SasTokenInformationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/sas_token_information_paged.html#SasTokenInformationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SasTokenInformationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.SasTokenInformation" title="azure.mgmt.datalake.analytics.account.models.SasTokenInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">SasTokenInformation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.ComputePolicyPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">ComputePolicyPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/compute_policy_paged.html#ComputePolicyPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.ComputePolicyPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.ComputePolicy" title="azure.mgmt.datalake.analytics.account.models.ComputePolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComputePolicy</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallRulePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">FirewallRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/firewall_rule_paged.html#FirewallRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallRulePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.account.models.FirewallRule" title="azure.mgmt.datalake.analytics.account.models.FirewallRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">FirewallRule</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.AADObjectType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">AADObjectType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#AADObjectType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.AADObjectType.group">
+<code class="sig-name descname">group</code><em class="property"> = 'Group'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType.group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.AADObjectType.service_principal">
+<code class="sig-name descname">service_principal</code><em class="property"> = 'ServicePrincipal'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType.service_principal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.AADObjectType.user">
+<code class="sig-name descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.AADObjectType.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">FirewallState</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#FirewallState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallState.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallState.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallState.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallState.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">FirewallAllowAzureIpsState</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#FirewallAllowAzureIpsState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.FirewallAllowAzureIpsState.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">TierType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#TierType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_100000_au_hours">
+<code class="sig-name descname">commitment_100000_au_hours</code><em class="property"> = 'Commitment_100000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_100000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_10000_au_hours">
+<code class="sig-name descname">commitment_10000_au_hours</code><em class="property"> = 'Commitment_10000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_10000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_1000_au_hours">
+<code class="sig-name descname">commitment_1000_au_hours</code><em class="property"> = 'Commitment_1000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_1000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_100_au_hours">
+<code class="sig-name descname">commitment_100_au_hours</code><em class="property"> = 'Commitment_100AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_100_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_500000_au_hours">
+<code class="sig-name descname">commitment_500000_au_hours</code><em class="property"> = 'Commitment_500000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_500000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_50000_au_hours">
+<code class="sig-name descname">commitment_50000_au_hours</code><em class="property"> = 'Commitment_50000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_50000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_5000_au_hours">
+<code class="sig-name descname">commitment_5000_au_hours</code><em class="property"> = 'Commitment_5000AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_5000_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.commitment_500_au_hours">
+<code class="sig-name descname">commitment_500_au_hours</code><em class="property"> = 'Commitment_500AUHours'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.commitment_500_au_hours" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.TierType.consumption">
+<code class="sig-name descname">consumption</code><em class="property"> = 'Consumption'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.TierType.consumption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeAnalyticsAccountStatus</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#DataLakeAnalyticsAccountStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.deleted">
+<code class="sig-name descname">deleted</code><em class="property"> = 'Deleted'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.deleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.patching">
+<code class="sig-name descname">patching</code><em class="property"> = 'Patching'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.patching" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.resuming">
+<code class="sig-name descname">resuming</code><em class="property"> = 'Resuming'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.resuming" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.running">
+<code class="sig-name descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.suspending">
+<code class="sig-name descname">suspending</code><em class="property"> = 'Suspending'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.suspending" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.undeleting">
+<code class="sig-name descname">undeleting</code><em class="property"> = 'Undeleting'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountStatus.undeleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">DataLakeAnalyticsAccountState</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#DataLakeAnalyticsAccountState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState.active">
+<code class="sig-name descname">active</code><em class="property"> = 'Active'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState.active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState.suspended">
+<code class="sig-name descname">suspended</code><em class="property"> = 'Suspended'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.DataLakeAnalyticsAccountState.suspended" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationOrigin">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">OperationOrigin</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#OperationOrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationOrigin.system">
+<code class="sig-name descname">system</code><em class="property"> = 'system'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationOrigin.system" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationOrigin.user">
+<code class="sig-name descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationOrigin.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.OperationOrigin.usersystem">
+<code class="sig-name descname">usersystem</code><em class="property"> = 'user,system'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.OperationOrigin.usersystem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.account.models.</code><code class="sig-name descname">SubscriptionState</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/account/models/data_lake_analytics_account_management_client_enums.html#SubscriptionState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState.deleted">
+<code class="sig-name descname">deleted</code><em class="property"> = 'Deleted'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState.deleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState.registered">
+<code class="sig-name descname">registered</code><em class="property"> = 'Registered'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState.registered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState.suspended">
+<code class="sig-name descname">suspended</code><em class="property"> = 'Suspended'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState.suspended" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState.unregistered">
+<code class="sig-name descname">unregistered</code><em class="property"> = 'Unregistered'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState.unregistered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.account.models.SubscriptionState.warned">
+<code class="sig-name descname">warned</code><em class="property"> = 'Warned'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.account.models.SubscriptionState.warned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.datalake.analytics.account.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.datalake.analytics.account.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.datalake.analytics.account.html" class="btn btn-neutral float-left" title="azure.mgmt.datalake.analytics.account package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cognitiveservices.search.entitysearch.operations module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.cognitiveservices.search.imagesearch package" href="azure.cognitiveservices.search.imagesearch.html" />
+    <link rel="prev" title="azure.cognitiveservices.search.entitysearch.models module" href="azure.cognitiveservices.search.entitysearch.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html">azure.cognitiveservices.search.entitysearch.models module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.cognitiveservices.search.entitysearch.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html#module-azure.cognitiveservices.search.entitysearch">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a> &raquo;</li>
+        
+      <li>azure.cognitiveservices.search.entitysearch.operations module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.cognitiveservices.search.entitysearch.operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.cognitiveservices.search.entitysearch.operations">
+<span id="azure-cognitiveservices-search-entitysearch-operations-module"></span><h1>azure.cognitiveservices.search.entitysearch.operations module<a class="headerlink" href="#module-azure.cognitiveservices.search.entitysearch.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.search.entitysearch.operations.</code><code class="sig-name descname">EntitiesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/entitysearch/operations/entities_operations.html#EntitiesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>EntitiesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>x_bing_apis_sdk</strong> – Activate swagger compliance. Constant value: “true”.</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.search.entitysearch.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-search-entitysearch\\azure\\cognitiveservices\\search\\entitysearch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations.search">
+<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">accept_language=None</em>, <em class="sig-param">pragma=None</em>, <em class="sig-param">user_agent=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_ip=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">market='en-us'</em>, <em class="sig-param">response_filter=None</em>, <em class="sig-param">response_format=None</em>, <em class="sig-param">safe_search=None</em>, <em class="sig-param">set_lang=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/entitysearch/operations/entities_operations.html#EntitiesOperations.search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.entitysearch.operations.EntitiesOperations.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Entity Search API lets you send a search query to Bing and get back
+search results that include entities and places. Place results include
+restaurants, hotel, or other local businesses. For places, the query
+can specify the name of the local business or it can ask for a list
+(for example, restaurants near me). Entity results include persons,
+places, or things. Place in this context is tourist attractions,
+states, countries, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user’s search term.</p></li>
+<li><p><strong>accept_language</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A comma-delimited list of one or more
+languages to use for user interface strings. The list is in decreasing
+order of preference. For additional information, including expected
+format, see
+[RFC2616](<a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</a>).
+This header and the setLang query parameter are mutually exclusive; do
+not specify both. If you set this header, you must also specify the cc
+query parameter. Bing will use the first supported language it finds
+from the list, and combine that language with the cc parameter value
+to determine the market to return results for. If the list does not
+include a supported language, Bing will find the closest language and
+market that supports the request, and may use an aggregated or default
+market for the results instead of a specified one. You should use this
+header and the cc query parameter only if you specify multiple
+languages; otherwise, you should use the mkt and setLang query
+parameters. A user interface string is a string that’s used as a label
+in a user interface. There are very few user interface strings in the
+JSON response objects. Any links in the response objects to Bing.com
+properties will apply the specified language.</p></li>
+<li><p><strong>pragma</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – By default, Bing returns cached content, if available.
+To prevent Bing from returning cached content, set the Pragma header
+to no-cache (for example, Pragma: no-cache).</p></li>
+<li><p><strong>user_agent</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user agent originating the request. Bing uses
+the user agent to provide mobile users with an optimized experience.
+Although optional, you are strongly encouraged to always specify this
+header. The user-agent should be the same string that any commonly
+used browser would send. For information about user agents, see [RFC
+2616](<a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</a>).</p></li>
+<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Bing uses this header to provide users with
+consistent behavior across Bing API calls. Bing often flights new
+features and improvements, and it uses the client ID as a key for
+assigning traffic on different flights. If you do not use the same
+client ID for a user across multiple requests, then Bing may assign
+the user to multiple conflicting flights. Being assigned to multiple
+conflicting flights can lead to an inconsistent user experience. For
+example, if the second request has a different flight assignment than
+the first, the experience may be unexpected. Also, Bing can use the
+client ID to tailor web results to that client ID’s search history,
+providing a richer experience for the user. Bing also uses this header
+to help improve result rankings by analyzing the activity generated by
+a client ID. The relevance improvements help with better quality of
+results delivered by Bing APIs and in turn enables higher
+click-through rates for the API consumer. IMPORTANT: Although
+optional, you should consider this header required. Persisting the
+client ID across multiple requests for the same end user and device
+combination enables 1) the API consumer to receive a consistent user
+experience, and 2) higher click-through rates via better quality of
+results from the Bing APIs. Each user that uses your application on
+the device must have a unique, Bing generated client ID. If you do not
+include this header in the request, Bing generates an ID and returns
+it in the X-MSEdge-ClientID response header. The only time that you
+should NOT include this header in a request is the first time the user
+uses your app on that device. Use the client ID for each Bing API
+request that your app makes for this user on the device. Persist the
+client ID. To persist the ID in a browser app, use a persistent HTTP
+cookie to ensure the ID is used across all sessions. Do not use a
+session cookie. For other apps such as mobile apps, use the device’s
+persistent storage to persist the ID. The next time the user uses your
+app on that device, get the client ID that you persisted. Bing
+responses may or may not include this header. If the response includes
+this header, capture the client ID and use it for all subsequent Bing
+requests for the user on that device. If you include the
+X-MSEdge-ClientID, you must not include cookies in the request.</p></li>
+<li><p><strong>client_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The IPv4 or IPv6 address of the client device. The
+IP address is used to discover the user’s location. Bing uses the
+location information to determine safe search behavior. Although
+optional, you are encouraged to always specify this header and the
+X-Search-Location header. Do not obfuscate the address (for example,
+by changing the last octet to 0). Obfuscating the address results in
+the location not being anywhere near the device’s actual location,
+which may result in Bing serving erroneous results.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A semicolon-delimited list of key/value pairs that
+describe the client’s geographical location. Bing uses the location
+information to determine safe search behavior and to return relevant
+local content. Specify the key/value pair as &lt;key&gt;:&lt;value&gt;. The
+following are the keys that you use to specify the user’s location.
+lat (required): The latitude of the client’s location, in degrees. The
+latitude must be greater than or equal to -90.0 and less than or equal
+to +90.0. Negative values indicate southern latitudes and positive
+values indicate northern latitudes. long (required): The longitude of
+the client’s location, in degrees. The longitude must be greater than
+or equal to -180.0 and less than or equal to +180.0. Negative values
+indicate western longitudes and positive values indicate eastern
+longitudes. re (required): The radius, in meters, which specifies the
+horizontal accuracy of the coordinates. Pass the value returned by the
+device’s location service. Typical values might be 22m for GPS/Wi-Fi,
+380m for cell tower triangulation, and 18,000m for reverse IP lookup.
+ts (optional): The UTC UNIX timestamp of when the client was at the
+location. (The UNIX timestamp is the number of seconds since January
+1, 1970.) head (optional): The client’s relative heading or direction
+of travel. Specify the direction of travel as degrees from 0 through
+360, counting clockwise relative to true north. Specify this key only
+if the sp key is nonzero. sp (optional): The horizontal velocity
+(speed), in meters per second, that the client device is traveling.
+alt (optional): The altitude of the client device, in meters. are
+(optional): The radius, in meters, that specifies the vertical
+accuracy of the coordinates. Specify this key only if you specify the
+alt key. Although many of the keys are optional, the more information
+that you provide, the more accurate the location results are. Although
+optional, you are encouraged to always specify the user’s geographical
+location. Providing the location is especially important if the
+client’s IP address does not accurately reflect the user’s physical
+location (for example, if the client uses VPN). For optimal results,
+you should include this header and the X-MSEdge-ClientIP header, but
+at a minimum, you should include this header.</p></li>
+<li><p><strong>country_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A 2-character country code of the country where
+the results come from. This API supports only the United States
+market. If you specify this query parameter, it must be set to us. If
+you set this parameter, you must also specify the Accept-Language
+header. Bing uses the first supported language it finds from the
+languages list, and combine that language with the country code that
+you specify to determine the market to return results for. If the
+languages list does not include a supported language, Bing finds the
+closest language and market that supports the request, or it may use
+an aggregated or default market for the results instead of a specified
+one. You should use this query parameter and the Accept-Language query
+parameter only if you specify multiple languages; otherwise, you
+should use the mkt and setLang query parameters. This parameter and
+the mkt query parameter are mutually exclusive—do not specify both.</p></li>
+<li><p><strong>market</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The market where the results come from. You are
+strongly encouraged to always specify the market, if known. Specifying
+the market helps Bing route the request and return an appropriate and
+optimal response. This parameter and the cc query parameter are
+mutually exclusive—do not specify both.</p></li>
+<li><p><strong>response_filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.AnswerType" title="azure.cognitiveservices.search.entitysearch.models.AnswerType"><em>AnswerType</em></a><em>]</em>) – A comma-delimited list of answers to include
+in the response. If you do not specify this parameter, the response
+includes all search answers for which there’s relevant data.</p></li>
+<li><p><strong>response_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.ResponseFormat" title="azure.cognitiveservices.search.entitysearch.models.ResponseFormat"><em>ResponseFormat</em></a><em>]</em>) – The media type to use for the response. The
+following are the possible case-insensitive values: JSON, JSONLD. The
+default is JSON. If you specify JSONLD, the response body includes
+JSON-LD objects that contain the search results.</p></li>
+<li><p><strong>safe_search</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.SafeSearch" title="azure.cognitiveservices.search.entitysearch.models.SafeSearch"><em>SafeSearch</em></a>) – A filter used to filter adult content. Off: Return
+webpages with adult text, images, or videos. Moderate: Return webpages
+with adult text, but not adult images or videos. Strict: Do not return
+webpages with adult text, images, or videos. The default is Moderate.
+If the request comes from a market that Bing’s adult policy requires
+that safeSearch is set to Strict, Bing ignores the safeSearch value
+and uses Strict. If you use the site: query operator, there is the
+chance that the response may contain adult content regardless of what
+the safeSearch query parameter is set to. Use site: only if you are
+aware of the content on the site and your scenario supports the
+possibility of adult content. Possible values include: ‘Off’,
+‘Moderate’, ‘Strict’</p></li>
+<li><p><strong>set_lang</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The language to use for user interface strings.
+Specify the language using the ISO 639-1 2-letter language code. For
+example, the language code for English is EN. The default is EN
+(English). Although optional, you should always specify the language.
+Typically, you set setLang to the same language specified by mkt
+unless the user wants the user interface strings displayed in a
+different language. This parameter and the Accept-Language header are
+mutually exclusive; do not specify both. A user interface string is a
+string that’s used as a label in a user interface. There are few user
+interface strings in the JSON response objects. Also, any links to
+Bing.com properties in the response objects apply the specified
+language.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SearchResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.SearchResponse" title="azure.cognitiveservices.search.entitysearch.models.SearchResponse">SearchResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.ErrorResponseException" title="azure.cognitiveservices.search.entitysearch.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.cognitiveservices.search.imagesearch.html" class="btn btn-neutral float-right" title="azure.cognitiveservices.search.imagesearch package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.cognitiveservices.search.entitysearch.models.html" class="btn btn-neutral float-left" title="azure.cognitiveservices.search.entitysearch.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

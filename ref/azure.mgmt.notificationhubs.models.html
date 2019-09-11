@@ -1,0 +1,1151 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.notificationhubs.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.notificationhubs.operations module" href="azure.mgmt.notificationhubs.operations.html" />
+    <link rel="prev" title="azure.mgmt.notificationhubs package" href="azure.mgmt.notificationhubs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.notificationhubs.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.notificationhubs.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.notificationhubs.operations.html">azure.mgmt.notificationhubs.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.notificationhubs.html#module-azure.mgmt.notificationhubs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a> &raquo;</li>
+        
+      <li>azure.mgmt.notificationhubs.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.notificationhubs.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.notificationhubs.models">
+<span id="azure-mgmt-notificationhubs-models-module"></span><h1>azure.mgmt.notificationhubs.models module<a class="headerlink" href="#module-azure.mgmt.notificationhubs.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that represents the operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.NotificationHubs</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.resource" title="azure.core.polling.async_poller.AsyncPollingMethod.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed: Invoice,
+etc.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A NotificationHubs REST API operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.OperationDisplay" title="azure.mgmt.notificationhubs.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.ErrorResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error response indicates NotificationHubs service is not able to process
+the incoming request. The reason is provided in the error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.notificationhubs.models.ErrorResponseException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">tier: str = None</em>, <em class="sig-param">size: str = None</em>, <em class="sig-param">family: str = None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Sku description for a namespace.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.SkuName" title="azure.mgmt.notificationhubs.models.SkuName"><em>SkuName</em></a>) – Required. Name of the notification hub sku. Possible values
+include: ‘Free’, ‘Basic’, ‘Standard’</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The tier of particular sku</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Sku size</p></li>
+<li><p><strong>family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Sku Family</p></li>
+<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The capacity of the resource</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.CheckAvailabilityParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">CheckAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">is_availiable: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/check_availability_parameters_py3.html#CheckAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.CheckAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the Check Name Availability for Namespace and
+NotificationHubs.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>is_availiable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if the name is available and can be used to
+create new Namespace/NotificationHub. Otherwise false.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.CheckAvailabilityResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">CheckAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">is_availiable: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/check_availability_result_py3.html#CheckAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.CheckAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a CheckAvailability resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>is_availiable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if the name is available and can be used to
+create new Namespace/NotificationHub. Otherwise false.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceCreateOrUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NamespaceCreateOrUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">namespace_create_or_update_parameters_name: str = None</em>, <em class="sig-param">provisioning_state: str = None</em>, <em class="sig-param">region: str = None</em>, <em class="sig-param">status: str = None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">service_bus_endpoint: str = None</em>, <em class="sig-param">subscription_id: str = None</em>, <em class="sig-param">scale_unit: str = None</em>, <em class="sig-param">enabled: bool = None</em>, <em class="sig-param">critical: bool = None</em>, <em class="sig-param">data_center: str = None</em>, <em class="sig-param">namespace_type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/namespace_create_or_update_parameters_py3.html#NamespaceCreateOrUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceCreateOrUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Parameters supplied to the CreateOrUpdate Namespace operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>metric_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Identifier for Azure Insights metrics</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>namespace_create_or_update_parameters_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the
+namespace.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state of the Namespace.</p></li>
+<li><p><strong>region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the targeted region in which the namespace should
+be created. It can be any of the following values: Australia EastAustralia
+SoutheastCentral USEast USEast US 2West USNorth Central USSouth Central
+USEast AsiaSoutheast AsiaBrazil SouthJapan EastJapan WestNorth EuropeWest
+Europe</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status of the namespace. It can be any of these values:1 =
+Created/Active2 = Creating3 = Suspended4 = Deleting</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – The time the namespace was created.</p></li>
+<li><p><strong>updated_at</strong> (<em>datetime</em>) – The time the namespace was updated.</p></li>
+<li><p><strong>service_bus_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Endpoint you can use to perform
+NotificationHub operations.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Id of the Azure subscription associated with
+the namespace.</p></li>
+<li><p><strong>scale_unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ScaleUnit where the namespace gets created</p></li>
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not the namespace is currently enabled.</p></li>
+<li><p><strong>critical</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not the namespace is set as Critical.</p></li>
+<li><p><strong>data_center</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Data center for the namespace</p></li>
+<li><p><strong>namespace_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.NamespaceType" title="azure.mgmt.notificationhubs.models.NamespaceType"><em>NamespaceType</em></a>) – The namespace type. Possible values include:
+‘Messaging’, ‘NotificationHub’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NamespacePatchParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NamespacePatchParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/namespace_patch_parameters_py3.html#NamespacePatchParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespacePatchParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the Patch Namespace operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NamespaceResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">namespace_resource_name: str = None</em>, <em class="sig-param">provisioning_state: str = None</em>, <em class="sig-param">region: str = None</em>, <em class="sig-param">status: str = None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">service_bus_endpoint: str = None</em>, <em class="sig-param">subscription_id: str = None</em>, <em class="sig-param">scale_unit: str = None</em>, <em class="sig-param">enabled: bool = None</em>, <em class="sig-param">critical: bool = None</em>, <em class="sig-param">data_center: str = None</em>, <em class="sig-param">namespace_type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/namespace_resource_py3.html#NamespaceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a Namespace resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>metric_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Identifier for Azure Insights metrics</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>namespace_resource_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the namespace.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state of the Namespace.</p></li>
+<li><p><strong>region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the targeted region in which the namespace should
+be created. It can be any of the following values: Australia EastAustralia
+SoutheastCentral USEast USEast US 2West USNorth Central USSouth Central
+USEast AsiaSoutheast AsiaBrazil SouthJapan EastJapan WestNorth EuropeWest
+Europe</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status of the namespace. It can be any of these values:1 =
+Created/Active2 = Creating3 = Suspended4 = Deleting</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – The time the namespace was created.</p></li>
+<li><p><strong>updated_at</strong> (<em>datetime</em>) – The time the namespace was updated.</p></li>
+<li><p><strong>service_bus_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Endpoint you can use to perform
+NotificationHub operations.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Id of the Azure subscription associated with
+the namespace.</p></li>
+<li><p><strong>scale_unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ScaleUnit where the namespace gets created</p></li>
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not the namespace is currently enabled.</p></li>
+<li><p><strong>critical</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not the namespace is set as Critical.</p></li>
+<li><p><strong>data_center</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Data center for the namespace</p></li>
+<li><p><strong>namespace_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.NamespaceType" title="azure.mgmt.notificationhubs.models.NamespaceType"><em>NamespaceType</em></a>) – The namespace type. Possible values include:
+‘Messaging’, ‘NotificationHub’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SharedAccessAuthorizationRuleProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">rights=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/shared_access_authorization_rule_properties_py3.html#SharedAccessAuthorizationRuleProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SharedAccessAuthorizationRule properties.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.AccessRights" title="azure.mgmt.notificationhubs.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – The rights associated with the rule.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key"><strong>primary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key"><strong>secondary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the authorization rule.</p></li>
+<li><p><strong>claim_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the claim type</p></li>
+<li><p><strong>claim_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the claim value</p></li>
+<li><p><strong>modified_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The last modified time for this rule</p></li>
+<li><p><strong>created_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The created time for this rule</p></li>
+<li><p><strong>revision</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The revision number for the rule</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SharedAccessAuthorizationRuleCreateOrUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/shared_access_authorization_rule_create_or_update_parameters_py3.html#SharedAccessAuthorizationRuleCreateOrUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the CreateOrUpdate Namespace AuthorizationRules.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties"><em>SharedAccessAuthorizationRuleProperties</em></a>) – Required. Properties of the Namespace
+AuthorizationRules.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SharedAccessAuthorizationRuleResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">rights=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/shared_access_authorization_rule_resource_py3.html#SharedAccessAuthorizationRuleResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a Namespace AuthorizationRules.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key"><strong>primary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key"><strong>secondary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the authorization rule.</p></li>
+<li><p><strong>claim_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the claim type</p></li>
+<li><p><strong>claim_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the claim value</p></li>
+<li><p><strong>modified_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The last modified time for this rule</p></li>
+<li><p><strong>created_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The created time for this rule</p></li>
+<li><p><strong>revision</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The revision number for the rule</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.AccessRights" title="azure.mgmt.notificationhubs.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – The rights associated with the rule.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleListResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SharedAccessAuthorizationRuleListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">next_link: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/shared_access_authorization_rule_list_result_py3.html#SharedAccessAuthorizationRuleListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The response of the List Namespace operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource"><em>SharedAccessAuthorizationRuleResource</em></a><em>]</em>) – Result of the List AuthorizationRules operation.</p></li>
+<li><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Link to the next set of results. Not empty if Value
+contains incomplete list of AuthorizationRules</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.ResourceListKeys">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">ResourceListKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">primary_connection_string: str = None</em>, <em class="sig-param">secondary_connection_string: str = None</em>, <em class="sig-param">primary_key: str = None</em>, <em class="sig-param">secondary_key: str = None</em>, <em class="sig-param">key_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/resource_list_keys_py3.html#ResourceListKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.ResourceListKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Namespace/NotificationHub Connection String.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PrimaryConnectionString of the
+AuthorizationRule.</p></li>
+<li><p><strong>secondary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SecondaryConnectionString of the
+created AuthorizationRule</p></li>
+<li><p><strong>primary_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PrimaryKey of the created AuthorizationRule.</p></li>
+<li><p><strong>secondary_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SecondaryKey of the created AuthorizationRule</p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – KeyName of the created AuthorizationRule</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.PolicykeyResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">PolicykeyResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">policy_key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/policykey_resource_py3.html#PolicykeyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.PolicykeyResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Namespace/NotificationHub Regenerate Keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>policy_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the key that has to be regenerated for the
+Namespace/Notification Hub Authorization Rule. The value can be Primary
+Key/Secondary Key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.ApnsCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">ApnsCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">apns_certificate: str = None</em>, <em class="sig-param">certificate_key: str = None</em>, <em class="sig-param">endpoint: str = None</em>, <em class="sig-param">thumbprint: str = None</em>, <em class="sig-param">key_id: str = None</em>, <em class="sig-param">app_name: str = None</em>, <em class="sig-param">app_id: str = None</em>, <em class="sig-param">token: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/apns_credential_py3.html#ApnsCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.ApnsCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub ApnsCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>apns_certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The APNS certificate.</p></li>
+<li><p><strong>certificate_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The certificate key.</p></li>
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The endpoint of this credential.</p></li>
+<li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The APNS certificate Thumbprint</p></li>
+<li><p><strong>key_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A 10-character key identifier (kid) key, obtained from your
+developer account</p></li>
+<li><p><strong>app_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application</p></li>
+<li><p><strong>app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The issuer (iss) registered claim key, whose value is your
+10-character Team ID, obtained from your developer account</p></li>
+<li><p><strong>token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provider Authentication Token, obtained through your
+developer account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.WnsCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">WnsCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">package_sid: str = None</em>, <em class="sig-param">secret_key: str = None</em>, <em class="sig-param">windows_live_endpoint: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/wns_credential_py3.html#WnsCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.WnsCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub WnsCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>package_sid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The package ID for this credential.</p></li>
+<li><p><strong>secret_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The secret key.</p></li>
+<li><p><strong>windows_live_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Windows Live endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.GcmCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">GcmCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">gcm_endpoint: str = None</em>, <em class="sig-param">google_api_key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/gcm_credential_py3.html#GcmCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.GcmCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub GcmCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gcm_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The GCM endpoint.</p></li>
+<li><p><strong>google_api_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Google API key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.MpnsCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">MpnsCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">mpns_certificate: str = None</em>, <em class="sig-param">certificate_key: str = None</em>, <em class="sig-param">thumbprint: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/mpns_credential_py3.html#MpnsCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.MpnsCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub MpnsCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mpns_certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The MPNS certificate.</p></li>
+<li><p><strong>certificate_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The certificate key for this credential.</p></li>
+<li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The MPNS certificate Thumbprint</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.AdmCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">AdmCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_id: str = None</em>, <em class="sig-param">client_secret: str = None</em>, <em class="sig-param">auth_token_url: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/adm_credential_py3.html#AdmCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.AdmCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub AdmCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The client identifier.</p></li>
+<li><p><strong>client_secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The credential secret access key.</p></li>
+<li><p><strong>auth_token_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL of the authorization token.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.BaiduCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">BaiduCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">baidu_api_key: str = None</em>, <em class="sig-param">baidu_end_point: str = None</em>, <em class="sig-param">baidu_secret_key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/baidu_credential_py3.html#BaiduCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.BaiduCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of a NotificationHub BaiduCredential.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>baidu_api_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Baidu Api Key.</p></li>
+<li><p><strong>baidu_end_point</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Baidu Endpoint.</p></li>
+<li><p><strong>baidu_secret_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Baidu Secret Key</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NotificationHubCreateOrUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">notification_hub_create_or_update_parameters_name: str = None</em>, <em class="sig-param">registration_ttl: str = None</em>, <em class="sig-param">authorization_rules=None</em>, <em class="sig-param">apns_credential=None</em>, <em class="sig-param">wns_credential=None</em>, <em class="sig-param">gcm_credential=None</em>, <em class="sig-param">mpns_credential=None</em>, <em class="sig-param">adm_credential=None</em>, <em class="sig-param">baidu_credential=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hub_create_or_update_parameters_py3.html#NotificationHubCreateOrUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NotificationHubCreateOrUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Parameters supplied to the CreateOrUpdate NotificationHub operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>notification_hub_create_or_update_parameters_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The
+NotificationHub name.</p></li>
+<li><p><strong>registration_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The RegistrationTtl of the created
+NotificationHub</p></li>
+<li><p><strong>authorization_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties"><em>SharedAccessAuthorizationRuleProperties</em></a><em>]</em>) – The AuthorizationRules of the created
+NotificationHub</p></li>
+<li><p><strong>apns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.ApnsCredential" title="azure.mgmt.notificationhubs.models.ApnsCredential"><em>ApnsCredential</em></a>) – The ApnsCredential of the created NotificationHub</p></li>
+<li><p><strong>wns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.WnsCredential" title="azure.mgmt.notificationhubs.models.WnsCredential"><em>WnsCredential</em></a>) – The WnsCredential of the created NotificationHub</p></li>
+<li><p><strong>gcm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.GcmCredential" title="azure.mgmt.notificationhubs.models.GcmCredential"><em>GcmCredential</em></a>) – The GcmCredential of the created NotificationHub</p></li>
+<li><p><strong>mpns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.MpnsCredential" title="azure.mgmt.notificationhubs.models.MpnsCredential"><em>MpnsCredential</em></a>) – The MpnsCredential of the created NotificationHub</p></li>
+<li><p><strong>adm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.AdmCredential" title="azure.mgmt.notificationhubs.models.AdmCredential"><em>AdmCredential</em></a>) – The AdmCredential of the created NotificationHub</p></li>
+<li><p><strong>baidu_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.BaiduCredential" title="azure.mgmt.notificationhubs.models.BaiduCredential"><em>BaiduCredential</em></a>) – The BaiduCredential of the created
+NotificationHub</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NotificationHubPatchParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NotificationHubPatchParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">notification_hub_patch_parameters_name: str = None</em>, <em class="sig-param">registration_ttl: str = None</em>, <em class="sig-param">authorization_rules=None</em>, <em class="sig-param">apns_credential=None</em>, <em class="sig-param">wns_credential=None</em>, <em class="sig-param">gcm_credential=None</em>, <em class="sig-param">mpns_credential=None</em>, <em class="sig-param">adm_credential=None</em>, <em class="sig-param">baidu_credential=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hub_patch_parameters_py3.html#NotificationHubPatchParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NotificationHubPatchParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Parameters supplied to the patch NotificationHub operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>notification_hub_patch_parameters_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The NotificationHub name.</p></li>
+<li><p><strong>registration_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The RegistrationTtl of the created
+NotificationHub</p></li>
+<li><p><strong>authorization_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties"><em>SharedAccessAuthorizationRuleProperties</em></a><em>]</em>) – The AuthorizationRules of the created
+NotificationHub</p></li>
+<li><p><strong>apns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.ApnsCredential" title="azure.mgmt.notificationhubs.models.ApnsCredential"><em>ApnsCredential</em></a>) – The ApnsCredential of the created NotificationHub</p></li>
+<li><p><strong>wns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.WnsCredential" title="azure.mgmt.notificationhubs.models.WnsCredential"><em>WnsCredential</em></a>) – The WnsCredential of the created NotificationHub</p></li>
+<li><p><strong>gcm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.GcmCredential" title="azure.mgmt.notificationhubs.models.GcmCredential"><em>GcmCredential</em></a>) – The GcmCredential of the created NotificationHub</p></li>
+<li><p><strong>mpns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.MpnsCredential" title="azure.mgmt.notificationhubs.models.MpnsCredential"><em>MpnsCredential</em></a>) – The MpnsCredential of the created NotificationHub</p></li>
+<li><p><strong>adm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.AdmCredential" title="azure.mgmt.notificationhubs.models.AdmCredential"><em>AdmCredential</em></a>) – The AdmCredential of the created NotificationHub</p></li>
+<li><p><strong>baidu_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.BaiduCredential" title="azure.mgmt.notificationhubs.models.BaiduCredential"><em>BaiduCredential</em></a>) – The BaiduCredential of the created
+NotificationHub</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NotificationHubResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NotificationHubResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">notification_hub_resource_name: str = None</em>, <em class="sig-param">registration_ttl: str = None</em>, <em class="sig-param">authorization_rules=None</em>, <em class="sig-param">apns_credential=None</em>, <em class="sig-param">wns_credential=None</em>, <em class="sig-param">gcm_credential=None</em>, <em class="sig-param">mpns_credential=None</em>, <em class="sig-param">adm_credential=None</em>, <em class="sig-param">baidu_credential=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hub_resource_py3.html#NotificationHubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NotificationHubResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a NotificationHub Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>notification_hub_resource_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The NotificationHub name.</p></li>
+<li><p><strong>registration_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The RegistrationTtl of the created
+NotificationHub</p></li>
+<li><p><strong>authorization_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleProperties"><em>SharedAccessAuthorizationRuleProperties</em></a><em>]</em>) – The AuthorizationRules of the created
+NotificationHub</p></li>
+<li><p><strong>apns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.ApnsCredential" title="azure.mgmt.notificationhubs.models.ApnsCredential"><em>ApnsCredential</em></a>) – The ApnsCredential of the created NotificationHub</p></li>
+<li><p><strong>wns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.WnsCredential" title="azure.mgmt.notificationhubs.models.WnsCredential"><em>WnsCredential</em></a>) – The WnsCredential of the created NotificationHub</p></li>
+<li><p><strong>gcm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.GcmCredential" title="azure.mgmt.notificationhubs.models.GcmCredential"><em>GcmCredential</em></a>) – The GcmCredential of the created NotificationHub</p></li>
+<li><p><strong>mpns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.MpnsCredential" title="azure.mgmt.notificationhubs.models.MpnsCredential"><em>MpnsCredential</em></a>) – The MpnsCredential of the created NotificationHub</p></li>
+<li><p><strong>adm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.AdmCredential" title="azure.mgmt.notificationhubs.models.AdmCredential"><em>AdmCredential</em></a>) – The AdmCredential of the created NotificationHub</p></li>
+<li><p><strong>baidu_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.BaiduCredential" title="azure.mgmt.notificationhubs.models.BaiduCredential"><em>BaiduCredential</em></a>) – The BaiduCredential of the created
+NotificationHub</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.DebugSendResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">DebugSendResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">success: float = None</em>, <em class="sig-param">failure: float = None</em>, <em class="sig-param">results=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/debug_send_response_py3.html#DebugSendResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.DebugSendResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a NotificationHub Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>success</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – successful send</p></li>
+<li><p><strong>failure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – send failure</p></li>
+<li><p><strong>results</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – actual failure description</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.PnsCredentialsResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">PnsCredentialsResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">apns_credential=None</em>, <em class="sig-param">wns_credential=None</em>, <em class="sig-param">gcm_credential=None</em>, <em class="sig-param">mpns_credential=None</em>, <em class="sig-param">adm_credential=None</em>, <em class="sig-param">baidu_credential=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/pns_credentials_resource_py3.html#PnsCredentialsResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.PnsCredentialsResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.notificationhubs.models.resource_py3.Resource</span></code></p>
+<p>Description of a NotificationHub PNS Credentials.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+<li><p><strong>apns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.ApnsCredential" title="azure.mgmt.notificationhubs.models.ApnsCredential"><em>ApnsCredential</em></a>) – The ApnsCredential of the created NotificationHub</p></li>
+<li><p><strong>wns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.WnsCredential" title="azure.mgmt.notificationhubs.models.WnsCredential"><em>WnsCredential</em></a>) – The WnsCredential of the created NotificationHub</p></li>
+<li><p><strong>gcm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.GcmCredential" title="azure.mgmt.notificationhubs.models.GcmCredential"><em>GcmCredential</em></a>) – The GcmCredential of the created NotificationHub</p></li>
+<li><p><strong>mpns_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.MpnsCredential" title="azure.mgmt.notificationhubs.models.MpnsCredential"><em>MpnsCredential</em></a>) – The MpnsCredential of the created NotificationHub</p></li>
+<li><p><strong>adm_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.AdmCredential" title="azure.mgmt.notificationhubs.models.AdmCredential"><em>AdmCredential</em></a>) – The AdmCredential of the created NotificationHub</p></li>
+<li><p><strong>baidu_credential</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.BaiduCredential" title="azure.mgmt.notificationhubs.models.BaiduCredential"><em>BaiduCredential</em></a>) – The BaiduCredential of the created
+NotificationHub</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.notificationhubs.models.Sku" title="azure.mgmt.notificationhubs.models.Sku"><em>Sku</em></a>) – The sku of the created namespace</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SubResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SubResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/sub_resource_py3.html#SubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SubResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SubResource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.OperationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.notificationhubs.models.Operation" title="azure.mgmt.notificationhubs.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceResourcePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NamespaceResourcePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/namespace_resource_paged.html#NamespaceResourcePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceResourcePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.notificationhubs.models.NamespaceResource" title="azure.mgmt.notificationhubs.models.NamespaceResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">NamespaceResource</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResourcePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SharedAccessAuthorizationRuleResourcePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/shared_access_authorization_rule_resource_paged.html#SharedAccessAuthorizationRuleResourcePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResourcePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.notificationhubs.models.SharedAccessAuthorizationRuleResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SharedAccessAuthorizationRuleResource</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NotificationHubResourcePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NotificationHubResourcePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hub_resource_paged.html#NotificationHubResourcePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NotificationHubResourcePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.notificationhubs.models.NotificationHubResource" title="azure.mgmt.notificationhubs.models.NotificationHubResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">NotificationHubResource</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.SkuName">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hubs_management_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SkuName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.SkuName.basic">
+<code class="sig-name descname">basic</code><em class="property"> = 'Basic'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SkuName.basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.SkuName.free">
+<code class="sig-name descname">free</code><em class="property"> = 'Free'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SkuName.free" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.SkuName.standard">
+<code class="sig-name descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.SkuName.standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">NamespaceType</code><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hubs_management_client_enums.html#NamespaceType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceType.messaging">
+<code class="sig-name descname">messaging</code><em class="property"> = 'Messaging'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceType.messaging" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.NamespaceType.notification_hub">
+<code class="sig-name descname">notification_hub</code><em class="property"> = 'NotificationHub'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.NamespaceType.notification_hub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.notificationhubs.models.AccessRights">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.notificationhubs.models.</code><code class="sig-name descname">AccessRights</code><a class="reference internal" href="../_modules/azure/mgmt/notificationhubs/models/notification_hubs_management_client_enums.html#AccessRights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.notificationhubs.models.AccessRights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.AccessRights.listen">
+<code class="sig-name descname">listen</code><em class="property"> = 'Listen'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.AccessRights.listen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.AccessRights.manage">
+<code class="sig-name descname">manage</code><em class="property"> = 'Manage'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.AccessRights.manage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.notificationhubs.models.AccessRights.send">
+<code class="sig-name descname">send</code><em class="property"> = 'Send'</em><a class="headerlink" href="#azure.mgmt.notificationhubs.models.AccessRights.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.notificationhubs.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.notificationhubs.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.notificationhubs.html" class="btn btn-neutral float-left" title="azure.mgmt.notificationhubs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

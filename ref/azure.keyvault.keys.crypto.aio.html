@@ -1,0 +1,1015 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.keyvault.keys.crypto.aio package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.keyvault.secrets package" href="azure.keyvault.secrets.html" />
+    <link rel="prev" title="azure.keyvault.keys.crypto package" href="azure.keyvault.keys.crypto.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.keyvault.keys.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.keyvault.keys.aio.html">azure.keyvault.keys.aio package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="azure.keyvault.keys.crypto.html">azure.keyvault.keys.crypto package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="azure.keyvault.keys.crypto.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.keyvault.keys.crypto.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.keyvault.keys.crypto.html#module-azure.keyvault.keys.crypto.client">azure.keyvault.keys.crypto.client module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.keyvault.keys.crypto.html#module-azure.keyvault.keys.crypto.enums">azure.keyvault.keys.crypto.enums module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.keyvault.keys.crypto.html#module-azure.keyvault.keys.crypto">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.keyvault.keys.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.keyvault.keys.html#module-azure.keyvault.keys.client">azure.keyvault.keys.client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.keyvault.keys.html#module-azure.keyvault.keys.enums">azure.keyvault.keys.enums module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.keyvault.keys.html#module-azure.keyvault.keys.models">azure.keyvault.keys.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.keyvault.keys.html#module-azure.keyvault.keys">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.keyvault.keys.html">azure.keyvault.keys package</a> &raquo;</li>
+        
+          <li><a href="azure.keyvault.keys.crypto.html">azure.keyvault.keys.crypto package</a> &raquo;</li>
+        
+      <li>azure.keyvault.keys.crypto.aio package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.keyvault.keys.crypto.aio.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-keyvault-keys-crypto-aio-package">
+<h1>azure.keyvault.keys.crypto.aio package<a class="headerlink" href="#azure-keyvault-keys-crypto-aio-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.keyvault.keys.crypto.aio.client">
+<span id="azure-keyvault-keys-crypto-aio-client-module"></span><h2>azure.keyvault.keys.crypto.aio.client module<a class="headerlink" href="#module-azure.keyvault.keys.crypto.aio.client" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.client.</code><code class="sig-name descname">CryptographyClient</code><span class="sig-paren">(</span><em class="sig-param">key: Union[Key, str], credential: TokenCredential, **kwargs: **Any</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.keys._shared.async_client_base.AsyncKeyVaultClientBase</span></code></p>
+<p>Performs cryptographic operations using Azure Key Vault keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (str or <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a>) – Either a <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a> instance as returned by
+<a class="reference internal" href="azure.keyvault.keys.aio.html#azure.keyvault.keys.aio.KeyClient.get_key" title="azure.keyvault.keys.aio.KeyClient.get_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_key()</span></code></a>, or a string.
+If a string, the value must be the full identifier of an Azure Key Vault key with a version.</p></li>
+<li><p><strong>credential</strong> – An object which can provide an access token for the vault, such as a credential from
+<a class="reference internal" href="azure.identity.aio.html#module-azure.identity.aio" title="azure.identity.aio"><code class="xref py py-mod docutils literal notranslate"><span class="pre">azure.identity.aio</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Keyword arguments</dt><dd><ul class="simple">
+<li><p><strong>api_version</strong> - version of the Key Vault API to use. Defaults to the most recent.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Creating a <code class="docutils literal notranslate"><span class="pre">CryptographyClient</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.identity.aio</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto.aio</span> <span class="kn">import</span> <span class="n">CryptographyClient</span>
+
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+
+<span class="c1"># create a CryptographyClient using a Key instance</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">await</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">CryptographyClient</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+
+<span class="c1"># or a Key&#39;s id, which must include a version</span>
+<span class="n">key_id</span> <span class="o">=</span> <span class="s2">&quot;https://&lt;your vault&gt;.vault.azure.net/keys/mykey/fe4fdcab688c479a9aa80f01ffeac26&quot;</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">CryptographyClient</span><span class="p">(</span><span class="n">key_id</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also obtain a <code class="docutils literal notranslate"><span class="pre">CryptographyClient</span></code> from a <a class="reference internal" href="azure.keyvault.keys.aio.html#azure.keyvault.keys.aio.KeyClient" title="azure.keyvault.keys.aio.KeyClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyClient</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.identity.aio</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.aio</span> <span class="kn">import</span> <span class="n">KeyClient</span>
+
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+<span class="n">key_client</span> <span class="o">=</span> <span class="n">KeyClient</span><span class="p">(</span><span class="n">vault_url</span><span class="o">=&lt;</span><span class="n">your</span> <span class="n">vault</span> <span class="n">url</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">)</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_cryptography_client</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.decrypt">
+<em class="property">async </em><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param">algorithm: EncryptionAlgorithm</em>, <em class="sig-param">ciphertext: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.DecryptResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.decrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrypt a single block of encrypted data using the client’s key. Requires the keys/decrypt permission.</p>
+<p>This method decrypts only a single block of data, the size of which depends on the key and encryption algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.EncryptionAlgorithm" title="azure.keyvault.keys.crypto.enums.EncryptionAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptionAlgorithm</span></code></a>) – encryption algorithm to use</p></li>
+<li><p><strong>ciphertext</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – encrypted bytes to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.DecryptResult" title="azure.keyvault.keys.crypto.DecryptResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecryptResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">EncryptionAlgorithm</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">EncryptionAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decrypted_bytes</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.encrypt">
+<em class="property">async </em><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param">algorithm: EncryptionAlgorithm</em>, <em class="sig-param">plaintext: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.EncryptResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.encrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypt bytes using the client’s key. Requires the keys/encrypt permission.</p>
+<p>This method encrypts only a single block of data, the size of which depends on the key and encryption algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.EncryptionAlgorithm" title="azure.keyvault.keys.crypto.enums.EncryptionAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptionAlgorithm</span></code></a>) – encryption algorithm to use</p></li>
+<li><p><strong>plaintext</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – bytes to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.EncryptResult" title="azure.keyvault.keys.crypto.EncryptResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">EncryptionAlgorithm</span>
+
+<span class="c1"># encrypt returns a tuple with the ciphertext and the metadata required to decrypt it</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">,</span> <span class="n">authentication_tag</span> <span class="o">=</span>
+    <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">EncryptionAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;plaintext&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.get_key">
+<em class="property">async </em><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[Key]<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.get_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the client’s <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a>.
+Can be <cite>None</cite>, if the client lacks keys/get permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.key_id">
+<em class="property">property </em><code class="sig-name descname">key_id</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full identifier of the client’s key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.sign">
+<em class="property">async </em><code class="sig-name descname">sign</code><span class="sig-paren">(</span><em class="sig-param">algorithm: SignatureAlgorithm</em>, <em class="sig-param">digest: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.SignResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.sign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.sign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a signature from a digest using the client’s key. Requires the keys/sign permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.SignatureAlgorithm" title="azure.keyvault.keys.crypto.enums.SignatureAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignatureAlgorithm</span></code></a>) – signing algorithm</p></li>
+<li><p><strong>digest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – hashed bytes to sign</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.SignResult" title="azure.keyvault.keys.crypto.SignResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">SignatureAlgorithm</span>
+
+<span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;plaintext&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
+
+<span class="c1"># sign returns a tuple with the signature and the metadata required to verify it</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="o">.</span><span class="n">rs256</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.unwrap_key">
+<em class="property">async </em><code class="sig-name descname">unwrap_key</code><span class="sig-paren">(</span><em class="sig-param">algorithm: KeyWrapAlgorithm</em>, <em class="sig-param">encrypted_key: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.UnwrapKeyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.unwrap_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.unwrap_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unwrap a key previously wrapped with the client’s key. Requires the keys/unwrapKey permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm" title="azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyWrapAlgorithm</span></code></a>) – wrapping algorithm to use</p></li>
+<li><p><strong>encrypted_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – the wrapped key</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.UnwrapKeyResult" title="azure.keyvault.keys.crypto.UnwrapKeyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnwrapKeyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">KeyWrapAlgorithm</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">unwrap_key</span><span class="p">(</span><span class="n">KeyWrapAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">wrapped_bytes</span><span class="p">)</span>
+<span class="n">unwrapped_bytes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">unwrapped_bytes</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.verify">
+<em class="property">async </em><code class="sig-name descname">verify</code><span class="sig-paren">(</span><em class="sig-param">algorithm: SignatureAlgorithm</em>, <em class="sig-param">digest: bytes</em>, <em class="sig-param">signature: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.VerifyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify a signature using the client’s key. Requires the keys/verify permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.SignatureAlgorithm" title="azure.keyvault.keys.crypto.enums.SignatureAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignatureAlgorithm</span></code></a>) – verification algorithm</p></li>
+<li><p><strong>digest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – </p></li>
+<li><p><strong>signature</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.VerifyResult" title="azure.keyvault.keys.crypto.VerifyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">VerifyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">SignatureAlgorithm</span>
+
+<span class="n">verified</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="o">.</span><span class="n">rs256</span><span class="p">,</span> <span class="n">digest</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">verified</span><span class="o">.</span><span class="n">result</span> <span class="ow">is</span> <span class="bp">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.client.CryptographyClient.wrap_key">
+<em class="property">async </em><code class="sig-name descname">wrap_key</code><span class="sig-paren">(</span><em class="sig-param">algorithm: KeyWrapAlgorithm</em>, <em class="sig-param">key: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.WrapKeyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.wrap_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.client.CryptographyClient.wrap_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap a key with the client’s key. Requires the keys/wrapKey permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm" title="azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyWrapAlgorithm</span></code></a>) – wrapping algorithm to use</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – key to wrap</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.WrapKeyResult" title="azure.keyvault.keys.crypto.WrapKeyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">WrapKeyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">KeyWrapAlgorithm</span>
+
+<span class="c1"># wrap returns a tuple with the wrapped bytes and the metadata required to unwrap the key</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">wrap_algorithm</span><span class="p">,</span> <span class="n">wrapped_bytes</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">wrap_key</span><span class="p">(</span><span class="n">KeyWrapAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">key_bytes</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.keyvault.keys.crypto.aio">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.keyvault.keys.crypto.aio" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">CryptographyClient</code><span class="sig-paren">(</span><em class="sig-param">key: Union[Key, str], credential: TokenCredential, **kwargs: **Any</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.keys._shared.async_client_base.AsyncKeyVaultClientBase</span></code></p>
+<p>Performs cryptographic operations using Azure Key Vault keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (str or <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a>) – Either a <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a> instance as returned by
+<a class="reference internal" href="azure.keyvault.keys.aio.html#azure.keyvault.keys.aio.KeyClient.get_key" title="azure.keyvault.keys.aio.KeyClient.get_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_key()</span></code></a>, or a string.
+If a string, the value must be the full identifier of an Azure Key Vault key with a version.</p></li>
+<li><p><strong>credential</strong> – An object which can provide an access token for the vault, such as a credential from
+<a class="reference internal" href="azure.identity.aio.html#module-azure.identity.aio" title="azure.identity.aio"><code class="xref py py-mod docutils literal notranslate"><span class="pre">azure.identity.aio</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Keyword arguments</dt><dd><ul class="simple">
+<li><p><strong>api_version</strong> - version of the Key Vault API to use. Defaults to the most recent.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Creating a <code class="docutils literal notranslate"><span class="pre">CryptographyClient</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.identity.aio</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto.aio</span> <span class="kn">import</span> <span class="n">CryptographyClient</span>
+
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+
+<span class="c1"># create a CryptographyClient using a Key instance</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">await</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">CryptographyClient</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+
+<span class="c1"># or a Key&#39;s id, which must include a version</span>
+<span class="n">key_id</span> <span class="o">=</span> <span class="s2">&quot;https://&lt;your vault&gt;.vault.azure.net/keys/mykey/fe4fdcab688c479a9aa80f01ffeac26&quot;</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">CryptographyClient</span><span class="p">(</span><span class="n">key_id</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also obtain a <code class="docutils literal notranslate"><span class="pre">CryptographyClient</span></code> from a <a class="reference internal" href="azure.keyvault.keys.aio.html#azure.keyvault.keys.aio.KeyClient" title="azure.keyvault.keys.aio.KeyClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyClient</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.identity.aio</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.aio</span> <span class="kn">import</span> <span class="n">KeyClient</span>
+
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+<span class="n">key_client</span> <span class="o">=</span> <span class="n">KeyClient</span><span class="p">(</span><span class="n">vault_url</span><span class="o">=&lt;</span><span class="n">your</span> <span class="n">vault</span> <span class="n">url</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">)</span>
+<span class="n">crypto_client</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_cryptography_client</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.decrypt">
+<em class="property">async </em><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param">algorithm: EncryptionAlgorithm</em>, <em class="sig-param">ciphertext: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.DecryptResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.decrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrypt a single block of encrypted data using the client’s key. Requires the keys/decrypt permission.</p>
+<p>This method decrypts only a single block of data, the size of which depends on the key and encryption algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.EncryptionAlgorithm" title="azure.keyvault.keys.crypto.enums.EncryptionAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptionAlgorithm</span></code></a>) – encryption algorithm to use</p></li>
+<li><p><strong>ciphertext</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – encrypted bytes to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.DecryptResult" title="azure.keyvault.keys.crypto.DecryptResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecryptResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">EncryptionAlgorithm</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">EncryptionAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decrypted_bytes</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.encrypt">
+<em class="property">async </em><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param">algorithm: EncryptionAlgorithm</em>, <em class="sig-param">plaintext: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.EncryptResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.encrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypt bytes using the client’s key. Requires the keys/encrypt permission.</p>
+<p>This method encrypts only a single block of data, the size of which depends on the key and encryption algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.EncryptionAlgorithm" title="azure.keyvault.keys.crypto.enums.EncryptionAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptionAlgorithm</span></code></a>) – encryption algorithm to use</p></li>
+<li><p><strong>plaintext</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – bytes to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.EncryptResult" title="azure.keyvault.keys.crypto.EncryptResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">EncryptionAlgorithm</span>
+
+<span class="c1"># encrypt returns a tuple with the ciphertext and the metadata required to decrypt it</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">,</span> <span class="n">authentication_tag</span> <span class="o">=</span>
+    <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">EncryptionAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;plaintext&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.get_key">
+<em class="property">async </em><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[Key]<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.get_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the client’s <a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a>.
+Can be <cite>None</cite>, if the client lacks keys/get permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.Key" title="azure.keyvault.keys.models.Key"><code class="xref py py-class docutils literal notranslate"><span class="pre">Key</span></code></a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.key_id">
+<em class="property">property </em><code class="sig-name descname">key_id</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full identifier of the client’s key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.sign">
+<em class="property">async </em><code class="sig-name descname">sign</code><span class="sig-paren">(</span><em class="sig-param">algorithm: SignatureAlgorithm</em>, <em class="sig-param">digest: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.SignResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.sign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.sign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a signature from a digest using the client’s key. Requires the keys/sign permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.SignatureAlgorithm" title="azure.keyvault.keys.crypto.enums.SignatureAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignatureAlgorithm</span></code></a>) – signing algorithm</p></li>
+<li><p><strong>digest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – hashed bytes to sign</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.SignResult" title="azure.keyvault.keys.crypto.SignResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">SignatureAlgorithm</span>
+
+<span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;plaintext&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
+
+<span class="c1"># sign returns a tuple with the signature and the metadata required to verify it</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="o">.</span><span class="n">rs256</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.unwrap_key">
+<em class="property">async </em><code class="sig-name descname">unwrap_key</code><span class="sig-paren">(</span><em class="sig-param">algorithm: KeyWrapAlgorithm</em>, <em class="sig-param">encrypted_key: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.UnwrapKeyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.unwrap_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.unwrap_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unwrap a key previously wrapped with the client’s key. Requires the keys/unwrapKey permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm" title="azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyWrapAlgorithm</span></code></a>) – wrapping algorithm to use</p></li>
+<li><p><strong>encrypted_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – the wrapped key</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.UnwrapKeyResult" title="azure.keyvault.keys.crypto.UnwrapKeyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnwrapKeyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">KeyWrapAlgorithm</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">unwrap_key</span><span class="p">(</span><span class="n">KeyWrapAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">wrapped_bytes</span><span class="p">)</span>
+<span class="n">unwrapped_bytes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">unwrapped_bytes</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.verify">
+<em class="property">async </em><code class="sig-name descname">verify</code><span class="sig-paren">(</span><em class="sig-param">algorithm: SignatureAlgorithm</em>, <em class="sig-param">digest: bytes</em>, <em class="sig-param">signature: bytes</em>, <em class="sig-param">**kwargs: **Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.VerifyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify a signature using the client’s key. Requires the keys/verify permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.SignatureAlgorithm" title="azure.keyvault.keys.crypto.enums.SignatureAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignatureAlgorithm</span></code></a>) – verification algorithm</p></li>
+<li><p><strong>digest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – </p></li>
+<li><p><strong>signature</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.VerifyResult" title="azure.keyvault.keys.crypto.VerifyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">VerifyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">SignatureAlgorithm</span>
+
+<span class="n">verified</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="o">.</span><span class="n">rs256</span><span class="p">,</span> <span class="n">digest</span><span class="p">,</span> <span class="n">signature</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">verified</span><span class="o">.</span><span class="n">result</span> <span class="ow">is</span> <span class="bp">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.CryptographyClient.wrap_key">
+<em class="property">async </em><code class="sig-name descname">wrap_key</code><span class="sig-paren">(</span><em class="sig-param">algorithm: KeyWrapAlgorithm</em>, <em class="sig-param">key: bytes</em>, <em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; azure.keyvault.keys.crypto.WrapKeyResult<a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/aio/client.html#CryptographyClient.wrap_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.CryptographyClient.wrap_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap a key with the client’s key. Requires the keys/wrapKey permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm" title="azure.keyvault.keys.crypto.enums.KeyWrapAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyWrapAlgorithm</span></code></a>) – wrapping algorithm to use</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – key to wrap</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.keys.crypto.html#azure.keyvault.keys.crypto.WrapKeyResult" title="azure.keyvault.keys.crypto.WrapKeyResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">WrapKeyResult</span></code></a></p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.keyvault.keys.crypto</span> <span class="kn">import</span> <span class="n">KeyWrapAlgorithm</span>
+
+<span class="c1"># wrap returns a tuple with the wrapped bytes and the metadata required to unwrap the key</span>
+<span class="n">key_id</span><span class="p">,</span> <span class="n">wrap_algorithm</span><span class="p">,</span> <span class="n">wrapped_bytes</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">wrap_key</span><span class="p">(</span><span class="n">KeyWrapAlgorithm</span><span class="o">.</span><span class="n">rsa_oaep</span><span class="p">,</span> <span class="n">key_bytes</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptionAlgorithm">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">EncryptionAlgorithm</code><a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/enums.html#EncryptionAlgorithm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptionAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Encryption algorithms</p>
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa1_5">
+<code class="sig-name descname">rsa1_5</code><em class="property"> = 'RSA1_5'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa1_5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa_oaep">
+<code class="sig-name descname">rsa_oaep</code><em class="property"> = 'RSA-OAEP'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa_oaep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa_oaep_256">
+<code class="sig-name descname">rsa_oaep_256</code><em class="property"> = 'RSA-OAEP-256'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptionAlgorithm.rsa_oaep_256" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">EncryptResult</code><span class="sig-paren">(</span><em class="sig-param">key_id</em>, <em class="sig-param">algorithm</em>, <em class="sig-param">ciphertext</em>, <em class="sig-param">authentication_tag</em><span class="sig-paren">)</span><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<p>Create new instance of EncryptResult(key_id, algorithm, ciphertext, authentication_tag)</p>
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptResult.algorithm">
+<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptResult.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptResult.authentication_tag">
+<em class="property">property </em><code class="sig-name descname">authentication_tag</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptResult.authentication_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptResult.ciphertext">
+<em class="property">property </em><code class="sig-name descname">ciphertext</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptResult.ciphertext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.EncryptResult.key_id">
+<em class="property">property </em><code class="sig-name descname">key_id</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.EncryptResult.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">KeyWrapAlgorithm</code><a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/enums.html#KeyWrapAlgorithm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Key wrapping algorithms</p>
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa1_5">
+<code class="sig-name descname">rsa1_5</code><em class="property"> = 'RSA1_5'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa1_5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa_oaep">
+<code class="sig-name descname">rsa_oaep</code><em class="property"> = 'RSA-OAEP'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa_oaep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa_oaep_256">
+<code class="sig-name descname">rsa_oaep_256</code><em class="property"> = 'RSA-OAEP-256'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.KeyWrapAlgorithm.rsa_oaep_256" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">SignatureAlgorithm</code><a class="reference internal" href="../_modules/azure/keyvault/keys/crypto/enums.html#SignatureAlgorithm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Signature algorithms, described in <a class="reference external" href="https://tools.ietf.org/html/rfc7518">https://tools.ietf.org/html/rfc7518</a></p>
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es256">
+<code class="sig-name descname">es256</code><em class="property"> = 'ES256'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es256" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECDSA using P-256 and SHA-256</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es256_k">
+<code class="sig-name descname">es256_k</code><em class="property"> = 'ES256K'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es256_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECDSA using P-256K and SHA-256</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es384">
+<code class="sig-name descname">es384</code><em class="property"> = 'ES384'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es384" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECDSA using P-384 and SHA-384</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es512">
+<code class="sig-name descname">es512</code><em class="property"> = 'ES512'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.es512" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECDSA using P-521 and SHA-512</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps256">
+<code class="sig-name descname">ps256</code><em class="property"> = 'PS256'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps256" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps384">
+<code class="sig-name descname">ps384</code><em class="property"> = 'PS384'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps384" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PSS using SHA-384 and MGF1 with SHA-384</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps512">
+<code class="sig-name descname">ps512</code><em class="property"> = 'PS512'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.ps512" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PSS using SHA-512 and MGF1 with SHA-512</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs256">
+<code class="sig-name descname">rs256</code><em class="property"> = 'RS256'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs256" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PKCS1-v1_5 using SHA-256</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs384">
+<code class="sig-name descname">rs384</code><em class="property"> = 'RS384'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs384" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PKCS1-v1_5 using SHA-384</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs512">
+<code class="sig-name descname">rs512</code><em class="property"> = 'RS512'</em><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignatureAlgorithm.rs512" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSASSA-PKCS1-v1_5 using SHA-512</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.SignResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">SignResult</code><span class="sig-paren">(</span><em class="sig-param">key_id</em>, <em class="sig-param">algorithm</em>, <em class="sig-param">signature</em><span class="sig-paren">)</span><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<p>Create new instance of SignResult(key_id, algorithm, signature)</p>
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.SignResult.algorithm">
+<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignResult.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.SignResult.key_id">
+<em class="property">property </em><code class="sig-name descname">key_id</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignResult.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.SignResult.signature">
+<em class="property">property </em><code class="sig-name descname">signature</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.SignResult.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.keyvault.keys.crypto.aio.WrapKeyResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.crypto.aio.</code><code class="sig-name descname">WrapKeyResult</code><span class="sig-paren">(</span><em class="sig-param">key_id</em>, <em class="sig-param">algorithm</em>, <em class="sig-param">encrypted_key</em><span class="sig-paren">)</span><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.WrapKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<p>Create new instance of WrapKeyResult(key_id, algorithm, encrypted_key)</p>
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.WrapKeyResult.algorithm">
+<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.WrapKeyResult.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.WrapKeyResult.encrypted_key">
+<em class="property">property </em><code class="sig-name descname">encrypted_key</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.WrapKeyResult.encrypted_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.keyvault.keys.crypto.aio.WrapKeyResult.key_id">
+<em class="property">property </em><code class="sig-name descname">key_id</code><a class="headerlink" href="#azure.keyvault.keys.crypto.aio.WrapKeyResult.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.keyvault.secrets.html" class="btn btn-neutral float-right" title="azure.keyvault.secrets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.keyvault.keys.crypto.html" class="btn btn-neutral float-left" title="azure.keyvault.keys.crypto package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

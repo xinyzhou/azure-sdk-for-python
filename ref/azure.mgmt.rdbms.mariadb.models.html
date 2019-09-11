@@ -1,0 +1,1192 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.rdbms.mariadb.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.rdbms.mariadb.operations module" href="azure.mgmt.rdbms.mariadb.operations.html" />
+    <link rel="prev" title="azure.mgmt.rdbms.mariadb package" href="azure.mgmt.rdbms.mariadb.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.rdbms.mariadb.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.operations.html">azure.mgmt.rdbms.mariadb.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html#module-azure.mgmt.rdbms.mariadb">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a> &raquo;</li>
+        
+      <li>azure.mgmt.rdbms.mariadb.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.rdbms.mariadb.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.rdbms.mariadb.models">
+<span id="azure-mgmt-rdbms-mariadb-models-module"></span><h1>azure.mgmt.rdbms.mariadb.models module<a class="headerlink" href="#module-azure.mgmt.rdbms.mariadb.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ProxyResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ProxyResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Resource properties.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.TrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Resource properties including location and tags for track resources.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location the resource resides in.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application-specific metadata in the form of key-value pairs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.StorageProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">StorageProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">backup_retention_days: int = None</em>, <em class="sig-param">geo_redundant_backup=None</em>, <em class="sig-param">storage_mb: int = None</em>, <em class="sig-param">storage_autogrow=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/storage_profile_py3.html#StorageProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Storage Profile properties of a server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backup_retention_days</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Backup retention days for the server.</p></li>
+<li><p><strong>geo_redundant_backup</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup" title="azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup"><em>GeoRedundantBackup</em></a>) – Enable Geo-redundant or not for server
+backup. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_mb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Max storage allowed for a server.</p></li>
+<li><p><strong>storage_autogrow</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageAutogrow" title="azure.mgmt.rdbms.mariadb.models.StorageAutogrow"><em>StorageAutogrow</em></a>) – Enable Storage Auto Grow. Possible values
+include: ‘Enabled’, ‘Disabled’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForCreate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPropertiesForCreate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_properties_for_create_py3.html#ServerPropertiesForCreate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties used to create a new server.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ServerPropertiesForDefaultCreate,
+ServerPropertiesForRestore, ServerPropertiesForGeoRestore,
+ServerPropertiesForReplica</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>create_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForDefaultCreate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPropertiesForDefaultCreate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">administrator_login: str</em>, <em class="sig-param">administrator_login_password: str</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_properties_for_default_create_py3.html#ServerPropertiesForDefaultCreate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForDefaultCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.server_properties_for_create_py3.ServerPropertiesForCreate</span></code></p>
+<p>The properties used to create a new server.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>create_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>administrator_login</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator’s login name of a
+server. Can only be specified when the server is being created (and is
+required for creation).</p></li>
+<li><p><strong>administrator_login_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The password of the
+administrator login.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForRestore">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPropertiesForRestore</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_server_id: str</em>, <em class="sig-param">restore_point_in_time</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_properties_for_restore_py3.html#ServerPropertiesForRestore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForRestore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.server_properties_for_create_py3.ServerPropertiesForCreate</span></code></p>
+<p>The properties used to create a new server by restoring from a backup.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>create_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>source_server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The source server id to restore from.</p></li>
+<li><p><strong>restore_point_in_time</strong> (<em>datetime</em>) – Required. Restore point creation time
+(ISO8601 format), specifying the time to restore from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForGeoRestore">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPropertiesForGeoRestore</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_server_id: str</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_properties_for_geo_restore_py3.html#ServerPropertiesForGeoRestore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForGeoRestore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.server_properties_for_create_py3.ServerPropertiesForCreate</span></code></p>
+<p>The properties used to create a new server by restoring to a different
+region from a geo replicated backup.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>create_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>source_server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The source server id to restore from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForReplica">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPropertiesForReplica</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_server_id: str</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_properties_for_replica_py3.html#ServerPropertiesForReplica"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForReplica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.server_properties_for_create_py3.ServerPropertiesForCreate</span></code></p>
+<p>The properties to create a new replica.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>create_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>source_server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The master server id to create replica
+from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">size: str = None</em>, <em class="sig-param">family: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Billing information related properties of a server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the sku, typically, tier + family + cores, e.g.
+B_Gen4_1, GP_Gen5_8.</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SkuTier" title="azure.mgmt.rdbms.mariadb.models.SkuTier"><em>SkuTier</em></a>) – The tier of the particular SKU, e.g. Basic. Possible values
+include: ‘Basic’, ‘GeneralPurpose’, ‘MemoryOptimized’</p></li>
+<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The scale up/out capacity, representing server’s compute
+units.</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The size code, to be interpreted by resource as appropriate.</p></li>
+<li><p><strong>family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The family of hardware.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.Server">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">administrator_login: str = None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">user_visible_state=None</em>, <em class="sig-param">fully_qualified_domain_name: str = None</em>, <em class="sig-param">earliest_restore_date=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">replication_role: str = None</em>, <em class="sig-param">master_server_id: str = None</em>, <em class="sig-param">replica_capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_py3.html#Server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.Server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>Represents a server.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location the resource resides in.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application-specific metadata in the form of key-value pairs.</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Sku" title="azure.mgmt.rdbms.mariadb.models.Sku"><em>Sku</em></a>) – The SKU (pricing tier) of the server.</p></li>
+<li><p><strong>administrator_login</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The administrator’s login name of a server.
+Can only be specified when the server is being created (and is required
+for creation).</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – Server version. Possible values include: ‘5.6’, ‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>user_visible_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerState" title="azure.mgmt.rdbms.mariadb.models.ServerState"><em>ServerState</em></a>) – A state of a server that is visible to user.
+Possible values include: ‘Ready’, ‘Dropping’, ‘Disabled’</p></li>
+<li><p><strong>fully_qualified_domain_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The fully qualified domain name of a
+server.</p></li>
+<li><p><strong>earliest_restore_date</strong> (<em>datetime</em>) – Earliest restore point creation time
+(ISO8601 format)</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>replication_role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The replication role of the server.</p></li>
+<li><p><strong>master_server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The master server id of a replica server.</p></li>
+<li><p><strong>replica_capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of replicas that a master
+server can have.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerForCreate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerForCreate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_for_create_py3.html#ServerForCreate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerForCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a server to be created.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Sku" title="azure.mgmt.rdbms.mariadb.models.Sku"><em>Sku</em></a>) – The SKU (pricing tier) of the server.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerPropertiesForCreate" title="azure.mgmt.rdbms.mariadb.models.ServerPropertiesForCreate"><em>ServerPropertiesForCreate</em></a>) – Required. Properties of the server.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location the resource resides in.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application-specific metadata in the form of key-value pairs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">administrator_login_password: str = None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">replication_role: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_update_parameters_py3.html#ServerUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters allowed to update for a server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Sku" title="azure.mgmt.rdbms.mariadb.models.Sku"><em>Sku</em></a>) – The SKU (pricing tier) of the server.</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.StorageProfile" title="azure.mgmt.rdbms.mariadb.models.StorageProfile"><em>StorageProfile</em></a>) – Storage profile of a server.</p></li>
+<li><p><strong>administrator_login_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password of the administrator
+login.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="azure.mgmt.rdbms.mariadb.models.ServerVersion"><em>ServerVersion</em></a>) – The version of a server. Possible values include: ‘5.6’,
+‘5.7’</p></li>
+<li><p><strong>ssl_enforcement</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum"><em>SslEnforcementEnum</em></a>) – Enable ssl enforcement or not when connect to
+server. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>replication_role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The replication role of the server.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application-specific metadata in the form of key-value pairs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.FirewallRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_ip_address: str</em>, <em class="sig-param">end_ip_address: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/firewall_rule_py3.html#FirewallRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Represents a server firewall rule.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>start_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The start IP address of the server
+firewall rule. Must be IPv4 format.</p></li>
+<li><p><strong>end_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The end IP address of the server firewall
+rule. Must be IPv4 format.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">virtual_network_subnet_id: str</em>, <em class="sig-param">ignore_missing_vnet_service_endpoint: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/virtual_network_rule_py3.html#VirtualNetworkRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>A virtual network rule.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState" title="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState"><em>VirtualNetworkRuleState</em></a>) – Virtual Network Rule State. Possible values include:
+‘Initializing’, ‘InProgress’, ‘Ready’, ‘Deleting’, ‘Unknown’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>virtual_network_subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The ARM resource id of the
+virtual network subnet.</p></li>
+<li><p><strong>ignore_missing_vnet_service_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Create firewall rule before
+the virtual network has vnet service endpoint enabled.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.Database">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">charset: str = None</em>, <em class="sig-param">collation: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/database_py3.html#Database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Represents a Database.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>charset</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The charset of the database.</p></li>
+<li><p><strong>collation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The collation of the database.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.Configuration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">source: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/configuration_py3.html#Configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.Configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Represents a Configuration.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the configuration.</p></li>
+<li><p><strong>default_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Default value of the configuration.</p></li>
+<li><p><strong>data_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Data type of the configuration.</p></li>
+<li><p><strong>allowed_values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Allowed values of the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Value of the configuration.</p></li>
+<li><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source of the configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Display metadata associated with the operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation resource provider name.</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.resource" title="azure.core.polling.async_poller.AsyncPollingMethod.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Localized friendly name for the operation.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation description.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>REST API operation definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the operation being performed on this particular
+object.</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.OperationDisplay" title="azure.mgmt.rdbms.mariadb.models.OperationDisplay"><em>OperationDisplay</em></a>) – The localized display information for this particular
+operation or action.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.OperationOrigin" title="azure.mgmt.rdbms.mariadb.models.OperationOrigin"><em>OperationOrigin</em></a>) – The intended executor of the operation. Possible values
+include: ‘NotSpecified’, ‘user’, ‘system’</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a><em>]</em>) – Additional descriptions for the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationListResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">OperationListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/operation_list_result_py3.html#OperationListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A list of resource provider operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Operation" title="azure.mgmt.rdbms.mariadb.models.Operation"><em>Operation</em></a><em>]</em>) – The list of resource provider operations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.LogFile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">LogFile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">size_in_kb: int = None</em>, <em class="sig-param">log_file_type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/log_file_py3.html#LogFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.LogFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Represents a log file.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>created_time</strong> (<em>datetime</em>) – Creation timestamp of the log file.</p></li>
+<li><p><strong>last_modified_time</strong> (<em>datetime</em>) – Last modified timestamp of the log file.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The url to download the log file from.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>size_in_kb</strong> (<em>long</em>) – Size of the log file.</p></li>
+<li><p><strong>log_file_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the log file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.PerformanceTierServiceLevelObjectives">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">PerformanceTierServiceLevelObjectives</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">edition: str = None</em>, <em class="sig-param">v_core: int = None</em>, <em class="sig-param">hardware_generation: str = None</em>, <em class="sig-param">max_backup_retention_days: int = None</em>, <em class="sig-param">min_backup_retention_days: int = None</em>, <em class="sig-param">max_storage_mb: int = None</em>, <em class="sig-param">min_storage_mb: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/performance_tier_service_level_objectives_py3.html#PerformanceTierServiceLevelObjectives"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.PerformanceTierServiceLevelObjectives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Service level objectives for performance tier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID for the service level objective.</p></li>
+<li><p><strong>edition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Edition of the performance tier.</p></li>
+<li><p><strong>v_core</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – vCore associated with the service level objective</p></li>
+<li><p><strong>hardware_generation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Hardware generation associated with the
+service level objective</p></li>
+<li><p><strong>max_backup_retention_days</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum Backup retention in days for the
+performance tier edition</p></li>
+<li><p><strong>min_backup_retention_days</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Minimum Backup retention in days for the
+performance tier edition</p></li>
+<li><p><strong>max_storage_mb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Max storage allowed for a server.</p></li>
+<li><p><strong>min_storage_mb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Max storage allowed for a server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.PerformanceTierProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">PerformanceTierProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">service_level_objectives=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/performance_tier_properties_py3.html#PerformanceTierProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.PerformanceTierProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Performance tier properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of the performance tier.</p></li>
+<li><p><strong>service_level_objectives</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.PerformanceTierServiceLevelObjectives" title="azure.mgmt.rdbms.mariadb.models.PerformanceTierServiceLevelObjectives"><em>PerformanceTierServiceLevelObjectives</em></a><em>]</em>) – Service level objectives associated with
+the performance tier</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.NameAvailabilityRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">NameAvailabilityRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/name_availability_request_py3.html#NameAvailabilityRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.NameAvailabilityRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request from client to check resource name availability.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name to verify.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type used for verification.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.NameAvailability">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">NameAvailability</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/name_availability_py3.html#NameAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.NameAvailability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a resource name availability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error Message.</p></li>
+<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether the resource name is available.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reason for name being unavailable.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerSecurityAlertPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">state</em>, <em class="sig-param">disabled_alerts=None</em>, <em class="sig-param">email_addresses=None</em>, <em class="sig-param">email_account_admins: bool = None</em>, <em class="sig-param">storage_endpoint: str = None</em>, <em class="sig-param">storage_account_access_key: str = None</em>, <em class="sig-param">retention_days: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_security_alert_policy_py3.html#ServerSecurityAlertPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.rdbms.mariadb.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>A server security alert policy.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState" title="azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState"><em>ServerSecurityAlertPolicyState</em></a>) – Required. Specifies the state of the policy, whether it is
+enabled or disabled. Possible values include: ‘Enabled’, ‘Disabled’</p></li>
+<li><p><strong>disabled_alerts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Specifies an array of alerts that are disabled.
+Allowed values are: Sql_Injection, Sql_Injection_Vulnerability,
+Access_Anomaly</p></li>
+<li><p><strong>email_addresses</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Specifies an array of e-mail addresses to which
+the alert is sent.</p></li>
+<li><p><strong>email_account_admins</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies that the alert is sent to the
+account administrators.</p></li>
+<li><p><strong>storage_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the blob storage endpoint (e.g.
+<a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>). This blob storage will hold all
+Threat Detection audit logs.</p></li>
+<li><p><strong>storage_account_access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the identifier key of the
+Threat Detection audit storage account.</p></li>
+<li><p><strong>retention_days</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Specifies the number of days to keep in the Threat
+Detection audit logs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/server_paged.html#ServerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Server" title="azure.mgmt.rdbms.mariadb.models.Server"><code class="xref py py-class docutils literal notranslate"><span class="pre">Server</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.FirewallRulePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">FirewallRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/firewall_rule_paged.html#FirewallRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.FirewallRulePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.FirewallRule" title="azure.mgmt.rdbms.mariadb.models.FirewallRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">FirewallRule</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRulePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">VirtualNetworkRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/virtual_network_rule_paged.html#VirtualNetworkRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRulePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRule" title="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworkRule</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.DatabasePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">DatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/database_paged.html#DatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.DatabasePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Database" title="azure.mgmt.rdbms.mariadb.models.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ConfigurationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ConfigurationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/configuration_paged.html#ConfigurationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ConfigurationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.Configuration" title="azure.mgmt.rdbms.mariadb.models.Configuration"><code class="xref py py-class docutils literal notranslate"><span class="pre">Configuration</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.LogFilePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">LogFilePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/log_file_paged.html#LogFilePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.LogFilePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.LogFile" title="azure.mgmt.rdbms.mariadb.models.LogFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogFile</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.PerformanceTierPropertiesPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">PerformanceTierPropertiesPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/performance_tier_properties_paged.html#PerformanceTierPropertiesPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.PerformanceTierPropertiesPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.rdbms.mariadb.models.PerformanceTierProperties" title="azure.mgmt.rdbms.mariadb.models.PerformanceTierProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">PerformanceTierProperties</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerVersion">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerVersion</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#ServerVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerVersion.five_full_stop_seven">
+<code class="sig-name descname">five_full_stop_seven</code><em class="property"> = '5.7'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion.five_full_stop_seven" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerVersion.five_full_stop_six">
+<code class="sig-name descname">five_full_stop_six</code><em class="property"> = '5.6'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerVersion.five_full_stop_six" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">SslEnforcementEnum</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#SslEnforcementEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SslEnforcementEnum.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerState</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#ServerState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerState.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerState.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerState.dropping">
+<code class="sig-name descname">dropping</code><em class="property"> = 'Dropping'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerState.dropping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerState.ready">
+<code class="sig-name descname">ready</code><em class="property"> = 'Ready'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerState.ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">GeoRedundantBackup</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#GeoRedundantBackup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.GeoRedundantBackup.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.StorageAutogrow">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">StorageAutogrow</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#StorageAutogrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.StorageAutogrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.StorageAutogrow.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.StorageAutogrow.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.StorageAutogrow.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.StorageAutogrow.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.SkuTier">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SkuTier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.SkuTier.basic">
+<code class="sig-name descname">basic</code><em class="property"> = 'Basic'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SkuTier.basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.SkuTier.general_purpose">
+<code class="sig-name descname">general_purpose</code><em class="property"> = 'GeneralPurpose'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SkuTier.general_purpose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.SkuTier.memory_optimized">
+<code class="sig-name descname">memory_optimized</code><em class="property"> = 'MemoryOptimized'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.SkuTier.memory_optimized" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">VirtualNetworkRuleState</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#VirtualNetworkRuleState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.in_progress">
+<code class="sig-name descname">in_progress</code><em class="property"> = 'InProgress'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.in_progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.initializing">
+<code class="sig-name descname">initializing</code><em class="property"> = 'Initializing'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.initializing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.ready">
+<code class="sig-name descname">ready</code><em class="property"> = 'Ready'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.unknown">
+<code class="sig-name descname">unknown</code><em class="property"> = 'Unknown'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.VirtualNetworkRuleState.unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationOrigin">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">OperationOrigin</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#OperationOrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationOrigin.not_specified">
+<code class="sig-name descname">not_specified</code><em class="property"> = 'NotSpecified'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationOrigin.not_specified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationOrigin.system">
+<code class="sig-name descname">system</code><em class="property"> = 'system'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationOrigin.system" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.OperationOrigin.user">
+<code class="sig-name descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.OperationOrigin.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.rdbms.mariadb.models.</code><code class="sig-name descname">ServerSecurityAlertPolicyState</code><a class="reference internal" href="../_modules/azure/mgmt/rdbms/mariadb/models/maria_db_management_client_enums.html#ServerSecurityAlertPolicyState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = 'Enabled'</em><a class="headerlink" href="#azure.mgmt.rdbms.mariadb.models.ServerSecurityAlertPolicyState.enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.rdbms.mariadb.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.rdbms.mariadb.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.rdbms.mariadb.html" class="btn btn-neutral float-left" title="azure.mgmt.rdbms.mariadb package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.datalake.analytics.catalog.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.datalake.analytics.catalog.operations module" href="azure.mgmt.datalake.analytics.catalog.operations.html" />
+    <link rel="prev" title="azure.mgmt.datalake.analytics.catalog package" href="azure.mgmt.datalake.analytics.catalog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.datalake.analytics.catalog.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.operations.html">azure.mgmt.datalake.analytics.catalog.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html#module-azure.mgmt.datalake.analytics.catalog">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a> &raquo;</li>
+        
+      <li>azure.mgmt.datalake.analytics.catalog.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.datalake.analytics.catalog.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.datalake.analytics.catalog.models">
+<span id="azure-mgmt-datalake-analytics-catalog-models-module"></span><h1>azure.mgmt.datalake.analytics.catalog.models module<a class="headerlink" href="#module-azure.mgmt.datalake.analytics.catalog.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclCreateOrUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">AclCreateOrUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ace_type</em>, <em class="sig-param">principal_id: str</em>, <em class="sig-param">permission</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/acl_create_or_update_parameters_py3.html#AclCreateOrUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclCreateOrUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to create or update an access control list (ACL) entry.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ace_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.AclType" title="azure.mgmt.datalake.analytics.catalog.models.AclType"><em>AclType</em></a>) – Required. the access control list (ACL) entry type.
+UserObj and GroupObj denote the owning user and group, respectively.
+Possible values include: ‘UserObj’, ‘GroupObj’, ‘Other’, ‘User’, ‘Group’</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the Azure AD object ID of the user or group
+being specified in the access control list (ACL) entry.</p></li>
+<li><p><strong>permission</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType" title="azure.mgmt.datalake.analytics.catalog.models.PermissionType"><em>PermissionType</em></a>) – Required. the permission type of the access control
+list (ACL) entry. Possible values include: ‘None’, ‘Use’, ‘Create’,
+‘Drop’, ‘Alter’, ‘Write’, ‘All’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclDeleteParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">AclDeleteParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ace_type</em>, <em class="sig-param">principal_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/acl_delete_parameters_py3.html#AclDeleteParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclDeleteParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to delete an access control list (ACL) entry.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ace_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.AclType" title="azure.mgmt.datalake.analytics.catalog.models.AclType"><em>AclType</em></a>) – Required. the access control list (ACL) entry type.
+UserObj and GroupObj denote the owning user and group, respectively.
+Possible values include: ‘UserObj’, ‘GroupObj’, ‘Other’, ‘User’, ‘Group’</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the Azure AD object ID of the user or group
+being specified in the access control list (ACL) entry.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.Acl">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">Acl</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/acl_py3.html#Acl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.Acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog access control list (ACL) entry.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ace_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.AclType" title="azure.mgmt.datalake.analytics.catalog.models.AclType"><em>AclType</em></a>) – the access control list (ACL) entry type. UserObj and
+GroupObj denote the owning user and group, respectively. Possible values
+include: ‘UserObj’, ‘GroupObj’, ‘Other’, ‘User’, ‘Group’</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the Azure AD object ID of the user or group being
+specified in the access control list (ACL) entry.</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.permission.html#module-azure.cosmos.permission" title="azure.cosmos.permission"><strong>permission</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType" title="azure.mgmt.datalake.analytics.catalog.models.PermissionType"><em>PermissionType</em></a>) – the permission type of the access control list (ACL)
+entry. Possible values include: ‘None’, ‘Use’, ‘Create’, ‘Drop’, ‘Alter’,
+‘Write’, ‘All’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogSecretCreateOrUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">DataLakeAnalyticsCatalogSecretCreateOrUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">password: str</em>, <em class="sig-param">uri: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_secret_create_or_update_parameters_py3.html#DataLakeAnalyticsCatalogSecretCreateOrUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogSecretCreateOrUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics catalog secret creation and update parameters. This is
+deprecated and will be removed in the next release. Please use
+DataLakeAnalyticsCatalogCredentialCreateOrUpdateParameters instead.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the password for the secret to pass in</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the URI identifier for the secret in the format
+&lt;hostname&gt;:&lt;port&gt;</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialCreateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">DataLakeAnalyticsCatalogCredentialCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">password: str</em>, <em class="sig-param">uri: str</em>, <em class="sig-param">user_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_credential_create_parameters_py3.html#DataLakeAnalyticsCatalogCredentialCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialCreateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics catalog credential creation parameters.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the password for the credential and user with
+access to the data source.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the URI identifier for the data source this
+credential can connect to in the format &lt;hostname&gt;:&lt;port&gt;</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. the object identifier for the user associated
+with this credential with access to the data source.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialDeleteParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">DataLakeAnalyticsCatalogCredentialDeleteParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">password: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_credential_delete_parameters_py3.html#DataLakeAnalyticsCatalogCredentialDeleteParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialDeleteParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics catalog credential deletion parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the current password for the credential and user with
+access to the data source. This is required if the requester is not the
+account owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">DataLakeAnalyticsCatalogCredentialUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">password: str = None</em>, <em class="sig-param">new_password: str = None</em>, <em class="sig-param">uri: str = None</em>, <em class="sig-param">user_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_credential_update_parameters_py3.html#DataLakeAnalyticsCatalogCredentialUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.DataLakeAnalyticsCatalogCredentialUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics catalog credential update parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the current password for the credential and user with
+access to the data source. This is required if the requester is not the
+account owner.</p></li>
+<li><p><strong>new_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the new password for the credential and user with
+access to the data source.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the URI identifier for the data source this credential can
+connect to in the format &lt;hostname&gt;:&lt;port&gt;</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the object identifier for the user associated with this
+credential with access to the data source.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlSecret">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlSecret</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">uri: str = None</em>, <em class="sig-param">password: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_secret_py3.html#USqlSecret"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlSecret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL secret item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the secret.</p></li>
+<li><p><strong>creation_time</strong> (<em>datetime</em>) – the creation time of the credential object. This is
+the only information returned about a secret from a GET.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the URI identifier for the secret in the format
+&lt;hostname&gt;:&lt;port&gt;</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the password for the secret to pass in</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlExternalDataSource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">provider_string: str = None</em>, <em class="sig-param">pushdown_types=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_external_data_source_py3.html#USqlExternalDataSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL external datasource item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the external data source.</p></li>
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the provider for the external data source.</p></li>
+<li><p><strong>provider_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the provider string for the external
+data source.</p></li>
+<li><p><strong>pushdown_types</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of types to push down from the external
+data source.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlCredential">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlCredential</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_credential_py3.html#USqlCredential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlCredential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL credential item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the credential.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlProcedure">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlProcedure</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">definition: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_procedure_py3.html#USqlProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlProcedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL procedure item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this procedure
+and database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the procedure.</p></li>
+<li><p><strong>definition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the defined query of the procedure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableColumn</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">column_name=None</em>, <em class="sig-param">data_type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_column_py3.html#USqlTableColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table column item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the column in the table.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the object type of the specified column (such as
+System.String).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlDirectedColumn</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">descending: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_directed_column_py3.html#USqlDirectedColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL directed column item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the index in the table.</p></li>
+<li><p><strong>descending</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if the index is descending or
+not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlDistributionInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type: int = None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">count: int = None</em>, <em class="sig-param">dynamic_count: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_distribution_info_py3.html#USqlDistributionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL distribution information object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the type of this distribution.</p></li>
+<li><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn" title="azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn"><em>USqlDirectedColumn</em></a><em>]</em>) – the list of directed columns in the distribution</p></li>
+<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the count of indices using this distribution.</p></li>
+<li><p><strong>dynamic_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the dynamic count of indices using this
+distribution.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlIndex">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlIndex</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">index_keys=None</em>, <em class="sig-param">columns=None</em>, <em class="sig-param">distribution_info=None</em>, <em class="sig-param">partition_function: str = None</em>, <em class="sig-param">partition_key_list=None</em>, <em class="sig-param">stream_names=None</em>, <em class="sig-param">is_columnstore: bool = None</em>, <em class="sig-param">index_id: int = None</em>, <em class="sig-param">is_unique: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_index_py3.html#USqlIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table index item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the index in the table.</p></li>
+<li><p><strong>index_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn" title="azure.mgmt.datalake.analytics.catalog.models.USqlDirectedColumn"><em>USqlDirectedColumn</em></a><em>]</em>) – the list of directed columns in the index</p></li>
+<li><p><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of columns in the index</p></li>
+<li><p><strong>distribution_info</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo" title="azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo"><em>USqlDistributionInfo</em></a>) – the distributions info of the index</p></li>
+<li><p><strong>partition_function</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – partition function ID for the index.</p></li>
+<li><p><strong>partition_key_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of partion keys in the index</p></li>
+<li><p><strong>stream_names</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of full paths to the streams that contain
+this index in the DataLake account.</p></li>
+<li><p><strong>is_columnstore</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if this index is a
+columnstore index.</p></li>
+<li><p><strong>index_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the ID of this index within the table.</p></li>
+<li><p><strong>is_unique</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if this index is a unique index.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.DdlName">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">DdlName</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">first_part: str = None</em>, <em class="sig-param">second_part: str = None</em>, <em class="sig-param">third_part: str = None</em>, <em class="sig-param">server: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/ddl_name_py3.html#DdlName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.DdlName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics DDL name item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_part</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table associated with this database and
+schema.</p></li>
+<li><p><strong>second_part</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table associated with this database
+and schema.</p></li>
+<li><p><strong>third_part</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table associated with this database and
+schema.</p></li>
+<li><p><strong>server</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table associated with this database and
+schema.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.EntityId">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">EntityId</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/entity_id_py3.html#EntityId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.EntityId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog entity identifier object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.DdlName" title="azure.mgmt.datalake.analytics.catalog.models.DdlName"><em>DdlName</em></a>) – the name of the external table associated with this database,
+schema and table.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the external data source.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.ExternalTable">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">ExternalTable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">table_name: str = None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/external_table_py3.html#ExternalTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.ExternalTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog external table item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table associated with this database and
+schema.</p></li>
+<li><p><strong>data_source</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.EntityId" title="azure.mgmt.datalake.analytics.catalog.models.EntityId"><em>EntityId</em></a>) – the data source associated with this external table.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.TypeFieldInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">TypeFieldInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/type_field_info_py3.html#TypeFieldInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.TypeFieldInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog type field information item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the field associated with this type.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the type of the field.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTablePreview">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTablePreview</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">total_row_count: int = None</em>, <em class="sig-param">total_column_count: int = None</em>, <em class="sig-param">rows=None</em>, <em class="sig-param">truncated: bool = None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_preview_py3.html#USqlTablePreview"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTablePreview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog table or partition preview rows item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>total_row_count</strong> (<em>long</em>) – the total number of rows in the table or
+partition.</p></li>
+<li><p><strong>total_column_count</strong> (<em>long</em>) – the total number of columns in the table or
+partition.</p></li>
+<li><p><strong>rows</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em><em>]</em>) – the rows of the table or partition preview, where each row is
+an array of string representations the row’s values. Note: Byte arrays
+will appear as base-64 encoded values, SqlMap and SqlArray objects will
+appear as escaped JSON objects, and DateTime objects will appear as ISO
+formatted UTC date-times.</p></li>
+<li><p><strong>truncated</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – true if the amount of data in the response is less than
+expected due to the preview operation’s size limitations. This can occur
+if the requested rows or row counts are too large.</p></li>
+<li><p><strong>schema</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn"><em>USqlTableColumn</em></a><em>]</em>) – the schema of the table or partition.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTable">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">column_list=None</em>, <em class="sig-param">index_list=None</em>, <em class="sig-param">partition_key_list=None</em>, <em class="sig-param">external_table=None</em>, <em class="sig-param">distribution_info=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_py3.html#USqlTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this table and
+database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table.</p></li>
+<li><p><strong>column_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableColumn"><em>USqlTableColumn</em></a><em>]</em>) – the list of columns in this table</p></li>
+<li><p><strong>index_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlIndex" title="azure.mgmt.datalake.analytics.catalog.models.USqlIndex"><em>USqlIndex</em></a><em>]</em>) – the list of indices in this table</p></li>
+<li><p><strong>partition_key_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of partition keys in the table</p></li>
+<li><p><strong>external_table</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.ExternalTable" title="azure.mgmt.datalake.analytics.catalog.models.ExternalTable"><em>ExternalTable</em></a>) – the external table associated with the table.</p></li>
+<li><p><strong>distribution_info</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo" title="azure.mgmt.datalake.analytics.catalog.models.USqlDistributionInfo"><em>USqlDistributionInfo</em></a>) – the distributions info of the table</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableFragment">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableFragment</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">parent_id: str = None</em>, <em class="sig-param">fragment_id: str = None</em>, <em class="sig-param">index_id: int = None</em>, <em class="sig-param">size: int = None</em>, <em class="sig-param">row_count: int = None</em>, <em class="sig-param">create_date=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_fragment_py3.html#USqlTableFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table fragment item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the parent object Id of the table fragment. The parent
+could be a table or table partition.</p></li>
+<li><p><strong>fragment_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>index_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the ordinal of the index which contains the table
+fragment.</p></li>
+<li><p><strong>size</strong> (<em>long</em>) – the data size of the table fragment in bytes.</p></li>
+<li><p><strong>row_count</strong> (<em>long</em>) – the number of rows in the table fragment.</p></li>
+<li><p><strong>create_date</strong> (<em>datetime</em>) – the creation time of the table fragment.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableType</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type_family: str = None</em>, <em class="sig-param">c_sharp_name: str = None</em>, <em class="sig-param">full_csharp_name: str = None</em>, <em class="sig-param">system_type_id: int = None</em>, <em class="sig-param">user_type_id: int = None</em>, <em class="sig-param">schema_id: int = None</em>, <em class="sig-param">principal_id: int = None</em>, <em class="sig-param">is_nullable: bool = None</em>, <em class="sig-param">is_user_defined: bool = None</em>, <em class="sig-param">is_assembly_type: bool = None</em>, <em class="sig-param">is_table_type: bool = None</em>, <em class="sig-param">is_complex_type: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_type_py3.html#USqlTableType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.usql_type_py3.USqlType</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table type item.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this table and
+database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of type for this type.</p></li>
+<li><p><strong>type_family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the type family for this type.</p></li>
+<li><p><strong>c_sharp_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the C# name for this type.</p></li>
+<li><p><strong>full_csharp_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the fully qualified C# name for this type.</p></li>
+<li><p><strong>system_type_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the system type ID for this type.</p></li>
+<li><p><strong>user_type_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the user type ID for this type.</p></li>
+<li><p><strong>schema_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the schema ID for this type.</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the principal ID for this type.</p></li>
+<li><p><strong>is_nullable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is nullable.</p></li>
+<li><p><strong>is_user_defined</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is user
+defined.</p></li>
+<li><p><strong>is_assembly_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is an
+assembly type.</p></li>
+<li><p><strong>is_table_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is a table
+type.</p></li>
+<li><p><strong>is_complex_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is a
+complex type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.TypeFieldInfo" title="azure.mgmt.datalake.analytics.catalog.models.TypeFieldInfo"><em>TypeFieldInfo</em></a><em>]</em>) – the type field information associated with this table type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlView">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlView</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">definition: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_view_py3.html#USqlView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL view item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this view and
+database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the view.</p></li>
+<li><p><strong>definition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the defined query of the view.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlPackage">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlPackage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">definition: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_package_py3.html#USqlPackage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL package item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database containing the package.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this package
+and database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the package.</p></li>
+<li><p><strong>definition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the definition of the package.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTablePartition">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTablePartition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">parent_name=None</em>, <em class="sig-param">index_id: int = None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">create_date=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_partition_py3.html#USqlTablePartition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTablePartition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table partition item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this table
+partition and database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table partition.</p></li>
+<li><p><strong>parent_name</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.DdlName" title="azure.mgmt.datalake.analytics.catalog.models.DdlName"><em>DdlName</em></a>) – the Ddl object of the partition’s parent.</p></li>
+<li><p><strong>index_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the index ID for this partition.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of labels associated with this partition.</p></li>
+<li><p><strong>create_date</strong> (<em>datetime</em>) – the creation time of the partition</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableStatistics">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableStatistics</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">table_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_stat_name: str = None</em>, <em class="sig-param">stat_data_path: str = None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">is_user_created: bool = None</em>, <em class="sig-param">is_auto_created: bool = None</em>, <em class="sig-param">has_filter: bool = None</em>, <em class="sig-param">filter_definition: str = None</em>, <em class="sig-param">col_names=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_statistics_py3.html#USqlTableStatistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableStatistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table statistics item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this table and
+database.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table statistics.</p></li>
+<li><p><strong>user_stat_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the user statistics.</p></li>
+<li><p><strong>stat_data_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the path to the statistics data.</p></li>
+<li><p><strong>create_time</strong> (<em>datetime</em>) – the creation time of the statistics.</p></li>
+<li><p><strong>update_time</strong> (<em>datetime</em>) – the last time the statistics were updated.</p></li>
+<li><p><strong>is_user_created</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if these statistics are user
+created.</p></li>
+<li><p><strong>is_auto_created</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if these statistics are
+automatically created.</p></li>
+<li><p><strong>has_filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if these statistics have a
+filter.</p></li>
+<li><p><strong>filter_definition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the filter definition for the statistics.</p></li>
+<li><p><strong>col_names</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – the list of column names associated with these
+statistics.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlType</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type_family: str = None</em>, <em class="sig-param">c_sharp_name: str = None</em>, <em class="sig-param">full_csharp_name: str = None</em>, <em class="sig-param">system_type_id: int = None</em>, <em class="sig-param">user_type_id: int = None</em>, <em class="sig-param">schema_id: int = None</em>, <em class="sig-param">principal_id: int = None</em>, <em class="sig-param">is_nullable: bool = None</em>, <em class="sig-param">is_user_defined: bool = None</em>, <em class="sig-param">is_assembly_type: bool = None</em>, <em class="sig-param">is_table_type: bool = None</em>, <em class="sig-param">is_complex_type: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_type_py3.html#USqlType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL type item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this table and
+database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of type for this type.</p></li>
+<li><p><strong>type_family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the type family for this type.</p></li>
+<li><p><strong>c_sharp_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the C# name for this type.</p></li>
+<li><p><strong>full_csharp_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the fully qualified C# name for this type.</p></li>
+<li><p><strong>system_type_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the system type ID for this type.</p></li>
+<li><p><strong>user_type_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the user type ID for this type.</p></li>
+<li><p><strong>schema_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the schema ID for this type.</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – the principal ID for this type.</p></li>
+<li><p><strong>is_nullable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is nullable.</p></li>
+<li><p><strong>is_user_defined</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is user
+defined.</p></li>
+<li><p><strong>is_assembly_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is an
+assembly type.</p></li>
+<li><p><strong>is_table_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is a table
+type.</p></li>
+<li><p><strong>is_complex_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the the switch indicating if this type is a
+complex type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunction">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableValuedFunction</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">schema_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">definition: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_valued_function_py3.html#USqlTableValuedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL table valued function item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>schema_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema associated with this database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the table valued function.</p></li>
+<li><p><strong>definition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the definition of the table valued function.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyFileInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlAssemblyFileInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">original_path: str = None</em>, <em class="sig-param">content_path: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_assembly_file_info_py3.html#USqlAssemblyFileInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyFileInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL assembly file information item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.FileType" title="azure.mgmt.datalake.analytics.catalog.models.FileType"><em>FileType</em></a>) – the assembly file type. Possible values include: ‘Assembly’,
+‘Resource’, ‘Nodeploy’</p></li>
+<li><p><strong>original_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the the original path to the assembly file.</p></li>
+<li><p><strong>content_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the the content path to the assembly file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyDependencyInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlAssemblyDependencyInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_assembly_dependency_info_py3.html#USqlAssemblyDependencyInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyDependencyInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL dependency information item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity_id</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.EntityId" title="azure.mgmt.datalake.analytics.catalog.models.EntityId"><em>EntityId</em></a>) – the EntityId of the dependency.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlAssembly">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlAssembly</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">clr_name: str = None</em>, <em class="sig-param">is_visible: bool = None</em>, <em class="sig-param">is_user_defined: bool = None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">dependencies=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_assembly_py3.html#USqlAssembly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssembly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL Assembly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the assembly.</p></li>
+<li><p><strong>clr_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the CLR.</p></li>
+<li><p><strong>is_visible</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if this assembly is visible or
+not.</p></li>
+<li><p><strong>is_user_defined</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – the switch indicating if this assembly is user
+defined or not.</p></li>
+<li><p><strong>files</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyFileInfo" title="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyFileInfo"><em>USqlAssemblyFileInfo</em></a><em>]</em>) – the list of files associated with the assembly</p></li>
+<li><p><strong>dependencies</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyDependencyInfo" title="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyDependencyInfo"><em>USqlAssemblyDependencyInfo</em></a><em>]</em>) – the list of dependencies associated with the assembly</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClr">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlAssemblyClr</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">clr_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_assembly_clr_py3.html#USqlAssemblyClr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL assembly CLR item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the assembly.</p></li>
+<li><p><strong>clr_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the CLR.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlSchema">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlSchema</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">database_name: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_schema_py3.html#USqlSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL schema item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the schema.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlDatabase">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlDatabase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_database_py3.html#USqlDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.catalog.models.catalog_item_py3.CatalogItem</span></code></p>
+<p>A Data Lake Analytics catalog U-SQL database item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the database.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.CatalogItem">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">CatalogItem</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">compute_account_name: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/catalog_item_py3.html#CatalogItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.CatalogItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of the Data Lake Analytics account.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the version of the catalog item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.CatalogItemList">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">CatalogItemList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">next_link: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/catalog_item_list_py3.html#CatalogItemList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.CatalogItemList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics catalog item list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the link to the next page of results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlCredentialPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlCredentialPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_credential_paged.html#USqlCredentialPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlCredentialPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlCredential" title="azure.mgmt.datalake.analytics.catalog.models.USqlCredential"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlCredential</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSourcePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlExternalDataSourcePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_external_data_source_paged.html#USqlExternalDataSourcePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSourcePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSource" title="azure.mgmt.datalake.analytics.catalog.models.USqlExternalDataSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlExternalDataSource</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlProcedurePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlProcedurePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_procedure_paged.html#USqlProcedurePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlProcedurePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlProcedure" title="azure.mgmt.datalake.analytics.catalog.models.USqlProcedure"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlProcedure</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableFragmentPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableFragmentPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_fragment_paged.html#USqlTableFragmentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableFragmentPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableFragment" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableFragment"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTableFragment</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTablePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTablePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_paged.html#USqlTablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTablePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTable" title="azure.mgmt.datalake.analytics.catalog.models.USqlTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTable</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableStatisticsPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableStatisticsPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_statistics_paged.html#USqlTableStatisticsPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableStatisticsPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableStatistics" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableStatistics"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTableStatistics</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableTypePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableTypePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_type_paged.html#USqlTableTypePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableTypePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableType" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableType"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTableType</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlPackagePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlPackagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_package_paged.html#USqlPackagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlPackagePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlPackage" title="azure.mgmt.datalake.analytics.catalog.models.USqlPackage"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlPackage</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlViewPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlViewPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_view_paged.html#USqlViewPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlViewPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlView" title="azure.mgmt.datalake.analytics.catalog.models.USqlView"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlView</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTablePartitionPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTablePartitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_partition_paged.html#USqlTablePartitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTablePartitionPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTablePartition" title="azure.mgmt.datalake.analytics.catalog.models.USqlTablePartition"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTablePartition</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTypePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTypePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_type_paged.html#USqlTypePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTypePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlType" title="azure.mgmt.datalake.analytics.catalog.models.USqlType"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlType</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunctionPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlTableValuedFunctionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_table_valued_function_paged.html#USqlTableValuedFunctionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunctionPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunction" title="azure.mgmt.datalake.analytics.catalog.models.USqlTableValuedFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlTableValuedFunction</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClrPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlAssemblyClrPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_assembly_clr_paged.html#USqlAssemblyClrPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClrPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClr" title="azure.mgmt.datalake.analytics.catalog.models.USqlAssemblyClr"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlAssemblyClr</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlSchemaPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlSchemaPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_schema_paged.html#USqlSchemaPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlSchemaPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlSchema" title="azure.mgmt.datalake.analytics.catalog.models.USqlSchema"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlSchema</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">AclPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/acl_paged.html#AclPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.Acl" title="azure.mgmt.datalake.analytics.catalog.models.Acl"><code class="xref py py-class docutils literal notranslate"><span class="pre">Acl</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.USqlDatabasePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">USqlDatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/usql_database_paged.html#USqlDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.catalog.models.USqlDatabase" title="azure.mgmt.datalake.analytics.catalog.models.USqlDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">USqlDatabase</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">AclType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_management_client_enums.html#AclType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType.group">
+<code class="sig-name descname">group</code><em class="property"> = 'Group'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType.group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType.group_obj">
+<code class="sig-name descname">group_obj</code><em class="property"> = 'GroupObj'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType.group_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType.other">
+<code class="sig-name descname">other</code><em class="property"> = 'Other'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType.other" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType.user">
+<code class="sig-name descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.AclType.user_obj">
+<code class="sig-name descname">user_obj</code><em class="property"> = 'UserObj'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.AclType.user_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">PermissionType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_management_client_enums.html#PermissionType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.all">
+<code class="sig-name descname">all</code><em class="property"> = 'All'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.alter">
+<code class="sig-name descname">alter</code><em class="property"> = 'Alter'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.alter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.create">
+<code class="sig-name descname">create</code><em class="property"> = 'Create'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.drop">
+<code class="sig-name descname">drop</code><em class="property"> = 'Drop'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.drop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.none">
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.use">
+<code class="sig-name descname">use</code><em class="property"> = 'Use'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.PermissionType.write">
+<code class="sig-name descname">write</code><em class="property"> = 'Write'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.PermissionType.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.FileType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.catalog.models.</code><code class="sig-name descname">FileType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/catalog/models/data_lake_analytics_catalog_management_client_enums.html#FileType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.FileType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.FileType.assembly">
+<code class="sig-name descname">assembly</code><em class="property"> = 'Assembly'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.FileType.assembly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.FileType.nodeploy">
+<code class="sig-name descname">nodeploy</code><em class="property"> = 'Nodeploy'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.FileType.nodeploy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.catalog.models.FileType.resource">
+<code class="sig-name descname">resource</code><em class="property"> = 'Resource'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.datalake.analytics.catalog.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.datalake.analytics.catalog.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.datalake.analytics.catalog.html" class="btn btn-neutral float-left" title="azure.mgmt.datalake.analytics.catalog package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

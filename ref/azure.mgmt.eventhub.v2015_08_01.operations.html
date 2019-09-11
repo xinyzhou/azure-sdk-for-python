@@ -1,0 +1,1380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.eventhub.v2015_08_01.operations module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.hanaonazure package" href="azure.mgmt.hanaonazure.html" />
+    <link rel="prev" title="azure.mgmt.eventhub.v2015_08_01.models module" href="azure.mgmt.eventhub.v2015_08_01.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.eventhub.html#module-azure.mgmt.eventhub">Module contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.eventhub.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.html">azure.mgmt.eventhub.v2018_01_01_preview package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.eventhub.v2017_04_01.html">azure.mgmt.eventhub.v2017_04_01 package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.html">azure.mgmt.eventhub.v2015_08_01 package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.html#module-azure.mgmt.eventhub.v2015_08_01">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.eventhub.v2015_08_01.html">azure.mgmt.eventhub.v2015_08_01 package</a> &raquo;</li>
+        
+      <li>azure.mgmt.eventhub.v2015_08_01.operations module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.eventhub.v2015_08_01.operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.eventhub.v2015_08_01.operations">
+<span id="azure-mgmt-eventhub-v2015-08-01-operations-module"></span><h1>azure.mgmt.eventhub.v2015_08_01.operations module<a class="headerlink" href="#module-azure.mgmt.eventhub.v2015_08_01.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.Operations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2015_08_01.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client API Version. Constant value: “2015-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.Operations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available Event Hub REST API operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.OperationPaged" title="azure.mgmt.eventhub.v2015_08_01.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Operation" title="azure.mgmt.eventhub.v2015_08_01.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.Operations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.eventhub.v2015_08_01.models' from 'd:\\a\\1\\s\\sdk\\eventhub\\azure-mgmt-eventhub\\azure\\mgmt\\eventhub\\v2015_08_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2015_08_01.operations.</code><code class="sig-name descname">NamespacesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>NamespacesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client API Version. Constant value: “2015-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.check_name_availability">
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the give Namespace name availability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name to check the namespace name availability</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CheckNameAvailabilityResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.CheckNameAvailabilityResult" title="azure.mgmt.eventhub.v2015_08_01.models.CheckNameAvailabilityResult">CheckNameAvailabilityResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a namespace. Once created, this namespace’s resource
+manifest is immutable. This operation is idempotent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceCreateOrUpdateParameters" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceCreateOrUpdateParameters"><em>NamespaceCreateOrUpdateParameters</em></a>) – Parameters for creating a namespace resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns NamespaceResource or
+ClientRawResponse&lt;NamespaceResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.create_or_update_authorization_rule">
+<code class="sig-name descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates an AuthorizationRule for a Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters"><em>SharedAccessAuthorizationRuleCreateOrUpdateParameters</em></a>) – The shared access AuthorizationRule.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedAccessAuthorizationRuleResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing namespace. This operation also removes all
+associated resources under the namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.delete_authorization_rule">
+<code class="sig-name descname">delete_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.delete_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.delete_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an AuthorizationRule for a Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the description of the specified namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NamespaceResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.get_authorization_rule">
+<code class="sig-name descname">get_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.get_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.get_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an AuthorizationRule for a Namespace by rule name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedAccessAuthorizationRuleResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_authorization_rules">
+<code class="sig-name descname">list_authorization_rules</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.list_authorization_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_authorization_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of authorization rules for a Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of
+SharedAccessAuthorizationRuleResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResourcePaged">SharedAccessAuthorizationRuleResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_by_resource_group">
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the available Namespaces within a resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of NamespaceResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResourcePaged">NamespaceResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_by_subscription">
+<code class="sig-name descname">list_by_subscription</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.list_by_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_by_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all the available Namespaces within a subscription, irrespective
+of the resource groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of NamespaceResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResourcePaged">NamespaceResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_keys">
+<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.list_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the primary and secondary connection strings for the Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceListKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys" title="azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys">ResourceListKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.eventhub.v2015_08_01.models' from 'd:\\a\\1\\s\\sdk\\eventhub\\azure-mgmt-eventhub\\azure\\mgmt\\eventhub\\v2015_08_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.regenerate_keys">
+<code class="sig-name descname">regenerate_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">policykey=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.regenerate_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.regenerate_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regenerates the primary or secondary connection strings for the
+specified Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>policykey</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey"><em>Policykey</em></a>) – Key that needs to be regenerated. Possible values
+include: ‘PrimaryKey’, ‘SecondaryKey’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceListKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys" title="azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys">ResourceListKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_namespaces_operations.html#NamespacesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.NamespacesOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a namespace. Once created, this namespace’s resource
+manifest is immutable. This operation is idempotent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Sku" title="azure.mgmt.eventhub.v2015_08_01.models.Sku"><em>Sku</em></a>) – The sku of the created Namespace</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NamespaceResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource" title="azure.mgmt.eventhub.v2015_08_01.models.NamespaceResource">NamespaceResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2015_08_01.operations.</code><code class="sig-name descname">EventHubsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>EventHubsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client API Version. Constant value: “2015-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a new Event Hub as a nested resource within a
+Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.EventHubCreateOrUpdateParameters" title="azure.mgmt.eventhub.v2015_08_01.models.EventHubCreateOrUpdateParameters"><em>EventHubCreateOrUpdateParameters</em></a>) – Parameters supplied to create an Event Hub
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>EventHubResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.EventHubResource" title="azure.mgmt.eventhub.v2015_08_01.models.EventHubResource">EventHubResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.create_or_update_authorization_rule">
+<code class="sig-name descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates an AuthorizationRule for the specified Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleCreateOrUpdateParameters"><em>SharedAccessAuthorizationRuleCreateOrUpdateParameters</em></a>) – The shared access AuthorizationRule.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedAccessAuthorizationRuleResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an Event Hub from the specified Namespace and resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.delete_authorization_rule">
+<code class="sig-name descname">delete_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.delete_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.delete_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an Event Hub AuthorizationRule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an Event Hubs description for the specified Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>EventHubResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.EventHubResource" title="azure.mgmt.eventhub.v2015_08_01.models.EventHubResource">EventHubResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.get_authorization_rule">
+<code class="sig-name descname">get_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.get_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.get_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an AuthorizationRule for an Event Hub by rule name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedAccessAuthorizationRuleResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_all">
+<code class="sig-name descname">list_all</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.list_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the Event Hubs in a Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of EventHubResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.EventHubResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.EventHubResourcePaged">EventHubResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.EventHubResource" title="azure.mgmt.eventhub.v2015_08_01.models.EventHubResource">EventHubResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_authorization_rules">
+<code class="sig-name descname">list_authorization_rules</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.list_authorization_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_authorization_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the authorization rules for an Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of
+SharedAccessAuthorizationRuleResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResourcePaged">SharedAccessAuthorizationRuleResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_keys">
+<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ACS and SAS connection strings for the Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceListKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys" title="azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys">ResourceListKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.eventhub.v2015_08_01.models' from 'd:\\a\\1\\s\\sdk\\eventhub\\azure-mgmt-eventhub\\azure\\mgmt\\eventhub\\v2015_08_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.postt_authorization_rule">
+<code class="sig-name descname">postt_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.postt_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.postt_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an AuthorizationRule for an Event Hub by rule name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedAccessAuthorizationRuleResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource" title="azure.mgmt.eventhub.v2015_08_01.models.SharedAccessAuthorizationRuleResource">SharedAccessAuthorizationRuleResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.regenerate_keys">
+<code class="sig-name descname">regenerate_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">authorization_rule_name</em>, <em class="sig-param">policykey=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_event_hubs_operations.html#EventHubsOperations.regenerate_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.EventHubsOperations.regenerate_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regenerates the ACS and SAS connection strings for the Event Hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>authorization_rule_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The authorization rule name.</p></li>
+<li><p><strong>policykey</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey"><em>Policykey</em></a>) – Key that needs to be regenerated. Possible values
+include: ‘PrimaryKey’, ‘SecondaryKey’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceListKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys" title="azure.mgmt.eventhub.v2015_08_01.models.ResourceListKeys">ResourceListKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2015_08_01.operations.</code><code class="sig-name descname">ConsumerGroupsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_consumer_groups_operations.html#ConsumerGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ConsumerGroupsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client API Version. Constant value: “2015-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">consumer_group_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_consumer_groups_operations.html#ConsumerGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates an Event Hubs consumer group as a nested resource
+within a Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>consumer_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The consumer group name</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupCreateOrUpdateParameters" title="azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupCreateOrUpdateParameters"><em>ConsumerGroupCreateOrUpdateParameters</em></a>) – Parameters supplied to create or update a consumer
+group resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ConsumerGroupResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource" title="azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource">ConsumerGroupResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">consumer_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_consumer_groups_operations.html#ConsumerGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a consumer group from the specified Event Hub and resource
+group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>consumer_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The consumer group name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">consumer_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_consumer_groups_operations.html#ConsumerGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a description for the specified consumer group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>consumer_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The consumer group name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ConsumerGroupResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource" title="azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource">ConsumerGroupResource</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.list_all">
+<code class="sig-name descname">list_all</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">namespace_name</em>, <em class="sig-param">event_hub_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2015_08_01/operations/_consumer_groups_operations.html#ConsumerGroupsOperations.list_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.list_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the consumer groups in a Namespace. An empty feed is returned
+if no consumer group exists in the Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group within the
+azure subscription.</p></li>
+<li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Namespace name</p></li>
+<li><p><strong>event_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Event Hub name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ConsumerGroupResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResourcePaged" title="azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResourcePaged">ConsumerGroupResourcePaged</a>[<a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource" title="azure.mgmt.eventhub.v2015_08_01.models.ConsumerGroupResource">ConsumerGroupResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.eventhub.v2015_08_01.models' from 'd:\\a\\1\\s\\sdk\\eventhub\\azure-mgmt-eventhub\\azure\\mgmt\\eventhub\\v2015_08_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.eventhub.v2015_08_01.operations.ConsumerGroupsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.hanaonazure.html" class="btn btn-neutral float-right" title="azure.mgmt.hanaonazure package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.eventhub.v2015_08_01.models.html" class="btn btn-neutral float-left" title="azure.mgmt.eventhub.v2015_08_01.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

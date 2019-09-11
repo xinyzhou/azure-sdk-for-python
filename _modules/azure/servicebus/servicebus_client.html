@@ -1,0 +1,1147 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.servicebus_client &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.servicebus.servicebus_client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.servicebus.servicebus_client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span>
+
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">types</span>
+
+<span class="kn">from</span> <span class="nn">azure.servicebus.common</span> <span class="k">import</span> <span class="n">mgmt_handlers</span><span class="p">,</span> <span class="n">mixins</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.constants</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">ReceiveSettleMode</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_GET_MESSAGE_SESSIONS_OPERATION</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.message</span> <span class="k">import</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.utils</span> <span class="k">import</span> <span class="n">parse_conn_str</span><span class="p">,</span> <span class="n">build_uri</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.errors</span> <span class="k">import</span> <span class="n">ServiceBusConnectionError</span><span class="p">,</span> <span class="n">ServiceBusResourceNotFound</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.control_client</span> <span class="k">import</span> <span class="n">ServiceBusService</span><span class="p">,</span> <span class="n">SERVICE_BUS_HOST_BASE</span><span class="p">,</span> <span class="n">DEFAULT_HTTP_TIMEOUT</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.control_client.models</span> <span class="k">import</span> <span class="n">AzureServiceBusResourceNotFound</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.send_handler</span> <span class="k">import</span> <span class="n">Sender</span><span class="p">,</span> <span class="n">SessionSender</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.receive_handler</span> <span class="k">import</span> <span class="n">Receiver</span><span class="p">,</span> <span class="n">SessionReceiver</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.base_handler</span> <span class="k">import</span> <span class="n">BaseHandler</span>
+
+
+<div class="viewcode-block" id="ServiceBusClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusClient</span><span class="p">(</span><span class="n">mixins</span><span class="o">.</span><span class="n">ServiceBusMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A Service Bus client for a namespace with the specified SAS authentication settings.</span>
+
+<span class="sd">    :param str service_namespace: Service Bus namespace, required for all operations.</span>
+<span class="sd">    :param str host_base: Optional. Live host base URL. Defaults to Public Azure.</span>
+<span class="sd">    :param str shared_access_key_name: SAS authentication key name.</span>
+<span class="sd">    :param str shared_access_key_value: SAS authentication key value.</span>
+<span class="sd">    :param int http_request_timeout: Optional. Timeout for the HTTP request, in seconds.</span>
+<span class="sd">     Default value is 65 seconds.</span>
+<span class="sd">    :param http_request_session: Optional. Session object to use for HTTP requests.</span>
+<span class="sd">    :type http_request_session: ~requests.Session</span>
+<span class="sd">    :param bool debug: Whether to output AMQP network trace to the logger.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_servicebus_client]</span>
+<span class="sd">            :end-before: [END create_servicebus_client]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Create a new instance of the Service Bus client</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service_namespace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">host_base</span><span class="o">=</span><span class="n">SERVICE_BUS_HOST_BASE</span><span class="p">,</span>
+                 <span class="n">shared_access_key_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shared_access_key_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">http_request_timeout</span><span class="o">=</span><span class="n">DEFAULT_HTTP_TIMEOUT</span><span class="p">,</span> <span class="n">http_request_session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span> <span class="o">=</span> <span class="n">service_namespace</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host_base</span> <span class="o">=</span> <span class="n">host_base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span> <span class="o">=</span> <span class="n">shared_access_key_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span> <span class="o">=</span> <span class="n">shared_access_key_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span> <span class="o">=</span> <span class="n">ServiceBusService</span><span class="p">(</span>
+            <span class="n">service_namespace</span><span class="o">=</span><span class="n">service_namespace</span><span class="p">,</span>
+            <span class="n">host_base</span><span class="o">=</span><span class="n">host_base</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">http_request_timeout</span><span class="p">,</span>
+            <span class="n">request_session</span><span class="o">=</span><span class="n">http_request_session</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ServiceBusClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Service Bus client from a connection string.</span>
+
+<span class="sd">        :param conn_str: The connection string.</span>
+<span class="sd">        :type conn_str: str</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START create_servicebus_client_connstr]</span>
+<span class="sd">                :end-before: [END create_servicebus_client_connstr]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Create a ServiceBusClient via a connection string.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+        <span class="n">parsed_namespace</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="n">namespace</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="n">parsed_namespace</span><span class="o">.</span><span class="n">hostname</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">namespace</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
+            <span class="n">host_base</span><span class="o">=</span><span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">base</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_host</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;sb://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_base</span>
+
+<div class="viewcode-block" id="ServiceBusClient.get_queue"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_queue">[docs]</a>    <span class="k">def</span> <span class="nf">get_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a client for a queue entity.</span>
+
+<span class="sd">        :param queue_name: The name of the queue.</span>
+<span class="sd">        :type queue_name: str</span>
+<span class="sd">        :rtype: ~azure.servicebus.servicebus_client.QueueClient</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the queue is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_queue_client]</span>
+<span class="sd">                :end-before: [END get_queue_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the specific queue client from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="n">queue_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed queue does not exist.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">QueueClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">queue</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+            <span class="n">mgmt_client</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusClient.list_queues"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_queues">[docs]</a>    <span class="k">def</span> <span class="nf">list_queues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get clients for all queue entities in the namespace.</span>
+
+<span class="sd">        :rtype: list[~azure.servicebus.servicebus_client.QueueClient]</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START list_queues]</span>
+<span class="sd">                :end-before: [END list_queues]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: List the queues from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">queues</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">list_queues</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="n">queue_clients</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">queue</span> <span class="ow">in</span> <span class="n">queues</span><span class="p">:</span>
+            <span class="n">queue_clients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QueueClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">queue</span><span class="p">,</span>
+                <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+                <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+                <span class="n">mgmt_client</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">queue_clients</span></div>
+
+<div class="viewcode-block" id="ServiceBusClient.get_topic"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_topic">[docs]</a>    <span class="k">def</span> <span class="nf">get_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a client for a topic entity.</span>
+
+<span class="sd">        :param topic_name: The name of the topic.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :rtype: ~azure.servicebus.servicebus_client.TopicClient</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the topic is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_topic_client]</span>
+<span class="sd">                :end-before: [END get_topic_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the specific topic client from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">topic</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_topic</span><span class="p">(</span><span class="n">topic_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed topic does not exist.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TopicClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">topic</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusClient.list_topics"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_topics">[docs]</a>    <span class="k">def</span> <span class="nf">list_topics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a client for all topic entities in the namespace.</span>
+
+<span class="sd">        :rtype: list[~azure.servicebus.servicebus_client.TopicClient]</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START list_topics]</span>
+<span class="sd">                :end-before: [END list_topics]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: List the topics from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">topics</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">list_topics</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="n">topic_clients</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">topics</span><span class="p">:</span>
+            <span class="n">topic_clients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TopicClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">topic</span><span class="p">,</span>
+                <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+                <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">topic_clients</span></div>
+
+<div class="viewcode-block" id="ServiceBusClient.get_subscription"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_subscription">[docs]</a>    <span class="k">def</span> <span class="nf">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a client for a subscription entity.</span>
+
+<span class="sd">        :param topic_name: The name of the topic.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :param subscription_name: The name of the subscription.</span>
+<span class="sd">        :type subscription_name: str</span>
+<span class="sd">        :rtype: ~azure.servicebus.servicebus_client.SubscriptionClient</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the subscription is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_subscription_client]</span>
+<span class="sd">                :end-before: [END get_subscription_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the specific subscription client from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">subscription</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">(</span><span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed subscription does not exist.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">SubscriptionClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusClient.list_subscriptions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_subscriptions">[docs]</a>    <span class="k">def</span> <span class="nf">list_subscriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a client for all subscription entities in the topic.</span>
+
+<span class="sd">        :param topic_name: The topic to list subscriptions for.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :rtype: list[~azure.servicebus.servicebus_client.SubscriptionClient]</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the topic is not found.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START list_subscriptions]</span>
+<span class="sd">                :end-before: [END list_subscriptions]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: List the subscriptions from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">subs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">list_subscriptions</span><span class="p">(</span><span class="n">topic_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed topic does not exist.&quot;</span><span class="p">)</span>
+        <span class="n">sub_clients</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">subs</span><span class="p">:</span>
+            <span class="n">sub_clients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">SubscriptionClient</span><span class="o">.</span><span class="n">from_entity</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_get_host</span><span class="p">(),</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span>
+                <span class="n">shared_access_key_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+                <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">sub_clients</span></div></div>
+
+
+<div class="viewcode-block" id="SendClientMixin"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin">[docs]</a><span class="k">class</span> <span class="nc">SendClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SendClientMixin.send"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin.send">[docs]</a>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send one or more messages to the current entity.</span>
+
+<span class="sd">        This operation will open a single-use connection, send the supplied messages, and close</span>
+<span class="sd">        connection. If the entity requires sessions, a session ID must be either</span>
+<span class="sd">        provided here, or set on each outgoing message.</span>
+
+<span class="sd">        :param messages: One or more messages to be sent.</span>
+<span class="sd">        :type messages: ~azure.servicebus.common.message.Message or list[~azure.servicebus.common.message.Message]</span>
+<span class="sd">        :param message_timeout: The period in seconds during which the Message must be</span>
+<span class="sd">         sent. If the send is not completed in this time it will return a failure result.</span>
+<span class="sd">        :type message_timeout: int</span>
+<span class="sd">        :param session: An optional session ID. If supplied this session ID will be</span>
+<span class="sd">         applied to every outgoing message sent with this Sender.</span>
+<span class="sd">         If an individual message already has a session ID, that will be</span>
+<span class="sd">         used instead. If no session ID is supplied here, nor set on an outgoing</span>
+<span class="sd">         message, a ValueError will be raised if the entity is sessionful.</span>
+<span class="sd">        :type session: str or ~uuid.Guid</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSendFailed</span>
+<span class="sd">        :returns: A list of the send results of all the messages. Each</span>
+<span class="sd">         send result is a tuple with two values. The first is a boolean, indicating `True`</span>
+<span class="sd">         if the message sent, or `False` if it failed. The second is an error if the message</span>
+<span class="sd">         failed, otherwise it will be `None`.</span>
+<span class="sd">        :rtype: list[tuple[bool, ~azure.servicebus.common.errors.MessageSendFailed]]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START send_message_service_bus]</span>
+<span class="sd">                :end-before: [END send_message_service_bus]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Send a message to current entity via a single use connection</span>
+
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START send_message_service_bus_multiple]</span>
+<span class="sd">                :end-before: [END send_message_service_bus_multiple]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Send messages to current entity via a single use connection</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sender</span><span class="p">(</span><span class="n">message_timeout</span><span class="o">=</span><span class="n">message_timeout</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">sender</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">Message</span><span class="p">):</span>
+                <span class="n">sender</span><span class="o">.</span><span class="n">queue_message</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">messages</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Value of messages must be a &#39;Message&#39; object or an iterable of &#39;Message&#39; objects.&quot;</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Message</span><span class="p">):</span>
+                        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Item </span><span class="si">{}</span><span class="s2"> in iterator is not of type &#39;Message&#39;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+                    <span class="n">sender</span><span class="o">.</span><span class="n">queue_message</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">sender</span><span class="o">.</span><span class="n">send_pending_messages</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SendClientMixin.get_sender"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin.get_sender">[docs]</a>    <span class="k">def</span> <span class="nf">get_sender</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a Sender for the Service Bus endpoint.</span>
+
+<span class="sd">        A Sender represents a single open Connection with which multiple send operations can be made.</span>
+
+<span class="sd">        :param message_timeout: The period in seconds during which messages sent with</span>
+<span class="sd">         this Sender must be sent. If the send is not completed in this time it will fail.</span>
+<span class="sd">        :type message_timeout: int</span>
+<span class="sd">        :param session: An optional session ID. If supplied this session ID will be</span>
+<span class="sd">         applied to every outgoing message sent with this Sender.</span>
+<span class="sd">         If an individual message already has a session ID, that will be</span>
+<span class="sd">         used instead. If no session ID is supplied here, nor set on an outgoing</span>
+<span class="sd">         message, a ValueError will be raised if the entity is sessionful.</span>
+<span class="sd">        :type session: str or ~uuid.Guid</span>
+<span class="sd">        :returns: A Sender instance with an unopened connection.</span>
+<span class="sd">        :rtype: ~azure.servicebus.send_handler.Sender</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_sender]</span>
+<span class="sd">                :end-before: [END get_sender]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get sender client from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">handler_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">SessionSender</span><span class="p">(</span>
+                <span class="n">handler_id</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span>
+                <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+                <span class="n">msg_timeout</span><span class="o">=</span><span class="n">message_timeout</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Sender</span><span class="p">(</span>
+            <span class="n">handler_id</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span>
+            <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+            <span class="n">msg_timeout</span><span class="o">=</span><span class="n">message_timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ReceiveClientMixin"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin">[docs]</a><span class="k">class</span> <span class="nc">ReceiveClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ReceiveClientMixin.peek"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_from</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Browse messages currently pending in the queue.</span>
+
+<span class="sd">        Peeked messages are not removed from queue, nor are they locked. They cannot be completed,</span>
+<span class="sd">        deferred or dead-lettered.</span>
+
+<span class="sd">        :param count: The maximum number of messages to try and peek. The default</span>
+<span class="sd">         value is 1.</span>
+<span class="sd">        :type count: int</span>
+<span class="sd">        :param start_from: A message sequence number from which to start browsing messages.</span>
+<span class="sd">        :type start_from: int</span>
+<span class="sd">        :param session: If the entity requires sessions, a session ID must be supplied</span>
+<span class="sd">         in order that only messages from that session will be browsed. If the entity</span>
+<span class="sd">         does not require sessions this value will be ignored.</span>
+<span class="sd">        :type session: str</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.PeekMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START peek_messages_service_bus]</span>
+<span class="sd">                :end-before: [END peek_messages_service_bus]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Look at specificied number of messages without removing them from queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;from-sequence-number&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">start_from</span><span class="p">),</span> <span class="s1">&#39;message-count&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="p">)}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">session</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Sessions are required, please set session.&quot;</span><span class="p">)</span>
+            <span class="n">message</span><span class="p">[</span><span class="s1">&#39;session-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">session</span>
+
+        <span class="k">with</span> <span class="n">BaseHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">handler</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
+                <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
+                <span class="n">message</span><span class="p">,</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">peek_op</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ReceiveClientMixin.list_sessions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.list_sessions">[docs]</a>    <span class="k">def</span> <span class="nf">list_sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_since</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List session IDs.</span>
+
+<span class="sd">        List the Session IDs with pending messages in the queue where the state of the session</span>
+<span class="sd">        has been updated since the timestamp provided. If no timestamp is provided, all will be returned.</span>
+<span class="sd">        If the state of a session has never been set, it will not be returned regardless of whether</span>
+<span class="sd">        there are messages pending.</span>
+
+<span class="sd">        :param updated_since: The UTC datetime from which to return updated pending Session IDs.</span>
+<span class="sd">        :type updated_since: datetime.datetime</span>
+<span class="sd">        :param max_results: The maximum number of Session IDs to return. Default value is 100.</span>
+<span class="sd">        :type max_results: int</span>
+<span class="sd">        :param skip: The page value to jump to. Default value is 0.</span>
+<span class="sd">        :type skip: int</span>
+<span class="sd">        :rtype: list[str]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START list_sessions_service_bus]</span>
+<span class="sd">                :end-before: [END list_sessions_service_bus]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the Ids of session which have messages pending in the queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This is not a sessionful entity.&quot;</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;last-updated-time&#39;</span><span class="p">:</span> <span class="n">updated_since</span> <span class="ow">or</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+            <span class="s1">&#39;skip&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPInt</span><span class="p">(</span><span class="n">skip</span><span class="p">),</span>
+            <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPInt</span><span class="p">(</span><span class="n">max_results</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="k">with</span> <span class="n">BaseHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">handler</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
+                <span class="n">REQUEST_RESPONSE_GET_MESSAGE_SESSIONS_OPERATION</span><span class="p">,</span>
+                <span class="n">message</span><span class="p">,</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">list_sessions_op</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ReceiveClientMixin.receive_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.receive_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">receive_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_numbers</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Receive messages by sequence number that have been previously deferred.</span>
+
+<span class="sd">        When receiving deferred messages from a partitioned entity, all of the supplied</span>
+<span class="sd">        sequence numbers must be messages from the same partition.</span>
+
+<span class="sd">        :param sequence_numbers: A list of the sequence numbers of messages that have been</span>
+<span class="sd">         deferred.</span>
+<span class="sd">        :type sequence_numbers: list[int]</span>
+<span class="sd">        :param mode: The mode with which messages will be retrieved from the entity. The two options</span>
+<span class="sd">         are PeekLock and ReceiveAndDelete. Messages received with PeekLock must be settled within a given</span>
+<span class="sd">         lock period before they will be removed from the queue. Messages received with ReceiveAndDelete</span>
+<span class="sd">         will be immediately removed from the queue, and cannot be subsequently rejected or re-received if</span>
+<span class="sd">         the client fails to process the message. The default mode is PeekLock.</span>
+<span class="sd">        :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.Message]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START receive_deferred_messages_service_bus]</span>
+<span class="sd">                :end-before: [END receive_deferred_messages_service_bus]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the messages which were deferred using their sequence numbers</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Sessionful deferred messages can only be received within a locked receive session.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sequence_numbers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;At least one sequence number must be specified.&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sequence-numbers&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">([</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sequence_numbers</span><span class="p">]),</span>
+            <span class="s1">&#39;receiver-settle-mode&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPuInt</span><span class="p">(</span><span class="n">receive_mode</span><span class="p">)}</span>
+        <span class="n">mgmt_handler</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">deferred_message_op</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">receive_mode</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">BaseHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">handler</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
+                <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
+                <span class="n">message</span><span class="p">,</span>
+                <span class="n">mgmt_handler</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ReceiveClientMixin.settle_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.settle_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">settle_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settlement</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Settle messages that have been previously deferred.</span>
+
+<span class="sd">        :param settlement: How the messages are to be settled. This must be a string</span>
+<span class="sd">         of one of the following values: &#39;completed&#39;, &#39;suspended&#39;, &#39;abandoned&#39;.</span>
+<span class="sd">        :type settlement: str</span>
+<span class="sd">        :param messages: A list of deferred messages to be settled.</span>
+<span class="sd">        :type messages: list[~azure.servicebus.common.message.DeferredMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START settle_deferred_messages_service_bus]</span>
+<span class="sd">                :end-before: [END settle_deferred_messages_service_bus]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Settle deferred messages.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Sessionful deferred messages can only be settled within a locked receive session.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">settlement</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span> <span class="s1">&#39;suspended&#39;</span><span class="p">,</span> <span class="s1">&#39;abandoned&#39;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Settlement must be one of: &#39;completed&#39;, &#39;suspended&#39;, &#39;abandoned&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;At least one message must be specified.&quot;</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;disposition-status&#39;</span><span class="p">:</span> <span class="n">settlement</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+            <span class="s1">&#39;lock-tokens&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="n">lock_token</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">])}</span>
+
+        <span class="k">with</span> <span class="n">BaseHandler</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">handler</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
+                <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
+                <span class="n">message</span><span class="p">,</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ReceiveClientMixin.get_receiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.get_receiver">[docs]</a>    <span class="k">def</span> <span class="nf">get_receiver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a Receiver for the Service Bus endpoint.</span>
+
+<span class="sd">        A Receiver represents a single open Connection with which multiple receive operations can be made.</span>
+
+<span class="sd">        :param session: A specific session from which to receive. This must be specified for a</span>
+<span class="sd">         sessionful entity, otherwise it must be None. In order to receive the next available</span>
+<span class="sd">         session, set this to NEXT_AVAILABLE.</span>
+<span class="sd">        :type session: str or ~azure.servicebus.common.constants.NEXT_AVAILABLE</span>
+<span class="sd">        :param prefetch: The maximum number of messages to cache with each request to the service.</span>
+<span class="sd">         The default value is 0, meaning messages will be received from the service and processed</span>
+<span class="sd">         one at a time. Increasing this value will improve message throughput performance but increase</span>
+<span class="sd">         the change that messages will expire while they are cached if they&#39;re not processed fast enough.</span>
+<span class="sd">        :type prefetch: int</span>
+<span class="sd">        :param mode: The mode with which messages will be retrieved from the entity. The two options</span>
+<span class="sd">         are PeekLock and ReceiveAndDelete. Messages received with PeekLock must be settled within a given</span>
+<span class="sd">         lock period before they will be removed from the queue. Messages received with ReceiveAndDelete</span>
+<span class="sd">         will be immediately removed from the queue, and cannot be subsequently rejected or re-received if</span>
+<span class="sd">         the client fails to process the message. The default mode is PeekLock.</span>
+<span class="sd">        :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">        :param idle_timeout: The timeout in seconds between received messages after which the receiver will</span>
+<span class="sd">         automatically shutdown. The default value is 0, meaning no timeout.</span>
+<span class="sd">        :type idle_timeout: int</span>
+<span class="sd">        :returns: A Receiver instance with an unopened Connection.</span>
+<span class="sd">        :rtype: ~azure.servicebus.receive_handler.Receiver</span>
+<span class="sd">        :raises: If the current Service Bus entity requires sessions, a TypeError will</span>
+<span class="sd">         be raised.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_receiver]</span>
+<span class="sd">                :end-before: [END get_receiver]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the receiver client from Service Bus client</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="ow">and</span> <span class="n">session</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;A session cannot be used with a non-sessionful entitiy.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">session</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This entity requires a session.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">prefetch</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">prefetch</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Prefetch must be an integer between 0 and 50000 inclusive.&quot;</span><span class="p">)</span>
+
+        <span class="n">prefetch</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">handler_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">session</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">SessionReceiver</span><span class="p">(</span>
+                <span class="n">handler_id</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span>
+                <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">idle_timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
+                <span class="n">prefetch</span><span class="o">=</span><span class="n">prefetch</span><span class="p">,</span>
+                <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Receiver</span><span class="p">(</span>
+            <span class="n">handler_id</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">idle_timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
+            <span class="n">prefetch</span><span class="o">=</span><span class="n">prefetch</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ReceiveClientMixin.get_deadletter_receiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.get_deadletter_receiver">[docs]</a>    <span class="k">def</span> <span class="nf">get_deadletter_receiver</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">transfer_deadletter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a Receiver for the deadletter endpoint of the queue.</span>
+
+<span class="sd">        A Receiver represents a single open Connection with which multiple receive operations can be made.</span>
+
+<span class="sd">        :param transfer_deadletter: Whether to connect to the transfer deadletter queue, or the standard</span>
+<span class="sd">         deadletter queue. Default is False, using the standard deadletter endpoint.</span>
+<span class="sd">        :type transfer_deadletter: bool</span>
+<span class="sd">        :param prefetch: The maximum number of messages to cache with each request to the service.</span>
+<span class="sd">         The default value is 0, meaning messages will be received from the service and processed</span>
+<span class="sd">         one at a time. Increasing this value will improve message throughput performance but increase</span>
+<span class="sd">         the change that messages will expire while they are cached if they&#39;re not processed fast enough.</span>
+<span class="sd">        :type prefetch: int</span>
+<span class="sd">        :param mode: The mode with which messages will be retrieved from the entity. The two options</span>
+<span class="sd">         are PeekLock and ReceiveAndDelete. Messages received with PeekLock must be settled within a given</span>
+<span class="sd">         lock period before they will be removed from the queue. Messages received with ReceiveAndDelete</span>
+<span class="sd">         will be immediately removed from the queue, and cannot be subsequently rejected or re-received if</span>
+<span class="sd">         the client fails to process the message. The default mode is PeekLock.</span>
+<span class="sd">        :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">        :param idle_timeout: The timeout in seconds between received messages after which the receiver will</span>
+<span class="sd">         automatically shutdown. The default value is 0, meaning no timeout.</span>
+<span class="sd">        :type idle_timeout: int</span>
+<span class="sd">        :returns: A Receiver instance with an unopened Connection.</span>
+<span class="sd">        :rtype: ~azure.servicebus.receive_handler.Receiver</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_dead_letter_receiver]</span>
+<span class="sd">                :end-before: [END get_dead_letter_receiver]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the dead lettered messages</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">prefetch</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">prefetch</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Prefetch must be an integer between 0 and 50000 inclusive.&quot;</span><span class="p">)</span>
+
+        <span class="n">prefetch</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">handler_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">transfer_deadletter</span><span class="p">:</span>
+            <span class="n">entity_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">format_transfer_dead_letter_queue_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">entity_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">format_dead_letter_queue_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Receiver</span><span class="p">(</span>
+            <span class="n">handler_id</span><span class="p">,</span>
+            <span class="n">entity_uri</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">idle_timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
+            <span class="n">prefetch</span><span class="o">=</span><span class="n">prefetch</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="QueueClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.QueueClient">[docs]</a><span class="k">class</span> <span class="nc">QueueClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A queue client.</span>
+
+<span class="sd">    The QueueClient class defines a high level interface for sending</span>
+<span class="sd">    messages to and receiving messages from an Azure Service Bus queue.</span>
+<span class="sd">    If you do not wish to perform management operations, a QueueClient can be</span>
+<span class="sd">    instantiated directly to perform send and receive operations to a Queue.</span>
+<span class="sd">    However if a QueueClient is created directly, a `get_properties` operation will</span>
+<span class="sd">    need to be completed in order to retrieve the properties of this queue (for example,</span>
+<span class="sd">    whether it is sessionful).</span>
+
+<span class="sd">    :param address: The full URI of the Service Bus namespace. This can optionally</span>
+<span class="sd">        include URL-encoded access name and key.</span>
+<span class="sd">    :type address: str</span>
+<span class="sd">    :param name: The name of the queue to which the Client will connect.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param shared_access_key_name: The name of the shared access policy. This must be supplied</span>
+<span class="sd">     if not encoded into the address.</span>
+<span class="sd">    :type shared_access_key_name: str</span>
+<span class="sd">    :param shared_access_key_value: The shared access key. This must be supplied if not encoded</span>
+<span class="sd">     into the address.</span>
+<span class="sd">    :type shared_access_key_value: str</span>
+<span class="sd">    :param debug: Whether to output network trace logs to the logger. Default is `False`.</span>
+<span class="sd">    :type debug: bool</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_queue_client_directly]</span>
+<span class="sd">            :end-before: [END create_queue_client_directly]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Create a QueueClient.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_get_entity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TopicClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.TopicClient">[docs]</a><span class="k">class</span> <span class="nc">TopicClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A topic client.</span>
+
+<span class="sd">    The TopicClient class defines a high level interface for sending</span>
+<span class="sd">    messages to an Azure Service Bus Topic.</span>
+<span class="sd">    If you do not wish to perform management operations, a TopicClient can be</span>
+<span class="sd">    instantiated directly to perform send operations to a Topic.</span>
+
+<span class="sd">    :param address: The full URI of the Service Bus namespace. This can optionally</span>
+<span class="sd">        include URL-encoded access name and key.</span>
+<span class="sd">    :type address: str</span>
+<span class="sd">    :param name: The name of the topic to which the Client will connect.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param shared_access_key_name: The name of the shared access policy. This must be supplied</span>
+<span class="sd">     if not encoded into the address.</span>
+<span class="sd">    :type shared_access_key_name: str</span>
+<span class="sd">    :param shared_access_key_value: The shared access key. This must be supplied if not encoded</span>
+<span class="sd">     into the address.</span>
+<span class="sd">    :type shared_access_key_value: str</span>
+<span class="sd">    :param debug: Whether to output network trace logs to the logger. Default is `False`.</span>
+<span class="sd">    :type debug: bool</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_topic_client_directly]</span>
+<span class="sd">            :end-before: [END create_topic_client_directly]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Create a TopicClient.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_get_entity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_topic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="SubscriptionClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient">[docs]</a><span class="k">class</span> <span class="nc">SubscriptionClient</span><span class="p">(</span><span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A subscription client.</span>
+
+<span class="sd">    The SubscriptionClient class defines a high level interface for receiving</span>
+<span class="sd">    messages to an Azure Service Bus Subscription.</span>
+<span class="sd">    If you do not wish to perform management operations, a SubscriptionClient can be</span>
+<span class="sd">    instantiated directly to perform receive operations from a Subscription.</span>
+
+<span class="sd">    :param address: The full URI of the Service Bus namespace. This can optionally</span>
+<span class="sd">        include URL-encoded access name and key.</span>
+<span class="sd">    :type address: str</span>
+<span class="sd">    :param name: The name of the topic to which the Client will connect.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param shared_access_key_name: The name of the shared access policy. This must be supplied</span>
+<span class="sd">     if not encoded into the address.</span>
+<span class="sd">    :type shared_access_key_name: str</span>
+<span class="sd">    :param shared_access_key_value: The shared access key. This must be supplied if not encoded</span>
+<span class="sd">     into the address.</span>
+<span class="sd">    :type shared_access_key_value: str</span>
+<span class="sd">    :param debug: Whether to output network trace logs to the logger. Default is `False`.</span>
+<span class="sd">    :type debug: bool</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_sub_client_directly]</span>
+<span class="sd">            :end-before: [END create_sub_client_directly]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Create a SubscriptionClient.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">shared_access_key_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">SubscriptionClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">shared_access_key_value</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">topic_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<div class="viewcode-block" id="SubscriptionClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pylint: disable=arguments-differ</span>
+        <span class="sd">&quot;&quot;&quot;Create a SubscriptionClient from a connection string.</span>
+
+<span class="sd">        :param conn_str: The connection string.</span>
+<span class="sd">        :type conn_str: str</span>
+<span class="sd">        :param name: The name of the Subscription.</span>
+<span class="sd">        :type name: str</span>
+<span class="sd">        :param topic: The name of the Topic, if the EntityName is</span>
+<span class="sd">         not included in the connection string.</span>
+<span class="sd">        :type topic: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+        <span class="n">entity</span> <span class="o">=</span> <span class="n">topic</span> <span class="ow">or</span> <span class="n">entity</span>
+        <span class="n">address</span> <span class="o">=</span> <span class="n">build_uri</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">)</span>
+        <span class="n">address</span> <span class="o">+=</span> <span class="s2">&quot;/Subscriptions/&quot;</span> <span class="o">+</span> <span class="n">name</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span> <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SubscriptionClient.from_entity"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient.from_entity">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_entity</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pylint: disable=arguments-differ</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">address</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">topic</span> <span class="o">+</span> <span class="s2">&quot;/Subscriptions/&quot;</span> <span class="o">+</span> <span class="n">entity</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">entity</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">validated_entity</span><span class="o">=</span><span class="n">entity</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">client</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_entity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">topic_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventhub.aio package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.eventhub.aio.eventprocessor package" href="azure.eventhub.aio.eventprocessor.html" />
+    <link rel="prev" title="azure.eventhub package" href="azure.eventhub.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.eventhub.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.eventhub.aio package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.eventhub.aio.client_async">azure.eventhub.aio.client_async module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.eventhub.aio.consumer_async">azure.eventhub.aio.consumer_async module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.eventhub.aio.error_async">azure.eventhub.aio.error_async module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.eventhub.aio.producer_async">azure.eventhub.aio.producer_async module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.eventhub.aio">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.client">azure.eventhub.client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.client_abstract">azure.eventhub.client_abstract module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.common">azure.eventhub.common module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.consumer">azure.eventhub.consumer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.error">azure.eventhub.error module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub.producer">azure.eventhub.producer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.html#module-azure.eventhub">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.eventhub.html">azure.eventhub package</a> &raquo;</li>
+        
+      <li>azure.eventhub.aio package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.eventhub.aio.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-eventhub-aio-package">
+<h1>azure.eventhub.aio package<a class="headerlink" href="#azure-eventhub-aio-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html">azure.eventhub.aio.eventprocessor package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.event_processor">azure.eventhub.aio.eventprocessor.event_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.partition_context">azure.eventhub.aio.eventprocessor.partition_context module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.partition_manager">azure.eventhub.aio.eventprocessor.partition_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.partition_processor">azure.eventhub.aio.eventprocessor.partition_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.sample_partition_manager">azure.eventhub.aio.eventprocessor.sample_partition_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor.utils">azure.eventhub.aio.eventprocessor.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#module-azure.eventhub.aio.eventprocessor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.eventhub.aio.client_async">
+<span id="azure-eventhub-aio-client-async-module"></span><h2>azure.eventhub.aio.client_async module<a class="headerlink" href="#module-azure.eventhub.aio.client_async" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventhub.aio.client_async.EventHubClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.client_async.</code><code class="sig-name descname">EventHubClient</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">event_hub_path</em>, <em class="sig-param">credential</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.eventhub.html#azure.eventhub.client_abstract.EventHubClientAbstract" title="azure.eventhub.client_abstract.EventHubClientAbstract"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.client_abstract.EventHubClientAbstract</span></code></a></p>
+<p>The EventHubClient class defines a high level interface for asynchronously
+sending events to and receiving events from the Azure Event Hubs service.</p>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Create a new instance of the Event Hub client async.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.eventhub.aio</span> <span class="kn">import</span> <span class="n">EventHubClient</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">connection_str</span> <span class="o">=</span> <span class="s2">&quot;Endpoint=sb://{}/;SharedAccessKeyName={};SharedAccessKey={};EntityPath={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_HOSTNAME&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_SAS_POLICY&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_SAS_KEY&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_NAME&#39;</span><span class="p">])</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Constructs a new EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The hostname of the Event Hub.</p></li>
+<li><p><strong>event_hub_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path of the specific Event Hub to connect the client to.</p></li>
+<li><p><strong>network_tracing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default
+is <cite>False</cite>.</p></li>
+<li><p><strong>credential</strong> – The credential object used for authentication which implements particular interface
+of getting tokens. It accepts ~azure.eventhub.EventHubSharedKeyCredential,
+~azure.eventhub.EventHubSASTokenCredential, credential objects generated by the azure-identity library and
+objects that implement get_token(self, <a href="#id1"><span class="problematic" id="id2">*</span></a>scopes) method.</p></li>
+<li><p><strong>http_proxy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – HTTP proxy settings. This must be a dictionary with the following
+keys: ‘proxy_hostname’ (str value) and ‘proxy_port’ (int value).
+Additionally the following keys may also be present: ‘username’, ‘password’.</p></li>
+<li><p><strong>auth_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The time in seconds to wait for a token to be authorized by the service.
+The default value is 60 seconds. If set to 0, no timeout will be enforced from the client.</p></li>
+<li><p><strong>user_agent</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user agent that needs to be appended to the built in user agent string.</p></li>
+<li><p><strong>retry_total</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The total number of attempts to redo the failed operation when an error happened. Default
+value is 3.</p></li>
+<li><p><strong>transport_type</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.TransportType" title="azure.eventhub.TransportType"><em>TransportType</em></a>) – The type of transport protocol that will be used for communicating with
+the Event Hubs service. Default is ~azure.eventhub.TransportType.Amqp.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The message prefetch count of the consumer. Default is 300.</p></li>
+<li><p><strong>max_batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Receive a batch of events. Batch size will be up to the maximum specified, but
+will return as soon as service returns no new events. Default value is the same as prefetch.</p></li>
+<li><p><strong>receive_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds to receive a batch of events from an Event Hub.
+Default value is 0 seconds.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.create_consumer">
+<code class="sig-name descname">create_consumer</code><span class="sig-paren">(</span><em class="sig-param">consumer_group: str</em>, <em class="sig-param">partition_id: str</em>, <em class="sig-param">event_position: azure.eventhub.common.EventPosition</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; azure.eventhub.aio.consumer_async.EventHubConsumer<a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.create_consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.create_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an async consumer to the client for a particular consumer group and partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>consumer_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the consumer group this consumer is associated with.
+Events are read in the context of this group. The default consumer_group for an event hub is “$Default”.</p></li>
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the Event Hub partition from which events will be received.</p></li>
+<li><p><strong>event_position</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventPosition" title="azure.eventhub.common.EventPosition"><em>EventPosition</em></a>) – The position within the partition where the consumer should begin reading events.</p></li>
+<li><p><strong>owner_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority of the exclusive consumer. The client will create an exclusive
+consumer if owner_level is set.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional operation to be appended to the hostname in the source URL.
+The value must start with <cite>/</cite> character.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The message prefetch count of the consumer. Default is 300.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.eventhub.aio.consumer_async.EventHubConsumer" title="azure.eventhub.aio.consumer_async.EventHubConsumer">EventHubConsumer</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Add an async consumer to the client for a particular consumer group and partition.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="c1"># Create an async consumer.</span>
+<span class="n">receiver</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">))</span>
+<span class="c1"># Create an exclusive async consumer.</span>
+<span class="n">receiver</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">),</span> <span class="n">owner_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.create_producer">
+<code class="sig-name descname">create_producer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">partition_id: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">send_timeout: float = None</em>, <em class="sig-param">loop: asyncio.events.AbstractEventLoop = None</em><span class="sig-paren">)</span> &#x2192; azure.eventhub.aio.producer_async.EventHubProducer<a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.create_producer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.create_producer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an async producer to send EventData object to an EventHub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optionally specify a particular partition to send to.
+If omitted, the events will be distributed to available partitions via
+round-robin.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional operation to be appended to the hostname in the target URL.
+The value must start with <cite>/</cite> character.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.eventhub.aio.producer_async.EventHubProducer" title="azure.eventhub.aio.producer_async.EventHubProducer">EventHubProducer</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Add an async producer to the client to send EventData.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="c1"># Create an async producer.</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_producer</span><span class="p">(</span><span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.get_partition_ids">
+<em class="property">async </em><code class="sig-name descname">get_partition_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_partition_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.get_partition_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get partition ids of the specified EventHub async.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.ConnectError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.get_partition_properties">
+<em class="property">async </em><code class="sig-name descname">get_partition_properties</code><span class="sig-paren">(</span><em class="sig-param">partition</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_partition_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.get_partition_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get properties of the specified partition async.
+Keys in the details dictionary include:</p>
+<blockquote>
+<div><p>-‘event_hub_path’
+-‘id’
+-‘beginning_sequence_number’
+-‘last_enqueued_sequence_number’
+-‘last_enqueued_offset’
+-‘last_enqueued_time_utc’
+-‘is_empty’</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target partition id.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.client_async.EventHubClient.get_properties">
+<em class="property">async </em><code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.client_async.EventHubClient.get_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get properties of the specified EventHub async.
+Keys in the details dictionary include:</p>
+<blockquote>
+<div><p>-‘path’
+-‘created_at’
+-‘partition_ids’</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventhub.aio.consumer_async">
+<span id="azure-eventhub-aio-consumer-async-module"></span><h2>azure.eventhub.aio.consumer_async module<a class="headerlink" href="#module-azure.eventhub.aio.consumer_async" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventhub.aio.consumer_async.EventHubConsumer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.consumer_async.</code><code class="sig-name descname">EventHubConsumer</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">source</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.consumer_async.EventHubConsumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.aio._consumer_producer_mixin_async.ConsumerProducerMixin</span></code></p>
+<p>A consumer responsible for reading EventData from a specific Event Hub
+partition and as a member of a specific consumer group.</p>
+<p>A consumer may be exclusive, which asserts ownership over the partition for the consumer
+group to ensure that only one consumer from that group is reading the from the partition.
+These exclusive consumers are sometimes referred to as “Epoch Consumers.”</p>
+<p>A consumer may also be non-exclusive, allowing multiple consumers from the same consumer
+group to be actively reading events from the partition.  These non-exclusive consumers are
+sometimes referred to as “Non-Epoch Consumers.”</p>
+<p>Please use the method <cite>create_consumer</cite> on <cite>EventHubClient</cite> for creating <cite>EventHubConsumer</cite>.</p>
+<p>Instantiate an async consumer. EventHubConsumer should be instantiated by calling the <cite>create_consumer</cite> method
+in EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> (<em>EventHubClientAsync</em>) – The parent EventHubClientAsync.</p></li>
+<li><p><strong>source</strong> (<em>Source</em>) – The source EventHub from which to receive events.</p></li>
+<li><p><strong>event_position</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventPosition" title="azure.eventhub.common.EventPosition"><em>EventPosition</em></a>) – The position from which to start receiving.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of events to prefetch from the service
+for processing. Default is 300.</p></li>
+<li><p><strong>owner_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority of the exclusive consumer. An exclusive
+consumer will be created if owner_level is set.</p></li>
+<li><p><strong>loop</strong> – An event loop.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.consumer_async.EventHubConsumer.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.consumer_async.EventHubConsumer.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close down the handler. If the handler has already closed,
+this will be a no op. An optional exception can be passed in to
+indicate that the handler was shutdown due to error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exception</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An optional exception if the handler is closing
+due to an error.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Close down the handler.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="n">consumer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Open and receive</span>
+    <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">raise</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Close down the receive handler.</span>
+    <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.consumer_async.EventHubConsumer.queue_size">
+<em class="property">property </em><code class="sig-name descname">queue_size</code><a class="headerlink" href="#azure.eventhub.aio.consumer_async.EventHubConsumer.queue_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current size of the unprocessed Event queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.consumer_async.EventHubConsumer.receive">
+<em class="property">async </em><code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_batch_size=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer.receive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.consumer_async.EventHubConsumer.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive events asynchronously from the EventHub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Receive a batch of events. Batch size will
+be up to the maximum specified, but will return as soon as service
+returns no new events. If combined with a timeout and no events are
+retrieve before the time, the result will be empty. If no batch
+size is supplied, the prefetch size will be the maximum.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The maximum wait time to build up the requested message count for the batch.
+If not specified, the default wait time specified when the consumer was created will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData">EventData</a>]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.eventhub.AuthenticationError, ~azure.eventhub.ConnectError, ~azure.eventhub.ConnectionLostError,
+~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Receives events asynchronously</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;azure.eventhub&quot;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">consumer</span><span class="p">:</span>
+    <span class="n">received</span> <span class="o">=</span> <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">event_data</span> <span class="ow">in</span> <span class="n">received</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Message received:{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_data</span><span class="o">.</span><span class="n">body_as_str</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventhub.aio.error_async">
+<span id="azure-eventhub-aio-error-async-module"></span><h2>azure.eventhub.aio.error_async module<a class="headerlink" href="#module-azure.eventhub.aio.error_async" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.eventhub.aio.producer_async">
+<span id="azure-eventhub-aio-producer-async-module"></span><h2>azure.eventhub.aio.producer_async module<a class="headerlink" href="#module-azure.eventhub.aio.producer_async" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventhub.aio.producer_async.EventHubProducer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.producer_async.</code><code class="sig-name descname">EventHubProducer</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">target</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.producer_async.EventHubProducer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.aio._consumer_producer_mixin_async.ConsumerProducerMixin</span></code></p>
+<p>A producer responsible for transmitting EventData to a specific Event Hub,
+grouped together in batches. Depending on the options specified at creation, the producer may
+be created to allow event data to be automatically routed to an available partition or specific
+to a partition.</p>
+<p>Please use the method <cite>create_producer</cite> on <cite>EventHubClient</cite> for creating <cite>EventHubProducer</cite>.</p>
+<p>Instantiate an async EventHubProducer. EventHubProducer should be instantiated by calling the <cite>create_producer</cite>
+method in EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> (<em>EventHubClientAsync</em>) – The parent EventHubClientAsync.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI of the EventHub to send to.</p></li>
+<li><p><strong>partition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The specific partition ID to send to. Default is <cite>None</cite>, in which case the service
+will assign to all partitions using round-robin.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+<li><p><strong>keep_alive</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The time interval in seconds between pinging the connection to keep it alive during
+periods of inactivity. The default value is <cite>None</cite>, i.e. no keep alive pings.</p></li>
+<li><p><strong>auto_reconnect</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to automatically reconnect the producer if a retryable error occurs.
+Default value is <cite>True</cite>.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.producer_async.EventHubProducer.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.producer_async.EventHubProducer.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close down the handler. If the handler has already closed,
+this will be a no op. An optional exception can be passed in to
+indicate that the handler was shutdown due to error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exception</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An optional exception if the handler is closing
+due to an error.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Close down the handler.</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_producer</span><span class="p">(</span><span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">EventData</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;A single event&quot;</span><span class="p">))</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Close down the send handler.</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.producer_async.EventHubProducer.create_batch">
+<em class="property">async </em><code class="sig-name descname">create_batch</code><span class="sig-paren">(</span><em class="sig-param">max_size=None</em>, <em class="sig-param">partition_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.create_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.producer_async.EventHubProducer.create_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an EventDataBatch object with max size being max_size.
+The max_size should be no greater than the max allowed message size defined by the service side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum size of bytes data that an EventDataBatch object can hold.</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – With the given partition_key, event data will land to
+a particular partition of the Event Hub decided by the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an EventDataBatch instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.eventhub.html#azure.eventhub.EventDataBatch" title="azure.eventhub.EventDataBatch">EventDataBatch</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Create EventDataBatch object within limited size</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">event_data_batch</span> <span class="o">=</span> <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">create_batch</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">event_data_batch</span><span class="o">.</span><span class="n">try_add</span><span class="p">(</span><span class="n">EventData</span><span class="p">(</span><span class="s1">&#39;Message inside EventBatchData&#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="c1"># The EventDataBatch object reaches its max_size.</span>
+        <span class="c1"># You can send the full EventDataBatch object and create a new one here.</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.producer_async.EventHubProducer.send">
+<em class="property">async </em><code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param">event_data: Union[azure.eventhub.common.EventData, azure.eventhub.common.EventDataBatch, Iterable[azure.eventhub.common.EventData]], *, partition_key: Union[str, bytes] = None, timeout: float = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.send"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.producer_async.EventHubProducer.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends an event data and blocks until acknowledgement is
+received or operation times out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event_data</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a><em>, </em><em>Iterator</em><em>, </em><em>Generator</em><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) – The event to be sent. It can be an EventData object, or iterable of EventData objects</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – With the given partition_key, event data will land to
+a particular partition of the Event Hub decided by the service. partition_key
+could be omitted if event_data is of type ~azure.eventhub.EventDataBatch.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The maximum wait time to send the event data.
+If not specified, the default wait time specified when the producer was created will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.AuthenticationError, ~azure.eventhub.ConnectError, ~azure.eventhub.ConnectionLostError,
+~azure.eventhub.EventDataError, ~azure.eventhub.EventDataSendError, ~azure.eventhub.EventHubError</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Sends an event data and blocks until acknowledgement is received or operation times out.</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">with</span> <span class="n">producer</span><span class="p">:</span>
+    <span class="n">event_data</span> <span class="o">=</span> <span class="n">EventData</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;A single event&quot;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">event_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventhub.aio">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.eventhub.aio" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventhub.aio.EventHubClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.</code><code class="sig-name descname">EventHubClient</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">event_hub_path</em>, <em class="sig-param">credential</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.eventhub.html#azure.eventhub.client_abstract.EventHubClientAbstract" title="azure.eventhub.client_abstract.EventHubClientAbstract"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.client_abstract.EventHubClientAbstract</span></code></a></p>
+<p>The EventHubClient class defines a high level interface for asynchronously
+sending events to and receiving events from the Azure Event Hubs service.</p>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Create a new instance of the Event Hub client async.</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.eventhub.aio</span> <span class="kn">import</span> <span class="n">EventHubClient</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">connection_str</span> <span class="o">=</span> <span class="s2">&quot;Endpoint=sb://{}/;SharedAccessKeyName={};SharedAccessKey={};EntityPath={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_HOSTNAME&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_SAS_POLICY&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_SAS_KEY&#39;</span><span class="p">],</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EVENT_HUB_NAME&#39;</span><span class="p">])</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Constructs a new EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The hostname of the Event Hub.</p></li>
+<li><p><strong>event_hub_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path of the specific Event Hub to connect the client to.</p></li>
+<li><p><strong>network_tracing</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default
+is <cite>False</cite>.</p></li>
+<li><p><strong>credential</strong> – The credential object used for authentication which implements particular interface
+of getting tokens. It accepts ~azure.eventhub.EventHubSharedKeyCredential,
+~azure.eventhub.EventHubSASTokenCredential, credential objects generated by the azure-identity library and
+objects that implement get_token(self, <a href="#id3"><span class="problematic" id="id4">*</span></a>scopes) method.</p></li>
+<li><p><strong>http_proxy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – HTTP proxy settings. This must be a dictionary with the following
+keys: ‘proxy_hostname’ (str value) and ‘proxy_port’ (int value).
+Additionally the following keys may also be present: ‘username’, ‘password’.</p></li>
+<li><p><strong>auth_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The time in seconds to wait for a token to be authorized by the service.
+The default value is 60 seconds. If set to 0, no timeout will be enforced from the client.</p></li>
+<li><p><strong>user_agent</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user agent that needs to be appended to the built in user agent string.</p></li>
+<li><p><strong>retry_total</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The total number of attempts to redo the failed operation when an error happened. Default
+value is 3.</p></li>
+<li><p><strong>transport_type</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.TransportType" title="azure.eventhub.TransportType"><em>TransportType</em></a>) – The type of transport protocol that will be used for communicating with
+the Event Hubs service. Default is ~azure.eventhub.TransportType.Amqp.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The message prefetch count of the consumer. Default is 300.</p></li>
+<li><p><strong>max_batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Receive a batch of events. Batch size will be up to the maximum specified, but
+will return as soon as service returns no new events. Default value is the same as prefetch.</p></li>
+<li><p><strong>receive_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds to receive a batch of events from an Event Hub.
+Default value is 0 seconds.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.create_consumer">
+<code class="sig-name descname">create_consumer</code><span class="sig-paren">(</span><em class="sig-param">consumer_group: str</em>, <em class="sig-param">partition_id: str</em>, <em class="sig-param">event_position: azure.eventhub.common.EventPosition</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; azure.eventhub.aio.consumer_async.EventHubConsumer<a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.create_consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.create_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an async consumer to the client for a particular consumer group and partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>consumer_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the consumer group this consumer is associated with.
+Events are read in the context of this group. The default consumer_group for an event hub is “$Default”.</p></li>
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the Event Hub partition from which events will be received.</p></li>
+<li><p><strong>event_position</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventPosition" title="azure.eventhub.common.EventPosition"><em>EventPosition</em></a>) – The position within the partition where the consumer should begin reading events.</p></li>
+<li><p><strong>owner_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority of the exclusive consumer. The client will create an exclusive
+consumer if owner_level is set.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional operation to be appended to the hostname in the source URL.
+The value must start with <cite>/</cite> character.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The message prefetch count of the consumer. Default is 300.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.eventhub.aio.consumer_async.EventHubConsumer" title="azure.eventhub.aio.consumer_async.EventHubConsumer">EventHubConsumer</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Add an async consumer to the client for a particular consumer group and partition.</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="c1"># Create an async consumer.</span>
+<span class="n">receiver</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">))</span>
+<span class="c1"># Create an exclusive async consumer.</span>
+<span class="n">receiver</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">),</span> <span class="n">owner_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.create_producer">
+<code class="sig-name descname">create_producer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">partition_id: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">send_timeout: float = None</em>, <em class="sig-param">loop: asyncio.events.AbstractEventLoop = None</em><span class="sig-paren">)</span> &#x2192; azure.eventhub.aio.producer_async.EventHubProducer<a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.create_producer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.create_producer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an async producer to send EventData object to an EventHub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optionally specify a particular partition to send to.
+If omitted, the events will be distributed to available partitions via
+round-robin.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional operation to be appended to the hostname in the target URL.
+The value must start with <cite>/</cite> character.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.eventhub.aio.producer_async.EventHubProducer" title="azure.eventhub.aio.producer_async.EventHubProducer">EventHubProducer</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Add an async producer to the client to send EventData.</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="c1"># Create an async producer.</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_producer</span><span class="p">(</span><span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.get_partition_ids">
+<em class="property">async </em><code class="sig-name descname">get_partition_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_partition_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.get_partition_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get partition ids of the specified EventHub async.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.ConnectError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.get_partition_properties">
+<em class="property">async </em><code class="sig-name descname">get_partition_properties</code><span class="sig-paren">(</span><em class="sig-param">partition</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_partition_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.get_partition_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get properties of the specified partition async.
+Keys in the details dictionary include:</p>
+<blockquote>
+<div><p>-‘event_hub_path’
+-‘id’
+-‘beginning_sequence_number’
+-‘last_enqueued_sequence_number’
+-‘last_enqueued_offset’
+-‘last_enqueued_time_utc’
+-‘is_empty’</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target partition id.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubClient.get_properties">
+<em class="property">async </em><code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/client_async.html#EventHubClient.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubClient.get_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get properties of the specified EventHub async.
+Keys in the details dictionary include:</p>
+<blockquote>
+<div><p>-‘path’
+-‘created_at’
+-‘partition_ids’</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventhub.aio.EventHubConsumer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.</code><code class="sig-name descname">EventHubConsumer</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">source</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubConsumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.aio._consumer_producer_mixin_async.ConsumerProducerMixin</span></code></p>
+<p>A consumer responsible for reading EventData from a specific Event Hub
+partition and as a member of a specific consumer group.</p>
+<p>A consumer may be exclusive, which asserts ownership over the partition for the consumer
+group to ensure that only one consumer from that group is reading the from the partition.
+These exclusive consumers are sometimes referred to as “Epoch Consumers.”</p>
+<p>A consumer may also be non-exclusive, allowing multiple consumers from the same consumer
+group to be actively reading events from the partition.  These non-exclusive consumers are
+sometimes referred to as “Non-Epoch Consumers.”</p>
+<p>Please use the method <cite>create_consumer</cite> on <cite>EventHubClient</cite> for creating <cite>EventHubConsumer</cite>.</p>
+<p>Instantiate an async consumer. EventHubConsumer should be instantiated by calling the <cite>create_consumer</cite> method
+in EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> (<em>EventHubClientAsync</em>) – The parent EventHubClientAsync.</p></li>
+<li><p><strong>source</strong> (<em>Source</em>) – The source EventHub from which to receive events.</p></li>
+<li><p><strong>event_position</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventPosition" title="azure.eventhub.common.EventPosition"><em>EventPosition</em></a>) – The position from which to start receiving.</p></li>
+<li><p><strong>prefetch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of events to prefetch from the service
+for processing. Default is 300.</p></li>
+<li><p><strong>owner_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority of the exclusive consumer. An exclusive
+consumer will be created if owner_level is set.</p></li>
+<li><p><strong>loop</strong> – An event loop.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubConsumer.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubConsumer.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close down the handler. If the handler has already closed,
+this will be a no op. An optional exception can be passed in to
+indicate that the handler was shutdown due to error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exception</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An optional exception if the handler is closing
+due to an error.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Close down the handler.</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="n">consumer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">,</span> <span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;@latest&#39;</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Open and receive</span>
+    <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">raise</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Close down the receive handler.</span>
+    <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubConsumer.queue_size">
+<em class="property">property </em><code class="sig-name descname">queue_size</code><a class="headerlink" href="#azure.eventhub.aio.EventHubConsumer.queue_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current size of the unprocessed Event queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubConsumer.receive">
+<em class="property">async </em><code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_batch_size=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/consumer_async.html#EventHubConsumer.receive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubConsumer.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive events asynchronously from the EventHub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Receive a batch of events. Batch size will
+be up to the maximum specified, but will return as soon as service
+returns no new events. If combined with a timeout and no events are
+retrieve before the time, the result will be empty. If no batch
+size is supplied, the prefetch size will be the maximum.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The maximum wait time to build up the requested message count for the batch.
+If not specified, the default wait time specified when the consumer was created will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData">EventData</a>]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.eventhub.AuthenticationError, ~azure.eventhub.ConnectError, ~azure.eventhub.ConnectionLostError,
+~azure.eventhub.EventHubError</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Receives events asynchronously</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;azure.eventhub&quot;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">consumer</span><span class="p">:</span>
+    <span class="n">received</span> <span class="o">=</span> <span class="n">await</span> <span class="n">consumer</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">event_data</span> <span class="ow">in</span> <span class="n">received</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Message received:{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_data</span><span class="o">.</span><span class="n">body_as_str</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventhub.aio.EventHubProducer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventhub.aio.</code><code class="sig-name descname">EventHubProducer</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">target</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubProducer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventhub.aio._consumer_producer_mixin_async.ConsumerProducerMixin</span></code></p>
+<p>A producer responsible for transmitting EventData to a specific Event Hub,
+grouped together in batches. Depending on the options specified at creation, the producer may
+be created to allow event data to be automatically routed to an available partition or specific
+to a partition.</p>
+<p>Please use the method <cite>create_producer</cite> on <cite>EventHubClient</cite> for creating <cite>EventHubProducer</cite>.</p>
+<p>Instantiate an async EventHubProducer. EventHubProducer should be instantiated by calling the <cite>create_producer</cite>
+method in EventHubClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> (<em>EventHubClientAsync</em>) – The parent EventHubClientAsync.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI of the EventHub to send to.</p></li>
+<li><p><strong>partition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The specific partition ID to send to. Default is <cite>None</cite>, in which case the service
+will assign to all partitions using round-robin.</p></li>
+<li><p><strong>send_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The timeout in seconds for an individual event to be sent from the time that it is
+queued. Default value is 60 seconds. If set to 0, there will be no timeout.</p></li>
+<li><p><strong>keep_alive</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The time interval in seconds between pinging the connection to keep it alive during
+periods of inactivity. The default value is <cite>None</cite>, i.e. no keep alive pings.</p></li>
+<li><p><strong>auto_reconnect</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to automatically reconnect the producer if a retryable error occurs.
+Default value is <cite>True</cite>.</p></li>
+<li><p><strong>loop</strong> – An event loop. If not specified the default event loop will be used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubProducer.close">
+<em class="property">async </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubProducer.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close down the handler. If the handler has already closed,
+this will be a no op. An optional exception can be passed in to
+indicate that the handler was shutdown due to error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>exception</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An optional exception if the handler is closing
+due to an error.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Close down the handler.</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_producer</span><span class="p">(</span><span class="n">partition_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">EventData</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;A single event&quot;</span><span class="p">))</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Close down the send handler.</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubProducer.create_batch">
+<em class="property">async </em><code class="sig-name descname">create_batch</code><span class="sig-paren">(</span><em class="sig-param">max_size=None</em>, <em class="sig-param">partition_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.create_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubProducer.create_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an EventDataBatch object with max size being max_size.
+The max_size should be no greater than the max allowed message size defined by the service side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum size of bytes data that an EventDataBatch object can hold.</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – With the given partition_key, event data will land to
+a particular partition of the Event Hub decided by the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an EventDataBatch instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.eventhub.html#azure.eventhub.EventDataBatch" title="azure.eventhub.EventDataBatch">EventDataBatch</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Create EventDataBatch object within limited size</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">event_data_batch</span> <span class="o">=</span> <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">create_batch</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">event_data_batch</span><span class="o">.</span><span class="n">try_add</span><span class="p">(</span><span class="n">EventData</span><span class="p">(</span><span class="s1">&#39;Message inside EventBatchData&#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="c1"># The EventDataBatch object reaches its max_size.</span>
+        <span class="c1"># You can send the full EventDataBatch object and create a new one here.</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventhub.aio.EventHubProducer.send">
+<em class="property">async </em><code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param">event_data: Union[azure.eventhub.common.EventData, azure.eventhub.common.EventDataBatch, Iterable[azure.eventhub.common.EventData]], *, partition_key: Union[str, bytes] = None, timeout: float = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventhub/aio/producer_async.html#EventHubProducer.send"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventhub.aio.EventHubProducer.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends an event data and blocks until acknowledgement is
+received or operation times out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event_data</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a><em>, </em><em>Iterator</em><em>, </em><em>Generator</em><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) – The event to be sent. It can be an EventData object, or iterable of EventData objects</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – With the given partition_key, event data will land to
+a particular partition of the Event Hub decided by the service. partition_key
+could be omitted if event_data is of type ~azure.eventhub.EventDataBatch.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The maximum wait time to send the event data.
+If not specified, the default wait time specified when the producer was created will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.eventhub.AuthenticationError, ~azure.eventhub.ConnectError, ~azure.eventhub.ConnectionLostError,
+~azure.eventhub.EventDataError, ~azure.eventhub.EventDataSendError, ~azure.eventhub.EventHubError</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Sends an event data and blocks until acknowledgement is received or operation times out.</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">with</span> <span class="n">producer</span><span class="p">:</span>
+    <span class="n">event_data</span> <span class="o">=</span> <span class="n">EventData</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;A single event&quot;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">event_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.eventhub.aio.eventprocessor.html" class="btn btn-neutral float-right" title="azure.eventhub.aio.eventprocessor package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.eventhub.html" class="btn btn-neutral float-left" title="azure.eventhub package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

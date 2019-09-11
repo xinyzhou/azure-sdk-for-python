@@ -1,0 +1,1931 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.control_client package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.servicefabric package" href="azure.servicefabric.html" />
+    <link rel="prev" title="azure.servicebus.common package" href="azure.servicebus.common.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.servicebus.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.servicebus.aio.html">azure.servicebus.aio package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicebus.common.html">azure.servicebus.common package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.servicebus.control_client package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.servicebus.control_client.constants">azure.servicebus.control_client.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.servicebus.control_client.models">azure.servicebus.control_client.models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.servicebus.control_client.servicebusservice">azure.servicebus.control_client.servicebusservice module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-azure.servicebus.control_client">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#module-azure.servicebus.base_handler">azure.servicebus.base_handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#module-azure.servicebus.receive_handler">azure.servicebus.receive_handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#module-azure.servicebus.send_handler">azure.servicebus.send_handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#module-azure.servicebus.servicebus_client">azure.servicebus.servicebus_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicebus.html#module-azure.servicebus">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.servicebus.html">azure.servicebus package</a> &raquo;</li>
+        
+      <li>azure.servicebus.control_client package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.servicebus.control_client.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-servicebus-control-client-package">
+<h1>azure.servicebus.control_client package<a class="headerlink" href="#azure-servicebus-control-client-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.servicebus.control_client.constants">
+<span id="azure-servicebus-control-client-constants-module"></span><h2>azure.servicebus.control_client.constants module<a class="headerlink" href="#module-azure.servicebus.control_client.constants" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.servicebus.control_client.models">
+<span id="azure-servicebus-control-client-models-module"></span><h2>azure.servicebus.control_client.models module<a class="headerlink" href="#module-azure.servicebus.control_client.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.AuthorizationRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">AuthorizationRule</code><span class="sig-paren">(</span><em class="sig-param">claim_type=None</em>, <em class="sig-param">claim_value=None</em>, <em class="sig-param">rights=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">secondary_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.control_client.models.AzureServiceBusPeekLockError">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">AzureServiceBusPeekLockError</code><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AzureServiceBusPeekLockError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.AzureServiceBusPeekLockError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.common.html#azure.common.AzureException" title="azure.common.AzureException"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureException</span></code></a></p>
+<p>Indicates that peek-lock is required for this operation.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.control_client.models.AzureServiceBusResourceNotFound">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">AzureServiceBusResourceNotFound</code><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AzureServiceBusResourceNotFound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.AzureServiceBusResourceNotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.common.html#azure.common.AzureException" title="azure.common.AzureException"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureException</span></code></a></p>
+<p>Indicates that the resource doesn’t exist.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.EventHub">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">EventHub</code><span class="sig-paren">(</span><em class="sig-param">message_retention_in_days=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user_metadata=None</em>, <em class="sig-param">partition_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#EventHub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.EventHub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.Message">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">Message</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">service_bus_service=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">custom_properties=None</em>, <em class="sig-param">type='application/atom+xml;type=entry;charset=utf-8'</em>, <em class="sig-param">broker_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Message class that used in send message/get message apis.</p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Message.add_headers">
+<code class="sig-name descname">add_headers</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.add_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message.add_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>add addtional headers to request for message request.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Message.as_batch_body">
+<code class="sig-name descname">as_batch_body</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.as_batch_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message.as_batch_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the current message as expected by batch body format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Message.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Message.renew_lock">
+<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.renew_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew lock on itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Message.unlock">
+<code class="sig-name descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.unlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Message.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.Queue">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">size_in_bytes=None</em>, <em class="sig-param">message_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Queue class corresponding to Queue Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780773">http://msdn.microsoft.com/en-us/library/windowsazure/hh780773</a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.Rule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">filter_type=None</em>, <em class="sig-param">filter_expression=None</em>, <em class="sig-param">action_type=None</em>, <em class="sig-param">action_expression=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Rule class corresponding to Rule Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780753">http://msdn.microsoft.com/en-us/library/windowsazure/hh780753</a>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.Subscription">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">lock_duration=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">message_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Subscription class corresponding to Subscription Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780763">http://msdn.microsoft.com/en-us/library/windowsazure/hh780763</a>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.models.Topic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.models.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">size_in_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.models.Topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Topic class corresponding to Topic Description:
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription">https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription</a>.</p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.models.Topic.max_size_in_mega_bytes">
+<em class="property">property </em><code class="sig-name descname">max_size_in_mega_bytes</code><a class="headerlink" href="#azure.servicebus.control_client.models.Topic.max_size_in_mega_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.servicebus.control_client.servicebusservice">
+<span id="azure-servicebus-control-client-servicebusservice-module"></span><h2>azure.servicebus.control_client.servicebusservice module<a class="headerlink" href="#module-azure.servicebus.control_client.servicebusservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusSASAuthentication">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.servicebusservice.</code><code class="sig-name descname">ServiceBusSASAuthentication</code><span class="sig-paren">(</span><em class="sig-param">key_name</em>, <em class="sig-param">key_value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusSASAuthentication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusSASAuthentication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusSASAuthentication.sign_request">
+<code class="sig-name descname">sign_request</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">httpclient</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusSASAuthentication.sign_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusSASAuthentication.sign_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.servicebusservice.</code><code class="sig-name descname">ServiceBusService</code><span class="sig-paren">(</span><em class="sig-param">service_namespace=None</em>, <em class="sig-param">account_key=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">x_ms_version='2011-06-01'</em>, <em class="sig-param">host_base='.servicebus.windows.net'</em>, <em class="sig-param">shared_access_key_name=None</em>, <em class="sig-param">shared_access_key_value=None</em>, <em class="sig-param">authentication=None</em>, <em class="sig-param">timeout=65</em>, <em class="sig-param">request_session=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Initializes the Service Bus service for a namespace with the specified
+authentication settings (SAS or ACS).</p>
+<dl class="simple">
+<dt>service_namespace:</dt><dd><p>Service Bus namespace, required for all operations. If None,
+the value is set to the AZURE_SERVICEBUS_NAMESPACE env variable.</p>
+</dd>
+<dt>account_key:</dt><dd><p>ACS authentication account key. If None, the value is set to the
+AZURE_SERVICEBUS_ACCESS_KEY env variable.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>issuer:</dt><dd><p>ACS authentication issuer. If None, the value is set to the
+AZURE_SERVICEBUS_ISSUER env variable.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>host_base:</dt><dd><p>Optional. Live host base URL. Defaults to Azure URL. Override this
+for on-premise.</p>
+</dd>
+<dt>shared_access_key_name:</dt><dd><p>SAS authentication key name.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>shared_access_key_value:</dt><dd><p>SAS authentication key value.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>authentication:</dt><dd><p>Instance of authentication class. If this is specified, then
+ACS and SAS parameters are ignored.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. Timeout for the HTTP request, in seconds.</p>
+</dd>
+<dt>request_session:</dt><dd><p>Optional. Session object to use for HTTP requests.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.account_key">
+<em class="property">property </em><code class="sig-name descname">account_key</code><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.account_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.create_event_hub">
+<code class="sig-name descname">create_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">hub=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.create_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Event Hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of event hub.</p>
+</dd>
+<dt>hub:</dt><dd><p>Optional. Event hub properties. Instance of EventHub class.</p>
+</dd>
+<dt>hub.message_retention_in_days:</dt><dd><p>Number of days to retain the events for this Event Hub.</p>
+</dd>
+<dt>hub.status:</dt><dd><p>Status of the Event Hub (enabled or disabled).</p>
+</dd>
+<dt>hub.user_metadata:</dt><dd><p>User metadata.</p>
+</dd>
+<dt>hub.partition_count:</dt><dd><p>Number of shards on the Event Hub.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the event hub exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.create_queue">
+<code class="sig-name descname">create_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">queue=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.create_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new queue. Once created, this queue’s resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue to create.</p>
+</dd>
+<dt>queue:</dt><dd><p>Queue object to create.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the queue exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.create_rule">
+<code class="sig-name descname">create_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em>, <em class="sig-param">rule=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.create_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new rule. Once created, this rule’s resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the rule exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.create_subscription">
+<code class="sig-name descname">create_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">subscription=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.create_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new subscription. Once created, this subscription resource
+manifest is immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether throw exception when subscription exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.create_topic">
+<code class="sig-name descname">create_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">topic=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.create_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new topic. Once created, this topic resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic to create.</p>
+</dd>
+<dt>topic:</dt><dd><p>Topic object to create.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the topic exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_event_hub">
+<code class="sig-name descname">delete_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an Event Hub. This operation will also remove all associated
+state.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of the event hub to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception if the event hub doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_queue">
+<code class="sig-name descname">delete_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing queue. This operation will also remove all
+associated state including messages in the queue.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception if the queue doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_queue_message">
+<code class="sig-name descname">delete_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Completes processing on a locked message and delete it from the queue.
+This operation should only be called after processing a previously
+locked message is successful to maintain At-Least-Once delivery
+assurances.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be deleted as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_rule">
+<code class="sig-name descname">delete_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing rule.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule to delete.  DEFAULT_RULE_NAME=$Default.
+Use DEFAULT_RULE_NAME to delete default rule for the subscription.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether throw exception when rule doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_subscription">
+<code class="sig-name descname">delete_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception when the subscription
+doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_subscription_message">
+<code class="sig-name descname">delete_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Completes processing on a locked message and delete it from the
+subscription. This operation should only be called after processing a
+previously locked message is successful to maintain At-Least-Once
+delivery assurances.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be deleted as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_topic">
+<code class="sig-name descname">delete_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.delete_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing topic. This operation will also remove all
+associated state including associated subscriptions.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether throw exception when topic doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.format_dead_letter_queue_name">
+<em class="property">static </em><code class="sig-name descname">format_dead_letter_queue_name</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_dead_letter_queue_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.format_dead_letter_queue_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this queue</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.format_dead_letter_subscription_name">
+<em class="property">static </em><code class="sig-name descname">format_dead_letter_subscription_name</code><span class="sig-paren">(</span><em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_dead_letter_subscription_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.format_dead_letter_subscription_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this subscription</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.format_transfer_dead_letter_queue_name">
+<em class="property">static </em><code class="sig-name descname">format_transfer_dead_letter_queue_name</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_transfer_dead_letter_queue_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.format_transfer_dead_letter_queue_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this queue</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.format_transfer_dead_letter_topic_name">
+<em class="property">static </em><code class="sig-name descname">format_transfer_dead_letter_topic_name</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_transfer_dead_letter_topic_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.format_transfer_dead_letter_topic_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this topic</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.get_event_hub">
+<code class="sig-name descname">get_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.get_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing event hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of the event hub.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.get_queue">
+<code class="sig-name descname">get_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.get_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing queue.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.get_rule">
+<code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.get_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the description for the specified rule.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.get_subscription">
+<code class="sig-name descname">get_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.get_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an existing subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.get_topic">
+<code class="sig-name descname">get_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.get_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the description for the specified topic.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer">
+<em class="property">property </em><code class="sig-name descname">issuer</code><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.list_queues">
+<code class="sig-name descname">list_queues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_queues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.list_queues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enumerates the queues in the service namespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.list_rules">
+<code class="sig-name descname">list_rules</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.list_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the rules that exist under the specified subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.list_subscriptions">
+<code class="sig-name descname">list_subscriptions</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_subscriptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.list_subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the subscriptions in the specified topic.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.list_topics">
+<code class="sig-name descname">list_topics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.list_topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the topics in the service namespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.peek_lock_queue_message">
+<code class="sig-name descname">peek_lock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.peek_lock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.peek_lock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automically retrieves and locks a message from a queue for processing.
+The message is guaranteed not to be delivered to other receivers (on
+the same subscription only) during the lock duration period specified
+in the queue description. Once the lock expires, the message will be
+available to other receivers. In order to complete processing of the
+message, the receiver should issue a delete command with the lock ID
+received from this operation. To abandon processing of the message and
+unlock it for other receivers, an Unlock Message command should be
+issued, or the lock duration period can expire.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.peek_lock_subscription_message">
+<code class="sig-name descname">peek_lock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.peek_lock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.peek_lock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation is used to atomically retrieve and lock a message for
+processing. The message is guaranteed not to be delivered to other
+receivers during the lock duration period specified in buffer
+description. Once the lock expires, the message will be available to
+other receivers (on the same subscription only) during the lock
+duration period specified in the topic description. Once the lock
+expires, the message will be available to other receivers. In order to
+complete processing of the message, the receiver should issue a delete
+command with the lock ID received from this operation. To abandon
+processing of the message and unlock it for other receivers, an Unlock
+Message command should be issued, or the lock duration period can
+expire.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.read_delete_queue_message">
+<code class="sig-name descname">read_delete_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.read_delete_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.read_delete_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and deletes a message from a queue as an atomic operation. This
+operation should be used when a best-effort guarantee is sufficient
+for an application; that is, using this operation it is possible for
+messages to be lost if processing fails.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.read_delete_subscription_message">
+<code class="sig-name descname">read_delete_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.read_delete_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.read_delete_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and delete a message from a subscription as an atomic operation.
+This operation should be used when a best-effort guarantee is
+sufficient for an application; that is, using this operation it is
+possible for messages to be lost if processing fails.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.receive_queue_message">
+<code class="sig-name descname">receive_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">peek_lock=True</em>, <em class="sig-param">timeout=60</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.receive_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.receive_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a message from a queue for processing.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>peek_lock:</dt><dd><p>Optional. True to retrieve and lock the message. False to read and
+delete the message. Default is True (lock).</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.receive_subscription_message">
+<code class="sig-name descname">receive_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">peek_lock=True</em>, <em class="sig-param">timeout=60</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.receive_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.receive_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a message from a subscription for processing.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>peek_lock:</dt><dd><p>Optional. True to retrieve and lock the message. False to read and
+delete the message. Default is True (lock).</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.renew_lock_queue_message">
+<code class="sig-name descname">renew_lock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.renew_lock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.renew_lock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew lock on an already locked message on a given
+queue. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.renew_lock_subscription_message">
+<code class="sig-name descname">renew_lock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.renew_lock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.renew_lock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew the lock on an already locked message on a given
+subscription. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.send_event">
+<code class="sig-name descname">send_event</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">message</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">broker_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.send_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a new message event to an Event Hub.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.send_queue_message">
+<code class="sig-name descname">send_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.send_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message into the specified queue. The limit to the number of
+messages which may be present in the queue is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the queue
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>message:</dt><dd><p>Message object containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.send_queue_message_batch">
+<code class="sig-name descname">send_queue_message_batch</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">messages=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_queue_message_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.send_queue_message_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a batch of messages into the specified queue. The limit to the number of
+messages which may be present in the topic is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the queue
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>messages:</dt><dd><p>List of message objects containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.send_topic_message">
+<code class="sig-name descname">send_topic_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_topic_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.send_topic_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enqueues a message into the specified topic. The limit to the number
+of messages which may be present in the topic is governed by the
+message size in MaxTopicSizeInBytes. If this message causes the topic
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>message:</dt><dd><p>Message object containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.send_topic_message_batch">
+<code class="sig-name descname">send_topic_message_batch</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">messages=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_topic_message_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.send_topic_message_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a batch of messages into the specified topic. The limit to the number of
+messages which may be present in the topic is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the topic
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>messages:</dt><dd><p>List of message objects containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.set_proxy">
+<code class="sig-name descname">set_proxy</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">port</em>, <em class="sig-param">user=None</em>, <em class="sig-param">password=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.set_proxy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.set_proxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the proxy server host and port for the HTTP CONNECT Tunnelling.</p>
+<dl class="simple">
+<dt>host:</dt><dd><p>Address of the proxy. Ex: ‘192.168.0.100’</p>
+</dd>
+<dt>port:</dt><dd><p>Port of the proxy. Ex: 6000</p>
+</dd>
+<dt>user:</dt><dd><p>User for proxy authorization.</p>
+</dd>
+<dt>password:</dt><dd><p>Password for proxy authorization.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.timeout">
+<em class="property">property </em><code class="sig-name descname">timeout</code><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.unlock_queue_message">
+<code class="sig-name descname">unlock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.unlock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.unlock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks a message for processing by other receivers on a given
+queue. This operation deletes the lock object, causing the
+message to be unlocked. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.unlock_subscription_message">
+<code class="sig-name descname">unlock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.unlock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.unlock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock a message for processing by other receivers on a given
+subscription. This operation deletes the lock object, causing the
+message to be unlocked. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.update_event_hub">
+<code class="sig-name descname">update_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">hub=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.update_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.update_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an Event Hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of event hub.</p>
+</dd>
+<dt>hub:</dt><dd><p>Optional. Event hub properties. Instance of EventHub class.</p>
+</dd>
+<dt>hub.message_retention_in_days:</dt><dd><p>Number of days to retain the events for this Event Hub.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusService.with_filter">
+<code class="sig-name descname">with_filter</code><span class="sig-paren">(</span><em class="sig-param">filter_func</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.with_filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusService.with_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new service which will process requests with the specified
+filter.  Filtering operations can include logging, automatic retrying,
+etc…  The filter is a lambda which receives the HTTPRequest and
+another lambda.  The filter can perform any pre-processing on the
+request, pass it off to the next lambda, and then perform any
+post-processing on the response.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusWrapTokenAuthentication">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.servicebusservice.</code><code class="sig-name descname">ServiceBusWrapTokenAuthentication</code><span class="sig-paren">(</span><em class="sig-param">account_key</em>, <em class="sig-param">issuer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusWrapTokenAuthentication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusWrapTokenAuthentication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.servicebusservice.ServiceBusWrapTokenAuthentication.sign_request">
+<code class="sig-name descname">sign_request</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">httpclient</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusWrapTokenAuthentication.sign_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.servicebusservice.ServiceBusWrapTokenAuthentication.sign_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.servicebus.control_client">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.servicebus.control_client" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="azure.servicebus.control_client.AzureServiceBusPeekLockError">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">AzureServiceBusPeekLockError</code><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AzureServiceBusPeekLockError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.AzureServiceBusPeekLockError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.common.html#azure.common.AzureException" title="azure.common.AzureException"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureException</span></code></a></p>
+<p>Indicates that peek-lock is required for this operation.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.control_client.AzureServiceBusResourceNotFound">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">AzureServiceBusResourceNotFound</code><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AzureServiceBusResourceNotFound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.AzureServiceBusResourceNotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.common.html#azure.common.AzureException" title="azure.common.AzureException"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureException</span></code></a></p>
+<p>Indicates that the resource doesn’t exist.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.Queue">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">size_in_bytes=None</em>, <em class="sig-param">message_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Queue class corresponding to Queue Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780773">http://msdn.microsoft.com/en-us/library/windowsazure/hh780773</a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.Topic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">size_in_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Topic class corresponding to Topic Description:
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription">https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription</a>.</p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.Topic.max_size_in_mega_bytes">
+<em class="property">property </em><code class="sig-name descname">max_size_in_mega_bytes</code><a class="headerlink" href="#azure.servicebus.control_client.Topic.max_size_in_mega_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.Subscription">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">lock_duration=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">default_message_time_to_live=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">message_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Subscription class corresponding to Subscription Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780763">http://msdn.microsoft.com/en-us/library/windowsazure/hh780763</a>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.Rule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">filter_type=None</em>, <em class="sig-param">filter_expression=None</em>, <em class="sig-param">action_type=None</em>, <em class="sig-param">action_expression=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Rule class corresponding to Rule Description:
+<a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/hh780753">http://msdn.microsoft.com/en-us/library/windowsazure/hh780753</a>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.Message">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">Message</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">service_bus_service=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">custom_properties=None</em>, <em class="sig-param">type='application/atom+xml;type=entry;charset=utf-8'</em>, <em class="sig-param">broker_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+<p>Message class that used in send message/get message apis.</p>
+<dl class="method">
+<dt id="azure.servicebus.control_client.Message.add_headers">
+<code class="sig-name descname">add_headers</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.add_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message.add_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>add addtional headers to request for message request.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.Message.as_batch_body">
+<code class="sig-name descname">as_batch_body</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.as_batch_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message.as_batch_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the current message as expected by batch body format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.Message.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.Message.renew_lock">
+<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.renew_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew lock on itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.Message.unlock">
+<code class="sig-name descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#Message.unlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.Message.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks itself if find queue name or topic name and subscription
+name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.EventHub">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">EventHub</code><span class="sig-paren">(</span><em class="sig-param">message_retention_in_days=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user_metadata=None</em>, <em class="sig-param">partition_count=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#EventHub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.EventHub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.AuthorizationRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">AuthorizationRule</code><span class="sig-paren">(</span><em class="sig-param">claim_type=None</em>, <em class="sig-param">claim_value=None</em>, <em class="sig-param">rights=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">secondary_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/models.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.control_client._common_models.WindowsAzureData</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.control_client.ServiceBusService">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicebus.control_client.</code><code class="sig-name descname">ServiceBusService</code><span class="sig-paren">(</span><em class="sig-param">service_namespace=None</em>, <em class="sig-param">account_key=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">x_ms_version='2011-06-01'</em>, <em class="sig-param">host_base='.servicebus.windows.net'</em>, <em class="sig-param">shared_access_key_name=None</em>, <em class="sig-param">shared_access_key_value=None</em>, <em class="sig-param">authentication=None</em>, <em class="sig-param">timeout=65</em>, <em class="sig-param">request_session=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Initializes the Service Bus service for a namespace with the specified
+authentication settings (SAS or ACS).</p>
+<dl class="simple">
+<dt>service_namespace:</dt><dd><p>Service Bus namespace, required for all operations. If None,
+the value is set to the AZURE_SERVICEBUS_NAMESPACE env variable.</p>
+</dd>
+<dt>account_key:</dt><dd><p>ACS authentication account key. If None, the value is set to the
+AZURE_SERVICEBUS_ACCESS_KEY env variable.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>issuer:</dt><dd><p>ACS authentication issuer. If None, the value is set to the
+AZURE_SERVICEBUS_ISSUER env variable.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>host_base:</dt><dd><p>Optional. Live host base URL. Defaults to Azure URL. Override this
+for on-premise.</p>
+</dd>
+<dt>shared_access_key_name:</dt><dd><p>SAS authentication key name.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>shared_access_key_value:</dt><dd><p>SAS authentication key value.
+Note that if both SAS and ACS settings are specified, SAS is used.</p>
+</dd>
+<dt>authentication:</dt><dd><p>Instance of authentication class. If this is specified, then
+ACS and SAS parameters are ignored.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. Timeout for the HTTP request, in seconds.</p>
+</dd>
+<dt>request_session:</dt><dd><p>Optional. Session object to use for HTTP requests.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.account_key">
+<em class="property">property </em><code class="sig-name descname">account_key</code><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.account_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.create_event_hub">
+<code class="sig-name descname">create_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">hub=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.create_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Event Hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of event hub.</p>
+</dd>
+<dt>hub:</dt><dd><p>Optional. Event hub properties. Instance of EventHub class.</p>
+</dd>
+<dt>hub.message_retention_in_days:</dt><dd><p>Number of days to retain the events for this Event Hub.</p>
+</dd>
+<dt>hub.status:</dt><dd><p>Status of the Event Hub (enabled or disabled).</p>
+</dd>
+<dt>hub.user_metadata:</dt><dd><p>User metadata.</p>
+</dd>
+<dt>hub.partition_count:</dt><dd><p>Number of shards on the Event Hub.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the event hub exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.create_queue">
+<code class="sig-name descname">create_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">queue=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.create_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new queue. Once created, this queue’s resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue to create.</p>
+</dd>
+<dt>queue:</dt><dd><p>Queue object to create.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the queue exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.create_rule">
+<code class="sig-name descname">create_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em>, <em class="sig-param">rule=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.create_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new rule. Once created, this rule’s resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the rule exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.create_subscription">
+<code class="sig-name descname">create_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">subscription=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.create_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new subscription. Once created, this subscription resource
+manifest is immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether throw exception when subscription exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.create_topic">
+<code class="sig-name descname">create_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">topic=None</em>, <em class="sig-param">fail_on_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.create_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.create_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new topic. Once created, this topic resource manifest is
+immutable.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic to create.</p>
+</dd>
+<dt>topic:</dt><dd><p>Topic object to create.</p>
+</dd>
+<dt>fail_on_exist:</dt><dd><p>Specify whether to throw an exception when the topic exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_event_hub">
+<code class="sig-name descname">delete_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an Event Hub. This operation will also remove all associated
+state.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of the event hub to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception if the event hub doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_queue">
+<code class="sig-name descname">delete_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing queue. This operation will also remove all
+associated state including messages in the queue.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception if the queue doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_queue_message">
+<code class="sig-name descname">delete_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Completes processing on a locked message and delete it from the queue.
+This operation should only be called after processing a previously
+locked message is successful to maintain At-Least-Once delivery
+assurances.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be deleted as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_rule">
+<code class="sig-name descname">delete_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing rule.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule to delete.  DEFAULT_RULE_NAME=$Default.
+Use DEFAULT_RULE_NAME to delete default rule for the subscription.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether throw exception when rule doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_subscription">
+<code class="sig-name descname">delete_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether to throw an exception when the subscription
+doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_subscription_message">
+<code class="sig-name descname">delete_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Completes processing on a locked message and delete it from the
+subscription. This operation should only be called after processing a
+previously locked message is successful to maintain At-Least-Once
+delivery assurances.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be deleted as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.delete_topic">
+<code class="sig-name descname">delete_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">fail_not_exist=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.delete_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.delete_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing topic. This operation will also remove all
+associated state including associated subscriptions.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic to delete.</p>
+</dd>
+<dt>fail_not_exist:</dt><dd><p>Specify whether throw exception when topic doesn’t exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.format_dead_letter_queue_name">
+<em class="property">static </em><code class="sig-name descname">format_dead_letter_queue_name</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_dead_letter_queue_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.format_dead_letter_queue_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this queue</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.format_dead_letter_subscription_name">
+<em class="property">static </em><code class="sig-name descname">format_dead_letter_subscription_name</code><span class="sig-paren">(</span><em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_dead_letter_subscription_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.format_dead_letter_subscription_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this subscription</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.format_transfer_dead_letter_queue_name">
+<em class="property">static </em><code class="sig-name descname">format_transfer_dead_letter_queue_name</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_transfer_dead_letter_queue_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.format_transfer_dead_letter_queue_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this queue</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.format_transfer_dead_letter_topic_name">
+<em class="property">static </em><code class="sig-name descname">format_transfer_dead_letter_topic_name</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.format_transfer_dead_letter_topic_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.format_transfer_dead_letter_topic_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dead letter name of this topic</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.get_event_hub">
+<code class="sig-name descname">get_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.get_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing event hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of the event hub.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.get_queue">
+<code class="sig-name descname">get_queue</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.get_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing queue.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.get_rule">
+<code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">rule_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.get_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the description for the specified rule.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>rule_name:</dt><dd><p>Name of the rule.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.get_subscription">
+<code class="sig-name descname">get_subscription</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.get_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an existing subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.get_topic">
+<code class="sig-name descname">get_topic</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.get_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.get_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the description for the specified topic.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.issuer">
+<em class="property">property </em><code class="sig-name descname">issuer</code><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.issuer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.list_queues">
+<code class="sig-name descname">list_queues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_queues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.list_queues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enumerates the queues in the service namespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.list_rules">
+<code class="sig-name descname">list_rules</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.list_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the rules that exist under the specified subscription.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.list_subscriptions">
+<code class="sig-name descname">list_subscriptions</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_subscriptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.list_subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the subscriptions in the specified topic.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.list_topics">
+<code class="sig-name descname">list_topics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.list_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.list_topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the topics in the service namespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.peek_lock_queue_message">
+<code class="sig-name descname">peek_lock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.peek_lock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.peek_lock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automically retrieves and locks a message from a queue for processing.
+The message is guaranteed not to be delivered to other receivers (on
+the same subscription only) during the lock duration period specified
+in the queue description. Once the lock expires, the message will be
+available to other receivers. In order to complete processing of the
+message, the receiver should issue a delete command with the lock ID
+received from this operation. To abandon processing of the message and
+unlock it for other receivers, an Unlock Message command should be
+issued, or the lock duration period can expire.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.peek_lock_subscription_message">
+<code class="sig-name descname">peek_lock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.peek_lock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.peek_lock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation is used to atomically retrieve and lock a message for
+processing. The message is guaranteed not to be delivered to other
+receivers during the lock duration period specified in buffer
+description. Once the lock expires, the message will be available to
+other receivers (on the same subscription only) during the lock
+duration period specified in the topic description. Once the lock
+expires, the message will be available to other receivers. In order to
+complete processing of the message, the receiver should issue a delete
+command with the lock ID received from this operation. To abandon
+processing of the message and unlock it for other receivers, an Unlock
+Message command should be issued, or the lock duration period can
+expire.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.read_delete_queue_message">
+<code class="sig-name descname">read_delete_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.read_delete_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.read_delete_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and deletes a message from a queue as an atomic operation. This
+operation should be used when a best-effort guarantee is sufficient
+for an application; that is, using this operation it is possible for
+messages to be lost if processing fails.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.read_delete_subscription_message">
+<code class="sig-name descname">read_delete_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">timeout='60'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.read_delete_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.read_delete_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and delete a message from a subscription as an atomic operation.
+This operation should be used when a best-effort guarantee is
+sufficient for an application; that is, using this operation it is
+possible for messages to be lost if processing fails.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.receive_queue_message">
+<code class="sig-name descname">receive_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">peek_lock=True</em>, <em class="sig-param">timeout=60</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.receive_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.receive_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a message from a queue for processing.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>peek_lock:</dt><dd><p>Optional. True to retrieve and lock the message. False to read and
+delete the message. Default is True (lock).</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.receive_subscription_message">
+<code class="sig-name descname">receive_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">peek_lock=True</em>, <em class="sig-param">timeout=60</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.receive_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.receive_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a message from a subscription for processing.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>peek_lock:</dt><dd><p>Optional. True to retrieve and lock the message. False to read and
+delete the message. Default is True (lock).</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. The timeout parameter is expressed in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.renew_lock_queue_message">
+<code class="sig-name descname">renew_lock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.renew_lock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.renew_lock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew lock on an already locked message on a given
+queue. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.renew_lock_subscription_message">
+<code class="sig-name descname">renew_lock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.renew_lock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.renew_lock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew the lock on an already locked message on a given
+subscription. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.send_event">
+<code class="sig-name descname">send_event</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">message</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">broker_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.send_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a new message event to an Event Hub.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.send_queue_message">
+<code class="sig-name descname">send_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.send_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message into the specified queue. The limit to the number of
+messages which may be present in the queue is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the queue
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>message:</dt><dd><p>Message object containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.send_queue_message_batch">
+<code class="sig-name descname">send_queue_message_batch</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">messages=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_queue_message_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.send_queue_message_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a batch of messages into the specified queue. The limit to the number of
+messages which may be present in the topic is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the queue
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>messages:</dt><dd><p>List of message objects containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.send_topic_message">
+<code class="sig-name descname">send_topic_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_topic_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.send_topic_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enqueues a message into the specified topic. The limit to the number
+of messages which may be present in the topic is governed by the
+message size in MaxTopicSizeInBytes. If this message causes the topic
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>message:</dt><dd><p>Message object containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.send_topic_message_batch">
+<code class="sig-name descname">send_topic_message_batch</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">messages=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.send_topic_message_batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.send_topic_message_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a batch of messages into the specified topic. The limit to the number of
+messages which may be present in the topic is governed by the message
+size the MaxTopicSizeInMegaBytes. If this message will cause the topic
+to exceed its quota, a quota exceeded error is returned and the
+message will be rejected.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>messages:</dt><dd><p>List of message objects containing message body and properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.set_proxy">
+<code class="sig-name descname">set_proxy</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">port</em>, <em class="sig-param">user=None</em>, <em class="sig-param">password=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.set_proxy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.set_proxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the proxy server host and port for the HTTP CONNECT Tunnelling.</p>
+<dl class="simple">
+<dt>host:</dt><dd><p>Address of the proxy. Ex: ‘192.168.0.100’</p>
+</dd>
+<dt>port:</dt><dd><p>Port of the proxy. Ex: 6000</p>
+</dd>
+<dt>user:</dt><dd><p>User for proxy authorization.</p>
+</dd>
+<dt>password:</dt><dd><p>Password for proxy authorization.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.timeout">
+<em class="property">property </em><code class="sig-name descname">timeout</code><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.unlock_queue_message">
+<code class="sig-name descname">unlock_queue_message</code><span class="sig-paren">(</span><em class="sig-param">queue_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.unlock_queue_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.unlock_queue_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks a message for processing by other receivers on a given
+queue. This operation deletes the lock object, causing the
+message to be unlocked. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>queue_name:</dt><dd><p>Name of the queue.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.unlock_subscription_message">
+<code class="sig-name descname">unlock_subscription_message</code><span class="sig-paren">(</span><em class="sig-param">topic_name</em>, <em class="sig-param">subscription_name</em>, <em class="sig-param">sequence_number</em>, <em class="sig-param">lock_token</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.unlock_subscription_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.unlock_subscription_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock a message for processing by other receivers on a given
+subscription. This operation deletes the lock object, causing the
+message to be unlocked. A message must have first been locked by a
+receiver before this operation is called.</p>
+<dl class="simple">
+<dt>topic_name:</dt><dd><p>Name of the topic.</p>
+</dd>
+<dt>subscription_name:</dt><dd><p>Name of the subscription.</p>
+</dd>
+<dt>sequence_number:</dt><dd><p>The sequence number of the message to be unlocked as returned in
+BrokerProperties[‘SequenceNumber’] by the Peek Message operation.</p>
+</dd>
+<dt>lock_token:</dt><dd><p>The ID of the lock as returned by the Peek Message operation in
+BrokerProperties[‘LockToken’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.update_event_hub">
+<code class="sig-name descname">update_event_hub</code><span class="sig-paren">(</span><em class="sig-param">hub_name</em>, <em class="sig-param">hub=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.update_event_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.update_event_hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an Event Hub.</p>
+<dl class="simple">
+<dt>hub_name:</dt><dd><p>Name of event hub.</p>
+</dd>
+<dt>hub:</dt><dd><p>Optional. Event hub properties. Instance of EventHub class.</p>
+</dd>
+<dt>hub.message_retention_in_days:</dt><dd><p>Number of days to retain the events for this Event Hub.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.control_client.ServiceBusService.with_filter">
+<code class="sig-name descname">with_filter</code><span class="sig-paren">(</span><em class="sig-param">filter_func</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/control_client/servicebusservice.html#ServiceBusService.with_filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.control_client.ServiceBusService.with_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new service which will process requests with the specified
+filter.  Filtering operations can include logging, automatic retrying,
+etc…  The filter is a lambda which receives the HTTPRequest and
+another lambda.  The filter can perform any pre-processing on the
+request, pass it off to the next lambda, and then perform any
+post-processing on the response.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.servicefabric.html" class="btn btn-neutral float-right" title="azure.servicefabric package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.servicebus.common.html" class="btn btn-neutral float-left" title="azure.servicebus.common package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

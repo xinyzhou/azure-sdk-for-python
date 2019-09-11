@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.sql package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.sql.models module" href="azure.mgmt.sql.models.html" />
+    <link rel="prev" title="azure.mgmt.signalr.operations module" href="azure.mgmt.signalr.operations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">azure.mgmt.sql package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.sql.models.html">azure.mgmt.sql.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.sql.operations.html">azure.mgmt.sql.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.mgmt.sql">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>azure.mgmt.sql package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.sql.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-mgmt-sql-package">
+<h1>azure.mgmt.sql package<a class="headerlink" href="#azure-mgmt-sql-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.models.html">azure.mgmt.sql.models module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.operations.html">azure.mgmt.sql.operations module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-azure.mgmt.sql">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.sql" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.mgmt.sql.SqlManagementClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.sql.</code><code class="sig-name descname">SqlManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sql/_sql_management_client.html#SqlManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sql.SqlManagementClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>The Azure SQL Database management API provides a RESTful set of web services that interact with Azure SQL Database services to manage your databases. The API enables you to create, retrieve, update, and delete databases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.sql.SqlManagementClientConfiguration" title="azure.mgmt.sql.SqlManagementClientConfiguration"><em>SqlManagementClientConfiguration</em></a>) – Configuration for client.</p></li>
+<li><p><strong>recoverable_databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RecoverableDatabasesOperations" title="azure.mgmt.sql.operations.RecoverableDatabasesOperations"><em>azure.mgmt.sql.operations.RecoverableDatabasesOperations</em></a>) – RecoverableDatabases operations</p></li>
+<li><p><strong>restorable_dropped_databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RestorableDroppedDatabasesOperations" title="azure.mgmt.sql.operations.RestorableDroppedDatabasesOperations"><em>azure.mgmt.sql.operations.RestorableDroppedDatabasesOperations</em></a>) – RestorableDroppedDatabases operations</p></li>
+<li><p><strong>servers</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServersOperations" title="azure.mgmt.sql.operations.ServersOperations"><em>azure.mgmt.sql.operations.ServersOperations</em></a>) – Servers operations</p></li>
+<li><p><strong>server_connection_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerConnectionPoliciesOperations" title="azure.mgmt.sql.operations.ServerConnectionPoliciesOperations"><em>azure.mgmt.sql.operations.ServerConnectionPoliciesOperations</em></a>) – ServerConnectionPolicies operations</p></li>
+<li><p><strong>database_threat_detection_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseThreatDetectionPoliciesOperations" title="azure.mgmt.sql.operations.DatabaseThreatDetectionPoliciesOperations"><em>azure.mgmt.sql.operations.DatabaseThreatDetectionPoliciesOperations</em></a>) – DatabaseThreatDetectionPolicies operations</p></li>
+<li><p><strong>data_masking_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DataMaskingPoliciesOperations" title="azure.mgmt.sql.operations.DataMaskingPoliciesOperations"><em>azure.mgmt.sql.operations.DataMaskingPoliciesOperations</em></a>) – DataMaskingPolicies operations</p></li>
+<li><p><strong>data_masking_rules</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DataMaskingRulesOperations" title="azure.mgmt.sql.operations.DataMaskingRulesOperations"><em>azure.mgmt.sql.operations.DataMaskingRulesOperations</em></a>) – DataMaskingRules operations</p></li>
+<li><p><strong>firewall_rules</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.FirewallRulesOperations" title="azure.mgmt.sql.operations.FirewallRulesOperations"><em>azure.mgmt.sql.operations.FirewallRulesOperations</em></a>) – FirewallRules operations</p></li>
+<li><p><strong>geo_backup_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.GeoBackupPoliciesOperations" title="azure.mgmt.sql.operations.GeoBackupPoliciesOperations"><em>azure.mgmt.sql.operations.GeoBackupPoliciesOperations</em></a>) – GeoBackupPolicies operations</p></li>
+<li><p><strong>databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabasesOperations" title="azure.mgmt.sql.operations.DatabasesOperations"><em>azure.mgmt.sql.operations.DatabasesOperations</em></a>) – Databases operations</p></li>
+<li><p><strong>elastic_pools</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ElasticPoolsOperations" title="azure.mgmt.sql.operations.ElasticPoolsOperations"><em>azure.mgmt.sql.operations.ElasticPoolsOperations</em></a>) – ElasticPools operations</p></li>
+<li><p><strong>recommended_elastic_pools</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RecommendedElasticPoolsOperations" title="azure.mgmt.sql.operations.RecommendedElasticPoolsOperations"><em>azure.mgmt.sql.operations.RecommendedElasticPoolsOperations</em></a>) – RecommendedElasticPools operations</p></li>
+<li><p><strong>replication_links</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ReplicationLinksOperations" title="azure.mgmt.sql.operations.ReplicationLinksOperations"><em>azure.mgmt.sql.operations.ReplicationLinksOperations</em></a>) – ReplicationLinks operations</p></li>
+<li><p><strong>server_azure_ad_administrators</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations" title="azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations"><em>azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations</em></a>) – ServerAzureADAdministrators operations</p></li>
+<li><p><strong>server_communication_links</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerCommunicationLinksOperations" title="azure.mgmt.sql.operations.ServerCommunicationLinksOperations"><em>azure.mgmt.sql.operations.ServerCommunicationLinksOperations</em></a>) – ServerCommunicationLinks operations</p></li>
+<li><p><strong>service_objectives</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServiceObjectivesOperations" title="azure.mgmt.sql.operations.ServiceObjectivesOperations"><em>azure.mgmt.sql.operations.ServiceObjectivesOperations</em></a>) – ServiceObjectives operations</p></li>
+<li><p><strong>elastic_pool_activities</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ElasticPoolActivitiesOperations" title="azure.mgmt.sql.operations.ElasticPoolActivitiesOperations"><em>azure.mgmt.sql.operations.ElasticPoolActivitiesOperations</em></a>) – ElasticPoolActivities operations</p></li>
+<li><p><strong>elastic_pool_database_activities</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ElasticPoolDatabaseActivitiesOperations" title="azure.mgmt.sql.operations.ElasticPoolDatabaseActivitiesOperations"><em>azure.mgmt.sql.operations.ElasticPoolDatabaseActivitiesOperations</em></a>) – ElasticPoolDatabaseActivities operations</p></li>
+<li><p><strong>service_tier_advisors</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServiceTierAdvisorsOperations" title="azure.mgmt.sql.operations.ServiceTierAdvisorsOperations"><em>azure.mgmt.sql.operations.ServiceTierAdvisorsOperations</em></a>) – ServiceTierAdvisors operations</p></li>
+<li><p><strong>transparent_data_encryptions</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.TransparentDataEncryptionsOperations" title="azure.mgmt.sql.operations.TransparentDataEncryptionsOperations"><em>azure.mgmt.sql.operations.TransparentDataEncryptionsOperations</em></a>) – TransparentDataEncryptions operations</p></li>
+<li><p><strong>transparent_data_encryption_activities</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.TransparentDataEncryptionActivitiesOperations" title="azure.mgmt.sql.operations.TransparentDataEncryptionActivitiesOperations"><em>azure.mgmt.sql.operations.TransparentDataEncryptionActivitiesOperations</em></a>) – TransparentDataEncryptionActivities operations</p></li>
+<li><p><strong>server_usages</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerUsagesOperations" title="azure.mgmt.sql.operations.ServerUsagesOperations"><em>azure.mgmt.sql.operations.ServerUsagesOperations</em></a>) – ServerUsages operations</p></li>
+<li><p><strong>database_usages</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseUsagesOperations" title="azure.mgmt.sql.operations.DatabaseUsagesOperations"><em>azure.mgmt.sql.operations.DatabaseUsagesOperations</em></a>) – DatabaseUsages operations</p></li>
+<li><p><strong>database_automatic_tuning</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseAutomaticTuningOperations" title="azure.mgmt.sql.operations.DatabaseAutomaticTuningOperations"><em>azure.mgmt.sql.operations.DatabaseAutomaticTuningOperations</em></a>) – DatabaseAutomaticTuning operations</p></li>
+<li><p><strong>encryption_protectors</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.EncryptionProtectorsOperations" title="azure.mgmt.sql.operations.EncryptionProtectorsOperations"><em>azure.mgmt.sql.operations.EncryptionProtectorsOperations</em></a>) – EncryptionProtectors operations</p></li>
+<li><p><strong>failover_groups</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.FailoverGroupsOperations" title="azure.mgmt.sql.operations.FailoverGroupsOperations"><em>azure.mgmt.sql.operations.FailoverGroupsOperations</em></a>) – FailoverGroups operations</p></li>
+<li><p><a class="reference internal" href="azure.applicationinsights.operations.html#module-azure.applicationinsights.operations" title="azure.applicationinsights.operations"><strong>operations</strong></a> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.Operations" title="azure.mgmt.sql.operations.Operations"><em>azure.mgmt.sql.operations.Operations</em></a>) – Operations operations</p></li>
+<li><p><strong>server_keys</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerKeysOperations" title="azure.mgmt.sql.operations.ServerKeysOperations"><em>azure.mgmt.sql.operations.ServerKeysOperations</em></a>) – ServerKeys operations</p></li>
+<li><p><strong>sync_agents</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.SyncAgentsOperations" title="azure.mgmt.sql.operations.SyncAgentsOperations"><em>azure.mgmt.sql.operations.SyncAgentsOperations</em></a>) – SyncAgents operations</p></li>
+<li><p><strong>sync_groups</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.SyncGroupsOperations" title="azure.mgmt.sql.operations.SyncGroupsOperations"><em>azure.mgmt.sql.operations.SyncGroupsOperations</em></a>) – SyncGroups operations</p></li>
+<li><p><strong>sync_members</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.SyncMembersOperations" title="azure.mgmt.sql.operations.SyncMembersOperations"><em>azure.mgmt.sql.operations.SyncMembersOperations</em></a>) – SyncMembers operations</p></li>
+<li><p><strong>subscription_usages</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.SubscriptionUsagesOperations" title="azure.mgmt.sql.operations.SubscriptionUsagesOperations"><em>azure.mgmt.sql.operations.SubscriptionUsagesOperations</em></a>) – SubscriptionUsages operations</p></li>
+<li><p><strong>virtual_clusters</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.VirtualClustersOperations" title="azure.mgmt.sql.operations.VirtualClustersOperations"><em>azure.mgmt.sql.operations.VirtualClustersOperations</em></a>) – VirtualClusters operations</p></li>
+<li><p><strong>virtual_network_rules</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.VirtualNetworkRulesOperations" title="azure.mgmt.sql.operations.VirtualNetworkRulesOperations"><em>azure.mgmt.sql.operations.VirtualNetworkRulesOperations</em></a>) – VirtualNetworkRules operations</p></li>
+<li><p><strong>extended_database_blob_auditing_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ExtendedDatabaseBlobAuditingPoliciesOperations" title="azure.mgmt.sql.operations.ExtendedDatabaseBlobAuditingPoliciesOperations"><em>azure.mgmt.sql.operations.ExtendedDatabaseBlobAuditingPoliciesOperations</em></a>) – ExtendedDatabaseBlobAuditingPolicies operations</p></li>
+<li><p><strong>extended_server_blob_auditing_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ExtendedServerBlobAuditingPoliciesOperations" title="azure.mgmt.sql.operations.ExtendedServerBlobAuditingPoliciesOperations"><em>azure.mgmt.sql.operations.ExtendedServerBlobAuditingPoliciesOperations</em></a>) – ExtendedServerBlobAuditingPolicies operations</p></li>
+<li><p><strong>server_blob_auditing_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerBlobAuditingPoliciesOperations" title="azure.mgmt.sql.operations.ServerBlobAuditingPoliciesOperations"><em>azure.mgmt.sql.operations.ServerBlobAuditingPoliciesOperations</em></a>) – ServerBlobAuditingPolicies operations</p></li>
+<li><p><strong>database_blob_auditing_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseBlobAuditingPoliciesOperations" title="azure.mgmt.sql.operations.DatabaseBlobAuditingPoliciesOperations"><em>azure.mgmt.sql.operations.DatabaseBlobAuditingPoliciesOperations</em></a>) – DatabaseBlobAuditingPolicies operations</p></li>
+<li><p><strong>database_vulnerability_assessment_rule_baselines</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentRuleBaselinesOperations" title="azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentRuleBaselinesOperations"><em>azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentRuleBaselinesOperations</em></a>) – DatabaseVulnerabilityAssessmentRuleBaselines operations</p></li>
+<li><p><strong>database_vulnerability_assessments</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentsOperations" title="azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentsOperations"><em>azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentsOperations</em></a>) – DatabaseVulnerabilityAssessments operations</p></li>
+<li><p><strong>job_agents</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobAgentsOperations" title="azure.mgmt.sql.operations.JobAgentsOperations"><em>azure.mgmt.sql.operations.JobAgentsOperations</em></a>) – JobAgents operations</p></li>
+<li><p><strong>job_credentials</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobCredentialsOperations" title="azure.mgmt.sql.operations.JobCredentialsOperations"><em>azure.mgmt.sql.operations.JobCredentialsOperations</em></a>) – JobCredentials operations</p></li>
+<li><p><strong>job_executions</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobExecutionsOperations" title="azure.mgmt.sql.operations.JobExecutionsOperations"><em>azure.mgmt.sql.operations.JobExecutionsOperations</em></a>) – JobExecutions operations</p></li>
+<li><p><strong>jobs</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobsOperations" title="azure.mgmt.sql.operations.JobsOperations"><em>azure.mgmt.sql.operations.JobsOperations</em></a>) – Jobs operations</p></li>
+<li><p><strong>job_step_executions</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobStepExecutionsOperations" title="azure.mgmt.sql.operations.JobStepExecutionsOperations"><em>azure.mgmt.sql.operations.JobStepExecutionsOperations</em></a>) – JobStepExecutions operations</p></li>
+<li><p><strong>job_steps</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobStepsOperations" title="azure.mgmt.sql.operations.JobStepsOperations"><em>azure.mgmt.sql.operations.JobStepsOperations</em></a>) – JobSteps operations</p></li>
+<li><p><strong>job_target_executions</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobTargetExecutionsOperations" title="azure.mgmt.sql.operations.JobTargetExecutionsOperations"><em>azure.mgmt.sql.operations.JobTargetExecutionsOperations</em></a>) – JobTargetExecutions operations</p></li>
+<li><p><strong>job_target_groups</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobTargetGroupsOperations" title="azure.mgmt.sql.operations.JobTargetGroupsOperations"><em>azure.mgmt.sql.operations.JobTargetGroupsOperations</em></a>) – JobTargetGroups operations</p></li>
+<li><p><strong>job_versions</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.JobVersionsOperations" title="azure.mgmt.sql.operations.JobVersionsOperations"><em>azure.mgmt.sql.operations.JobVersionsOperations</em></a>) – JobVersions operations</p></li>
+<li><p><strong>long_term_retention_backups</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.LongTermRetentionBackupsOperations" title="azure.mgmt.sql.operations.LongTermRetentionBackupsOperations"><em>azure.mgmt.sql.operations.LongTermRetentionBackupsOperations</em></a>) – LongTermRetentionBackups operations</p></li>
+<li><p><strong>backup_long_term_retention_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.BackupLongTermRetentionPoliciesOperations" title="azure.mgmt.sql.operations.BackupLongTermRetentionPoliciesOperations"><em>azure.mgmt.sql.operations.BackupLongTermRetentionPoliciesOperations</em></a>) – BackupLongTermRetentionPolicies operations</p></li>
+<li><p><strong>managed_backup_short_term_retention_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedBackupShortTermRetentionPoliciesOperations" title="azure.mgmt.sql.operations.ManagedBackupShortTermRetentionPoliciesOperations"><em>azure.mgmt.sql.operations.ManagedBackupShortTermRetentionPoliciesOperations</em></a>) – ManagedBackupShortTermRetentionPolicies operations</p></li>
+<li><p><strong>managed_databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabasesOperations" title="azure.mgmt.sql.operations.ManagedDatabasesOperations"><em>azure.mgmt.sql.operations.ManagedDatabasesOperations</em></a>) – ManagedDatabases operations</p></li>
+<li><p><strong>managed_restorable_dropped_database_backup_short_term_retention_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations" title="azure.mgmt.sql.operations.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations"><em>azure.mgmt.sql.operations.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations</em></a>) – ManagedRestorableDroppedDatabaseBackupShortTermRetentionPolicies operations</p></li>
+<li><p><strong>server_automatic_tuning</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerAutomaticTuningOperations" title="azure.mgmt.sql.operations.ServerAutomaticTuningOperations"><em>azure.mgmt.sql.operations.ServerAutomaticTuningOperations</em></a>) – ServerAutomaticTuning operations</p></li>
+<li><p><strong>server_dns_aliases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerDnsAliasesOperations" title="azure.mgmt.sql.operations.ServerDnsAliasesOperations"><em>azure.mgmt.sql.operations.ServerDnsAliasesOperations</em></a>) – ServerDnsAliases operations</p></li>
+<li><p><strong>server_security_alert_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerSecurityAlertPoliciesOperations" title="azure.mgmt.sql.operations.ServerSecurityAlertPoliciesOperations"><em>azure.mgmt.sql.operations.ServerSecurityAlertPoliciesOperations</em></a>) – ServerSecurityAlertPolicies operations</p></li>
+<li><p><strong>restorable_dropped_managed_databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RestorableDroppedManagedDatabasesOperations" title="azure.mgmt.sql.operations.RestorableDroppedManagedDatabasesOperations"><em>azure.mgmt.sql.operations.RestorableDroppedManagedDatabasesOperations</em></a>) – RestorableDroppedManagedDatabases operations</p></li>
+<li><p><strong>restore_points</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RestorePointsOperations" title="azure.mgmt.sql.operations.RestorePointsOperations"><em>azure.mgmt.sql.operations.RestorePointsOperations</em></a>) – RestorePoints operations</p></li>
+<li><p><strong>managed_database_security_alert_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabaseSecurityAlertPoliciesOperations" title="azure.mgmt.sql.operations.ManagedDatabaseSecurityAlertPoliciesOperations"><em>azure.mgmt.sql.operations.ManagedDatabaseSecurityAlertPoliciesOperations</em></a>) – ManagedDatabaseSecurityAlertPolicies operations</p></li>
+<li><p><strong>managed_server_security_alert_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedServerSecurityAlertPoliciesOperations" title="azure.mgmt.sql.operations.ManagedServerSecurityAlertPoliciesOperations"><em>azure.mgmt.sql.operations.ManagedServerSecurityAlertPoliciesOperations</em></a>) – ManagedServerSecurityAlertPolicies operations</p></li>
+<li><p><strong>sensitivity_labels</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.SensitivityLabelsOperations" title="azure.mgmt.sql.operations.SensitivityLabelsOperations"><em>azure.mgmt.sql.operations.SensitivityLabelsOperations</em></a>) – SensitivityLabels operations</p></li>
+<li><p><strong>managed_instance_administrators</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstanceAdministratorsOperations" title="azure.mgmt.sql.operations.ManagedInstanceAdministratorsOperations"><em>azure.mgmt.sql.operations.ManagedInstanceAdministratorsOperations</em></a>) – ManagedInstanceAdministrators operations</p></li>
+<li><p><strong>database_operations</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseOperations" title="azure.mgmt.sql.operations.DatabaseOperations"><em>azure.mgmt.sql.operations.DatabaseOperations</em></a>) – DatabaseOperations operations</p></li>
+<li><p><strong>elastic_pool_operations</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ElasticPoolOperations" title="azure.mgmt.sql.operations.ElasticPoolOperations"><em>azure.mgmt.sql.operations.ElasticPoolOperations</em></a>) – ElasticPoolOperations operations</p></li>
+<li><p><strong>capabilities</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.CapabilitiesOperations" title="azure.mgmt.sql.operations.CapabilitiesOperations"><em>azure.mgmt.sql.operations.CapabilitiesOperations</em></a>) – Capabilities operations</p></li>
+<li><p><strong>database_vulnerability_assessment_scans</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentScansOperations" title="azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentScansOperations"><em>azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentScansOperations</em></a>) – DatabaseVulnerabilityAssessmentScans operations</p></li>
+<li><p><strong>managed_database_vulnerability_assessment_rule_baselines</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations" title="azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations"><em>azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations</em></a>) – ManagedDatabaseVulnerabilityAssessmentRuleBaselines operations</p></li>
+<li><p><strong>managed_database_vulnerability_assessment_scans</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentScansOperations" title="azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentScansOperations"><em>azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentScansOperations</em></a>) – ManagedDatabaseVulnerabilityAssessmentScans operations</p></li>
+<li><p><strong>managed_database_vulnerability_assessments</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentsOperations" title="azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentsOperations"><em>azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentsOperations</em></a>) – ManagedDatabaseVulnerabilityAssessments operations</p></li>
+<li><p><strong>instance_failover_groups</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.InstanceFailoverGroupsOperations" title="azure.mgmt.sql.operations.InstanceFailoverGroupsOperations"><em>azure.mgmt.sql.operations.InstanceFailoverGroupsOperations</em></a>) – InstanceFailoverGroups operations</p></li>
+<li><p><strong>backup_short_term_retention_policies</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.BackupShortTermRetentionPoliciesOperations" title="azure.mgmt.sql.operations.BackupShortTermRetentionPoliciesOperations"><em>azure.mgmt.sql.operations.BackupShortTermRetentionPoliciesOperations</em></a>) – BackupShortTermRetentionPolicies operations</p></li>
+<li><p><strong>tde_certificates</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.TdeCertificatesOperations" title="azure.mgmt.sql.operations.TdeCertificatesOperations"><em>azure.mgmt.sql.operations.TdeCertificatesOperations</em></a>) – TdeCertificates operations</p></li>
+<li><p><strong>managed_instance_tde_certificates</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstanceTdeCertificatesOperations" title="azure.mgmt.sql.operations.ManagedInstanceTdeCertificatesOperations"><em>azure.mgmt.sql.operations.ManagedInstanceTdeCertificatesOperations</em></a>) – ManagedInstanceTdeCertificates operations</p></li>
+<li><p><strong>managed_instance_keys</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstanceKeysOperations" title="azure.mgmt.sql.operations.ManagedInstanceKeysOperations"><em>azure.mgmt.sql.operations.ManagedInstanceKeysOperations</em></a>) – ManagedInstanceKeys operations</p></li>
+<li><p><strong>managed_instance_encryption_protectors</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstanceEncryptionProtectorsOperations" title="azure.mgmt.sql.operations.ManagedInstanceEncryptionProtectorsOperations"><em>azure.mgmt.sql.operations.ManagedInstanceEncryptionProtectorsOperations</em></a>) – ManagedInstanceEncryptionProtectors operations</p></li>
+<li><p><strong>recoverable_managed_databases</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.RecoverableManagedDatabasesOperations" title="azure.mgmt.sql.operations.RecoverableManagedDatabasesOperations"><em>azure.mgmt.sql.operations.RecoverableManagedDatabasesOperations</em></a>) – RecoverableManagedDatabases operations</p></li>
+<li><p><strong>managed_instance_vulnerability_assessments</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstanceVulnerabilityAssessmentsOperations" title="azure.mgmt.sql.operations.ManagedInstanceVulnerabilityAssessmentsOperations"><em>azure.mgmt.sql.operations.ManagedInstanceVulnerabilityAssessmentsOperations</em></a>) – ManagedInstanceVulnerabilityAssessments operations</p></li>
+<li><p><strong>server_vulnerability_assessments</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ServerVulnerabilityAssessmentsOperations" title="azure.mgmt.sql.operations.ServerVulnerabilityAssessmentsOperations"><em>azure.mgmt.sql.operations.ServerVulnerabilityAssessmentsOperations</em></a>) – ServerVulnerabilityAssessments operations</p></li>
+<li><p><strong>managed_database_sensitivity_labels</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedDatabaseSensitivityLabelsOperations" title="azure.mgmt.sql.operations.ManagedDatabaseSensitivityLabelsOperations"><em>azure.mgmt.sql.operations.ManagedDatabaseSensitivityLabelsOperations</em></a>) – ManagedDatabaseSensitivityLabels operations</p></li>
+<li><p><strong>instance_pools</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.InstancePoolsOperations" title="azure.mgmt.sql.operations.InstancePoolsOperations"><em>azure.mgmt.sql.operations.InstancePoolsOperations</em></a>) – InstancePools operations</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.network.html#azure.mgmt.network.NetworkManagementClient.usages" title="azure.mgmt.network.NetworkManagementClient.usages"><strong>usages</strong></a> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.UsagesOperations" title="azure.mgmt.sql.operations.UsagesOperations"><em>azure.mgmt.sql.operations.UsagesOperations</em></a>) – Usages operations</p></li>
+<li><p><strong>managed_instances</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.ManagedInstancesOperations" title="azure.mgmt.sql.operations.ManagedInstancesOperations"><em>azure.mgmt.sql.operations.ManagedInstancesOperations</em></a>) – ManagedInstances operations</p></li>
+<li><p><strong>private_endpoint_connections</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.PrivateEndpointConnectionsOperations" title="azure.mgmt.sql.operations.PrivateEndpointConnectionsOperations"><em>azure.mgmt.sql.operations.PrivateEndpointConnectionsOperations</em></a>) – PrivateEndpointConnections operations</p></li>
+<li><p><strong>private_link_resources</strong> (<a class="reference internal" href="azure.mgmt.sql.operations.html#azure.mgmt.sql.operations.PrivateLinkResourcesOperations" title="azure.mgmt.sql.operations.PrivateLinkResourcesOperations"><em>azure.mgmt.sql.operations.PrivateLinkResourcesOperations</em></a>) – PrivateLinkResources operations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription ID that identifies an Azure
+subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sql.SqlManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.sql.</code><code class="sig-name descname">SqlManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sql/_configuration.html#SqlManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sql.SqlManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for SqlManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription ID that identifies an Azure
+subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.sql.models.html" class="btn btn-neutral float-right" title="azure.mgmt.sql.models module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.signalr.operations.html" class="btn btn-neutral float-left" title="azure.mgmt.signalr.operations module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

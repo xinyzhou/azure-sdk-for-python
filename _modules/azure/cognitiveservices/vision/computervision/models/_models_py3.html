@@ -1,0 +1,1460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cognitiveservices.vision.computervision.models._models_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.cognitiveservices.vision.computervision.models._models_py3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.cognitiveservices.vision.computervision.models._models_py3</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.serialization</span> <span class="k">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">msrest.exceptions</span> <span class="k">import</span> <span class="n">HttpOperationError</span>
+
+
+<div class="viewcode-block" id="AdultInfo"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.AdultInfo">[docs]</a><span class="k">class</span> <span class="nc">AdultInfo</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing whether the image contains adult-oriented content</span>
+<span class="sd">    and/or is racy.</span>
+
+<span class="sd">    :param is_adult_content: A value indicating if the image contains</span>
+<span class="sd">     adult-oriented content.</span>
+<span class="sd">    :type is_adult_content: bool</span>
+<span class="sd">    :param is_racy_content: A value indicating if the image is racy.</span>
+<span class="sd">    :type is_racy_content: bool</span>
+<span class="sd">    :param adult_score: Score from 0 to 1 that indicates how much the content</span>
+<span class="sd">     is considered adult-oriented within the image.</span>
+<span class="sd">    :type adult_score: float</span>
+<span class="sd">    :param racy_score: Score from 0 to 1 that indicates how suggestive is the</span>
+<span class="sd">     image.</span>
+<span class="sd">    :type racy_score: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;is_adult_content&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;isAdultContent&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;is_racy_content&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;isRacyContent&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;adult_score&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;adultScore&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;racy_score&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;racyScore&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">is_adult_content</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_racy_content</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">adult_score</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">racy_score</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AdultInfo</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_adult_content</span> <span class="o">=</span> <span class="n">is_adult_content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_racy_content</span> <span class="o">=</span> <span class="n">is_racy_content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adult_score</span> <span class="o">=</span> <span class="n">adult_score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">racy_score</span> <span class="o">=</span> <span class="n">racy_score</span></div>
+
+
+<div class="viewcode-block" id="AreaOfInterestResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.AreaOfInterestResult">[docs]</a><span class="k">class</span> <span class="nc">AreaOfInterestResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of AreaOfInterest operation.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar area_of_interest: A bounding box for an area of interest inside an</span>
+<span class="sd">     image.</span>
+<span class="sd">    :vartype area_of_interest:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.BoundingRect</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;area_of_interest&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;area_of_interest&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;areaOfInterest&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;BoundingRect&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AreaOfInterestResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area_of_interest</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="BoundingRect"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.BoundingRect">[docs]</a><span class="k">class</span> <span class="nc">BoundingRect</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A bounding box for an area inside an image.</span>
+
+<span class="sd">    :param x: X-coordinate of the top left point of the area, in pixels.</span>
+<span class="sd">    :type x: int</span>
+<span class="sd">    :param y: Y-coordinate of the top left point of the area, in pixels.</span>
+<span class="sd">    :type y: int</span>
+<span class="sd">    :param w: Width measured from the top-left point of the area, in pixels.</span>
+<span class="sd">    :type w: int</span>
+<span class="sd">    :param h: Height measured from the top-left point of the area, in pixels.</span>
+<span class="sd">    :type h: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;w&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">w</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">BoundingRect</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">w</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="n">h</span></div>
+
+
+<div class="viewcode-block" id="Category"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.Category">[docs]</a><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing identified category.</span>
+
+<span class="sd">    :param name: Name of the category.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param score: Scoring of the category.</span>
+<span class="sd">    :type score: float</span>
+<span class="sd">    :param detail: Details of the identified category.</span>
+<span class="sd">    :type detail:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.CategoryDetail</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;score&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;detail&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;detail&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CategoryDetail&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">score</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Category</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detail</span> <span class="o">=</span> <span class="n">detail</span></div>
+
+
+<div class="viewcode-block" id="CategoryDetail"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.CategoryDetail">[docs]</a><span class="k">class</span> <span class="nc">CategoryDetail</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing additional category details.</span>
+
+<span class="sd">    :param celebrities: An array of celebrities if any identified.</span>
+<span class="sd">    :type celebrities:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.CelebritiesModel]</span>
+<span class="sd">    :param landmarks: An array of landmarks if any identified.</span>
+<span class="sd">    :type landmarks:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.LandmarksModel]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;celebrities&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;celebrities&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[CelebritiesModel]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;landmarks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;landmarks&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[LandmarksModel]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">celebrities</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">landmarks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CategoryDetail</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">celebrities</span> <span class="o">=</span> <span class="n">celebrities</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">landmarks</span> <span class="o">=</span> <span class="n">landmarks</span></div>
+
+
+<div class="viewcode-block" id="CelebritiesModel"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.CelebritiesModel">[docs]</a><span class="k">class</span> <span class="nc">CelebritiesModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing possible celebrity identification.</span>
+
+<span class="sd">    :param name: Name of the celebrity.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param confidence: Confidence level for the celebrity recognition as a</span>
+<span class="sd">     value ranging from 0 to 1.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    :param face_rectangle: Location of the identified face in the image.</span>
+<span class="sd">    :type face_rectangle:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.FaceRectangle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;face_rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;faceRectangle&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;FaceRectangle&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">face_rectangle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CelebritiesModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">face_rectangle</span> <span class="o">=</span> <span class="n">face_rectangle</span></div>
+
+
+<div class="viewcode-block" id="CelebrityResults"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.CelebrityResults">[docs]</a><span class="k">class</span> <span class="nc">CelebrityResults</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of domain-specific classifications for the domain of celebrities.</span>
+
+<span class="sd">    :param celebrities: List of celebrities recognized in the image.</span>
+<span class="sd">    :type celebrities:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.CelebritiesModel]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;celebrities&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;celebrities&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[CelebritiesModel]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">celebrities</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CelebrityResults</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">celebrities</span> <span class="o">=</span> <span class="n">celebrities</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="ColorInfo"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ColorInfo">[docs]</a><span class="k">class</span> <span class="nc">ColorInfo</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object providing additional metadata describing color attributes.</span>
+
+<span class="sd">    :param dominant_color_foreground: Possible dominant foreground color.</span>
+<span class="sd">    :type dominant_color_foreground: str</span>
+<span class="sd">    :param dominant_color_background: Possible dominant background color.</span>
+<span class="sd">    :type dominant_color_background: str</span>
+<span class="sd">    :param dominant_colors: An array of possible dominant colors.</span>
+<span class="sd">    :type dominant_colors: list[str]</span>
+<span class="sd">    :param accent_color: Possible accent color.</span>
+<span class="sd">    :type accent_color: str</span>
+<span class="sd">    :param is_bw_img: A value indicating if the image is black and white.</span>
+<span class="sd">    :type is_bw_img: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;dominant_color_foreground&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;dominantColorForeground&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;dominant_color_background&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;dominantColorBackground&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;dominant_colors&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;dominantColors&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;accent_color&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;accentColor&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;is_bw_img&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;isBWImg&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dominant_color_foreground</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dominant_color_background</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dominant_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">accent_color</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_bw_img</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ColorInfo</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dominant_color_foreground</span> <span class="o">=</span> <span class="n">dominant_color_foreground</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dominant_color_background</span> <span class="o">=</span> <span class="n">dominant_color_background</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dominant_colors</span> <span class="o">=</span> <span class="n">dominant_colors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accent_color</span> <span class="o">=</span> <span class="n">accent_color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_bw_img</span> <span class="o">=</span> <span class="n">is_bw_img</span></div>
+
+
+<div class="viewcode-block" id="ComputerVisionError"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ComputerVisionError">[docs]</a><span class="k">class</span> <span class="nc">ComputerVisionError</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Details about the API request error.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param code: Required. The error code.</span>
+<span class="sd">    :type code: object</span>
+<span class="sd">    :param message: Required. A message explaining the error reported by the</span>
+<span class="sd">     service.</span>
+<span class="sd">    :type message: str</span>
+<span class="sd">    :param request_id: A unique request identifier.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ComputerVisionError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span></div>
+
+
+<div class="viewcode-block" id="ComputerVisionErrorException"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ComputerVisionErrorException">[docs]</a><span class="k">class</span> <span class="nc">ComputerVisionErrorException</span><span class="p">(</span><span class="n">HttpOperationError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Server responsed with exception of type: &#39;ComputerVisionError&#39;.</span>
+
+<span class="sd">    :param deserialize: A deserializer</span>
+<span class="sd">    :param response: Server response to be deserialized.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">ComputerVisionErrorException</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;ComputerVisionError&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DetectedBrand"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.DetectedBrand">[docs]</a><span class="k">class</span> <span class="nc">DetectedBrand</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A brand detected in an image.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar name: Label for the brand.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :ivar confidence: Confidence score of having observed the brand in the</span>
+<span class="sd">     image, as a value ranging from 0 to 1.</span>
+<span class="sd">    :vartype confidence: float</span>
+<span class="sd">    :ivar rectangle: Approximate location of the detected brand.</span>
+<span class="sd">    :vartype rectangle:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.BoundingRect</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;rectangle&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;BoundingRect&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DetectedBrand</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rectangle</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DetectedObject"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.DetectedObject">[docs]</a><span class="k">class</span> <span class="nc">DetectedObject</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object detected in an image.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar rectangle: Approximate location of the detected object.</span>
+<span class="sd">    :vartype rectangle:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.BoundingRect</span>
+<span class="sd">    :param object_property: Label for the object.</span>
+<span class="sd">    :type object_property: str</span>
+<span class="sd">    :param confidence: Confidence score of having observed the object in the</span>
+<span class="sd">     image, as a value ranging from 0 to 1.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    :param parent: The parent object, from a taxonomy perspective.</span>
+<span class="sd">     The parent object is a more generic form of this object.  For example, a</span>
+<span class="sd">     &#39;bulldog&#39; would have a parent of &#39;dog&#39;.</span>
+<span class="sd">    :type parent:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ObjectHierarchy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;rectangle&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;BoundingRect&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;object_property&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ObjectHierarchy&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">object_property</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DetectedObject</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rectangle</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object_property</span> <span class="o">=</span> <span class="n">object_property</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span></div>
+
+
+<div class="viewcode-block" id="DetectResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.DetectResult">[docs]</a><span class="k">class</span> <span class="nc">DetectResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of a DetectImage call.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar objects: An array of detected objects.</span>
+<span class="sd">    :vartype objects:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.DetectedObject]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;objects&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;objects&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;objects&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[DetectedObject]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DetectResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">objects</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="DomainModelResults"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.DomainModelResults">[docs]</a><span class="k">class</span> <span class="nc">DomainModelResults</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of image analysis using a specific domain model including additional</span>
+<span class="sd">    metadata.</span>
+
+<span class="sd">    :param result: Model-specific response.</span>
+<span class="sd">    :type result: object</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;result&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DomainModelResults</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">result</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="FaceDescription"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.FaceDescription">[docs]</a><span class="k">class</span> <span class="nc">FaceDescription</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing a face identified in the image.</span>
+
+<span class="sd">    :param age: Possible age of the face.</span>
+<span class="sd">    :type age: int</span>
+<span class="sd">    :param gender: Possible gender of the face. Possible values include:</span>
+<span class="sd">     &#39;Male&#39;, &#39;Female&#39;</span>
+<span class="sd">    :type gender: str or</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.Gender</span>
+<span class="sd">    :param face_rectangle: Rectangle in the image containing the identified</span>
+<span class="sd">     face.</span>
+<span class="sd">    :type face_rectangle:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.FaceRectangle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;gender&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Gender&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;face_rectangle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;faceRectangle&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;FaceRectangle&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">face_rectangle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FaceDescription</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gender</span> <span class="o">=</span> <span class="n">gender</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">face_rectangle</span> <span class="o">=</span> <span class="n">face_rectangle</span></div>
+
+
+<div class="viewcode-block" id="FaceRectangle"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.FaceRectangle">[docs]</a><span class="k">class</span> <span class="nc">FaceRectangle</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing face rectangle.</span>
+
+<span class="sd">    :param left: X-coordinate of the top left point of the face, in pixels.</span>
+<span class="sd">    :type left: int</span>
+<span class="sd">    :param top: Y-coordinate of the top left point of the face, in pixels.</span>
+<span class="sd">    :type top: int</span>
+<span class="sd">    :param width: Width measured from the top-left point of the face, in</span>
+<span class="sd">     pixels.</span>
+<span class="sd">    :type width: int</span>
+<span class="sd">    :param height: Height measured from the top-left point of the face, in</span>
+<span class="sd">     pixels.</span>
+<span class="sd">    :type height: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">top</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FaceRectangle</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="n">top</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span></div>
+
+
+<div class="viewcode-block" id="ImageAnalysis"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageAnalysis">[docs]</a><span class="k">class</span> <span class="nc">ImageAnalysis</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of AnalyzeImage operation.</span>
+
+<span class="sd">    :param categories: An array indicating identified categories.</span>
+<span class="sd">    :type categories:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.Category]</span>
+<span class="sd">    :param adult: An object describing whether the image contains</span>
+<span class="sd">     adult-oriented content and/or is racy.</span>
+<span class="sd">    :type adult:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.AdultInfo</span>
+<span class="sd">    :param color: An object providing additional metadata describing color</span>
+<span class="sd">     attributes.</span>
+<span class="sd">    :type color:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ColorInfo</span>
+<span class="sd">    :param image_type: An object providing possible image types and matching</span>
+<span class="sd">     confidence levels.</span>
+<span class="sd">    :type image_type:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageType</span>
+<span class="sd">    :param tags: A list of tags with confidence level.</span>
+<span class="sd">    :type tags:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.ImageTag]</span>
+<span class="sd">    :param description: A collection of content tags, along with a list of</span>
+<span class="sd">     captions sorted by confidence level, and image metadata.</span>
+<span class="sd">    :type description:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails</span>
+<span class="sd">    :param faces: An array of possible faces within the image.</span>
+<span class="sd">    :type faces:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.FaceDescription]</span>
+<span class="sd">    :param objects: Array of objects describing what was detected in the</span>
+<span class="sd">     image.</span>
+<span class="sd">    :type objects:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.DetectedObject]</span>
+<span class="sd">    :param brands: Array of brands detected in the image.</span>
+<span class="sd">    :type brands:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.DetectedBrand]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;categories&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[Category]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;adult&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AdultInfo&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ColorInfo&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;image_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;imageType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageType&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ImageTag]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageDescriptionDetails&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;faces&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;faces&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[FaceDescription]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;objects&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;objects&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[DetectedObject]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;brands&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;brands&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[DetectedBrand]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">adult</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">image_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">faces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">objects</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">brands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageAnalysis</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="n">categories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adult</span> <span class="o">=</span> <span class="n">adult</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_type</span> <span class="o">=</span> <span class="n">image_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">objects</span> <span class="o">=</span> <span class="n">objects</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brands</span> <span class="o">=</span> <span class="n">brands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="ImageCaption"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageCaption">[docs]</a><span class="k">class</span> <span class="nc">ImageCaption</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An image caption, i.e. a brief description of what the image depicts.</span>
+
+<span class="sd">    :param text: The text of the caption.</span>
+<span class="sd">    :type text: str</span>
+<span class="sd">    :param confidence: The level of confidence the service has in the caption.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageCaption</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span></div>
+
+
+<div class="viewcode-block" id="ImageDescription"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageDescription">[docs]</a><span class="k">class</span> <span class="nc">ImageDescription</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A collection of content tags, along with a list of captions sorted by</span>
+<span class="sd">    confidence level, and image metadata.</span>
+
+<span class="sd">    :param tags: A collection of image tags.</span>
+<span class="sd">    :type tags: list[str]</span>
+<span class="sd">    :param captions: A list of captions, sorted by confidence level.</span>
+<span class="sd">    :type captions:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.ImageCaption]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;description.tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;captions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;description.captions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ImageCaption]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">captions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageDescription</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">captions</span> <span class="o">=</span> <span class="n">captions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="ImageDescriptionDetails"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails">[docs]</a><span class="k">class</span> <span class="nc">ImageDescriptionDetails</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A collection of content tags, along with a list of captions sorted by</span>
+<span class="sd">    confidence level, and image metadata.</span>
+
+<span class="sd">    :param tags: A collection of image tags.</span>
+<span class="sd">    :type tags: list[str]</span>
+<span class="sd">    :param captions: A list of captions, sorted by confidence level.</span>
+<span class="sd">    :type captions:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.ImageCaption]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;captions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;captions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ImageCaption]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">captions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageDescriptionDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">captions</span> <span class="o">=</span> <span class="n">captions</span></div>
+
+
+<div class="viewcode-block" id="ImageMetadata"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageMetadata">[docs]</a><span class="k">class</span> <span class="nc">ImageMetadata</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Image metadata.</span>
+
+<span class="sd">    :param width: Image width, in pixels.</span>
+<span class="sd">    :type width: int</span>
+<span class="sd">    :param height: Image height, in pixels.</span>
+<span class="sd">    :type height: int</span>
+<span class="sd">    :param format: Image format.</span>
+<span class="sd">    :type format: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;format&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageMetadata</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="nb">format</span></div>
+
+
+<div class="viewcode-block" id="ImageTag"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageTag">[docs]</a><span class="k">class</span> <span class="nc">ImageTag</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An entity observation in the image, along with the confidence score.</span>
+
+<span class="sd">    :param name: Name of the entity.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param confidence: The level of confidence that the entity was observed.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    :param hint: Optional hint/details for this tag.</span>
+<span class="sd">    :type hint: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;hint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;hint&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageTag</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hint</span> <span class="o">=</span> <span class="n">hint</span></div>
+
+
+<div class="viewcode-block" id="ImageType"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageType">[docs]</a><span class="k">class</span> <span class="nc">ImageType</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object providing possible image types and matching confidence levels.</span>
+
+<span class="sd">    :param clip_art_type: Confidence level that the image is a clip art.</span>
+<span class="sd">    :type clip_art_type: int</span>
+<span class="sd">    :param line_drawing_type: Confidence level that the image is a line</span>
+<span class="sd">     drawing.</span>
+<span class="sd">    :type line_drawing_type: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;clip_art_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;clipArtType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;line_drawing_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;lineDrawingType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">clip_art_type</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">line_drawing_type</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageType</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clip_art_type</span> <span class="o">=</span> <span class="n">clip_art_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_drawing_type</span> <span class="o">=</span> <span class="n">line_drawing_type</span></div>
+
+
+<div class="viewcode-block" id="ImageUrl"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ImageUrl">[docs]</a><span class="k">class</span> <span class="nc">ImageUrl</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;ImageUrl.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param url: Required. Publicly reachable URL of an image.</span>
+<span class="sd">    :type url: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageUrl</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span></div>
+
+
+<div class="viewcode-block" id="LandmarkResults"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.LandmarkResults">[docs]</a><span class="k">class</span> <span class="nc">LandmarkResults</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of domain-specific classifications for the domain of landmarks.</span>
+
+<span class="sd">    :param landmarks: List of landmarks recognized in the image.</span>
+<span class="sd">    :type landmarks:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.LandmarksModel]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;landmarks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;landmarks&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[LandmarksModel]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">landmarks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LandmarkResults</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">landmarks</span> <span class="o">=</span> <span class="n">landmarks</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="LandmarksModel"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.LandmarksModel">[docs]</a><span class="k">class</span> <span class="nc">LandmarksModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A landmark recognized in the image.</span>
+
+<span class="sd">    :param name: Name of the landmark.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param confidence: Confidence level for the landmark recognition as a</span>
+<span class="sd">     value ranging from 0 to 1.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LandmarksModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span></div>
+
+
+<div class="viewcode-block" id="Line"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.Line">[docs]</a><span class="k">class</span> <span class="nc">Line</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object representing a recognized text line.</span>
+
+<span class="sd">    :param bounding_box: Bounding box of a recognized line.</span>
+<span class="sd">    :type bounding_box: list[float]</span>
+<span class="sd">    :param text: The text content of the line.</span>
+<span class="sd">    :type text: str</span>
+<span class="sd">    :param words: List of words in the text line.</span>
+<span class="sd">    :type words:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.Word]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;boundingBox&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[float]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;words&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;words&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[Word]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bounding_box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Line</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounding_box</span> <span class="o">=</span> <span class="n">bounding_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">words</span> <span class="o">=</span> <span class="n">words</span></div>
+
+
+<div class="viewcode-block" id="ListModelsResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ListModelsResult">[docs]</a><span class="k">class</span> <span class="nc">ListModelsResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of the List Domain Models operation.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar models_property: An array of supported models.</span>
+<span class="sd">    :vartype models_property:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.ModelDescription]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;models_property&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;models_property&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;models&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ModelDescription]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ListModelsResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">models_property</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="ModelDescription"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ModelDescription">[docs]</a><span class="k">class</span> <span class="nc">ModelDescription</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing supported model by name and categories.</span>
+
+<span class="sd">    :param name: The name of the model.</span>
+<span class="sd">    :type name: str</span>
+<span class="sd">    :param categories: Categories of the model.</span>
+<span class="sd">    :type categories: list[str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;categories&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ModelDescription</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="n">categories</span></div>
+
+
+<div class="viewcode-block" id="ObjectHierarchy"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ObjectHierarchy">[docs]</a><span class="k">class</span> <span class="nc">ObjectHierarchy</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object detected inside an image.</span>
+
+<span class="sd">    :param object_property: Label for the object.</span>
+<span class="sd">    :type object_property: str</span>
+<span class="sd">    :param confidence: Confidence score of having observed the object in the</span>
+<span class="sd">     image, as a value ranging from 0 to 1.</span>
+<span class="sd">    :type confidence: float</span>
+<span class="sd">    :param parent: The parent object, from a taxonomy perspective.</span>
+<span class="sd">     The parent object is a more generic form of this object.  For example, a</span>
+<span class="sd">     &#39;bulldog&#39; would have a parent of &#39;dog&#39;.</span>
+<span class="sd">    :type parent:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ObjectHierarchy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;object_property&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ObjectHierarchy&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">object_property</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">confidence</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ObjectHierarchy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object_property</span> <span class="o">=</span> <span class="n">object_property</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span></div>
+
+
+<div class="viewcode-block" id="OcrLine"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.OcrLine">[docs]</a><span class="k">class</span> <span class="nc">OcrLine</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object describing a single recognized line of text.</span>
+
+<span class="sd">    :param bounding_box: Bounding box of a recognized line. The four integers</span>
+<span class="sd">     represent the x-coordinate of the left edge, the y-coordinate of the top</span>
+<span class="sd">     edge, width, and height of the bounding box, in the coordinate system of</span>
+<span class="sd">     the input image, after it has been rotated around its center according to</span>
+<span class="sd">     the detected text angle (see textAngle property), with the origin at the</span>
+<span class="sd">     top-left corner, and the y-axis pointing down.</span>
+<span class="sd">    :type bounding_box: str</span>
+<span class="sd">    :param words: An array of objects, where each object represents a</span>
+<span class="sd">     recognized word.</span>
+<span class="sd">    :type words:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.OcrWord]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;boundingBox&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;words&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;words&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[OcrWord]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bounding_box</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OcrLine</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounding_box</span> <span class="o">=</span> <span class="n">bounding_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">words</span> <span class="o">=</span> <span class="n">words</span></div>
+
+
+<div class="viewcode-block" id="OcrRegion"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.OcrRegion">[docs]</a><span class="k">class</span> <span class="nc">OcrRegion</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A region consists of multiple lines (e.g. a column of text in a</span>
+<span class="sd">    multi-column document).</span>
+
+<span class="sd">    :param bounding_box: Bounding box of a recognized region. The four</span>
+<span class="sd">     integers represent the x-coordinate of the left edge, the y-coordinate of</span>
+<span class="sd">     the top edge, width, and height of the bounding box, in the coordinate</span>
+<span class="sd">     system of the input image, after it has been rotated around its center</span>
+<span class="sd">     according to the detected text angle (see textAngle property), with the</span>
+<span class="sd">     origin at the top-left corner, and the y-axis pointing down.</span>
+<span class="sd">    :type bounding_box: str</span>
+<span class="sd">    :param lines: An array of recognized lines of text.</span>
+<span class="sd">    :type lines:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.OcrLine]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;boundingBox&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;lines&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[OcrLine]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bounding_box</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OcrRegion</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounding_box</span> <span class="o">=</span> <span class="n">bounding_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lines</span> <span class="o">=</span> <span class="n">lines</span></div>
+
+
+<div class="viewcode-block" id="OcrResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.OcrResult">[docs]</a><span class="k">class</span> <span class="nc">OcrResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;OcrResult.</span>
+
+<span class="sd">    :param language: The BCP-47 language code of the text in the image.</span>
+<span class="sd">    :type language: str</span>
+<span class="sd">    :param text_angle: The angle, in degrees, of the detected text with</span>
+<span class="sd">     respect to the closest horizontal or vertical direction. After rotating</span>
+<span class="sd">     the input image clockwise by this angle, the recognized text lines become</span>
+<span class="sd">     horizontal or vertical. In combination with the orientation property it</span>
+<span class="sd">     can be used to overlay recognition results correctly on the original</span>
+<span class="sd">     image, by rotating either the original image or recognition results by a</span>
+<span class="sd">     suitable angle around the center of the original image. If the angle</span>
+<span class="sd">     cannot be confidently detected, this property is not present. If the image</span>
+<span class="sd">     contains text at different angles, only part of the text will be</span>
+<span class="sd">     recognized correctly.</span>
+<span class="sd">    :type text_angle: float</span>
+<span class="sd">    :param orientation: Orientation of the text recognized in the image. The</span>
+<span class="sd">     value (up, down, left, or right) refers to the direction that the top of</span>
+<span class="sd">     the recognized text is facing, after the image has been rotated around its</span>
+<span class="sd">     center according to the detected text angle (see textAngle property).</span>
+<span class="sd">    :type orientation: str</span>
+<span class="sd">    :param regions: An array of objects, where each object represents a region</span>
+<span class="sd">     of recognized text.</span>
+<span class="sd">    :type regions:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.OcrRegion]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;language&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;text_angle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;textAngle&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;orientation&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;regions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;regions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[OcrRegion]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">text_angle</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OcrResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_angle</span> <span class="o">=</span> <span class="n">text_angle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">orientation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regions</span> <span class="o">=</span> <span class="n">regions</span></div>
+
+
+<div class="viewcode-block" id="OcrWord"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.OcrWord">[docs]</a><span class="k">class</span> <span class="nc">OcrWord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Information on a recognized word.</span>
+
+<span class="sd">    :param bounding_box: Bounding box of a recognized word. The four integers</span>
+<span class="sd">     represent the x-coordinate of the left edge, the y-coordinate of the top</span>
+<span class="sd">     edge, width, and height of the bounding box, in the coordinate system of</span>
+<span class="sd">     the input image, after it has been rotated around its center according to</span>
+<span class="sd">     the detected text angle (see textAngle property), with the origin at the</span>
+<span class="sd">     top-left corner, and the y-axis pointing down.</span>
+<span class="sd">    :type bounding_box: str</span>
+<span class="sd">    :param text: String value of a recognized word.</span>
+<span class="sd">    :type text: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;boundingBox&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bounding_box</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OcrWord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounding_box</span> <span class="o">=</span> <span class="n">bounding_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span></div>
+
+
+<div class="viewcode-block" id="ReadOperationResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.ReadOperationResult">[docs]</a><span class="k">class</span> <span class="nc">ReadOperationResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;OCR result of the read operation.</span>
+
+<span class="sd">    :param status: Status of the read operation. Possible values include:</span>
+<span class="sd">     &#39;NotStarted&#39;, &#39;Running&#39;, &#39;Failed&#39;, &#39;Succeeded&#39;</span>
+<span class="sd">    :type status: str or</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes</span>
+<span class="sd">    :param recognition_results: An array of text recognition result of the</span>
+<span class="sd">     read operation.</span>
+<span class="sd">    :type recognition_results:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.TextRecognitionResult]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TextOperationStatusCodes&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;recognition_results&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;recognitionResults&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[TextRecognitionResult]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recognition_results</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ReadOperationResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recognition_results</span> <span class="o">=</span> <span class="n">recognition_results</span></div>
+
+
+<div class="viewcode-block" id="TagResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.TagResult">[docs]</a><span class="k">class</span> <span class="nc">TagResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The results of a image tag operation, including any tags and image</span>
+<span class="sd">    metadata.</span>
+
+<span class="sd">    :param tags: A list of tags with confidence level.</span>
+<span class="sd">    :type tags:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.ImageTag]</span>
+<span class="sd">    :param request_id: Id of the REST API request.</span>
+<span class="sd">    :type request_id: str</span>
+<span class="sd">    :param metadata:</span>
+<span class="sd">    :type metadata:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.ImageMetadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ImageTag]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;requestId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ImageMetadata&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TagResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">request_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+
+<div class="viewcode-block" id="TextOperationResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.TextOperationResult">[docs]</a><span class="k">class</span> <span class="nc">TextOperationResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Result of recognition text operation.</span>
+
+<span class="sd">    :param status: Status of the text operation. Possible values include:</span>
+<span class="sd">     &#39;NotStarted&#39;, &#39;Running&#39;, &#39;Failed&#39;, &#39;Succeeded&#39;</span>
+<span class="sd">    :type status: str or</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes</span>
+<span class="sd">    :param recognition_result: Text recognition result of the text operation.</span>
+<span class="sd">    :type recognition_result:</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.TextRecognitionResult</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TextOperationStatusCodes&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;recognition_result&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;recognitionResult&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TextRecognitionResult&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recognition_result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TextOperationResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recognition_result</span> <span class="o">=</span> <span class="n">recognition_result</span></div>
+
+
+<div class="viewcode-block" id="TextRecognitionResult"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult">[docs]</a><span class="k">class</span> <span class="nc">TextRecognitionResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object representing a recognized text region.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param page: The 1-based page number of the recognition result.</span>
+<span class="sd">    :type page: int</span>
+<span class="sd">    :param clockwise_orientation: The orientation of the image in degrees in</span>
+<span class="sd">     the clockwise direction. Range between [0, 360).</span>
+<span class="sd">    :type clockwise_orientation: float</span>
+<span class="sd">    :param width: The width of the image in pixels or the PDF in inches.</span>
+<span class="sd">    :type width: float</span>
+<span class="sd">    :param height: The height of the image in pixels or the PDF in inches.</span>
+<span class="sd">    :type height: float</span>
+<span class="sd">    :param unit: The unit used in the Width, Height and BoundingBox. For</span>
+<span class="sd">     images, the unit is &#39;pixel&#39;. For PDF, the unit is &#39;inch&#39;. Possible values</span>
+<span class="sd">     include: &#39;pixel&#39;, &#39;inch&#39;</span>
+<span class="sd">    :type unit: str or</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit</span>
+<span class="sd">    :param lines: Required. A list of recognized text lines.</span>
+<span class="sd">    :type lines:</span>
+<span class="sd">     list[~azure.cognitiveservices.vision.computervision.models.Line]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;lines&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;page&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;clockwise_orientation&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;clockwiseOrientation&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;unit&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TextRecognitionResultDimensionUnit&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;lines&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[Line]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">page</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clockwise_orientation</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TextRecognitionResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">page</span> <span class="o">=</span> <span class="n">page</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clockwise_orientation</span> <span class="o">=</span> <span class="n">clockwise_orientation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lines</span> <span class="o">=</span> <span class="n">lines</span></div>
+
+
+<div class="viewcode-block" id="Word"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.Word">[docs]</a><span class="k">class</span> <span class="nc">Word</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An object representing a recognized word.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param bounding_box: Required. Bounding box of a recognized word.</span>
+<span class="sd">    :type bounding_box: list[float]</span>
+<span class="sd">    :param text: Required. The text content of the word.</span>
+<span class="sd">    :type text: str</span>
+<span class="sd">    :param confidence: Qualitative confidence measure. Possible values</span>
+<span class="sd">     include: &#39;High&#39;, &#39;Low&#39;</span>
+<span class="sd">    :type confidence: str or</span>
+<span class="sd">     ~azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;bounding_box&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;boundingBox&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[float]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TextRecognitionResultConfidenceClass&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">bounding_box</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">confidence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Word</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bounding_box</span> <span class="o">=</span> <span class="n">bounding_box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">confidence</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

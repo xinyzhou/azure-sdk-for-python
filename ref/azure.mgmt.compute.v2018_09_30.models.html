@@ -1,0 +1,962 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.compute.v2018_09_30.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.compute.v2018_09_30.operations module" href="azure.mgmt.compute.v2018_09_30.operations.html" />
+    <link rel="prev" title="azure.mgmt.compute.v2018_09_30 package" href="azure.mgmt.compute.v2018_09_30.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.compute.html#module-azure.mgmt.compute">Module contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.compute.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2019_04_01.html">azure.mgmt.compute.v2019_04_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2019_03_01.html">azure.mgmt.compute.v2019_03_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2018_10_01.html">azure.mgmt.compute.v2018_10_01 package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="azure.mgmt.compute.v2018_09_30.html">azure.mgmt.compute.v2018_09_30 package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="azure.mgmt.compute.v2018_09_30.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="azure.mgmt.compute.v2018_09_30.html#module-azure.mgmt.compute.v2018_09_30">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2018_06_01.html">azure.mgmt.compute.v2018_06_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2018_04_01.html">azure.mgmt.compute.v2018_04_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2017_12_01.html">azure.mgmt.compute.v2017_12_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2017_09_01.html">azure.mgmt.compute.v2017_09_01 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2017_03_30.html">azure.mgmt.compute.v2017_03_30 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2016_04_30_preview.html">azure.mgmt.compute.v2016_04_30_preview package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2016_03_30.html">azure.mgmt.compute.v2016_03_30 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.compute.v2015_06_15.html">azure.mgmt.compute.v2015_06_15 package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.compute.html">azure.mgmt.compute package</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.compute.v2018_09_30.html">azure.mgmt.compute.v2018_09_30 package</a> &raquo;</li>
+        
+      <li>azure.mgmt.compute.v2018_09_30.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.compute.v2018_09_30.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.compute.v2018_09_30.models">
+<span id="azure-mgmt-compute-v2018-09-30-models-module"></span><h1>azure.mgmt.compute.v2018_09_30.models module<a class="headerlink" href="#module-azure.mgmt.compute.v2018_09_30.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.AccessUri">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">AccessUri</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#AccessUri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessUri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A disk access SAS uri.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>access_sas</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A SAS uri for accessing a disk.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.CreationData">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">CreationData</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">create_option</em>, <em class="sig-param">storage_account_id: str = None</em>, <em class="sig-param">image_reference=None</em>, <em class="sig-param">source_uri: str = None</em>, <em class="sig-param">source_resource_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#CreationData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.CreationData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data used when creating a disk.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>create_option</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption" title="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption"><em>DiskCreateOption</em></a>) – Required. This enumerates the possible sources of a
+disk’s creation. Possible values include: ‘Empty’, ‘Attach’, ‘FromImage’,
+‘Import’, ‘Copy’, ‘Restore’, ‘Upload’</p></li>
+<li><p><strong>storage_account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If createOption is Import, the Azure Resource
+Manager identifier of the storage account containing the blob to import as
+a disk. Required only if the blob is in a different subscription</p></li>
+<li><p><strong>image_reference</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.ImageDiskReference" title="azure.mgmt.compute.v2018_09_30.models.ImageDiskReference"><em>ImageDiskReference</em></a>) – Disk source information.</p></li>
+<li><p><strong>source_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If createOption is Import, this is the URI of a blob to
+be imported into a managed disk.</p></li>
+<li><p><strong>source_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If createOption is Copy, this is the ARM id of
+the source snapshot or disk.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.Disk">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Disk</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_data</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">hyper_vgeneration=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">disk_iops_read_write: int = None</em>, <em class="sig-param">disk_mbps_read_write: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#Disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.compute.v2018_09_30.models._models_py3.Resource</span></code></p>
+<p>Disk resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>managed_by</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A relative URI containing the ID of the VM that has the
+disk attached.</p></li>
+<li><p><strong>time_created</strong> (<em>datetime</em>) – The time when the disk was created.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The disk provisioning state.</p></li>
+<li><p><strong>disk_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.DiskState" title="azure.mgmt.compute.v2018_09_30.models.DiskState"><em>DiskState</em></a>) – The state of the disk. Possible values include:
+‘Unattached’, ‘Attached’, ‘Reserved’, ‘ActiveSAS’, ‘ReadyToUpload’,
+‘ActiveUpload’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.DiskSku" title="azure.mgmt.compute.v2018_09_30.models.DiskSku"><em>DiskSku</em></a>) – </p></li>
+<li><p><strong>zones</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The Logical zone list for Disk.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes"><em>OperatingSystemTypes</em></a>) – The Operating System type. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>hyper_vgeneration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration" title="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration"><em>HyperVGeneration</em></a>) – The hypervisor generation of the Virtual
+Machine. Applicable to OS disks only. Possible values include: ‘V1’, ‘V2’</p></li>
+<li><p><strong>creation_data</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.CreationData" title="azure.mgmt.compute.v2018_09_30.models.CreationData"><em>CreationData</em></a>) – Required. Disk source information. CreationData
+information cannot be changed after the disk has been created.</p></li>
+<li><p><strong>disk_size_gb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If creationData.createOption is Empty, this field is
+mandatory and it indicates the size of the VHD to create. If this field is
+present for updates or creation with other options, it indicates a resize.
+Resizes are only allowed if the disk is not attached to a running VM, and
+can only increase the disk’s size.</p></li>
+<li><p><strong>encryption_settings_collection</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection"><em>EncryptionSettingsCollection</em></a>) – Encryption settings collection used
+for Azure Disk Encryption, can contain multiple encryption settings per
+disk or snapshot.</p></li>
+<li><p><strong>disk_iops_read_write</strong> (<em>long</em>) – The number of IOPS allowed for this disk;
+only settable for UltraSSD disks. One operation can transfer between 4k
+and 256k bytes.</p></li>
+<li><p><strong>disk_mbps_read_write</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The bandwidth allowed for this disk; only
+settable for UltraSSD disks. MBps means millions of bytes per second - MB
+here uses the ISO notation, of powers of 10.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskSku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#DiskSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskSku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or
+UltraSSD_LRS.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes" title="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes"><em>DiskStorageAccountTypes</em></a>) – The sku name. Possible values include: ‘Standard_LRS’,
+‘Premium_LRS’, ‘StandardSSD_LRS’, ‘UltraSSD_LRS’</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.powerbiembedded.models.html#azure.mgmt.powerbiembedded.models.AzureSku.tier" title="azure.mgmt.powerbiembedded.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The sku tier. Default value: “Standard” .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskUpdate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">disk_iops_read_write: int = None</em>, <em class="sig-param">disk_mbps_read_write: int = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#DiskUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Disk update resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes"><em>OperatingSystemTypes</em></a>) – the Operating System type. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>disk_size_gb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If creationData.createOption is Empty, this field is
+mandatory and it indicates the size of the VHD to create. If this field is
+present for updates or creation with other options, it indicates a resize.
+Resizes are only allowed if the disk is not attached to a running VM, and
+can only increase the disk’s size.</p></li>
+<li><p><strong>encryption_settings_collection</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection"><em>EncryptionSettingsCollection</em></a>) – Encryption settings collection used
+be Azure Disk Encryption, can contain multiple encryption settings per
+disk or snapshot.</p></li>
+<li><p><strong>disk_iops_read_write</strong> (<em>long</em>) – The number of IOPS allowed for this disk;
+only settable for UltraSSD disks. One operation can transfer between 4k
+and 256k bytes.</p></li>
+<li><p><strong>disk_mbps_read_write</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The bandwidth allowed for this disk; only
+settable for UltraSSD disks. MBps means millions of bytes per second - MB
+here uses the ISO notation, of powers of 10.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.DiskSku" title="azure.mgmt.compute.v2018_09_30.models.DiskSku"><em>DiskSku</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">EncryptionSettingsCollection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#EncryptionSettingsCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encryption settings for disk or snapshot.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Set this flag to true and provide
+DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set
+this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to
+disable encryption. If EncryptionSettings is null in the request object,
+the existing settings remain unchanged.</p></li>
+<li><p><strong>encryption_settings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement" title="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement"><em>EncryptionSettingsElement</em></a><em>]</em>) – A collection of encryption settings, one for
+each disk volume.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">EncryptionSettingsElement</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">disk_encryption_key=None</em>, <em class="sig-param">key_encryption_key=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#EncryptionSettingsElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encryption settings for one disk volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>disk_encryption_key</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference" title="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference"><em>KeyVaultAndSecretReference</em></a>) – Key Vault Secret Url and vault id of the disk
+encryption key</p></li>
+<li><p><strong>key_encryption_key</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference" title="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference"><em>KeyVaultAndKeyReference</em></a>) – Key Vault Key Url and vault id of the key
+encryption key. KeyEncryptionKey is optional and when provided is used to
+unwrap the disk encryption key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.GrantAccessData">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">GrantAccessData</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">access</em>, <em class="sig-param">duration_in_seconds: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#GrantAccessData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.GrantAccessData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data used for requesting a SAS.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel" title="azure.mgmt.compute.v2018_09_30.models.AccessLevel"><em>AccessLevel</em></a>) – Required. Possible values include: ‘None’, ‘Read’, ‘Write’</p></li>
+<li><p><strong>duration_in_seconds</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Time duration in seconds until the
+SAS access expires.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.ImageDiskReference">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">ImageDiskReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">lun: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#ImageDiskReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.ImageDiskReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The source image used for creating the disk.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A relative uri containing either a Platform Image
+Repository or user image reference.</p></li>
+<li><p><strong>lun</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If the disk is created from an image’s data disk, this is an
+index that indicates which of the data disks in the image to use. For OS
+disks, this field is null.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">KeyVaultAndKeyReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_vault</em>, <em class="sig-param">key_url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#KeyVaultAndKeyReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Key Vault Key Url and vault id of KeK, KeK is optional and when provided is
+used to unwrap the encryptionKey.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_vault</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.SourceVault" title="azure.mgmt.compute.v2018_09_30.models.SourceVault"><em>SourceVault</em></a>) – Required. Resource id of the KeyVault containing the
+key or secret</p></li>
+<li><p><strong>key_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Url pointing to a key or secret in KeyVault</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">KeyVaultAndSecretReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_vault</em>, <em class="sig-param">secret_url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#KeyVaultAndSecretReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Key Vault Secret Url and vault id of the encryption key .</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_vault</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.SourceVault" title="azure.mgmt.compute.v2018_09_30.models.SourceVault"><em>SourceVault</em></a>) – Required. Resource id of the KeyVault containing the
+key or secret</p></li>
+<li><p><strong>secret_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Url pointing to a key or secret in KeyVault</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.Snapshot">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_data</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">hyper_vgeneration=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.compute.v2018_09_30.models._models_py3.Resource</span></code></p>
+<p>Snapshot resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>managed_by</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unused. Always Null.</p></li>
+<li><p><strong>time_created</strong> (<em>datetime</em>) – The time when the disk was created.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The disk provisioning state.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotSku" title="azure.mgmt.compute.v2018_09_30.models.SnapshotSku"><em>SnapshotSku</em></a>) – </p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes"><em>OperatingSystemTypes</em></a>) – The Operating System type. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>hyper_vgeneration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration" title="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration"><em>HyperVGeneration</em></a>) – The hypervisor generation of the Virtual
+Machine. Applicable to OS disks only. Possible values include: ‘V1’, ‘V2’</p></li>
+<li><p><strong>creation_data</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.CreationData" title="azure.mgmt.compute.v2018_09_30.models.CreationData"><em>CreationData</em></a>) – Required. Disk source information. CreationData
+information cannot be changed after the disk has been created.</p></li>
+<li><p><strong>disk_size_gb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If creationData.createOption is Empty, this field is
+mandatory and it indicates the size of the VHD to create. If this field is
+present for updates or creation with other options, it indicates a resize.
+Resizes are only allowed if the disk is not attached to a running VM, and
+can only increase the disk’s size.</p></li>
+<li><p><strong>encryption_settings_collection</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection"><em>EncryptionSettingsCollection</em></a>) – Encryption settings collection used
+be Azure Disk Encryption, can contain multiple encryption settings per
+disk or snapshot.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotSku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#SnapshotSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotSku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes" title="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes"><em>SnapshotStorageAccountTypes</em></a>) – The sku name. Possible values include: ‘Standard_LRS’,
+‘Premium_LRS’, ‘Standard_ZRS’</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.powerbiembedded.models.html#azure.mgmt.powerbiembedded.models.AzureSku.tier" title="azure.mgmt.powerbiembedded.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The sku tier. Default value: “Standard” .</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotUpdate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#SnapshotUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Snapshot update resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes"><em>OperatingSystemTypes</em></a>) – the Operating System type. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>disk_size_gb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If creationData.createOption is Empty, this field is
+mandatory and it indicates the size of the VHD to create. If this field is
+present for updates or creation with other options, it indicates a resize.
+Resizes are only allowed if the disk is not attached to a running VM, and
+can only increase the disk’s size.</p></li>
+<li><p><strong>encryption_settings_collection</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection"><em>EncryptionSettingsCollection</em></a>) – Encryption settings collection used
+be Azure Disk Encryption, can contain multiple encryption settings per
+disk or snapshot.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotSku" title="azure.mgmt.compute.v2018_09_30.models.SnapshotSku"><em>SnapshotSku</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SourceVault">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SourceVault</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_models_py3.html#SourceVault"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SourceVault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The vault id is an Azure Resource Manager Resource id in the form
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_paged_models.html#DiskPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.Disk" title="azure.mgmt.compute.v2018_09_30.models.Disk"><code class="xref py py-class docutils literal notranslate"><span class="pre">Disk</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_paged_models.html#SnapshotPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.Snapshot" title="azure.mgmt.compute.v2018_09_30.models.Snapshot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snapshot</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#DiskStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.premium_lrs">
+<code class="sig-name descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_lrs">
+<code class="sig-name descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_ssd_lrs">
+<code class="sig-name descname">standard_ssd_lrs</code><em class="property"> = 'StandardSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_ssd_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.ultra_ssd_lrs">
+<code class="sig-name descname">ultra_ssd_lrs</code><em class="property"> = 'UltraSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.ultra_ssd_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">OperatingSystemTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#OperatingSystemTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.linux">
+<code class="sig-name descname">linux</code><em class="property"> = 'Linux'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.linux" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.windows">
+<code class="sig-name descname">windows</code><em class="property"> = 'Windows'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.windows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">HyperVGeneration</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#HyperVGeneration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v1">
+<code class="sig-name descname">v1</code><em class="property"> = 'V1'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v2">
+<code class="sig-name descname">v2</code><em class="property"> = 'V2'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskCreateOption</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#DiskCreateOption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.attach">
+<code class="sig-name descname">attach</code><em class="property"> = 'Attach'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.attach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.copy">
+<code class="sig-name descname">copy</code><em class="property"> = 'Copy'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.empty">
+<code class="sig-name descname">empty</code><em class="property"> = 'Empty'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.from_image">
+<code class="sig-name descname">from_image</code><em class="property"> = 'FromImage'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.from_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.import_enum">
+<code class="sig-name descname">import_enum</code><em class="property"> = 'Import'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.import_enum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.restore">
+<code class="sig-name descname">restore</code><em class="property"> = 'Restore'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.restore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.upload">
+<code class="sig-name descname">upload</code><em class="property"> = 'Upload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.upload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskState</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#DiskState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.active_sas">
+<code class="sig-name descname">active_sas</code><em class="property"> = 'ActiveSAS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_sas" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.active_upload">
+<code class="sig-name descname">active_upload</code><em class="property"> = 'ActiveUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_upload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.attached">
+<code class="sig-name descname">attached</code><em class="property"> = 'Attached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.attached" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.ready_to_upload">
+<code class="sig-name descname">ready_to_upload</code><em class="property"> = 'ReadyToUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.ready_to_upload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.reserved">
+<code class="sig-name descname">reserved</code><em class="property"> = 'Reserved'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.reserved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.unattached">
+<code class="sig-name descname">unattached</code><em class="property"> = 'Unattached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.unattached" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#SnapshotStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.premium_lrs">
+<code class="sig-name descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_lrs">
+<code class="sig-name descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_zrs">
+<code class="sig-name descname">standard_zrs</code><em class="property"> = 'Standard_ZRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_zrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">AccessLevel</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/_compute_management_client_enums.html#AccessLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.none">
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.read">
+<code class="sig-name descname">read</code><em class="property"> = 'Read'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.write">
+<code class="sig-name descname">write</code><em class="property"> = 'Write'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.compute.v2018_09_30.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.compute.v2018_09_30.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.compute.v2018_09_30.html" class="btn btn-neutral float-left" title="azure.mgmt.compute.v2018_09_30 package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

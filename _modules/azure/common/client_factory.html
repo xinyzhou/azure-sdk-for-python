@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.common.client_factory &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../common.html">azure.common</a> &raquo;</li>
+        
+      <li>azure.common.client_factory</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.common.client_factory</h1><div class="highlight"><pre>
+<span></span><span class="c1">#-------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#--------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">inspect</span> <span class="k">import</span> <span class="n">getfullargspec</span> <span class="k">as</span> <span class="n">get_arg_spec</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">inspect</span> <span class="k">import</span> <span class="n">getargspec</span> <span class="k">as</span> <span class="n">get_arg_spec</span>
+
+<span class="kn">import</span> <span class="nn">adal</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="k">import</span> <span class="n">AdalAuthentication</span>
+
+<span class="kn">from</span> <span class="nn">.credentials</span> <span class="k">import</span> <span class="n">get_azure_cli_credentials</span>
+<span class="kn">from</span> <span class="nn">.cloud</span> <span class="k">import</span> <span class="n">get_cli_active_cloud</span>
+
+
+<span class="k">def</span> <span class="nf">_instantiate_client</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Instantiate a client from kwargs, removing the subscription_id/tenant_id/base_url argument if unsupported.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_arg_spec</span><span class="p">(</span><span class="n">client_class</span><span class="o">.</span><span class="fm">__init__</span><span class="p">)</span><span class="o">.</span><span class="n">args</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;subscription_id&#39;</span><span class="p">,</span> <span class="s1">&#39;tenant_id&#39;</span><span class="p">,</span> <span class="s1">&#39;base_url&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">unicode</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">client_class</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_client_resource</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">cloud</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the resource (used to get the right access token), and the base URL for the client.</span>
+<span class="sd">    Either or both can be None to signify that the default value should be used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;GraphRbacManagementClient&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cloud</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">active_directory_graph_resource_id</span><span class="p">,</span> <span class="n">cloud</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">active_directory_graph_resource_id</span>
+    <span class="k">if</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;KeyVaultClient&#39;</span><span class="p">:</span>
+        <span class="n">vault_host</span> <span class="o">=</span> <span class="n">cloud</span><span class="o">.</span><span class="n">suffixes</span><span class="o">.</span><span class="n">keyvault_dns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">vault_url</span> <span class="o">=</span> <span class="s1">&#39;https://</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vault_host</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">vault_url</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="get_client_from_cli_profile"><a class="viewcode-back" href="../../../ref/azure.common.html#azure.common.client_factory.get_client_from_cli_profile">[docs]</a><span class="k">def</span> <span class="nf">get_client_from_cli_profile</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a SDK client initialized with current CLI credentials, CLI default subscription and CLI default cloud.</span>
+
+<span class="sd">    This method will fill automatically the following client parameters:</span>
+<span class="sd">    - credentials</span>
+<span class="sd">    - subscription_id</span>
+<span class="sd">    - base_url</span>
+
+<span class="sd">    Parameters provided in kwargs will override CLI parameters and be passed directly to the client.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    .. code:: python</span>
+
+<span class="sd">        from azure.common.client_factory import get_client_from_cli_profile</span>
+<span class="sd">        from azure.mgmt.compute import ComputeManagementClient</span>
+<span class="sd">        client = get_client_from_cli_profile(ComputeManagementClient)</span>
+
+<span class="sd">    .. versionadded:: 1.1.6</span>
+
+<span class="sd">    :param client_class: A SDK client class</span>
+<span class="sd">    :return: An instantiated client</span>
+<span class="sd">    :raises: ImportError if azure-cli-core package is not available</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cloud</span> <span class="o">=</span> <span class="n">get_cli_active_cloud</span><span class="p">()</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s1">&#39;credentials&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">or</span> <span class="s1">&#39;subscription_id&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">resource</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_client_resource</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">cloud</span><span class="p">)</span>
+        <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">tenant_id</span> <span class="o">=</span> <span class="n">get_azure_cli_credentials</span><span class="p">(</span><span class="n">resource</span><span class="o">=</span><span class="n">resource</span><span class="p">,</span>
+                                                                            <span class="n">with_tenant</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">parameters</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;credentials&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;credentials&#39;</span><span class="p">,</span> <span class="n">credentials</span><span class="p">),</span>
+            <span class="s1">&#39;subscription_id&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subscription_id&#39;</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">)</span>
+        <span class="p">})</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_arg_spec</span><span class="p">(</span><span class="n">client_class</span><span class="o">.</span><span class="fm">__init__</span><span class="p">)</span><span class="o">.</span><span class="n">args</span>
+    <span class="k">if</span> <span class="s1">&#39;adla_job_dns_suffix&#39;</span> <span class="ow">in</span> <span class="n">args</span> <span class="ow">and</span> <span class="s1">&#39;adla_job_dns_suffix&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>  <span class="c1"># Datalake</span>
+        <span class="c1"># Let it raise here with AttributeError at worst, this would mean this cloud does not define</span>
+        <span class="c1"># ADL endpoint and no manual suffix was given</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;adla_job_dns_suffix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cloud</span><span class="o">.</span><span class="n">suffixes</span><span class="o">.</span><span class="n">azure_datalake_analytics_catalog_and_job_endpoint</span>
+    <span class="k">elif</span> <span class="s1">&#39;base_url&#39;</span> <span class="ow">in</span> <span class="n">args</span> <span class="ow">and</span> <span class="s1">&#39;base_url&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">base_url</span> <span class="o">=</span> <span class="n">_client_resource</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">cloud</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">base_url</span><span class="p">:</span>
+            <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;base_url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_url</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;base_url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cloud</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">resource_manager</span>
+    <span class="k">if</span> <span class="s1">&#39;tenant_id&#39;</span> <span class="ow">in</span> <span class="n">args</span> <span class="ow">and</span> <span class="s1">&#39;tenant_id&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;tenant_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tenant_id</span>
+    <span class="n">parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_instantiate_client</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="o">**</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_client_from_json_dict"><a class="viewcode-back" href="../../../ref/azure.common.html#azure.common.client_factory.get_client_from_json_dict">[docs]</a><span class="k">def</span> <span class="nf">get_client_from_json_dict</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a SDK client initialized with a JSON auth dict.</span>
+
+<span class="sd">    The easiest way to obtain this content is to call the following CLI commands:</span>
+
+<span class="sd">    .. code:: bash</span>
+
+<span class="sd">        az ad sp create-for-rbac --sdk-auth</span>
+
+<span class="sd">    This method will fill automatically the following client parameters:</span>
+<span class="sd">    - credentials</span>
+<span class="sd">    - subscription_id</span>
+<span class="sd">    - base_url</span>
+<span class="sd">    - tenant_id</span>
+
+<span class="sd">    Parameters provided in kwargs will override parameters and be passed directly to the client.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    .. code:: python</span>
+
+<span class="sd">        from azure.common.client_factory import get_client_from_auth_file</span>
+<span class="sd">        from azure.mgmt.compute import ComputeManagementClient</span>
+<span class="sd">        config_dict = {</span>
+<span class="sd">            &quot;clientId&quot;: &quot;ad735158-65ca-11e7-ba4d-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;clientSecret&quot;: &quot;b70bb224-65ca-11e7-810c-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;subscriptionId&quot;: &quot;bfc42d3a-65ca-11e7-95cf-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;tenantId&quot;: &quot;c81da1d8-65ca-11e7-b1d1-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;activeDirectoryEndpointUrl&quot;: &quot;https://login.microsoftonline.com&quot;,</span>
+<span class="sd">            &quot;resourceManagerEndpointUrl&quot;: &quot;https://management.azure.com/&quot;,</span>
+<span class="sd">            &quot;activeDirectoryGraphResourceId&quot;: &quot;https://graph.windows.net/&quot;,</span>
+<span class="sd">            &quot;sqlManagementEndpointUrl&quot;: &quot;https://management.core.windows.net:8443/&quot;,</span>
+<span class="sd">            &quot;galleryEndpointUrl&quot;: &quot;https://gallery.azure.com/&quot;,</span>
+<span class="sd">            &quot;managementEndpointUrl&quot;: &quot;https://management.core.windows.net/&quot;</span>
+<span class="sd">        }</span>
+<span class="sd">        client = get_client_from_json_dict(ComputeManagementClient, config_dict)</span>
+
+<span class="sd">    .. versionadded:: 1.1.7</span>
+
+<span class="sd">    :param client_class: A SDK client class</span>
+<span class="sd">    :param dict config_dict: A config dict.</span>
+<span class="sd">    :return: An instantiated client</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">is_graphrbac</span> <span class="o">=</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;GraphRbacManagementClient&#39;</span>
+    <span class="n">is_keyvault</span> <span class="o">=</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;KeyVaultClient&#39;</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;subscription_id&#39;</span><span class="p">:</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subscriptionId&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;base_url&#39;</span><span class="p">:</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;resourceManagerEndpointUrl&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;tenant_id&#39;</span><span class="p">:</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tenantId&#39;</span><span class="p">)</span>  <span class="c1"># GraphRbac</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">is_graphrbac</span><span class="p">:</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;base_url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;activeDirectoryGraphResourceId&#39;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="s1">&#39;credentials&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="c1"># Get the right resource for Credentials</span>
+        <span class="k">if</span> <span class="n">is_graphrbac</span><span class="p">:</span>
+            <span class="n">resource</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;activeDirectoryGraphResourceId&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">is_keyvault</span><span class="p">:</span>
+            <span class="n">resource</span> <span class="o">=</span> <span class="s2">&quot;https://vault.azure.net&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;activeDirectoryResourceId&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_dict</span> <span class="ow">and</span> <span class="s1">&#39;resourceManagerEndpointUrl&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_dict</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need activeDirectoryResourceId or resourceManagerEndpointUrl key&quot;</span><span class="p">)</span>
+            <span class="n">resource</span> <span class="o">=</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;activeDirectoryResourceId&#39;</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;resourceManagerEndpointUrl&#39;</span><span class="p">])</span>
+
+        <span class="n">authority_url</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;activeDirectoryEndpointUrl&#39;</span><span class="p">]</span>
+        <span class="n">is_adfs</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;.+(/adfs|/adfs/)$&#39;</span><span class="p">,</span> <span class="n">authority_url</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">is_adfs</span><span class="p">:</span>
+            <span class="n">authority_url</span> <span class="o">=</span> <span class="n">authority_url</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>  <span class="c1"># workaround: ADAL is known to reject auth urls with trailing /</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">authority_url</span> <span class="o">=</span> <span class="n">authority_url</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;tenantId&#39;</span><span class="p">]</span>
+
+        <span class="n">context</span> <span class="o">=</span> <span class="n">adal</span><span class="o">.</span><span class="n">AuthenticationContext</span><span class="p">(</span>
+            <span class="n">authority_url</span><span class="p">,</span>
+            <span class="n">api_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">validate_authority</span><span class="o">=</span><span class="ow">not</span> <span class="n">is_adfs</span>
+        <span class="p">)</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;credentials&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">AdalAuthentication</span><span class="p">(</span>
+            <span class="n">context</span><span class="o">.</span><span class="n">acquire_token_with_client_credentials</span><span class="p">,</span>
+            <span class="n">resource</span><span class="p">,</span>
+            <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;clientId&#39;</span><span class="p">],</span>
+            <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;clientSecret&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="n">parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_instantiate_client</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="o">**</span><span class="n">parameters</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="get_client_from_auth_file"><a class="viewcode-back" href="../../../ref/azure.common.html#azure.common.client_factory.get_client_from_auth_file">[docs]</a><span class="k">def</span> <span class="nf">get_client_from_auth_file</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">auth_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a SDK client initialized with auth file.</span>
+
+<span class="sd">    The easiest way to obtain this file is to call the following CLI commands:</span>
+
+<span class="sd">    .. code:: bash</span>
+
+<span class="sd">        az ad sp create-for-rbac --sdk-auth</span>
+
+<span class="sd">    You can specific the file path directly, or fill the environment variable AZURE_AUTH_LOCATION.</span>
+<span class="sd">    File must be UTF-8.</span>
+
+<span class="sd">    This method will fill automatically the following client parameters:</span>
+<span class="sd">    - credentials</span>
+<span class="sd">    - subscription_id</span>
+<span class="sd">    - base_url</span>
+
+<span class="sd">    Parameters provided in kwargs will override parameters and be passed directly to the client.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    .. code:: python</span>
+
+<span class="sd">        from azure.common.client_factory import get_client_from_auth_file</span>
+<span class="sd">        from azure.mgmt.compute import ComputeManagementClient</span>
+<span class="sd">        client = get_client_from_auth_file(ComputeManagementClient)</span>
+
+<span class="sd">    Example of file:</span>
+
+<span class="sd">    .. code:: json</span>
+
+<span class="sd">        {</span>
+<span class="sd">            &quot;clientId&quot;: &quot;ad735158-65ca-11e7-ba4d-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;clientSecret&quot;: &quot;b70bb224-65ca-11e7-810c-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;subscriptionId&quot;: &quot;bfc42d3a-65ca-11e7-95cf-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;tenantId&quot;: &quot;c81da1d8-65ca-11e7-b1d1-ecb1d756380e&quot;,</span>
+<span class="sd">            &quot;activeDirectoryEndpointUrl&quot;: &quot;https://login.microsoftonline.com&quot;,</span>
+<span class="sd">            &quot;resourceManagerEndpointUrl&quot;: &quot;https://management.azure.com/&quot;,</span>
+<span class="sd">            &quot;activeDirectoryGraphResourceId&quot;: &quot;https://graph.windows.net/&quot;,</span>
+<span class="sd">            &quot;sqlManagementEndpointUrl&quot;: &quot;https://management.core.windows.net:8443/&quot;,</span>
+<span class="sd">            &quot;galleryEndpointUrl&quot;: &quot;https://gallery.azure.com/&quot;,</span>
+<span class="sd">            &quot;managementEndpointUrl&quot;: &quot;https://management.core.windows.net/&quot;</span>
+<span class="sd">        }</span>
+
+<span class="sd">    .. versionadded:: 1.1.7</span>
+
+<span class="sd">    :param client_class: A SDK client class</span>
+<span class="sd">    :param str auth_path: Path to the file.</span>
+<span class="sd">    :return: An instantiated client</span>
+<span class="sd">    :raises: KeyError if AZURE_AUTH_LOCATION is not an environment variable and no path is provided</span>
+<span class="sd">    :raises: FileNotFoundError if provided file path does not exists</span>
+<span class="sd">    :raises: json.JSONDecodeError if provided file is not JSON valid</span>
+<span class="sd">    :raises: UnicodeDecodeError if file is not UTF8 compliant</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">auth_path</span> <span class="o">=</span> <span class="n">auth_path</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;AZURE_AUTH_LOCATION&#39;</span><span class="p">]</span>
+
+    <span class="k">with</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">auth_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">auth_fd</span><span class="p">:</span>
+        <span class="n">config_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">auth_fd</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">get_client_from_json_dict</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

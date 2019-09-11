@@ -1,0 +1,1039 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.appconfiguration package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>azure.appconfiguration package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.appconfiguration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-appconfiguration-package">
+<h1>azure.appconfiguration package<a class="headerlink" href="#azure-appconfiguration-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.appconfiguration.aio.html">azure.appconfiguration.aio package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="azure.appconfiguration.aio.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.appconfiguration.aio.html#module-azure.appconfiguration.aio.azure_configuration_client_async">azure.appconfiguration.aio.azure_configuration_client_async module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.appconfiguration.aio.html#module-azure.appconfiguration.aio">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.appconfiguration.azure_appconfiguration_client">
+<span id="azure-appconfiguration-azure-appconfiguration-client-module"></span><h2>azure.appconfiguration.azure_appconfiguration_client module<a class="headerlink" href="#module-azure.appconfiguration.azure_appconfiguration_client" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.appconfiguration.azure_appconfiguration_client.</code><code class="sig-name descname">AzureAppConfigurationClient</code><span class="sig-paren">(</span><em class="sig-param">base_url</em>, <em class="sig-param">credential</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents an client that calls restful API of Azure App Configuration service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – base url of the service</p></li>
+<li><p><strong>credential</strong> (<em>azure.AppConfigConnectionStringCredential</em>) – An object which can provide secrets for the app configuration service</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.add_configuration_setting">
+<code class="sig-name descname">add_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">configuration_setting</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.add_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.add_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a ConfigurationSetting into the Azure App Configuration service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>configuration_setting</strong> (<a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a>) – the ConfigurationSetting object to be added</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The ConfigurationSetting object returned from the App Configuration service</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceExistsError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config_setting</span> <span class="o">=</span> <span class="n">ConfigurationSetting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;my content type&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">added_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">add_configuration_setting</span><span class="p">(</span><span class="n">config_setting</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.delete_configuration_setting">
+<code class="sig-name descname">delete_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">label=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.delete_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.delete_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a ConfigurationSetting if it exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – key used to identify the ConfigurationSetting</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – label used to identify the ConfigurationSetting</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – check if the ConfigurationSetting is changed. Set None to skip checking etag</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deleted ConfigurationSetting returned from the service, or None if it doesn’t exist.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deleted_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.from_connection_string">
+<em class="property">classmethod </em><code class="sig-name descname">from_connection_string</code><span class="sig-paren">(</span><em class="sig-param">connection_string</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.from_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.from_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create AzureAppConfigurationClient from a Connection String.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param connection_string</dt>
+<dd class="field-odd"><p>Connection String
+(one of the access keys of the Azure App Configuration resource)
+used to access the Azure App Configuration.</p>
+</dd>
+<dt class="field-even">type connection_string</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.appconfiguration</span> <span class="kn">import</span> <span class="n">AzureAppConfigurationClient</span>
+<span class="n">connection_str</span> <span class="o">=</span> <span class="s2">&quot;&lt;my connection string&gt;&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">AzureAppConfigurationClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.get_configuration_setting">
+<code class="sig-name descname">get_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">label=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.get_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.get_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the matched ConfigurationSetting from Azure App Configuration service</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – key of the ConfigurationSetting</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – label of the ConfigurationSetting</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – The retrieved ConfigurationSetting must be created no later than this datetime</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The matched ConfigurationSetting object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fetched_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.list_configuration_settings">
+<code class="sig-name descname">list_configuration_settings</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.list_configuration_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.list_configuration_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the configuration settings stored in the configuration service, optionally filtered by
+label and accept_date_time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their label. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their keys. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – filter out ConfigurationSetting created after this datetime</p></li>
+<li><p><strong>fields</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – specify which fields to include in the results. Leave None to include all fields</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator of <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.paging.ItemPaged[ConfigurationSetting]</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">accept_date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">all_listed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_configuration_settings</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_listed</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+
+<span class="n">filtered_listed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_configuration_settings</span><span class="p">(</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Labe*&quot;</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Ke*&quot;</span><span class="p">],</span> <span class="n">accept_date_time</span><span class="o">=</span><span class="n">accept_date_time</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">filtered_listed</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.list_revisions">
+<code class="sig-name descname">list_revisions</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.list_revisions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.list_revisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the ConfigurationSetting revision history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their label. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their keys. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – filter out ConfigurationSetting created after this datetime</p></li>
+<li><p><strong>fields</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – specify which fields to include in the results. Leave None to include all fields</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator of <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.paging.ItemPaged[ConfigurationSetting]</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">accept_date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">all_revisions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_revisions</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_revisions</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+
+<span class="n">filtered_revisions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_revisions</span><span class="p">(</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Labe*&quot;</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Ke*&quot;</span><span class="p">],</span> <span class="n">accept_date_time</span><span class="o">=</span><span class="n">accept_date_time</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">filtered_revisions</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.set_configuration_setting">
+<code class="sig-name descname">set_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">configuration_setting</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.set_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.set_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or update a ConfigurationSetting.
+If the configuration setting identified by key and label does not exist, this is a create.
+Otherwise this is an update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>configuration_setting</strong> – the ConfigurationSetting to be added (if not exists)</p>
+</dd>
+</dl>
+<p>or updated (if exists) to the service
+:type configuration_setting: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code>
+:param kwargs: if “headers” exists, its value (a dict) will be added to the http request header
+:type kwargs: dict
+:return: The ConfigurationSetting returned from the service
+:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code>
+:raises: <code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config_setting</span> <span class="o">=</span> <span class="n">ConfigurationSetting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my set value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;my set content type&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my set tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my set tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">returned_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">set_configuration_setting</span><span class="p">(</span><span class="n">config_setting</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.update_configuration_setting">
+<code class="sig-name descname">update_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.update_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_client.AzureAppConfigurationClient.update_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update specified attributes of the ConfigurationSetting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – key used to identify the ConfigurationSetting</p></li>
+<li><p><strong>value</strong> – the value to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>content_type</strong> – the content type to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>tags</strong> – tags to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>label</strong> – lable used together with key to identify the ConfigurationSetting.</p></li>
+<li><p><strong>etag</strong> – the ETag (http entity tag) of the ConfigurationSetting.
+Used to check if the configuration setting has changed. Leave None to skip the check.</p></li>
+<li><p><strong>kwargs</strong> – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">updated_kv</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">update_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my updated value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>  <span class="c1"># None means not to update it</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my updated tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my updated tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.appconfiguration.azure_appconfiguration_requests">
+<span id="azure-appconfiguration-azure-appconfiguration-requests-module"></span><h2>azure.appconfiguration.azure_appconfiguration_requests module<a class="headerlink" href="#module-azure.appconfiguration.azure_appconfiguration_requests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.appconfiguration.azure_appconfiguration_requests.AppConfigRequestsCredentialsPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">azure.appconfiguration.azure_appconfiguration_requests.</code><code class="sig-name descname">AppConfigRequestsCredentialsPolicy</code><span class="sig-paren">(</span><em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_requests.html#AppConfigRequestsCredentialsPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_requests.AppConfigRequestsCredentialsPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="azure.core.pipeline.policies.html#azure.core.pipeline.policies.base.HTTPPolicy" title="azure.core.pipeline.policies.base.HTTPPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.policies.base.HTTPPolicy</span></code></a></p>
+<p>Implementation of request-oauthlib except and retry logic.</p>
+<dl class="method">
+<dt id="azure.appconfiguration.azure_appconfiguration_requests.AppConfigRequestsCredentialsPolicy.send">
+<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_requests.html#AppConfigRequestsCredentialsPolicy.send"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.azure_appconfiguration_requests.AppConfigRequestsCredentialsPolicy.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract send method for a synchronous pipeline. Mutates the request.</p>
+<p>Context content is dependent on the HttpTransport.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<a class="reference internal" href="azure.core.pipeline.html#azure.core.pipeline.PipelineRequest" title="azure.core.pipeline.PipelineRequest"><em>PipelineRequest</em></a>) – The pipeline request object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pipeline response object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.core.pipeline.html#azure.core.pipeline.PipelineResponse" title="azure.core.pipeline.PipelineResponse">PipelineResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.appconfiguration.utils">
+<span id="azure-appconfiguration-utils-module"></span><h2>azure.appconfiguration.utils module<a class="headerlink" href="#module-azure.appconfiguration.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="azure.appconfiguration.utils.escape_and_tolist">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">escape_and_tolist</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#escape_and_tolist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.escape_and_tolist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.escape_reserved">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">escape_reserved</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#escape_reserved"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.escape_reserved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserved characters are star(*), comma(,) and backslash()
+If a reserved character is part of the value, then it must be escaped using {Reserved Character}.
+Non-reserved characters can also be escaped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.get_current_utc_time">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">get_current_utc_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#get_current_utc_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.get_current_utc_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.get_endpoint_from_connection_string">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">get_endpoint_from_connection_string</code><span class="sig-paren">(</span><em class="sig-param">connection_string</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#get_endpoint_from_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.get_endpoint_from_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.parse_connection_string">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">parse_connection_string</code><span class="sig-paren">(</span><em class="sig-param">connection_string</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#parse_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.parse_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.prep_update_configuration_setting">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">prep_update_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#prep_update_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.prep_update_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="azure.appconfiguration.utils.quote_etag">
+<code class="sig-prename descclassname">azure.appconfiguration.utils.</code><code class="sig-name descname">quote_etag</code><span class="sig-paren">(</span><em class="sig-param">etag</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/utils.html#quote_etag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.utils.quote_etag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-azure.appconfiguration.version">
+<span id="azure-appconfiguration-version-module"></span><h2>azure.appconfiguration.version module<a class="headerlink" href="#module-azure.appconfiguration.version" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.appconfiguration">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.appconfiguration" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.appconfiguration.</code><code class="sig-name descname">AzureAppConfigurationClient</code><span class="sig-paren">(</span><em class="sig-param">base_url</em>, <em class="sig-param">credential</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents an client that calls restful API of Azure App Configuration service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – base url of the service</p></li>
+<li><p><strong>credential</strong> (<em>azure.AppConfigConnectionStringCredential</em>) – An object which can provide secrets for the app configuration service</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.add_configuration_setting">
+<code class="sig-name descname">add_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">configuration_setting</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.add_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.add_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a ConfigurationSetting into the Azure App Configuration service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>configuration_setting</strong> (<a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a>) – the ConfigurationSetting object to be added</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The ConfigurationSetting object returned from the App Configuration service</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceExistsError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config_setting</span> <span class="o">=</span> <span class="n">ConfigurationSetting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;my content type&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">added_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">add_configuration_setting</span><span class="p">(</span><span class="n">config_setting</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.delete_configuration_setting">
+<code class="sig-name descname">delete_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">label=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.delete_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.delete_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a ConfigurationSetting if it exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – key used to identify the ConfigurationSetting</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – label used to identify the ConfigurationSetting</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – check if the ConfigurationSetting is changed. Set None to skip checking etag</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deleted ConfigurationSetting returned from the service, or None if it doesn’t exist.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deleted_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.from_connection_string">
+<em class="property">classmethod </em><code class="sig-name descname">from_connection_string</code><span class="sig-paren">(</span><em class="sig-param">connection_string</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.from_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.from_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create AzureAppConfigurationClient from a Connection String.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param connection_string</dt>
+<dd class="field-odd"><p>Connection String
+(one of the access keys of the Azure App Configuration resource)
+used to access the Azure App Configuration.</p>
+</dd>
+<dt class="field-even">type connection_string</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.appconfiguration</span> <span class="kn">import</span> <span class="n">AzureAppConfigurationClient</span>
+<span class="n">connection_str</span> <span class="o">=</span> <span class="s2">&quot;&lt;my connection string&gt;&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">AzureAppConfigurationClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">connection_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.get_configuration_setting">
+<code class="sig-name descname">get_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">label=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.get_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.get_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the matched ConfigurationSetting from Azure App Configuration service</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – key of the ConfigurationSetting</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – label of the ConfigurationSetting</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – The retrieved ConfigurationSetting must be created no later than this datetime</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The matched ConfigurationSetting object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fetched_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.list_configuration_settings">
+<code class="sig-name descname">list_configuration_settings</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.list_configuration_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.list_configuration_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the configuration settings stored in the configuration service, optionally filtered by
+label and accept_date_time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their label. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their keys. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – filter out ConfigurationSetting created after this datetime</p></li>
+<li><p><strong>fields</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – specify which fields to include in the results. Leave None to include all fields</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator of <a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.paging.ItemPaged[ConfigurationSetting]</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">accept_date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">all_listed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_configuration_settings</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_listed</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+
+<span class="n">filtered_listed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_configuration_settings</span><span class="p">(</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Labe*&quot;</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Ke*&quot;</span><span class="p">],</span> <span class="n">accept_date_time</span><span class="o">=</span><span class="n">accept_date_time</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">filtered_listed</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.list_revisions">
+<code class="sig-name descname">list_revisions</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.list_revisions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.list_revisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the ConfigurationSetting revision history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their label. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – filter results based on their keys. ‘*’ can be
+used as wildcard in the beginning or end of the filter</p></li>
+<li><p><strong>accept_date_time</strong> (<em>datetime</em>) – filter out ConfigurationSetting created after this datetime</p></li>
+<li><p><strong>fields</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – specify which fields to include in the results. Leave None to include all fields</p></li>
+<li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator of <a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.paging.ItemPaged[ConfigurationSetting]</span></code></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">accept_date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">all_revisions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_revisions</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_revisions</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+
+<span class="n">filtered_revisions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_revisions</span><span class="p">(</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Labe*&quot;</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*Ke*&quot;</span><span class="p">],</span> <span class="n">accept_date_time</span><span class="o">=</span><span class="n">accept_date_time</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">filtered_revisions</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># do something</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.set_configuration_setting">
+<code class="sig-name descname">set_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">configuration_setting</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.set_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.set_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or update a ConfigurationSetting.
+If the configuration setting identified by key and label does not exist, this is a create.
+Otherwise this is an update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>configuration_setting</strong> – the ConfigurationSetting to be added (if not exists)</p>
+</dd>
+</dl>
+<p>or updated (if exists) to the service
+:type configuration_setting: <a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a>
+:param kwargs: if “headers” exists, its value (a dict) will be added to the http request header
+:type kwargs: dict
+:return: The ConfigurationSetting returned from the service
+:rtype: <a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a>
+:raises: <code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config_setting</span> <span class="o">=</span> <span class="n">ConfigurationSetting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my set value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;my set content type&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my set tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my set tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">returned_config_setting</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">set_configuration_setting</span><span class="p">(</span><span class="n">config_setting</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.appconfiguration.AzureAppConfigurationClient.update_configuration_setting">
+<code class="sig-name descname">update_configuration_setting</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/azure_appconfiguration_client.html#AzureAppConfigurationClient.update_configuration_setting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.AzureAppConfigurationClient.update_configuration_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update specified attributes of the ConfigurationSetting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – key used to identify the ConfigurationSetting</p></li>
+<li><p><strong>value</strong> – the value to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>content_type</strong> – the content type to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>tags</strong> – tags to be updated to the ConfigurationSetting. None means unchanged.</p></li>
+<li><p><strong>label</strong> – lable used together with key to identify the ConfigurationSetting.</p></li>
+<li><p><strong>etag</strong> – the ETag (http entity tag) of the ConfigurationSetting.
+Used to check if the configuration setting has changed. Leave None to skip the check.</p></li>
+<li><p><strong>kwargs</strong> – if “headers” exists, its value (a dict) will be added to the http request header</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.appconfiguration.ConfigurationSetting" title="azure.appconfiguration.ConfigurationSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationSetting</span></code></a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceNotFoundError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceModifiedError</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequestError</span></code></p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">updated_kv</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">update_configuration_setting</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;MyKey&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MyLabel&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my updated value&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>  <span class="c1"># None means not to update it</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my updated tag&quot;</span><span class="p">:</span> <span class="s2">&quot;my updated tag value&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.appconfiguration.ConfigurationSetting">
+<em class="property">class </em><code class="sig-prename descclassname">azure.appconfiguration.</code><code class="sig-name descname">ConfigurationSetting</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">label: str = None</em>, <em class="sig-param">content_type: str = None</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/appconfiguration/_generated/models/_models_py3.html#ConfigurationSetting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.appconfiguration.ConfigurationSetting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A configuration value.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Entity tag (etag) of the object</p></li>
+<li><p><strong>last_modified</strong> (<em>datetime</em>) – </p></li>
+<li><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked" title="azure.mgmt.recoveryservicesbackup.models.StorageTypeState.locked"><strong>locked</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>content_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

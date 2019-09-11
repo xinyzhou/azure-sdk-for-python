@@ -1,0 +1,751 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.file.file_service_client &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.file.file_service_client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.file.file_service_client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span>  <span class="c1"># pylint: disable=unused-import</span>
+    <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span>
+    <span class="n">TYPE_CHECKING</span>
+<span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span> <span class="c1"># type: ignore</span>
+
+<span class="kn">from</span> <span class="nn">azure.core.paging</span> <span class="k">import</span> <span class="n">ItemPaged</span>
+<span class="kn">from</span> <span class="nn">azure.core.tracing.decorator</span> <span class="k">import</span> <span class="n">distributed_trace</span>
+
+<span class="kn">from</span> <span class="nn">._shared.shared_access_signature</span> <span class="k">import</span> <span class="n">SharedAccessSignature</span>
+<span class="kn">from</span> <span class="nn">._shared.models</span> <span class="k">import</span> <span class="n">Services</span>
+<span class="kn">from</span> <span class="nn">._shared.base_client</span> <span class="k">import</span> <span class="n">StorageAccountHostsMixin</span><span class="p">,</span> <span class="n">parse_connection_str</span><span class="p">,</span> <span class="n">parse_query</span>
+<span class="kn">from</span> <span class="nn">._shared.response_handlers</span> <span class="k">import</span> <span class="n">process_storage_error</span>
+<span class="kn">from</span> <span class="nn">._generated</span> <span class="k">import</span> <span class="n">AzureFileStorage</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">StorageErrorException</span><span class="p">,</span> <span class="n">StorageServiceProperties</span>
+<span class="kn">from</span> <span class="nn">._generated.version</span> <span class="k">import</span> <span class="n">VERSION</span>
+<span class="kn">from</span> <span class="nn">.share_client</span> <span class="k">import</span> <span class="n">ShareClient</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">SharePropertiesPaged</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+    <span class="kn">from</span> <span class="nn">._shared.models</span> <span class="k">import</span> <span class="n">ResourceTypes</span><span class="p">,</span> <span class="n">AccountPermissions</span>
+    <span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">Metrics</span><span class="p">,</span> <span class="n">CorsRule</span><span class="p">,</span> <span class="n">ShareProperties</span>
+
+
+<div class="viewcode-block" id="FileServiceClient"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient">[docs]</a><span class="k">class</span> <span class="nc">FileServiceClient</span><span class="p">(</span><span class="n">StorageAccountHostsMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A client to interact with the File Service at the account level.</span>
+
+<span class="sd">    This client provides operations to retrieve and configure the account properties</span>
+<span class="sd">    as well as list, create and delete shares within the account.</span>
+<span class="sd">    For operations relating to a specific share, a client for that entity</span>
+<span class="sd">    can also be retrieved using the `get_share_client` function.</span>
+
+<span class="sd">    :ivar str url:</span>
+<span class="sd">        The full endpoint URL to the file service endpoint, including SAS token if used. This could be</span>
+<span class="sd">        either the primary endpoint, or the secondard endpoint depending on the current `location_mode`.</span>
+<span class="sd">    :ivar str primary_endpoint:</span>
+<span class="sd">        The full primary endpoint URL.</span>
+<span class="sd">    :ivar str primary_hostname:</span>
+<span class="sd">        The hostname of the primary endpoint.</span>
+<span class="sd">    :ivar str secondary_endpoint:</span>
+<span class="sd">        The full secondard endpoint URL if configured. If not available</span>
+<span class="sd">        a ValueError will be raised. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str secondary_hostname:</span>
+<span class="sd">        The hostname of the secondary endpoint. If not available this</span>
+<span class="sd">        will be None. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str location_mode:</span>
+<span class="sd">        The location mode that the client is currently using. By default</span>
+<span class="sd">        this will be &quot;primary&quot;. Options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :param str account_url:</span>
+<span class="sd">        The URL to the file storage account. Any other entities included</span>
+<span class="sd">        in the URL path (e.g. share or file) will be discarded. This URL can be optionally</span>
+<span class="sd">        authenticated with a SAS token.</span>
+<span class="sd">    :param credential:</span>
+<span class="sd">        The credential with which to authenticate. This is optional if the</span>
+<span class="sd">        account URL already has a SAS token. The value can be a SAS token string or an account</span>
+<span class="sd">        shared access key.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../tests/test_file_samples_authentication.py</span>
+<span class="sd">            :start-after: [START create_file_service_client]</span>
+<span class="sd">            :end-before: [END create_file_service_client]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Create the file service client with url and credential.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">account_url</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">credential</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Any]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">account_url</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">):</span>
+                <span class="n">account_url</span> <span class="o">=</span> <span class="s2">&quot;https://&quot;</span> <span class="o">+</span> <span class="n">account_url</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Account URL must be a string.&quot;</span><span class="p">)</span>
+        <span class="n">parsed_url</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">account_url</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid URL: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">account_url</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;get_token&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Token credentials not supported by the File service.&quot;</span><span class="p">)</span>
+
+        <span class="n">_</span><span class="p">,</span> <span class="n">sas_token</span> <span class="o">=</span> <span class="n">parse_query</span><span class="p">(</span><span class="n">parsed_url</span><span class="o">.</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sas_token</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">credential</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;You need to provide either an account key or SAS token when creating a storage service.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_query_str</span><span class="p">,</span> <span class="n">credential</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format_query_string</span><span class="p">(</span><span class="n">sas_token</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FileServiceClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parsed_url</span><span class="p">,</span> <span class="n">service</span><span class="o">=</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">AzureFileStorage</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">VERSION</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">pipeline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_format_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Format the endpoint URL according to the current location</span>
+<span class="sd">        mode hostname.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">://</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query_str</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileServiceClient.from_connection_string"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">credential</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Any]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>  <span class="c1"># type: (...) -&gt; FileServiceClient</span>
+        <span class="sd">&quot;&quot;&quot;Create FileServiceClient from a Connection String.</span>
+
+<span class="sd">        :param str conn_str:</span>
+<span class="sd">            A connection string to an Azure Storage account.</span>
+<span class="sd">        :param credential:</span>
+<span class="sd">            The credential with which to authenticate. This is optional if the</span>
+<span class="sd">            account URL already has a SAS token. The value can be a SAS token string or an account</span>
+<span class="sd">            shared access key.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_authentication.py</span>
+<span class="sd">                :start-after: [START create_file_service_client_from_conn_string]</span>
+<span class="sd">                :end-before: [END create_file_service_client_from_conn_string]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Create the file service client with connection string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">account_url</span><span class="p">,</span> <span class="n">secondary</span><span class="p">,</span> <span class="n">credential</span> <span class="o">=</span> <span class="n">parse_connection_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;secondary_hostname&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;secondary_hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">secondary</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">account_url</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.generate_shared_access_signature"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.generate_shared_access_signature">[docs]</a>    <span class="k">def</span> <span class="nf">generate_shared_access_signature</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">resource_types</span><span class="p">,</span>  <span class="c1"># type: Union[ResourceTypes, str]</span>
+            <span class="n">permission</span><span class="p">,</span>  <span class="c1"># type: Union[AccountPermissions, str]</span>
+            <span class="n">expiry</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[datetime, str]]</span>
+            <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[datetime, str]]</span>
+            <span class="n">ip</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">protocol</span><span class="o">=</span><span class="kc">None</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="p">):</span>  <span class="c1"># type: (...) -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;Generates a shared access signature for the file service.</span>
+
+<span class="sd">        Use the returned signature with the credential parameter of any FileServiceClient,</span>
+<span class="sd">        ShareClient, DirectoryClient, or FileClient.</span>
+
+<span class="sd">        :param ~azure.storage.file._shared.models.ResourceTypes resource_types:</span>
+<span class="sd">            Specifies the resource types that are accessible with the account SAS.</span>
+<span class="sd">        :param ~azure.storage.file._shared.models.AccountPermissions permission:</span>
+<span class="sd">            The permissions associated with the shared access signature. The</span>
+<span class="sd">            user is restricted to operations allowed by the permissions.</span>
+<span class="sd">            Required unless an id is given referencing a stored access policy</span>
+<span class="sd">            which contains this field. This field must be omitted if it has been</span>
+<span class="sd">            specified in an associated stored access policy.</span>
+<span class="sd">        :param expiry:</span>
+<span class="sd">            The time at which the shared access signature becomes invalid.</span>
+<span class="sd">            Required unless an id is given referencing a stored access policy</span>
+<span class="sd">            which contains this field. This field must be omitted if it has</span>
+<span class="sd">            been specified in an associated stored access policy. Azure will always</span>
+<span class="sd">            convert values to UTC. If a date is passed in without timezone info, it</span>
+<span class="sd">            is assumed to be UTC.</span>
+<span class="sd">        :type expiry: datetime or str</span>
+<span class="sd">        :param start:</span>
+<span class="sd">            The time at which the shared access signature becomes valid. If</span>
+<span class="sd">            omitted, start time for this call is assumed to be the time when the</span>
+<span class="sd">            storage service receives the request. Azure will always convert values</span>
+<span class="sd">            to UTC. If a date is passed in without timezone info, it is assumed to</span>
+<span class="sd">            be UTC.</span>
+<span class="sd">        :type start: datetime or str</span>
+<span class="sd">        :param str ip:</span>
+<span class="sd">            Specifies an IP address or a range of IP addresses from which to accept requests.</span>
+<span class="sd">            If the IP address from which the request originates does not match the IP address</span>
+<span class="sd">            or address range specified on the SAS token, the request is not authenticated.</span>
+<span class="sd">            For example, specifying sip=168.1.5.65 or sip=168.1.5.60-168.1.5.70 on the SAS</span>
+<span class="sd">            restricts the request to those IP addresses.</span>
+<span class="sd">        :param str protocol:</span>
+<span class="sd">            Specifies the protocol permitted for a request made. The default value is https.</span>
+<span class="sd">        :return: A Shared Access Signature (sas) token.</span>
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_authentication.py</span>
+<span class="sd">                :start-after: [START generate_sas_token]</span>
+<span class="sd">                :end-before: [END generate_sas_token]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Generate a sas token.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;account_key&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_key</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No account SAS key available.&quot;</span><span class="p">)</span>
+
+        <span class="n">sas</span> <span class="o">=</span> <span class="n">SharedAccessSignature</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sas</span><span class="o">.</span><span class="n">generate_account</span><span class="p">(</span>
+            <span class="n">services</span><span class="o">=</span><span class="n">Services</span><span class="o">.</span><span class="n">FILE</span><span class="p">,</span>
+            <span class="n">resource_types</span><span class="o">=</span><span class="n">resource_types</span><span class="p">,</span>
+            <span class="n">permission</span><span class="o">=</span><span class="n">permission</span><span class="p">,</span>
+            <span class="n">expiry</span><span class="o">=</span><span class="n">expiry</span><span class="p">,</span>
+            <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+            <span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">,</span>
+            <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span>
+        <span class="p">)</span> <span class="c1"># type: ignore</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.get_service_properties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.get_service_properties">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">get_service_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Any) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the properties of a storage account&#39;s File service, including</span>
+<span class="sd">        Azure Storage Analytics.</span>
+
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: ~azure.storage.file._generated.models.StorageServiceProperties</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START get_service_properties]</span>
+<span class="sd">                :end-before: [END get_service_properties]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get file service properties.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">get_properties</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.set_service_properties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.set_service_properties">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">set_service_properties</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">hour_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Metrics]</span>
+            <span class="n">minute_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Metrics]</span>
+            <span class="n">cors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[List[CorsRule]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the properties of a storage account&#39;s File service, including</span>
+<span class="sd">        Azure Storage Analytics. If an element (e.g. Logging) is left as None, the</span>
+<span class="sd">        existing settings on the service for that functionality are preserved.</span>
+
+<span class="sd">        :param hour_metrics:</span>
+<span class="sd">            The hour metrics settings provide a summary of request</span>
+<span class="sd">            statistics grouped by API in hourly aggregates for files.</span>
+<span class="sd">        :type hour_metrics: ~azure.storage.file.models.Metrics</span>
+<span class="sd">        :param minute_metrics:</span>
+<span class="sd">            The minute metrics settings provide request statistics</span>
+<span class="sd">            for each minute for files.</span>
+<span class="sd">        :type minute_metrics: ~azure.storage.file.models.Metrics</span>
+<span class="sd">        :param cors:</span>
+<span class="sd">            You can include up to five CorsRule elements in the</span>
+<span class="sd">            list. If an empty list is specified, all CORS rules will be deleted,</span>
+<span class="sd">            and CORS will be disabled for the service.</span>
+<span class="sd">        :type cors: list(:class:`~azure.storage.file.models.CorsRule`)</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START set_service_properties]</span>
+<span class="sd">                :end-before: [END set_service_properties]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Sets file service properties.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="n">StorageServiceProperties</span><span class="p">(</span>
+            <span class="n">hour_metrics</span><span class="o">=</span><span class="n">hour_metrics</span><span class="p">,</span>
+            <span class="n">minute_metrics</span><span class="o">=</span><span class="n">minute_metrics</span><span class="p">,</span>
+            <span class="n">cors</span><span class="o">=</span><span class="n">cors</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="n">props</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.list_shares"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.list_shares">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">list_shares</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">name_starts_with</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">include_metadata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+            <span class="n">include_snapshots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="c1"># type: Optional[bool]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; ItemPaged[ShareProperties]</span>
+        <span class="sd">&quot;&quot;&quot;Returns auto-paging iterable of dict-like ShareProperties under the specified account.</span>
+<span class="sd">        The generator will lazily follow the continuation tokens returned by</span>
+<span class="sd">        the service and stop when all shares have been returned.</span>
+
+<span class="sd">        :param str name_starts_with:</span>
+<span class="sd">            Filters the results to return only shares whose names</span>
+<span class="sd">            begin with the specified name_starts_with.</span>
+<span class="sd">        :param bool include_metadata:</span>
+<span class="sd">            Specifies that share metadata be returned in the response.</span>
+<span class="sd">        :param bool include_snapshots:</span>
+<span class="sd">            Specifies that share snapshot be returned in the response.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: An iterable (auto-paging) of ShareProperties.</span>
+<span class="sd">        :rtype: ~azure.core.paging.ItemPaged[~azure.storage.file.models.ShareProperties]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START fsc_list_shares]</span>
+<span class="sd">                :end-before: [END fsc_list_shares]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: List shares in the file service.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">include</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">include_metadata</span><span class="p">:</span>
+            <span class="n">include</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">include_snapshots</span><span class="p">:</span>
+            <span class="n">include</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;snapshots&#39;</span><span class="p">)</span>
+        <span class="n">results_per_page</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;results_per_page&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">list_shares_segment</span><span class="p">,</span>
+            <span class="n">include</span><span class="o">=</span><span class="n">include</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ItemPaged</span><span class="p">(</span>
+            <span class="n">command</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="n">name_starts_with</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="n">results_per_page</span><span class="p">,</span>
+            <span class="n">page_iterator_class</span><span class="o">=</span><span class="n">SharePropertiesPaged</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.create_share"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.create_share">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">create_share</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">share_name</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">quota</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; ShareClient</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new share under the specified account. If the share</span>
+<span class="sd">        with the same name already exists, the operation fails. Returns a client with</span>
+<span class="sd">        which to interact with the newly created share.</span>
+
+<span class="sd">        :param str share_name: The name of the share to create.</span>
+<span class="sd">        :param metadata:</span>
+<span class="sd">            A dict with name_value pairs to associate with the</span>
+<span class="sd">            share as metadata. Example:{&#39;Category&#39;:&#39;test&#39;}</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param int quota:</span>
+<span class="sd">            Quota in bytes.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: ~azure.storage.file.share_client.ShareClient</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START fsc_create_shares]</span>
+<span class="sd">                :end-before: [END fsc_create_shares]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Create a share in the file service.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">share</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_share_client</span><span class="p">(</span><span class="n">share_name</span><span class="p">)</span>
+        <span class="n">share</span><span class="o">.</span><span class="n">create_share</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="n">quota</span><span class="o">=</span><span class="n">quota</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">share</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.delete_share"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.delete_share">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">delete_share</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">share_name</span><span class="p">,</span>  <span class="c1"># type: Union[ShareProperties, str]</span>
+            <span class="n">delete_snapshots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="c1"># type: Optional[bool]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Marks the specified share for deletion. The share is</span>
+<span class="sd">        later deleted during garbage collection.</span>
+
+<span class="sd">        :param share_name:</span>
+<span class="sd">            The share to delete. This can either be the name of the share,</span>
+<span class="sd">            or an instance of ShareProperties.</span>
+<span class="sd">        :type share_name: str or ~azure.storage.file.models.ShareProperties</span>
+<span class="sd">        :param bool delete_snapshots:</span>
+<span class="sd">            Indicates if snapshots are to be deleted.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START fsc_delete_shares]</span>
+<span class="sd">                :end-before: [END fsc_delete_shares]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Delete a share in the file service.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">share</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_share_client</span><span class="p">(</span><span class="n">share_name</span><span class="p">)</span>
+        <span class="n">share</span><span class="o">.</span><span class="n">delete_share</span><span class="p">(</span>
+            <span class="n">delete_snapshots</span><span class="o">=</span><span class="n">delete_snapshots</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileServiceClient.get_share_client"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_service_client.FileServiceClient.get_share_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_share_client</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">share</span><span class="p">,</span> <span class="n">snapshot</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (Union[ShareProperties, str],Optional[Union[Dict[str, Any], str]]) -&gt; ShareClient</span>
+        <span class="sd">&quot;&quot;&quot;Get a client to interact with the specified share.</span>
+<span class="sd">        The share need not already exist.</span>
+
+<span class="sd">        :param share:</span>
+<span class="sd">            The share. This can either be the name of the share,</span>
+<span class="sd">            or an instance of ShareProperties.</span>
+<span class="sd">        :type share: str or ~azure.storage.file.models.ShareProperties</span>
+<span class="sd">        :param str snapshot:</span>
+<span class="sd">            An optional share snapshot on which to operate.</span>
+<span class="sd">        :returns: A ShareClient.</span>
+<span class="sd">        :rtype: ~azure.storage.file.share_client.ShareClient</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_service.py</span>
+<span class="sd">                :start-after: [START get_share_client]</span>
+<span class="sd">                :end-before: [END get_share_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Gets the share client.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ShareClient</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">share</span><span class="o">=</span><span class="n">share</span><span class="p">,</span> <span class="n">snapshot</span><span class="o">=</span><span class="n">snapshot</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="p">,</span> <span class="n">_hosts</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_hosts</span><span class="p">,</span>
+            <span class="n">_configuration</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="n">_pipeline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span><span class="p">,</span> <span class="n">_location_mode</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_location_mode</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

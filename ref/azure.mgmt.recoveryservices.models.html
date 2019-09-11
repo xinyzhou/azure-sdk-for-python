@@ -1,0 +1,1115 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.recoveryservices.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.recoveryservices.operations module" href="azure.mgmt.recoveryservices.operations.html" />
+    <link rel="prev" title="azure.mgmt.recoveryservices package" href="azure.mgmt.recoveryservices.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.recoveryservices.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.recoveryservices.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.recoveryservices.operations.html">azure.mgmt.recoveryservices.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.recoveryservices.html#module-azure.mgmt.recoveryservices">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a> &raquo;</li>
+        
+      <li>azure.mgmt.recoveryservices.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.recoveryservices.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.recoveryservices.models">
+<span id="azure-mgmt-recoveryservices-models-module"></span><h1>azure.mgmt.recoveryservices.models module<a class="headerlink" href="#module-azure.mgmt.recoveryservices.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.RawCertificateData">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">RawCertificateData</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">auth_type=None</em>, <em class="sig-param">certificate: bytearray = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/raw_certificate_data_py3.html#RawCertificateData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.RawCertificateData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Raw certificate data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>auth_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.AuthType" title="azure.mgmt.recoveryservices.models.AuthType"><em>AuthType</em></a>) – Specifies the authentication type. Possible values
+include: ‘Invalid’, ‘ACS’, ‘AAD’, ‘AccessControlService’,
+‘AzureActiveDirectory’</p></li>
+<li><p><strong>certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – The base64 encoded certificate raw data string</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.CertificateRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">CertificateRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/certificate_request_py3.html#CertificateRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.CertificateRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of the certificate to be uploaded to the vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.RawCertificateData" title="azure.mgmt.recoveryservices.models.RawCertificateData"><em>RawCertificateData</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ResourceCertificateAndAadDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ResourceCertificateAndAadDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">aad_authority: str</em>, <em class="sig-param">aad_tenant_id: str</em>, <em class="sig-param">service_principal_client_id: str</em>, <em class="sig-param">service_principal_object_id: str</em>, <em class="sig-param">azure_management_endpoint_audience: str</em>, <em class="sig-param">certificate: bytearray = None</em>, <em class="sig-param">friendly_name: str = None</em>, <em class="sig-param">issuer: str = None</em>, <em class="sig-param">resource_id: int = None</em>, <em class="sig-param">subject: str = None</em>, <em class="sig-param">thumbprint: str = None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/resource_certificate_and_aad_details_py3.html#ResourceCertificateAndAadDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ResourceCertificateAndAadDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_certificate_details_py3.ResourceCertificateDetails</span></code></p>
+<p>Certificate details representing the Vault credentials for AAD.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – The base64 encoded certificate raw data string.</p></li>
+<li><p><strong>friendly_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate friendly name.</p></li>
+<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
+<li><p><strong>resource_id</strong> (<em>long</em>) – Resource ID of the vault.</p></li>
+<li><p><strong>subject</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Subject Name.</p></li>
+<li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate thumbprint.</p></li>
+<li><p><strong>valid_from</strong> (<em>datetime</em>) – Certificate Validity start Date time.</p></li>
+<li><p><strong>valid_to</strong> (<em>datetime</em>) – Certificate Validity End Date time.</p></li>
+<li><p><strong>auth_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>aad_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. AAD tenant authority.</p></li>
+<li><p><strong>aad_tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. AAD tenant Id.</p></li>
+<li><p><strong>service_principal_client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. AAD service principal
+clientId.</p></li>
+<li><p><strong>service_principal_object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. AAD service principal
+ObjectId.</p></li>
+<li><p><strong>azure_management_endpoint_audience</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Azure Management
+Endpoint Audience.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ResourceCertificateAndAcsDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ResourceCertificateAndAcsDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">global_acs_namespace: str</em>, <em class="sig-param">global_acs_host_name: str</em>, <em class="sig-param">global_acs_rp_realm: str</em>, <em class="sig-param">certificate: bytearray = None</em>, <em class="sig-param">friendly_name: str = None</em>, <em class="sig-param">issuer: str = None</em>, <em class="sig-param">resource_id: int = None</em>, <em class="sig-param">subject: str = None</em>, <em class="sig-param">thumbprint: str = None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/resource_certificate_and_acs_details_py3.html#ResourceCertificateAndAcsDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ResourceCertificateAndAcsDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_certificate_details_py3.ResourceCertificateDetails</span></code></p>
+<p>Certificate details representing the Vault credentials for ACS.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – The base64 encoded certificate raw data string.</p></li>
+<li><p><strong>friendly_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate friendly name.</p></li>
+<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
+<li><p><strong>resource_id</strong> (<em>long</em>) – Resource ID of the vault.</p></li>
+<li><p><strong>subject</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Subject Name.</p></li>
+<li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate thumbprint.</p></li>
+<li><p><strong>valid_from</strong> (<em>datetime</em>) – Certificate Validity start Date time.</p></li>
+<li><p><strong>valid_to</strong> (<em>datetime</em>) – Certificate Validity End Date time.</p></li>
+<li><p><strong>auth_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>global_acs_namespace</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. ACS namespace name - tenant for our
+service.</p></li>
+<li><p><strong>global_acs_host_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Acs mgmt host name to connect to.</p></li>
+<li><p><strong>global_acs_rp_realm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Global ACS namespace RP realm.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ResourceCertificateDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ResourceCertificateDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">certificate: bytearray = None</em>, <em class="sig-param">friendly_name: str = None</em>, <em class="sig-param">issuer: str = None</em>, <em class="sig-param">resource_id: int = None</em>, <em class="sig-param">subject: str = None</em>, <em class="sig-param">thumbprint: str = None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_to=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/resource_certificate_details_py3.html#ResourceCertificateDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ResourceCertificateDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Certificate details representing the Vault credentials.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ResourceCertificateAndAadDetails,
+ResourceCertificateAndAcsDetails</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – The base64 encoded certificate raw data string.</p></li>
+<li><p><strong>friendly_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate friendly name.</p></li>
+<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
+<li><p><strong>resource_id</strong> (<em>long</em>) – Resource ID of the vault.</p></li>
+<li><p><strong>subject</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Subject Name.</p></li>
+<li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate thumbprint.</p></li>
+<li><p><strong>valid_from</strong> (<em>datetime</em>) – Certificate Validity start Date time.</p></li>
+<li><p><strong>valid_to</strong> (<em>datetime</em>) – Certificate Validity End Date time.</p></li>
+<li><p><strong>auth_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultCertificateResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultCertificateResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_certificate_response_py3.html#VaultCertificateResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultCertificateResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Certificate corresponding to a vault that can be used by clients to
+register themselves with the vault.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.ResourceCertificateDetails" title="azure.mgmt.recoveryservices.models.ResourceCertificateDetails"><em>ResourceCertificateDetails</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.JobsSummary">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">JobsSummary</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">failed_jobs: int = None</em>, <em class="sig-param">suspended_jobs: int = None</em>, <em class="sig-param">in_progress_jobs: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/jobs_summary_py3.html#JobsSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.JobsSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Summary of the replication job data for this vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>failed_jobs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of failed jobs.</p></li>
+<li><p><strong>suspended_jobs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of suspended jobs.</p></li>
+<li><p><strong>in_progress_jobs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of in-progress jobs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.MonitoringSummary">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">MonitoringSummary</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">un_healthy_vm_count: int = None</em>, <em class="sig-param">un_healthy_provider_count: int = None</em>, <em class="sig-param">events_count: int = None</em>, <em class="sig-param">deprecated_provider_count: int = None</em>, <em class="sig-param">supported_provider_count: int = None</em>, <em class="sig-param">unsupported_provider_count: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/monitoring_summary_py3.html#MonitoringSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.MonitoringSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Summary of the replication monitoring data for this vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>un_healthy_vm_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of unhealthy VMs.</p></li>
+<li><p><strong>un_healthy_provider_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of unhealthy replication
+providers.</p></li>
+<li><p><strong>events_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of all critical warnings.</p></li>
+<li><p><strong>deprecated_provider_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of all deprecated recovery service
+providers.</p></li>
+<li><p><strong>supported_provider_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of all the supported recovery
+service providers.</p></li>
+<li><p><strong>unsupported_provider_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of all the unsupported recovery
+service providers.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ReplicationUsage">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ReplicationUsage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">monitoring_summary=None</em>, <em class="sig-param">jobs_summary=None</em>, <em class="sig-param">protected_item_count: int = None</em>, <em class="sig-param">recovery_plan_count: int = None</em>, <em class="sig-param">registered_servers_count: int = None</em>, <em class="sig-param">recovery_services_provider_auth_type: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/replication_usage_py3.html#ReplicationUsage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ReplicationUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Replication usages of a vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitoring_summary</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.MonitoringSummary" title="azure.mgmt.recoveryservices.models.MonitoringSummary"><em>MonitoringSummary</em></a>) – Summary of the replication monitoring data for
+this vault.</p></li>
+<li><p><strong>jobs_summary</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.JobsSummary" title="azure.mgmt.recoveryservices.models.JobsSummary"><em>JobsSummary</em></a>) – Summary of the replication jobs data for this vault.</p></li>
+<li><p><strong>protected_item_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Number of replication protected items for
+this vault.</p></li>
+<li><p><strong>recovery_plan_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Number of replication recovery plans for this
+vault.</p></li>
+<li><p><strong>registered_servers_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Number of servers registered to this
+vault.</p></li>
+<li><p><strong>recovery_services_provider_auth_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The authentication type of
+recovery service providers in the vault.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.CheckNameAvailabilityParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">CheckNameAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/check_name_availability_parameters_py3.html#CheckNameAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.CheckNameAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Resource Name availability input parameters - Resource type and resource
+name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Describes the Resource type:
+Microsoft.RecoveryServices/Vaults</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name for which availability needs to be checked</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.CheckNameAvailabilityResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/check_name_availability_result_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response for check name availability API. Resource provider will set
+availability as true | false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – </p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.CheckNameAvailabilityResultResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">CheckNameAvailabilityResultResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/check_name_availability_result_resource_py3.html#CheckNameAvailabilityResultResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.CheckNameAvailabilityResultResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_py3.Resource</span></code></p>
+<p>Response for check name availability API. Resource provider will set
+availability as true | false.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.CheckNameAvailabilityResult" title="azure.mgmt.recoveryservices.models.CheckNameAvailabilityResult"><em>CheckNameAvailabilityResult</em></a>) – CheckNameAvailabilityResultResource properties</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_display_py3.html#ClientDiscoveryDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Localized display information of an operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the provider for display purposes</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ResourceType for which this Operation can be performed.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operations Name itself.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the operation having details of what
+operation is about.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryForLogSpecification">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryForLogSpecification</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">blob_duration: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_for_log_specification_py3.html#ClientDiscoveryForLogSpecification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForLogSpecification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Class to represent shoebox log specification in json client discovery.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the log.</p></li>
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Localized display name</p></li>
+<li><p><strong>blob_duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Blobs created in customer storage account per hour</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryForServiceSpecification">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryForServiceSpecification</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">log_specifications=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_for_service_specification_py3.html#ClientDiscoveryForServiceSpecification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForServiceSpecification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Class to represent shoebox service specification in json client discovery.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log_specifications</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForLogSpecification" title="azure.mgmt.recoveryservices.models.ClientDiscoveryForLogSpecification"><em>ClientDiscoveryForLogSpecification</em></a><em>]</em>) – List of log specifications of this operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryForProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryForProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">service_specification=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_for_properties_py3.html#ClientDiscoveryForProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Class to represent shoebox properties in json client discovery.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_specification</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForServiceSpecification" title="azure.mgmt.recoveryservices.models.ClientDiscoveryForServiceSpecification"><em>ClientDiscoveryForServiceSpecification</em></a>) – Operation properties.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApi">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryValueForSingleApi</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_value_for_single_api_py3.html#ClientDiscoveryValueForSingleApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Available operation details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Operation.</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryDisplay" title="azure.mgmt.recoveryservices.models.ClientDiscoveryDisplay"><em>ClientDiscoveryDisplay</em></a>) – Contains the localized display information for this
+particular operation</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The intended executor of the operation;governs the display
+of the operation in the RBAC UX and the audit logs UX</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryForProperties" title="azure.mgmt.recoveryservices.models.ClientDiscoveryForProperties"><em>ClientDiscoveryForProperties</em></a>) – ShoeBox properties for the given operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ARM Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Identifies the unique system identifier for each Azure resource.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.SkuName" title="azure.mgmt.recoveryservices.models.SkuName"><em>SkuName</em></a>) – Required. The Sku name. Possible values include: ‘Standard’,
+‘RS0’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.TrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_py3.Resource</span></code></p>
+<p>Tracked resource with location.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.PatchTrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">PatchTrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/patch_tracked_resource_py3.html#PatchTrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.PatchTrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_py3.Resource</span></code></p>
+<p>Tracked resource with location.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.UpgradeDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">UpgradeDetails</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/upgrade_details_py3.html#UpgradeDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UpgradeDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details for upgrading vault.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operation_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of the vault upgrade operation.</p></li>
+<li><p><strong>start_time_utc</strong> (<em>datetime</em>) – UTC time at which the upgrade operation has started.</p></li>
+<li><p><strong>last_updated_time_utc</strong> (<em>datetime</em>) – UTC time at which the upgrade operation
+status was last updated.</p></li>
+<li><p><strong>end_time_utc</strong> (<em>datetime</em>) – UTC time at which the upgrade operation has ended.</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState" title="azure.mgmt.recoveryservices.models.VaultUpgradeState"><em>VaultUpgradeState</em></a>) – Status of the vault upgrade operation. Possible values
+include: ‘Unknown’, ‘InProgress’, ‘Upgraded’, ‘Failed’</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Message to the user containing information about the
+upgrade operation.</p></li>
+<li><p><strong>trigger_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.TriggerType" title="azure.mgmt.recoveryservices.models.TriggerType"><em>TriggerType</em></a>) – The way the vault upgrade was triggered. Possible
+values include: ‘UserTriggered’, ‘ForcedUpgrade’</p></li>
+<li><p><strong>upgraded_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID of the upgraded vault.</p></li>
+<li><p><strong>previous_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID of the vault before the upgrade.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">upgrade_details=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_properties_py3.html#VaultProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties of the vault.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning State.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>upgrade_details</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.UpgradeDetails" title="azure.mgmt.recoveryservices.models.UpgradeDetails"><em>UpgradeDetails</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.Vault">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_py3.html#Vault"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.Vault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>Resource information, as returned by the resource provider.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.VaultProperties" title="azure.mgmt.recoveryservices.models.VaultProperties"><em>VaultProperties</em></a>) – </p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.Sku" title="azure.mgmt.recoveryservices.models.Sku"><em>Sku</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.PatchVault">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">PatchVault</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/patch_vault_py3.html#PatchVault"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.PatchVault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.patch_tracked_resource_py3.PatchTrackedResource</span></code></p>
+<p>Patch Resource information, as returned by the resource provider.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.VaultProperties" title="azure.mgmt.recoveryservices.models.VaultProperties"><em>VaultProperties</em></a>) – </p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.Sku" title="azure.mgmt.recoveryservices.models.Sku"><em>Sku</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultExtendedInfoResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultExtendedInfoResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">e_tag: str = None</em>, <em class="sig-param">integrity_key: str = None</em>, <em class="sig-param">encryption_key: str = None</em>, <em class="sig-param">encryption_key_thumbprint: str = None</em>, <em class="sig-param">algorithm: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_extended_info_resource_py3.html#VaultExtendedInfoResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultExtendedInfoResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.recoveryservices.models.resource_py3.Resource</span></code></p>
+<p>Vault extended information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id represents the complete path to the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name associated with the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type represents the complete path of the form
+Namespace/ResourceType/ResourceType/…</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional ETag.</p></li>
+<li><p><strong>integrity_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Integrity key.</p></li>
+<li><p><strong>encryption_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Encryption key.</p></li>
+<li><p><strong>encryption_key_thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Encryption key thumbprint.</p></li>
+<li><p><strong>algorithm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Algorithm for Vault ExtendedInfo</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.NameInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">NameInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">localized_value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/name_info_py3.html#NameInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.NameInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The name of usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Value of usage.</p></li>
+<li><p><strong>localized_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Localized value of usage.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultUsage">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultUsage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">quota_period: str = None</em>, <em class="sig-param">next_reset_time=None</em>, <em class="sig-param">current_value: int = None</em>, <em class="sig-param">limit: int = None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_usage_py3.html#VaultUsage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Usages of a vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.recoveryservices.models.UsagesUnit" title="azure.mgmt.recoveryservices.models.UsagesUnit"><em>UsagesUnit</em></a>) – Unit of the usage. Possible values include: ‘Count’, ‘Bytes’,
+‘Seconds’, ‘Percent’, ‘CountPerSecond’, ‘BytesPerSecond’</p></li>
+<li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Quota period of usage.</p></li>
+<li><p><strong>next_reset_time</strong> (<em>datetime</em>) – Next reset time of usage.</p></li>
+<li><p><strong>current_value</strong> (<em>long</em>) – Current value of usage.</p></li>
+<li><p><strong>limit</strong> (<em>long</em>) – Limit of usage.</p></li>
+<li><p><strong>name</strong> (<a class="reference internal" href="#azure.mgmt.recoveryservices.models.NameInfo" title="azure.mgmt.recoveryservices.models.NameInfo"><em>NameInfo</em></a>) – Name of usage.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ReplicationUsagePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ReplicationUsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/replication_usage_paged.html#ReplicationUsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ReplicationUsagePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.recoveryservices.models.ReplicationUsage" title="azure.mgmt.recoveryservices.models.ReplicationUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReplicationUsage</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_paged.html#VaultPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.recoveryservices.models.Vault" title="azure.mgmt.recoveryservices.models.Vault"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vault</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApiPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">ClientDiscoveryValueForSingleApiPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/client_discovery_value_for_single_api_paged.html#ClientDiscoveryValueForSingleApiPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApiPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApi" title="azure.mgmt.recoveryservices.models.ClientDiscoveryValueForSingleApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClientDiscoveryValueForSingleApi</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultUsagePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultUsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/vault_usage_paged.html#VaultUsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUsagePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.recoveryservices.models.VaultUsage" title="azure.mgmt.recoveryservices.models.VaultUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">VaultUsage</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.AuthType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">AuthType</code><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/recovery_services_client_enums.html#AuthType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.AuthType.aad">
+<code class="sig-name descname">aad</code><em class="property"> = 'AAD'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType.aad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.AuthType.access_control_service">
+<code class="sig-name descname">access_control_service</code><em class="property"> = 'AccessControlService'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType.access_control_service" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.AuthType.acs">
+<code class="sig-name descname">acs</code><em class="property"> = 'ACS'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType.acs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.AuthType.azure_active_directory">
+<code class="sig-name descname">azure_active_directory</code><em class="property"> = 'AzureActiveDirectory'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType.azure_active_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.AuthType.invalid">
+<code class="sig-name descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.AuthType.invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.SkuName">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/recovery_services_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.SkuName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.SkuName.rs0">
+<code class="sig-name descname">rs0</code><em class="property"> = 'RS0'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.SkuName.rs0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.SkuName.standard">
+<code class="sig-name descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.SkuName.standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.VaultUpgradeState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">VaultUpgradeState</code><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/recovery_services_client_enums.html#VaultUpgradeState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.VaultUpgradeState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.VaultUpgradeState.in_progress">
+<code class="sig-name descname">in_progress</code><em class="property"> = 'InProgress'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState.in_progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.VaultUpgradeState.unknown">
+<code class="sig-name descname">unknown</code><em class="property"> = 'Unknown'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState.unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.VaultUpgradeState.upgraded">
+<code class="sig-name descname">upgraded</code><em class="property"> = 'Upgraded'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.VaultUpgradeState.upgraded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.TriggerType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">TriggerType</code><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/recovery_services_client_enums.html#TriggerType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.TriggerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.TriggerType.forced_upgrade">
+<code class="sig-name descname">forced_upgrade</code><em class="property"> = 'ForcedUpgrade'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.TriggerType.forced_upgrade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.TriggerType.user_triggered">
+<code class="sig-name descname">user_triggered</code><em class="property"> = 'UserTriggered'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.TriggerType.user_triggered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.recoveryservices.models.</code><code class="sig-name descname">UsagesUnit</code><a class="reference internal" href="../_modules/azure/mgmt/recoveryservices/models/recovery_services_client_enums.html#UsagesUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.bytes">
+<code class="sig-name descname">bytes</code><em class="property"> = 'Bytes'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.bytes_per_second">
+<code class="sig-name descname">bytes_per_second</code><em class="property"> = 'BytesPerSecond'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.bytes_per_second" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.count">
+<code class="sig-name descname">count</code><em class="property"> = 'Count'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.count_per_second">
+<code class="sig-name descname">count_per_second</code><em class="property"> = 'CountPerSecond'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.count_per_second" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.percent">
+<code class="sig-name descname">percent</code><em class="property"> = 'Percent'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservices.models.UsagesUnit.seconds">
+<code class="sig-name descname">seconds</code><em class="property"> = 'Seconds'</em><a class="headerlink" href="#azure.mgmt.recoveryservices.models.UsagesUnit.seconds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.recoveryservices.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.recoveryservices.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.recoveryservices.html" class="btn btn-neutral float-left" title="azure.mgmt.recoveryservices package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

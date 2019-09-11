@@ -1,0 +1,999 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.imagebuilder.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.imagebuilder.operations module" href="azure.mgmt.imagebuilder.operations.html" />
+    <link rel="prev" title="azure.mgmt.imagebuilder package" href="azure.mgmt.imagebuilder.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.imagebuilder.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.imagebuilder.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.imagebuilder.operations.html">azure.mgmt.imagebuilder.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.imagebuilder.html#module-azure.mgmt.imagebuilder">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a> &raquo;</li>
+        
+      <li>azure.mgmt.imagebuilder.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.imagebuilder.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.imagebuilder.models">
+<span id="azure-mgmt-imagebuilder-models-module"></span><h1>azure.mgmt.imagebuilder.models module<a class="headerlink" href="#module-azure.mgmt.imagebuilder.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateSource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_source_py3.html#ImageTemplateSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ImageTemplateSource.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ImageTemplateIsoSource, ImageTemplatePlatformImageSource,
+ImageTemplateManagedImageSource, ImageTemplateSharedImageVersionSource</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateCustomizer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateCustomizer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_customizer_py3.html#ImageTemplateCustomizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateCustomizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ImageTemplateCustomizer.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ImageTemplateShellCustomizer,
+ImageTemplateRestartCustomizer, ImageTemplatePowerShellCustomizer,
+ImageTemplateFileCustomizer</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly Name to provide context on what this customization
+step does</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateDistributor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateDistributor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">run_output_name: str</em>, <em class="sig-param">artifact_tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_distributor_py3.html#ImageTemplateDistributor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateDistributor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Generic distribution object.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ImageTemplateManagedImageDistributor,
+ImageTemplateSharedImageDistributor, ImageTemplateVhdDistributor</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_output_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name to be used for the associated
+RunOutput.</p></li>
+<li><p><strong>artifact_tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags that will be applied to the artifact once it
+has been created/updated by the distributor.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ProvisioningError">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ProvisioningError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provisioning_error_code=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/provisioning_error_py3.html#ProvisioningError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ProvisioningError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ProvisioningError.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provisioning_error_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – Error code of the provisioning failure.
+Possible values include: ‘BadSourceType’, ‘BadPIRSource’, ‘BadISOSource’,
+‘BadManagedImageSource’, ‘BadSharedImageVersionSource’,
+‘BadCustomizerType’, ‘UnsupportedCustomizerType’, ‘NoCustomizerScript’,
+‘BadDistributeType’, ‘BadSharedImageDistribute’, ‘ServerError’, ‘Other’</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Verbose error message about the provisioning failure</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateLastRunStatus">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateLastRunStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">run_state=None</em>, <em class="sig-param">run_sub_state=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_last_run_status_py3.html#ImageTemplateLastRunStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateLastRunStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ImageTemplateLastRunStatus.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_time</strong> (<em>datetime</em>) – Start time of the last run (UTC)</p></li>
+<li><p><strong>end_time</strong> (<em>datetime</em>) – End time of the last run (UTC)</p></li>
+<li><p><strong>run_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – State of the last run. Possible values include:
+‘Running’, ‘Succeeded’, ‘PartiallySucceeded’, ‘Failed’</p></li>
+<li><p><strong>run_sub_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – Sub-state of the last run. Possible values include:
+‘Queued’, ‘Building’, ‘Customizing’, ‘Distributing’</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Verbose information about the last run state</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateIdentityUserAssignedIdentitiesValue">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateIdentityUserAssignedIdentitiesValue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_identity_user_assigned_identities_value_py3.html#ImageTemplateIdentityUserAssignedIdentitiesValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateIdentityUserAssignedIdentitiesValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ImageTemplateIdentityUserAssignedIdentitiesValue.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The principal id of user assigned identity.</p></li>
+<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The client id of user assigned identity.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateIdentity">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateIdentity</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_assigned_identities=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_identity_py3.html#ImageTemplateIdentity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Identity for the image template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.imagebuilder.models.ResourceIdentityType" title="azure.mgmt.imagebuilder.models.ResourceIdentityType"><em>ResourceIdentityType</em></a>) – The type of identity used for the image template. The type
+‘None’ will remove any identities from the image template. Possible values
+include: ‘UserAssigned’, ‘None’</p></li>
+<li><p><strong>user_assigned_identities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
+</em><a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateIdentityUserAssignedIdentitiesValue" title="azure.mgmt.imagebuilder.models.ImageTemplateIdentityUserAssignedIdentitiesValue"><em>ImageTemplateIdentityUserAssignedIdentitiesValue</em></a><em>]</em>) – The list of user identities associated
+with the image template. The user identity dictionary key references will
+be ARM resource ids in the form:
+‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">source</em>, <em class="sig-param">distribute</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">customize=None</em>, <em class="sig-param">build_timeout_in_minutes: int = None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_py3.html#ImageTemplate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.resource_py3.Resource</span></code></p>
+<p>ImageTemplate.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – Provisioning state of the resource. Possible
+values include: ‘Creating’, ‘Updating’, ‘Succeeded’, ‘Failed’, ‘Deleting’</p></li>
+<li><p><strong>provisioning_error</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.ProvisioningError" title="azure.mgmt.imagebuilder.models.ProvisioningError"><em>ProvisioningError</em></a>) – Provisioning error, if any</p></li>
+<li><p><strong>last_run_status</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateLastRunStatus" title="azure.mgmt.imagebuilder.models.ImageTemplateLastRunStatus"><em>ImageTemplateLastRunStatus</em></a>) – State of ‘run’ that is currently executing or was
+last executed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateSource" title="azure.mgmt.imagebuilder.models.ImageTemplateSource"><em>ImageTemplateSource</em></a>) – Required. Specifies the properties used to describe the
+source image.</p></li>
+<li><p><strong>customize</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateCustomizer" title="azure.mgmt.imagebuilder.models.ImageTemplateCustomizer"><em>ImageTemplateCustomizer</em></a><em>]</em>) – Specifies the properties used to describe the
+customization steps of the image, like Image source etc</p></li>
+<li><p><strong>distribute</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateDistributor" title="azure.mgmt.imagebuilder.models.ImageTemplateDistributor"><em>ImageTemplateDistributor</em></a><em>]</em>) – Required. The distribution targets where the image
+output needs to go to.</p></li>
+<li><p><strong>build_timeout_in_minutes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum duration to wait while building
+the image template. Omit or specify 0 to use the default (60 minutes).</p></li>
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateIdentity" title="azure.mgmt.imagebuilder.models.ImageTemplateIdentity"><em>ImageTemplateIdentity</em></a>) – The identity of the image template, if configured.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateIsoSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateIsoSource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_uri: str</em>, <em class="sig-param">sha256_checksum: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_iso_source_py3.html#ImageTemplateIsoSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateIsoSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_source_py3.ImageTemplateSource</span></code></p>
+<p>Describes an image source that is an installation ISO. Currently only
+supports Red Hat Enterprise Linux 7.2-7.5 ISO’s.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>source_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. URI to get the ISO image. This URI has to be
+accessible to the resource provider at the time of the image template
+creation.</p></li>
+<li><p><strong>sha256_checksum</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. SHA256 Checksum of the ISO image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplatePlatformImageSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplatePlatformImageSource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">publisher: str = None</em>, <em class="sig-param">offer: str = None</em>, <em class="sig-param">sku: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_platform_image_source_py3.html#ImageTemplatePlatformImageSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplatePlatformImageSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_source_py3.ImageTemplateSource</span></code></p>
+<p>Describes an image source from [Azure Gallery
+Images](<a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages">https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages</a>).</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image Publisher in [Azure Gallery
+Images](<a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages">https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages</a>).</p></li>
+<li><p><strong>offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image offer from the [Azure Gallery
+Images](<a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages">https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages</a>).</p></li>
+<li><p><strong>sku</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image sku from the [Azure Gallery
+Images](<a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages">https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages</a>).</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image version from the [Azure Gallery
+Images](<a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages">https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateManagedImageSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateManagedImageSource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">image_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_managed_image_source_py3.html#ImageTemplateManagedImageSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateManagedImageSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_source_py3.ImageTemplateSource</span></code></p>
+<p>Describes an image source that is a managed image in customer subscription.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>image_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. ARM resource id of the managed image in
+customer subscription</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateSharedImageVersionSource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateSharedImageVersionSource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">image_version_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_shared_image_version_source_py3.html#ImageTemplateSharedImageVersionSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateSharedImageVersionSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_source_py3.ImageTemplateSource</span></code></p>
+<p>Describes an image source that is an image version in a shared image
+gallery.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>image_version_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. ARM resource id of the image version in
+the shared image gallery</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateShellCustomizer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateShellCustomizer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">script_uri: str = None</em>, <em class="sig-param">inline=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_shell_customizer_py3.html#ImageTemplateShellCustomizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateShellCustomizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_customizer_py3.ImageTemplateCustomizer</span></code></p>
+<p>Runs a shell script during the customization phase (Linux). Corresponds to
+Packer shell provisioner. Exactly one of ‘scriptUri’ or ‘inline’ can be
+specified.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly Name to provide context on what this customization
+step does</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>script_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URI of the shell script to be run for customizing. It
+can be a github link, SAS URI for Azure Storage, etc</p></li>
+<li><p><strong>inline</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Array of shell commands to execute</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateRestartCustomizer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateRestartCustomizer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">restart_command: str = None</em>, <em class="sig-param">restart_check_command: str = None</em>, <em class="sig-param">restart_timeout: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_restart_customizer_py3.html#ImageTemplateRestartCustomizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateRestartCustomizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_customizer_py3.ImageTemplateCustomizer</span></code></p>
+<p>Reboots a VM and waits for it to come back online (Windows). Corresponds to
+Packer windows-restart provisioner.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly Name to provide context on what this customization
+step does</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>restart_command</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Command to execute the restart [Default: ‘shutdown
+/r /f /t 0 /c “packer restart”’]</p></li>
+<li><p><strong>restart_check_command</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Command to check if restart succeeded
+[Default: ‘’]</p></li>
+<li><p><strong>restart_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Restart timeout specified as a string of magnitude
+and unit, e.g. ‘5m’ (5 minutes) or ‘2h’ (2 hours) [Default: ‘5m’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplatePowerShellCustomizer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplatePowerShellCustomizer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">script_uri: str = None</em>, <em class="sig-param">inline=None</em>, <em class="sig-param">valid_exit_codes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_power_shell_customizer_py3.html#ImageTemplatePowerShellCustomizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplatePowerShellCustomizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_customizer_py3.ImageTemplateCustomizer</span></code></p>
+<p>Runs the specified PowerShell on the VM (Windows). Corresponds to Packer
+powershell provisioner. Exactly one of ‘scriptUri’ or ‘inline’ can be
+specified.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly Name to provide context on what this customization
+step does</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>script_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URI of the PowerShell script to be run for customizing.
+It can be a github link, SAS URI for Azure Storage, etc</p></li>
+<li><p><strong>inline</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Array of PowerShell commands to execute</p></li>
+<li><p><strong>valid_exit_codes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em>]</em>) – Valid exit codes for the PowerShell script.
+[Default: 0]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateFileCustomizer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateFileCustomizer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">source_uri: str = None</em>, <em class="sig-param">destination: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_file_customizer_py3.html#ImageTemplateFileCustomizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateFileCustomizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_customizer_py3.ImageTemplateCustomizer</span></code></p>
+<p>Uploads files to VMs (Linux, Windows). Corresponds to Packer file
+provisioner.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly Name to provide context on what this customization
+step does</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>source_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI of the file to be uploaded for customizing the
+VM. It can be a github link, SAS URI for Azure Storage, etc</p></li>
+<li><p><strong>destination</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The absolute path to a file (with nested directory
+structures already created) where the file (from sourceUri) will be
+uploaded to in the VM</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateManagedImageDistributor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateManagedImageDistributor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">run_output_name: str</em>, <em class="sig-param">image_id: str</em>, <em class="sig-param">location: str</em>, <em class="sig-param">artifact_tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_managed_image_distributor_py3.html#ImageTemplateManagedImageDistributor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateManagedImageDistributor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_distributor_py3.ImageTemplateDistributor</span></code></p>
+<p>Distribute as a Managed Disk Image.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_output_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name to be used for the associated
+RunOutput.</p></li>
+<li><p><strong>artifact_tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags that will be applied to the artifact once it
+has been created/updated by the distributor.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>image_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource Id of the Managed Disk Image</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Azure location for the image, should match if
+image already exists</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateSharedImageDistributor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateSharedImageDistributor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">run_output_name: str</em>, <em class="sig-param">gallery_image_id: str</em>, <em class="sig-param">replication_regions</em>, <em class="sig-param">artifact_tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_shared_image_distributor_py3.html#ImageTemplateSharedImageDistributor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateSharedImageDistributor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_distributor_py3.ImageTemplateDistributor</span></code></p>
+<p>Distribute via Shared Image Gallery.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_output_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name to be used for the associated
+RunOutput.</p></li>
+<li><p><strong>artifact_tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags that will be applied to the artifact once it
+has been created/updated by the distributor.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>gallery_image_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource Id of the Shared Image Gallery
+image</p></li>
+<li><p><strong>replication_regions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateVhdDistributor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateVhdDistributor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">run_output_name: str</em>, <em class="sig-param">artifact_tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_vhd_distributor_py3.html#ImageTemplateVhdDistributor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateVhdDistributor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.image_template_distributor_py3.ImageTemplateDistributor</span></code></p>
+<p>Distribute via VHD in a storage account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_output_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name to be used for the associated
+RunOutput.</p></li>
+<li><p><strong>artifact_tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags that will be applied to the artifact once it
+has been created/updated by the distributor.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplateUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_update_parameters_py3.html#ImageTemplateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters for updating an image template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplateIdentity" title="azure.mgmt.imagebuilder.models.ImageTemplateIdentity"><em>ImageTemplateIdentity</em></a>) – The identity of the image template, if configured.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The user-specified tags associated with the image template.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.RunOutput">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">RunOutput</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">artifact_id: str = None</em>, <em class="sig-param">artifact_uri: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/run_output_py3.html#RunOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.RunOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.imagebuilder.models.sub_resource_py3.SubResource</span></code></p>
+<p>Represents an output that was created by running an image template.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – Provisioning state of the resource. Possible
+values include: ‘Creating’, ‘Updating’, ‘Succeeded’, ‘Failed’, ‘Deleting’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name</p></li>
+<li><p><strong>artifact_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource id of the artifact.</p></li>
+<li><p><strong>artifact_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location URI of the artifact.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.SubResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">SubResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/sub_resource_py3.html#SubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.SubResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Sub Resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that describes the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly name of the resource provider.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation type. For example: read, write, delete, or
+listKeys/action</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource type on which the operation is performed.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The friendly name of the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A REST API operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation name. This is of the format
+{provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.OperationDisplay" title="azure.mgmt.imagebuilder.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that describes the operation.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The intended executor of the operation.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Properties of the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ApiErrorBase">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ApiErrorBase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">target: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/api_error_base_py3.html#ApiErrorBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ApiErrorBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Api error base.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error code.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target of the particular error.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.InnerError">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">InnerError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">exception_type: str = None</em>, <em class="sig-param">error_detail: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/inner_error_py3.html#InnerError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.InnerError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Inner error details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exception_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The exception type.</p></li>
+<li><p><strong>error_detail</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The internal error message or exception dump.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ApiError">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ApiError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">details=None</em>, <em class="sig-param">inner_error=None</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">target: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/api_error_py3.html#ApiError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ApiError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Api error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.imagebuilder.models.ApiErrorBase" title="azure.mgmt.imagebuilder.models.ApiErrorBase"><em>ApiErrorBase</em></a><em>]</em>) – The Api error details</p></li>
+<li><p><strong>inner_error</strong> (<a class="reference internal" href="#azure.mgmt.imagebuilder.models.InnerError" title="azure.mgmt.imagebuilder.models.InnerError"><em>InnerError</em></a>) – The Api inner error</p></li>
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error code.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target of the particular error.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.imagebuilder.models.ApiErrorException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ApiErrorException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/api_error_py3.html#ApiErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ApiErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ApiError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ImageTemplatePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ImageTemplatePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_template_paged.html#ImageTemplatePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ImageTemplatePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.imagebuilder.models.ImageTemplate" title="azure.mgmt.imagebuilder.models.ImageTemplate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTemplate</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.RunOutputPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">RunOutputPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/run_output_paged.html#RunOutputPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.RunOutputPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.imagebuilder.models.RunOutput" title="azure.mgmt.imagebuilder.models.RunOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">RunOutput</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.OperationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.imagebuilder.models.Operation" title="azure.mgmt.imagebuilder.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.imagebuilder.models.ResourceIdentityType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.imagebuilder.models.</code><code class="sig-name descname">ResourceIdentityType</code><a class="reference internal" href="../_modules/azure/mgmt/imagebuilder/models/image_builder_client_enums.html#ResourceIdentityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ResourceIdentityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.imagebuilder.models.ResourceIdentityType.none">
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ResourceIdentityType.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.imagebuilder.models.ResourceIdentityType.user_assigned">
+<code class="sig-name descname">user_assigned</code><em class="property"> = 'UserAssigned'</em><a class="headerlink" href="#azure.mgmt.imagebuilder.models.ResourceIdentityType.user_assigned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.imagebuilder.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.imagebuilder.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.imagebuilder.html" class="btn btn-neutral float-left" title="azure.mgmt.imagebuilder package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

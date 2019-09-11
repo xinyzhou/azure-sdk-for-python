@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.common.mixins &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.servicebus.common.mixins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.servicebus.common.mixins</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span>
+    <span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">unquote_plus</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">unquote_plus</span>
+
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">Source</span>
+
+<span class="kn">import</span> <span class="nn">azure.common</span>
+<span class="kn">import</span> <span class="nn">azure.servicebus</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.constants</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">NEXT_AVAILABLE</span><span class="p">,</span>
+    <span class="n">SESSION_LOCKED_UNTIL</span><span class="p">,</span>
+    <span class="n">DATETIMEOFFSET_EPOCH</span><span class="p">,</span>
+    <span class="n">SESSION_FILTER</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.utils</span> <span class="k">import</span> <span class="n">parse_conn_str</span><span class="p">,</span> <span class="n">build_uri</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.errors</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">ServiceBusConnectionError</span><span class="p">,</span>
+    <span class="n">ServiceBusResourceNotFound</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.control_client</span> <span class="k">import</span> <span class="n">ServiceBusService</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.control_client.models</span> <span class="k">import</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">,</span> <span class="n">Queue</span><span class="p">,</span> <span class="n">Subscription</span><span class="p">,</span> <span class="n">Topic</span>
+
+
+<div class="viewcode-block" id="ServiceBusMixin"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">_get_host</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;sb://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_base</span>
+
+<div class="viewcode-block" id="ServiceBusMixin.create_queue"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.create_queue">[docs]</a>    <span class="k">def</span> <span class="nf">create_queue</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">queue_name</span><span class="p">,</span>
+            <span class="n">lock_duration</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">requires_session</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">max_delivery_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a queue entity.</span>
+
+<span class="sd">        :param queue_name: The name of the new queue.</span>
+<span class="sd">        :type queue_name: str</span>
+<span class="sd">        :param lock_duration: The lock durection in seconds for each message in the queue.</span>
+<span class="sd">        :type lock_duration: int</span>
+<span class="sd">        :param max_size_in_megabytes: The max size to allow the queue to grow to.</span>
+<span class="sd">        :type max_size_in_megabytes: int</span>
+<span class="sd">        :param requires_duplicate_detection: Whether the queue will require every message with</span>
+<span class="sd">         a specified time frame to have a unique ID. Non-unique messages will be discarded.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type requires_duplicate_detection: bool</span>
+<span class="sd">        :param requires_session: Whether the queue will be sessionful, and therefore require all</span>
+<span class="sd">         message to have a Session ID and be received by a sessionful receiver.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type requires_session: bool</span>
+<span class="sd">        :param default_message_time_to_live: The length of time a message will remain in the queue</span>
+<span class="sd">         before it is either discarded or moved to the dead letter queue.</span>
+<span class="sd">        :type default_message_time_to_live: ~datetime.timedelta</span>
+<span class="sd">        :param dead_lettering_on_message_expiration: Whether to move expired messages to the</span>
+<span class="sd">         dead letter queue. Default value is False.</span>
+<span class="sd">        :type dead_lettering_on_message_expiration: bool</span>
+<span class="sd">        :param duplicate_detection_history_time_window: The period within which all incoming messages</span>
+<span class="sd">         must have a unique message ID.</span>
+<span class="sd">        :type duplicate_detection_history_time_window: ~datetime.timedelta</span>
+<span class="sd">        :param max_delivery_count: The maximum number of times a message will attempt to be delivered</span>
+<span class="sd">         before it is moved to the dead letter queue.</span>
+<span class="sd">        :type max_delivery_count: int</span>
+<span class="sd">        :param enable_batched_operations:</span>
+<span class="sd">        :type: enable_batched_operations: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.common.AzureConflictHttpError if a queue of the same name already exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">queue_properties</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">(</span>
+            <span class="n">lock_duration</span><span class="o">=</span><span class="s2">&quot;PT</span><span class="si">{}</span><span class="s2">S&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">lock_duration</span><span class="p">)),</span>
+            <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="n">max_size_in_megabytes</span><span class="p">,</span>
+            <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="n">requires_duplicate_detection</span><span class="p">,</span>
+            <span class="n">requires_session</span><span class="o">=</span><span class="n">requires_session</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="n">default_message_time_to_live</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="n">dead_lettering_on_message_expiration</span><span class="p">,</span>
+            <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="n">duplicate_detection_history_time_window</span><span class="p">,</span>
+            <span class="n">max_delivery_count</span><span class="o">=</span><span class="n">max_delivery_count</span><span class="p">,</span>
+            <span class="n">enable_batched_operations</span><span class="o">=</span><span class="n">enable_batched_operations</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">create_queue</span><span class="p">(</span><span class="n">queue_name</span><span class="p">,</span> <span class="n">queue</span><span class="o">=</span><span class="n">queue_properties</span><span class="p">,</span> <span class="n">fail_on_exist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusMixin.delete_queue"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.delete_queue">[docs]</a>    <span class="k">def</span> <span class="nf">delete_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a queue entity.</span>
+
+<span class="sd">        :param queue_name: The name of the queue to delete.</span>
+<span class="sd">        :type queue_name: str</span>
+<span class="sd">        :param fail_not_exist: Whether to raise an exception if the named queue is not</span>
+<span class="sd">         found. If set to True, a ServiceBusResourceNotFound will be raised.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type fail_not_exist: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namesapce is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the queue is not found</span>
+<span class="sd">         and `fail_not_exist` is set to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">delete_queue</span><span class="p">(</span><span class="n">queue_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="n">fail_not_exist</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">azure</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">AzureMissingResourceHttpError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed queue &#39;</span><span class="si">{}</span><span class="s2">&#39; does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">queue_name</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusMixin.create_topic"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.create_topic">[docs]</a>    <span class="k">def</span> <span class="nf">create_topic</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a topic entity.</span>
+
+<span class="sd">        :param topic_name: The name of the new topic.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :param max_size_in_megabytes: The max size to allow the topic to grow to.</span>
+<span class="sd">        :type max_size_in_megabytes: int</span>
+<span class="sd">        :param requires_duplicate_detection: Whether the topic will require every message with</span>
+<span class="sd">         a specified time frame to have a unique ID. Non-unique messages will be discarded.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type requires_duplicate_detection: bool</span>
+<span class="sd">        :param default_message_time_to_live: The length of time a message will remain in the topic</span>
+<span class="sd">         before it is either discarded or moved to the dead letter queue.</span>
+<span class="sd">        :type default_message_time_to_live: ~datetime.timedelta</span>
+<span class="sd">        :param duplicate_detection_history_time_window: The period within which all incoming messages</span>
+<span class="sd">         must have a unique message ID.</span>
+<span class="sd">        :type duplicate_detection_history_time_window: ~datetime.timedelta</span>
+<span class="sd">        :param enable_batched_operations:</span>
+<span class="sd">        :type: enable_batched_operations: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.common.AzureConflictHttpError if a topic of the same name already exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">topic_properties</span> <span class="o">=</span> <span class="n">Topic</span><span class="p">(</span>
+            <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="n">max_size_in_megabytes</span><span class="p">,</span>
+            <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="n">requires_duplicate_detection</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="n">default_message_time_to_live</span><span class="p">,</span>
+            <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="n">duplicate_detection_history_time_window</span><span class="p">,</span>
+            <span class="n">enable_batched_operations</span><span class="o">=</span><span class="n">enable_batched_operations</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">create_topic</span><span class="p">(</span><span class="n">topic_name</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">topic_properties</span><span class="p">,</span> <span class="n">fail_on_exist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusMixin.delete_topic"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.delete_topic">[docs]</a>    <span class="k">def</span> <span class="nf">delete_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a topic entity.</span>
+
+<span class="sd">        :param topic_name: The name of the topic to delete.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :param fail_not_exist: Whether to raise an exception if the named topic is not</span>
+<span class="sd">         found. If set to True, a ServiceBusResourceNotFound will be raised.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type fail_not_exist: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namesapce is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the topic is not found</span>
+<span class="sd">         and `fail_not_exist` is set to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">delete_topic</span><span class="p">(</span><span class="n">topic_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="n">fail_not_exist</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">azure</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">AzureMissingResourceHttpError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed queue does not exist.&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusMixin.create_subscription"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.create_subscription">[docs]</a>    <span class="k">def</span> <span class="nf">create_subscription</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">,</span>
+            <span class="n">lock_duration</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">requires_session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_filter_evaluation_exceptions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_delivery_count</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a subscription entity.</span>
+
+<span class="sd">        :param topic_name: The name of the topic under which to create the subscription.</span>
+<span class="sd">        :param subscription_name: The name of the new subscription.</span>
+<span class="sd">        :type subscription_name: str</span>
+<span class="sd">        :param lock_duration: The lock durection in seconds for each message in the subscription.</span>
+<span class="sd">        :type lock_duration: int</span>
+<span class="sd">        :param requires_session: Whether the subscription will be sessionful, and therefore require all</span>
+<span class="sd">         message to have a Session ID and be received by a sessionful receiver.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type requires_session: bool</span>
+<span class="sd">        :param default_message_time_to_live: The length of time a message will remain in the subscription</span>
+<span class="sd">         before it is either discarded or moved to the dead letter queue.</span>
+<span class="sd">        :type default_message_time_to_live: ~datetime.timedelta</span>
+<span class="sd">        :param dead_lettering_on_message_expiration: Whether to move expired messages to the</span>
+<span class="sd">         dead letter queue. Default value is False.</span>
+<span class="sd">        :type dead_lettering_on_message_expiration: bool</span>
+<span class="sd">        :param dead_lettering_on_filter_evaluation_exceptions: Whether to move messages that error on</span>
+<span class="sd">         filtering into the dead letter queue. Default is False, and the messages will be discarded.</span>
+<span class="sd">        :type dead_lettering_on_filter_evaluation_exceptions: bool</span>
+<span class="sd">        :param max_delivery_count: The maximum number of times a message will attempt to be delivered</span>
+<span class="sd">         before it is moved to the dead letter queue.</span>
+<span class="sd">        :type max_delivery_count: int</span>
+<span class="sd">        :param enable_batched_operations:</span>
+<span class="sd">        :type: enable_batched_operations: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</span>
+<span class="sd">        :raises: ~azure.common.AzureConflictHttpError if a queue of the same name already exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sub_properties</span> <span class="o">=</span> <span class="n">Subscription</span><span class="p">(</span>
+            <span class="n">lock_duration</span><span class="o">=</span><span class="s2">&quot;PT</span><span class="si">{}</span><span class="s2">S&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">lock_duration</span><span class="p">)),</span>
+            <span class="n">requires_session</span><span class="o">=</span><span class="n">requires_session</span><span class="p">,</span>
+            <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="n">default_message_time_to_live</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="n">dead_lettering_on_message_expiration</span><span class="p">,</span>
+            <span class="n">dead_lettering_on_filter_evaluation_exceptions</span><span class="o">=</span><span class="n">dead_lettering_on_filter_evaluation_exceptions</span><span class="p">,</span>
+            <span class="n">max_delivery_count</span><span class="o">=</span><span class="n">max_delivery_count</span><span class="p">,</span>
+            <span class="n">enable_batched_operations</span><span class="o">=</span><span class="n">enable_batched_operations</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+                <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">,</span>
+                <span class="n">subscription</span><span class="o">=</span><span class="n">sub_properties</span><span class="p">,</span> <span class="n">fail_on_exist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ServiceBusMixin.delete_subscription"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.ServiceBusMixin.delete_subscription">[docs]</a>    <span class="k">def</span> <span class="nf">delete_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a subscription entity.</span>
+
+<span class="sd">        :param topic_name: The name of the topic where the subscription is.</span>
+<span class="sd">        :type topic_name: str</span>
+<span class="sd">        :param subscription_name: The name of the subscription to delete.</span>
+<span class="sd">        :type subscription_name: str</span>
+<span class="sd">        :param fail_not_exist: Whether to raise an exception if the named subscription or</span>
+<span class="sd">         topic is not found. If set to True, a ServiceBusResourceNotFound will be raised.</span>
+<span class="sd">         Default value is False.</span>
+<span class="sd">        :type fail_not_exist: bool</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the namesapce is not found.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the entity is not found</span>
+<span class="sd">         and `fail_not_exist` is set to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">delete_subscription</span><span class="p">(</span>
+                <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">,</span> <span class="n">fail_not_exist</span><span class="o">=</span><span class="n">fail_not_exist</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace: </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">azure</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">AzureMissingResourceHttpError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed queue does not exist.&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="BaseClient"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.BaseClient">[docs]</a><span class="k">class</span> <span class="nc">BaseClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-instance-attributes</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">shared_access_key_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Construct a new Client to interact with the named Service Bus entity.</span>
+
+<span class="sd">        :param address: The full URI of the Service Bus namespace. This can optionally</span>
+<span class="sd">         include URL-encoded access name and key.</span>
+<span class="sd">        :type address: str</span>
+<span class="sd">        :param name: The name of the entity to which the Client will connect.</span>
+<span class="sd">        :type name: str</span>
+<span class="sd">        :param shared_access_key_name: The name of the shared access policy. This must be supplied</span>
+<span class="sd">         if not encoded into the address.</span>
+<span class="sd">        :type shared_access_key_name: str</span>
+<span class="sd">        :param shared_access_key_value: The shared access key. This must be supplied if not encoded</span>
+<span class="sd">         into the address.</span>
+<span class="sd">        :type shared_access_key_value: str</span>
+<span class="sd">        :param debug: Whether to output network trace logs to the logger. Default is `False`.</span>
+<span class="sd">        :type debug: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">container_id</span> <span class="o">=</span> <span class="s2">&quot;servicebus.pysdk-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">8</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;validated_entity&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="k">else</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;requires_session&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">namespace</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">host_base</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">hostname</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="n">url_username</span> <span class="o">=</span> <span class="n">unquote_plus</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">username</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">username</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">shared_access_key_name</span> <span class="o">=</span> <span class="n">shared_access_key_name</span> <span class="ow">or</span> <span class="n">url_username</span>
+        <span class="n">url_password</span> <span class="o">=</span> <span class="n">unquote_plus</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">password</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">password</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">shared_access_key_value</span> <span class="o">=</span> <span class="n">shared_access_key_value</span> <span class="ow">or</span> <span class="n">url_password</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">shared_access_key_name</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">shared_access_key_value</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Missing shared access key name and/or value.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entity_uri</span> <span class="o">=</span> <span class="s2">&quot;amqps://</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="s2">&quot;sb://</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">path</span><span class="p">),</span>
+            <span class="s1">&#39;key_name&#39;</span><span class="p">:</span> <span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="s1">&#39;shared_access_key&#39;</span><span class="p">:</span> <span class="n">shared_access_key_value</span><span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mgmt_client&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">ServiceBusService</span><span class="p">(</span>
+            <span class="n">service_namespace</span><span class="o">=</span><span class="n">namespace</span><span class="p">,</span>
+            <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">shared_access_key_name</span><span class="p">,</span>
+            <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">shared_access_key_value</span><span class="p">,</span>
+            <span class="n">host_base</span><span class="o">=</span><span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">host_base</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BaseClient.from_entity"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.BaseClient.from_entity">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_entity</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">address</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">entity</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">entity</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">validated_entity</span><span class="o">=</span><span class="n">entity</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">client</span></div>
+
+<div class="viewcode-block" id="BaseClient.from_connection_string"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.BaseClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Client from a Service Bus connection string.</span>
+
+<span class="sd">        :param conn_str: The connection string.</span>
+<span class="sd">        :type conn_str: str</span>
+<span class="sd">        :param name: The name of the entity, if the &#39;EntityName&#39; property is</span>
+<span class="sd">         not included in the connection string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+        <span class="n">entity</span> <span class="o">=</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">entity</span>
+        <span class="n">address</span> <span class="o">=</span> <span class="n">build_uri</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span> <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_entity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Must be implemented by child class.&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BaseClient.get_properties"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.BaseClient.get_properties">[docs]</a>    <span class="k">def</span> <span class="nf">get_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Perform an operation to update the properties of the entity.</span>
+
+<span class="sd">        :returns: The properties of the entity as a dictionary.</span>
+<span class="sd">        :rtype: dict[str, Any]</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusResourceNotFound if the entity does not exist.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.ServiceBusConnectionError if the endpoint cannot be reached.</span>
+<span class="sd">        :raises: ~azure.common.AzureHTTPError if the credentials are invalid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_entity</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;requires_session&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">requires_session</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span>
+        <span class="k">except</span> <span class="n">AzureServiceBusResourceNotFound</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusResourceNotFound</span><span class="p">(</span><span class="s2">&quot;Specificed queue does not exist.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">azure</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">AzureHttpError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entity</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ServiceBusConnectionError</span><span class="p">(</span><span class="s2">&quot;Namespace not found&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="SessionMixin"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.SessionMixin">[docs]</a><span class="k">class</span> <span class="nc">SessionMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-few-public-methods</span>
+
+    <span class="k">def</span> <span class="nf">_get_source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="n">Source</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span><span class="p">)</span>
+        <span class="n">session_filter</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_filter</span> <span class="o">==</span> <span class="n">NEXT_AVAILABLE</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_filter</span>
+        <span class="n">source</span><span class="o">.</span><span class="n">set_filter</span><span class="p">(</span><span class="n">session_filter</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">SESSION_FILTER</span><span class="p">,</span> <span class="n">descriptor</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">source</span>
+
+    <span class="k">def</span> <span class="nf">_on_attach</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>  <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">source</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session_start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+            <span class="n">expiry_in_seconds</span> <span class="o">=</span> <span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">SESSION_LOCKED_UNTIL</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">expiry_in_seconds</span><span class="p">:</span>
+                <span class="n">expiry_in_seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">expiry_in_seconds</span> <span class="o">-</span> <span class="n">DATETIMEOFFSET_EPOCH</span><span class="p">)</span><span class="o">/</span><span class="mi">10000000</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">expiry_in_seconds</span><span class="p">)</span>
+            <span class="n">session_filter</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">get_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">SESSION_FILTER</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="n">session_filter</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expired</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether the receivers lock on a particular session has expired.</span>
+
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="SenderMixin"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.SenderMixin">[docs]</a><span class="k">class</span> <span class="nc">SenderMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-few-public-methods</span>
+
+    <span class="k">def</span> <span class="nf">_build_schedule_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schedule_time</span><span class="p">,</span> <span class="o">*</span><span class="n">messages</span><span class="p">):</span>
+        <span class="n">request_body</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;messages&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+        <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">schedule_time</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span><span class="p">:</span>
+                <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+            <span class="n">message_data</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">message_data</span><span class="p">[</span><span class="s1">&#39;message-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span>
+            <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span><span class="p">:</span>
+                <span class="n">message_data</span><span class="p">[</span><span class="s1">&#39;session-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span>
+            <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">partition_key</span><span class="p">:</span>
+                <span class="n">message_data</span><span class="p">[</span><span class="s1">&#39;partition-key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">partition_key</span>
+            <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">via_partition_key</span><span class="p">:</span>
+                <span class="n">message_data</span><span class="p">[</span><span class="s1">&#39;via-partition-key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">via_partition_key</span>
+            <span class="n">message_data</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">encode_message</span><span class="p">())</span>
+            <span class="n">request_body</span><span class="p">[</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request_body</span>
+
+<div class="viewcode-block" id="SenderMixin.queue_message"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.common.mixins.SenderMixin.queue_message">[docs]</a>    <span class="k">def</span> <span class="nf">queue_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Queue a message to be sent later.</span>
+
+<span class="sd">        This operation should be followed up with send_pending_messages.</span>
+
+<span class="sd">        :param message: The message to be sent.</span>
+<span class="sd">        :type message: ~azure.servicebus.common.message.Message</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START queue_and_send_messages]</span>
+<span class="sd">                :end-before: [END queue_and_send_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Send the queued messages</span>
+<span class="sd">                :name: sender_queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span><span class="p">:</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">queue_message</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

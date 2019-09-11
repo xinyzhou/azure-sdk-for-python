@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventhub.common &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.eventhub.common</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.eventhub.common</h1><div class="highlight"><pre>
+<span></span><span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for license information.</span>
+<span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">BatchMessage</span><span class="p">,</span> <span class="n">Message</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">constants</span>  <span class="c1"># type: ignore</span>
+<span class="kn">from</span> <span class="nn">uamqp.message</span> <span class="k">import</span> <span class="n">MessageHeader</span><span class="p">,</span> <span class="n">MessageProperties</span>  <span class="c1"># type: ignore</span>
+<span class="kn">from</span> <span class="nn">azure.eventhub.error</span> <span class="k">import</span> <span class="n">EventDataError</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># event_data.encoded_size &lt; 255, batch encode overhead is 5, &gt;=256, overhead is 8 each</span>
+<span class="n">_BATCH_MESSAGE_OVERHEAD_COST</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="parse_sas_token"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.parse_sas_token">[docs]</a><span class="k">def</span> <span class="nf">parse_sas_token</span><span class="p">(</span><span class="n">sas_token</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a SAS token into its components.</span>
+
+<span class="sd">    :param sas_token: The SAS token.</span>
+<span class="sd">    :type sas_token: str</span>
+<span class="sd">    :rtype: dict[str, str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sas_data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">sas_token</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+        <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">sas_data</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">sas_data</span></div>
+
+
+<div class="viewcode-block" id="EventData"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventData">[docs]</a><span class="k">class</span> <span class="nc">EventData</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The EventData class is a holder of event content.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples_eventhub.py</span>
+<span class="sd">            :start-after: [START create_event_data]</span>
+<span class="sd">            :end-before: [END create_event_data]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Create instances of EventData</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">PROP_SEQ_NUMBER</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;x-opt-sequence-number&quot;</span>
+    <span class="n">PROP_OFFSET</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;x-opt-offset&quot;</span>
+    <span class="n">PROP_PARTITION_KEY</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;x-opt-partition-key&quot;</span>
+    <span class="n">PROP_PARTITION_KEY_AMQP_SYMBOL</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="n">PROP_PARTITION_KEY</span><span class="p">)</span>
+    <span class="n">PROP_TIMESTAMP</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;x-opt-enqueued-time&quot;</span>
+    <span class="n">PROP_DEVICE_ID</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;iothub-connection-device-id&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">to_device</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize EventData.</span>
+
+<span class="sd">        :param body: The data to send in a single message.</span>
+<span class="sd">        :type body: str, bytes or list</span>
+<span class="sd">        :param to_device: An IoT device to route to.</span>
+<span class="sd">        :type to_device: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_msg_properties</span> <span class="o">=</span> <span class="n">MessageProperties</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">to_device</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_msg_properties</span><span class="o">.</span><span class="n">to</span> <span class="o">=</span> <span class="s1">&#39;/devices/</span><span class="si">{}</span><span class="s1">/messages/devicebound&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">to_device</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">body</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="n">body</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_msg_properties</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">more</span> <span class="ow">in</span> <span class="n">body</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">_body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">more</span><span class="p">)</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">elif</span> <span class="n">body</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;EventData cannot be None.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_msg_properties</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;body&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">body_as_str</span><span class="p">(),</span>
+            <span class="s1">&#39;application_properties&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">application_properties</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence_number</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;sequence_number&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;offset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enqueued_time</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;enqueued_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enqueued_time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">device_id</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;device_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_key</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;partition_key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">partition_key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the partition key of the event data object.</span>
+
+<span class="sd">        :param value: The partition key to set.</span>
+<span class="sd">        :type value: str or bytes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">annotations</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="p">)</span>
+        <span class="n">annotations</span><span class="p">[</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_PARTITION_KEY_AMQP_SYMBOL</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">MessageHeader</span><span class="p">()</span>
+        <span class="n">header</span><span class="o">.</span><span class="n">durable</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="n">annotations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">header</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="n">annotations</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_from_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+        <span class="n">event_data</span> <span class="o">=</span> <span class="n">EventData</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">event_data</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="n">event_data</span><span class="o">.</span><span class="n">_msg_properties</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">properties</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="n">event_data</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">annotations</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="n">event_data</span><span class="o">.</span><span class="n">_app_properties</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">application_properties</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="k">return</span> <span class="n">event_data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sequence_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The sequence number of the event data object.</span>
+
+<span class="sd">        :rtype: int or long</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_SEQ_NUMBER</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The offset of the event data object.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="p">[</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_OFFSET</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enqueued_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The enqueued timestamp of the event data object.</span>
+
+<span class="sd">        :rtype: datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_TIMESTAMP</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">timestamp</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">device_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The device ID of the event data object. This is only used for</span>
+<span class="sd">        IoT Hub implementations.</span>
+
+<span class="sd">        :rtype: bytes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_DEVICE_ID</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The partition key of the event data object.</span>
+
+<span class="sd">        :rtype: bytes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="p">[</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_PARTITION_KEY_AMQP_SYMBOL</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_PARTITION_KEY</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">application_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Application defined properties on the message.</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span>
+
+    <span class="nd">@application_properties</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">application_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Application defined properties on the message.</span>
+
+<span class="sd">        :param value: The application properties for the EventData.</span>
+<span class="sd">        :type value: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="n">properties</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">application_properties</span> <span class="o">=</span> <span class="n">properties</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">system_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metadata set by the Event Hubs Service associated with the EventData</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The body of the event data object.</span>
+
+<span class="sd">        :rtype: bytes or Generator[bytes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Message data empty.&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="EventData.body_as_str"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventData.body_as_str">[docs]</a>    <span class="k">def</span> <span class="nf">body_as_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The body of the event data as a string if the data is of a</span>
+<span class="sd">        compatible type.</span>
+
+<span class="sd">        :param encoding: The encoding to use for decoding message data.</span>
+<span class="sd">         Default is &#39;UTF-8&#39;</span>
+<span class="sd">        :rtype: str or unicode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># pylint: disable=bare-except</span>
+            <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Message data is not compatible with string type: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="EventData.body_as_json"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventData.body_as_json">[docs]</a>    <span class="k">def</span> <span class="nf">body_as_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The body of the event loaded as a JSON object is the data is compatible.</span>
+
+<span class="sd">        :param encoding: The encoding to use for decoding message data.</span>
+<span class="sd">         Default is &#39;UTF-8&#39;</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body_as_str</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data_str</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Event data is not compatible with JSON type: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="EventData.encode_message"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventData.encode_message">[docs]</a>    <span class="k">def</span> <span class="nf">encode_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">encode_message</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="EventDataBatch"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventDataBatch">[docs]</a><span class="k">class</span> <span class="nc">EventDataBatch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sending events in batch get better performance than sending individual events.</span>
+<span class="sd">    EventDataBatch helps you create the maximum allowed size batch of `EventData` to improve sending performance.</span>
+
+<span class="sd">    Use `try_add` method to add events until the maximum batch size limit in bytes has been reached -</span>
+<span class="sd">    a `ValueError` will be raised.</span>
+<span class="sd">    Use `send` method of ~azure.eventhub.EventHubProducer or ~azure.eventhub.aio.EventHubProducer for sending.</span>
+
+<span class="sd">    Please use the `create_batch` method of `EventHubProducer`</span>
+<span class="sd">    to create an `EventDataBatch` object instead of instantiating an `EventDataBatch` object directly.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partition_key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span> <span class="o">=</span> <span class="n">max_size</span> <span class="ow">or</span> <span class="n">constants</span><span class="o">.</span><span class="n">MAX_MESSAGE_LENGTH_BYTES</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_partition_key</span> <span class="o">=</span> <span class="n">partition_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">BatchMessage</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[],</span> <span class="n">multi_messages</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_partition_key</span><span class="p">(</span><span class="n">partition_key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">gather</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_message_encoded_size</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_count</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The size in bytes</span>
+
+<span class="sd">        :return: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_from_batch</span><span class="p">(</span><span class="n">batch_data</span><span class="p">,</span> <span class="n">partition_key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">batch_data_instance</span> <span class="o">=</span> <span class="n">EventDataBatch</span><span class="p">(</span><span class="n">partition_key</span><span class="o">=</span><span class="n">partition_key</span><span class="p">)</span>
+        <span class="n">batch_data_instance</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">_body_gen</span> <span class="o">=</span> <span class="n">batch_data</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="k">return</span> <span class="n">batch_data_instance</span>
+
+    <span class="k">def</span> <span class="nf">_set_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">annotations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span>
+            <span class="k">if</span> <span class="n">annotations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">annotations</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="n">EventData</span><span class="o">.</span><span class="n">PROP_PARTITION_KEY</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="n">MessageHeader</span><span class="p">()</span>
+            <span class="n">header</span><span class="o">.</span><span class="n">durable</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="n">annotations</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">header</span>
+
+<div class="viewcode-block" id="EventDataBatch.try_add"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventDataBatch.try_add">[docs]</a>    <span class="k">def</span> <span class="nf">try_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The message size is a sum up of body, properties, header, etc.</span>
+<span class="sd">        :param event_data: ~azure.eventhub.EventData</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        :raise: ValueError, when exceeding the size limit.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">event_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;event_data is None when calling EventDataBatch.try_add. Ignored&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">event_data</span><span class="p">,</span> <span class="n">EventData</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;event_data should be type of EventData&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partition_key</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">event_data</span><span class="o">.</span><span class="n">partition_key</span> <span class="ow">and</span> <span class="n">event_data</span><span class="o">.</span><span class="n">partition_key</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partition_key</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">EventDataError</span><span class="p">(</span><span class="s1">&#39;The partition_key of event_data does not match the one of the EventDataBatch&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">event_data</span><span class="o">.</span><span class="n">partition_key</span><span class="p">:</span>
+                <span class="n">event_data</span><span class="o">.</span><span class="n">_set_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_partition_key</span><span class="p">)</span>  <span class="c1"># pylint:disable=protected-access</span>
+
+        <span class="n">event_data_size</span> <span class="o">=</span> <span class="n">event_data</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">get_message_encoded_size</span><span class="p">()</span>
+
+        <span class="c1"># For a BatchMessage, if the encoded_message_size of event_data is &lt; 256, then the overhead cost to encode that</span>
+        <span class="c1">#  message into the BatchMessage would be 5 bytes, if &gt;= 256, it would be 8 bytes.</span>
+        <span class="n">size_after_add</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">+</span> <span class="n">event_data_size</span>\
+            <span class="o">+</span> <span class="n">_BATCH_MESSAGE_OVERHEAD_COST</span><span class="p">[</span><span class="mi">0</span> <span class="k">if</span> <span class="p">(</span><span class="n">event_data_size</span> <span class="o">&lt;</span> <span class="mi">256</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">size_after_add</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;EventDataBatch has reached its size limit </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">_body_gen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_data</span><span class="p">)</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">size_after_add</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_count</span> <span class="o">+=</span> <span class="mi">1</span></div></div>
+
+
+<div class="viewcode-block" id="EventPosition"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventPosition">[docs]</a><span class="k">class</span> <span class="nc">EventPosition</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The position(offset, sequence or timestamp) where a consumer starts. Examples:</span>
+
+<span class="sd">    Beginning of the event stream:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(&quot;-1&quot;)</span>
+<span class="sd">    End of the event stream:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(&quot;@latest&quot;)</span>
+<span class="sd">    Events after the specified offset:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(&quot;12345&quot;)</span>
+<span class="sd">    Events from the specified offset:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(&quot;12345&quot;, True)</span>
+<span class="sd">    Events after a datetime:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(datetime.datetime.utcnow())</span>
+<span class="sd">    Events after a specific sequence number:</span>
+<span class="sd">      &gt;&gt;&gt; event_pos = EventPosition(1506968696002)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize EventPosition.</span>
+
+<span class="sd">        :param value: The event position value.</span>
+<span class="sd">        :type value: ~datetime.datetime or int or str</span>
+<span class="sd">        :param inclusive: Whether to include the supplied value as the start point.</span>
+<span class="sd">        :type inclusive: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;-1&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inclusive</span> <span class="o">=</span> <span class="n">inclusive</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a selector expression of the offset.</span>
+
+<span class="sd">        :rtype: bytes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;&gt;=&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inclusive</span> <span class="k">else</span> <span class="s2">&quot;&gt;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">):</span>  <span class="c1"># pylint:disable=no-else-return</span>
+            <span class="n">timestamp</span> <span class="o">=</span> <span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">microsecond</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;amqp.annotation.x-opt-enqueued-time </span><span class="si">{}</span><span class="s2"> &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">integer_types</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;amqp.annotation.x-opt-sequence-number </span><span class="si">{}</span><span class="s2"> &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;amqp.annotation.x-opt-offset </span><span class="si">{}</span><span class="s2"> &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span></div>
+
+
+<span class="c1"># TODO: move some behaviors to these two classes.</span>
+<div class="viewcode-block" id="EventHubSASTokenCredential"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventHubSASTokenCredential">[docs]</a><span class="k">class</span> <span class="nc">EventHubSASTokenCredential</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    SAS token used for authentication.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param token: A SAS token or function that returns a SAS token. If a function is supplied,</span>
+<span class="sd">         it will be used to retrieve subsequent tokens in the case of token expiry. The function should</span>
+<span class="sd">         take no arguments.</span>
+<span class="sd">        :type token: str or callable</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">token</span>
+
+<div class="viewcode-block" id="EventHubSASTokenCredential.get_sas_token"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventHubSASTokenCredential.get_sas_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_sas_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="p">):</span>  <span class="c1"># pylint:disable=no-else-return</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span></div></div>
+
+
+<div class="viewcode-block" id="EventHubSharedKeyCredential"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.common.EventHubSharedKeyCredential">[docs]</a><span class="k">class</span> <span class="nc">EventHubSharedKeyCredential</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The shared access key credential used for authentication.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param policy: The name of the shared access policy.</span>
+<span class="sd">        :type policy: str</span>
+<span class="sd">        :param key: The shared access key.</span>
+<span class="sd">        :type key: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy</span> <span class="o">=</span> <span class="n">policy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span></div>
+
+
+<span class="k">class</span> <span class="nc">_Address</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="n">hostname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,867 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.common.message &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.servicebus.common.message</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.servicebus.common.message</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">import</span> <span class="nn">uamqp</span>
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">types</span>
+
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.constants</span> <span class="k">import</span> <span class="n">DEADLETTERNAME</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.errors</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">MessageAlreadySettled</span><span class="p">,</span>
+    <span class="n">MessageSettleFailed</span><span class="p">,</span>
+    <span class="n">MessageLockExpired</span><span class="p">,</span>
+    <span class="n">SessionLockExpired</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Message"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message">[docs]</a><span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-public-methods,too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;A Service Bus Message.</span>
+
+<span class="sd">    :param body: The data to send in a single message. The maximum size per message is 256 kB.</span>
+<span class="sd">    :type body: str or bytes</span>
+<span class="sd">    :param encoding: The encoding for string data. Default is UTF-8.</span>
+<span class="sd">    :type encoding: str</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START send_complex_message]</span>
+<span class="sd">            :end-before: [END send_complex_message]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Sending a message with additional properties</span>
+
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START receive_complex_message]</span>
+<span class="sd">            :end-before: [END receive_complex_message]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Checking the properties on a received message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_X_OPT_ENQUEUED_TIME</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-enqueued-time&#39;</span>
+    <span class="n">_X_OPT_SEQUENCE_NUMBER</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-sequence-number&#39;</span>
+    <span class="n">_X_OPT_ENQUEUE_SEQUENCE_NUMBER</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-enqueue-sequence-number&#39;</span>
+    <span class="n">_X_OPT_PARTITION_ID</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-partition-id&#39;</span>
+    <span class="n">_X_OPT_PARTITION_KEY</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-partition-key&#39;</span>
+    <span class="n">_X_OPT_VIA_PARTITION_KEY</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-via-partition-key&#39;</span>
+    <span class="n">_X_OPT_LOCKED_UNTIL</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-locked-until&#39;</span>
+    <span class="n">_x_OPT_LOCK_TOKEN</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-lock-token&#39;</span>
+    <span class="n">_x_OPT_SCHEDULED_ENQUEUE_TIME</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;x-opt-scheduled-enqueue-time&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">MessageProperties</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">MessageHeader</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">received_timestamp</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_renew_error</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span> <span class="o">=</span> <span class="n">encoding</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="s1">&#39;message&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_annotations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_app_properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">application_properties</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">properties</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">header</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">received_timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_build_message</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="n">body</span><span class="p">:</span>  <span class="c1"># TODO: This only works for a list of bytes/strings</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">Message</span><span class="p">(</span><span class="n">body</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">more</span> <span class="ow">in</span> <span class="n">body</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">_body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">more</span><span class="p">)</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">elif</span> <span class="n">body</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Message body cannot be None.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">Message</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_is_live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=no-member</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">settled</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MessageAlreadySettled</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">expired</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">MessageLockExpired</span><span class="p">(</span><span class="n">inner_exception</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">auto_renew_error</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">,</span> <span class="s1">&#39;expired&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">expired</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SessionLockExpired</span><span class="p">(</span><span class="n">inner_exception</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">auto_renew_error</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether the message has been settled.</span>
+
+<span class="sd">        This will aways be `True` for a message received using ReceiveAndDelete mode,</span>
+<span class="sd">        otherwise it will be `False` until the message is completed or otherwise settled.</span>
+
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">settled</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">annotations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The annotations of the message.</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span>
+
+    <span class="nd">@annotations</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">annotations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the annotations on the message.</span>
+
+<span class="sd">        :param value: The annotations for the Message.</span>
+<span class="sd">        :type value: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">user_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;User defined properties on the message.</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">application_properties</span>
+
+    <span class="nd">@user_properties</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">user_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;User defined properties on the message.</span>
+
+<span class="sd">        :param value: The application properties for the Message.</span>
+<span class="sd">        :type value: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">application_properties</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enqueued_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="n">timestamp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_ENQUEUED_TIME</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">timestamp</span><span class="p">:</span>
+                <span class="n">in_seconds</span> <span class="o">=</span> <span class="n">timestamp</span><span class="o">/</span><span class="mf">1000.0</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">in_seconds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">scheduled_enqueue_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="n">timestamp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x_OPT_SCHEDULED_ENQUEUE_TIME</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">timestamp</span><span class="p">:</span>
+                <span class="n">in_seconds</span> <span class="o">=</span> <span class="n">timestamp</span><span class="o">/</span><span class="mf">1000.0</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">in_seconds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sequence_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_SEQUENCE_NUMBER</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enqueue_sequence_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_ENQUEUE_SEQUENCE_NUMBER</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@enqueue_sequence_number</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">enqueue_sequence_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_ENQUEUE_SEQUENCE_NUMBER</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">partition_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_PARTITION_ID</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_PARTITION_KEY</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@partition_key</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_PARTITION_KEY</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">via_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_VIA_PARTITION_KEY</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@via_partition_key</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">via_partition_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_VIA_PARTITION_KEY</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">locked_until</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">,</span> <span class="s1">&#39;locked_until&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">settled</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_LOCKED_UNTIL</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="n">expiry_in_seconds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_X_OPT_LOCKED_UNTIL</span><span class="p">]</span><span class="o">/</span><span class="mi">1000</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">expiry_in_seconds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expired</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">,</span> <span class="s1">&#39;locked_until&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Session messages do not expire. Please use the Session expiry instead.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lock_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">,</span> <span class="s1">&#39;locked_until&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">settled</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">delivery_annotations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">delivery_annotations</span>
+        <span class="k">if</span> <span class="n">delivery_annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">delivery_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x_OPT_LOCK_TOKEN</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">session_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">UnicodeDecodeError</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span>
+
+    <span class="nd">@session_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">session_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">group_id</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">time_to_live</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">time_to_live</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">milliseconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">time_to_live</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@time_to_live</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">time_to_live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">MessageHeader</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">time_to_live</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">seconds</span> <span class="o">*</span> <span class="mi">1000</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">time_to_live</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The body of the Message.</span>
+
+<span class="sd">        :rtype: bytes or generator[bytes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Message.schedule"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.schedule">[docs]</a>    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schedule_time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a specific enqueue time to the message.</span>
+
+<span class="sd">        :param schedule_time: The scheduled time to enqueue the message.</span>
+<span class="sd">        :type schedule_time: ~datetime.datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">message_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x_OPT_SCHEDULED_ENQUEUE_TIME</span><span class="p">)]</span> <span class="o">=</span> <span class="n">schedule_time</span></div>
+
+<div class="viewcode-block" id="Message.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Renew the message lock.</span>
+
+<span class="sd">        This will maintain the lock on the message to ensure</span>
+<span class="sd">        it is not returned to the queue to be reprocessed. In order to complete (or otherwise settle)</span>
+<span class="sd">        the message, the lock must be maintained. Messages received via ReceiveAndDelete mode are not</span>
+<span class="sd">        locked, and therefore cannot be renewed. This operation can also be performed as a threaded</span>
+<span class="sd">        background task by registering the message with an `azure.servicebus.AutoLockRenew` instance.</span>
+<span class="sd">        This operation is only available for non-sessionful messages.</span>
+
+<span class="sd">        :raises: TypeError if the message is sessionful.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired is message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled is message has already been settled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">,</span> <span class="s1">&#39;locked_until&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Session messages cannot be renewed. Please renew the Session lock instead.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;renew&#39;</span><span class="p">)</span>
+        <span class="n">expiry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_renew_locks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">)</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">expiry</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;expirations&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mf">1000.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Complete the message.</span>
+
+<span class="sd">        This removes the message from the queue.</span>
+
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;complete&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move the message to the Dead Letter queue.</span>
+
+<span class="sd">        The Dead Letter queue is a sub-queue that can be</span>
+<span class="sd">        used to store messages that failed to process correctly, or otherwise require further inspection</span>
+<span class="sd">        or processing. The queue can also be configured to send expired messages to the Dead Letter queue.</span>
+<span class="sd">        To receive dead-lettered messages, use `QueueClient.get_deadletter_receiver()` or</span>
+<span class="sd">        `SubscriptionClient.get_deadletter_receiver()`.</span>
+
+<span class="sd">        :param description: The reason for dead-lettering the message.</span>
+<span class="sd">        :type description: str</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;reject&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">condition</span><span class="o">=</span><span class="n">DEADLETTERNAME</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;reject&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Abandon the message.</span>
+
+<span class="sd">        This message will be returned to the queue to be reprocessed.</span>
+
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;abandon&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;abandon&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Defer the message.</span>
+
+<span class="sd">        This message will remain in the queue but must be received</span>
+<span class="sd">        specifically by its sequence number in order to be processed.</span>
+
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;defer&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;defer&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="BatchMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.BatchMessage">[docs]</a><span class="k">class</span> <span class="nc">BatchMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A batch of messages combined into a single message body.</span>
+
+<span class="sd">    The body of the messages in the batch should be supplied by an iterable,</span>
+<span class="sd">    such as a generator.</span>
+<span class="sd">    If the contents of the iterable exceeds the maximum size of a single message (256 kB),</span>
+<span class="sd">    the data will be broken up across multiple messages.</span>
+
+<span class="sd">    :param body: The data to send in each message in the batch. The maximum size per message is 256 kB.</span>
+<span class="sd">     If data is supplied in excess of this limit, multiple messages will be sent.</span>
+<span class="sd">    :type body: Iterable</span>
+<span class="sd">    :param encoding: The encoding for string data. Default is UTF-8.</span>
+<span class="sd">    :type encoding: str</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START send_batch_message]</span>
+<span class="sd">            :end-before: [END send_batch_message]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Send a batched message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_build_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">body</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Message body cannot be None.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">uamqp</span><span class="o">.</span><span class="n">BatchMessage</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">multi_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PeekMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage">[docs]</a><span class="k">class</span> <span class="nc">PeekMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A preview message.</span>
+
+<span class="sd">    This message is still on the queue, and unlocked.</span>
+<span class="sd">    A peeked message cannot be completed, abandoned, dead-lettered or deferred.</span>
+<span class="sd">    It has no lock token or expiry.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PeekMessage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">locked_until</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message is not locked.&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lock_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message is not locked.&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PeekMessage.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be renewed. Raises `TypeError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message is not locked.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PeekMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be completed Raises `TypeError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be completed.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PeekMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be dead-lettered. Raises `TypeError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be dead-lettered.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PeekMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be abandoned. Raises `TypeError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be abandoned.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PeekMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be deferred. Raises `TypeError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be deferred.&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="DeferredMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage">[docs]</a><span class="k">class</span> <span class="nc">DeferredMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A message that has been deferred.</span>
+
+<span class="sd">    A deferred message can be completed,</span>
+<span class="sd">    abandoned, or dead-lettered, however it cannot be deferred again.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DeferredMessage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_is_live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Orphan message had no open connection.&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DeferredMessage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lock_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">settled</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">delivery_annotations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">delivery_annotations</span>
+        <span class="k">if</span> <span class="n">delivery_annotations</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">delivery_annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x_OPT_LOCK_TOKEN</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">settled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span>
+
+<div class="viewcode-block" id="DeferredMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Complete the message.</span>
+
+<span class="sd">        This removes the message from the queue.</span>
+
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;complete&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_settle_deferred</span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">])</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DeferredMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move the message to the Dead Letter queue.</span>
+
+<span class="sd">        The Dead Letter queue is a sub-queue that can be</span>
+<span class="sd">        used to store messages that failed to process correctly, or otherwise require further inspection</span>
+<span class="sd">        or processing. The queue can also be configured to send expired messages to the Dead Letter queue.</span>
+<span class="sd">        To receive dead-lettered messages, use `QueueClient.get_deadletter_receiver()` or</span>
+<span class="sd">        `SubscriptionClient.get_deadletter_receiver()`.</span>
+
+<span class="sd">        :param description: The reason for dead-lettering the message.</span>
+<span class="sd">        :type description: str</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;dead-letter&#39;</span><span class="p">)</span>
+        <span class="n">details</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;deadletter-reason&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">description</span><span class="p">)</span> <span class="k">if</span> <span class="n">description</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;deadletter-description&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">description</span><span class="p">)</span> <span class="k">if</span> <span class="n">description</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_settle_deferred</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
+            <span class="s1">&#39;suspended&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">],</span> <span class="n">dead_letter_details</span><span class="o">=</span><span class="n">details</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DeferredMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Abandon the message.</span>
+
+<span class="sd">        This message will be returned to the queue to be reprocessed.</span>
+
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</span>
+<span class="sd">        :raises: ~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_live</span><span class="p">(</span><span class="s1">&#39;abandon&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_settle_deferred</span><span class="p">(</span><span class="s1">&#39;abandoned&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">])</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DeferredMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A DeferredMessage cannot be deferred. Raises `ValueError`.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Message is already deferred.&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1130 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.blob.aio.container_client_async &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.blob.aio.container_client_async</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.blob.aio.container_client_async</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span>  <span class="c1"># pylint: disable=unused-import</span>
+    <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">AnyStr</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span>
+    <span class="n">TYPE_CHECKING</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">azure.core.tracing.decorator</span> <span class="k">import</span> <span class="n">distributed_trace</span>
+<span class="kn">from</span> <span class="nn">azure.core.tracing.decorator_async</span> <span class="k">import</span> <span class="n">distributed_trace_async</span>
+<span class="kn">from</span> <span class="nn">azure.core.async_paging</span> <span class="k">import</span> <span class="n">AsyncItemPaged</span>
+
+<span class="kn">from</span> <span class="nn">.._shared.base_client_async</span> <span class="k">import</span> <span class="n">AsyncStorageAccountHostsMixin</span>
+<span class="kn">from</span> <span class="nn">.._shared.policies_async</span> <span class="k">import</span> <span class="n">ExponentialRetry</span>
+<span class="kn">from</span> <span class="nn">.._shared.request_handlers</span> <span class="k">import</span> <span class="n">add_metadata_headers</span><span class="p">,</span> <span class="n">serialize_iso</span>
+<span class="kn">from</span> <span class="nn">.._shared.response_handlers</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">process_storage_error</span><span class="p">,</span>
+    <span class="n">return_response_headers</span><span class="p">,</span>
+    <span class="n">return_headers_and_deserialized</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.._generated.aio</span> <span class="k">import</span> <span class="n">AzureBlobStorage</span>
+<span class="kn">from</span> <span class="nn">.._generated.models</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">ModifiedAccessConditions</span><span class="p">,</span>
+    <span class="n">StorageErrorException</span><span class="p">,</span>
+    <span class="n">SignedIdentifier</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.._deserialize</span> <span class="k">import</span> <span class="n">deserialize_container_properties</span>
+<span class="kn">from</span> <span class="nn">..container_client</span> <span class="k">import</span> <span class="n">ContainerClient</span> <span class="k">as</span> <span class="n">ContainerClientBase</span>
+<span class="kn">from</span> <span class="nn">..lease</span> <span class="k">import</span> <span class="n">get_access_conditions</span>
+<span class="kn">from</span> <span class="nn">..models</span> <span class="k">import</span> <span class="n">ContainerProperties</span><span class="p">,</span> <span class="n">BlobProperties</span><span class="p">,</span> <span class="n">BlobType</span>  <span class="c1"># pylint: disable=unused-import</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">BlobPropertiesPaged</span><span class="p">,</span> <span class="n">BlobPrefix</span>
+<span class="kn">from</span> <span class="nn">.lease_async</span> <span class="k">import</span> <span class="n">LeaseClient</span>
+<span class="kn">from</span> <span class="nn">.blob_client_async</span> <span class="k">import</span> <span class="n">BlobClient</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="k">import</span> <span class="n">HttpTransport</span>
+    <span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="k">import</span> <span class="n">HTTPPolicy</span>
+    <span class="kn">from</span> <span class="nn">..models</span> <span class="k">import</span> <span class="n">ContainerPermissions</span><span class="p">,</span> <span class="n">PublicAccess</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+    <span class="kn">from</span> <span class="nn">..models</span> <span class="k">import</span> <span class="p">(</span> <span class="c1"># pylint: disable=unused-import</span>
+        <span class="n">AccessPolicy</span><span class="p">,</span>
+        <span class="n">ContentSettings</span><span class="p">,</span>
+        <span class="n">PremiumPageBlobTier</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ContainerClient"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient">[docs]</a><span class="k">class</span> <span class="nc">ContainerClient</span><span class="p">(</span><span class="n">AsyncStorageAccountHostsMixin</span><span class="p">,</span> <span class="n">ContainerClientBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A client to interact with a specific container, although that container</span>
+<span class="sd">    may not yet exist.</span>
+
+<span class="sd">    For operations relating to a specific blob within this container, a blob client can be</span>
+<span class="sd">    retrieved using the :func:`~get_blob_client` function.</span>
+
+<span class="sd">    :ivar str url:</span>
+<span class="sd">        The full endpoint URL to the Container, including SAS token if used. This could be</span>
+<span class="sd">        either the primary endpoint, or the secondary endpoint depending on the current `location_mode`.</span>
+<span class="sd">    :ivar str primary_endpoint:</span>
+<span class="sd">        The full primary endpoint URL.</span>
+<span class="sd">    :ivar str primary_hostname:</span>
+<span class="sd">        The hostname of the primary endpoint.</span>
+<span class="sd">    :ivar str secondary_endpoint:</span>
+<span class="sd">        The full secondary endpoint URL if configured. If not available</span>
+<span class="sd">        a ValueError will be raised. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str secondary_hostname:</span>
+<span class="sd">        The hostname of the secondary endpoint. If not available this</span>
+<span class="sd">        will be None. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str location_mode:</span>
+<span class="sd">        The location mode that the client is currently using. By default</span>
+<span class="sd">        this will be &quot;primary&quot;. Options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :param str container_url:</span>
+<span class="sd">        The full URI to the container. This can also be a URL to the storage</span>
+<span class="sd">        account, in which case the blob container must also be specified.</span>
+<span class="sd">    :param container:</span>
+<span class="sd">        The container for the blob.</span>
+<span class="sd">    :type container: str or ~azure.storage.blob.models.ContainerProperties</span>
+<span class="sd">    :param credential:</span>
+<span class="sd">        The credentials with which to authenticate. This is optional if the</span>
+<span class="sd">        account URL already has a SAS token. The value can be a SAS token string, and account</span>
+<span class="sd">        shared access key, or an instance of a TokenCredentials class from azure.identity.</span>
+<span class="sd">        If the URL already has a SAS token, specifying an explicit credential will take priority.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">            :start-after: [START create_container_client_from_service]</span>
+<span class="sd">            :end-before: [END create_container_client_from_service]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Get a ContainerClient from an existing BlobServiceClient.</span>
+
+<span class="sd">        .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">            :start-after: [START create_container_client_sasurl]</span>
+<span class="sd">            :end-before: [END create_container_client_sasurl]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 8</span>
+<span class="sd">            :caption: Creating the container client directly.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">container_url</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">container</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[ContainerProperties, str]]</span>
+            <span class="n">credential</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Any]</span>
+            <span class="n">loop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Any</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;retry_policy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;retry_policy&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">ExponentialRetry</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ContainerClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">container_url</span><span class="p">,</span>
+            <span class="n">container</span><span class="o">=</span><span class="n">container</span><span class="p">,</span>
+            <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span>
+            <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">AzureBlobStorage</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">pipeline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loop</span> <span class="o">=</span> <span class="n">loop</span>
+
+<div class="viewcode-block" id="ContainerClient.create_container"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.create_container">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_container</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">public_access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[Dict[str, str]], Optional[Union[PublicAccess, str]], Optional[int], **Any) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a new container under the specified account. If the container</span>
+<span class="sd">        with the same name already exists, the operation fails.</span>
+
+<span class="sd">        :param metadata:</span>
+<span class="sd">            A dict with name_value pairs to associate with the</span>
+<span class="sd">            container as metadata. Example:{&#39;Category&#39;:&#39;test&#39;}</span>
+<span class="sd">        :type metadata: dict[str, str]</span>
+<span class="sd">        :param ~azure.storage.blob.models.PublicAccess public_access:</span>
+<span class="sd">            Possible values include: container, blob.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START create_container]</span>
+<span class="sd">                :end-before: [END create_container]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Creating a container to store blobs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;headers&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">add_metadata_headers</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span> <span class="c1"># type: ignore</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">create</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">access</span><span class="o">=</span><span class="n">public_access</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.delete_container"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.delete_container">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">delete_container</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[LeaseClient, str]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Marks the specified container for deletion. The container and any blobs</span>
+<span class="sd">        contained within it are later deleted during garbage collection.</span>
+
+<span class="sd">        :param ~azure.storage.blob.aio.lease_async.LeaseClient lease:</span>
+<span class="sd">            If specified, delete_container only succeeds if the</span>
+<span class="sd">            container&#39;s lease is active and matches this ID.</span>
+<span class="sd">            Required if the container has an active lease.</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified time.</span>
+<span class="sd">        :param datetime if_unmodified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only if</span>
+<span class="sd">            the resource has not been modified since the specified date/time.</span>
+<span class="sd">        :param str if_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header to perform</span>
+<span class="sd">            the operation only if the resource&#39;s ETag matches the value specified.</span>
+<span class="sd">        :param str if_none_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header</span>
+<span class="sd">            to perform the operation only if the resource&#39;s ETag does not match</span>
+<span class="sd">            the value specified. Specify the wildcard character (*) to perform</span>
+<span class="sd">            the operation only if the resource does not exist, and fail the</span>
+<span class="sd">            operation if it does exist.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START delete_container]</span>
+<span class="sd">                :end-before: [END delete_container]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Delete a container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">access_conditions</span> <span class="o">=</span> <span class="n">get_access_conditions</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="n">mod_conditions</span> <span class="o">=</span> <span class="n">ModifiedAccessConditions</span><span class="p">(</span>
+            <span class="n">if_modified_since</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_modified_since&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">if_unmodified_since</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_unmodified_since&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">if_match</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_match&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">if_none_match</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_none_match&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">lease_access_conditions</span><span class="o">=</span><span class="n">access_conditions</span><span class="p">,</span>
+                <span class="n">modified_access_conditions</span><span class="o">=</span><span class="n">mod_conditions</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.acquire_lease"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.acquire_lease">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">acquire_lease</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">lease_duration</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">lease_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; LeaseClient</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Requests a new lease. If the container does not have an active lease,</span>
+<span class="sd">        the Blob service creates a lease on the container and returns a new</span>
+<span class="sd">        lease ID.</span>
+
+<span class="sd">        :param int lease_duration:</span>
+<span class="sd">            Specifies the duration of the lease, in seconds, or negative one</span>
+<span class="sd">            (-1) for a lease that never expires. A non-infinite lease can be</span>
+<span class="sd">            between 15 and 60 seconds. A lease duration cannot be changed</span>
+<span class="sd">            using renew or change. Default is -1 (infinite lease).</span>
+<span class="sd">        :param str lease_id:</span>
+<span class="sd">            Proposed lease ID, in a GUID string format. The Blob service returns</span>
+<span class="sd">            400 (Invalid request) if the proposed lease ID is not in the correct format.</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified time.</span>
+<span class="sd">        :param datetime if_unmodified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only if</span>
+<span class="sd">            the resource has not been modified since the specified date/time.</span>
+<span class="sd">        :param str if_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header to perform</span>
+<span class="sd">            the operation only if the resource&#39;s ETag matches the value specified.</span>
+<span class="sd">        :param str if_none_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header</span>
+<span class="sd">            to perform the operation only if the resource&#39;s ETag does not match</span>
+<span class="sd">            the value specified. Specify the wildcard character (*) to perform</span>
+<span class="sd">            the operation only if the resource does not exist, and fail the</span>
+<span class="sd">            operation if it does exist.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: A LeaseClient object, that can be run in a context manager.</span>
+<span class="sd">        :rtype: ~azure.storage.blob.aio.lease_async.LeaseClient</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START acquire_lease_on_container]</span>
+<span class="sd">                :end-before: [END acquire_lease_on_container]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Acquiring a lease on the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lease</span> <span class="o">=</span> <span class="n">LeaseClient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lease_id</span><span class="o">=</span><span class="n">lease_id</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+        <span class="k">await</span> <span class="n">lease</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="n">lease_duration</span><span class="o">=</span><span class="n">lease_duration</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lease</span></div>
+
+<div class="viewcode-block" id="ContainerClient.get_account_information"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.get_account_information">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_account_information</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># type: ignore</span>
+        <span class="c1"># type: (**Any) -&gt; Dict[str, str]</span>
+        <span class="sd">&quot;&quot;&quot;Gets information related to the storage account.</span>
+
+<span class="sd">        The information can also be retrieved if the user has a SAS to a container or blob.</span>
+<span class="sd">        The keys in the returned dictionary include &#39;sku_name&#39; and &#39;account_kind&#39;.</span>
+
+<span class="sd">        :returns: A dict of account information (SKU and account type).</span>
+<span class="sd">        :rtype: dict(str, str)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_account_info</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.get_container_properties"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.get_container_properties">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_container_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[Union[LeaseClient, str]], Optional[int], **Any) -&gt; ContainerProperties</span>
+        <span class="sd">&quot;&quot;&quot;Returns all user-defined metadata and system properties for the specified</span>
+<span class="sd">        container. The data returned does not include the container&#39;s list of blobs.</span>
+
+<span class="sd">        :param ~azure.storage.blob.aio.lease_async.LeaseClient lease:</span>
+<span class="sd">            If specified, get_container_properties only succeeds if the</span>
+<span class="sd">            container&#39;s lease is active and matches this ID.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :return: Properties for the specified container within a container object.</span>
+<span class="sd">        :rtype: ~azure.storage.blob.models.ContainerProperties</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START get_container_properties]</span>
+<span class="sd">                :end-before: [END get_container_properties]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Getting properties on the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">access_conditions</span> <span class="o">=</span> <span class="n">get_access_conditions</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_properties</span><span class="p">(</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">lease_access_conditions</span><span class="o">=</span><span class="n">access_conditions</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">deserialize_container_properties</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">container_name</span>
+        <span class="k">return</span> <span class="n">response</span> <span class="c1"># type: ignore</span></div>
+
+<div class="viewcode-block" id="ContainerClient.set_container_metadata"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.set_container_metadata">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set_container_metadata</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, LeaseClient]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Union[str, datetime]]</span>
+        <span class="sd">&quot;&quot;&quot;Sets one or more user-defined name-value pairs for the specified</span>
+<span class="sd">        container. Each call to this operation replaces all existing metadata</span>
+<span class="sd">        attached to the container. To remove all metadata from the container,</span>
+<span class="sd">        call this operation with no metadata dict.</span>
+
+<span class="sd">        :param metadata:</span>
+<span class="sd">            A dict containing name-value pairs to associate with the container as</span>
+<span class="sd">            metadata. Example: {&#39;category&#39;:&#39;test&#39;}</span>
+<span class="sd">        :type metadata: dict[str, str]</span>
+<span class="sd">        :param str lease:</span>
+<span class="sd">            If specified, set_container_metadata only succeeds if the</span>
+<span class="sd">            container&#39;s lease is active and matches this ID.</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified time.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: Container-updated property dict (Etag and last modified).</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START set_container_metadata]</span>
+<span class="sd">                :end-before: [END set_container_metadata]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Setting metadata on the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;headers&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">add_metadata_headers</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span>
+        <span class="n">access_conditions</span> <span class="o">=</span> <span class="n">get_access_conditions</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="n">mod_conditions</span> <span class="o">=</span> <span class="n">ModifiedAccessConditions</span><span class="p">(</span><span class="n">if_modified_since</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_modified_since&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">set_metadata</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">lease_access_conditions</span><span class="o">=</span><span class="n">access_conditions</span><span class="p">,</span>
+                <span class="n">modified_access_conditions</span><span class="o">=</span><span class="n">mod_conditions</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.get_container_access_policy"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.get_container_access_policy">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_container_access_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[Union[LeaseClient, str]], Optional[int], **Any) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the permissions for the specified container.</span>
+<span class="sd">        The permissions indicate whether container data may be accessed publicly.</span>
+
+<span class="sd">        :param str lease:</span>
+<span class="sd">            If specified, get_container_access_policy only succeeds if the</span>
+<span class="sd">            container&#39;s lease is active and matches this ID.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: Access policy information in a dict.</span>
+<span class="sd">        :rtype: dict[str, str]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START get_container_access_policy]</span>
+<span class="sd">                :end-before: [END get_container_access_policy]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Getting the access policy on the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">access_conditions</span> <span class="o">=</span> <span class="n">get_access_conditions</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span><span class="p">,</span> <span class="n">identifiers</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">get_access_policy</span><span class="p">(</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">lease_access_conditions</span><span class="o">=</span><span class="n">access_conditions</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_headers_and_deserialized</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;public_access&#39;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;blob_public_access&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;signed_identifiers&#39;</span><span class="p">:</span> <span class="n">identifiers</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="ContainerClient.set_container_access_policy"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.set_container_access_policy">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set_container_access_policy</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">signed_identifiers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Optional[AccessPolicy]]]</span>
+            <span class="n">public_access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, PublicAccess]]</span>
+            <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, LeaseClient]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>  <span class="c1"># type: (...) -&gt; Dict[str, Union[str, datetime]]</span>
+        <span class="sd">&quot;&quot;&quot;Sets the permissions for the specified container or stored access</span>
+<span class="sd">        policies that may be used with Shared Access Signatures. The permissions</span>
+<span class="sd">        indicate whether blobs in a container may be accessed publicly.</span>
+
+<span class="sd">        :param signed_identifiers:</span>
+<span class="sd">            A dictionary of access policies to associate with the container. The</span>
+<span class="sd">            dictionary may contain up to 5 elements. An empty dictionary</span>
+<span class="sd">            will clear the access policies set on the service.</span>
+<span class="sd">        :type signed_identifiers: dict(str, :class:`~azure.storage.blob.models.AccessPolicy`)</span>
+<span class="sd">        :param ~azure.storage.blob.models.PublicAccess public_access:</span>
+<span class="sd">            Possible values include: container, blob.</span>
+<span class="sd">        :param lease:</span>
+<span class="sd">            Required if the container has an active lease. Value can be a LeaseClient object</span>
+<span class="sd">            or the lease ID as a string.</span>
+<span class="sd">        :type lease: ~azure.storage.blob.aio.lease_async.LeaseClient or str</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A datetime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified date/time.</span>
+<span class="sd">        :param datetime if_unmodified_since:</span>
+<span class="sd">            A datetime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only if</span>
+<span class="sd">            the resource has not been modified since the specified date/time.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: Container-updated property dict (Etag and last modified).</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START set_container_access_policy]</span>
+<span class="sd">                :end-before: [END set_container_access_policy]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Setting access policy on the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">signed_identifiers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">signed_identifiers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;Too many access policies provided. The server does not support setting &#39;</span>
+                    <span class="s1">&#39;more than 5 access policies on a single resource.&#39;</span><span class="p">)</span>
+            <span class="n">identifiers</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">signed_identifiers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+                    <span class="n">value</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">serialize_iso</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+                    <span class="n">value</span><span class="o">.</span><span class="n">expiry</span> <span class="o">=</span> <span class="n">serialize_iso</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">expiry</span><span class="p">)</span>
+                <span class="n">identifiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">SignedIdentifier</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">access_policy</span><span class="o">=</span><span class="n">value</span><span class="p">))</span> <span class="c1"># type: ignore</span>
+            <span class="n">signed_identifiers</span> <span class="o">=</span> <span class="n">identifiers</span> <span class="c1"># type: ignore</span>
+
+        <span class="n">mod_conditions</span> <span class="o">=</span> <span class="n">ModifiedAccessConditions</span><span class="p">(</span>
+            <span class="n">if_modified_since</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_modified_since&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">if_unmodified_since</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;if_unmodified_since&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+        <span class="n">access_conditions</span> <span class="o">=</span> <span class="n">get_access_conditions</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">set_access_policy</span><span class="p">(</span>
+                <span class="n">container_acl</span><span class="o">=</span><span class="n">signed_identifiers</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">access</span><span class="o">=</span><span class="n">public_access</span><span class="p">,</span>
+                <span class="n">lease_access_conditions</span><span class="o">=</span><span class="n">access_conditions</span><span class="p">,</span>
+                <span class="n">modified_access_conditions</span><span class="o">=</span><span class="n">mod_conditions</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.list_blobs"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.list_blobs">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">list_blobs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_starts_with</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">include</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[str], Optional[Any], Optional[int], **Any) -&gt; AsyncItemPaged[BlobProperties]</span>
+        <span class="sd">&quot;&quot;&quot;Returns a generator to list the blobs under the specified container.</span>
+<span class="sd">        The generator will lazily follow the continuation tokens returned by</span>
+<span class="sd">        the service.</span>
+
+<span class="sd">        :param str name_starts_with:</span>
+<span class="sd">            Filters the results to return only blobs whose names</span>
+<span class="sd">            begin with the specified prefix.</span>
+<span class="sd">        :param list[str] include:</span>
+<span class="sd">            Specifies one or more additional datasets to include in the response.</span>
+<span class="sd">            Options include: &#39;snapshots&#39;, &#39;metadata&#39;, &#39;uncommittedblobs&#39;, &#39;copy&#39;, &#39;deleted&#39;.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: An iterable (auto-paging) response of BlobProperties.</span>
+<span class="sd">        :rtype: ~azure.core.async_paging.AsyncItemPaged[~azure.storage.blob.models.BlobProperties]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START list_blobs_in_container]</span>
+<span class="sd">                :end-before: [END list_blobs_in_container]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: List the blobs in the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">include</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">include</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">include</span> <span class="o">=</span> <span class="p">[</span><span class="n">include</span><span class="p">]</span>
+
+        <span class="n">results_per_page</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;results_per_page&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">list_blob_flat_segment</span><span class="p">,</span>
+            <span class="n">include</span><span class="o">=</span><span class="n">include</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">AsyncItemPaged</span><span class="p">(</span>
+            <span class="n">command</span><span class="p">,</span>
+            <span class="n">prefix</span><span class="o">=</span><span class="n">name_starts_with</span><span class="p">,</span>
+            <span class="n">results_per_page</span><span class="o">=</span><span class="n">results_per_page</span><span class="p">,</span>
+            <span class="n">page_iterator_class</span><span class="o">=</span><span class="n">BlobPropertiesPaged</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.walk_blobs"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.walk_blobs">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">walk_blobs</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">name_starts_with</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[str]</span>
+            <span class="n">include</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Any]</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span> <span class="c1"># type: Optional[Any]</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; AsyncItemPaged[BlobProperties]</span>
+        <span class="sd">&quot;&quot;&quot;Returns a generator to list the blobs under the specified container.</span>
+<span class="sd">        The generator will lazily follow the continuation tokens returned by</span>
+<span class="sd">        the service. This operation will list blobs in accordance with a hierarchy,</span>
+<span class="sd">        as delimited by the specified delimiter character.</span>
+
+<span class="sd">        :param str name_starts_with:</span>
+<span class="sd">            Filters the results to return only blobs whose names</span>
+<span class="sd">            begin with the specified prefix.</span>
+<span class="sd">        :param list[str] include:</span>
+<span class="sd">            Specifies one or more additional datasets to include in the response.</span>
+<span class="sd">            Options include: &#39;snapshots&#39;, &#39;metadata&#39;, &#39;uncommittedblobs&#39;, &#39;copy&#39;, &#39;deleted&#39;.</span>
+<span class="sd">        :param str delimiter:</span>
+<span class="sd">            When the request includes this parameter, the operation returns a BlobPrefix</span>
+<span class="sd">            element in the response body that acts as a placeholder for all blobs whose</span>
+<span class="sd">            names begin with the same substring up to the appearance of the delimiter</span>
+<span class="sd">            character. The delimiter may be a single character or a string.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: An iterable (auto-paging) response of BlobProperties.</span>
+<span class="sd">        :rtype: ~azure.core.async_paging.AsyncItemPaged[~azure.storage.blob.models.BlobProperties]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">include</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">include</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">include</span> <span class="o">=</span> <span class="p">[</span><span class="n">include</span><span class="p">]</span>
+
+        <span class="n">results_per_page</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;results_per_page&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">list_blob_hierarchy_segment</span><span class="p">,</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span>
+            <span class="n">include</span><span class="o">=</span><span class="n">include</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">BlobPrefix</span><span class="p">(</span>
+            <span class="n">command</span><span class="p">,</span>
+            <span class="n">prefix</span><span class="o">=</span><span class="n">name_starts_with</span><span class="p">,</span>
+            <span class="n">results_per_page</span><span class="o">=</span><span class="n">results_per_page</span><span class="p">,</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.upload_blob"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.upload_blob">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">upload_blob</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span>  <span class="c1"># type: Union[str, BlobProperties]</span>
+            <span class="n">data</span><span class="p">,</span>  <span class="c1"># type: Union[Iterable[AnyStr], IO[AnyStr]]</span>
+            <span class="n">blob_type</span><span class="o">=</span><span class="n">BlobType</span><span class="o">.</span><span class="n">BlockBlob</span><span class="p">,</span>  <span class="c1"># type: Union[str, BlobType]</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># type: bool</span>
+            <span class="n">length</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[ContentSettings]</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+            <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[LeaseClient, str]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">max_connections</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; BlobClient</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new blob from a data source with automatic chunking.</span>
+
+<span class="sd">        :param name: The blob with which to interact. If specified, this value will override</span>
+<span class="sd">            a blob value specified in the blob URL.</span>
+<span class="sd">        :type name: str or ~azure.storage.blob.models.BlobProperties</span>
+<span class="sd">        :param ~azure.storage.blob.models.BlobType blob_type: The type of the blob. This can be</span>
+<span class="sd">            either BlockBlob, PageBlob or AppendBlob. The default value is BlockBlob.</span>
+<span class="sd">        :param bool overwrite: Whether the blob to be uploaded should overwrite the current data.</span>
+<span class="sd">            If True, upload_blob will silently overwrite the existing data. If set to False, the</span>
+<span class="sd">            operation will fail with ResourceExistsError. The exception to the above is with Append</span>
+<span class="sd">            blob types. In this case, if data already exists, an error will not be raised and</span>
+<span class="sd">            the data will be appended to the existing blob. If you set overwrite=True, then the existing</span>
+<span class="sd">            blob will be deleted, and a new one created.</span>
+<span class="sd">        :param int length:</span>
+<span class="sd">            Number of bytes to read from the stream. This is optional, but</span>
+<span class="sd">            should be supplied for optimal performance.</span>
+<span class="sd">        :param metadata:</span>
+<span class="sd">            Name-value pairs associated with the blob as metadata.</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param ~azure.storage.blob.models.ContentSettings content_settings:</span>
+<span class="sd">            ContentSettings object used to set blob properties.</span>
+<span class="sd">        :param bool validate_content:</span>
+<span class="sd">            If true, calculates an MD5 hash for each chunk of the blob. The storage</span>
+<span class="sd">            service checks the hash of the content that has arrived with the hash</span>
+<span class="sd">            that was sent. This is primarily valuable for detecting bitflips on</span>
+<span class="sd">            the wire if using http instead of https as https (the default) will</span>
+<span class="sd">            already validate. Note that this MD5 hash is not stored with the</span>
+<span class="sd">            blob. Also note that if enabled, the memory-efficient upload algorithm</span>
+<span class="sd">            will not be used, because computing the MD5 hash requires buffering</span>
+<span class="sd">            entire blocks, and doing so defeats the purpose of the memory-efficient algorithm.</span>
+<span class="sd">        :param lease:</span>
+<span class="sd">            Required if the container has an active lease. Value can be a LeaseClient object</span>
+<span class="sd">            or the lease ID as a string.</span>
+<span class="sd">        :type lease: ~azure.storage.blob.aio.lease_async.LeaseClient or str</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified time.</span>
+<span class="sd">        :param datetime if_unmodified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only if</span>
+<span class="sd">            the resource has not been modified since the specified date/time.</span>
+<span class="sd">        :param str if_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header to perform</span>
+<span class="sd">            the operation only if the resource&#39;s ETag matches the value specified.</span>
+<span class="sd">        :param str if_none_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header</span>
+<span class="sd">            to perform the operation only if the resource&#39;s ETag does not match</span>
+<span class="sd">            the value specified. Specify the wildcard character (*) to perform</span>
+<span class="sd">            the operation only if the resource does not exist, and fail the</span>
+<span class="sd">            operation if it does exist.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds. This method may make</span>
+<span class="sd">            multiple calls to the Azure service and the timeout will apply to</span>
+<span class="sd">            each call individually.</span>
+<span class="sd">        :param ~azure.storage.blob.models.PremiumPageBlobTier premium_page_blob_tier:</span>
+<span class="sd">            A page blob tier value to set the blob to. The tier correlates to the size of the</span>
+<span class="sd">            blob and number of allowed IOPS. This is only applicable to page blobs on</span>
+<span class="sd">            premium storage accounts.</span>
+<span class="sd">        :param int maxsize_condition:</span>
+<span class="sd">            Optional conditional header. The max length in bytes permitted for</span>
+<span class="sd">            the append blob. If the Append Block operation would cause the blob</span>
+<span class="sd">            to exceed that limit or if the blob size is already greater than the</span>
+<span class="sd">            value specified in this header, the request will fail with</span>
+<span class="sd">            MaxBlobSizeConditionNotMet error (HTTP status code 412 - Precondition Failed).</span>
+<span class="sd">        :param int max_connections:</span>
+<span class="sd">            Maximum number of parallel connections to use when the blob size exceeds</span>
+<span class="sd">            64MB.</span>
+<span class="sd">        :param str encoding:</span>
+<span class="sd">            Defaults to UTF-8.</span>
+<span class="sd">        :returns: A BlobClient to interact with the newly uploaded blob.</span>
+<span class="sd">        :rtype: ~azure.storage.blob.aio.blob_client_async.BlobClient</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START upload_blob_to_container]</span>
+<span class="sd">                :end-before: [END upload_blob_to_container]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Upload blob to the container.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">blob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_blob_client</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">blob</span><span class="o">.</span><span class="n">upload_blob</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span>
+            <span class="n">blob_type</span><span class="o">=</span><span class="n">blob_type</span><span class="p">,</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">,</span>
+            <span class="n">length</span><span class="o">=</span><span class="n">length</span><span class="p">,</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+            <span class="n">content_settings</span><span class="o">=</span><span class="n">content_settings</span><span class="p">,</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="n">validate_content</span><span class="p">,</span>
+            <span class="n">lease</span><span class="o">=</span><span class="n">lease</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="n">max_connections</span><span class="o">=</span><span class="n">max_connections</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">blob</span></div>
+
+<div class="viewcode-block" id="ContainerClient.delete_blob"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.delete_blob">[docs]</a>    <span class="nd">@distributed_trace_async</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">delete_blob</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">blob</span><span class="p">,</span>  <span class="c1"># type: Union[str, BlobProperties]</span>
+            <span class="n">delete_snapshots</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">lease</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, LeaseClient]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Marks the specified blob or snapshot for deletion.</span>
+
+<span class="sd">        The blob is later deleted during garbage collection.</span>
+<span class="sd">        Note that in order to delete a blob, you must delete all of its</span>
+<span class="sd">        snapshots. You can delete both at the same time with the Delete</span>
+<span class="sd">        Blob operation.</span>
+
+<span class="sd">        If a delete retention policy is enabled for the service, then this operation soft deletes the blob or snapshot</span>
+<span class="sd">        and retains the blob or snapshot for specified number of days.</span>
+<span class="sd">        After specified number of days, blob&#39;s data is removed from the service during garbage collection.</span>
+<span class="sd">        Soft deleted blob or snapshot is accessible through List Blobs API specifying `include=&quot;deleted&quot;` option.</span>
+<span class="sd">        Soft-deleted blob or snapshot can be restored using Undelete API.</span>
+
+<span class="sd">        :param blob: The blob with which to interact. If specified, this value will override</span>
+<span class="sd">         a blob value specified in the blob URL.</span>
+<span class="sd">        :type blob: str or ~azure.storage.blob.models.BlobProperties</span>
+<span class="sd">        :param str delete_snapshots:</span>
+<span class="sd">            Required if the blob has associated snapshots. Values include:</span>
+<span class="sd">             - &quot;only&quot;: Deletes only the blobs snapshots.</span>
+<span class="sd">             - &quot;include&quot;: Deletes the blob along with all snapshots.</span>
+<span class="sd">        :param lease:</span>
+<span class="sd">            Required if the blob has an active lease. Value can be a Lease object</span>
+<span class="sd">            or the lease ID as a string.</span>
+<span class="sd">        :type lease: ~azure.storage.blob.aio.lease_async.LeaseClient or str</span>
+<span class="sd">        :param str delete_snapshots:</span>
+<span class="sd">            Required if the blob has associated snapshots. Values include:</span>
+<span class="sd">             - &quot;only&quot;: Deletes only the blobs snapshots.</span>
+<span class="sd">             - &quot;include&quot;: Deletes the blob along with all snapshots.</span>
+<span class="sd">        :param datetime if_modified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only</span>
+<span class="sd">            if the resource has been modified since the specified time.</span>
+<span class="sd">        :param datetime if_unmodified_since:</span>
+<span class="sd">            A DateTime value. Azure expects the date value passed in to be UTC.</span>
+<span class="sd">            If timezone is included, any non-UTC datetimes will be converted to UTC.</span>
+<span class="sd">            If a date is passed in without timezone info, it is assumed to be UTC.</span>
+<span class="sd">            Specify this header to perform the operation only if</span>
+<span class="sd">            the resource has not been modified since the specified date/time.</span>
+<span class="sd">        :param str if_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header to perform</span>
+<span class="sd">            the operation only if the resource&#39;s ETag matches the value specified.</span>
+<span class="sd">        :param str if_none_match:</span>
+<span class="sd">            An ETag value, or the wildcard character (*). Specify this header</span>
+<span class="sd">            to perform the operation only if the resource&#39;s ETag does not match</span>
+<span class="sd">            the value specified. Specify the wildcard character (*) to perform</span>
+<span class="sd">            the operation only if the resource does not exist, and fail the</span>
+<span class="sd">            operation if it does exist.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">blob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_blob_client</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+        <span class="k">await</span> <span class="n">blob</span><span class="o">.</span><span class="n">delete_blob</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="n">delete_snapshots</span><span class="o">=</span><span class="n">delete_snapshots</span><span class="p">,</span>
+            <span class="n">lease</span><span class="o">=</span><span class="n">lease</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ContainerClient.get_blob_client"><a class="viewcode-back" href="../../../../../ref/azure.storage.blob.aio.html#azure.storage.blob.aio.container_client_async.ContainerClient.get_blob_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_blob_client</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">blob</span><span class="p">,</span>  <span class="c1"># type: Union[str, BlobProperties]</span>
+            <span class="n">snapshot</span><span class="o">=</span><span class="kc">None</span>  <span class="c1"># type: str</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; BlobClient</span>
+        <span class="sd">&quot;&quot;&quot;Get a client to interact with the specified blob.</span>
+
+<span class="sd">        The blob need not already exist.</span>
+
+<span class="sd">        :param blob:</span>
+<span class="sd">            The blob with which to interact. If specified, this value will override</span>
+<span class="sd">            a blob value specified in the blob URL.</span>
+<span class="sd">        :type blob: str or ~azure.storage.blob.models.BlobProperties</span>
+<span class="sd">        :param str snapshot:</span>
+<span class="sd">            The optional blob snapshot on which to operate.</span>
+<span class="sd">        :returns: A BlobClient.</span>
+<span class="sd">        :rtype: ~azure.storage.blob.aio.blob_client_async.BlobClient</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_blob_samples_containers_async.py</span>
+<span class="sd">                :start-after: [START get_blob_client]</span>
+<span class="sd">                :end-before: [END get_blob_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the blob client.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">BlobClient</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">container</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">container_name</span><span class="p">,</span> <span class="n">blob</span><span class="o">=</span><span class="n">blob</span><span class="p">,</span> <span class="n">snapshot</span><span class="o">=</span><span class="n">snapshot</span><span class="p">,</span>
+            <span class="n">credential</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="p">,</span> <span class="n">_configuration</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="n">_pipeline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span><span class="p">,</span> <span class="n">_location_mode</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_location_mode</span><span class="p">,</span> <span class="n">_hosts</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_hosts</span><span class="p">,</span>
+            <span class="n">require_encryption</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span><span class="p">,</span> <span class="n">key_encryption_key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span><span class="p">,</span>
+            <span class="n">key_resolver_function</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_resolver_function</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_loop</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

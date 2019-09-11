@@ -1,0 +1,1175 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.redis.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.redis.operations module" href="azure.mgmt.redis.operations.html" />
+    <link rel="prev" title="azure.mgmt.redis package" href="azure.mgmt.redis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.redis.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.redis.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.redis.operations.html">azure.mgmt.redis.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.redis.html#module-azure.mgmt.redis">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.redis.html">azure.mgmt.redis package</a> &raquo;</li>
+        
+      <li>azure.mgmt.redis.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.redis.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.redis.models">
+<span id="azure-mgmt-redis-models-module"></span><h1>azure.mgmt.redis.models module<a class="headerlink" href="#module-azure.mgmt.redis.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.redis.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">family</em>, <em class="sig-param">capacity: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SKU parameters supplied to the create Redis operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.SkuName" title="azure.mgmt.redis.models.SkuName"><em>SkuName</em></a>) – Required. The type of Redis cache to deploy. Valid values:
+(Basic, Standard, Premium). Possible values include: ‘Basic’, ‘Standard’,
+‘Premium’</p></li>
+<li><p><strong>family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.SkuFamily" title="azure.mgmt.redis.models.SkuFamily"><em>SkuFamily</em></a>) – Required. The SKU family to use. Valid values: (C, P). (C =
+Basic/Standard, P = Premium). Possible values include: ‘C’, ‘P’</p></li>
+<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The size of the Redis cache to deploy. Valid
+values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P
+(Premium) family (1, 2, 3, 4).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisAccessKeys">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisAccessKeys</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_access_keys_py3.html#RedisAccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisAccessKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Redis cache access keys.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key"><strong>primary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current primary key that clients can use to
+authenticate with Redis cache.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key"><strong>secondary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current secondary key that clients can use to
+authenticate with Redis cache.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisLinkedServer">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisLinkedServer</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_linked_server_py3.html#RedisLinkedServer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisLinkedServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Linked server Id.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Linked server Id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ProxyResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ProxyResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.resource_py3.Resource</span></code></p>
+<p>The resource model definition for a ARM proxy resource. It will have
+everything other than required location and tags.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.TrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.resource_py3.Resource</span></code></p>
+<p>The resource model definition for a ARM tracked top level resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The geo-location where the resource lives</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisCreateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">sku</em>, <em class="sig-param">location: str</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">enable_non_ssl_port: bool = None</em>, <em class="sig-param">tenant_settings=None</em>, <em class="sig-param">shard_count: int = None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">subnet_id: str = None</em>, <em class="sig-param">static_ip: str = None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_create_parameters_py3.html#RedisCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisCreateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the Create Redis operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>redis_configuration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – All Redis Settings. Few possible keys:
+rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value
+etc.</p></li>
+<li><p><strong>enable_non_ssl_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether the non-ssl Redis server
+port (6379) is enabled.</p></li>
+<li><p><strong>tenant_settings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A dictionary of tenant settings</p></li>
+<li><p><strong>shard_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of shards to be created on a Premium
+Cluster Cache.</p></li>
+<li><p><strong>minimum_tls_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.TlsVersion" title="azure.mgmt.redis.models.TlsVersion"><em>TlsVersion</em></a>) – Optional: requires clients to use a specified
+TLS version (or higher) to connect (e,g, ‘1.0’, ‘1.1’, ‘1.2’). Possible
+values include: ‘1.0’, ‘1.1’, ‘1.2’</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.redis.models.Sku" title="azure.mgmt.redis.models.Sku"><em>Sku</em></a>) – Required. The SKU of the Redis cache to deploy.</p></li>
+<li><p><strong>subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full resource ID of a subnet in a virtual network to
+deploy the Redis cache in. Example format:
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1</p></li>
+<li><p><strong>static_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Static IP address. Required when deploying a Redis cache
+inside an existing Azure Virtual Network.</p></li>
+<li><p><strong>zones</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of availability zones denoting where the resource
+needs to come from.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The geo-location where the resource lives</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">enable_non_ssl_port: bool = None</em>, <em class="sig-param">tenant_settings=None</em>, <em class="sig-param">shard_count: int = None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_update_parameters_py3.html#RedisUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the Update Redis operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>redis_configuration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – All Redis Settings. Few possible keys:
+rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value
+etc.</p></li>
+<li><p><strong>enable_non_ssl_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether the non-ssl Redis server
+port (6379) is enabled.</p></li>
+<li><p><strong>tenant_settings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A dictionary of tenant settings</p></li>
+<li><p><strong>shard_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of shards to be created on a Premium
+Cluster Cache.</p></li>
+<li><p><strong>minimum_tls_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.TlsVersion" title="azure.mgmt.redis.models.TlsVersion"><em>TlsVersion</em></a>) – Optional: requires clients to use a specified
+TLS version (or higher) to connect (e,g, ‘1.0’, ‘1.1’, ‘1.2’). Possible
+values include: ‘1.0’, ‘1.1’, ‘1.2’</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.redis.models.Sku" title="azure.mgmt.redis.models.Sku"><em>Sku</em></a>) – The SKU of the Redis cache to deploy.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisFirewallRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisFirewallRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_ip: str</em>, <em class="sig-param">end_ip: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_firewall_rule_py3.html#RedisFirewallRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisFirewallRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>A firewall rule on a redis cache has a name, and describes a contiguous
+range of IP addresses permitted to connect.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>start_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. lowest IP address included in the range</p></li>
+<li><p><strong>end_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. highest IP address included in the range</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisFirewallRuleCreateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisFirewallRuleCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_ip: str</em>, <em class="sig-param">end_ip: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_firewall_rule_create_parameters_py3.html#RedisFirewallRuleCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisFirewallRuleCreateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters required for creating a firewall rule on redis cache.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. lowest IP address included in the range</p></li>
+<li><p><strong>end_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. highest IP address included in the range</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">redis_configuration=None</em>, <em class="sig-param">enable_non_ssl_port: bool = None</em>, <em class="sig-param">tenant_settings=None</em>, <em class="sig-param">shard_count: int = None</em>, <em class="sig-param">minimum_tls_version=None</em>, <em class="sig-param">subnet_id: str = None</em>, <em class="sig-param">static_ip: str = None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_resource_py3.html#RedisResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>A single Redis item in List or Get Operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>redis_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Redis version.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.redis.models.ProvisioningState" title="azure.mgmt.redis.models.ProvisioningState"><em>ProvisioningState</em></a>) – Redis instance provisioning status. Possible
+values include: ‘Creating’, ‘Deleting’, ‘Disabled’, ‘Failed’, ‘Linking’,
+‘Provisioning’, ‘RecoveringScaleFailure’, ‘Scaling’, ‘Succeeded’,
+‘Unlinking’, ‘Unprovisioning’, ‘Updating’</p></li>
+<li><p><strong>host_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Redis host name.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Redis non-SSL port.</p></li>
+<li><p><strong>ssl_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Redis SSL port.</p></li>
+<li><p><strong>access_keys</strong> (<a class="reference internal" href="#azure.mgmt.redis.models.RedisAccessKeys" title="azure.mgmt.redis.models.RedisAccessKeys"><em>RedisAccessKeys</em></a>) – The keys of the Redis cache - not set if this object is
+not the response to Create or Update redis cache</p></li>
+<li><p><strong>linked_servers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.redis.models.RedisLinkedServer" title="azure.mgmt.redis.models.RedisLinkedServer"><em>RedisLinkedServer</em></a><em>]</em>) – List of the linked servers associated with the cache</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The geo-location where the resource lives</p></li>
+<li><p><strong>redis_configuration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – All Redis Settings. Few possible keys:
+rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value
+etc.</p></li>
+<li><p><strong>enable_non_ssl_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies whether the non-ssl Redis server
+port (6379) is enabled.</p></li>
+<li><p><strong>tenant_settings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A dictionary of tenant settings</p></li>
+<li><p><strong>shard_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of shards to be created on a Premium
+Cluster Cache.</p></li>
+<li><p><strong>minimum_tls_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.TlsVersion" title="azure.mgmt.redis.models.TlsVersion"><em>TlsVersion</em></a>) – Optional: requires clients to use a specified
+TLS version (or higher) to connect (e,g, ‘1.0’, ‘1.1’, ‘1.2’). Possible
+values include: ‘1.0’, ‘1.1’, ‘1.2’</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.redis.models.Sku" title="azure.mgmt.redis.models.Sku"><em>Sku</em></a>) – Required. The SKU of the Redis cache to deploy.</p></li>
+<li><p><strong>subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full resource ID of a subnet in a virtual network to
+deploy the Redis cache in. Example format:
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1</p></li>
+<li><p><strong>static_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Static IP address. Required when deploying a Redis cache
+inside an existing Azure Virtual Network.</p></li>
+<li><p><strong>zones</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of availability zones denoting where the resource
+needs to come from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisRegenerateKeyParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisRegenerateKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_regenerate_key_parameters_py3.html#RedisRegenerateKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisRegenerateKeyParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Specifies which Redis access keys to reset.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.RedisKeyType" title="azure.mgmt.redis.models.RedisKeyType"><em>RedisKeyType</em></a>) – Required. The Redis access key to regenerate. Possible
+values include: ‘Primary’, ‘Secondary’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisRebootParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisRebootParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">reboot_type</em>, <em class="sig-param">shard_id: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_reboot_parameters_py3.html#RedisRebootParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisRebootParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Specifies which Redis node(s) to reboot.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reboot_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.RebootType" title="azure.mgmt.redis.models.RebootType"><em>RebootType</em></a>) – Required. Which Redis node(s) to reboot. Depending on
+this value data loss is possible. Possible values include: ‘PrimaryNode’,
+‘SecondaryNode’, ‘AllNodes’</p></li>
+<li><p><strong>shard_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – If clustering is enabled, the ID of the shard to be
+rebooted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ExportRDBParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ExportRDBParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">prefix: str</em>, <em class="sig-param">container: str</em>, <em class="sig-param">format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/export_rdb_parameters_py3.html#ExportRDBParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ExportRDBParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters for Redis export operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – File format.</p></li>
+<li><p><strong>prefix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Prefix to use for exported files.</p></li>
+<li><p><strong>container</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Container name to export to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ImportRDBParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ImportRDBParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">files</em>, <em class="sig-param">format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/import_rdb_parameters_py3.html#ImportRDBParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ImportRDBParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters for Redis import operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – File format.</p></li>
+<li><p><strong>files</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. files to import.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ScheduleEntry">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ScheduleEntry</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">day_of_week</em>, <em class="sig-param">start_hour_utc: int</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/schedule_entry_py3.html#ScheduleEntry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ScheduleEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Patch schedule entry for a Premium Redis Cache.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>day_of_week</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.DayOfWeek" title="azure.mgmt.redis.models.DayOfWeek"><em>DayOfWeek</em></a>) – Required. Day of the week when a cache can be patched.
+Possible values include: ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’,
+‘Friday’, ‘Saturday’, ‘Sunday’, ‘Everyday’, ‘Weekend’</p></li>
+<li><p><strong>start_hour_utc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Start hour after which cache patching can
+start.</p></li>
+<li><p><strong>maintenance_window</strong> (<em>timedelta</em>) – ISO8601 timespan specifying how much time cache
+patching can take.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisPatchSchedule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisPatchSchedule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">schedule_entries</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_patch_schedule_py3.html#RedisPatchSchedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisPatchSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Response to put/get patch schedules for Redis cache.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>schedule_entries</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.redis.models.ScheduleEntry" title="azure.mgmt.redis.models.ScheduleEntry"><em>ScheduleEntry</em></a><em>]</em>) – Required. List of patch schedules for a Redis
+cache.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisForceRebootResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisForceRebootResponse</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_force_reboot_response_py3.html#RedisForceRebootResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisForceRebootResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response to force reboot for Redis cache.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisLinkedServerWithProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisLinkedServerWithProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">linked_redis_cache_id: str</em>, <em class="sig-param">linked_redis_cache_location: str</em>, <em class="sig-param">server_role</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_linked_server_with_properties_py3.html#RedisLinkedServerWithProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisLinkedServerWithProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.redis.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>Response to put/get linked server (with properties) for Redis cache.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Terminal state of the link between primary and
+secondary redis cache.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>linked_redis_cache_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Fully qualified resourceId of the
+linked redis cache.</p></li>
+<li><p><strong>linked_redis_cache_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Location of the linked redis
+cache.</p></li>
+<li><p><strong>server_role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.ReplicationRole" title="azure.mgmt.redis.models.ReplicationRole"><em>ReplicationRole</em></a>) – Required. Role of the linked server. Possible values
+include: ‘Primary’, ‘Secondary’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisLinkedServerCreateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisLinkedServerCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">linked_redis_cache_id: str</em>, <em class="sig-param">linked_redis_cache_location: str</em>, <em class="sig-param">server_role</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_linked_server_create_parameters_py3.html#RedisLinkedServerCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisLinkedServerCreateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameter required for creating a linked server to redis cache.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linked_redis_cache_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Fully qualified resourceId of the
+linked redis cache.</p></li>
+<li><p><strong>linked_redis_cache_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Location of the linked redis
+cache.</p></li>
+<li><p><strong>server_role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.redis.models.ReplicationRole" title="azure.mgmt.redis.models.ReplicationRole"><em>ReplicationRole</em></a>) – Required. Role of the linked server. Possible values
+include: ‘Primary’, ‘Secondary’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that describes the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly name of the resource provider</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: read, write, delete, listKeys/action,
+etc.</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type on which the operation is performed.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly name of the operation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>REST API operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.redis.models.OperationDisplay" title="azure.mgmt.redis.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that describes the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.CheckNameAvailabilityParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">CheckNameAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/check_name_availability_parameters_py3.html#CheckNameAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.CheckNameAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters body to pass for resource name availability check.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource type. The only legal value of this
+property for checking redis cache name availability is
+‘Microsoft.Cache/redis’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.UpgradeNotification">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">UpgradeNotification</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/upgrade_notification_py3.html#UpgradeNotification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.UpgradeNotification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties of upgrade notification.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of upgrade notification.</p></li>
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – Timestamp when upgrade notification occurred.</p></li>
+<li><p><strong>upsell_notification</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Details about this upgrade notification</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.NotificationListResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">NotificationListResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/notification_list_response_py3.html#NotificationListResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.NotificationListResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The response of listUpgradeNotifications.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.redis.models.UpgradeNotification" title="azure.mgmt.redis.models.UpgradeNotification"><em>UpgradeNotification</em></a><em>]</em>) – List of all notifications.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Link for next set of notifications.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.OperationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.redis.models.Operation" title="azure.mgmt.redis.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisResourcePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisResourcePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_resource_paged.html#RedisResourcePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisResourcePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.redis.models.RedisResource" title="azure.mgmt.redis.models.RedisResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisResource</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisFirewallRulePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisFirewallRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_firewall_rule_paged.html#RedisFirewallRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisFirewallRulePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.redis.models.RedisFirewallRule" title="azure.mgmt.redis.models.RedisFirewallRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisFirewallRule</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisPatchSchedulePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisPatchSchedulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_patch_schedule_paged.html#RedisPatchSchedulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisPatchSchedulePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.redis.models.RedisPatchSchedule" title="azure.mgmt.redis.models.RedisPatchSchedule"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisPatchSchedule</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisLinkedServerWithPropertiesPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisLinkedServerWithPropertiesPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_linked_server_with_properties_paged.html#RedisLinkedServerWithPropertiesPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisLinkedServerWithPropertiesPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.redis.models.RedisLinkedServerWithProperties" title="azure.mgmt.redis.models.RedisLinkedServerWithProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">RedisLinkedServerWithProperties</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.SkuName">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.SkuName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.SkuName.basic">
+<code class="sig-name descname">basic</code><em class="property"> = 'Basic'</em><a class="headerlink" href="#azure.mgmt.redis.models.SkuName.basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.SkuName.premium">
+<code class="sig-name descname">premium</code><em class="property"> = 'Premium'</em><a class="headerlink" href="#azure.mgmt.redis.models.SkuName.premium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.SkuName.standard">
+<code class="sig-name descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.redis.models.SkuName.standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.SkuFamily">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">SkuFamily</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#SkuFamily"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.SkuFamily" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.SkuFamily.c">
+<code class="sig-name descname">c</code><em class="property"> = 'C'</em><a class="headerlink" href="#azure.mgmt.redis.models.SkuFamily.c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.SkuFamily.p">
+<code class="sig-name descname">p</code><em class="property"> = 'P'</em><a class="headerlink" href="#azure.mgmt.redis.models.SkuFamily.p" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.TlsVersion">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">TlsVersion</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#TlsVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.TlsVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.TlsVersion.one_full_stop_one">
+<code class="sig-name descname">one_full_stop_one</code><em class="property"> = '1.1'</em><a class="headerlink" href="#azure.mgmt.redis.models.TlsVersion.one_full_stop_one" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.TlsVersion.one_full_stop_two">
+<code class="sig-name descname">one_full_stop_two</code><em class="property"> = '1.2'</em><a class="headerlink" href="#azure.mgmt.redis.models.TlsVersion.one_full_stop_two" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.TlsVersion.one_full_stop_zero">
+<code class="sig-name descname">one_full_stop_zero</code><em class="property"> = '1.0'</em><a class="headerlink" href="#azure.mgmt.redis.models.TlsVersion.one_full_stop_zero" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.disabled">
+<code class="sig-name descname">disabled</code><em class="property"> = 'Disabled'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.linking">
+<code class="sig-name descname">linking</code><em class="property"> = 'Linking'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.linking" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.provisioning">
+<code class="sig-name descname">provisioning</code><em class="property"> = 'Provisioning'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.provisioning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.recovering_scale_failure">
+<code class="sig-name descname">recovering_scale_failure</code><em class="property"> = 'RecoveringScaleFailure'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.recovering_scale_failure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.scaling">
+<code class="sig-name descname">scaling</code><em class="property"> = 'Scaling'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.scaling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.unlinking">
+<code class="sig-name descname">unlinking</code><em class="property"> = 'Unlinking'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.unlinking" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.unprovisioning">
+<code class="sig-name descname">unprovisioning</code><em class="property"> = 'Unprovisioning'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.unprovisioning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.redis.models.ProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RedisKeyType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RedisKeyType</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#RedisKeyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RedisKeyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.RedisKeyType.primary">
+<code class="sig-name descname">primary</code><em class="property"> = 'Primary'</em><a class="headerlink" href="#azure.mgmt.redis.models.RedisKeyType.primary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.RedisKeyType.secondary">
+<code class="sig-name descname">secondary</code><em class="property"> = 'Secondary'</em><a class="headerlink" href="#azure.mgmt.redis.models.RedisKeyType.secondary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.RebootType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">RebootType</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#RebootType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.RebootType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.RebootType.all_nodes">
+<code class="sig-name descname">all_nodes</code><em class="property"> = 'AllNodes'</em><a class="headerlink" href="#azure.mgmt.redis.models.RebootType.all_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.RebootType.primary_node">
+<code class="sig-name descname">primary_node</code><em class="property"> = 'PrimaryNode'</em><a class="headerlink" href="#azure.mgmt.redis.models.RebootType.primary_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.RebootType.secondary_node">
+<code class="sig-name descname">secondary_node</code><em class="property"> = 'SecondaryNode'</em><a class="headerlink" href="#azure.mgmt.redis.models.RebootType.secondary_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.DayOfWeek">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">DayOfWeek</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#DayOfWeek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.everyday">
+<code class="sig-name descname">everyday</code><em class="property"> = 'Everyday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.everyday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.friday">
+<code class="sig-name descname">friday</code><em class="property"> = 'Friday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.friday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.monday">
+<code class="sig-name descname">monday</code><em class="property"> = 'Monday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.monday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.saturday">
+<code class="sig-name descname">saturday</code><em class="property"> = 'Saturday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.saturday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.sunday">
+<code class="sig-name descname">sunday</code><em class="property"> = 'Sunday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.sunday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.thursday">
+<code class="sig-name descname">thursday</code><em class="property"> = 'Thursday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.thursday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.tuesday">
+<code class="sig-name descname">tuesday</code><em class="property"> = 'Tuesday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.tuesday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.wednesday">
+<code class="sig-name descname">wednesday</code><em class="property"> = 'Wednesday'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.wednesday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.DayOfWeek.weekend">
+<code class="sig-name descname">weekend</code><em class="property"> = 'Weekend'</em><a class="headerlink" href="#azure.mgmt.redis.models.DayOfWeek.weekend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.redis.models.ReplicationRole">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.redis.models.</code><code class="sig-name descname">ReplicationRole</code><a class="reference internal" href="../_modules/azure/mgmt/redis/models/redis_management_client_enums.html#ReplicationRole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.redis.models.ReplicationRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ReplicationRole.primary">
+<code class="sig-name descname">primary</code><em class="property"> = 'Primary'</em><a class="headerlink" href="#azure.mgmt.redis.models.ReplicationRole.primary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.redis.models.ReplicationRole.secondary">
+<code class="sig-name descname">secondary</code><em class="property"> = 'Secondary'</em><a class="headerlink" href="#azure.mgmt.redis.models.ReplicationRole.secondary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.redis.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.redis.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.redis.html" class="btn btn-neutral float-left" title="azure.mgmt.redis package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1726 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.batch.operations module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.batchai package" href="azure.mgmt.batchai.html" />
+    <link rel="prev" title="azure.mgmt.batch.models module" href="azure.mgmt.batch.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.batch.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.batch.models.html">azure.mgmt.batch.models module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.batch.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.batch.html#module-azure.mgmt.batch">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.batch.html">azure.mgmt.batch package</a> &raquo;</li>
+        
+      <li>azure.mgmt.batch.operations module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.batch.operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.batch.operations">
+<span id="azure-mgmt-batch-operations-module"></span><h1>azure.mgmt.batch.operations module<a class="headerlink" href="#module-azure.mgmt.batch.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">BatchAccountOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>BatchAccountOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Batch account with the specified parameters. Existing
+accounts cannot be updated with this API and should instead be updated
+with the Update Batch Account API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A name for the Batch account which must be unique
+within the region. Batch account names must be between 3 and 24
+characters in length and must use only numbers and lowercase letters.
+This name is used as part of the DNS name that is used to access the
+Batch service in the region in which the account is created. For
+example: <a class="reference external" href="http://accountname.region.batch.azure.com/">http://accountname.region.batch.azure.com/</a>.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccountCreateParameters" title="azure.mgmt.batch.models.BatchAccountCreateParameters"><em>BatchAccountCreateParameters</em></a>) – Additional parameters for account creation.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns BatchAccount or
+ClientRawResponse&lt;BatchAccount&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the specified Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BatchAccount or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.get_keys">
+<code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.get_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the account keys for the specified Batch account.</p>
+<p>This operation applies only to Batch accounts created with a
+poolAllocationMode of ‘BatchService’. If the Batch account was created
+with a poolAllocationMode of ‘UserSubscription’, clients cannot use
+access to keys to authenticate, and must use Azure Active Directory
+instead. In this case, getting the keys will fail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BatchAccountKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccountKeys" title="azure.mgmt.batch.models.BatchAccountKeys">BatchAccountKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the Batch accounts associated with the
+subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of BatchAccount</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccountPaged" title="azure.mgmt.batch.models.BatchAccountPaged">BatchAccountPaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.list_by_resource_group">
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the Batch accounts associated with the specified
+resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of BatchAccount</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccountPaged" title="azure.mgmt.batch.models.BatchAccountPaged">BatchAccountPaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.regenerate_key">
+<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regenerates the specified account key for the Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.AccountKeyType" title="azure.mgmt.batch.models.AccountKeyType"><em>AccountKeyType</em></a>) – The type of account key to regenerate. Possible
+values include: ‘Primary’, ‘Secondary’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BatchAccountKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccountKeys" title="azure.mgmt.batch.models.BatchAccountKeys">BatchAccountKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.synchronize_auto_storage_keys">
+<code class="sig-name descname">synchronize_auto_storage_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.synchronize_auto_storage_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.synchronize_auto_storage_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchronizes access keys for the auto-storage account configured for
+the specified Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.BatchAccountOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">auto_storage=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_batch_account_operations.html#BatchAccountOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the properties of an existing Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The user-specified tags associated with the account.</p></li>
+<li><p><strong>auto_storage</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.AutoStorageBaseProperties" title="azure.mgmt.batch.models.AutoStorageBaseProperties"><em>AutoStorageBaseProperties</em></a>) – The properties related to the auto-storage
+account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BatchAccount or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchAccount" title="azure.mgmt.batch.models.BatchAccount">BatchAccount</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">ApplicationPackageOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ApplicationPackageOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.activate">
+<code class="sig-name descname">activate</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">format</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations.activate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates the specified application package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>version_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the application.</p></li>
+<li><p><strong>format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The format of the application package binary file.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationPackage or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPackage" title="azure.mgmt.batch.models.ApplicationPackage">ApplicationPackage</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an application package record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>version_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the application.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationPackage or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPackage" title="azure.mgmt.batch.models.ApplicationPackage">ApplicationPackage</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an application package record and its associated binary file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>version_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the application.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the specified application package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>version_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the application.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationPackage or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPackage" title="azure.mgmt.batch.models.ApplicationPackage">ApplicationPackage</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_package_operations.html#ApplicationPackageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the application packages in the specified application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>maxresults</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of items to return in the
+response.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ApplicationPackage</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPackagePaged" title="azure.mgmt.batch.models.ApplicationPackagePaged">ApplicationPackagePaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPackage" title="azure.mgmt.batch.models.ApplicationPackage">ApplicationPackage</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">ApplicationOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ApplicationOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an application to the specified Batch account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application"><em>Application</em></a>) – The parameters for the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Application or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application">Application</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the specified application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Application or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application">Application</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the applications in the specified account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>maxresults</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of items to return in the
+response.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Application</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.ApplicationPaged" title="azure.mgmt.batch.models.ApplicationPaged">ApplicationPaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application">Application</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.ApplicationOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_application_operations.html#ApplicationOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates settings for the specified application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application. This must be
+unique within the account.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application"><em>Application</em></a>) – The parameters for the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Application or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Application" title="azure.mgmt.batch.models.Application">Application</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.LocationOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">LocationOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_location_operations.html#LocationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>LocationOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.LocationOperations.check_name_availability">
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location_name</em>, <em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_location_operations.html#LocationOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the Batch account name is available in the specified
+region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The desired region for the name check.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name to check for availability</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CheckNameAvailabilityResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.CheckNameAvailabilityResult" title="azure.mgmt.batch.models.CheckNameAvailabilityResult">CheckNameAvailabilityResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.LocationOperations.get_quotas">
+<code class="sig-name descname">get_quotas</code><span class="sig-paren">(</span><em class="sig-param">location_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_location_operations.html#LocationOperations.get_quotas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.get_quotas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Batch service quotas for the specified subscription at the
+given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The region for which to retrieve Batch service
+quotas.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BatchLocationQuota or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.BatchLocationQuota" title="azure.mgmt.batch.models.BatchLocationQuota">BatchLocationQuota</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.LocationOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.Operations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.Operations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists available operations for the Microsoft.Batch provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.OperationPaged" title="azure.mgmt.batch.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Operation" title="azure.mgmt.batch.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.Operations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.CertificateOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">CertificateOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>CertificateOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.cancel_deletion">
+<code class="sig-name descname">cancel_deletion</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.cancel_deletion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.cancel_deletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels a failed deletion of a certificate from the specified account.</p>
+<p>If you try to delete a certificate that is being used by a pool or
+compute node, the status of the certificate changes to deleteFailed. If
+you decide that you want to continue using the certificate, you can use
+this operation to set the status of the certificate back to active. If
+you intend to delete the certificate, you do not need to run this
+operation after the deletion failed. You must make sure that the
+certificate is not being used by any resources, and then you can try
+again to delete the certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>certificate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier for the certificate. This must
+be made up of algorithm and thumbprint separated by a dash, and must
+match the certificate data in the request. For example SHA1-a3d1c5.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Certificate or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new certificate inside the specified account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>certificate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier for the certificate. This must
+be made up of algorithm and thumbprint separated by a dash, and must
+match the certificate data in the request. For example SHA1-a3d1c5.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.CertificateCreateOrUpdateParameters" title="azure.mgmt.batch.models.CertificateCreateOrUpdateParameters"><em>CertificateCreateOrUpdateParameters</em></a>) – Additional parameters for certificate creation.</p></li>
+<li><p><strong>if_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The entity state (ETag) version of the certificate to
+update. A value of “*” can be used to apply the operation only if the
+certificate already exists. If omitted, this operation will always be
+applied.</p></li>
+<li><p><strong>if_none_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Set to ‘*’ to allow a new certificate to be
+created, but to prevent updating an existing certificate. Other values
+will be ignored.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Certificate or
+ClientRawResponse&lt;Certificate&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>certificate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier for the certificate. This must
+be made up of algorithm and thumbprint separated by a dash, and must
+match the certificate data in the request. For example SHA1-a3d1c5.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the specified certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>certificate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier for the certificate. This must
+be made up of algorithm and thumbprint separated by a dash, and must
+match the certificate data in the request. For example SHA1-a3d1c5.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Certificate or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.list_by_batch_account">
+<code class="sig-name descname">list_by_batch_account</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">select=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the certificates in the specified account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>maxresults</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of items to return in the
+response.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Comma separated list of properties that should be
+returned. e.g. “properties/provisioningState”. Only top level
+properties under properties/ are valid for selection.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter expression. Valid properties for filtering
+are “properties/provisioningState”,
+“properties/provisioningStateTransitionTime”, “name”.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Certificate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.CertificatePaged" title="azure.mgmt.batch.models.CertificatePaged">CertificatePaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.CertificateOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_certificate_operations.html#CertificateOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the properties of an existing certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>certificate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier for the certificate. This must
+be made up of algorithm and thumbprint separated by a dash, and must
+match the certificate data in the request. For example SHA1-a3d1c5.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.CertificateCreateOrUpdateParameters" title="azure.mgmt.batch.models.CertificateCreateOrUpdateParameters"><em>CertificateCreateOrUpdateParameters</em></a>) – Certificate entity to update.</p></li>
+<li><p><strong>if_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The entity state (ETag) version of the certificate to
+update. This value can be omitted or set to “*” to apply the operation
+unconditionally.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Certificate or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Certificate" title="azure.mgmt.batch.models.Certificate">Certificate</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.batch.operations.PoolOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">PoolOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>PoolOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to be used with the HTTP request. Constant value: “2019-08-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new pool inside the specified account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool"><em>Pool</em></a>) – Additional parameters for pool creation.</p></li>
+<li><p><strong>if_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The entity state (ETag) version of the pool to
+update. A value of “*” can be used to apply the operation only if the
+pool already exists. If omitted, this operation will always be
+applied.</p></li>
+<li><p><strong>if_none_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Set to ‘*’ to allow a new pool to be created,
+but to prevent updating an existing pool. Other values will be
+ignored.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Pool or
+ClientRawResponse&lt;Pool&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.disable_auto_scale">
+<code class="sig-name descname">disable_auto_scale</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.disable_auto_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.disable_auto_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables automatic scaling for a pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pool or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about the specified pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pool or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.list_by_batch_account">
+<code class="sig-name descname">list_by_batch_account</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">select=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the pools in the specified account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>maxresults</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of items to return in the
+response.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Comma separated list of properties that should be
+returned. e.g. “properties/provisioningState”. Only top level
+properties under properties/ are valid for selection.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter expression. Valid properties for filtering
+are:
+name
+properties/allocationState
+properties/allocationStateTransitionTime
+properties/creationTime
+properties/provisioningState
+properties/provisioningStateTransitionTime
+properties/lastModified
+properties/vmSize
+properties/interNodeCommunication
+properties/scaleSettings/autoScale
+properties/scaleSettings/fixedScale</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Pool</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.PoolPaged" title="azure.mgmt.batch.models.PoolPaged">PoolPaged</a>[<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.batch.operations.PoolOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.stop_resize">
+<code class="sig-name descname">stop_resize</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.stop_resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.stop_resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops an ongoing resize operation on the pool.</p>
+<p>This does not restore the pool to its previous state before the resize
+operation: it only stops any further changes being made, and the pool
+maintains its current state. After stopping, the pool stabilizes at the
+number of nodes it was at when the stop operation was done. During the
+stop operation, the pool allocation state changes first to stopping and
+then to steady. A resize operation need not be an explicit resize pool
+request; this API can also be used to halt the initial sizing of the
+pool when it is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pool or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.batch.operations.PoolOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/_pool_operations.html#PoolOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the properties of an existing pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the Batch account.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Batch account.</p></li>
+<li><p><strong>pool_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pool name. This must be unique within the
+account.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool"><em>Pool</em></a>) – Pool properties that should be updated. Properties
+that are supplied will be updated, any property not supplied will be
+unchanged.</p></li>
+<li><p><strong>if_match</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The entity state (ETag) version of the pool to
+update. This value can be omitted or set to “*” to apply the operation
+unconditionally.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pool or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.batch.models.html#azure.mgmt.batch.models.Pool" title="azure.mgmt.batch.models.Pool">Pool</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.batchai.html" class="btn btn-neutral float-right" title="azure.mgmt.batchai package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.batch.models.html" class="btn btn-neutral float-left" title="azure.mgmt.batch.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

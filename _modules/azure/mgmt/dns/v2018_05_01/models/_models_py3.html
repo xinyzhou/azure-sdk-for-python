@@ -1,0 +1,946 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.dns.v2018_05_01.models._models_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.dns.v2018_05_01.models._models_py3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.dns.v2018_05_01.models._models_py3</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.serialization</span> <span class="k">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">msrest.exceptions</span> <span class="k">import</span> <span class="n">HttpOperationError</span>
+
+
+<div class="viewcode-block" id="AaaaRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.AaaaRecord">[docs]</a><span class="k">class</span> <span class="nc">AaaaRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An AAAA record.</span>
+
+<span class="sd">    :param ipv6_address: The IPv6 address of this AAAA record.</span>
+<span class="sd">    :type ipv6_address: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;ipv6_address&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;ipv6Address&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ipv6_address</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AaaaRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ipv6_address</span> <span class="o">=</span> <span class="n">ipv6_address</span></div>
+
+
+<div class="viewcode-block" id="ARecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.ARecord">[docs]</a><span class="k">class</span> <span class="nc">ARecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An A record.</span>
+
+<span class="sd">    :param ipv4_address: The IPv4 address of this A record.</span>
+<span class="sd">    :type ipv4_address: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;ipv4_address&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;ipv4Address&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ipv4_address</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ARecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ipv4_address</span> <span class="o">=</span> <span class="n">ipv4_address</span></div>
+
+
+<div class="viewcode-block" id="CaaRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.CaaRecord">[docs]</a><span class="k">class</span> <span class="nc">CaaRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A CAA record.</span>
+
+<span class="sd">    :param flags: The flags for this CAA record as an integer between 0 and</span>
+<span class="sd">     255.</span>
+<span class="sd">    :type flags: int</span>
+<span class="sd">    :param tag: The tag for this CAA record.</span>
+<span class="sd">    :type tag: str</span>
+<span class="sd">    :param value: The value for this CAA record.</span>
+<span class="sd">    :type value: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;flags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;flags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">flags</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tag</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CaaRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">flags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span></div>
+
+
+<span class="k">class</span> <span class="nc">CloudError</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An error message.</span>
+
+<span class="sd">    :param error: The error message body</span>
+<span class="sd">    :type error: ~azure.mgmt.dns.v2018_05_01.models.CloudErrorBody</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudErrorBody&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CloudError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">error</span>
+
+
+<span class="k">class</span> <span class="nc">CloudErrorException</span><span class="p">(</span><span class="n">HttpOperationError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Server responsed with exception of type: &#39;CloudError&#39;.</span>
+
+<span class="sd">    :param deserialize: A deserializer</span>
+<span class="sd">    :param response: Server response to be deserialized.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">CloudErrorException</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;CloudError&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">CloudErrorBody</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The body of an error message.</span>
+
+<span class="sd">    :param code: The error code</span>
+<span class="sd">    :type code: str</span>
+<span class="sd">    :param message: A description of what caused the error</span>
+<span class="sd">    :type message: str</span>
+<span class="sd">    :param target: The target resource of the error message</span>
+<span class="sd">    :type target: str</span>
+<span class="sd">    :param details: Extra error information</span>
+<span class="sd">    :type details: list[~azure.mgmt.dns.v2018_05_01.models.CloudErrorBody]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;details&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;details&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[CloudErrorBody]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">code</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CloudErrorBody</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="n">details</span>
+
+
+<div class="viewcode-block" id="CnameRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.CnameRecord">[docs]</a><span class="k">class</span> <span class="nc">CnameRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A CNAME record.</span>
+
+<span class="sd">    :param cname: The canonical name for this CNAME record.</span>
+<span class="sd">    :type cname: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;cname&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;cname&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">cname</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CnameRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cname</span> <span class="o">=</span> <span class="n">cname</span></div>
+
+
+<div class="viewcode-block" id="DnsResourceReference"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.DnsResourceReference">[docs]</a><span class="k">class</span> <span class="nc">DnsResourceReference</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents a single Azure resource and its referencing DNS records.</span>
+
+<span class="sd">    :param dns_resources: A list of dns Records</span>
+<span class="sd">    :type dns_resources: list[~azure.mgmt.dns.v2018_05_01.models.SubResource]</span>
+<span class="sd">    :param target_resource: A reference to an azure resource from where the</span>
+<span class="sd">     dns resource value is taken.</span>
+<span class="sd">    :type target_resource: ~azure.mgmt.dns.v2018_05_01.models.SubResource</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;dns_resources&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;dnsResources&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SubResource]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;target_resource&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;targetResource&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SubResource&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dns_resources</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_resource</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DnsResourceReference</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dns_resources</span> <span class="o">=</span> <span class="n">dns_resources</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_resource</span> <span class="o">=</span> <span class="n">target_resource</span></div>
+
+
+<div class="viewcode-block" id="DnsResourceReferenceRequest"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceRequest">[docs]</a><span class="k">class</span> <span class="nc">DnsResourceReferenceRequest</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the properties of the Dns Resource Reference Request.</span>
+
+<span class="sd">    :param target_resources: A list of references to azure resources for which</span>
+<span class="sd">     referencing dns records need to be queried.</span>
+<span class="sd">    :type target_resources:</span>
+<span class="sd">     list[~azure.mgmt.dns.v2018_05_01.models.SubResource]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;target_resources&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.targetResources&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SubResource]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">target_resources</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DnsResourceReferenceRequest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_resources</span> <span class="o">=</span> <span class="n">target_resources</span></div>
+
+
+<div class="viewcode-block" id="DnsResourceReferenceResult"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceResult">[docs]</a><span class="k">class</span> <span class="nc">DnsResourceReferenceResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the properties of the Dns Resource Reference Result.</span>
+
+<span class="sd">    :param dns_resource_references: The result of dns resource reference</span>
+<span class="sd">     request. A list of dns resource references for each of the azure resource</span>
+<span class="sd">     in the request</span>
+<span class="sd">    :type dns_resource_references:</span>
+<span class="sd">     list[~azure.mgmt.dns.v2018_05_01.models.DnsResourceReference]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;dns_resource_references&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.dnsResourceReferences&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[DnsResourceReference]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dns_resource_references</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DnsResourceReferenceResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dns_resource_references</span> <span class="o">=</span> <span class="n">dns_resource_references</span></div>
+
+
+<div class="viewcode-block" id="MxRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.MxRecord">[docs]</a><span class="k">class</span> <span class="nc">MxRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An MX record.</span>
+
+<span class="sd">    :param preference: The preference value for this MX record.</span>
+<span class="sd">    :type preference: int</span>
+<span class="sd">    :param exchange: The domain name of the mail host for this MX record.</span>
+<span class="sd">    :type exchange: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;preference&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;preference&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;exchange&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;exchange&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">preference</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exchange</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MxRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preference</span> <span class="o">=</span> <span class="n">preference</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exchange</span> <span class="o">=</span> <span class="n">exchange</span></div>
+
+
+<div class="viewcode-block" id="NsRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.NsRecord">[docs]</a><span class="k">class</span> <span class="nc">NsRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An NS record.</span>
+
+<span class="sd">    :param nsdname: The name server name for this NS record.</span>
+<span class="sd">    :type nsdname: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;nsdname&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;nsdname&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">nsdname</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NsRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nsdname</span> <span class="o">=</span> <span class="n">nsdname</span></div>
+
+
+<div class="viewcode-block" id="PtrRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.PtrRecord">[docs]</a><span class="k">class</span> <span class="nc">PtrRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A PTR record.</span>
+
+<span class="sd">    :param ptrdname: The PTR target domain name for this PTR record.</span>
+<span class="sd">    :type ptrdname: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;ptrdname&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;ptrdname&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ptrdname</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PtrRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ptrdname</span> <span class="o">=</span> <span class="n">ptrdname</span></div>
+
+
+<div class="viewcode-block" id="RecordSet"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.RecordSet">[docs]</a><span class="k">class</span> <span class="nc">RecordSet</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Describes a DNS record set (a collection of DNS records with the same name</span>
+<span class="sd">    and type).</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar id: The ID of the record set.</span>
+<span class="sd">    :vartype id: str</span>
+<span class="sd">    :ivar name: The name of the record set.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :ivar type: The type of the record set.</span>
+<span class="sd">    :vartype type: str</span>
+<span class="sd">    :param etag: The etag of the record set.</span>
+<span class="sd">    :type etag: str</span>
+<span class="sd">    :param metadata: The metadata attached to the record set.</span>
+<span class="sd">    :type metadata: dict[str, str]</span>
+<span class="sd">    :param ttl: The TTL (time-to-live) of the records in the record set.</span>
+<span class="sd">    :type ttl: long</span>
+<span class="sd">    :ivar fqdn: Fully qualified domain name of the record set.</span>
+<span class="sd">    :vartype fqdn: str</span>
+<span class="sd">    :ivar provisioning_state: provisioning State of the record set.</span>
+<span class="sd">    :vartype provisioning_state: str</span>
+<span class="sd">    :param target_resource: A reference to an azure resource from where the</span>
+<span class="sd">     dns resource value is taken.</span>
+<span class="sd">    :type target_resource: ~azure.mgmt.dns.v2018_05_01.models.SubResource</span>
+<span class="sd">    :param arecords: The list of A records in the record set.</span>
+<span class="sd">    :type arecords: list[~azure.mgmt.dns.v2018_05_01.models.ARecord]</span>
+<span class="sd">    :param aaaa_records: The list of AAAA records in the record set.</span>
+<span class="sd">    :type aaaa_records: list[~azure.mgmt.dns.v2018_05_01.models.AaaaRecord]</span>
+<span class="sd">    :param mx_records: The list of MX records in the record set.</span>
+<span class="sd">    :type mx_records: list[~azure.mgmt.dns.v2018_05_01.models.MxRecord]</span>
+<span class="sd">    :param ns_records: The list of NS records in the record set.</span>
+<span class="sd">    :type ns_records: list[~azure.mgmt.dns.v2018_05_01.models.NsRecord]</span>
+<span class="sd">    :param ptr_records: The list of PTR records in the record set.</span>
+<span class="sd">    :type ptr_records: list[~azure.mgmt.dns.v2018_05_01.models.PtrRecord]</span>
+<span class="sd">    :param srv_records: The list of SRV records in the record set.</span>
+<span class="sd">    :type srv_records: list[~azure.mgmt.dns.v2018_05_01.models.SrvRecord]</span>
+<span class="sd">    :param txt_records: The list of TXT records in the record set.</span>
+<span class="sd">    :type txt_records: list[~azure.mgmt.dns.v2018_05_01.models.TxtRecord]</span>
+<span class="sd">    :param cname_record: The CNAME record in the  record set.</span>
+<span class="sd">    :type cname_record: ~azure.mgmt.dns.v2018_05_01.models.CnameRecord</span>
+<span class="sd">    :param soa_record: The SOA record in the record set.</span>
+<span class="sd">    :type soa_record: ~azure.mgmt.dns.v2018_05_01.models.SoaRecord</span>
+<span class="sd">    :param caa_records: The list of CAA records in the record set.</span>
+<span class="sd">    :type caa_records: list[~azure.mgmt.dns.v2018_05_01.models.CaaRecord]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;fqdn&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;etag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;ttl&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.TTL&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;fqdn&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.fqdn&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;target_resource&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.targetResource&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SubResource&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;arecords&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.ARecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ARecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;aaaa_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.AAAARecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[AaaaRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;mx_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.MXRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[MxRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;ns_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.NSRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[NsRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;ptr_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.PTRRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[PtrRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;srv_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.SRVRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SrvRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;txt_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.TXTRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[TxtRecord]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;cname_record&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.CNAMERecord&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CnameRecord&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;soa_record&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.SOARecord&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SoaRecord&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;caa_records&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.caaRecords&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[CaaRecord]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">etag</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ttl</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_resource</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">arecords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">aaaa_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mx_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ns_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ptr_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">srv_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">txt_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cname_record</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">soa_record</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">caa_records</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">RecordSet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">etag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ttl</span> <span class="o">=</span> <span class="n">ttl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fqdn</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_resource</span> <span class="o">=</span> <span class="n">target_resource</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arecords</span> <span class="o">=</span> <span class="n">arecords</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aaaa_records</span> <span class="o">=</span> <span class="n">aaaa_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mx_records</span> <span class="o">=</span> <span class="n">mx_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ns_records</span> <span class="o">=</span> <span class="n">ns_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ptr_records</span> <span class="o">=</span> <span class="n">ptr_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">srv_records</span> <span class="o">=</span> <span class="n">srv_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txt_records</span> <span class="o">=</span> <span class="n">txt_records</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cname_record</span> <span class="o">=</span> <span class="n">cname_record</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">soa_record</span> <span class="o">=</span> <span class="n">soa_record</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caa_records</span> <span class="o">=</span> <span class="n">caa_records</span></div>
+
+
+<div class="viewcode-block" id="RecordSetUpdateParameters"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.RecordSetUpdateParameters">[docs]</a><span class="k">class</span> <span class="nc">RecordSetUpdateParameters</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parameters supplied to update a record set.</span>
+
+<span class="sd">    :param record_set: Specifies information about the record set being</span>
+<span class="sd">     updated.</span>
+<span class="sd">    :type record_set: ~azure.mgmt.dns.v2018_05_01.models.RecordSet</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;record_set&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;RecordSet&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;RecordSet&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">record_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">RecordSetUpdateParameters</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">record_set</span> <span class="o">=</span> <span class="n">record_set</span></div>
+
+
+<div class="viewcode-block" id="Resource"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.Resource">[docs]</a><span class="k">class</span> <span class="nc">Resource</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Common properties of an Azure Resource Manager resource.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar id: Resource ID.</span>
+<span class="sd">    :vartype id: str</span>
+<span class="sd">    :ivar name: Resource name.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :ivar type: Resource type.</span>
+<span class="sd">    :vartype type: str</span>
+<span class="sd">    :param location: Required. Resource location.</span>
+<span class="sd">    :type location: str</span>
+<span class="sd">    :param tags: Resource tags.</span>
+<span class="sd">    :type tags: dict[str, str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Resource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span></div>
+
+
+<div class="viewcode-block" id="SoaRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.SoaRecord">[docs]</a><span class="k">class</span> <span class="nc">SoaRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An SOA record.</span>
+
+<span class="sd">    :param host: The domain name of the authoritative name server for this SOA</span>
+<span class="sd">     record.</span>
+<span class="sd">    :type host: str</span>
+<span class="sd">    :param email: The email contact for this SOA record.</span>
+<span class="sd">    :type email: str</span>
+<span class="sd">    :param serial_number: The serial number for this SOA record.</span>
+<span class="sd">    :type serial_number: long</span>
+<span class="sd">    :param refresh_time: The refresh value for this SOA record.</span>
+<span class="sd">    :type refresh_time: long</span>
+<span class="sd">    :param retry_time: The retry time for this SOA record.</span>
+<span class="sd">    :type retry_time: long</span>
+<span class="sd">    :param expire_time: The expire time for this SOA record.</span>
+<span class="sd">    :type expire_time: long</span>
+<span class="sd">    :param minimum_ttl: The minimum value for this SOA record. By convention</span>
+<span class="sd">     this is used to determine the negative caching duration.</span>
+<span class="sd">    :type minimum_ttl: long</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;host&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;serial_number&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;serialNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;refresh_time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;refreshTime&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;retry_time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;retryTime&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;expire_time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;expireTime&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;minimum_ttl&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;minimumTTL&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">refresh_time</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retry_time</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expire_time</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minimum_ttl</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SoaRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_number</span> <span class="o">=</span> <span class="n">serial_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_time</span> <span class="o">=</span> <span class="n">refresh_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry_time</span> <span class="o">=</span> <span class="n">retry_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expire_time</span> <span class="o">=</span> <span class="n">expire_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minimum_ttl</span> <span class="o">=</span> <span class="n">minimum_ttl</span></div>
+
+
+<div class="viewcode-block" id="SrvRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.SrvRecord">[docs]</a><span class="k">class</span> <span class="nc">SrvRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An SRV record.</span>
+
+<span class="sd">    :param priority: The priority value for this SRV record.</span>
+<span class="sd">    :type priority: int</span>
+<span class="sd">    :param weight: The weight value for this SRV record.</span>
+<span class="sd">    :type weight: int</span>
+<span class="sd">    :param port: The port value for this SRV record.</span>
+<span class="sd">    :type port: int</span>
+<span class="sd">    :param target: The target domain name for this SRV record.</span>
+<span class="sd">    :type target: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;priority&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;priority&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SrvRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">priority</span> <span class="o">=</span> <span class="n">priority</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span></div>
+
+
+<div class="viewcode-block" id="SubResource"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.SubResource">[docs]</a><span class="k">class</span> <span class="nc">SubResource</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A reference to a another resource.</span>
+
+<span class="sd">    :param id: Resource Id.</span>
+<span class="sd">    :type id: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SubResource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span></div>
+
+
+<div class="viewcode-block" id="TxtRecord"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.TxtRecord">[docs]</a><span class="k">class</span> <span class="nc">TxtRecord</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A TXT record.</span>
+
+<span class="sd">    :param value: The text value of this TXT record.</span>
+<span class="sd">    :type value: list[str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TxtRecord</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Zone"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.Zone">[docs]</a><span class="k">class</span> <span class="nc">Zone</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Describes a DNS zone.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar id: Resource ID.</span>
+<span class="sd">    :vartype id: str</span>
+<span class="sd">    :ivar name: Resource name.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :ivar type: Resource type.</span>
+<span class="sd">    :vartype type: str</span>
+<span class="sd">    :param location: Required. Resource location.</span>
+<span class="sd">    :type location: str</span>
+<span class="sd">    :param tags: Resource tags.</span>
+<span class="sd">    :type tags: dict[str, str]</span>
+<span class="sd">    :param etag: The etag of the zone.</span>
+<span class="sd">    :type etag: str</span>
+<span class="sd">    :ivar max_number_of_record_sets: The maximum number of record sets that</span>
+<span class="sd">     can be created in this DNS zone.  This is a read-only property and any</span>
+<span class="sd">     attempt to set this value will be ignored.</span>
+<span class="sd">    :vartype max_number_of_record_sets: long</span>
+<span class="sd">    :ivar number_of_record_sets: The current number of record sets in this DNS</span>
+<span class="sd">     zone.  This is a read-only property and any attempt to set this value will</span>
+<span class="sd">     be ignored.</span>
+<span class="sd">    :vartype number_of_record_sets: long</span>
+<span class="sd">    :ivar name_servers: The name servers for this DNS zone. This is a</span>
+<span class="sd">     read-only property and any attempt to set this value will be ignored.</span>
+<span class="sd">    :vartype name_servers: list[str]</span>
+<span class="sd">    :param zone_type: The type of this DNS zone (Public or Private). Possible</span>
+<span class="sd">     values include: &#39;Public&#39;, &#39;Private&#39;. Default value: &quot;Public&quot; .</span>
+<span class="sd">    :type zone_type: str or ~azure.mgmt.dns.v2018_05_01.models.ZoneType</span>
+<span class="sd">    :param registration_virtual_networks: A list of references to virtual</span>
+<span class="sd">     networks that register hostnames in this DNS zone. This is a only when</span>
+<span class="sd">     ZoneType is Private.</span>
+<span class="sd">    :type registration_virtual_networks:</span>
+<span class="sd">     list[~azure.mgmt.dns.v2018_05_01.models.SubResource]</span>
+<span class="sd">    :param resolution_virtual_networks: A list of references to virtual</span>
+<span class="sd">     networks that resolve records in this DNS zone. This is a only when</span>
+<span class="sd">     ZoneType is Private.</span>
+<span class="sd">    :type resolution_virtual_networks:</span>
+<span class="sd">     list[~azure.mgmt.dns.v2018_05_01.models.SubResource]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;max_number_of_record_sets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;number_of_record_sets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name_servers&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;etag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;max_number_of_record_sets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.maxNumberOfRecordSets&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;number_of_record_sets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.numberOfRecordSets&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name_servers&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.nameServers&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;zone_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.zoneType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ZoneType&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;registration_virtual_networks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.registrationVirtualNetworks&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SubResource]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;resolution_virtual_networks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.resolutionVirtualNetworks&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SubResource]&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">etag</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">zone_type</span><span class="o">=</span><span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="n">registration_virtual_networks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resolution_virtual_networks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Zone</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">etag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_number_of_record_sets</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_record_sets</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_servers</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zone_type</span> <span class="o">=</span> <span class="n">zone_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">registration_virtual_networks</span> <span class="o">=</span> <span class="n">registration_virtual_networks</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resolution_virtual_networks</span> <span class="o">=</span> <span class="n">resolution_virtual_networks</span></div>
+
+
+<div class="viewcode-block" id="ZoneUpdate"><a class="viewcode-back" href="../../../../../../ref/azure.mgmt.dns.v2018_05_01.models.html#azure.mgmt.dns.v2018_05_01.models.ZoneUpdate">[docs]</a><span class="k">class</span> <span class="nc">ZoneUpdate</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Describes a request to update a DNS zone.</span>
+
+<span class="sd">    :param tags: Resource tags.</span>
+<span class="sd">    :type tags: dict[str, str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ZoneUpdate</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

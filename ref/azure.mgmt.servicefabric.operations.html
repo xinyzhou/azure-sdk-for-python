@@ -1,0 +1,1513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.servicefabric.operations module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.signalr package" href="azure.mgmt.signalr.html" />
+    <link rel="prev" title="azure.mgmt.servicefabric.models module" href="azure.mgmt.servicefabric.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.servicefabric.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.servicefabric.models.html">azure.mgmt.servicefabric.models module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.servicefabric.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.servicefabric.html#module-azure.mgmt.servicefabric">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a> &raquo;</li>
+        
+      <li>azure.mgmt.servicefabric.operations module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.servicefabric.operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.servicefabric.operations">
+<span id="azure-mgmt-servicefabric-operations-module"></span><h1>azure.mgmt.servicefabric.operations module<a class="headerlink" href="#module-azure.mgmt.servicefabric.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ClustersOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ClustersOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a Service Fabric cluster resource.</p>
+<p>Create or update a Service Fabric cluster resource with the specified
+name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster"><em>Cluster</em></a>) – The cluster resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Cluster or
+ClientRawResponse&lt;Cluster&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster">Cluster</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster">Cluster</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Service Fabric cluster resource.</p>
+<p>Delete a Service Fabric cluster resource with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Service Fabric cluster resource.</p>
+<p>Get a Service Fabric cluster resource created or in the process of
+being created in the specified resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cluster or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster">Cluster</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of Service Fabric cluster resources created in the
+specified subscription.</p>
+<p>Gets all Service Fabric cluster resources created or in the process of
+being created in the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterListResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterListResult" title="azure.mgmt.servicefabric.models.ClusterListResult">ClusterListResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.list_by_resource_group">
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of Service Fabric cluster resources created in the
+specified resource group.</p>
+<p>Gets all Service Fabric cluster resources created or in the process of
+being created in the resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterListResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterListResult" title="azure.mgmt.servicefabric.models.ClusterListResult">ClusterListResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClustersOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_clusters_operations.html#ClustersOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClustersOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the configuration of a Service Fabric cluster resource.</p>
+<p>Update the configuration of a Service Fabric cluster resource with the
+specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterUpdateParameters" title="azure.mgmt.servicefabric.models.ClusterUpdateParameters"><em>ClusterUpdateParameters</em></a>) – The parameters which contains the property value
+and property name which used to update the cluster configuration.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Cluster or
+ClientRawResponse&lt;Cluster&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster">Cluster</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.Cluster" title="azure.mgmt.servicefabric.models.Cluster">Cluster</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ClusterVersionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_cluster_versions_operations.html#ClusterVersionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ClusterVersionsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">cluster_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_cluster_versions_operations.html#ClusterVersionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about a Service Fabric cluster code version available
+in the specified location.</p>
+<p>Gets information about an available Service Fabric cluster code
+version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location for the cluster code versions. This is
+different from cluster location.</p></li>
+<li><p><strong>cluster_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The cluster code version.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterCodeVersionsListResult or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult">ClusterCodeVersionsListResult</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get_by_environment">
+<code class="sig-name descname">get_by_environment</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">environment</em>, <em class="sig-param">cluster_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_cluster_versions_operations.html#ClusterVersionsOperations.get_by_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get_by_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets information about a Service Fabric cluster code version available
+for the specified environment.</p>
+<p>Gets information about an available Service Fabric cluster code version
+by environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location for the cluster code versions. This is
+different from cluster location.</p></li>
+<li><p><strong>environment</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operating system of the cluster. The default
+means all. Possible values include: ‘Windows’, ‘Linux’</p></li>
+<li><p><strong>cluster_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The cluster code version.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterCodeVersionsListResult or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult">ClusterCodeVersionsListResult</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_cluster_versions_operations.html#ClusterVersionsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of Service Fabric cluster code versions available for the
+specified location.</p>
+<p>Gets all available code versions for Service Fabric cluster resources
+by location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location for the cluster code versions. This is
+different from cluster location.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterCodeVersionsListResult or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult">ClusterCodeVersionsListResult</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list_by_environment">
+<code class="sig-name descname">list_by_environment</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">environment</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_cluster_versions_operations.html#ClusterVersionsOperations.list_by_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list_by_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of Service Fabric cluster code versions available for the
+specified environment.</p>
+<p>Gets all available code versions for Service Fabric cluster resources
+by environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location for the cluster code versions. This is
+different from cluster location.</p></li>
+<li><p><strong>environment</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operating system of the cluster. The default
+means all. Possible values include: ‘Windows’, ‘Linux’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClusterCodeVersionsListResult or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult">ClusterCodeVersionsListResult</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ClusterVersionsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.Operations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.Operations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available Service Fabric resource provider API
+operations.</p>
+<p>Get the list of available Service Fabric resource provider API
+operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the Service Fabric resource
+provider API</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of OperationResult</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.OperationResultPaged" title="azure.mgmt.servicefabric.models.OperationResultPaged">OperationResultPaged</a>[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.OperationResult" title="azure.mgmt.servicefabric.models.OperationResult">OperationResult</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.Operations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ApplicationTypesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_types_operations.html#ApplicationTypesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ApplicationTypesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">location=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_types_operations.html#ApplicationTypesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a Service Fabric application type name resource.</p>
+<p>Create or update a Service Fabric application type name resource with
+the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – It will be deprecated in New API, resource location
+depends on the parent resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Azure resource tags.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationTypeResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeResource" title="azure.mgmt.servicefabric.models.ApplicationTypeResource">ApplicationTypeResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_types_operations.html#ApplicationTypesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Service Fabric application type name resource.</p>
+<p>Delete a Service Fabric application type name resource with the
+specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_types_operations.html#ApplicationTypesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Service Fabric application type name resource.</p>
+<p>Get a Service Fabric application type name resource created or in the
+process of being created in the Service Fabric cluster resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationTypeResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeResource" title="azure.mgmt.servicefabric.models.ApplicationTypeResource">ApplicationTypeResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_types_operations.html#ApplicationTypesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of application type name resources created in the
+specified Service Fabric cluster resource.</p>
+<p>Gets all application type name resources created or in the process of
+being created in the Service Fabric cluster resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationTypeResourceList or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeResourceList" title="azure.mgmt.servicefabric.models.ApplicationTypeResourceList">ApplicationTypeResourceList</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ApplicationTypeVersionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_type_versions_operations.html#ApplicationTypeVersionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ApplicationTypeVersionsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">version</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_type_versions_operations.html#ApplicationTypeVersionsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a Service Fabric application type version resource.</p>
+<p>Create or update a Service Fabric application type version resource
+with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application type version.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="azure.mgmt.servicefabric.models.ApplicationTypeVersionResource"><em>ApplicationTypeVersionResource</em></a>) – The application type version resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns
+ApplicationTypeVersionResource or
+ClientRawResponse&lt;ApplicationTypeVersionResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="azure.mgmt.servicefabric.models.ApplicationTypeVersionResource">ApplicationTypeVersionResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="azure.mgmt.servicefabric.models.ApplicationTypeVersionResource">ApplicationTypeVersionResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_type_versions_operations.html#ApplicationTypeVersionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Service Fabric application type version resource.</p>
+<p>Delete a Service Fabric application type version resource with the
+specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application type version.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_type_versions_operations.html#ApplicationTypeVersionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Service Fabric application type version resource.</p>
+<p>Get a Service Fabric application type version resource created or in
+the process of being created in the Service Fabric application type
+name resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application type version.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationTypeVersionResource or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="azure.mgmt.servicefabric.models.ApplicationTypeVersionResource">ApplicationTypeVersionResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_type_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_application_type_versions_operations.html#ApplicationTypeVersionsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of application type version resources created in the
+specified Service Fabric application type name resource.</p>
+<p>Gets all application type version resources created or in the process
+of being created in the Service Fabric application type name resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_type_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application type name
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationTypeVersionResourceList or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationTypeVersionResourceList" title="azure.mgmt.servicefabric.models.ApplicationTypeVersionResourceList">ApplicationTypeVersionResourceList</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ApplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ApplicationsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a Service Fabric application resource.</p>
+<p>Create or update a Service Fabric application resource with the
+specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource"><em>ApplicationResource</em></a>) – The application resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ApplicationResource or
+ClientRawResponse&lt;ApplicationResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource">ApplicationResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource">ApplicationResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Service Fabric application resource.</p>
+<p>Delete a Service Fabric application resource with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Service Fabric application resource.</p>
+<p>Get a Service Fabric application resource created or in the process of
+being created in the Service Fabric cluster resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource">ApplicationResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of application resources created in the specified Service
+Fabric cluster resource.</p>
+<p>Gets all application resources created or in the process of being
+created in the Service Fabric cluster resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ApplicationResourceList or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResourceList" title="azure.mgmt.servicefabric.models.ApplicationResourceList">ApplicationResourceList</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ApplicationsOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_applications_operations.html#ApplicationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ApplicationsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a Service Fabric application resource.</p>
+<p>Update a Service Fabric application resource with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResourceUpdate" title="azure.mgmt.servicefabric.models.ApplicationResourceUpdate"><em>ApplicationResourceUpdate</em></a>) – The application resource for patch operations.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ApplicationResource or
+ClientRawResponse&lt;ApplicationResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource">ApplicationResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationResource" title="azure.mgmt.servicefabric.models.ApplicationResource">ApplicationResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.operations.</code><code class="sig-name descname">ServicesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ServicesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the Service Fabric resource provider API. This is a required parameter and it’s value must be “2019-03-01” for this specification. Constant value: “2019-03-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a Service Fabric service resource.</p>
+<p>Create or update a Service Fabric service resource with the specified
+name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the service resource in the format of
+{applicationName}~{serviceName}.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource"><em>ServiceResource</em></a>) – The service resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ServiceResource or
+ClientRawResponse&lt;ServiceResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource">ServiceResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource">ServiceResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Service Fabric service resource.</p>
+<p>Delete a Service Fabric service resource with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the service resource in the format of
+{applicationName}~{serviceName}.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Service Fabric service resource.</p>
+<p>Get a Service Fabric service resource created or in the process of
+being created in the Service Fabric application resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the service resource in the format of
+{applicationName}~{serviceName}.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ServiceResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource">ServiceResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of service resources created in the specified Service
+Fabric application resource.</p>
+<p>Gets all service resources created or in the process of being created
+in the Service Fabric application resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ServiceResourceList or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResourceList" title="azure.mgmt.servicefabric.models.ServiceResourceList">ServiceResourceList</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.servicefabric.models' from 'd:\\a\\1\\s\\sdk\\servicefabric\\azure-mgmt-servicefabric\\azure\\mgmt\\servicefabric\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.servicefabric.operations.ServicesOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/operations/_services_operations.html#ServicesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.operations.ServicesOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a Service Fabric service resource.</p>
+<p>Update a Service Fabric service resource with the specified name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group.</p></li>
+<li><p><strong>cluster_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the cluster resource.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the application resource.</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the service resource in the format of
+{applicationName}~{serviceName}.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResourceUpdate" title="azure.mgmt.servicefabric.models.ServiceResourceUpdate"><em>ServiceResourceUpdate</em></a>) – The service resource for patch operations.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ServiceResource or
+ClientRawResponse&lt;ServiceResource&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource">ServiceResource</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResource" title="azure.mgmt.servicefabric.models.ServiceResource">ServiceResource</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ErrorModelException" title="azure.mgmt.servicefabric.models.ErrorModelException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorModelException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.signalr.html" class="btn btn-neutral float-right" title="azure.mgmt.signalr package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.servicefabric.models.html" class="btn btn-neutral float-left" title="azure.mgmt.servicefabric.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

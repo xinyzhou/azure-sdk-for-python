@@ -1,0 +1,837 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.core.pipeline.transport.base &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../pipeline.html">azure.core.pipeline</a> &raquo;</li>
+        
+      <li>azure.core.pipeline.transport.base</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.core.pipeline.transport.base</h1><div class="highlight"><pre>
+<span></span><span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># The MIT License (MIT)</span>
+<span class="c1">#</span>
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;&quot;Software&quot;&quot;), to</span>
+<span class="c1"># deal in the Software without restriction, including without limitation the</span>
+<span class="c1"># rights to use, copy, modify, merge, publish, distribute, sublicense, and/or</span>
+<span class="c1"># sell copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+<span class="c1">#</span>
+<span class="c1"># The above copyright notice and this permission notice shall be included in</span>
+<span class="c1"># all copies or substantial portions of the Software.</span>
+<span class="c1">#</span>
+<span class="c1"># THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="c1"># FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS</span>
+<span class="c1"># IN THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+<span class="kn">import</span> <span class="nn">abc</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">binary_type</span> <span class="o">=</span> <span class="nb">str</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span> <span class="c1"># type: ignore</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">binary_type</span> <span class="o">=</span> <span class="nb">bytes</span> <span class="c1"># type: ignore</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span><span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="c1"># pylint: disable=unused-import</span>
+                    <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">)</span>
+
+<span class="c1"># This file is NOT using any &quot;requests&quot; HTTP implementation</span>
+<span class="c1"># However, the CaseInsensitiveDict is handy.</span>
+<span class="c1"># If one day we reach the point where &quot;requests&quot; can be skip totally,</span>
+<span class="c1"># might provide our own implementation</span>
+<span class="kn">from</span> <span class="nn">requests.structures</span> <span class="k">import</span> <span class="n">CaseInsensitiveDict</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="k">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">AbstractContextManager</span><span class="p">,</span> <span class="n">PipelineRequest</span><span class="p">,</span> <span class="n">PipelineResponse</span>
+
+
+<span class="n">HTTPResponseType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;HTTPResponseType&quot;</span><span class="p">)</span>
+<span class="n">HTTPRequestType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;HTTPRequestType&quot;</span><span class="p">)</span>
+<span class="n">PipelineType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;PipelineType&quot;</span><span class="p">)</span>
+
+<span class="n">_LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_format_url_section</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">components</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">formatted_components</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+            <span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">formatted_components</span> <span class="k">if</span> <span class="s2">&quot;{{</span><span class="si">{}</span><span class="s2">}}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">c</span><span class="p">]</span>
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">components</span><span class="p">)</span>
+    <span class="c1"># No URL sections left - returning None</span>
+
+
+<span class="k">def</span> <span class="nf">_urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">stub_url</span><span class="p">):</span>
+    <span class="c1"># type: (str, str) -&gt; str</span>
+    <span class="sd">&quot;&quot;&quot;Append to end of base URL without losing query parameters.</span>
+
+<span class="sd">    :param str base_url: The base URL.</span>
+<span class="sd">    :param str stub_url: Section to append to the end of the URL path.</span>
+<span class="sd">    :returns: The updated URL.</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+    <span class="n">parsed</span> <span class="o">=</span> <span class="n">parsed</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">parsed</span><span class="o">.</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">stub_url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parsed</span><span class="o">.</span><span class="n">geturl</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="HttpTransport"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpTransport">[docs]</a><span class="k">class</span> <span class="nc">HttpTransport</span><span class="p">(</span><span class="n">AbstractContextManager</span><span class="p">,</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">HTTPRequestType</span><span class="p">,</span> <span class="n">HTTPResponseType</span><span class="p">]):</span> <span class="c1"># type: ignore</span>
+    <span class="sd">&quot;&quot;&quot;An http sender ABC.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="HttpTransport.send"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpTransport.send">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (PipelineRequest, Any) -&gt; PipelineResponse</span>
+        <span class="sd">&quot;&quot;&quot;Send the request using this HTTP sender.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="HttpTransport.open"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpTransport.open">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Assign new session if one does not already exist.&quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="HttpTransport.close"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpTransport.close">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Close the session if it is not externally owned.&quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="HttpTransport.sleep"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpTransport.sleep">[docs]</a>    <span class="k">def</span> <span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span> <span class="c1">#pylint: disable=no-self-use</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="HttpRequest"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest">[docs]</a><span class="k">class</span> <span class="nc">HttpRequest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents a HTTP request.</span>
+
+<span class="sd">    URL can be given without query parameters, to be added later using &quot;format_parameters&quot;.</span>
+
+<span class="sd">    :param str method: HTTP method (GET, HEAD, etc.)</span>
+<span class="sd">    :param str url: At least complete scheme/host/path</span>
+<span class="sd">    :param dict[str,str] headers: HTTP headers</span>
+<span class="sd">    :param files: Files list.</span>
+<span class="sd">    :param data: Body to be sent.</span>
+<span class="sd">    :type data: bytes or str.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (str, str, Mapping[str, str], Any, Any) -&gt; None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">headers</span> <span class="o">=</span> <span class="n">CaseInsensitiveDict</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="n">files</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;HttpRequest [</span><span class="si">%s</span><span class="s1">]&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The query parameters of the request as a dict.&quot;&quot;&quot;</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">query</span>
+        <span class="k">if</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)]}</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Alias to data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+
+    <span class="nd">@body</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_format_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, IO]) -&gt; Union[Tuple[None, str], Tuple[Optional[str], IO, str]]</span>
+        <span class="sd">&quot;&quot;&quot;Format field data according to whether it is a stream or</span>
+<span class="sd">        a string for a form-data request.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        :type data: str or file-like object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;read&#39;</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">IO</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+            <span class="n">data_name</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&lt;&#39;</span> <span class="ow">and</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">:</span>
+                    <span class="n">data_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">data_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="s2">&quot;application/octet-stream&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+
+<div class="viewcode-block" id="HttpRequest.format_parameters"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.format_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">format_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+        <span class="c1"># type: (Dict[str, str]) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Format parameters into a valid query string.</span>
+<span class="sd">        It&#39;s assumed all parameters have already been quoted as</span>
+<span class="sd">        valid URL strings.</span>
+
+<span class="sd">        :param dict params: A dictionary of parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">query</span>
+        <span class="k">if</span> <span class="n">query</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">existing_params</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)]</span>
+            <span class="p">}</span>
+            <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">existing_params</span><span class="p">)</span>
+        <span class="n">query_params</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;?&#39;</span> <span class="o">+</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">query_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="n">query</span></div>
+
+<div class="viewcode-block" id="HttpRequest.set_streamed_data_body"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.set_streamed_data_body">[docs]</a>    <span class="k">def</span> <span class="nf">set_streamed_data_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set a streamable data body.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">binary_type</span><span class="p">)</span> <span class="ow">and</span> \
+                <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;read&quot;</span><span class="p">,</span> <span class="s2">&quot;__iter__&quot;</span><span class="p">,</span> <span class="s2">&quot;__aiter__&quot;</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;A streamable data source must be an open file-like object or iterable.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="HttpRequest.set_xml_body"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.set_xml_body">[docs]</a>    <span class="k">def</span> <span class="nf">set_xml_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set an XML element tree as the body of the request.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bytes_data</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">bytes_data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;encoding=&#39;utf8&#39;&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;encoding=&#39;utf-8&#39;&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="HttpRequest.set_json_body"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.set_json_body">[docs]</a>    <span class="k">def</span> <span class="nf">set_json_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set a JSON-friendly object as the body of the request.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="HttpRequest.set_formdata_body"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.set_formdata_body">[docs]</a>    <span class="k">def</span> <span class="nf">set_formdata_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set form-encoded data as the body of the request.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">content_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">content_type</span> <span class="ow">and</span> <span class="n">content_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">:</span> <span class="n">d</span> <span class="k">for</span> <span class="n">f</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># Assume &quot;multipart/form-data&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format_data</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="HttpRequest.set_bytes_body"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpRequest.set_bytes_body">[docs]</a>    <span class="k">def</span> <span class="nf">set_bytes_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set generic bytes as the body of the request.</span>
+
+<span class="sd">        :param data: The request field data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="kc">None</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">_HttpResponseBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represent a HTTP response.</span>
+
+<span class="sd">    No body is defined here on purpose, since async pipeline</span>
+<span class="sd">    will provide async ways to access the body</span>
+<span class="sd">    Full in-memory using &quot;body&quot; as bytes.</span>
+
+<span class="sd">    :param request: The request.</span>
+<span class="sd">    :type request: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">    :param internal_response: The object returned from the HTTP library.</span>
+<span class="sd">    :param int status_code: The status code of the response</span>
+<span class="sd">    :param dict headers: The request headers.</span>
+<span class="sd">    :param str reason: Status reason of response.</span>
+<span class="sd">    :param str content_type: The content type.</span>
+<span class="sd">    :param int block_size: Defaults to 4096 bytes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">internal_response</span><span class="p">,</span> <span class="n">block_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (HttpRequest, Any, Optional[int]) -&gt; None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">request</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_response</span> <span class="o">=</span> <span class="n">internal_response</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_code</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[int]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># type: Dict[str, str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reason</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">=</span> <span class="n">block_size</span> <span class="ow">or</span> <span class="mi">4096</span>  <span class="c1"># Default to same as Requests</span>
+
+
+    <span class="k">def</span> <span class="nf">body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bytes</span>
+        <span class="sd">&quot;&quot;&quot;Return the whole body as bytes in memory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (str) -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;Return the whole body as a string.</span>
+
+<span class="sd">        :param str encoding: The encoding to apply. If None, use &quot;utf-8&quot;.</span>
+<span class="sd">         Implementation can be smarter if they want (using headers).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span> <span class="ow">or</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="HttpResponse"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpResponse">[docs]</a><span class="k">class</span> <span class="nc">HttpResponse</span><span class="p">(</span><span class="n">_HttpResponseBase</span><span class="p">):</span>
+<div class="viewcode-block" id="HttpResponse.stream_download"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.HttpResponse.stream_download">[docs]</a>    <span class="k">def</span> <span class="nf">stream_download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">):</span>
+        <span class="c1"># type: (PipelineType) -&gt; Iterator[bytes]</span>
+        <span class="sd">&quot;&quot;&quot;Generator for streaming request body data.</span>
+
+<span class="sd">        Should be implemented by sub-classes if streaming download</span>
+<span class="sd">        is supported.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div></div>
+
+
+<div class="viewcode-block" id="PipelineClientBase"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase">[docs]</a><span class="k">class</span> <span class="nc">PipelineClientBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base class for pipeline clients.</span>
+
+<span class="sd">    :param str base_url: URL for the request.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base_url</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_base_url</span> <span class="o">=</span> <span class="n">base_url</span>
+
+    <span class="k">def</span> <span class="nf">_request</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+            <span class="n">stream_content</span><span class="p">,</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create HttpRequest object.</span>
+
+<span class="sd">        :param str method: HTTP method (GET, HEAD, etc.)</span>
+<span class="sd">        :param str url: URL for the request.</span>
+<span class="sd">        :param dict params: URL query parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">params</span><span class="p">:</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">format_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">headers</span><span class="p">:</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+                <span class="n">request</span><span class="o">.</span><span class="n">set_xml_body</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">request</span><span class="o">.</span><span class="n">set_json_body</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="n">request</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">content</span>
+
+        <span class="k">if</span> <span class="n">form_content</span><span class="p">:</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">set_formdata_body</span><span class="p">(</span><span class="n">form_content</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">stream_content</span><span class="p">:</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">set_streamed_data_body</span><span class="p">(</span><span class="n">stream_content</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">request</span>
+
+<div class="viewcode-block" id="PipelineClientBase.format_url"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.format_url">[docs]</a>    <span class="k">def</span> <span class="nf">format_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url_template</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (str, Any) -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;Format request URL with the client base URL, unless the</span>
+<span class="sd">        supplied URL is already absolute.</span>
+
+<span class="sd">        :param str url_template: The request URL to be formatted if necessary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">_format_url_section</span><span class="p">(</span><span class="n">url_template</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">url</span><span class="p">:</span>
+            <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed</span><span class="o">.</span><span class="n">scheme</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">parsed</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+                <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+                <span class="n">base</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+                <span class="n">url</span> <span class="o">=</span> <span class="n">_urljoin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">url</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.get"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a GET request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;GET&#39;</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.put"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.put">[docs]</a>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+            <span class="n">stream_content</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a PUT request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="n">stream_content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.post"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.post">[docs]</a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+            <span class="n">stream_content</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a POST request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="n">stream_content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.head"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.head">[docs]</a>    <span class="k">def</span> <span class="nf">head</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+            <span class="n">stream_content</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a HEAD request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;HEAD&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="n">stream_content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.patch"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.patch">[docs]</a>    <span class="k">def</span> <span class="nf">patch</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Any</span>
+            <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Dict[str, Any]]</span>
+            <span class="n">stream_content</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a PATCH request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;PATCH&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="n">stream_content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.delete"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (str, Optional[Dict[str, str]], Optional[Dict[str, str]], Any, Optional[Dict[str, Any]]) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a DELETE request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div>
+
+<div class="viewcode-block" id="PipelineClientBase.merge"><a class="viewcode-back" href="../../../../../ref/azure.core.pipeline.transport.html#azure.core.PipelineClientBase.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">form_content</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (str, Optional[Dict[str, str]], Optional[Dict[str, str]], Any, Optional[Dict[str, Any]]) -&gt; HttpRequest</span>
+        <span class="sd">&quot;&quot;&quot;Create a MERGE request object.</span>
+
+<span class="sd">        :param str url: The request URL.</span>
+<span class="sd">        :param dict params: Request URL parameters.</span>
+<span class="sd">        :param dict headers: Headers</span>
+<span class="sd">        :param dict form_content: Form content</span>
+<span class="sd">        :return: An HttpRequest object</span>
+<span class="sd">        :rtype: ~azure.core.pipeline.transport.HttpRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">&#39;MERGE&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">form_content</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">request</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

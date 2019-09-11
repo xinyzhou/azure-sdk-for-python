@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cognitiveservices.search.autosuggest.auto_suggest_search_api &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.cognitiveservices.search.autosuggest.auto_suggest_search_api</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.cognitiveservices.search.autosuggest.auto_suggest_search_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
+<span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
+<span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
+<span class="kn">from</span> <span class="nn">msrest.pipeline</span> <span class="k">import</span> <span class="n">ClientRawResponse</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
+
+
+<span class="k">class</span> <span class="nc">AutoSuggestSearchAPIConfiguration</span><span class="p">(</span><span class="n">Configuration</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Configuration for AutoSuggestSearchAPI</span>
+<span class="sd">    Note that all parameters used to create this instance are saved as instance</span>
+<span class="sd">    attributes.</span>
+
+<span class="sd">    :param credentials: Subscription credentials which uniquely identify</span>
+<span class="sd">     client subscription.</span>
+<span class="sd">    :type credentials: None</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">credentials</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter &#39;credentials&#39; must not be None.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">base_url</span><span class="p">:</span>
+            <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://api.cognitive.microsoft.com/bing/v7.0&#39;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">AutoSuggestSearchAPIConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s1">&#39;azure-cognitiveservices-search-autosuggest/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">VERSION</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="o">=</span> <span class="n">credentials</span>
+
+
+<div class="viewcode-block" id="AutoSuggestSearchAPI"><a class="viewcode-back" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html#azure.cognitiveservices.search.autosuggest.AutoSuggestSearchAPI">[docs]</a><span class="k">class</span> <span class="nc">AutoSuggestSearchAPI</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The AutoSuggest Search API lets you send a search query to Bing and get back a list of news that are relevant to the search query. This section provides technical details about the query parameters and headers that you use to request news and the JSON response objects that contain them. For examples that show how to make requests, see [Searching the web for AutoSuggest](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference).</span>
+
+<span class="sd">    :ivar config: Configuration for client.</span>
+<span class="sd">    :vartype config: AutoSuggestSearchAPIConfiguration</span>
+
+<span class="sd">    :param credentials: Subscription credentials which uniquely identify</span>
+<span class="sd">     client subscription.</span>
+<span class="sd">    :type credentials: None</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">AutoSuggestSearchAPIConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AutoSuggestSearchAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+        <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="AutoSuggestSearchAPI.auto_suggest"><a class="viewcode-back" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html#azure.cognitiveservices.search.autosuggest.AutoSuggestSearchAPI.auto_suggest">[docs]</a>    <span class="k">def</span> <span class="nf">auto_suggest</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">accept_language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pragma</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_ip</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">country_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">market</span><span class="o">=</span><span class="s2">&quot;en-us&quot;</span><span class="p">,</span> <span class="n">safe_search</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">set_lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The AutoSuggest API lets you send a search query to Bing and get back a</span>
+<span class="sd">        list of suggestions. This section provides technical details about the</span>
+<span class="sd">        query parameters and headers that you use to request suggestions and</span>
+<span class="sd">        the JSON response objects that contain them.</span>
+
+<span class="sd">        :param query: The user&#39;s search term.</span>
+<span class="sd">        :type query: str</span>
+<span class="sd">        :param accept_language: A comma-delimited list of one or more</span>
+<span class="sd">         languages to use for user interface strings. The list is in decreasing</span>
+<span class="sd">         order of preference. For additional information, including expected</span>
+<span class="sd">         format, see</span>
+<span class="sd">         [RFC2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).</span>
+<span class="sd">         This header and the setLang query parameter are mutually exclusive; do</span>
+<span class="sd">         not specify both. If you set this header, you must also specify the</span>
+<span class="sd">         [cc](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference#cc)</span>
+<span class="sd">         query parameter. To determine the market to return results for, Bing</span>
+<span class="sd">         uses the first supported language it finds from the list and combines</span>
+<span class="sd">         it with the cc parameter value. If the list does not include a</span>
+<span class="sd">         supported language, Bing finds the closest language and market that</span>
+<span class="sd">         supports the request or it uses an aggregated or default market for</span>
+<span class="sd">         the results. To determine the market that Bing used, see the</span>
+<span class="sd">         BingAPIs-Market header. Use this header and the cc query parameter</span>
+<span class="sd">         only if you specify multiple languages. Otherwise, use the</span>
+<span class="sd">         [mkt](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference#mkt)</span>
+<span class="sd">         and</span>
+<span class="sd">         [setLang](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference#setlang)</span>
+<span class="sd">         query parameters. A user interface string is a string that&#39;s used as a</span>
+<span class="sd">         label in a user interface. There are few user interface strings in the</span>
+<span class="sd">         JSON response objects. Any links to Bing.com properties in the</span>
+<span class="sd">         response objects apply the specified language.</span>
+<span class="sd">        :type accept_language: str</span>
+<span class="sd">        :param pragma: By default, Bing returns cached content, if available.</span>
+<span class="sd">         To prevent Bing from returning cached content, set the Pragma header</span>
+<span class="sd">         to no-cache (for example, Pragma: no-cache).</span>
+<span class="sd">        :type pragma: str</span>
+<span class="sd">        :param user_agent: The user agent originating the request. Bing uses</span>
+<span class="sd">         the user agent to provide mobile users with an optimized experience.</span>
+<span class="sd">         Although optional, you are encouraged to always specify this header.</span>
+<span class="sd">         The user-agent should be the same string that any commonly used</span>
+<span class="sd">         browser sends. For information about user agents, see [RFC</span>
+<span class="sd">         2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html). The</span>
+<span class="sd">         following are examples of user-agent strings. Windows Phone:</span>
+<span class="sd">         Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0;</span>
+<span class="sd">         IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822). Android: Mozilla / 5.0</span>
+<span class="sd">         (Linux; U; Android 2.3.5; en - us; SCH - I500 Build / GINGERBREAD)</span>
+<span class="sd">         AppleWebKit / 533.1 (KHTML; like Gecko) Version / 4.0 Mobile Safari /</span>
+<span class="sd">         533.1. iPhone: Mozilla / 5.0 (iPhone; CPU iPhone OS 6_1 like Mac OS X)</span>
+<span class="sd">         AppleWebKit / 536.26 (KHTML; like Gecko) Mobile / 10B142 iPhone4; 1</span>
+<span class="sd">         BingWeb / 3.03.1428.20120423. PC: Mozilla / 5.0 (Windows NT 6.3;</span>
+<span class="sd">         WOW64; Trident / 7.0; Touch; rv:11.0) like Gecko. iPad: Mozilla / 5.0</span>
+<span class="sd">         (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit / 537.51.1 (KHTML, like</span>
+<span class="sd">         Gecko) Version / 7.0 Mobile / 11A465 Safari / 9537.53</span>
+<span class="sd">        :type user_agent: str</span>
+<span class="sd">        :param client_id: Bing uses this header to provide users with</span>
+<span class="sd">         consistent behavior across Bing API calls. Bing often flights new</span>
+<span class="sd">         features and improvements, and it uses the client ID as a key for</span>
+<span class="sd">         assigning traffic on different flights. If you do not use the same</span>
+<span class="sd">         client ID for a user across multiple requests, then Bing may assign</span>
+<span class="sd">         the user to multiple conflicting flights. Being assigned to multiple</span>
+<span class="sd">         conflicting flights can lead to an inconsistent user experience. For</span>
+<span class="sd">         example, if the second request has a different flight assignment than</span>
+<span class="sd">         the first, the experience may be unexpected. Also, Bing can use the</span>
+<span class="sd">         client ID to tailor web results to that client ID’s search history,</span>
+<span class="sd">         providing a richer experience for the user. Bing also uses this header</span>
+<span class="sd">         to help improve result rankings by analyzing the activity generated by</span>
+<span class="sd">         a client ID. The relevance improvements help with better quality of</span>
+<span class="sd">         results delivered by Bing APIs and in turn enables higher</span>
+<span class="sd">         click-through rates for the API consumer. IMPORTANT: Although</span>
+<span class="sd">         optional, you should consider this header required. Persisting the</span>
+<span class="sd">         client ID across multiple requests for the same end user and device</span>
+<span class="sd">         combination enables 1) the API consumer to receive a consistent user</span>
+<span class="sd">         experience, and 2) higher click-through rates via better quality of</span>
+<span class="sd">         results from the Bing APIs. Each user that uses your application on</span>
+<span class="sd">         the device must have a unique, Bing generated client ID. If you do not</span>
+<span class="sd">         include this header in the request, Bing generates an ID and returns</span>
+<span class="sd">         it in the X-MSEdge-ClientID response header. The only time that you</span>
+<span class="sd">         should NOT include this header in a request is the first time the user</span>
+<span class="sd">         uses your app on that device. Use the client ID for each Bing API</span>
+<span class="sd">         request that your app makes for this user on the device. Persist the</span>
+<span class="sd">         client ID. To persist the ID in a browser app, use a persistent HTTP</span>
+<span class="sd">         cookie to ensure the ID is used across all sessions. Do not use a</span>
+<span class="sd">         session cookie. For other apps such as mobile apps, use the device&#39;s</span>
+<span class="sd">         persistent storage to persist the ID. The next time the user uses your</span>
+<span class="sd">         app on that device, get the client ID that you persisted. Bing</span>
+<span class="sd">         responses may or may not include this header. If the response includes</span>
+<span class="sd">         this header, capture the client ID and use it for all subsequent Bing</span>
+<span class="sd">         requests for the user on that device. If you include the</span>
+<span class="sd">         X-MSEdge-ClientID, you must not include cookies in the request.</span>
+<span class="sd">        :type client_id: str</span>
+<span class="sd">        :param client_ip: The IPv4 or IPv6 address of the client device. The</span>
+<span class="sd">         IP address is used to discover the user&#39;s location. Bing uses the</span>
+<span class="sd">         location information to determine safe search behavior. Although</span>
+<span class="sd">         optional, you are encouraged to always specify this header and the</span>
+<span class="sd">         X-Search-Location header. Do not obfuscate the address (for example,</span>
+<span class="sd">         by changing the last octet to 0). Obfuscating the address results in</span>
+<span class="sd">         the location not being anywhere near the device&#39;s actual location,</span>
+<span class="sd">         which may result in Bing serving erroneous results.</span>
+<span class="sd">        :type client_ip: str</span>
+<span class="sd">        :param location: A semicolon-delimited list of key/value pairs that</span>
+<span class="sd">         describe the client&#39;s geographical location. Bing uses the location</span>
+<span class="sd">         information to determine safe search behavior and to return relevant</span>
+<span class="sd">         local content. Specify the key/value pair as &lt;key&gt;:&lt;value&gt;. The</span>
+<span class="sd">         following are the keys that you use to specify the user&#39;s location.</span>
+<span class="sd">         lat (required): The latitude of the client&#39;s location, in degrees. The</span>
+<span class="sd">         latitude must be greater than or equal to -90.0 and less than or equal</span>
+<span class="sd">         to +90.0. Negative values indicate southern latitudes and positive</span>
+<span class="sd">         values indicate northern latitudes. long (required): The longitude of</span>
+<span class="sd">         the client&#39;s location, in degrees. The longitude must be greater than</span>
+<span class="sd">         or equal to -180.0 and less than or equal to +180.0. Negative values</span>
+<span class="sd">         indicate western longitudes and positive values indicate eastern</span>
+<span class="sd">         longitudes. re (required): The radius, in meters, which specifies the</span>
+<span class="sd">         horizontal accuracy of the coordinates. Pass the value returned by the</span>
+<span class="sd">         device&#39;s location service. Typical values might be 22m for GPS/Wi-Fi,</span>
+<span class="sd">         380m for cell tower triangulation, and 18,000m for reverse IP lookup.</span>
+<span class="sd">         ts (optional): The UTC UNIX timestamp of when the client was at the</span>
+<span class="sd">         location. (The UNIX timestamp is the number of seconds since January</span>
+<span class="sd">         1, 1970.) head (optional): The client&#39;s relative heading or direction</span>
+<span class="sd">         of travel. Specify the direction of travel as degrees from 0 through</span>
+<span class="sd">         360, counting clockwise relative to true north. Specify this key only</span>
+<span class="sd">         if the sp key is nonzero. sp (optional): The horizontal velocity</span>
+<span class="sd">         (speed), in meters per second, that the client device is traveling.</span>
+<span class="sd">         alt (optional): The altitude of the client device, in meters. are</span>
+<span class="sd">         (optional): The radius, in meters, that specifies the vertical</span>
+<span class="sd">         accuracy of the coordinates. Specify this key only if you specify the</span>
+<span class="sd">         alt key. Although many of the keys are optional, the more information</span>
+<span class="sd">         that you provide, the more accurate the location results are. Although</span>
+<span class="sd">         optional, you are encouraged to always specify the user&#39;s geographical</span>
+<span class="sd">         location. Providing the location is especially important if the</span>
+<span class="sd">         client&#39;s IP address does not accurately reflect the user&#39;s physical</span>
+<span class="sd">         location (for example, if the client uses VPN). For optimal results,</span>
+<span class="sd">         you should include this header and the X-MSEdge-ClientIP header, but</span>
+<span class="sd">         at a minimum, you should include this header.</span>
+<span class="sd">        :type location: str</span>
+<span class="sd">        :param country_code: A 2-character country code of the country where</span>
+<span class="sd">         the results come from. This API supports only the United States</span>
+<span class="sd">         market. If you specify this query parameter, it must be set to us. If</span>
+<span class="sd">         you set this parameter, you must also specify the Accept-Language</span>
+<span class="sd">         header. Bing uses the first supported language it finds from the</span>
+<span class="sd">         languages list, and combine that language with the country code that</span>
+<span class="sd">         you specify to determine the market to return results for. If the</span>
+<span class="sd">         languages list does not include a supported language, Bing finds the</span>
+<span class="sd">         closest language and market that supports the request, or it may use</span>
+<span class="sd">         an aggregated or default market for the results instead of a specified</span>
+<span class="sd">         one. You should use this query parameter and the Accept-Language query</span>
+<span class="sd">         parameter only if you specify multiple languages; otherwise, you</span>
+<span class="sd">         should use the mkt and setLang query parameters. This parameter and</span>
+<span class="sd">         the mkt query parameter are mutually exclusive—do not specify both.</span>
+<span class="sd">        :type country_code: str</span>
+<span class="sd">        :param market: The market where the results come from. You are</span>
+<span class="sd">         strongly encouraged to always specify the market, if known. Specifying</span>
+<span class="sd">         the market helps Bing route the request and return an appropriate and</span>
+<span class="sd">         optimal response. This parameter and the cc query parameter are</span>
+<span class="sd">         mutually exclusive—do not specify both.</span>
+<span class="sd">        :type market: str</span>
+<span class="sd">        :param safe_search: Filter suggestions for adult content. The</span>
+<span class="sd">         following are the possible filter values. Off: Return suggestions with</span>
+<span class="sd">         adult text, images, or videos. Moderate: Return suggestion with adult</span>
+<span class="sd">         text but not adult images or videos. Strict: Do not return news</span>
+<span class="sd">         articles with adult text, images, or videos. If the request comes from</span>
+<span class="sd">         a market that Bing&#39;s adult policy requires that safeSearch is set to</span>
+<span class="sd">         Strict, Bing ignores the safeSearch value and uses Strict. If you use</span>
+<span class="sd">         the site: query operator, there is the chance that the response may</span>
+<span class="sd">         contain adult content regardless of what the safeSearch query</span>
+<span class="sd">         parameter is set to. Use site: only if you are aware of the content on</span>
+<span class="sd">         the site and your scenario supports the possibility of adult content.</span>
+<span class="sd">         Possible values include: &#39;Off&#39;, &#39;Moderate&#39;, &#39;Strict&#39;</span>
+<span class="sd">        :type safe_search: str or</span>
+<span class="sd">         ~azure.cognitiveservices.search.autosuggest.models.SafeSearch</span>
+<span class="sd">        :param set_lang: The language to use for user interface strings.</span>
+<span class="sd">         Specify the language using the ISO 639-1 2-letter language code. For</span>
+<span class="sd">         example, the language code for English is EN. The default is EN</span>
+<span class="sd">         (English). Although optional, you should always specify the language.</span>
+<span class="sd">         Typically, you set setLang to the same language specified by mkt</span>
+<span class="sd">         unless the user wants the user interface strings displayed in a</span>
+<span class="sd">         different language. This parameter and the Accept-Language header are</span>
+<span class="sd">         mutually exclusive; do not specify both. A user interface string is a</span>
+<span class="sd">         string that&#39;s used as a label in a user interface. There are few user</span>
+<span class="sd">         interface strings in the JSON response objects. Also, any links to</span>
+<span class="sd">         Bing.com properties in the response objects apply the specified</span>
+<span class="sd">         language.</span>
+<span class="sd">        :type set_lang: str</span>
+<span class="sd">        :param response_format: The media type to use for the response. The</span>
+<span class="sd">         following are the possible case-insensitive values: JSON, JSONLD. The</span>
+<span class="sd">         default is JSON. If you specify JSONLD, the response body includes</span>
+<span class="sd">         JSON-LD objects that contain the search results.</span>
+<span class="sd">        :type response_format: list[str or</span>
+<span class="sd">         ~azure.cognitiveservices.search.autosuggest.models.ResponseFormat]</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: Suggestions or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.search.autosuggest.models.Suggestions</span>
+<span class="sd">         or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`ErrorResponseException&lt;azure.cognitiveservices.search.autosuggest.models.ErrorResponseException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x_bing_apis_sdk</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
+
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_suggest</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">country_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;cc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;country_code&quot;</span><span class="p">,</span> <span class="n">country_code</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">market</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;mkt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;market&quot;</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">safe_search</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;safeSearch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;safe_search&quot;</span><span class="p">,</span> <span class="n">safe_search</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">set_lang</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;setLang&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;set_lang&quot;</span><span class="p">,</span> <span class="n">set_lang</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;ResponseFormat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;response_format&quot;</span><span class="p">,</span> <span class="n">response_format</span><span class="p">,</span> <span class="s1">&#39;[str]&#39;</span><span class="p">,</span> <span class="n">div</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;X-BingApis-SDK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;x_bing_apis_sdk&quot;</span><span class="p">,</span> <span class="n">x_bing_apis_sdk</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">accept_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept-Language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;accept_language&quot;</span><span class="p">,</span> <span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pragma</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Pragma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;pragma&quot;</span><span class="p">,</span> <span class="n">pragma</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">user_agent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;user_agent&quot;</span><span class="p">,</span> <span class="n">user_agent</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">client_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;X-MSEdge-ClientID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;client_id&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">client_ip</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;X-MSEdge-ClientIP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;client_ip&quot;</span><span class="p">,</span> <span class="n">client_ip</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">location</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;X-Search-Location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ErrorResponseException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;Suggestions&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">auto_suggest</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/Suggestions&#39;</span><span class="p">}</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

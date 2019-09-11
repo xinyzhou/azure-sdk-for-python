@@ -1,0 +1,1453 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.file.file_client &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.file.file_client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.file.file_client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># pylint: disable=too-many-lines</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span> <span class="c1"># pylint: disable=unused-import</span>
+    <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">TYPE_CHECKING</span>
+<span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span><span class="p">,</span> <span class="n">quote</span><span class="p">,</span> <span class="n">unquote</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span> <span class="c1"># type: ignore</span>
+    <span class="kn">from</span> <span class="nn">urllib2</span> <span class="k">import</span> <span class="n">quote</span><span class="p">,</span> <span class="n">unquote</span> <span class="c1"># type: ignore</span>
+
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">azure.core.polling</span> <span class="k">import</span> <span class="n">LROPoller</span>
+<span class="kn">from</span> <span class="nn">azure.core.paging</span> <span class="k">import</span> <span class="n">ItemPaged</span>
+<span class="kn">from</span> <span class="nn">azure.core.tracing.decorator</span> <span class="k">import</span> <span class="n">distributed_trace</span>
+
+<span class="kn">from</span> <span class="nn">._generated</span> <span class="k">import</span> <span class="n">AzureFileStorage</span>
+<span class="kn">from</span> <span class="nn">._generated.version</span> <span class="k">import</span> <span class="n">VERSION</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">StorageErrorException</span><span class="p">,</span> <span class="n">FileHTTPHeaders</span>
+<span class="kn">from</span> <span class="nn">._shared.uploads</span> <span class="k">import</span> <span class="n">IterStreamer</span><span class="p">,</span> <span class="n">FileChunkUploader</span><span class="p">,</span> <span class="n">upload_data_chunks</span>
+<span class="kn">from</span> <span class="nn">._shared.downloads</span> <span class="k">import</span> <span class="n">StorageStreamDownloader</span>
+<span class="kn">from</span> <span class="nn">._shared.base_client</span> <span class="k">import</span> <span class="n">StorageAccountHostsMixin</span><span class="p">,</span> <span class="n">parse_connection_str</span><span class="p">,</span> <span class="n">parse_query</span>
+<span class="kn">from</span> <span class="nn">._shared.request_handlers</span> <span class="k">import</span> <span class="n">add_metadata_headers</span><span class="p">,</span> <span class="n">get_length</span>
+<span class="kn">from</span> <span class="nn">._shared.response_handlers</span> <span class="k">import</span> <span class="n">return_response_headers</span><span class="p">,</span> <span class="n">process_storage_error</span>
+<span class="kn">from</span> <span class="nn">._shared.parser</span> <span class="k">import</span> <span class="n">_str</span>
+<span class="kn">from</span> <span class="nn">._parser</span> <span class="k">import</span> <span class="n">_get_file_permission</span><span class="p">,</span> <span class="n">_datetime_to_str</span>
+<span class="kn">from</span> <span class="nn">._deserialize</span> <span class="k">import</span> <span class="n">deserialize_file_properties</span><span class="p">,</span> <span class="n">deserialize_file_stream</span>
+<span class="kn">from</span> <span class="nn">._polling</span> <span class="k">import</span> <span class="n">CloseHandles</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">HandlesPaged</span><span class="p">,</span> <span class="n">NTFSAttributes</span>  <span class="c1"># pylint: disable=unused-import</span>
+<span class="kn">from</span> <span class="nn">._shared_access_signature</span> <span class="k">import</span> <span class="n">FileSharedAccessSignature</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+    <span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="n">ShareProperties</span><span class="p">,</span> <span class="n">FilePermissions</span><span class="p">,</span> <span class="n">ContentSettings</span><span class="p">,</span> <span class="n">FileProperties</span>
+    <span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">HandleItem</span>
+
+
+<span class="k">def</span> <span class="nf">_upload_file_helper</span><span class="p">(</span>
+        <span class="n">client</span><span class="p">,</span>
+        <span class="n">stream</span><span class="p">,</span>
+        <span class="n">size</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="p">,</span>
+        <span class="n">content_settings</span><span class="p">,</span>
+        <span class="n">validate_content</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="p">,</span>
+        <span class="n">max_connections</span><span class="p">,</span>
+        <span class="n">file_settings</span><span class="p">,</span>
+        <span class="n">file_attributes</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="n">file_creation_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>
+        <span class="n">file_last_write_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>
+        <span class="n">file_permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">file_permission_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;A content size must be specified for a File.&quot;</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span>
+            <span class="n">size</span><span class="p">,</span>
+            <span class="n">content_settings</span><span class="o">=</span><span class="n">content_settings</span><span class="p">,</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="n">file_attributes</span><span class="o">=</span><span class="n">file_attributes</span><span class="p">,</span>
+            <span class="n">file_creation_time</span><span class="o">=</span><span class="n">file_creation_time</span><span class="p">,</span>
+            <span class="n">file_last_write_time</span><span class="o">=</span><span class="n">file_last_write_time</span><span class="p">,</span>
+            <span class="n">file_permission</span><span class="o">=</span><span class="n">file_permission</span><span class="p">,</span>
+            <span class="n">file_permission_key</span><span class="o">=</span><span class="n">file_permission_key</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">response</span>
+
+        <span class="n">responses</span> <span class="o">=</span> <span class="n">upload_data_chunks</span><span class="p">(</span>
+            <span class="n">service</span><span class="o">=</span><span class="n">client</span><span class="p">,</span>
+            <span class="n">uploader_class</span><span class="o">=</span><span class="n">FileChunkUploader</span><span class="p">,</span>
+            <span class="n">total_size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+            <span class="n">chunk_size</span><span class="o">=</span><span class="n">file_settings</span><span class="o">.</span><span class="n">max_range_size</span><span class="p">,</span>
+            <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+            <span class="n">max_connections</span><span class="o">=</span><span class="n">max_connections</span><span class="p">,</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="n">validate_content</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">responses</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;last_modified&#39;</span><span class="p">))[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="FileClient"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient">[docs]</a><span class="k">class</span> <span class="nc">FileClient</span><span class="p">(</span><span class="n">StorageAccountHostsMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A client to interact with a specific file, although that file may not yet exist.</span>
+
+<span class="sd">    :ivar str url:</span>
+<span class="sd">        The full endpoint URL to the File, including SAS token if used. This could be</span>
+<span class="sd">        either the primary endpoint, or the secondard endpoint depending on the current `location_mode`.</span>
+<span class="sd">    :ivar str primary_endpoint:</span>
+<span class="sd">        The full primary endpoint URL.</span>
+<span class="sd">    :ivar str primary_hostname:</span>
+<span class="sd">        The hostname of the primary endpoint.</span>
+<span class="sd">    :ivar str secondary_endpoint:</span>
+<span class="sd">        The full secondard endpoint URL if configured. If not available</span>
+<span class="sd">        a ValueError will be raised. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str secondary_hostname:</span>
+<span class="sd">        The hostname of the secondary endpoint. If not available this</span>
+<span class="sd">        will be None. To explicitly specify a secondary hostname, use the optional</span>
+<span class="sd">        `secondary_hostname` keyword argument on instantiation.</span>
+<span class="sd">    :ivar str location_mode:</span>
+<span class="sd">        The location mode that the client is currently using. By default</span>
+<span class="sd">        this will be &quot;primary&quot;. Options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :param str file_url: The full URI to the file. This can also be a URL to the storage account</span>
+<span class="sd">        or share, in which case the file and/or share must also be specified.</span>
+<span class="sd">    :param share: The share for the file. If specified, this value will override</span>
+<span class="sd">        a share value specified in the file URL.</span>
+<span class="sd">    :type share: str or ~azure.storage.file.models.ShareProperties</span>
+<span class="sd">    :param str file_path:</span>
+<span class="sd">        The file path to the file with which to interact. If specified, this value will override</span>
+<span class="sd">        a file value specified in the file URL.</span>
+<span class="sd">    :param str snapshot:</span>
+<span class="sd">        An optional file snapshot on which to operate.</span>
+<span class="sd">    :param credential:</span>
+<span class="sd">        The credential with which to authenticate. This is optional if the</span>
+<span class="sd">        account URL already has a SAS token. The value can be a SAS token string or an account</span>
+<span class="sd">        shared access key.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">file_url</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">share</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, ShareProperties]]</span>
+            <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">snapshot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, Dict[str, Any]]]</span>
+            <span class="n">credential</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Any]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">file_url</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">):</span>
+                <span class="n">file_url</span> <span class="o">=</span> <span class="s2">&quot;https://&quot;</span> <span class="o">+</span> <span class="n">file_url</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;File URL must be a string.&quot;</span><span class="p">)</span>
+        <span class="n">parsed_url</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">file_url</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">path</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">share</span> <span class="ow">and</span> <span class="n">file_path</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Please specify a share and file name.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid URL: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_url</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;get_token&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Token credentials not supported by the File service.&quot;</span><span class="p">)</span>
+
+        <span class="n">path_share</span><span class="p">,</span> <span class="n">path_file</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">path_snapshot</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="n">path_share</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">path_file</span> <span class="o">=</span> <span class="n">parsed_url</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="n">path_snapshot</span><span class="p">,</span> <span class="n">sas_token</span> <span class="o">=</span> <span class="n">parse_query</span><span class="p">(</span><span class="n">parsed_url</span><span class="o">.</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sas_token</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">credential</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;You need to provide either an account key or SAS token when creating a storage service.&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="n">snapshot</span><span class="o">.</span><span class="n">snapshot</span> <span class="c1"># type: ignore</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="n">snapshot</span><span class="p">[</span><span class="s1">&#39;snapshot&#39;</span><span class="p">]</span> <span class="c1"># type: ignore</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="n">snapshot</span> <span class="ow">or</span> <span class="n">path_snapshot</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">share_name</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">name</span> <span class="c1"># type: ignore</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">share_name</span> <span class="o">=</span> <span class="n">share</span> <span class="ow">or</span> <span class="n">unquote</span><span class="p">(</span><span class="n">path_share</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+        <span class="k">if</span> <span class="n">file_path</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="n">file_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">unquote</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">path_file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">directory_path</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_query_str</span><span class="p">,</span> <span class="n">credential</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format_query_string</span><span class="p">(</span>
+            <span class="n">sas_token</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="n">share_snapshot</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FileClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parsed_url</span><span class="p">,</span> <span class="n">service</span><span class="o">=</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">AzureFileStorage</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">VERSION</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">pipeline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_format_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Format the endpoint URL according to the current location</span>
+<span class="sd">        mode hostname.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">share_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">share_name</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">share_name</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+            <span class="n">share_name</span> <span class="o">=</span> <span class="n">share_name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">://</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scheme</span><span class="p">,</span>
+            <span class="n">hostname</span><span class="p">,</span>
+            <span class="n">quote</span><span class="p">(</span><span class="n">share_name</span><span class="p">),</span>
+            <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">quote</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="s1">&#39;~&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">]),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_query_str</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileClient.from_connection_string"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">share</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[Union[str, ShareProperties]]</span>
+            <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[str]</span>
+            <span class="n">snapshot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[str, Dict[str, Any]]]</span>
+            <span class="n">credential</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Any]</span>
+            <span class="o">**</span><span class="n">kwargs</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; FileClient</span>
+        <span class="sd">&quot;&quot;&quot;Create FileClient from a Connection String.</span>
+
+<span class="sd">        :param str conn_str:</span>
+<span class="sd">            A connection string to an Azure Storage account.</span>
+<span class="sd">        :param share: The share. This can either be the name of the share,</span>
+<span class="sd">            or an instance of ShareProperties</span>
+<span class="sd">        :type share: str or ~azure.storage.file.models.ShareProperties</span>
+<span class="sd">        :param str file_path:</span>
+<span class="sd">            The file path.</span>
+<span class="sd">        :param str snapshot:</span>
+<span class="sd">            An optional file snapshot on which to operate.</span>
+<span class="sd">        :param credential:</span>
+<span class="sd">            The credential with which to authenticate. This is optional if the</span>
+<span class="sd">            account URL already has a SAS token. The value can be a SAS token string or an account</span>
+<span class="sd">            shared access key.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_hello_world.py</span>
+<span class="sd">                :start-after: [START create_file_client]</span>
+<span class="sd">                :end-before: [END create_file_client]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Creates the file client with connection string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">account_url</span><span class="p">,</span> <span class="n">secondary</span><span class="p">,</span> <span class="n">credential</span> <span class="o">=</span> <span class="n">parse_connection_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;secondary_hostname&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;secondary_hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">secondary</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">account_url</span><span class="p">,</span> <span class="n">share</span><span class="o">=</span><span class="n">share</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">snapshot</span><span class="o">=</span><span class="n">snapshot</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.generate_shared_access_signature"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.generate_shared_access_signature">[docs]</a>    <span class="k">def</span> <span class="nf">generate_shared_access_signature</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[FilePermissions, str]]</span>
+            <span class="n">expiry</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[datetime, str]]</span>
+            <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Union[datetime, str]]</span>
+            <span class="n">policy_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">ip</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">protocol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">cache_control</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">content_disposition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">content_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">content_language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; str</span>
+        <span class="sd">&quot;&quot;&quot;Generates a shared access signature for the file.</span>
+
+<span class="sd">        Use the returned signature with the credential parameter of any FileServiceClient,</span>
+<span class="sd">        ShareClient, DirectoryClient, or FileClient.</span>
+
+<span class="sd">        :param ~azure.storage.file.models.FilePermissions permission:</span>
+<span class="sd">            The permissions associated with the shared access signature. The</span>
+<span class="sd">            user is restricted to operations allowed by the permissions.</span>
+<span class="sd">            Permissions must be ordered read, write, delete, list.</span>
+<span class="sd">            Required unless an id is given referencing a stored access policy</span>
+<span class="sd">            which contains this field. This field must be omitted if it has been</span>
+<span class="sd">            specified in an associated stored access policy.</span>
+<span class="sd">        :param expiry:</span>
+<span class="sd">            The time at which the shared access signature becomes invalid.</span>
+<span class="sd">            Required unless an id is given referencing a stored access policy</span>
+<span class="sd">            which contains this field. This field must be omitted if it has</span>
+<span class="sd">            been specified in an associated stored access policy. Azure will always</span>
+<span class="sd">            convert values to UTC. If a date is passed in without timezone info, it</span>
+<span class="sd">            is assumed to be UTC.</span>
+<span class="sd">        :type expiry: datetime or str</span>
+<span class="sd">        :param start:</span>
+<span class="sd">            The time at which the shared access signature becomes valid. If</span>
+<span class="sd">            omitted, start time for this call is assumed to be the time when the</span>
+<span class="sd">            storage service receives the request. Azure will always convert values</span>
+<span class="sd">            to UTC. If a date is passed in without timezone info, it is assumed to</span>
+<span class="sd">            be UTC.</span>
+<span class="sd">        :type start: datetime or str</span>
+<span class="sd">        :param str policy_id:</span>
+<span class="sd">            A unique value up to 64 characters in length that correlates to a</span>
+<span class="sd">            stored access policy.</span>
+<span class="sd">        :param str ip:</span>
+<span class="sd">            Specifies an IP address or a range of IP addresses from which to accept requests.</span>
+<span class="sd">            If the IP address from which the request originates does not match the IP address</span>
+<span class="sd">            or address range specified on the SAS token, the request is not authenticated.</span>
+<span class="sd">            For example, specifying sip=168.1.5.65 or sip=168.1.5.60-168.1.5.70 on the SAS</span>
+<span class="sd">            restricts the request to those IP addresses.</span>
+<span class="sd">        :param str protocol:</span>
+<span class="sd">            Specifies the protocol permitted for a request made. The default value is https.</span>
+<span class="sd">        :param str cache_control:</span>
+<span class="sd">            Response header value for Cache-Control when resource is accessed</span>
+<span class="sd">            using this shared access signature.</span>
+<span class="sd">        :param str content_disposition:</span>
+<span class="sd">            Response header value for Content-Disposition when resource is accessed</span>
+<span class="sd">            using this shared access signature.</span>
+<span class="sd">        :param str content_encoding:</span>
+<span class="sd">            Response header value for Content-Encoding when resource is accessed</span>
+<span class="sd">            using this shared access signature.</span>
+<span class="sd">        :param str content_language:</span>
+<span class="sd">            Response header value for Content-Language when resource is accessed</span>
+<span class="sd">            using this shared access signature.</span>
+<span class="sd">        :param str content_type:</span>
+<span class="sd">            Response header value for Content-Type when resource is accessed</span>
+<span class="sd">            using this shared access signature.</span>
+<span class="sd">        :return: A Shared Access Signature (sas) token.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="p">,</span> <span class="s1">&#39;account_key&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_key</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No account SAS key available.&quot;</span><span class="p">)</span>
+        <span class="n">sas</span> <span class="o">=</span> <span class="n">FileSharedAccessSignature</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">account_key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="n">sas</span><span class="o">.</span><span class="n">generate_file</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="n">share_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">share_name</span><span class="p">,</span>
+            <span class="n">directory_name</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span>
+            <span class="n">file_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span>
+            <span class="n">permission</span><span class="o">=</span><span class="n">permission</span><span class="p">,</span>
+            <span class="n">expiry</span><span class="o">=</span><span class="n">expiry</span><span class="p">,</span>
+            <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+            <span class="n">policy_id</span><span class="o">=</span><span class="n">policy_id</span><span class="p">,</span>
+            <span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">,</span>
+            <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">,</span>
+            <span class="n">cache_control</span><span class="o">=</span><span class="n">cache_control</span><span class="p">,</span>
+            <span class="n">content_disposition</span><span class="o">=</span><span class="n">content_disposition</span><span class="p">,</span>
+            <span class="n">content_encoding</span><span class="o">=</span><span class="n">content_encoding</span><span class="p">,</span>
+            <span class="n">content_language</span><span class="o">=</span><span class="n">content_language</span><span class="p">,</span>
+            <span class="n">content_type</span><span class="o">=</span><span class="n">content_type</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.create_file"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.create_file">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">create_file</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">content_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[ContentSettings]</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">file_attributes</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, NTFSAttributes]</span>
+            <span class="n">file_creation_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+            <span class="n">file_last_write_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+            <span class="n">file_permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>   <span class="c1"># type: Optional[str]</span>
+            <span class="n">file_permission_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new file.</span>
+
+<span class="sd">        Note that it only initializes the file with no content.</span>
+
+<span class="sd">        :param int size: Specifies the maximum size for the file,</span>
+<span class="sd">            up to 1 TB.</span>
+<span class="sd">        :param ~azure.storage.file.models.ContentSettings content_settings:</span>
+<span class="sd">            ContentSettings object used to set file properties.</span>
+<span class="sd">        :param metadata:</span>
+<span class="sd">            Name-value pairs associated with the file as metadata.</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :param file_attributes:</span>
+<span class="sd">            The file system attributes for files and directories.</span>
+<span class="sd">            If not set, the default value would be &quot;None&quot; and the attributes will be set to &quot;Archive&quot;.</span>
+<span class="sd">            Here is an example for when the var type is str: &#39;Temporary|Archive&#39;.</span>
+<span class="sd">            file_attributes value is not case sensitive.</span>
+<span class="sd">        :type file_attributes: str or :class:`~azure.storage.file.models.NTFSAttributes`</span>
+<span class="sd">        :param file_creation_time: Creation time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_creation_time: str or datetime</span>
+<span class="sd">        :param file_last_write_time: Last write time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_last_write_time: str or datetime</span>
+<span class="sd">        :param file_permission: If specified the permission (security</span>
+<span class="sd">            descriptor) shall be set for the directory/file. This header can be</span>
+<span class="sd">            used if Permission size is &lt;= 8KB, else x-ms-file-permission-key</span>
+<span class="sd">            header shall be used. Default value: Inherit. If SDDL is specified as</span>
+<span class="sd">            input, it must have owner, group and dacl. Note: Only one of the</span>
+<span class="sd">            x-ms-file-permission or x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission: str</span>
+<span class="sd">        :param file_permission_key: Key of the permission to be set for the</span>
+<span class="sd">            directory/file. Note: Only one of the x-ms-file-permission or</span>
+<span class="sd">            x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission_key: str</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: dict(str, Any)</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_file.py</span>
+<span class="sd">                :start-after: [START create_file]</span>
+<span class="sd">                :end-before: [END create_file]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Create a file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Encryption required but no key was provided.&quot;</span><span class="p">)</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;headers&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">add_metadata_headers</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span>
+        <span class="n">file_http_headers</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">content_settings</span><span class="p">:</span>
+            <span class="n">file_http_headers</span> <span class="o">=</span> <span class="n">FileHTTPHeaders</span><span class="p">(</span>
+                <span class="n">file_cache_control</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">cache_control</span><span class="p">,</span>
+                <span class="n">file_content_type</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_type</span><span class="p">,</span>
+                <span class="n">file_content_md5</span><span class="o">=</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_md5</span><span class="p">)</span> <span class="k">if</span> <span class="n">content_settings</span><span class="o">.</span><span class="n">content_md5</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">file_content_encoding</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">,</span>
+                <span class="n">file_content_language</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_language</span><span class="p">,</span>
+                <span class="n">file_content_disposition</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_disposition</span>
+            <span class="p">)</span>
+        <span class="n">file_permission</span> <span class="o">=</span> <span class="n">_get_file_permission</span><span class="p">(</span><span class="n">file_permission</span><span class="p">,</span> <span class="n">file_permission_key</span><span class="p">,</span> <span class="s1">&#39;Inherit&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+                <span class="n">file_content_length</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+                <span class="n">file_attributes</span><span class="o">=</span><span class="n">_str</span><span class="p">(</span><span class="n">file_attributes</span><span class="p">),</span>
+                <span class="n">file_creation_time</span><span class="o">=</span><span class="n">_datetime_to_str</span><span class="p">(</span><span class="n">file_creation_time</span><span class="p">),</span>
+                <span class="n">file_last_write_time</span><span class="o">=</span><span class="n">_datetime_to_str</span><span class="p">(</span><span class="n">file_last_write_time</span><span class="p">),</span>
+                <span class="n">file_permission</span><span class="o">=</span><span class="n">file_permission</span><span class="p">,</span>
+                <span class="n">file_permission_key</span><span class="o">=</span><span class="n">file_permission_key</span><span class="p">,</span>
+                <span class="n">file_http_headers</span><span class="o">=</span><span class="n">file_http_headers</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.upload_file"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.upload_file">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>  <span class="c1"># type: Any</span>
+            <span class="n">length</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">content_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[ContentSettings]</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># type: bool</span>
+            <span class="n">max_connections</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">file_attributes</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, NTFSAttributes]</span>
+            <span class="n">file_creation_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+            <span class="n">file_last_write_time</span><span class="o">=</span><span class="s2">&quot;now&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+            <span class="n">file_permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">file_permission_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>  <span class="c1"># type: str</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Uploads a new file.</span>
+
+<span class="sd">        :param Any data:</span>
+<span class="sd">            Content of the file.</span>
+<span class="sd">        :param int length:</span>
+<span class="sd">            Length of the file in bytes. Specify its maximum size, up to 1 TiB.</span>
+<span class="sd">        :param metadata:</span>
+<span class="sd">            Name-value pairs associated with the file as metadata.</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param ~azure.storage.file.models.ContentSettings content_settings:</span>
+<span class="sd">            ContentSettings object used to set file properties.</span>
+<span class="sd">        :param bool validate_content:</span>
+<span class="sd">            If true, calculates an MD5 hash for each range of the file. The storage</span>
+<span class="sd">            service checks the hash of the content that has arrived with the hash</span>
+<span class="sd">            that was sent. This is primarily valuable for detecting bitflips on</span>
+<span class="sd">            the wire if using http instead of https as https (the default) will</span>
+<span class="sd">            already validate. Note that this MD5 hash is not stored with the</span>
+<span class="sd">            file.</span>
+<span class="sd">        :param int max_connections:</span>
+<span class="sd">            Maximum number of parallel connections to use.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :param str encoding:</span>
+<span class="sd">            Defaults to UTF-8.</span>
+<span class="sd">        :param file_attributes:</span>
+<span class="sd">            The file system attributes for files and directories.</span>
+<span class="sd">            If not set, the default value would be &quot;None&quot; and the attributes will be set to &quot;Archive&quot;.</span>
+<span class="sd">            Here is an example for when the var type is str: &#39;Temporary|Archive&#39;.</span>
+<span class="sd">            file_attributes value is not case sensitive.</span>
+<span class="sd">        :type file_attributes: str or :class:`~azure.storage.file.models.NTFSAttributes`</span>
+<span class="sd">        :param file_creation_time: Creation time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_creation_time: str or datetime</span>
+<span class="sd">        :param file_last_write_time: Last write time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_last_write_time: str or datetime</span>
+<span class="sd">        :param file_permission: If specified the permission (security</span>
+<span class="sd">            descriptor) shall be set for the directory/file. This header can be</span>
+<span class="sd">            used if Permission size is &lt;= 8KB, else x-ms-file-permission-key</span>
+<span class="sd">            header shall be used. Default value: Inherit. If SDDL is specified as</span>
+<span class="sd">            input, it must have owner, group and dacl. Note: Only one of the</span>
+<span class="sd">            x-ms-file-permission or x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission: str</span>
+<span class="sd">        :param file_permission_key: Key of the permission to be set for the</span>
+<span class="sd">            directory/file. Note: Only one of the x-ms-file-permission or</span>
+<span class="sd">            x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission_key: str</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: dict(str, Any)</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_file.py</span>
+<span class="sd">                :start-after: [START upload_file]</span>
+<span class="sd">                :end-before: [END upload_file]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Upload a file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Encryption not supported.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">length</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="n">get_length</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:</span><span class="n">length</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="n">stream</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;read&#39;</span><span class="p">):</span>
+            <span class="n">stream</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">):</span>
+            <span class="n">stream</span> <span class="o">=</span> <span class="n">IterStreamer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unsupported data type: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">_upload_file_helper</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">stream</span><span class="p">,</span>
+            <span class="n">length</span><span class="p">,</span>
+            <span class="n">metadata</span><span class="p">,</span>
+            <span class="n">content_settings</span><span class="p">,</span>
+            <span class="n">validate_content</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="p">,</span>
+            <span class="n">max_connections</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="n">file_attributes</span><span class="o">=</span><span class="n">file_attributes</span><span class="p">,</span>
+            <span class="n">file_creation_time</span><span class="o">=</span><span class="n">file_creation_time</span><span class="p">,</span>
+            <span class="n">file_last_write_time</span><span class="o">=</span><span class="n">file_last_write_time</span><span class="p">,</span>
+            <span class="n">file_permission</span><span class="o">=</span><span class="n">file_permission</span><span class="p">,</span>
+            <span class="n">file_permission_key</span><span class="o">=</span><span class="n">file_permission_key</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.start_copy_from_url"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.start_copy_from_url">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">start_copy_from_url</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">source_url</span><span class="p">,</span> <span class="c1"># type: str</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, str]]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;Initiates the copying of data from a source URL into the file</span>
+<span class="sd">        referenced by the client.</span>
+
+<span class="sd">        The status of this copy operation can be found using the `get_properties`</span>
+<span class="sd">        method.</span>
+
+<span class="sd">        :param str source_url:</span>
+<span class="sd">            Specifies the URL of the source file.</span>
+<span class="sd">        :param metadata:</span>
+<span class="sd">            Name-value pairs associated with the file as metadata.</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: dict(str, Any)</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_file.py</span>
+<span class="sd">                :start-after: [START copy_file_from_url]</span>
+<span class="sd">                :end-before: [END copy_file_from_url]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Copy a file from a URL</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;headers&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">add_metadata_headers</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">start_copy</span><span class="p">(</span>
+                <span class="n">source_url</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.abort_copy"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.abort_copy">[docs]</a>    <span class="k">def</span> <span class="nf">abort_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">copy_id</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, FileProperties], Optional[int], Any) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Abort an ongoing copy operation.</span>
+
+<span class="sd">        This will leave a destination file with zero length and full metadata.</span>
+<span class="sd">        This will raise an error if the copy operation has already ended.</span>
+
+<span class="sd">        :param copy_id:</span>
+<span class="sd">            The copy operation to abort. This can be either an ID, or an</span>
+<span class="sd">            instance of FileProperties.</span>
+<span class="sd">        :type copy_id: str or ~azure.storage.file.models.FileProperties</span>
+<span class="sd">        :rtype: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">copy_id</span> <span class="o">=</span> <span class="n">copy_id</span><span class="o">.</span><span class="n">copy</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">copy_id</span> <span class="o">=</span> <span class="n">copy_id</span><span class="p">[</span><span class="s1">&#39;copy_id&#39;</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">pass</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">abort_copy</span><span class="p">(</span><span class="n">copy_id</span><span class="o">=</span><span class="n">copy_id</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.download_file"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.download_file">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">length</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># type: bool</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Iterable[bytes]</span>
+        <span class="sd">&quot;&quot;&quot;Downloads a file to a stream with automatic chunking.</span>
+
+<span class="sd">        :param int offset:</span>
+<span class="sd">            Start of byte range to use for downloading a section of the file.</span>
+<span class="sd">            Must be set if length is provided.</span>
+<span class="sd">        :param int length:</span>
+<span class="sd">            Number of bytes to read from the stream. This is optional, but</span>
+<span class="sd">            should be supplied for optimal performance.</span>
+<span class="sd">        :param bool validate_content:</span>
+<span class="sd">            If true, calculates an MD5 hash for each chunk of the file. The storage</span>
+<span class="sd">            service checks the hash of the content that has arrived with the hash</span>
+<span class="sd">            that was sent. This is primarily valuable for detecting bitflips on</span>
+<span class="sd">            the wire if using http instead of https as https (the default) will</span>
+<span class="sd">            already validate. Note that this MD5 hash is not stored with the</span>
+<span class="sd">            file. Also note that if enabled, the memory-efficient upload algorithm</span>
+<span class="sd">            will not be used, because computing the MD5 hash requires buffering</span>
+<span class="sd">            entire blocks, and doing so defeats the purpose of the memory-efficient algorithm.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: A iterable data generator (stream)</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_file.py</span>
+<span class="sd">                :start-after: [START download_file]</span>
+<span class="sd">                :end-before: [END download_file]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Download a file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Encryption not supported.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">offset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Offset value must not be None if length is set.&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">StorageStreamDownloader</span><span class="p">(</span>
+            <span class="n">service</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+            <span class="n">length</span><span class="o">=</span><span class="n">length</span><span class="p">,</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="n">validate_content</span><span class="p">,</span>
+            <span class="n">encryption_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">extra_properties</span><span class="o">=</span><span class="p">{</span>
+                <span class="s1">&#39;share&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">share_name</span><span class="p">,</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span>
+                <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span>
+            <span class="p">},</span>
+            <span class="bp">cls</span><span class="o">=</span><span class="n">deserialize_file_stream</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.delete_file"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.delete_file">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">delete_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Optional[Any]) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Marks the specified file for deletion. The file is</span>
+<span class="sd">        later deleted during garbage collection.</span>
+
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :rtype: None</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../tests/test_file_samples_file.py</span>
+<span class="sd">                :start-after: [START delete_file]</span>
+<span class="sd">                :end-before: [END delete_file]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 12</span>
+<span class="sd">                :caption: Delete a file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.get_file_properties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.get_file_properties">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">get_file_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Any) -&gt; FileProperties</span>
+        <span class="sd">&quot;&quot;&quot;Returns all user-defined metadata, standard HTTP properties, and</span>
+<span class="sd">        system properties for the file.</span>
+
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: FileProperties</span>
+<span class="sd">        :rtype: ~azure.storage.file.models.FileProperties</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">file_props</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">get_properties</span><span class="p">(</span>
+                <span class="n">sharesnapshot</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">deserialize_file_properties</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="n">file_props</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span>
+        <span class="n">file_props</span><span class="o">.</span><span class="n">share</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">share_name</span>
+        <span class="n">file_props</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span>
+        <span class="n">file_props</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">file_props</span> <span class="c1"># type: ignore</span></div>
+
+<div class="viewcode-block" id="FileClient.set_http_headers"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.set_http_headers">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">set_http_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content_settings</span><span class="p">,</span>  <span class="c1"># type: ContentSettings</span>
+                         <span class="n">file_attributes</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, NTFSAttributes]</span>
+                         <span class="n">file_creation_time</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+                         <span class="n">file_last_write_time</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>  <span class="c1"># type: Union[str, datetime]</span>
+                         <span class="n">file_permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+                         <span class="n">file_permission_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+                         <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+                         <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># Any</span>
+                         <span class="p">):</span>  <span class="c1"># type: ignore</span>
+        <span class="c1"># type: (ContentSettings, Optional[int], Optional[Any]) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Sets HTTP headers on the file.</span>
+
+<span class="sd">        :param ~azure.storage.file.models.ContentSettings content_settings:</span>
+<span class="sd">            ContentSettings object used to set file properties.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :param file_attributes:</span>
+<span class="sd">            The file system attributes for files and directories.</span>
+<span class="sd">            If not set, indicates preservation of existing values.</span>
+<span class="sd">            Here is an example for when the var type is str: &#39;Temporary|Archive&#39;</span>
+<span class="sd">        :type file_attributes: str or :class:`~azure.storage.file.models.NTFSAttributes`</span>
+<span class="sd">        :param file_creation_time: Creation time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_creation_time: str or datetime</span>
+<span class="sd">        :param file_last_write_time: Last write time for the file</span>
+<span class="sd">            Default value: Now.</span>
+<span class="sd">        :type file_last_write_time: str or datetime</span>
+<span class="sd">        :param file_permission: If specified the permission (security</span>
+<span class="sd">            descriptor) shall be set for the directory/file. This header can be</span>
+<span class="sd">            used if Permission size is &lt;= 8KB, else x-ms-file-permission-key</span>
+<span class="sd">            header shall be used. Default value: Inherit. If SDDL is specified as</span>
+<span class="sd">            input, it must have owner, group and dacl. Note: Only one of the</span>
+<span class="sd">            x-ms-file-permission or x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission: str</span>
+<span class="sd">        :param file_permission_key: Key of the permission to be set for the</span>
+<span class="sd">            directory/file. Note: Only one of the x-ms-file-permission or</span>
+<span class="sd">            x-ms-file-permission-key should be specified.</span>
+<span class="sd">        :type file_permission_key: str</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: dict(str, Any)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">file_content_length</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">file_http_headers</span> <span class="o">=</span> <span class="n">FileHTTPHeaders</span><span class="p">(</span>
+            <span class="n">file_cache_control</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">cache_control</span><span class="p">,</span>
+            <span class="n">file_content_type</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_type</span><span class="p">,</span>
+            <span class="n">file_content_md5</span><span class="o">=</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_md5</span><span class="p">)</span> <span class="k">if</span> <span class="n">content_settings</span><span class="o">.</span><span class="n">content_md5</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">file_content_encoding</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_encoding</span><span class="p">,</span>
+            <span class="n">file_content_language</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_language</span><span class="p">,</span>
+            <span class="n">file_content_disposition</span><span class="o">=</span><span class="n">content_settings</span><span class="o">.</span><span class="n">content_disposition</span>
+        <span class="p">)</span>
+        <span class="n">file_permission</span> <span class="o">=</span> <span class="n">_get_file_permission</span><span class="p">(</span><span class="n">file_permission</span><span class="p">,</span> <span class="n">file_permission_key</span><span class="p">,</span> <span class="s1">&#39;preserve&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">set_http_headers</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+                <span class="n">file_content_length</span><span class="o">=</span><span class="n">file_content_length</span><span class="p">,</span>
+                <span class="n">file_http_headers</span><span class="o">=</span><span class="n">file_http_headers</span><span class="p">,</span>
+                <span class="n">file_attributes</span><span class="o">=</span><span class="n">_str</span><span class="p">(</span><span class="n">file_attributes</span><span class="p">),</span>
+                <span class="n">file_creation_time</span><span class="o">=</span><span class="n">_datetime_to_str</span><span class="p">(</span><span class="n">file_creation_time</span><span class="p">),</span>
+                <span class="n">file_last_write_time</span><span class="o">=</span><span class="n">_datetime_to_str</span><span class="p">(</span><span class="n">file_last_write_time</span><span class="p">),</span>
+                <span class="n">file_permission</span><span class="o">=</span><span class="n">file_permission</span><span class="p">,</span>
+                <span class="n">file_permission_key</span><span class="o">=</span><span class="n">file_permission_key</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.set_file_metadata"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.set_file_metadata">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">set_file_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># type: ignore</span>
+        <span class="c1">#type: (Optional[Dict[str, Any]], Optional[int], Optional[Any]) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Sets user-defined metadata for the specified file as one or more</span>
+<span class="sd">        name-value pairs.</span>
+
+<span class="sd">        Each call to this operation replaces all existing metadata</span>
+<span class="sd">        attached to the file. To remove all metadata from the file,</span>
+<span class="sd">        call this operation with no metadata dict.</span>
+
+<span class="sd">        :param metadata:</span>
+<span class="sd">            Name-value pairs associated with the file as metadata.</span>
+<span class="sd">        :type metadata: dict(str, str)</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: dict(str, Any)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;headers&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">add_metadata_headers</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span> <span class="c1"># type: ignore</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">set_metadata</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.upload_range"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.upload_range">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">upload_range</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>  <span class="c1"># type: bytes</span>
+            <span class="n">start_range</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">end_range</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">validate_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="c1"># type: Optional[bool]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Upload a range of bytes to a file.</span>
+
+<span class="sd">        :param bytes data:</span>
+<span class="sd">            The data to upload.</span>
+<span class="sd">        :param int start_range:</span>
+<span class="sd">            Start of byte range to use for uploading a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will upload first 512 bytes of file.</span>
+<span class="sd">        :param int end_range:</span>
+<span class="sd">            End of byte range to use for uploading a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will upload first 512 bytes of file.</span>
+<span class="sd">        :param bool validate_content:</span>
+<span class="sd">            If true, calculates an MD5 hash of the page content. The storage</span>
+<span class="sd">            service checks the hash of the content that has arrived</span>
+<span class="sd">            with the hash that was sent. This is primarily valuable for detecting</span>
+<span class="sd">            bitflips on the wire if using http instead of https as https (the default)</span>
+<span class="sd">            will already validate. Note that this MD5 hash is not stored with the</span>
+<span class="sd">            file.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :param str encoding:</span>
+<span class="sd">            Defaults to UTF-8.</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: Dict[str, Any]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Encryption not supported.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+
+        <span class="n">content_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_range</span><span class="p">,</span> <span class="n">end_range</span><span class="p">)</span>
+        <span class="n">content_length</span> <span class="o">=</span> <span class="n">end_range</span> <span class="o">-</span> <span class="n">start_range</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">upload_range</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="nb">range</span><span class="o">=</span><span class="n">content_range</span><span class="p">,</span>
+                <span class="n">content_length</span><span class="o">=</span><span class="n">content_length</span><span class="p">,</span>
+                <span class="n">optionalbody</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="n">validate_content</span><span class="o">=</span><span class="n">validate_content</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_upload_range_from_url_options</span><span class="p">(</span><span class="n">source_url</span><span class="p">,</span>  <span class="c1"># type: str</span>
+                                       <span class="n">range_start</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                                       <span class="n">range_end</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                                       <span class="n">source_range_start</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                                       <span class="o">**</span><span class="n">kwargs</span>
+                                       <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Any]</span>
+
+        <span class="k">if</span> <span class="n">range_start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">range_end</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">source_range_start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;start_range must be specified&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Format range</span>
+        <span class="n">destination_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">range_start</span><span class="p">,</span> <span class="n">range_end</span><span class="p">)</span>
+        <span class="n">source_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source_range_start</span><span class="p">,</span> <span class="n">source_range_start</span> <span class="o">+</span> <span class="p">(</span><span class="n">range_end</span> <span class="o">-</span> <span class="n">range_start</span><span class="p">))</span>
+
+        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;copy_source&#39;</span><span class="p">:</span> <span class="n">source_url</span><span class="p">,</span>
+            <span class="s1">&#39;content_length&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;source_range&#39;</span><span class="p">:</span> <span class="n">source_range</span><span class="p">,</span>
+            <span class="s1">&#39;range&#39;</span><span class="p">:</span> <span class="n">destination_range</span><span class="p">,</span>
+            <span class="s1">&#39;timeout&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;timeout&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s1">&#39;cls&#39;</span><span class="p">:</span> <span class="n">return_response_headers</span><span class="p">}</span>
+        <span class="n">options</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">options</span>
+
+<div class="viewcode-block" id="FileClient.upload_range_from_url"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.upload_range_from_url">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">upload_range_from_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source_url</span><span class="p">,</span>  <span class="c1"># type: str</span>
+                              <span class="n">range_start</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                              <span class="n">range_end</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                              <span class="n">source_range_start</span><span class="p">,</span>  <span class="c1"># type: int</span>
+                              <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+                              <span class="p">):</span>
+        <span class="c1"># type: (str, int, int, int, **Any) -&gt; Dict[str, Any]</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Writes the bytes from one Azure File endpoint into the specified range of another Azure File endpoint.</span>
+
+<span class="sd">        :param int range_start:</span>
+<span class="sd">            Start of byte range to use for updating a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int range_end:</span>
+<span class="sd">            End of byte range to use for updating a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param str source_url:</span>
+<span class="sd">            A URL of up to 2 KB in length that specifies an Azure file or blob.</span>
+<span class="sd">            The value should be URL-encoded as it would appear in a request URI.</span>
+<span class="sd">            If the source is in another account, the source must either be public</span>
+<span class="sd">            or must be authenticated via a shared access signature. If the source</span>
+<span class="sd">            is public, no authentication is required.</span>
+<span class="sd">            Examples:</span>
+<span class="sd">            https://myaccount.file.core.windows.net/myshare/mydir/myfile</span>
+<span class="sd">            https://otheraccount.file.core.windows.net/myshare/mydir/myfile?sastoken</span>
+<span class="sd">        :param int source_range_start:</span>
+<span class="sd">            Start of byte range to use for updating a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="n">options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_upload_range_from_url_options</span><span class="p">(</span>
+            <span class="n">source_url</span><span class="o">=</span><span class="n">source_url</span><span class="p">,</span>
+            <span class="n">range_start</span><span class="o">=</span><span class="n">range_start</span><span class="p">,</span>
+            <span class="n">range_end</span><span class="o">=</span><span class="n">range_end</span><span class="p">,</span>
+            <span class="n">source_range_start</span><span class="o">=</span><span class="n">source_range_start</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">upload_range_from_url</span><span class="p">(</span><span class="o">**</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.get_ranges"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.get_ranges">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">get_ranges</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">start_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="n">end_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; List[dict[str, int]]</span>
+        <span class="sd">&quot;&quot;&quot;Returns the list of valid ranges of a file.</span>
+
+<span class="sd">        :param int start_range:</span>
+<span class="sd">            Specifies the start offset of bytes over which to get ranges.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int end_range:</span>
+<span class="sd">            Specifies the end offset of bytes over which to get ranges.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: A list of valid ranges.</span>
+<span class="sd">        :rtype: List[dict[str, int]]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported method for encryption.&quot;</span><span class="p">)</span>
+
+        <span class="n">content_range</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">start_range</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">end_range</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">content_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_range</span><span class="p">,</span> <span class="n">end_range</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">content_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_range</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ranges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">get_range_list</span><span class="p">(</span>
+                <span class="n">sharesnapshot</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="nb">range</span><span class="o">=</span><span class="n">content_range</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">b</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">b</span><span class="o">.</span><span class="n">end</span><span class="p">}</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="FileClient.clear_range"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.clear_range">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">clear_range</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">start_range</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">end_range</span><span class="p">,</span>  <span class="c1"># type: int</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Clears the specified range and releases the space used in storage for</span>
+<span class="sd">        that range.</span>
+
+<span class="sd">        :param int start_range:</span>
+<span class="sd">            Start of byte range to use for clearing a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int end_range:</span>
+<span class="sd">            End of byte range to use for clearing a section of the file.</span>
+<span class="sd">            The range can be up to 4 MB in size.</span>
+<span class="sd">            The start_range and end_range params are inclusive.</span>
+<span class="sd">            Ex: start_range=0, end_range=511 will download first 512 bytes of file.</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: Dict[str, Any]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">require_encryption</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_encryption_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported method for encryption.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">start_range</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">start_range</span> <span class="o">%</span> <span class="mi">512</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;start_range must be an integer that aligns with 512 file size&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">end_range</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">end_range</span> <span class="o">%</span> <span class="mi">512</span> <span class="o">!=</span> <span class="mi">511</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;end_range must be an integer that aligns with 512 file size&quot;</span><span class="p">)</span>
+        <span class="n">content_range</span> <span class="o">=</span> <span class="s1">&#39;bytes=</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_range</span><span class="p">,</span> <span class="n">end_range</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">upload_range</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="n">content_length</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">file_range_write</span><span class="o">=</span><span class="s2">&quot;clear&quot;</span><span class="p">,</span>
+                <span class="nb">range</span><span class="o">=</span><span class="n">content_range</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.resize_file"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.resize_file">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">resize_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># type: ignore</span>
+        <span class="c1"># type: (int, Optional[int], Optional[Any]) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;Resizes a file to the specified size.</span>
+
+<span class="sd">        :param int size:</span>
+<span class="sd">            Size to resize file to (in bytes)</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: File-updated property dict (Etag and last modified).</span>
+<span class="sd">        :rtype: Dict[str, Any]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">set_http_headers</span><span class="p">(</span> <span class="c1"># type: ignore</span>
+                <span class="n">file_content_length</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+                <span class="n">file_attributes</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>
+                <span class="n">file_creation_time</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>
+                <span class="n">file_last_write_time</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>
+                <span class="n">file_permission</span><span class="o">=</span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.list_handles"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.list_handles">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">list_handles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (int, Any) -&gt; ItemPaged[Handle]</span>
+        <span class="sd">&quot;&quot;&quot;Lists handles for file.</span>
+
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: An auto-paging iterable of HandleItems</span>
+<span class="sd">        :rtype: ~azure.core.paging.ItemPaged[~azure.storage.file.models.Handle]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">results_per_page</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;results_per_page&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">list_handles</span><span class="p">,</span>
+            <span class="n">sharesnapshot</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ItemPaged</span><span class="p">(</span>
+            <span class="n">command</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="n">results_per_page</span><span class="p">,</span>
+            <span class="n">page_iterator_class</span><span class="o">=</span><span class="n">HandlesPaged</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileClient.close_handles"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.file_client.FileClient.close_handles">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">close_handles</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">handle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Union[str, HandleItem]</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># type: Optional[int]</span>
+            <span class="o">**</span><span class="n">kwargs</span> <span class="c1"># type: Any</span>
+        <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;Close open file handles.</span>
+
+<span class="sd">        This operation may not finish with a single call, so a long-running poller</span>
+<span class="sd">        is returned that can be used to wait until the operation is complete.</span>
+
+<span class="sd">        :param handle:</span>
+<span class="sd">            Optionally, a specific handle to close. The default value is &#39;*&#39;</span>
+<span class="sd">            which will attempt to close all open handles.</span>
+<span class="sd">        :type handle: str or ~azure.storage.file.models.Handle</span>
+<span class="sd">        :param int timeout:</span>
+<span class="sd">            The timeout parameter is expressed in seconds.</span>
+<span class="sd">        :returns: A long-running poller to get operation status.</span>
+<span class="sd">        :rtype: ~azure.core.polling.LROPoller</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">handle_id</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">id</span> <span class="c1"># type: ignore</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">handle_id</span> <span class="o">=</span> <span class="n">handle</span> <span class="ow">or</span> <span class="s1">&#39;*&#39;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">force_close_handles</span><span class="p">,</span>
+            <span class="n">handle_id</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+            <span class="n">sharesnapshot</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span><span class="p">,</span>
+            <span class="bp">cls</span><span class="o">=</span><span class="n">return_response_headers</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">start_close</span> <span class="o">=</span> <span class="n">command</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+        <span class="n">polling_method</span> <span class="o">=</span> <span class="n">CloseHandles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">copy_polling_interval</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span>
+            <span class="n">command</span><span class="p">,</span>
+            <span class="n">start_close</span><span class="p">,</span>
+            <span class="kc">None</span><span class="p">,</span>
+            <span class="n">polling_method</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

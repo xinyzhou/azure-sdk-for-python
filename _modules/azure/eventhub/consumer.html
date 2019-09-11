@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventhub.consumer &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.eventhub.consumer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.eventhub.consumer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for license information.</span>
+<span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
+
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">types</span><span class="p">,</span> <span class="n">errors</span>  <span class="c1"># type: ignore</span>
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">ReceiveClient</span><span class="p">,</span> <span class="n">Source</span>  <span class="c1"># type: ignore</span>
+
+<span class="kn">from</span> <span class="nn">azure.eventhub.common</span> <span class="k">import</span> <span class="n">EventData</span><span class="p">,</span> <span class="n">EventPosition</span>
+<span class="kn">from</span> <span class="nn">azure.eventhub.error</span> <span class="k">import</span> <span class="n">_error_handler</span>
+<span class="kn">from</span> <span class="nn">._consumer_producer_mixin</span> <span class="k">import</span> <span class="n">ConsumerProducerMixin</span>
+
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="EventHubConsumer"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.consumer.EventHubConsumer">[docs]</a><span class="k">class</span> <span class="nc">EventHubConsumer</span><span class="p">(</span><span class="n">ConsumerProducerMixin</span><span class="p">):</span>  <span class="c1"># pylint:disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A consumer responsible for reading EventData from a specific Event Hub</span>
+<span class="sd">    partition and as a member of a specific consumer group.</span>
+
+<span class="sd">    A consumer may be exclusive, which asserts ownership over the partition for the consumer</span>
+<span class="sd">    group to ensure that only one consumer from that group is reading the from the partition.</span>
+<span class="sd">    These exclusive consumers are sometimes referred to as &quot;Epoch Consumers.&quot;</span>
+
+<span class="sd">    A consumer may also be non-exclusive, allowing multiple consumers from the same consumer</span>
+<span class="sd">    group to be actively reading events from the partition.  These non-exclusive consumers are</span>
+<span class="sd">    sometimes referred to as &quot;Non-Epoch Consumers.&quot;</span>
+
+<span class="sd">    Please use the method `create_consumer` on `EventHubClient` for creating `EventHubConsumer`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_timeout</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">_epoch_symbol</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;com.microsoft:epoch&#39;</span>
+    <span class="n">_timeout_symbol</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;com.microsoft:timeout&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate a consumer. EventHubConsumer should be instantiated by calling the `create_consumer` method</span>
+<span class="sd">        in EventHubClient.</span>
+
+<span class="sd">        :param client: The parent EventHubClient.</span>
+<span class="sd">        :type client: ~azure.eventhub.client.EventHubClient</span>
+<span class="sd">        :param source: The source EventHub from which to receive events.</span>
+<span class="sd">        :type source: str</span>
+<span class="sd">        :param prefetch: The number of events to prefetch from the service</span>
+<span class="sd">         for processing. Default is 300.</span>
+<span class="sd">        :type prefetch: int</span>
+<span class="sd">        :param owner_level: The priority of the exclusive consumer. An exclusive</span>
+<span class="sd">         consumer will be created if owner_level is set.</span>
+<span class="sd">        :type owner_level: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">event_position</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;event_position&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">prefetch</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;prefetch&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+        <span class="n">owner_level</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;owner_level&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">keep_alive</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;keep_alive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">auto_reconnect</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;auto_reconnect&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">EventHubConsumer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="n">source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">event_position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_prefetch</span> <span class="o">=</span> <span class="n">prefetch</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_owner_level</span> <span class="o">=</span> <span class="n">owner_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keep_alive</span> <span class="o">=</span> <span class="n">keep_alive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_reconnect</span> <span class="o">=</span> <span class="n">auto_reconnect</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_retry_policy</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">ErrorPolicy</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span> <span class="n">on_error</span><span class="o">=</span><span class="n">_error_handler</span><span class="p">)</span>    <span class="c1"># pylint:disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reconnect_backoff</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_link_properties</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_error</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">partition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_partition</span> <span class="o">=</span> <span class="n">partition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="s2">&quot;EHConsumer-</span><span class="si">{}</span><span class="s2">-partition</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">(),</span> <span class="n">partition</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">owner_level</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_link_properties</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_epoch_symbol</span><span class="p">)]</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">owner_level</span><span class="p">))</span>
+        <span class="n">link_property_timeout_ms</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">receive_timeout</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_link_properties</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_timeout_symbol</span><span class="p">)]</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">link_property_timeout_ms</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">retried_times</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">last_exception</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">while</span> <span class="n">retried_times</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">max_retries</span><span class="p">:</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">()</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">receive_messages_iter</span><span class="p">()</span>
+                <span class="n">message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span><span class="p">)</span>
+                <span class="n">event_data</span> <span class="o">=</span> <span class="n">EventData</span><span class="o">.</span><span class="n">_from_message</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>  <span class="c1"># pylint:disable=protected-access</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">EventPosition</span><span class="p">(</span><span class="n">event_data</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">retried_times</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">return</span> <span class="n">event_data</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>  <span class="c1"># pylint:disable=broad-except</span>
+                <span class="n">last_exception</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_exception</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_try_delay</span><span class="p">(</span><span class="n">retried_times</span><span class="o">=</span><span class="n">retried_times</span><span class="p">,</span> <span class="n">last_exception</span><span class="o">=</span><span class="n">last_exception</span><span class="p">,</span>  <span class="c1"># pylint:disable=protected-access</span>
+                                        <span class="n">entity_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span>
+                <span class="n">retried_times</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> operation has exhausted retry. Last exception: </span><span class="si">%r</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">last_exception</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">last_exception</span>
+
+    <span class="k">def</span> <span class="nf">_create_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">alt_creds</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_auth_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;iot_username&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_auth_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;iot_password&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span> <span class="k">else</span> <span class="kc">None</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="p">}</span>
+
+        <span class="n">source</span> <span class="o">=</span> <span class="n">Source</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">source</span><span class="o">.</span><span class="n">set_filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="o">.</span><span class="n">_selector</span><span class="p">())</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span> <span class="o">=</span> <span class="n">ReceiveClient</span><span class="p">(</span>
+            <span class="n">source</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_get_auth</span><span class="p">(</span><span class="o">**</span><span class="n">alt_creds</span><span class="p">),</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">network_tracing</span><span class="p">,</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="n">prefetch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_prefetch</span><span class="p">,</span>
+            <span class="n">link_properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_link_properties</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span><span class="p">,</span>
+            <span class="n">error_policy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_retry_policy</span><span class="p">,</span>
+            <span class="n">keep_alive_interval</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_keep_alive</span><span class="p">,</span>
+            <span class="n">client_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_create_properties</span><span class="p">(</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">user_agent</span><span class="p">))</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_redirect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redirect</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EventHubConsumer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_redirect</span><span class="p">(</span><span class="n">redirect</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Open the EventHubConsumer using the supplied connection.</span>
+<span class="sd">        If the handler has previously been redirected, the redirect</span>
+<span class="sd">        context will be used to create a new handler before opening it.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_iothub_redirect_info</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_process_redirect_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_redirected</span><span class="o">.</span><span class="n">address</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EventHubConsumer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_open</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_open_with_retry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_do_retryable_operation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">,</span> <span class="n">operation_need_param</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">last_exception</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;last_exception&quot;</span><span class="p">)</span>
+        <span class="n">data_batch</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">()</span>
+        <span class="n">remaining_time</span> <span class="o">=</span> <span class="n">timeout_time</span> <span class="o">-</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">remaining_time</span> <span class="o">&lt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">last_exception</span><span class="p">:</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> receive operation timed out. (</span><span class="si">%r</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">last_exception</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="n">last_exception</span>
+            <span class="k">return</span> <span class="n">data_batch</span>
+        <span class="n">remaining_time_ms</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">remaining_time</span>
+        <span class="n">message_batch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">receive_message_batch</span><span class="p">(</span>
+            <span class="n">max_batch_size</span><span class="o">=</span><span class="n">max_batch_size</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">remaining_time_ms</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">message_batch</span><span class="p">:</span>
+            <span class="n">event_data</span> <span class="o">=</span> <span class="n">EventData</span><span class="o">.</span><span class="n">_from_message</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>  <span class="c1"># pylint:disable=protected-access</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">EventPosition</span><span class="p">(</span><span class="n">event_data</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>
+            <span class="n">data_batch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data_batch</span>
+
+    <span class="k">def</span> <span class="nf">_receive_with_retry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_do_retryable_operation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_receive</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                                            <span class="n">max_batch_size</span><span class="o">=</span><span class="n">max_batch_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">queue_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type:() -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The current size of the unprocessed Event queue.</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_received_messages</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_received_messages</span><span class="o">.</span><span class="n">qsize</span><span class="p">()</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="EventHubConsumer.receive"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.consumer.EventHubConsumer.receive">[docs]</a>    <span class="k">def</span> <span class="nf">receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, float) -&gt; List[EventData]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Receive events from the EventHub.</span>
+
+<span class="sd">        :param max_batch_size: Receive a batch of events. Batch size will</span>
+<span class="sd">         be up to the maximum specified, but will return as soon as service</span>
+<span class="sd">         returns no new events. If combined with a timeout and no events are</span>
+<span class="sd">         retrieve before the time, the result will be empty. If no batch</span>
+<span class="sd">         size is supplied, the prefetch size will be the maximum.</span>
+<span class="sd">        :type max_batch_size: int</span>
+<span class="sd">        :param timeout: The maximum wait time to build up the requested message count for the batch.</span>
+<span class="sd">         If not specified, the default wait time specified when the consumer was created will be used.</span>
+<span class="sd">        :type timeout: float</span>
+<span class="sd">        :rtype: list[~azure.eventhub.common.EventData]</span>
+<span class="sd">        :raises: ~azure.eventhub.AuthenticationError, ~azure.eventhub.ConnectError, ~azure.eventhub.ConnectionLostError,</span>
+<span class="sd">                ~azure.eventhub.EventHubError</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples_eventhub.py</span>
+<span class="sd">                :start-after: [START eventhub_client_sync_receive]</span>
+<span class="sd">                :end-before: [END eventhub_client_sync_receive]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Receive events from the EventHub.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_closed</span><span class="p">()</span>
+
+        <span class="n">timeout</span> <span class="o">=</span> <span class="n">timeout</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">receive_timeout</span>  <span class="c1"># pylint:disable=protected-access</span>
+        <span class="n">max_batch_size</span> <span class="o">=</span> <span class="n">max_batch_size</span> <span class="ow">or</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">max_batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prefetch</span><span class="p">)</span>  <span class="c1"># pylint:disable=protected-access</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receive_with_retry</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">max_batch_size</span><span class="o">=</span><span class="n">max_batch_size</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EventHubConsumer.close"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.consumer.EventHubConsumer.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type:(Exception) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Close down the handler. If the handler has already closed,</span>
+<span class="sd">        this will be a no op. An optional exception can be passed in to</span>
+<span class="sd">        indicate that the handler was shutdown due to error.</span>
+
+<span class="sd">        :param exception: An optional exception if the handler is closing</span>
+<span class="sd">         due to an error.</span>
+<span class="sd">        :type exception: Exception</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples_eventhub.py</span>
+<span class="sd">                :start-after: [START eventhub_client_receiver_close]</span>
+<span class="sd">                :end-before: [END eventhub_client_receiver_close]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Close down the handler.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_messages_iter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EventHubConsumer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span></div>
+
+    <span class="nb">next</span> <span class="o">=</span> <span class="fm">__next__</span>  <span class="c1"># for python2.7</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1034 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.receive_handler &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.servicebus.receive_handler</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.servicebus.receive_handler</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">import</span> <span class="nn">six</span>
+
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">ReceiveClient</span>
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">authentication</span>
+<span class="kn">from</span> <span class="nn">uamqp</span> <span class="k">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.message</span> <span class="k">import</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common</span> <span class="k">import</span> <span class="n">mgmt_handlers</span><span class="p">,</span> <span class="n">mixins</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.base_handler</span> <span class="k">import</span> <span class="n">BaseHandler</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.errors</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">InvalidHandlerState</span><span class="p">,</span>
+    <span class="n">NoActiveSession</span><span class="p">,</span>
+    <span class="n">SessionLockExpired</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">azure.servicebus.common.constants</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">SESSION_LOCK_LOST</span><span class="p">,</span>
+    <span class="n">SESSION_LOCK_TIMEOUT</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_RENEWLOCK_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_GET_SESSION_STATE_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_SET_SESSION_STATE_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_RENEW_SESSION_LOCK_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_GET_MESSAGE_SESSIONS_OPERATION</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
+    <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
+    <span class="n">ReceiveSettleMode</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Receiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver">[docs]</a><span class="k">class</span> <span class="nc">Receiver</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;A message receiver.</span>
+
+<span class="sd">    This receive handler acts as an iterable message stream for retrieving</span>
+<span class="sd">    messages for a Service Bus entity. It operates a single connection that must be opened and</span>
+<span class="sd">    closed on completion. The service connection will remain open for the entirety of the iterator.</span>
+<span class="sd">    If you find yourself only partially iterating the message stream, you should run the receiver</span>
+<span class="sd">    in a `with` statement to ensure the connection is closed.</span>
+<span class="sd">    The Receiver should not be instantiated directly, and should be accessed from a `QueueClient` or</span>
+<span class="sd">    `SubscriptionClient` using the `get_receiver()` method.</span>
+
+<span class="sd">    .. note:: This object is not thread-safe.</span>
+
+<span class="sd">    :param handler_id: The ID used as the connection name for the Receiver.</span>
+<span class="sd">    :type handler_id: str</span>
+<span class="sd">    :param source: The endpoint from which to receive messages.</span>
+<span class="sd">    :type source: ~uamqp.Source</span>
+<span class="sd">    :param auth_config: The SASL auth credentials.</span>
+<span class="sd">    :type auth_config: dict[str, str]</span>
+<span class="sd">    :param connection: A shared connection [not yet supported].</span>
+<span class="sd">    :type connection: ~uamqp.Connection</span>
+<span class="sd">    :param mode: The receive connection mode. Value must be either PeekLock or ReceiveAndDelete.</span>
+<span class="sd">    :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">    :param encoding: The encoding used for string properties. Default is &#39;UTF-8&#39;.</span>
+<span class="sd">    :type encoding: str</span>
+<span class="sd">    :param debug: Whether to enable network trace debug logs.</span>
+<span class="sd">    :type debug: bool</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START get_receiver]</span>
+<span class="sd">            :end-before: [END get_receiver]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Get the receiver client from Service Bus client</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">handler_id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">auth_config</span><span class="p">,</span> <span class="n">connection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_used</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;SBReceiver-</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">handler_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_received</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_iter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Receiver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">source</span><span class="p">,</span> <span class="n">auth_config</span><span class="p">,</span> <span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">receiver_shutdown</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">raise</span> <span class="ne">StopIteration</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">received</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_iter</span><span class="p">)</span>
+                <span class="n">wrapped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_message</span><span class="p">(</span><span class="n">received</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">wrapped</span>
+            <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="k">raise</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">auth</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="k">else</span> <span class="n">authentication</span><span class="o">.</span><span class="n">SASTokenAuth</span><span class="o">.</span><span class="n">from_shared_access_key</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span> <span class="o">=</span> <span class="n">ReceiveClient</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span>
+            <span class="n">error_policy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">error_policy</span><span class="p">,</span>
+            <span class="n">client_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">auto_complete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+            <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">handler_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">received</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">received</span><span class="p">)</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_received</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">sequence_number</span>
+        <span class="k">return</span> <span class="n">message</span>
+
+    <span class="k">def</span> <span class="nf">_can_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_used</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="n">InvalidHandlerState</span><span class="p">(</span><span class="s2">&quot;Receiver has already closed.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">receiver_shutdown</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="n">InvalidHandlerState</span><span class="p">(</span><span class="s2">&quot;Receiver has already closed.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_renew_locks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">lock_tokens</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;lock-tokens&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">(</span><span class="n">lock_tokens</span><span class="p">)}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_RENEWLOCK_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">lock_renew_op</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_settle_deferred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settlement</span><span class="p">,</span> <span class="n">lock_tokens</span><span class="p">,</span> <span class="n">dead_letter_details</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;disposition-status&#39;</span><span class="p">:</span> <span class="n">settlement</span><span class="p">,</span>
+            <span class="s1">&#39;lock-tokens&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">(</span><span class="n">lock_tokens</span><span class="p">)}</span>
+        <span class="k">if</span> <span class="n">dead_letter_details</span><span class="p">:</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dead_letter_details</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_receiver</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This is a temporary patch pending a fix in uAMQP.&quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">message_handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">receiver_type</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_session</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_remote_address</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span>
+            <span class="n">on_message_received</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_message_received</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;receiver-link-</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_debug_trace</span><span class="p">,</span>
+            <span class="n">prefetch</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_prefetch</span><span class="p">,</span>
+            <span class="n">max_message_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_max_message_size</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_link_properties</span><span class="p">,</span>
+            <span class="n">error_policy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_error_policy</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">!=</span> <span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">message_handler</span><span class="o">.</span><span class="n">send_settle_mode</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">SenderSettleMode</span><span class="o">.</span><span class="n">Settled</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">message_handler</span><span class="o">.</span><span class="n">receive_settle_mode</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ReceiverSettleMode</span><span class="o">.</span><span class="n">ReceiveAndDelete</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">message_handler</span><span class="o">.</span><span class="n">_settle_mode</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ReceiverSettleMode</span><span class="o">.</span><span class="n">ReceiveAndDelete</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">message_handler</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Receiver.next"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">receiver_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_shutdown</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="nd">@receiver_shutdown</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">receiver_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_shutdown</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Receiver has no AMQP handler&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">queue_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The current size of the unprocessed message queue.</span>
+
+<span class="sd">        :rtype: int</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START queue_size]</span>
+<span class="sd">                :end-before: [END queue_size]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the number of unprocessed messages in the queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_received_messages</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_received_messages</span><span class="o">.</span><span class="n">qsize</span><span class="p">()</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="Receiver.peek"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_from</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Browse messages currently pending in the queue.</span>
+
+<span class="sd">        Peeked messages are not removed from queue, nor are they locked. They cannot be completed,</span>
+<span class="sd">        deferred or dead-lettered.</span>
+
+<span class="sd">        :param count: The maximum number of messages to try and peek. The default</span>
+<span class="sd">         value is 1.</span>
+<span class="sd">        :type count: int</span>
+<span class="sd">        :param start_from: A message sequence number from which to start browsing messages.</span>
+<span class="sd">        :type start_from: int</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.PeekMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START peek_messages]</span>
+<span class="sd">                :end-before: [END peek_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Look at pending messages in the queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">start_from</span><span class="p">:</span>
+            <span class="n">start_from</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_received</span> <span class="ow">or</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;count must be 1 or greater.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">start_from</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;start_from must be 1 or greater.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;from-sequence-number&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">start_from</span><span class="p">),</span>
+            <span class="s1">&#39;message-count&#39;</span><span class="p">:</span> <span class="n">count</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">peek_op</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Receiver.receive_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.receive_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">receive_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_numbers</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Receive messages that have previously been deferred.</span>
+
+<span class="sd">        When receiving deferred messages from a partitioned entity, all of the supplied</span>
+<span class="sd">        sequence numbers must be messages from the same partition.</span>
+
+<span class="sd">        :param sequence_numbers: A list of the sequence numbers of messages that have been</span>
+<span class="sd">         deferred.</span>
+<span class="sd">        :type sequence_numbers: list[int]</span>
+<span class="sd">        :param mode: The receive mode, default value is PeekLock.</span>
+<span class="sd">        :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.DeferredMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START receive_deferred_messages]</span>
+<span class="sd">                :end-before: [END receive_deferred_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 8</span>
+<span class="sd">                :caption: Get the messages which were previously deferred</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sequence_numbers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;At least one sequence number must be specified.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sequence-numbers&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">([</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sequence_numbers</span><span class="p">]),</span>
+            <span class="s1">&#39;receiver-settle-mode&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPuInt</span><span class="p">(</span><span class="n">receive_mode</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">deferred_message_op</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">receive_mode</span><span class="p">)</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">handler</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="n">messages</span></div>
+
+<div class="viewcode-block" id="Receiver.open"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.open">[docs]</a>    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Open receiver connection and authenticate session.</span>
+
+<span class="sd">        If the receiver is already open, this operation will do nothing.</span>
+<span class="sd">        This method will be called automatically when one starts to iterate</span>
+<span class="sd">        messages in the receiver, so there should be no need to call it directly.</span>
+<span class="sd">        A receiver opened with this method must be explicitly closed.</span>
+<span class="sd">        It is recommended to open a handler within a context manager as</span>
+<span class="sd">        opposed to calling the method directly.</span>
+
+<span class="sd">        .. note:: This operation is not thread-safe.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">connection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_iter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">receive_messages_iter</span><span class="p">()</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">auth_complete</span><span class="p">():</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_build_receiver</span><span class="p">()</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">client_ready</span><span class="p">():</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">raise</span></div>
+
+<div class="viewcode-block" id="Receiver.close"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Close down the receiver connection.</span>
+
+<span class="sd">        If the receiver has already closed, this operation will do nothing. An optional exception can be passed in to</span>
+<span class="sd">        indicate that the handler was shutdown due to error.</span>
+<span class="sd">        It is recommended to open a handler within a context manager as</span>
+<span class="sd">        opposed to calling the method directly.</span>
+<span class="sd">        The receiver will be implicitly closed on completion of the message iterator,</span>
+<span class="sd">        however this method will need to be called explicitly if the message iterator is not run</span>
+<span class="sd">        to completion.</span>
+
+<span class="sd">        .. note:: This operation is not thread-safe.</span>
+
+<span class="sd">        :param exception: An optional exception if the handler is closing</span>
+<span class="sd">         due to an error.</span>
+<span class="sd">        :type exception: Exception</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START open_close_receiver_connection]</span>
+<span class="sd">                :end-before: [END open_close_receiver_connection]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Close the connection and shutdown the receiver</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">receiver_shutdown</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_used</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Receiver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="n">exception</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Receiver.fetch_next"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.Receiver.fetch_next">[docs]</a>    <span class="k">def</span> <span class="nf">fetch_next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Receive a batch of messages at once.</span>
+
+<span class="sd">        This approach it optimal if you wish to process multiple messages simultaneously. Note that the</span>
+<span class="sd">        number of messages retrieved in a single batch will be dependent on</span>
+<span class="sd">        whether `prefetch` was set for the receiver. This call will prioritize returning</span>
+<span class="sd">        quickly over meeting a specified batch size, and so will return as soon as at least</span>
+<span class="sd">        one message is received and there is a gap in incoming messages regardless</span>
+<span class="sd">        of the specified batch size.</span>
+
+<span class="sd">        :param max_batch_size: Maximum number of messages in the batch. Actual number</span>
+<span class="sd">         returned will depend on prefetch size and incoming stream rate.</span>
+<span class="sd">        :type max_batch_size: int</span>
+<span class="sd">        :param timeout: The time to wait in seconds for the first message to arrive.</span>
+<span class="sd">         If no messages arrive, and no timeout is specified, this call will not return</span>
+<span class="sd">         until the connection is closed. If specified, an no messages arrive within the</span>
+<span class="sd">         timeout period, an empty list will be returned.</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.Message]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START fetch_next_messages]</span>
+<span class="sd">                :end-before: [END fetch_next_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the messages in batch from the receiver</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">wrapped_batch</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">max_batch_size</span> <span class="o">=</span> <span class="n">max_batch_size</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">_prefetch</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">timeout_ms</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">timeout</span> <span class="k">if</span> <span class="n">timeout</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">batch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span><span class="o">.</span><span class="n">receive_message_batch</span><span class="p">(</span>
+                <span class="n">max_batch_size</span><span class="o">=</span><span class="n">max_batch_size</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">received</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">:</span>
+                <span class="n">message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_message</span><span class="p">(</span><span class="n">received</span><span class="p">)</span>
+                <span class="n">wrapped_batch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handle_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">wrapped_batch</span></div></div>
+
+
+<div class="viewcode-block" id="SessionReceiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver">[docs]</a><span class="k">class</span> <span class="nc">SessionReceiver</span><span class="p">(</span><span class="n">Receiver</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">SessionMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A session message receiver.</span>
+
+<span class="sd">    This receive handler acts as an iterable message stream for retrieving</span>
+<span class="sd">    messages for a sessionful Service Bus entity. It operates a single connection that must be opened and</span>
+<span class="sd">    closed on completion. The service connection will remain open for the entirety of the iterator.</span>
+<span class="sd">    If you find yourself only partially iterating the message stream, you should run the receiver</span>
+<span class="sd">    in a `with` statement to ensure the connection is closed.</span>
+<span class="sd">    The Receiver should not be instantiated directly, and should be accessed from a `QueueClient` or</span>
+<span class="sd">    `SubscriptionClient` using the `get_receiver()` method.</span>
+<span class="sd">    When receiving messages from a session, connection errors that would normally be automatically</span>
+<span class="sd">    retried will instead raise an error due to the loss of the lock on a particular session.</span>
+<span class="sd">    A specific session can be specified, or the receiver can retrieve any available session using</span>
+<span class="sd">    the `NEXT_AVAILABLE` constant.</span>
+
+<span class="sd">    .. note:: This object is not thread-safe.</span>
+
+<span class="sd">    :param handler_id: The ID used as the connection name for the Receiver.</span>
+<span class="sd">    :type handler_id: str</span>
+<span class="sd">    :param source: The endpoint from which to receive messages.</span>
+<span class="sd">    :type source: ~uamqp.Source</span>
+<span class="sd">    :param auth_config: The SASL auth credentials.</span>
+<span class="sd">    :type auth_config: dict[str, str]</span>
+<span class="sd">    :param session: The ID of the session to receive from.</span>
+<span class="sd">    :type session: str or ~azure.servicebus.common.constants.NEXT_AVAILABLE</span>
+<span class="sd">    :param loop: An async event loop</span>
+<span class="sd">    :type loop: ~asyncio.EventLoop</span>
+<span class="sd">    :param connection: A shared connection [not yet supported].</span>
+<span class="sd">    :type connection: ~uamqp.Connection</span>
+<span class="sd">    :param mode: The receive connection mode. Value must be either PeekLock or ReceiveAndDelete.</span>
+<span class="sd">    :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">    :param encoding: The encoding used for string properties. Default is &#39;UTF-8&#39;.</span>
+<span class="sd">    :type encoding: str</span>
+<span class="sd">    :param debug: Whether to enable network trace debug logs.</span>
+<span class="sd">    :type debug: bool</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_session_receiver_client]</span>
+<span class="sd">            :end-before: [END create_session_receiver_client]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Running a session receiver within a context manager.</span>
+
+<span class="sd">        .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">            :start-after: [START create_receiver_session_nextavailable]</span>
+<span class="sd">            :end-before: [END create_receiver_session_nextavailable]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 4</span>
+<span class="sd">            :caption: Running a session receiver for the next available session.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">handler_id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">auth_config</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">connection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_filter</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_start</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_reconnect</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_renew_error</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SessionReceiver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">handler_id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">auth_config</span><span class="p">,</span>
+            <span class="n">connection</span><span class="o">=</span><span class="n">connection</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_build_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">auth</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="k">else</span> <span class="n">authentication</span><span class="o">.</span><span class="n">SASTokenAuth</span><span class="o">.</span><span class="n">from_shared_access_key</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">auth_config</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handler</span> <span class="o">=</span> <span class="n">ReceiveClient</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_source</span><span class="p">(),</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span>
+            <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span>
+            <span class="n">error_policy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">error_policy</span><span class="p">,</span>
+            <span class="n">client_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">on_attach</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_on_attach</span><span class="p">,</span>
+            <span class="n">auto_complete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+            <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">handler_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_can_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SessionReceiver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">expired</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SessionLockExpired</span><span class="p">(</span><span class="n">inner_exception</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">auto_renew_error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_exception</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="n">errors</span><span class="o">.</span><span class="n">LinkDetach</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exception</span><span class="o">.</span><span class="n">condition</span> <span class="o">==</span> <span class="n">SESSION_LOCK_LOST</span><span class="p">:</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">SessionLockExpired</span><span class="p">(</span><span class="s2">&quot;Connection detached - lock on Session </span><span class="si">{}</span><span class="s2"> lost.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">error</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="n">errors</span><span class="o">.</span><span class="n">LinkDetach</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exception</span><span class="o">.</span><span class="n">condition</span> <span class="o">==</span> <span class="n">SESSION_LOCK_TIMEOUT</span><span class="p">:</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">NoActiveSession</span><span class="p">(</span><span class="s2">&quot;Queue has no active session to receive from.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">error</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">SessionReceiver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_handle_exception</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_settle_deferred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settlement</span><span class="p">,</span> <span class="n">lock_tokens</span><span class="p">,</span> <span class="n">dead_letter_details</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;disposition-status&#39;</span><span class="p">:</span> <span class="n">settlement</span><span class="p">,</span>
+            <span class="s1">&#39;lock-tokens&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">(</span><span class="n">lock_tokens</span><span class="p">),</span>
+            <span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">dead_letter_details</span><span class="p">:</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dead_letter_details</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SessionReceiver.get_session_state"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.get_session_state">[docs]</a>    <span class="k">def</span> <span class="nf">get_session_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the session state.</span>
+
+<span class="sd">        Returns None if no state has been set.</span>
+
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START get_session_state]</span>
+<span class="sd">                :end-before: [END get_session_state]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the session state of the receiver</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_GET_SESSION_STATE_OPERATION</span><span class="p">,</span>
+            <span class="p">{</span><span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">},</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+        <span class="n">session_state</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;session-state&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">session_state</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">binary_type</span><span class="p">):</span>
+            <span class="n">session_state</span> <span class="o">=</span> <span class="n">session_state</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">session_state</span></div>
+
+<div class="viewcode-block" id="SessionReceiver.set_session_state"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.set_session_state">[docs]</a>    <span class="k">def</span> <span class="nf">set_session_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the session state.</span>
+
+<span class="sd">        :param state: The state value.</span>
+<span class="sd">        :type state: str, bytes or bytearray</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START set_session_state]</span>
+<span class="sd">                :end-before: [END set_session_state]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Set the session state of the receiver</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">)</span> <span class="k">else</span> <span class="n">state</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_SET_SESSION_STATE_OPERATION</span><span class="p">,</span>
+            <span class="p">{</span><span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">,</span> <span class="s1">&#39;session-state&#39;</span><span class="p">:</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">state</span><span class="p">)},</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SessionReceiver.renew_lock"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Renew the session lock.</span>
+
+<span class="sd">        This operation must be performed periodically in order to retain a lock on the</span>
+<span class="sd">        session to continue message processing.</span>
+<span class="sd">        Once the lock is lost the connection will be closed. This operation can</span>
+<span class="sd">        also be performed as a threaded background task by registering the session</span>
+<span class="sd">        with an `azure.servicebus.AutoLockRenew` instance.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START renew_lock]</span>
+<span class="sd">                :end-before: [END renew_lock]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Renew the session lock before it expires</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">expiry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_RENEW_SESSION_LOCK_OPERATION</span><span class="p">,</span>
+            <span class="p">{</span><span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">},</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locked_until</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">expiry</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;expiration&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">1000.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SessionReceiver.peek"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_from</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Browse messages currently pending in the queue.</span>
+
+<span class="sd">        Peeked messages are not removed from queue, nor are they locked. They cannot be completed,</span>
+<span class="sd">        deferred or dead-lettered.</span>
+<span class="sd">        This operation will only peek pending messages in the current session.</span>
+
+<span class="sd">        :param count: The maximum number of messages to try and peek. The default</span>
+<span class="sd">         value is 1.</span>
+<span class="sd">        :type count: int</span>
+<span class="sd">        :param start_from: A message sequence number from which to start browsing messages.</span>
+<span class="sd">        :type start_from: int</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.PeekMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START peek_messages]</span>
+<span class="sd">                :end-before: [END peek_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Look at pending messages in the queue</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">start_from</span><span class="p">:</span>
+            <span class="n">start_from</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_received</span> <span class="ow">or</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;count must be 1 or greater.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">start_from</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;start_from must be 1 or greater.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;from-sequence-number&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">start_from</span><span class="p">),</span>
+            <span class="s1">&#39;message-count&#39;</span><span class="p">:</span> <span class="n">count</span><span class="p">,</span>
+            <span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span><span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">peek_op</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SessionReceiver.receive_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.receive_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">receive_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_numbers</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Receive messages that have previously been deferred.</span>
+
+<span class="sd">        This operation can only receive deferred messages from the current session.</span>
+<span class="sd">        When receiving deferred messages from a partitioned entity, all of the supplied</span>
+<span class="sd">        sequence numbers must be messages from the same partition.</span>
+
+<span class="sd">        :param sequence_numbers: A list of the sequence numbers of messages that have been</span>
+<span class="sd">         deferred.</span>
+<span class="sd">        :type sequence_numbers: list[int]</span>
+<span class="sd">        :param mode: The receive mode, default value is PeekLock.</span>
+<span class="sd">        :type mode: ~azure.servicebus.common.constants.ReceiveSettleMode</span>
+<span class="sd">        :rtype: list[~azure.servicebus.common.message.DeferredMessage]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START receive_deferred_messages]</span>
+<span class="sd">                :end-before: [END receive_deferred_messages]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Get the messages which were previously deferred in the session</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sequence_numbers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;At least one sequence number must be specified.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">receive_mode</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sequence-numbers&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPArray</span><span class="p">([</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPLong</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sequence_numbers</span><span class="p">]),</span>
+            <span class="s1">&#39;receiver-settle-mode&#39;</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">AMQPuInt</span><span class="p">(</span><span class="n">receive_mode</span><span class="p">),</span>
+            <span class="s1">&#39;session-id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+        <span class="p">}</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">deferred_message_op</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">receive_mode</span><span class="p">)</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">handler</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">_receiver</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="n">messages</span></div>
+
+<div class="viewcode-block" id="SessionReceiver.list_sessions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.receive_handler.SessionReceiver.list_sessions">[docs]</a>    <span class="k">def</span> <span class="nf">list_sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_since</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List session IDs.</span>
+
+<span class="sd">        List the Session IDs with pending messages in the queue where the state of the session</span>
+<span class="sd">        has been updated since the timestamp provided. If no timestamp is provided, all will be returned.</span>
+<span class="sd">        If the state of a Session has never been set, it will not be returned regardless of whether</span>
+<span class="sd">        there are messages pending.</span>
+
+<span class="sd">        :param updated_since: The UTC datetime from which to return updated pending Session IDs.</span>
+<span class="sd">        :type updated_since: datetime.datetime</span>
+<span class="sd">        :param max_results: The maximum number of Session IDs to return. Default value is 100.</span>
+<span class="sd">        :type max_results: int</span>
+<span class="sd">        :param skip: The page value to jump to. Default value is 0.</span>
+<span class="sd">        :type skip: int</span>
+<span class="sd">        :rtype: list[str]</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples.py</span>
+<span class="sd">                :start-after: [START list_sessions]</span>
+<span class="sd">                :end-before: [END list_sessions]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: List the ids of sessions with pending messages</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_results</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;max_results must be 1 or greater.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_can_run</span><span class="p">()</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;last-updated-time&#39;</span><span class="p">:</span> <span class="n">updated_since</span> <span class="ow">or</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+            <span class="s1">&#39;skip&#39;</span><span class="p">:</span> <span class="n">skip</span><span class="p">,</span>
+            <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="n">max_results</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>
+            <span class="n">REQUEST_RESPONSE_GET_MESSAGE_SESSIONS_OPERATION</span><span class="p">,</span>
+            <span class="n">message</span><span class="p">,</span>
+            <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">list_sessions_op</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.loganalytics.operations module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.logic package" href="azure.mgmt.logic.html" />
+    <link rel="prev" title="azure.mgmt.loganalytics.models module" href="azure.mgmt.loganalytics.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.loganalytics.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.loganalytics.models.html">azure.mgmt.loganalytics.models module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.loganalytics.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.loganalytics.html#module-azure.mgmt.loganalytics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a> &raquo;</li>
+        
+      <li>azure.mgmt.loganalytics.operations module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.loganalytics.operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.loganalytics.operations">
+<span id="azure-mgmt-loganalytics-operations-module"></span><h1>azure.mgmt.loganalytics.operations module<a class="headerlink" href="#module-azure.mgmt.loganalytics.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">StorageInsightsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/storage_insights_operations.html#StorageInsightsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>StorageInsightsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2015-03-20”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">storage_insight_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/storage_insights_operations.html#StorageInsightsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update a storage insight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics Workspace name that will contain
+the storageInsightsConfigs resource</p></li>
+<li><p><strong>storage_insight_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the storageInsightsConfigs
+resource</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.StorageInsight" title="azure.mgmt.loganalytics.models.StorageInsight"><em>StorageInsight</em></a>) – The parameters required to create or update a
+storage insight.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>StorageInsight or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.StorageInsight" title="azure.mgmt.loganalytics.models.StorageInsight">StorageInsight</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">storage_insight_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/storage_insights_operations.html#StorageInsightsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a storageInsightsConfigs resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics Workspace name that contains the
+storageInsightsConfigs resource</p></li>
+<li><p><strong>storage_insight_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the storageInsightsConfigs
+resource</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">storage_insight_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/storage_insights_operations.html#StorageInsightsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a storage insight instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics Workspace name that contains the
+storageInsightsConfigs resource</p></li>
+<li><p><strong>storage_insight_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the storageInsightsConfigs
+resource</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>StorageInsight or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.StorageInsight" title="azure.mgmt.loganalytics.models.StorageInsight">StorageInsight</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations.list_by_workspace">
+<code class="sig-name descname">list_by_workspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/storage_insights_operations.html#StorageInsightsOperations.list_by_workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations.list_by_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the storage insight instances within a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics Workspace name that will contain
+the storageInsightsConfigs resource</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of StorageInsight</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.StorageInsightPaged" title="azure.mgmt.loganalytics.models.StorageInsightPaged">StorageInsightPaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.StorageInsight" title="azure.mgmt.loganalytics.models.StorageInsight">StorageInsight</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.StorageInsightsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.StorageInsightsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">WorkspacesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>WorkspacesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource group name of the workspace.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the workspace.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace"><em>Workspace</em></a>) – The parameters required to create or update a
+workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Workspace or
+ClientRawResponse&lt;Workspace&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a workspace instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource group name of the workspace.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.disable_intelligence_pack">
+<code class="sig-name descname">disable_intelligence_pack</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">intelligence_pack_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.disable_intelligence_pack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.disable_intelligence_pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables an intelligence pack for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>intelligence_pack_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the intelligence pack to be
+disabled.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.enable_intelligence_pack">
+<code class="sig-name descname">enable_intelligence_pack</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">intelligence_pack_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.enable_intelligence_pack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.enable_intelligence_pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables an intelligence pack for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>intelligence_pack_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the intelligence pack to be
+enabled.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a workspace instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource group name of the workspace.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Workspace or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.get_schema">
+<code class="sig-name descname">get_schema</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.get_schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the schema for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SearchGetSchemaResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchGetSchemaResponse" title="azure.mgmt.loganalytics.models.SearchGetSchemaResponse">SearchGetSchemaResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.get_search_results">
+<code class="sig-name descname">get_search_results</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.get_search_results"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.get_search_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit a search for a given workspace. The response will contain an id
+to track the search. User can use the id to poll the search status and
+get the full search result later if the search takes long time to
+finish. .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchParameters" title="azure.mgmt.loganalytics.models.SearchParameters"><em>SearchParameters</em></a>) – The parameters required to execute a search query.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SearchResultsResponse
+or ClientRawResponse&lt;SearchResultsResponse&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchResultsResponse" title="azure.mgmt.loganalytics.models.SearchResultsResponse">SearchResultsResponse</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchResultsResponse" title="azure.mgmt.loganalytics.models.SearchResultsResponse">SearchResultsResponse</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.get_shared_keys">
+<code class="sig-name descname">get_shared_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.get_shared_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.get_shared_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the shared keys for a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SharedKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SharedKeys" title="azure.mgmt.loganalytics.models.SharedKeys">SharedKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the workspaces in a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Workspace</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.WorkspacePaged" title="azure.mgmt.loganalytics.models.WorkspacePaged">WorkspacePaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list_by_resource_group">
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets workspaces in a resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Workspace</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.WorkspacePaged" title="azure.mgmt.loganalytics.models.WorkspacePaged">WorkspacePaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list_intelligence_packs">
+<code class="sig-name descname">list_intelligence_packs</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list_intelligence_packs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list_intelligence_packs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all the intelligence packs possible and whether they are enabled
+or disabled for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.IntelligencePack" title="azure.mgmt.loganalytics.models.IntelligencePack">IntelligencePack</a>] or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list_link_targets">
+<code class="sig-name descname">list_link_targets</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list_link_targets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list_link_targets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of workspaces which the current user has administrator
+privileges and are not associated with an Azure Subscription. The
+subscriptionId parameter in the Url is ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.LinkTarget" title="azure.mgmt.loganalytics.models.LinkTarget">LinkTarget</a>] or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list_management_groups">
+<code class="sig-name descname">list_management_groups</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list_management_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list_management_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of management groups connected to a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ManagementGroup</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.ManagementGroupPaged" title="azure.mgmt.loganalytics.models.ManagementGroupPaged">ManagementGroupPaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.ManagementGroup" title="azure.mgmt.loganalytics.models.ManagementGroup">ManagementGroup</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.list_usages">
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of usage metrics for a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of UsageMetric</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.UsageMetricPaged" title="azure.mgmt.loganalytics.models.UsageMetricPaged">UsageMetricPaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.UsageMetric" title="azure.mgmt.loganalytics.models.UsageMetric">UsageMetric</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.purge">
+<code class="sig-name descname">purge</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">table</em>, <em class="sig-param">filters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.purge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.purge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Purges data in an Log Analytics workspace by a set of user-defined
+filters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Table from which to purge data.</p></li>
+<li><p><strong>filters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.WorkspacePurgeBodyFilters" title="azure.mgmt.loganalytics.models.WorkspacePurgeBodyFilters"><em>WorkspacePurgeBodyFilters</em></a><em>]</em>) – The set of columns and filters (queries) to run over
+them to purge the resulting data.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns object or
+ClientRawResponse&lt;object&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)">object</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)">object</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource group name of the workspace.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the workspace.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace"><em>Workspace</em></a>) – The parameters required to patch a workspace.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Workspace or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Workspace" title="azure.mgmt.loganalytics.models.Workspace">Workspace</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.WorkspacesOperations.update_search_results">
+<code class="sig-name descname">update_search_results</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/workspaces_operations.html#WorkspacesOperations.update_search_results"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.WorkspacesOperations.update_search_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets updated search results for a given search query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the search that will have results updated. You
+can get the id from the response of the GetResults call.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SearchResultsResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchResultsResponse" title="azure.mgmt.loganalytics.models.SearchResultsResponse">SearchResultsResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">SavedSearchesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SavedSearchesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2015-03-20”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">saved_search_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a saved search for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>saved_search_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the saved search.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SavedSearch" title="azure.mgmt.loganalytics.models.SavedSearch"><em>SavedSearch</em></a>) – The parameters required to save a search.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SavedSearch or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SavedSearch" title="azure.mgmt.loganalytics.models.SavedSearch">SavedSearch</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">saved_search_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified saved search in a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>saved_search_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the saved search.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">saved_search_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the specified saved search for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>saved_search_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the saved search.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SavedSearch or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SavedSearch" title="azure.mgmt.loganalytics.models.SavedSearch">SavedSearch</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.get_results">
+<code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">saved_search_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations.get_results"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the results from a saved search for a given workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>saved_search_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the saved search.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SearchResultsResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SearchResultsResponse" title="azure.mgmt.loganalytics.models.SearchResultsResponse">SearchResultsResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.list_by_workspace">
+<code class="sig-name descname">list_by_workspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/saved_searches_operations.html#SavedSearchesOperations.list_by_workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.list_by_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the saved searches for a given Log Analytics Workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Log Analytics workspace name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SavedSearchesListResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.SavedSearchesListResult" title="azure.mgmt.loganalytics.models.SavedSearchesListResult">SavedSearchesListResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.SavedSearchesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.SavedSearchesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">LinkedServicesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/linked_services_operations.html#LinkedServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>LinkedServicesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2015-11-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">linked_service_name</em>, <em class="sig-param">resource_id</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/linked_services_operations.html#LinkedServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update a linked service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that will
+contain the linkedServices resource</p></li>
+<li><p><strong>linked_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the linkedServices resource</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource id of the resource that will be
+linked to the workspace.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LinkedService or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.LinkedService" title="azure.mgmt.loganalytics.models.LinkedService">LinkedService</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">linked_service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/linked_services_operations.html#LinkedServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a linked service instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that
+contains the linkedServices resource</p></li>
+<li><p><strong>linked_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the linked service.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">linked_service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/linked_services_operations.html#LinkedServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a linked service instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that
+contains the linkedServices resource</p></li>
+<li><p><strong>linked_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the linked service.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LinkedService or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.LinkedService" title="azure.mgmt.loganalytics.models.LinkedService">LinkedService</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations.list_by_workspace">
+<code class="sig-name descname">list_by_workspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/linked_services_operations.html#LinkedServicesOperations.list_by_workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations.list_by_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the linked services instances in a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that
+contains the linked services.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of LinkedService</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.LinkedServicePaged" title="azure.mgmt.loganalytics.models.LinkedServicePaged">LinkedServicePaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.LinkedService" title="azure.mgmt.loganalytics.models.LinkedService">LinkedService</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.LinkedServicesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.LinkedServicesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">DataSourcesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/data_sources_operations.html#DataSourcesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>DataSourcesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2015-11-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">data_source_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/data_sources_operations.html#DataSourcesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update a data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that will
+contain the datasource</p></li>
+<li><p><strong>data_source_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the datasource resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.DataSource" title="azure.mgmt.loganalytics.models.DataSource"><em>DataSource</em></a>) – The parameters required to create or update a
+datasource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataSource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.DataSource" title="azure.mgmt.loganalytics.models.DataSource">DataSource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">data_source_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/data_sources_operations.html#DataSourcesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a data source instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that
+contains the datasource.</p></li>
+<li><p><strong>data_source_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the datasource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">data_source_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/data_sources_operations.html#DataSourcesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a datasource instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Log Analytics Workspace that
+contains the datasource.</p></li>
+<li><p><strong>data_source_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the datasource</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataSource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.DataSource" title="azure.mgmt.loganalytics.models.DataSource">DataSource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations.list_by_workspace">
+<code class="sig-name descname">list_by_workspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">workspace_name</em>, <em class="sig-param">filter</em>, <em class="sig-param">skiptoken=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/data_sources_operations.html#DataSourcesOperations.list_by_workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations.list_by_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the first page of data source instances in a workspace with the
+link to the next page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to get. The
+name is case insensitive.</p></li>
+<li><p><strong>workspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The workspace that contains the data sources.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filter to apply on the operation.</p></li>
+<li><p><strong>skiptoken</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Starting point of the collection of data source
+instances.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of DataSource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.DataSourcePaged" title="azure.mgmt.loganalytics.models.DataSourcePaged">DataSourcePaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.DataSource" title="azure.mgmt.loganalytics.models.DataSource">DataSource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.DataSourcesOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.DataSourcesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.loganalytics.operations.Operations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.loganalytics.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2015-11-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.loganalytics.operations.Operations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/loganalytics/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.loganalytics.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available OperationalInsights Rest API operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.OperationPaged" title="azure.mgmt.loganalytics.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.loganalytics.models.html#azure.mgmt.loganalytics.models.Operation" title="azure.mgmt.loganalytics.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.loganalytics.operations.Operations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.loganalytics.models' from 'd:\\a\\1\\s\\sdk\\loganalytics\\azure-mgmt-loganalytics\\azure\\mgmt\\loganalytics\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.loganalytics.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.logic.html" class="btn btn-neutral float-right" title="azure.mgmt.logic package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.loganalytics.models.html" class="btn btn-neutral float-left" title="azure.mgmt.loganalytics.models module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

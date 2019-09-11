@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.security._security_center &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.security._security_center</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.security._security_center</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
+<span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
+
+<span class="kn">from</span> <span class="nn">._configuration</span> <span class="k">import</span> <span class="n">SecurityCenterConfiguration</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ComplianceResultsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">PricingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">AlertsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsResourceGroupOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IotSecuritySolutionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsAnalyticsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsAnalyticsAggregatedAlertsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsAnalyticsAggregatedAlertOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsAnalyticsRecommendationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">IoTSecuritySolutionsAnalyticsRecommendationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">AllowedConnectionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DiscoveredSecuritySolutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ExternalSecuritySolutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JitNetworkAccessPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">AdaptiveApplicationControlsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">LocationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">Operations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">TasksOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">TopologyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">AdvancedThreatProtectionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">AutoProvisioningSettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">CompliancesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">InformationProtectionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SecurityContactsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">WorkspaceSettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RegulatoryComplianceStandardsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RegulatoryComplianceControlsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RegulatoryComplianceAssessmentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerVulnerabilityAssessmentOperations</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
+
+
+<div class="viewcode-block" id="SecurityCenter"><a class="viewcode-back" href="../../../../ref/azure.mgmt.security.html#azure.mgmt.security.SecurityCenter">[docs]</a><span class="k">class</span> <span class="nc">SecurityCenter</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;API spec for Microsoft.Security (Azure Security Center) resource provider</span>
+
+<span class="sd">    :ivar config: Configuration for client.</span>
+<span class="sd">    :vartype config: SecurityCenterConfiguration</span>
+
+<span class="sd">    :ivar compliance_results: ComplianceResults operations</span>
+<span class="sd">    :vartype compliance_results: azure.mgmt.security.operations.ComplianceResultsOperations</span>
+<span class="sd">    :ivar pricings: Pricings operations</span>
+<span class="sd">    :vartype pricings: azure.mgmt.security.operations.PricingsOperations</span>
+<span class="sd">    :ivar alerts: Alerts operations</span>
+<span class="sd">    :vartype alerts: azure.mgmt.security.operations.AlertsOperations</span>
+<span class="sd">    :ivar settings: Settings operations</span>
+<span class="sd">    :vartype settings: azure.mgmt.security.operations.SettingsOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions: IoTSecuritySolutions operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions: azure.mgmt.security.operations.IoTSecuritySolutionsOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_resource_group: IoTSecuritySolutionsResourceGroup operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_resource_group: azure.mgmt.security.operations.IoTSecuritySolutionsResourceGroupOperations</span>
+<span class="sd">    :ivar iot_security_solution: IotSecuritySolution operations</span>
+<span class="sd">    :vartype iot_security_solution: azure.mgmt.security.operations.IotSecuritySolutionOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_analytics: IoTSecuritySolutionsAnalytics operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_analytics: azure.mgmt.security.operations.IoTSecuritySolutionsAnalyticsOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_analytics_aggregated_alerts: IoTSecuritySolutionsAnalyticsAggregatedAlerts operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_analytics_aggregated_alerts: azure.mgmt.security.operations.IoTSecuritySolutionsAnalyticsAggregatedAlertsOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_analytics_aggregated_alert: IoTSecuritySolutionsAnalyticsAggregatedAlert operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_analytics_aggregated_alert: azure.mgmt.security.operations.IoTSecuritySolutionsAnalyticsAggregatedAlertOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_analytics_recommendation: IoTSecuritySolutionsAnalyticsRecommendation operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_analytics_recommendation: azure.mgmt.security.operations.IoTSecuritySolutionsAnalyticsRecommendationOperations</span>
+<span class="sd">    :ivar io_tsecurity_solutions_analytics_recommendations: IoTSecuritySolutionsAnalyticsRecommendations operations</span>
+<span class="sd">    :vartype io_tsecurity_solutions_analytics_recommendations: azure.mgmt.security.operations.IoTSecuritySolutionsAnalyticsRecommendationsOperations</span>
+<span class="sd">    :ivar allowed_connections: AllowedConnections operations</span>
+<span class="sd">    :vartype allowed_connections: azure.mgmt.security.operations.AllowedConnectionsOperations</span>
+<span class="sd">    :ivar discovered_security_solutions: DiscoveredSecuritySolutions operations</span>
+<span class="sd">    :vartype discovered_security_solutions: azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations</span>
+<span class="sd">    :ivar external_security_solutions: ExternalSecuritySolutions operations</span>
+<span class="sd">    :vartype external_security_solutions: azure.mgmt.security.operations.ExternalSecuritySolutionsOperations</span>
+<span class="sd">    :ivar jit_network_access_policies: JitNetworkAccessPolicies operations</span>
+<span class="sd">    :vartype jit_network_access_policies: azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations</span>
+<span class="sd">    :ivar adaptive_application_controls: AdaptiveApplicationControls operations</span>
+<span class="sd">    :vartype adaptive_application_controls: azure.mgmt.security.operations.AdaptiveApplicationControlsOperations</span>
+<span class="sd">    :ivar locations: Locations operations</span>
+<span class="sd">    :vartype locations: azure.mgmt.security.operations.LocationsOperations</span>
+<span class="sd">    :ivar operations: Operations operations</span>
+<span class="sd">    :vartype operations: azure.mgmt.security.operations.Operations</span>
+<span class="sd">    :ivar tasks: Tasks operations</span>
+<span class="sd">    :vartype tasks: azure.mgmt.security.operations.TasksOperations</span>
+<span class="sd">    :ivar topology: Topology operations</span>
+<span class="sd">    :vartype topology: azure.mgmt.security.operations.TopologyOperations</span>
+<span class="sd">    :ivar advanced_threat_protection: AdvancedThreatProtection operations</span>
+<span class="sd">    :vartype advanced_threat_protection: azure.mgmt.security.operations.AdvancedThreatProtectionOperations</span>
+<span class="sd">    :ivar auto_provisioning_settings: AutoProvisioningSettings operations</span>
+<span class="sd">    :vartype auto_provisioning_settings: azure.mgmt.security.operations.AutoProvisioningSettingsOperations</span>
+<span class="sd">    :ivar compliances: Compliances operations</span>
+<span class="sd">    :vartype compliances: azure.mgmt.security.operations.CompliancesOperations</span>
+<span class="sd">    :ivar information_protection_policies: InformationProtectionPolicies operations</span>
+<span class="sd">    :vartype information_protection_policies: azure.mgmt.security.operations.InformationProtectionPoliciesOperations</span>
+<span class="sd">    :ivar security_contacts: SecurityContacts operations</span>
+<span class="sd">    :vartype security_contacts: azure.mgmt.security.operations.SecurityContactsOperations</span>
+<span class="sd">    :ivar workspace_settings: WorkspaceSettings operations</span>
+<span class="sd">    :vartype workspace_settings: azure.mgmt.security.operations.WorkspaceSettingsOperations</span>
+<span class="sd">    :ivar regulatory_compliance_standards: RegulatoryComplianceStandards operations</span>
+<span class="sd">    :vartype regulatory_compliance_standards: azure.mgmt.security.operations.RegulatoryComplianceStandardsOperations</span>
+<span class="sd">    :ivar regulatory_compliance_controls: RegulatoryComplianceControls operations</span>
+<span class="sd">    :vartype regulatory_compliance_controls: azure.mgmt.security.operations.RegulatoryComplianceControlsOperations</span>
+<span class="sd">    :ivar regulatory_compliance_assessments: RegulatoryComplianceAssessments operations</span>
+<span class="sd">    :vartype regulatory_compliance_assessments: azure.mgmt.security.operations.RegulatoryComplianceAssessmentsOperations</span>
+<span class="sd">    :ivar server_vulnerability_assessment: ServerVulnerabilityAssessment operations</span>
+<span class="sd">    :vartype server_vulnerability_assessment: azure.mgmt.security.operations.ServerVulnerabilityAssessmentOperations</span>
+
+<span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
+<span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
+<span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: Azure subscription ID</span>
+<span class="sd">    :type subscription_id: str</span>
+<span class="sd">    :param asc_location: The location where ASC stores the data of the</span>
+<span class="sd">     subscription. can be retrieved from Get locations</span>
+<span class="sd">    :type asc_location: str</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">asc_location</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">SecurityCenterConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">asc_location</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SecurityCenter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+        <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">compliance_results</span> <span class="o">=</span> <span class="n">ComplianceResultsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pricings</span> <span class="o">=</span> <span class="n">PricingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alerts</span> <span class="o">=</span> <span class="n">AlertsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">SettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_resource_group</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsResourceGroupOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iot_security_solution</span> <span class="o">=</span> <span class="n">IotSecuritySolutionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_analytics</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsAnalyticsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_analytics_aggregated_alerts</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsAnalyticsAggregatedAlertsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_analytics_aggregated_alert</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsAnalyticsAggregatedAlertOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_analytics_recommendation</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsAnalyticsRecommendationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">io_tsecurity_solutions_analytics_recommendations</span> <span class="o">=</span> <span class="n">IoTSecuritySolutionsAnalyticsRecommendationsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_connections</span> <span class="o">=</span> <span class="n">AllowedConnectionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discovered_security_solutions</span> <span class="o">=</span> <span class="n">DiscoveredSecuritySolutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">external_security_solutions</span> <span class="o">=</span> <span class="n">ExternalSecuritySolutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jit_network_access_policies</span> <span class="o">=</span> <span class="n">JitNetworkAccessPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptive_application_controls</span> <span class="o">=</span> <span class="n">AdaptiveApplicationControlsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locations</span> <span class="o">=</span> <span class="n">LocationsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="n">TasksOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">topology</span> <span class="o">=</span> <span class="n">TopologyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">advanced_threat_protection</span> <span class="o">=</span> <span class="n">AdvancedThreatProtectionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_provisioning_settings</span> <span class="o">=</span> <span class="n">AutoProvisioningSettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compliances</span> <span class="o">=</span> <span class="n">CompliancesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">information_protection_policies</span> <span class="o">=</span> <span class="n">InformationProtectionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">security_contacts</span> <span class="o">=</span> <span class="n">SecurityContactsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">workspace_settings</span> <span class="o">=</span> <span class="n">WorkspaceSettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regulatory_compliance_standards</span> <span class="o">=</span> <span class="n">RegulatoryComplianceStandardsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regulatory_compliance_controls</span> <span class="o">=</span> <span class="n">RegulatoryComplianceControlsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regulatory_compliance_assessments</span> <span class="o">=</span> <span class="n">RegulatoryComplianceAssessmentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_vulnerability_assessment</span> <span class="o">=</span> <span class="n">ServerVulnerabilityAssessmentOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

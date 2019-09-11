@@ -1,0 +1,1442 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.eventgrid.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.eventgrid.operations module" href="azure.mgmt.eventgrid.operations.html" />
+    <link rel="prev" title="azure.mgmt.eventgrid package" href="azure.mgmt.eventgrid.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.eventgrid.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.eventgrid.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.eventgrid.operations.html">azure.mgmt.eventgrid.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.eventgrid.html#module-azure.mgmt.eventgrid">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a> &raquo;</li>
+        
+      <li>azure.mgmt.eventgrid.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.eventgrid.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.eventgrid.models">
+<span id="azure-mgmt-eventgrid-models-module"></span><h1>azure.mgmt.eventgrid.models module<a class="headerlink" href="#module-azure.mgmt.eventgrid.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Definition of a Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.resource_py3.Resource</span></code></p>
+<p>Definition of a Tracked Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.Domain">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_py3.html#Domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.Domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>EventGrid Domain.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.DomainProvisioningState" title="azure.mgmt.eventgrid.models.DomainProvisioningState"><em>DomainProvisioningState</em></a>) – Provisioning state of the domain. Possible
+values include: ‘Creating’, ‘Updating’, ‘Deleting’, ‘Succeeded’,
+‘Canceled’, ‘Failed’</p></li>
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Endpoint for the domain.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_update_parameters_py3.html#DomainUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties of the Domain update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags of the domains resource.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainSharedAccessKeys">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainSharedAccessKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key1: str = None</em>, <em class="sig-param">key2: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_shared_access_keys_py3.html#DomainSharedAccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainSharedAccessKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Shared access keys of the Domain.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key1</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Shared access key1 for the domain.</p></li>
+<li><p><strong>key2</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Shared access key2 for the domain.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainRegenerateKeyRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainRegenerateKeyRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_regenerate_key_request_py3.html#DomainRegenerateKeyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainRegenerateKeyRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Domain regenerate share access key request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Key name to regenerate key1 or key2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainTopic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainTopic</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provisioning_state=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_topic_py3.html#DomainTopic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.resource_py3.Resource</span></code></p>
+<p>Domain Topic.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState" title="azure.mgmt.eventgrid.models.DomainTopicProvisioningState"><em>DomainTopicProvisioningState</em></a>) – Provisioning state of the domain topic.
+Possible values include: ‘Creating’, ‘Updating’, ‘Deleting’, ‘Succeeded’,
+‘Canceled’, ‘Failed’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_destination_py3.html#EventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information about the destination for an event subscription.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: WebHookEventSubscriptionDestination,
+EventHubEventSubscriptionDestination,
+StorageQueueEventSubscriptionDestination,
+HybridConnectionEventSubscriptionDestination,
+ServiceBusQueueEventSubscriptionDestination</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.AdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">AdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/advanced_filter_py3.html#AdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.AdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>This is the base type that represents an advanced filter. To configure an
+advanced filter, do not directly instantiate an object of this class.
+Instead, instantiate an object of a derived class such as
+BoolEqualsAdvancedFilter, NumberInAdvancedFilter,
+StringEqualsAdvancedFilter etc. depending on the type of the key based on
+which you want to filter.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: NumberInAdvancedFilter, NumberNotInAdvancedFilter,
+NumberLessThanAdvancedFilter, NumberGreaterThanAdvancedFilter,
+NumberLessThanOrEqualsAdvancedFilter,
+NumberGreaterThanOrEqualsAdvancedFilter, BoolEqualsAdvancedFilter,
+StringInAdvancedFilter, StringNotInAdvancedFilter,
+StringBeginsWithAdvancedFilter, StringEndsWithAdvancedFilter,
+StringContainsAdvancedFilter</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">subject_begins_with: str = None</em>, <em class="sig-param">subject_ends_with: str = None</em>, <em class="sig-param">included_event_types=None</em>, <em class="sig-param">is_subject_case_sensitive: bool = False</em>, <em class="sig-param">advanced_filters=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_filter_py3.html#EventSubscriptionFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Filter for the Event Subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subject_begins_with</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional string to filter events for an
+event subscription based on a resource path prefix.
+The format of this depends on the publisher of the events.
+Wildcard characters are not supported in this path.</p></li>
+<li><p><strong>subject_ends_with</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An optional string to filter events for an event
+subscription based on a resource path suffix.
+Wildcard characters are not supported in this path.</p></li>
+<li><p><strong>included_event_types</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of applicable event types that need to
+be part of the event subscription. If it is desired to subscribe to all
+default event types, set the IncludedEventTypes to null.</p></li>
+<li><p><strong>is_subject_case_sensitive</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Specifies if the SubjectBeginsWith and
+SubjectEndsWith properties of the filter
+should be compared in a case sensitive manner. Default value: False .</p></li>
+<li><p><strong>advanced_filters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.AdvancedFilter" title="azure.mgmt.eventgrid.models.AdvancedFilter"><em>AdvancedFilter</em></a><em>]</em>) – An array of advanced filters that are used for
+filtering event subscriptions.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.RetryPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">RetryPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_delivery_attempts: int = None</em>, <em class="sig-param">event_time_to_live_in_minutes: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/retry_policy_py3.html#RetryPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.RetryPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information about the retry policy for an event subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_delivery_attempts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of delivery retry attempts
+for events.</p></li>
+<li><p><strong>event_time_to_live_in_minutes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Time To Live (in minutes) for
+events.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DeadLetterDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DeadLetterDestination</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/dead_letter_destination_py3.html#DeadLetterDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DeadLetterDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information about the dead letter destination for an event subscription. To
+configure a deadletter destination, do not directly instantiate an object
+of this class. Instead, instantiate an object of a derived class.
+Currently, StorageBlobDeadLetterDestination is the only class that derives
+from this class.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: StorageBlobDeadLetterDestination</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberInAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberInAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_in_advanced_filter_py3.html#NumberInAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberInAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberIn Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StorageBlobDeadLetterDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StorageBlobDeadLetterDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_id: str = None</em>, <em class="sig-param">blob_container_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/storage_blob_dead_letter_destination_py3.html#StorageBlobDeadLetterDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StorageBlobDeadLetterDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.dead_letter_destination_py3.DeadLetterDestination</span></code></p>
+<p>Information about the storage blob based dead letter destination.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource ID of the storage account that is
+the destination of the deadletter events</p></li>
+<li><p><strong>blob_container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Storage blob container that is
+the destination of the deadletter events</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberNotInAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberNotInAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_not_in_advanced_filter_py3.html#NumberNotInAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberNotInAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberNotIn Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberLessThanAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberLessThanAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_less_than_advanced_filter_py3.html#NumberLessThanAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberLessThanAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberLessThan Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The filter value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberGreaterThanAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberGreaterThanAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_greater_than_advanced_filter_py3.html#NumberGreaterThanAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberGreaterThanAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberGreaterThan Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The filter value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberLessThanOrEqualsAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberLessThanOrEqualsAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_less_than_or_equals_advanced_filter_py3.html#NumberLessThanOrEqualsAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberLessThanOrEqualsAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberLessThanOrEquals Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The filter value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.NumberGreaterThanOrEqualsAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">NumberGreaterThanOrEqualsAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/number_greater_than_or_equals_advanced_filter_py3.html#NumberGreaterThanOrEqualsAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.NumberGreaterThanOrEqualsAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>NumberGreaterThanOrEquals Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The filter value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.BoolEqualsAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">BoolEqualsAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">value: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/bool_equals_advanced_filter_py3.html#BoolEqualsAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.BoolEqualsAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>BoolEquals Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The boolean filter value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StringInAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StringInAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/string_in_advanced_filter_py3.html#StringInAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StringInAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>StringIn Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StringNotInAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StringNotInAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/string_not_in_advanced_filter_py3.html#StringNotInAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StringNotInAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>StringNotIn Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StringBeginsWithAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StringBeginsWithAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/string_begins_with_advanced_filter_py3.html#StringBeginsWithAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StringBeginsWithAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>StringBeginsWith Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StringEndsWithAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StringEndsWithAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/string_ends_with_advanced_filter_py3.html#StringEndsWithAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StringEndsWithAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>StringEndsWith Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StringContainsAdvancedFilter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StringContainsAdvancedFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/string_contains_advanced_filter_py3.html#StringContainsAdvancedFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StringContainsAdvancedFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.advanced_filter_py3.AdvancedFilter</span></code></p>
+<p>StringContains Advanced Filter.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The field/property in the event based on which you want to
+filter.</p></li>
+<li><p><strong>operator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of filter values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.WebHookEventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">WebHookEventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">endpoint_url: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/web_hook_event_subscription_destination_py3.html#WebHookEventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.WebHookEventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.event_subscription_destination_py3.EventSubscriptionDestination</span></code></p>
+<p>Information about the webhook destination for an event subscription.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>endpoint_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that represents the endpoint of the
+destination of an event subscription.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>endpoint_base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The base URL that represents the endpoint of the
+destination of an event subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventHubEventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventHubEventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_hub_event_subscription_destination_py3.html#EventHubEventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventHubEventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.event_subscription_destination_py3.EventSubscriptionDestination</span></code></p>
+<p>Information about the event hub destination for an event subscription.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource Id that represents the endpoint of
+an Event Hub destination of an event subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.StorageQueueEventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">StorageQueueEventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_id: str = None</em>, <em class="sig-param">queue_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/storage_queue_event_subscription_destination_py3.html#StorageQueueEventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.StorageQueueEventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.event_subscription_destination_py3.EventSubscriptionDestination</span></code></p>
+<p>Information about the storage queue destination for an event subscription.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource ID of the storage account that
+contains the queue that is the destination of an event subscription.</p></li>
+<li><p><strong>queue_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Storage queue under a storage account
+that is the destination of an event subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.HybridConnectionEventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">HybridConnectionEventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/hybrid_connection_event_subscription_destination_py3.html#HybridConnectionEventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.HybridConnectionEventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.event_subscription_destination_py3.EventSubscriptionDestination</span></code></p>
+<p>Information about the HybridConnection destination for an event
+subscription.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource ID of an hybrid connection that is
+the destination of an event subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.ServiceBusQueueEventSubscriptionDestination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">ServiceBusQueueEventSubscriptionDestination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/service_bus_queue_event_subscription_destination_py3.html#ServiceBusQueueEventSubscriptionDestination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.ServiceBusQueueEventSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.event_subscription_destination_py3.EventSubscriptionDestination</span></code></p>
+<p>Information about the service bus destination for an event subscription.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource Id that represents the endpoint of
+the Service Bus destination of an event subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscription">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">expiration_time_utc=None</em>, <em class="sig-param">retry_policy=None</em>, <em class="sig-param">dead_letter_destination=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_py3.html#EventSubscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.resource_py3.Resource</span></code></p>
+<p>Event Subscription.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+<li><p><strong>topic</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the topic of the event subscription.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState" title="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState"><em>EventSubscriptionProvisioningState</em></a>) – Provisioning state of the event subscription.
+Possible values include: ‘Creating’, ‘Updating’, ‘Deleting’, ‘Succeeded’,
+‘Canceled’, ‘Failed’, ‘AwaitingManualAction’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>destination</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscriptionDestination" title="azure.mgmt.eventgrid.models.EventSubscriptionDestination"><em>EventSubscriptionDestination</em></a>) – Information about the destination where events have to
+be delivered for the event subscription.</p></li>
+<li><p><strong>filter</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscriptionFilter" title="azure.mgmt.eventgrid.models.EventSubscriptionFilter"><em>EventSubscriptionFilter</em></a>) – Information about the filter for the event subscription.</p></li>
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of user defined labels.</p></li>
+<li><p><strong>expiration_time_utc</strong> (<em>datetime</em>) – Expiration time of the event subscription.</p></li>
+<li><p><strong>retry_policy</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.RetryPolicy" title="azure.mgmt.eventgrid.models.RetryPolicy"><em>RetryPolicy</em></a>) – The retry policy for events. This can be used to
+configure maximum number of delivery attempts and time to live for events.</p></li>
+<li><p><strong>dead_letter_destination</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.DeadLetterDestination" title="azure.mgmt.eventgrid.models.DeadLetterDestination"><em>DeadLetterDestination</em></a>) – The DeadLetter destination of the event
+subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">expiration_time_utc=None</em>, <em class="sig-param">retry_policy=None</em>, <em class="sig-param">dead_letter_destination=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_update_parameters_py3.html#EventSubscriptionUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties of the Event Subscription update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destination</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscriptionDestination" title="azure.mgmt.eventgrid.models.EventSubscriptionDestination"><em>EventSubscriptionDestination</em></a>) – Information about the destination where events have to
+be delivered for the event subscription.</p></li>
+<li><p><strong>filter</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscriptionFilter" title="azure.mgmt.eventgrid.models.EventSubscriptionFilter"><em>EventSubscriptionFilter</em></a>) – Information about the filter for the event subscription.</p></li>
+<li><p><strong>labels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of user defined labels.</p></li>
+<li><p><strong>expiration_time_utc</strong> (<em>datetime</em>) – Information about the expiration time for the
+event subscription.</p></li>
+<li><p><strong>retry_policy</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.RetryPolicy" title="azure.mgmt.eventgrid.models.RetryPolicy"><em>RetryPolicy</em></a>) – The retry policy for events. This can be used to
+configure maximum number of delivery attempts and time to live for events.</p></li>
+<li><p><strong>dead_letter_destination</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.DeadLetterDestination" title="azure.mgmt.eventgrid.models.DeadLetterDestination"><em>DeadLetterDestination</em></a>) – The DeadLetter destination of the event
+subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionFullUrl">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionFullUrl</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">endpoint_url: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_full_url_py3.html#EventSubscriptionFullUrl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionFullUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Full endpoint url of an event subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>endpoint_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that represents the endpoint of the
+destination of an event subscription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.OperationInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">OperationInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/operation_info_py3.html#OperationInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.OperationInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information about an operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the provider</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource type</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the operation</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the operation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents an operation returned by the GetOperations request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the operation</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.eventgrid.models.OperationInfo" title="azure.mgmt.eventgrid.models.OperationInfo"><em>OperationInfo</em></a>) – Display name of the operation</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Origin of the operation</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Properties of the operation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.Topic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_py3.html#Topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.Topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>EventGrid Topic.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.TopicProvisioningState" title="azure.mgmt.eventgrid.models.TopicProvisioningState"><em>TopicProvisioningState</em></a>) – Provisioning state of the topic. Possible values
+include: ‘Creating’, ‘Updating’, ‘Deleting’, ‘Succeeded’, ‘Canceled’,
+‘Failed’</p></li>
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Endpoint for the topic.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_update_parameters_py3.html#TopicUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties of the Topic update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags of the resource</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicSharedAccessKeys">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicSharedAccessKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key1: str = None</em>, <em class="sig-param">key2: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_shared_access_keys_py3.html#TopicSharedAccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicSharedAccessKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Shared access keys of the Topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key1</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Shared access key1 for the topic.</p></li>
+<li><p><strong>key2</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Shared access key2 for the topic.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicRegenerateKeyRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicRegenerateKeyRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_regenerate_key_request_py3.html#TopicRegenerateKeyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicRegenerateKeyRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Topic regenerate share access key request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Key name to regenerate key1 or key2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventType</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">schema_url: str = None</em>, <em class="sig-param">is_in_default_set: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_type_py3.html#EventType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.resource_py3.Resource</span></code></p>
+<p>Event Type for a subject under a topic.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display name of the event type.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the event type.</p></li>
+<li><p><strong>schema_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Url of the schema for this event type.</p></li>
+<li><p><strong>is_in_default_set</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – IsInDefaultSet flag of the event type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeInfo">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicTypeInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">resource_region_type=None</em>, <em class="sig-param">provisioning_state=None</em>, <em class="sig-param">supported_locations=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_type_info_py3.html#TopicTypeInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventgrid.models.resource_py3.Resource</span></code></p>
+<p>Properties of a topic type info.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.id" title="azure.keyvault.keys.models.KeyBase.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Namespace of the provider of the topic type.</p></li>
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display Name for the topic type.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the topic type.</p></li>
+<li><p><strong>resource_region_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.ResourceRegionType" title="azure.mgmt.eventgrid.models.ResourceRegionType"><em>ResourceRegionType</em></a>) – Region type of the resource. Possible values
+include: ‘RegionalResource’, ‘GlobalResource’</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState" title="azure.mgmt.eventgrid.models.TopicTypeProvisioningState"><em>TopicTypeProvisioningState</em></a>) – Provisioning state of the topic type. Possible
+values include: ‘Creating’, ‘Updating’, ‘Deleting’, ‘Succeeded’,
+‘Canceled’, ‘Failed’</p></li>
+<li><p><strong>supported_locations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of locations supported by this topic
+type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_paged.html#DomainPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.Domain" title="azure.mgmt.eventgrid.models.Domain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Domain</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainTopicPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/domain_topic_paged.html#DomainTopicPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.DomainTopic" title="azure.mgmt.eventgrid.models.DomainTopic"><code class="xref py py-class docutils literal notranslate"><span class="pre">DomainTopic</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_subscription_paged.html#EventSubscriptionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.EventSubscription" title="azure.mgmt.eventgrid.models.EventSubscription"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventSubscription</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.OperationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.Operation" title="azure.mgmt.eventgrid.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_paged.html#TopicPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.Topic" title="azure.mgmt.eventgrid.models.Topic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Topic</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventTypePaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventTypePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_type_paged.html#EventTypePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventTypePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.EventType" title="azure.mgmt.eventgrid.models.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeInfoPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicTypeInfoPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/topic_type_info_paged.html#TopicTypeInfoPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeInfoPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventgrid.models.TopicTypeInfo" title="azure.mgmt.eventgrid.models.TopicTypeInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">TopicTypeInfo</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#DomainProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">DomainTopicProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#DomainTopicProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.DomainTopicProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.DomainTopicProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">EventSubscriptionProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#EventSubscriptionProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.awaiting_manual_action">
+<code class="sig-name descname">awaiting_manual_action</code><em class="property"> = 'AwaitingManualAction'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.awaiting_manual_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.EventSubscriptionProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#TopicProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.ResourceRegionType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">ResourceRegionType</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#ResourceRegionType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.ResourceRegionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.ResourceRegionType.global_resource">
+<code class="sig-name descname">global_resource</code><em class="property"> = 'GlobalResource'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.ResourceRegionType.global_resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.ResourceRegionType.regional_resource">
+<code class="sig-name descname">regional_resource</code><em class="property"> = 'RegionalResource'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.ResourceRegionType.regional_resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventgrid.models.</code><code class="sig-name descname">TopicTypeProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/eventgrid/models/event_grid_management_client_enums.html#TopicTypeProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.canceled">
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.creating">
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.deleting">
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.eventgrid.models.TopicTypeProvisioningState.updating">
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.eventgrid.models.TopicTypeProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.eventgrid.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.eventgrid.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.eventgrid.html" class="btn btn-neutral float-left" title="azure.mgmt.eventgrid package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

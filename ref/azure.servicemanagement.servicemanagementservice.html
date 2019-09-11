@@ -1,0 +1,2297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicemanagement.servicemanagementservice module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.servicemanagement.sqldatabasemanagementservice module" href="azure.servicemanagement.sqldatabasemanagementservice.html" />
+    <link rel="prev" title="azure.servicemanagement.servicemanagementclient module" href="azure.servicemanagement.servicemanagementclient.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.servicemanagement.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.constants.html">azure.servicemanagement.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.models.html">azure.servicemanagement.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.publishsettings.html">azure.servicemanagement.publishsettings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.schedulermanagementservice.html">azure.servicemanagement.schedulermanagementservice module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.servicebusmanagementservice.html">azure.servicemanagement.servicebusmanagementservice module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.servicemanagementclient.html">azure.servicemanagement.servicemanagementclient module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.servicemanagement.servicemanagementservice module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.sqldatabasemanagementservice.html">azure.servicemanagement.sqldatabasemanagementservice module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.servicemanagement.websitemanagementservice.html">azure.servicemanagement.websitemanagementservice module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.servicemanagement.html#module-azure.servicemanagement">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.servicemanagement.html">azure.servicemanagement package</a> &raquo;</li>
+        
+      <li>azure.servicemanagement.servicemanagementservice module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.servicemanagement.servicemanagementservice.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.servicemanagement.servicemanagementservice">
+<span id="azure-servicemanagement-servicemanagementservice-module"></span><h1>azure.servicemanagement.servicemanagementservice module<a class="headerlink" href="#module-azure.servicemanagement.servicemanagementservice" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService">
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicemanagement.servicemanagementservice.</code><code class="sig-name descname">ServiceManagementService</code><span class="sig-paren">(</span><em class="sig-param">subscription_id=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">host='management.core.windows.net'</em>, <em class="sig-param">request_session=None</em>, <em class="sig-param">timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicemanagement.servicemanagementclient._ServiceManagementClient</span></code></p>
+<p>Initializes the management service.</p>
+<dl class="simple">
+<dt>subscription_id:</dt><dd><p>Subscription to manage.</p>
+</dd>
+<dt>cert_file:</dt><dd><p>Path to .pem certificate file (httplib), or location of the
+certificate in your Personal certificate store (winhttp) in the
+CURRENT_USERmyCertificateName format.
+If a request_session is specified, then this is unused.</p>
+</dd>
+<dt>host:</dt><dd><p>Live ServiceClient URL. Defaults to Azure public cloud.</p>
+</dd>
+<dt>request_session:</dt><dd><p>Session object to use for http requests. If this is specified, it
+replaces the default use of httplib or winhttp. Also, the cert_file
+parameter is unused when a session is passed in.
+The session object handles authentication, and as such can support
+multiple types of authentication: .pem certificate, oauth.
+For example, you can pass in a Session instance from the requests
+library. To use .pem certificate authentication with requests
+library, set the path to the .pem file on the session.cert
+attribute.</p>
+</dd>
+<dt>timeout:</dt><dd><p>Optional. Timeout for the http request, in seconds.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_data_disk">
+<code class="sig-name descname">add_data_disk</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">lun</em>, <em class="sig-param">host_caching=None</em>, <em class="sig-param">media_link=None</em>, <em class="sig-param">disk_label=None</em>, <em class="sig-param">disk_name=None</em>, <em class="sig-param">logical_disk_size_in_gb=None</em>, <em class="sig-param">source_media_link=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_data_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_data_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a data disk to a virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>lun:</dt><dd><p>Specifies the Logical Unit Number (LUN) for the disk. The LUN
+specifies the slot in which the data drive appears when mounted
+for usage by the virtual machine. Valid LUN values are 0 through 15.</p>
+</dd>
+<dt>host_caching:</dt><dd><p>Specifies the platform caching behavior of data disk blob for
+read/write efficiency. The default vault is ReadOnly. Possible
+values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>media_link:</dt><dd><p>Specifies the location of the blob in Windows Azure blob store
+where the media for the disk is located. The blob location must
+belong to the storage account in the subscription specified by the
+&lt;subscription-id&gt; value in the operation call. Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>disk_label:</dt><dd><p>Specifies the description of the data disk. When you attach a disk,
+either by directly referencing a media using the MediaLink element
+or specifying the target disk size, you can use the DiskLabel
+element to customize the name property of the target data disk.</p>
+</dd>
+<dt>disk_name:</dt><dd><p>Specifies the name of the disk. Windows Azure uses the specified
+disk to create the data disk for the machine and populates this
+field with the disk name.</p>
+</dd>
+<dt>logical_disk_size_in_gb:</dt><dd><p>Specifies the size, in GB, of an empty disk to be attached to the
+role. The disk can be created as part of disk attach or create VM
+role call by specifying the value for this property. Windows Azure
+creates the empty disk based on size preference and attaches the
+newly created disk to the Role.</p>
+</dd>
+<dt>source_media_link:</dt><dd><p>Specifies the location of a blob in account storage which is
+mounted as a data disk when the virtual machine is created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_disk">
+<code class="sig-name descname">add_disk</code><span class="sig-paren">(</span><em class="sig-param">has_operating_system</em>, <em class="sig-param">label</em>, <em class="sig-param">media_link</em>, <em class="sig-param">name</em>, <em class="sig-param">os</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a disk to the user image repository. The disk can be an OS disk
+or a data disk.</p>
+<dl class="simple">
+<dt>has_operating_system:</dt><dd><p>Deprecated.</p>
+</dd>
+<dt>label:</dt><dd><p>Specifies the description of the disk.</p>
+</dd>
+<dt>media_link:</dt><dd><p>Specifies the location of the blob in Windows Azure blob store
+where the media for the disk is located. The blob location must
+belong to the storage account in the current subscription specified
+by the &lt;subscription-id&gt; value in the operation call. Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>name:</dt><dd><p>Specifies a name for the disk. Windows Azure uses the name to
+identify the disk when creating virtual machines from the disk.</p>
+</dd>
+<dt>os:</dt><dd><p>The OS type of the disk. Possible values are: Linux, Windows</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_dns_server">
+<code class="sig-name descname">add_dns_server</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">dns_server_name</em>, <em class="sig-param">address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_dns_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_dns_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a DNS server definition to an existing deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>dns_server_name:</dt><dd><p>Specifies the name of the DNS server.</p>
+</dd>
+<dt>address:</dt><dd><p>Specifies the IP address of the DNS server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_management_certificate">
+<code class="sig-name descname">add_management_certificate</code><span class="sig-paren">(</span><em class="sig-param">public_key</em>, <em class="sig-param">thumbprint</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_management_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_management_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Add Management Certificate operation adds a certificate to the
+list of management certificates. Management certificates, which are
+also known as subscription certificates, authenticate clients
+attempting to connect to resources associated with your Windows Azure
+subscription.</p>
+<dl class="simple">
+<dt>public_key:</dt><dd><p>A base64 representation of the management certificate public key.</p>
+</dd>
+<dt>thumbprint:</dt><dd><p>The thumb print that uniquely identifies the management
+certificate.</p>
+</dd>
+<dt>data:</dt><dd><p>The certificate’s raw data in base-64 encoded .cer format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_os_image">
+<code class="sig-name descname">add_os_image</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">media_link</em>, <em class="sig-param">name</em>, <em class="sig-param">os</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_os_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_os_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an OS image that is currently stored in a storage account in your
+subscription to the image repository.</p>
+<dl class="simple">
+<dt>label:</dt><dd><p>Specifies the friendly name of the image.</p>
+</dd>
+<dt>media_link:</dt><dd><p>Specifies the location of the blob in Windows Azure blob store
+where the media for the image is located. The blob location must
+belong to a storage account in the subscription specified by the
+&lt;subscription-id&gt; value in the operation call. Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>name:</dt><dd><p>Specifies a name for the OS image that Windows Azure uses to
+identify the image when creating one or more virtual machines.</p>
+</dd>
+<dt>os:</dt><dd><p>The operating system type of the OS image. Possible values are:
+Linux, Windows</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_role">
+<code class="sig-name descname">add_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">system_config</em>, <em class="sig-param">os_virtual_hard_disk</em>, <em class="sig-param">network_config=None</em>, <em class="sig-param">availability_set_name=None</em>, <em class="sig-param">data_virtual_hard_disks=None</em>, <em class="sig-param">role_size=None</em>, <em class="sig-param">role_type='PersistentVMRole'</em>, <em class="sig-param">resource_extension_references=None</em>, <em class="sig-param">provision_guest_agent=None</em>, <em class="sig-param">vm_image_name=None</em>, <em class="sig-param">media_location=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a virtual machine to an existing deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>system_config:</dt><dd><p>Contains the metadata required to provision a virtual machine from
+a Windows or Linux OS image.  Use an instance of
+WindowsConfigurationSet or LinuxConfigurationSet.</p>
+</dd>
+<dt>os_virtual_hard_disk:</dt><dd><p>Contains the parameters Windows Azure uses to create the operating
+system disk for the virtual machine. If you are creating a Virtual
+Machine by using a VM Image, this parameter is not used.</p>
+</dd>
+<dt>network_config:</dt><dd><p>Encapsulates the metadata required to create the virtual network
+configuration for a virtual machine. If you do not include a
+network configuration set you will not be able to access the VM
+through VIPs over the internet. If your virtual machine belongs to
+a virtual network you can not specify which subnet address space
+it resides under.</p>
+</dd>
+<dt>availability_set_name:</dt><dd><p>Specifies the name of an availability set to which to add the
+virtual machine. This value controls the virtual machine allocation
+in the Windows Azure environment. Virtual machines specified in the
+same availability set are allocated to different nodes to maximize
+availability.</p>
+</dd>
+<dt>data_virtual_hard_disks:</dt><dd><p>Contains the parameters Windows Azure uses to create a data disk
+for a virtual machine.</p>
+</dd>
+<dt>role_size:</dt><dd><p>The size of the virtual machine to allocate. The default value is
+Small. Possible values are: ExtraSmall, Small, Medium, Large,
+ExtraLarge. The specified value must be compatible with the disk
+selected in the OSVirtualHardDisk values.</p>
+</dd>
+<dt>role_type:</dt><dd><p>The type of the role for the virtual machine. The only supported
+value is PersistentVMRole.</p>
+</dd>
+<dt>resource_extension_references:</dt><dd><p>Optional. Contains a collection of resource extensions that are to
+be installed on the Virtual Machine. This element is used if
+provision_guest_agent is set to True.</p>
+</dd>
+<dt>provision_guest_agent:</dt><dd><p>Optional. Indicates whether the VM Agent is installed on the
+Virtual Machine. To run a resource extension in a Virtual Machine,
+this service must be installed.</p>
+</dd>
+<dt>vm_image_name:</dt><dd><p>Optional. Specifies the name of the VM Image that is to be used to
+create the Virtual Machine. If this is specified, the
+system_config and network_config parameters are not used.</p>
+</dd>
+<dt>media_location:</dt><dd><p>Optional. Required if the Virtual Machine is being created from a
+published VM Image. Specifies the location of the VHD file that is
+created when VMImageName specifies a published VM Image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_service_certificate">
+<code class="sig-name descname">add_service_certificate</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">data</em>, <em class="sig-param">certificate_format</em>, <em class="sig-param">password=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.add_service_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.add_service_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a certificate to a hosted service.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>data:</dt><dd><p>The base-64 encoded form of the pfx/cer file.</p>
+</dd>
+<dt>certificate_format:</dt><dd><p>The service certificate format.</p>
+</dd>
+<dt>password:</dt><dd><p>The certificate password. Default to None when using cer format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.associate_reserved_ip_address">
+<code class="sig-name descname">associate_reserved_ip_address</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">virtual_ip_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.associate_reserved_ip_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.associate_reserved_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Associate an existing reservedIP to a deployment.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>Required. Name of the reserved IP address.</p>
+</dd>
+<dt>service_name:</dt><dd><p>Required. Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>Required. Name of the deployment.</p>
+</dd>
+<dt>virtual_ip_name:</dt><dd><p>Optional. Name of the VirtualIP in case of multi Vip tenant.
+If this value is not specified default virtualIP is used
+for this operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.capture_role">
+<code class="sig-name descname">capture_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">post_capture_action</em>, <em class="sig-param">target_image_name</em>, <em class="sig-param">target_image_label</em>, <em class="sig-param">provisioning_configuration=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.capture_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.capture_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Capture Role operation captures a virtual machine image to your
+image gallery. From the captured image, you can create additional
+customized virtual machines.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>post_capture_action:</dt><dd><p>Specifies the action after capture operation completes. Possible
+values are: Delete, Reprovision.</p>
+</dd>
+<dt>target_image_name:</dt><dd><p>Specifies the image name of the captured virtual machine.</p>
+</dd>
+<dt>target_image_label:</dt><dd><p>Specifies the friendly name of the captured virtual machine.</p>
+</dd>
+<dt>provisioning_configuration:</dt><dd><p>Use an instance of WindowsConfigurationSet or LinuxConfigurationSet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.capture_vm_image">
+<code class="sig-name descname">capture_vm_image</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">options</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.capture_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.capture_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a copy of the operating system virtual hard disk (VHD) and all
+of the data VHDs that are associated with the Virtual Machine, saves
+the VHD copies in the same storage location as the original VHDs, and
+registers the copies as a VM Image in the image repository that is
+associated with the specified subscription.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>options:</dt><dd><p>An instance of CaptureRoleAsVMImage class.</p>
+</dd>
+<dt>options.os_state:</dt><dd><p>Required. Specifies the state of the operating system in the image.
+Possible values are: Generalized, Specialized
+A Virtual Machine that is fully configured and running contains a
+Specialized operating system. A Virtual Machine on which the
+Sysprep command has been run with the generalize option contains a
+Generalized operating system. If you capture an image from a
+generalized Virtual Machine, the machine is deleted after the image
+is captured. It is recommended that all Virtual Machines are shut
+down before capturing an image.</p>
+</dd>
+<dt>options.vm_image_name:</dt><dd><p>Required. Specifies the name of the VM Image.</p>
+</dd>
+<dt>options.vm_image_label:</dt><dd><p>Required. Specifies the label of the VM Image.</p>
+</dd>
+<dt>options.description:</dt><dd><p>Optional. Specifies the description of the VM Image.</p>
+</dd>
+<dt>options.language:</dt><dd><p>Optional. Specifies the language of the VM Image.</p>
+</dd>
+<dt>options.image_family:</dt><dd><p>Optional. Specifies a value that can be used to group VM Images.</p>
+</dd>
+<dt>options.recommended_vm_size:</dt><dd><p>Optional. Specifies the size to use for the Virtual Machine that
+is created from the VM Image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.change_deployment_configuration">
+<code class="sig-name descname">change_deployment_configuration</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">configuration</em>, <em class="sig-param">treat_warnings_as_error=False</em>, <em class="sig-param">mode='Auto'</em>, <em class="sig-param">extended_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.change_deployment_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.change_deployment_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates a change to the deployment configuration.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>configuration:</dt><dd><p>The base-64 encoded service configuration file for the deployment.</p>
+</dd>
+<dt>treat_warnings_as_error:</dt><dd><p>Indicates whether to treat package validation warnings as errors.
+If set to true, the Created Deployment operation fails if there
+are validation warnings on the service package.</p>
+</dd>
+<dt>mode:</dt><dd><p>If set to Manual, WalkUpgradeDomain must be called to apply the
+update. If set to Auto, the Windows Azure platform will
+automatically apply the update To each upgrade domain for the
+service. Possible values are: Auto, Manual</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.check_hosted_service_name_availability">
+<code class="sig-name descname">check_hosted_service_name_availability</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.check_hosted_service_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.check_hosted_service_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the specified hosted service name is available, or if
+it has already been taken.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.check_storage_account_name_availability">
+<code class="sig-name descname">check_storage_account_name_availability</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.check_storage_account_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.check_storage_account_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the specified storage account name is available, or
+if it has already been taken.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_affinity_group">
+<code class="sig-name descname">create_affinity_group</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">label</em>, <em class="sig-param">location</em>, <em class="sig-param">description=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_affinity_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_affinity_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new affinity group for the specified subscription.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>A name for the affinity group that is unique to the subscription.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the affinity group. The name can be up to 100 characters
+in length.</p>
+</dd>
+<dt>location:</dt><dd><p>The data center location where the affinity group will be created.
+To list available locations, use the list_location function.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the affinity group. The description can be up to
+1024 characters in length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_deployment">
+<code class="sig-name descname">create_deployment</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_slot</em>, <em class="sig-param">name</em>, <em class="sig-param">package_url</em>, <em class="sig-param">label</em>, <em class="sig-param">configuration</em>, <em class="sig-param">start_deployment=False</em>, <em class="sig-param">treat_warnings_as_error=False</em>, <em class="sig-param">extended_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_deployment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads a new service package and creates a new deployment on staging
+or production.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_slot:</dt><dd><p>The environment to which the hosted service is deployed. Valid
+values are: staging, production</p>
+</dd>
+<dt>name:</dt><dd><p>The name for the deployment. The deployment name must be unique
+among other deployments for the hosted service.</p>
+</dd>
+<dt>package_url:</dt><dd><p>A URL that refers to the location of the service package in the
+Blob service. The service package can be located either in a
+storage account beneath the same subscription or a Shared Access
+Signature (SAS) URI from any storage account.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the hosted service. The name can be up to 100 characters
+in length. It is recommended that the label be unique within the
+subscription. The name can be used to identify the hosted service
+for your tracking purposes.</p>
+</dd>
+<dt>configuration:</dt><dd><p>The base-64 encoded service configuration file for the deployment.</p>
+</dd>
+<dt>start_deployment:</dt><dd><p>Indicates whether to start the deployment immediately after it is
+created. If false, the service model is still deployed to the
+virtual machines but the code is not run immediately. Instead, the
+service is Suspended until you call Update Deployment Status and
+set the status to Running, at which time the service will be
+started. A deployed service still incurs charges, even if it is
+suspended.</p>
+</dd>
+<dt>treat_warnings_as_error:</dt><dd><p>Indicates whether to treat package validation warnings as errors.
+If set to true, the Created Deployment operation fails if there
+are validation warnings on the service package.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_hosted_service">
+<code class="sig-name descname">create_hosted_service</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">label</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">affinity_group=None</em>, <em class="sig-param">extended_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_hosted_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_hosted_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new hosted service in Windows Azure.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>A name for the hosted service that is unique within Windows Azure.
+This name is the DNS prefix name and can be used to access the
+hosted service.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the hosted service. The name can be up to 100 characters
+in length. The name can be used to identify the storage account for
+your tracking purposes.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the hosted service. The description can be up to
+1024 characters in length.</p>
+</dd>
+<dt>location:</dt><dd><p>The location where the hosted service will be created. You can
+specify either a location or affinity_group, but not both.</p>
+</dd>
+<dt>affinity_group:</dt><dd><p>The name of an existing affinity group associated with this
+subscription. This name is a GUID and can be retrieved by examining
+the name element of the response body returned by
+list_affinity_groups. You can specify either a location or
+affinity_group, but not both.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_reserved_ip_address">
+<code class="sig-name descname">create_reserved_ip_address</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">label=None</em>, <em class="sig-param">location=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_reserved_ip_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_reserved_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserves an IPv4 address for the specified subscription.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>Required. Specifies the name for the reserved IP address.</p>
+</dd>
+<dt>label:</dt><dd><p>Optional. Specifies a label for the reserved IP address. The label
+can be up to 100 characters long and can be used for your tracking
+purposes.</p>
+</dd>
+<dt>location:</dt><dd><p>Required. Specifies the location of the reserved IP address. This
+should be the same location that is assigned to the cloud service
+containing the deployment that will use the reserved IP address.
+To see the available locations, you can use list_locations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_storage_account">
+<code class="sig-name descname">create_storage_account</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">description</em>, <em class="sig-param">label</em>, <em class="sig-param">affinity_group=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">geo_replication_enabled=None</em>, <em class="sig-param">extended_properties=None</em>, <em class="sig-param">account_type='Standard_GRS'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_storage_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_storage_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new storage account in Windows Azure.</p>
+<dl>
+<dt>service_name:</dt><dd><p>A name for the storage account that is unique within Windows Azure.
+Storage account names must be between 3 and 24 characters in length
+and use numbers and lower-case letters only.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the storage account. The description may be up
+to 1024 characters in length.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the storage account. The name may be up to 100
+characters in length. The name can be used to identify the storage
+account for your tracking purposes.</p>
+</dd>
+<dt>affinity_group:</dt><dd><p>The name of an existing affinity group in the specified
+subscription. You can specify either a location or affinity_group,
+but not both.</p>
+</dd>
+<dt>location:</dt><dd><p>The location where the storage account is created. You can specify
+either a location or affinity_group, but not both.</p>
+</dd>
+<dt>geo_replication_enabled:</dt><dd><p>Deprecated. Replaced by the account_type parameter.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+<dt>account_type:</dt><dd><p>Specifies whether the account supports locally-redundant storage,
+geo-redundant storage, zone-redundant storage, or read access
+geo-redundant storage.
+Possible values are:</p>
+<blockquote>
+<div><p>Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_virtual_machine_deployment">
+<code class="sig-name descname">create_virtual_machine_deployment</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">deployment_slot</em>, <em class="sig-param">label</em>, <em class="sig-param">role_name</em>, <em class="sig-param">system_config</em>, <em class="sig-param">os_virtual_hard_disk</em>, <em class="sig-param">network_config=None</em>, <em class="sig-param">availability_set_name=None</em>, <em class="sig-param">data_virtual_hard_disks=None</em>, <em class="sig-param">role_size=None</em>, <em class="sig-param">role_type='PersistentVMRole'</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">resource_extension_references=None</em>, <em class="sig-param">provision_guest_agent=None</em>, <em class="sig-param">vm_image_name=None</em>, <em class="sig-param">media_location=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">reserved_ip_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_virtual_machine_deployment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_virtual_machine_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provisions a virtual machine based on the supplied configuration.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name for the deployment. The deployment name must be unique
+among other deployments for the hosted service.</p>
+</dd>
+<dt>deployment_slot:</dt><dd><p>The environment to which the hosted service is deployed. Valid
+values are: staging, production</p>
+</dd>
+<dt>label:</dt><dd><p>Specifies an identifier for the deployment. The label can be up to
+100 characters long. The label can be used for tracking purposes.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>system_config:</dt><dd><p>Contains the metadata required to provision a virtual machine from
+a Windows or Linux OS image.  Use an instance of
+WindowsConfigurationSet or LinuxConfigurationSet.</p>
+</dd>
+<dt>os_virtual_hard_disk:</dt><dd><p>Contains the parameters Windows Azure uses to create the operating
+system disk for the virtual machine. If you are creating a Virtual
+Machine by using a VM Image, this parameter is not used.</p>
+</dd>
+<dt>network_config:</dt><dd><p>Encapsulates the metadata required to create the virtual network
+configuration for a virtual machine. If you do not include a
+network configuration set you will not be able to access the VM
+through VIPs over the internet. If your virtual machine belongs to
+a virtual network you can not specify which subnet address space
+it resides under. Use an instance of ConfigurationSet.</p>
+</dd>
+<dt>availability_set_name:</dt><dd><p>Specifies the name of an availability set to which to add the
+virtual machine. This value controls the virtual machine
+allocation in the Windows Azure environment. Virtual machines
+specified in the same availability set are allocated to different
+nodes to maximize availability.</p>
+</dd>
+<dt>data_virtual_hard_disks:</dt><dd><p>Contains the parameters Windows Azure uses to create a data disk
+for a virtual machine.</p>
+</dd>
+<dt>role_size:</dt><dd><p>The size of the virtual machine to allocate. The default value is
+Small. Possible values are: ExtraSmall,Small,Medium,Large,
+ExtraLarge,A5,A6,A7,A8,A9,Basic_A0,Basic_A1,Basic_A2,Basic_A3,
+Basic_A4,Standard_D1,Standard_D2,Standard_D3,Standard_D4,
+Standard_D11,Standard_D12,Standard_D13,Standard_D14,Standard_G1,
+Standard_G2,Sandard_G3,Standard_G4,Standard_G5. The specified
+value must be compatible with the disk selected in the
+OSVirtualHardDisk values.</p>
+</dd>
+<dt>role_type:</dt><dd><p>The type of the role for the virtual machine. The only supported
+value is PersistentVMRole.</p>
+</dd>
+<dt>virtual_network_name:</dt><dd><p>Specifies the name of an existing virtual network to which the
+deployment will belong.</p>
+</dd>
+<dt>resource_extension_references:</dt><dd><p>Optional. Contains a collection of resource extensions that are to
+be installed on the Virtual Machine. This element is used if
+provision_guest_agent is set to True. Use an iterable of instances
+of ResourceExtensionReference.</p>
+</dd>
+<dt>provision_guest_agent:</dt><dd><p>Optional. Indicates whether the VM Agent is installed on the
+Virtual Machine. To run a resource extension in a Virtual Machine,
+this service must be installed.</p>
+</dd>
+<dt>vm_image_name:</dt><dd><p>Optional. Specifies the name of the VM Image that is to be used to
+create the Virtual Machine. If this is specified, the
+system_config and network_config parameters are not used.</p>
+</dd>
+<dt>media_location:</dt><dd><p>Optional. Required if the Virtual Machine is being created from a
+published VM Image. Specifies the location of the VHD file that is
+created when VMImageName specifies a published VM Image.</p>
+</dd>
+<dt>dns_servers:</dt><dd><p>Optional. List of DNS servers (use DnsServer class) to associate
+with the Virtual Machine.</p>
+</dd>
+<dt>reserved_ip_name:</dt><dd><p>Optional. Specifies the name of a reserved IP address that is to be
+assigned to the deployment. You must run create_reserved_ip_address
+before you can assign the address to the deployment using this
+element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_vm_image">
+<code class="sig-name descname">create_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.create_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.create_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a VM Image in the image repository that is associated with the
+specified subscription using a specified set of virtual hard disks.</p>
+<dl class="simple">
+<dt>vm_image:</dt><dd><p>An instance of VMImage class.</p>
+</dd>
+</dl>
+<p>vm_image.name: Required. Specifies the name of the image.
+vm_image.label: Required. Specifies an identifier for the image.
+vm_image.description: Optional. Specifies the description of the image.
+vm_image.os_disk_configuration:</p>
+<blockquote>
+<div><p>Required. Specifies configuration information for the operating
+system disk that is associated with the image.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>vm_image.os_disk_configuration.host_caching:</dt><dd><p>Optional. Specifies the caching behavior of the operating system disk.
+Possible values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>vm_image.os_disk_configuration.os_state:</dt><dd><p>Required. Specifies the state of the operating system in the image.
+Possible values are: Generalized, Specialized
+A Virtual Machine that is fully configured and running contains a
+Specialized operating system. A Virtual Machine on which the
+Sysprep command has been run with the generalize option contains a
+Generalized operating system.</p>
+</dd>
+<dt>vm_image.os_disk_configuration.os:</dt><dd><p>Required. Specifies the operating system type of the image.</p>
+</dd>
+<dt>vm_image.os_disk_configuration.media_link:</dt><dd><p>Required. Specifies the location of the blob in Windows Azure
+storage. The blob location belongs to a storage account in the
+subscription specified by the &lt;subscription-id&gt; value in the
+operation call.</p>
+</dd>
+<dt>vm_image.data_disk_configurations:</dt><dd><p>Optional. Specifies configuration information for the data disks
+that are associated with the image. A VM Image might not have data
+disks associated with it.</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].host_caching:</dt><dd><p>Optional. Specifies the caching behavior of the data disk.
+Possible values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].lun:</dt><dd><p>Optional if the lun for the disk is 0. Specifies the Logical Unit
+Number (LUN) for the data disk.</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].media_link:</dt><dd><p>Required. Specifies the location of the blob in Windows Azure
+storage. The blob location belongs to a storage account in the
+subscription specified by the &lt;subscription-id&gt; value in the
+operation call.</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].logical_size_in_gb:</dt><dd><p>Required. Specifies the size, in GB, of the data disk.</p>
+</dd>
+</dl>
+<p>vm_image.language: Optional. Specifies the language of the image.
+vm_image.image_family:</p>
+<blockquote>
+<div><p>Optional. Specifies a value that can be used to group VM Images.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>vm_image.recommended_vm_size:</dt><dd><p>Optional. Specifies the size to use for the Virtual Machine that
+is created from the VM Image.</p>
+</dd>
+<dt>vm_image.eula:</dt><dd><p>Optional. Specifies the End User License Agreement that is
+associated with the image. The value for this element is a string,
+but it is recommended that the value be a URL that points to a EULA.</p>
+</dd>
+<dt>vm_image.icon_uri:</dt><dd><p>Optional. Specifies the URI to the icon that is displayed for the
+image in the Management Portal.</p>
+</dd>
+<dt>vm_image.small_icon_uri:</dt><dd><p>Optional. Specifies the URI to the small icon that is displayed for
+the image in the Management Portal.</p>
+</dd>
+<dt>vm_image.privacy_uri:</dt><dd><p>Optional. Specifies the URI that points to a document that contains
+the privacy policy related to the image.</p>
+</dd>
+<dt>vm_image.published_date:</dt><dd><p>Optional. Specifies the date when the image was added to the image
+repository.</p>
+</dd>
+<dt>vm_image.show_in_gui:</dt><dd><p>Optional. Indicates whether the VM Images should be listed in the
+portal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_affinity_group">
+<code class="sig-name descname">delete_affinity_group</code><span class="sig-paren">(</span><em class="sig-param">affinity_group_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_affinity_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_affinity_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an affinity group in the specified subscription.</p>
+<dl class="simple">
+<dt>affinity_group_name:</dt><dd><p>The name of the affinity group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_data_disk">
+<code class="sig-name descname">delete_data_disk</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">lun</em>, <em class="sig-param">delete_vhd=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_data_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_data_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the specified data disk from a virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>lun:</dt><dd><p>The Logical Unit Number (LUN) for the disk.</p>
+</dd>
+<dt>delete_vhd:</dt><dd><p>Deletes the underlying vhd blob in Azure storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_deployment">
+<code class="sig-name descname">delete_deployment</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">delete_vhd=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_deployment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_disk">
+<code class="sig-name descname">delete_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_name</em>, <em class="sig-param">delete_vhd=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified data or operating system disk from your image
+repository.</p>
+<dl class="simple">
+<dt>disk_name:</dt><dd><p>The name of the disk to delete.</p>
+</dd>
+<dt>delete_vhd:</dt><dd><p>Deletes the underlying vhd blob in Azure storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_dns_server">
+<code class="sig-name descname">delete_dns_server</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">dns_server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_dns_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_dns_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a DNS server from a deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>dns_server_name:</dt><dd><p>Name of the DNS server that you want to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_hosted_service">
+<code class="sig-name descname">delete_hosted_service</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">complete=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_hosted_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_hosted_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified hosted service from Windows Azure.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>complete:</dt><dd><p>True if all OS/data disks and the source blobs for the disks should
+also be deleted from storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_management_certificate">
+<code class="sig-name descname">delete_management_certificate</code><span class="sig-paren">(</span><em class="sig-param">thumbprint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_management_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_management_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Delete Management Certificate operation deletes a certificate from
+the list of management certificates. Management certificates, which
+are also known as subscription certificates, authenticate clients
+attempting to connect to resources associated with your Windows Azure
+subscription.</p>
+<dl class="simple">
+<dt>thumbprint:</dt><dd><p>The thumb print that uniquely identifies the management
+certificate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_os_image">
+<code class="sig-name descname">delete_os_image</code><span class="sig-paren">(</span><em class="sig-param">image_name</em>, <em class="sig-param">delete_vhd=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_os_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_os_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified OS image from your image repository.</p>
+<dl class="simple">
+<dt>image_name:</dt><dd><p>The name of the image.</p>
+</dd>
+<dt>delete_vhd:</dt><dd><p>Deletes the underlying vhd blob in Azure storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_reserved_ip_address">
+<code class="sig-name descname">delete_reserved_ip_address</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_reserved_ip_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_reserved_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a reserved IP address from the specified subscription.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>Required. Name of the reserved IP address.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_role">
+<code class="sig-name descname">delete_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">complete=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>complete:</dt><dd><p>True if all OS/data disks and the source blobs for the disks should
+also be deleted from storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_role_instances">
+<code class="sig-name descname">delete_role_instances</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_instance_names</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_role_instances"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_role_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinstalls the operating system on instances of web roles or worker
+roles and initializes the storage resources that are used by them. If
+you do not want to initialize storage resources, you can use
+reimage_role_instance.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_instance_names:</dt><dd><p>List of role instance names.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_service_certificate">
+<code class="sig-name descname">delete_service_certificate</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">thumbalgorithm</em>, <em class="sig-param">thumbprint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_service_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_service_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a service certificate from the certificate store of a hosted
+service.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>thumbalgorithm:</dt><dd><p>The algorithm for the certificate’s thumbprint.</p>
+</dd>
+<dt>thumbprint:</dt><dd><p>The hexadecimal representation of the thumbprint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_storage_account">
+<code class="sig-name descname">delete_storage_account</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_storage_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_storage_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified storage account from Windows Azure.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_vm_image">
+<code class="sig-name descname">delete_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image_name</em>, <em class="sig-param">delete_vhd=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.delete_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.delete_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified VM Image from the image repository that is
+associated with the specified subscription.</p>
+<dl class="simple">
+<dt>vm_image_name:</dt><dd><p>The name of the image.</p>
+</dd>
+<dt>delete_vhd:</dt><dd><p>Deletes the underlying vhd blob in Azure storage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.disassociate_reserved_ip_address">
+<code class="sig-name descname">disassociate_reserved_ip_address</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">virtual_ip_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.disassociate_reserved_ip_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.disassociate_reserved_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disassociate an existing reservedIP from the given deployment.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>Required. Name of the reserved IP address.</p>
+</dd>
+<dt>service_name:</dt><dd><p>Required. Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>Required. Name of the deployment.</p>
+</dd>
+<dt>virtual_ip_name:</dt><dd><p>Optional. Name of the VirtualIP in case of multi Vip tenant.
+If this value is not specified default virtualIP is used
+for this operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_affinity_group_properties">
+<code class="sig-name descname">get_affinity_group_properties</code><span class="sig-paren">(</span><em class="sig-param">affinity_group_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_affinity_group_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_affinity_group_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the system properties associated with the specified affinity
+group.</p>
+<dl class="simple">
+<dt>affinity_group_name:</dt><dd><p>The name of the affinity group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_data_disk">
+<code class="sig-name descname">get_data_disk</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">lun</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_data_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_data_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the specified data disk from a virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>lun:</dt><dd><p>The Logical Unit Number (LUN) for the disk.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_deployment_by_name">
+<code class="sig-name descname">get_deployment_by_name</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_deployment_by_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_deployment_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns configuration information, status, and system properties for a
+deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_deployment_by_slot">
+<code class="sig-name descname">get_deployment_by_slot</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_slot</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_deployment_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_deployment_by_slot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns configuration information, status, and system properties for
+a deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_slot:</dt><dd><p>The environment to which the hosted service is deployed. Valid
+values are: staging, production</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_disk">
+<code class="sig-name descname">get_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a disk from your image repository.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_hosted_service_properties">
+<code class="sig-name descname">get_hosted_service_properties</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">embed_detail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_hosted_service_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_hosted_service_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves system properties for the specified hosted service. These
+properties include the service name and service type; the name of the
+affinity group to which the service belongs, or its location if it is
+not part of an affinity group; and optionally, information on the
+service’s deployments.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>embed_detail:</dt><dd><p>When True, the management service returns properties for all
+deployments of the service, as well as for the service itself.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_management_certificate">
+<code class="sig-name descname">get_management_certificate</code><span class="sig-paren">(</span><em class="sig-param">thumbprint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_management_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_management_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Get Management Certificate operation retrieves information about
+the management certificate with the specified thumbprint. Management
+certificates, which are also known as subscription certificates,
+authenticate clients attempting to connect to resources associated
+with your Windows Azure subscription.</p>
+<dl class="simple">
+<dt>thumbprint:</dt><dd><p>The thumbprint value of the certificate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_os_image">
+<code class="sig-name descname">get_os_image</code><span class="sig-paren">(</span><em class="sig-param">image_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_os_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_os_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an OS image from the image repository.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_os_image_details">
+<code class="sig-name descname">get_os_image_details</code><span class="sig-paren">(</span><em class="sig-param">image_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_os_image_details"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_os_image_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an OS image from the image repository, including replication
+progress.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_reserved_ip_address">
+<code class="sig-name descname">get_reserved_ip_address</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_reserved_ip_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_reserved_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves information about the specified reserved IP address.</p>
+<dl class="simple">
+<dt>name:</dt><dd><p>Required. Name of the reserved IP address.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_role">
+<code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_service_certificate">
+<code class="sig-name descname">get_service_certificate</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">thumbalgorithm</em>, <em class="sig-param">thumbprint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_service_certificate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_service_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the public data for the specified X.509 certificate associated
+with a hosted service.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>thumbalgorithm:</dt><dd><p>The algorithm for the certificate’s thumbprint.</p>
+</dd>
+<dt>thumbprint:</dt><dd><p>The hexadecimal representation of the thumbprint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_storage_account_keys">
+<code class="sig-name descname">get_storage_account_keys</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_storage_account_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_storage_account_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the primary and secondary access keys for the specified
+storage account.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_storage_account_properties">
+<code class="sig-name descname">get_storage_account_properties</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_storage_account_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_storage_account_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns system properties for the specified storage account.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_subscription">
+<code class="sig-name descname">get_subscription</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.get_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.get_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns account and resource allocation information on the specified
+subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_affinity_groups">
+<code class="sig-name descname">list_affinity_groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_affinity_groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_affinity_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the affinity groups associated with the specified subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_disks">
+<code class="sig-name descname">list_disks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_disks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_disks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of the disks in your image repository.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_hosted_services">
+<code class="sig-name descname">list_hosted_services</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_hosted_services"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_hosted_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the hosted services available under the current subscription.</p>
+<p>Note that you will receive a list of HostedService instances, without
+all details inside. For instance, deployments will be None. If you
+want deployments information for a specific host service, you have to
+call get_hosted_service_properties with embed_detail=True.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_locations">
+<code class="sig-name descname">list_locations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_locations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the data center locations that are valid for your
+subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_management_certificates">
+<code class="sig-name descname">list_management_certificates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_management_certificates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_management_certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>The List Management Certificates operation lists and returns basic
+information about all of the management certificates associated with
+the specified subscription. Management certificates, which are also
+known as subscription certificates, authenticate clients attempting to
+connect to resources associated with your Windows Azure subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_operating_system_families">
+<code class="sig-name descname">list_operating_system_families</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_operating_system_families"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_operating_system_families" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the guest operating system families available in Windows Azure,
+and also lists the operating system versions available for each family.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_operating_systems">
+<code class="sig-name descname">list_operating_systems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_operating_systems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_operating_systems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the versions of the guest operating system that are currently
+available in Windows Azure.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_os_images">
+<code class="sig-name descname">list_os_images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_os_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_os_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of the OS images from the image repository.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_reserved_ip_addresses">
+<code class="sig-name descname">list_reserved_ip_addresses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_reserved_ip_addresses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_reserved_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the IP addresses that have been reserved for the specified
+subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_resource_extension_versions">
+<code class="sig-name descname">list_resource_extension_versions</code><span class="sig-paren">(</span><em class="sig-param">publisher_name</em>, <em class="sig-param">extension_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_resource_extension_versions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_resource_extension_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the versions of a resource extension that are available to add
+to a Virtual Machine.</p>
+<dl class="simple">
+<dt>publisher_name:</dt><dd><p>Name of the resource extension publisher.</p>
+</dd>
+<dt>extension_name:</dt><dd><p>Name of the resource extension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_resource_extensions">
+<code class="sig-name descname">list_resource_extensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_resource_extensions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_resource_extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the resource extensions that are available to add to a
+Virtual Machine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_role_sizes">
+<code class="sig-name descname">list_role_sizes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_role_sizes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_role_sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the role sizes that are available under the specified
+subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_service_certificates">
+<code class="sig-name descname">list_service_certificates</code><span class="sig-paren">(</span><em class="sig-param">service_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_service_certificates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_service_certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the service certificates associated with the specified
+hosted service.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_storage_accounts">
+<code class="sig-name descname">list_storage_accounts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_storage_accounts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_storage_accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the storage accounts available under the current subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_subscription_operations">
+<code class="sig-name descname">list_subscription_operations</code><span class="sig-paren">(</span><em class="sig-param">start_time=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">object_id_filter=None</em>, <em class="sig-param">operation_result_filter=None</em>, <em class="sig-param">continuation_token=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_subscription_operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_subscription_operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>List subscription operations.</p>
+<p>start_time: Required. An ISO8601 date.
+end_time: Required. An ISO8601 date.
+object_id_filter: Optional. Returns subscription operations only for the specified object type and object ID
+operation_result_filter: Optional. Returns subscription operations only for the specified result status, either Succeeded, Failed, or InProgress.
+continuation_token: Optional.
+More information at:
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/gg715318.aspx">https://msdn.microsoft.com/en-us/library/azure/gg715318.aspx</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_subscriptions">
+<code class="sig-name descname">list_subscriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_subscriptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of subscriptions that you can access.</p>
+<p>You must make sure that the request that is made to the management
+service is secure using an Active Directory access token.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_virtual_network_sites">
+<code class="sig-name descname">list_virtual_network_sites</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_virtual_network_sites"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_virtual_network_sites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of the virtual networks.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_vm_images">
+<code class="sig-name descname">list_vm_images</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">publisher=None</em>, <em class="sig-param">category=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.list_vm_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.list_vm_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of the VM Images from the image repository that is
+associated with the specified subscription.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.reboot_role_instance">
+<code class="sig-name descname">reboot_role_instance</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_instance_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.reboot_role_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.reboot_role_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests a reboot of a role instance that is running in a deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_instance_name:</dt><dd><p>The name of the role instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.rebuild_role_instance">
+<code class="sig-name descname">rebuild_role_instance</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_instance_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.rebuild_role_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.rebuild_role_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinstalls the operating system on instances of web roles or worker
+roles and initializes the storage resources that are used by them. If
+you do not want to initialize storage resources, you can use
+reimage_role_instance.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_instance_name:</dt><dd><p>The name of the role instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.regenerate_storage_account_keys">
+<code class="sig-name descname">regenerate_storage_account_keys</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">key_type</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.regenerate_storage_account_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.regenerate_storage_account_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regenerates the primary or secondary access key for the specified
+storage account.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+<dt>key_type:</dt><dd><p>Specifies which key to regenerate. Valid values are:
+Primary, Secondary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.reimage_role_instance">
+<code class="sig-name descname">reimage_role_instance</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_instance_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.reimage_role_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.reimage_role_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests a reimage of a role instance that is running in a deployment.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_instance_name:</dt><dd><p>The name of the role instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.replicate_vm_image">
+<code class="sig-name descname">replicate_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image_name</em>, <em class="sig-param">regions</em>, <em class="sig-param">offer</em>, <em class="sig-param">sku</em>, <em class="sig-param">version</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.replicate_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.replicate_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replicate a VM image to multiple target locations. This operation
+is only for publishers. You have to be registered as image publisher
+with Microsoft Azure to be able to call this.</p>
+<dl class="simple">
+<dt>vm_image_name:</dt><dd><p>Specifies the name of the VM Image that is to be used for
+replication</p>
+</dd>
+<dt>regions:</dt><dd><p>Specified a list of regions to replicate the image to
+Note: The regions in the request body are not additive. If a VM
+Image has already been replicated to Regions A, B, and C, and
+a request is made to replicate to Regions A and D, the VM
+Image will remain in Region A, will be replicated in Region D,
+and will be unreplicated from Regions B and C</p>
+</dd>
+<dt>offer:</dt><dd><p>Specifies the publisher defined name of the offer. The allowed
+characters are uppercase or lowercase letters, digit,
+hypen(-), period (.).The maximum allowed length is 64 characters.</p>
+</dd>
+<dt>sku:</dt><dd><p>Specifies the publisher defined name of the Sku. The allowed
+characters are uppercase or lowercase letters, digit,
+hypen(-), period (.). The maximum allowed length is 64 characters.</p>
+</dd>
+<dt>version:</dt><dd><p>Specifies the publisher defined version of the image.
+The allowed characters are digit and period.
+Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;
+Example: ‘1.0.0’ or ‘1.1.0’ The 3 version number to
+follow standard of most of the RPs. See <a class="reference external" href="http://semver.org">http://semver.org</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.restart_role">
+<code class="sig-name descname">restart_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.restart_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.restart_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restarts the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.rollback_update_or_upgrade">
+<code class="sig-name descname">rollback_update_or_upgrade</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">mode</em>, <em class="sig-param">force</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.rollback_update_or_upgrade"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.rollback_update_or_upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels an in progress configuration change (update) or upgrade and
+returns the deployment to its state before the upgrade or
+configuration change was started.</p>
+<dl>
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>mode:</dt><dd><dl>
+<dt>Specifies whether the rollback should proceed automatically.</dt><dd><p>auto - The rollback proceeds without further user input.
+manual - You must call the Walk Upgrade Domain operation to</p>
+<blockquote>
+<div><p>apply the rollback to each upgrade domain.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>force:</dt><dd><p>Specifies whether the rollback should proceed even when it will
+cause local data to be lost from some role instances. True if the
+rollback should proceed; otherwise false if the rollback should
+fail.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.share_vm_image">
+<code class="sig-name descname">share_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image_name</em>, <em class="sig-param">permission</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.share_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.share_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Share an already replicated OS image. This operation is only for
+publishers. You have to be registered as image publisher with Windows
+Azure to be able to call this.</p>
+<dl class="simple">
+<dt>vm_image_name:</dt><dd><p>The name of the virtual machine image to share</p>
+</dd>
+<dt>permission:</dt><dd><p>The sharing permission: public, msdn, or private</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.shutdown_role">
+<code class="sig-name descname">shutdown_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">post_shutdown_action='Stopped'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.shutdown_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.shutdown_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>post_shutdown_action:</dt><dd><dl class="simple">
+<dt>Specifies how the Virtual Machine should be shut down. Values are:</dt><dd><dl class="simple">
+<dt>Stopped</dt><dd><p>Shuts down the Virtual Machine but retains the compute
+resources. You will continue to be billed for the resources
+that the stopped machine uses.</p>
+</dd>
+<dt>StoppedDeallocated</dt><dd><p>Shuts down the Virtual Machine and releases the compute
+resources. You are not billed for the compute resources that
+this Virtual Machine uses. If a static Virtual Network IP
+address is assigned to the Virtual Machine, it is reserved.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.shutdown_roles">
+<code class="sig-name descname">shutdown_roles</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_names</em>, <em class="sig-param">post_shutdown_action='Stopped'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.shutdown_roles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.shutdown_roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the specified virtual machines.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_names:</dt><dd><p>The names of the roles, as an enumerable of strings.</p>
+</dd>
+<dt>post_shutdown_action:</dt><dd><dl class="simple">
+<dt>Specifies how the Virtual Machine should be shut down. Values are:</dt><dd><dl class="simple">
+<dt>Stopped</dt><dd><p>Shuts down the Virtual Machine but retains the compute
+resources. You will continue to be billed for the resources
+that the stopped machine uses.</p>
+</dd>
+<dt>StoppedDeallocated</dt><dd><p>Shuts down the Virtual Machine and releases the compute
+resources. You are not billed for the compute resources that
+this Virtual Machine uses. If a static Virtual Network IP
+address is assigned to the Virtual Machine, it is reserved.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.start_role">
+<code class="sig-name descname">start_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.start_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.start_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.start_roles">
+<code class="sig-name descname">start_roles</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_names</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.start_roles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.start_roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the specified virtual machines.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_names:</dt><dd><p>The names of the roles, as an enumerable of strings.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.swap_deployment">
+<code class="sig-name descname">swap_deployment</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">production</em>, <em class="sig-param">source_deployment</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.swap_deployment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.swap_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates a virtual IP swap between the staging and production
+deployment environments for a service. If the service is currently
+running in the staging environment, it will be swapped to the
+production environment. If it is running in the production
+environment, it will be swapped to staging.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>production:</dt><dd><p>The name of the production deployment.</p>
+</dd>
+<dt>source_deployment:</dt><dd><p>The name of the source deployment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.unreplicate_vm_image">
+<code class="sig-name descname">unreplicate_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.unreplicate_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.unreplicate_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unreplicate a VM image from all regions This operation
+is only for publishers. You have to be registered as image publisher
+with Microsoft Azure to be able to call this</p>
+<dl class="simple">
+<dt>vm_image_name:</dt><dd><p>Specifies the name of the VM Image that is to be used for
+unreplication. The VM Image Name should be the user VM Image,
+not the published name of the VM Image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_affinity_group">
+<code class="sig-name descname">update_affinity_group</code><span class="sig-paren">(</span><em class="sig-param">affinity_group_name</em>, <em class="sig-param">label</em>, <em class="sig-param">description=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_affinity_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_affinity_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the label and/or the description for an affinity group for the
+specified subscription.</p>
+<dl class="simple">
+<dt>affinity_group_name:</dt><dd><p>The name of the affinity group.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the affinity group. The name can be up to 100 characters
+in length.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the affinity group. The description can be up to
+1024 characters in length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_data_disk">
+<code class="sig-name descname">update_data_disk</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">lun</em>, <em class="sig-param">host_caching=None</em>, <em class="sig-param">media_link=None</em>, <em class="sig-param">updated_lun=None</em>, <em class="sig-param">disk_label=None</em>, <em class="sig-param">disk_name=None</em>, <em class="sig-param">logical_disk_size_in_gb=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_data_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_data_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the specified data disk attached to the specified virtual
+machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>lun:</dt><dd><p>Specifies the Logical Unit Number (LUN) for the disk. The LUN
+specifies the slot in which the data drive appears when mounted
+for usage by the virtual machine. Valid LUN values are 0 through
+15.</p>
+</dd>
+<dt>host_caching:</dt><dd><p>Specifies the platform caching behavior of data disk blob for
+read/write efficiency. The default vault is ReadOnly. Possible
+values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>media_link:</dt><dd><p>Specifies the location of the blob in Windows Azure blob store
+where the media for the disk is located. The blob location must
+belong to the storage account in the subscription specified by
+the &lt;subscription-id&gt; value in the operation call. Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>updated_lun:</dt><dd><p>Specifies the Logical Unit Number (LUN) for the disk. The LUN
+specifies the slot in which the data drive appears when mounted
+for usage by the virtual machine. Valid LUN values are 0 through 15.</p>
+</dd>
+<dt>disk_label:</dt><dd><p>Specifies the description of the data disk. When you attach a disk,
+either by directly referencing a media using the MediaLink element
+or specifying the target disk size, you can use the DiskLabel
+element to customize the name property of the target data disk.</p>
+</dd>
+<dt>disk_name:</dt><dd><p>Specifies the name of the disk. Windows Azure uses the specified
+disk to create the data disk for the machine and populates this
+field with the disk name.</p>
+</dd>
+<dt>logical_disk_size_in_gb:</dt><dd><p>Specifies the size, in GB, of an empty disk to be attached to the
+role. The disk can be created as part of disk attach or create VM
+role call by specifying the value for this property. Windows Azure
+creates the empty disk based on size preference and attaches the
+newly created disk to the Role.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_deployment_status">
+<code class="sig-name descname">update_deployment_status</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">status</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_deployment_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_deployment_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates a change in deployment status.</p>
+<dl>
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>status:</dt><dd><p>The change to initiate to the deployment status. Possible values
+include:</p>
+<blockquote>
+<div><p>Running, Suspended</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_disk">
+<code class="sig-name descname">update_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_name</em>, <em class="sig-param">has_operating_system=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">media_link=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an existing disk in your image repository.</p>
+<dl class="simple">
+<dt>disk_name:</dt><dd><p>The name of the disk to update.</p>
+</dd>
+<dt>has_operating_system:</dt><dd><p>Deprecated.</p>
+</dd>
+<dt>label:</dt><dd><p>Specifies the description of the disk.</p>
+</dd>
+<dt>media_link:</dt><dd><p>Deprecated.</p>
+</dd>
+<dt>name:</dt><dd><p>Deprecated.</p>
+</dd>
+<dt>os:</dt><dd><p>Deprecated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_dns_server">
+<code class="sig-name descname">update_dns_server</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">dns_server_name</em>, <em class="sig-param">address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_dns_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_dns_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the ip address of a DNS server.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>dns_server_name:</dt><dd><p>Specifies the name of the DNS server.</p>
+</dd>
+<dt>address:</dt><dd><p>Specifies the IP address of the DNS server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_hosted_service">
+<code class="sig-name descname">update_hosted_service</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">label=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">extended_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_hosted_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_hosted_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the label and/or the description for a hosted service in
+Windows Azure.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the hosted service. The name may be up to 100 characters
+in length. You must specify a value for either Label or
+Description, or for both. It is recommended that the label be
+unique within the subscription. The name can be used
+identify the hosted service for your tracking purposes.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the hosted service. The description may be up to
+1024 characters in length. You must specify a value for either
+Label or Description, or for both.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_os_image">
+<code class="sig-name descname">update_os_image</code><span class="sig-paren">(</span><em class="sig-param">image_name</em>, <em class="sig-param">label</em>, <em class="sig-param">media_link</em>, <em class="sig-param">name</em>, <em class="sig-param">os</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_os_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_os_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an OS image that in your image repository.</p>
+<dl class="simple">
+<dt>image_name:</dt><dd><p>The name of the image to update.</p>
+</dd>
+<dt>label:</dt><dd><p>Specifies the friendly name of the image to be updated. You cannot
+use this operation to update images provided by the Windows Azure
+platform.</p>
+</dd>
+<dt>media_link:</dt><dd><p>Specifies the location of the blob in Windows Azure blob store
+where the media for the image is located. The blob location must
+belong to a storage account in the subscription specified by the
+&lt;subscription-id&gt; value in the operation call. Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>name:</dt><dd><p>Specifies a name for the OS image that Windows Azure uses to
+identify the image when creating one or more VM Roles.</p>
+</dd>
+<dt>os:</dt><dd><p>The operating system type of the OS image. Possible values are:
+Linux, Windows</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_os_image_from_image_reference">
+<code class="sig-name descname">update_os_image_from_image_reference</code><span class="sig-paren">(</span><em class="sig-param">image_name</em>, <em class="sig-param">os_image</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_os_image_from_image_reference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_os_image_from_image_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates metadata elements from a given OS image reference.</p>
+<dl class="simple">
+<dt>image_name:</dt><dd><p>The name of the image to update.</p>
+</dd>
+<dt>os_image:</dt><dd><p>An instance of OSImage class.</p>
+</dd>
+</dl>
+<p>os_image.label: Optional. Specifies an identifier for the image.
+os_image.description: Optional. Specifies the description of the image.
+os_image.language: Optional. Specifies the language of the image.
+os_image.image_family:</p>
+<blockquote>
+<div><p>Optional. Specifies a value that can be used to group VM Images.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>os_image.recommended_vm_size:</dt><dd><p>Optional. Specifies the size to use for the Virtual Machine that
+is created from the VM Image.</p>
+</dd>
+<dt>os_image.eula:</dt><dd><p>Optional. Specifies the End User License Agreement that is
+associated with the image. The value for this element is a string,
+but it is recommended that the value be a URL that points to a EULA.</p>
+</dd>
+<dt>os_image.icon_uri:</dt><dd><p>Optional. Specifies the URI to the icon that is displayed for the
+image in the Management Portal.</p>
+</dd>
+<dt>os_image.small_icon_uri:</dt><dd><p>Optional. Specifies the URI to the small icon that is displayed for
+the image in the Management Portal.</p>
+</dd>
+<dt>os_image.privacy_uri:</dt><dd><p>Optional. Specifies the URI that points to a document that contains
+the privacy policy related to the image.</p>
+</dd>
+<dt>os_image.published_date:</dt><dd><p>Optional. Specifies the date when the image was added to the image
+repository.</p>
+</dd>
+<dt>os.image.media_link:</dt><dd><p>Required: Specifies the location of the blob in Windows Azure
+blob store where the media for the image is located. The blob
+location must belong to a storage account in the subscription
+specified by the &lt;subscription-id&gt; value in the operation call.
+Example:
+<a class="reference external" href="http://example.blob.core.windows.net/disks/mydisk.vhd">http://example.blob.core.windows.net/disks/mydisk.vhd</a></p>
+</dd>
+<dt>os_image.name:</dt><dd><p>Specifies a name for the OS image that Windows Azure uses to
+identify the image when creating one or more VM Roles.</p>
+</dd>
+<dt>os_image.os:</dt><dd><p>The operating system type of the OS image. Possible values are:
+Linux, Windows</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_role">
+<code class="sig-name descname">update_role</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">role_name</em>, <em class="sig-param">os_virtual_hard_disk=None</em>, <em class="sig-param">network_config=None</em>, <em class="sig-param">availability_set_name=None</em>, <em class="sig-param">data_virtual_hard_disks=None</em>, <em class="sig-param">role_size=None</em>, <em class="sig-param">role_type='PersistentVMRole'</em>, <em class="sig-param">resource_extension_references=None</em>, <em class="sig-param">provision_guest_agent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the specified virtual machine.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>The name of the service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>role_name:</dt><dd><p>The name of the role.</p>
+</dd>
+<dt>os_virtual_hard_disk:</dt><dd><p>Contains the parameters Windows Azure uses to create the operating
+system disk for the virtual machine.</p>
+</dd>
+<dt>network_config:</dt><dd><p>Encapsulates the metadata required to create the virtual network
+configuration for a virtual machine. If you do not include a
+network configuration set you will not be able to access the VM
+through VIPs over the internet. If your virtual machine belongs to
+a virtual network you can not specify which subnet address space
+it resides under.</p>
+</dd>
+<dt>availability_set_name:</dt><dd><p>Specifies the name of an availability set to which to add the
+virtual machine. This value controls the virtual machine allocation
+in the Windows Azure environment. Virtual machines specified in the
+same availability set are allocated to different nodes to maximize
+availability.</p>
+</dd>
+<dt>data_virtual_hard_disks:</dt><dd><p>Contains the parameters Windows Azure uses to create a data disk
+for a virtual machine.</p>
+</dd>
+<dt>role_size:</dt><dd><p>The size of the virtual machine to allocate. The default value is
+Small. Possible values are: ExtraSmall, Small, Medium, Large,
+ExtraLarge. The specified value must be compatible with the disk
+selected in the OSVirtualHardDisk values.</p>
+</dd>
+<dt>role_type:</dt><dd><p>The type of the role for the virtual machine. The only supported
+value is PersistentVMRole.</p>
+</dd>
+<dt>resource_extension_references:</dt><dd><p>Optional. Contains a collection of resource extensions that are to
+be installed on the Virtual Machine. This element is used if
+provision_guest_agent is set to True.</p>
+</dd>
+<dt>provision_guest_agent:</dt><dd><p>Optional. Indicates whether the VM Agent is installed on the
+Virtual Machine. To run a resource extension in a Virtual Machine,
+this service must be installed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_storage_account">
+<code class="sig-name descname">update_storage_account</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">description=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">geo_replication_enabled=None</em>, <em class="sig-param">extended_properties=None</em>, <em class="sig-param">account_type='Standard_GRS'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_storage_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_storage_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the label, the description, and enables or disables the
+geo-replication status for a storage account in Windows Azure.</p>
+<dl>
+<dt>service_name:</dt><dd><p>Name of the storage service account.</p>
+</dd>
+<dt>description:</dt><dd><p>A description for the storage account. The description may be up
+to 1024 characters in length.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the storage account. The name may be up to 100
+characters in length. The name can be used to identify the storage
+account for your tracking purposes.</p>
+</dd>
+<dt>geo_replication_enabled:</dt><dd><p>Deprecated. Replaced by the account_type parameter.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+<dt>account_type:</dt><dd><p>Specifies whether the account supports locally-redundant storage,
+geo-redundant storage, zone-redundant storage, or read access
+geo-redundant storage.
+Possible values are:</p>
+<blockquote>
+<div><p>Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_vm_image">
+<code class="sig-name descname">update_vm_image</code><span class="sig-paren">(</span><em class="sig-param">vm_image_name</em>, <em class="sig-param">vm_image</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.update_vm_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.update_vm_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a VM Image in the image repository that is associated with the
+specified subscription.</p>
+<dl class="simple">
+<dt>vm_image_name:</dt><dd><p>Name of image to update.</p>
+</dd>
+<dt>vm_image:</dt><dd><p>An instance of VMImage class.</p>
+</dd>
+</dl>
+<p>vm_image.label: Optional. Specifies an identifier for the image.
+vm_image.os_disk_configuration:</p>
+<blockquote>
+<div><p>Required. Specifies configuration information for the operating
+system disk that is associated with the image.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>vm_image.os_disk_configuration.host_caching:</dt><dd><p>Optional. Specifies the caching behavior of the operating system disk.
+Possible values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>vm_image.data_disk_configurations:</dt><dd><p>Optional. Specifies configuration information for the data disks
+that are associated with the image. A VM Image might not have data
+disks associated with it.</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].name:</dt><dd><p>Required. Specifies the name of the data disk.</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].host_caching:</dt><dd><p>Optional. Specifies the caching behavior of the data disk.
+Possible values are: None, ReadOnly, ReadWrite</p>
+</dd>
+<dt>vm_image.data_disk_configurations[].lun:</dt><dd><p>Optional if the lun for the disk is 0. Specifies the Logical Unit
+Number (LUN) for the data disk.</p>
+</dd>
+</dl>
+<p>vm_image.description: Optional. Specifies the description of the image.
+vm_image.language: Optional. Specifies the language of the image.
+vm_image.image_family:</p>
+<blockquote>
+<div><p>Optional. Specifies a value that can be used to group VM Images.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>vm_image.recommended_vm_size:</dt><dd><p>Optional. Specifies the size to use for the Virtual Machine that
+is created from the VM Image.</p>
+</dd>
+<dt>vm_image.eula:</dt><dd><p>Optional. Specifies the End User License Agreement that is
+associated with the image. The value for this element is a string,
+but it is recommended that the value be a URL that points to a EULA.</p>
+</dd>
+<dt>vm_image.icon_uri:</dt><dd><p>Optional. Specifies the URI to the icon that is displayed for the
+image in the Management Portal.</p>
+</dd>
+<dt>vm_image.small_icon_uri:</dt><dd><p>Optional. Specifies the URI to the small icon that is displayed for
+the image in the Management Portal.</p>
+</dd>
+<dt>vm_image.privacy_uri:</dt><dd><p>Optional. Specifies the URI that points to a document that contains
+the privacy policy related to the image.</p>
+</dd>
+<dt>vm_image.published_date:</dt><dd><p>Optional. Specifies the date when the image was added to the image
+repository.</p>
+</dd>
+<dt>vm_image.show_in_gui:</dt><dd><p>Optional. Indicates whether the VM Images should be listed in the
+portal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.upgrade_deployment">
+<code class="sig-name descname">upgrade_deployment</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">mode</em>, <em class="sig-param">package_url</em>, <em class="sig-param">configuration</em>, <em class="sig-param">label</em>, <em class="sig-param">force</em>, <em class="sig-param">role_to_upgrade=None</em>, <em class="sig-param">extended_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.upgrade_deployment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.upgrade_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates an upgrade.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>mode:</dt><dd><p>If set to Manual, WalkUpgradeDomain must be called to apply the
+update. If set to Auto, the Windows Azure platform will
+automatically apply the update To each upgrade domain for the
+service. Possible values are: Auto, Manual</p>
+</dd>
+<dt>package_url:</dt><dd><p>A URL that refers to the location of the service package in the
+Blob service. The service package can be located either in a
+storage account beneath the same subscription or a Shared Access
+Signature (SAS) URI from any storage account.</p>
+</dd>
+<dt>configuration:</dt><dd><p>The base-64 encoded service configuration file for the deployment.</p>
+</dd>
+<dt>label:</dt><dd><p>A name for the hosted service. The name can be up to 100 characters
+in length. It is recommended that the label be unique within the
+subscription. The name can be used to identify the hosted service
+for your tracking purposes.</p>
+</dd>
+<dt>force:</dt><dd><p>Specifies whether the rollback should proceed even when it will
+cause local data to be lost from some role instances. True if the
+rollback should proceed; otherwise false if the rollback should
+fail.</p>
+</dd>
+<dt>role_to_upgrade:</dt><dd><p>The name of the specific role to upgrade.</p>
+</dd>
+<dt>extended_properties:</dt><dd><p>Dictionary containing name/value pairs of storage account
+properties. You can have a maximum of 50 extended property
+name/value pairs. The maximum length of the Name element is 64
+characters, only alphanumeric characters and underscores are valid
+in the Name, and the name must start with a letter. The value has
+a maximum length of 255 characters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicemanagement.servicemanagementservice.ServiceManagementService.walk_upgrade_domain">
+<code class="sig-name descname">walk_upgrade_domain</code><span class="sig-paren">(</span><em class="sig-param">service_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">upgrade_domain</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicemanagementservice.html#ServiceManagementService.walk_upgrade_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicemanagementservice.ServiceManagementService.walk_upgrade_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the next upgrade domain to be walked during manual in-place
+upgrade or configuration change.</p>
+<dl class="simple">
+<dt>service_name:</dt><dd><p>Name of the hosted service.</p>
+</dd>
+<dt>deployment_name:</dt><dd><p>The name of the deployment.</p>
+</dd>
+<dt>upgrade_domain:</dt><dd><p>An integer value that identifies the upgrade domain to walk.
+Upgrade domains are identified with a zero-based index: the first
+upgrade domain has an ID of 0, the second has an ID of 1, and so on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.servicemanagement.sqldatabasemanagementservice.html" class="btn btn-neutral float-right" title="azure.servicemanagement.sqldatabasemanagementservice module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.servicemanagement.servicemanagementclient.html" class="btn btn-neutral float-left" title="azure.servicemanagement.servicemanagementclient module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

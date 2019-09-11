@@ -1,0 +1,1025 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cosmos.database &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.cosmos.database</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.cosmos.database</h1><div class="highlight"><pre>
+<span></span><span class="c1"># The MIT License (MIT)</span>
+<span class="c1"># Copyright (c) 2014 Microsoft Corporation</span>
+
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="c1"># in the Software without restriction, including without limitation the rights</span>
+<span class="c1"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="c1"># copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+
+<span class="c1"># The above copyright notice and this permission notice shall be included in all</span>
+<span class="c1"># copies or substantial portions of the Software.</span>
+
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="c1"># SOFTWARE.</span>
+
+<span class="sd">&quot;&quot;&quot;Create, read, update and delete containers in the Azure Cosmos DB SQL API service.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">azure.core.tracing.decorator</span> <span class="k">import</span> <span class="n">distributed_trace</span>  <span class="c1"># type: ignore</span>
+
+<span class="kn">from</span> <span class="nn">._cosmos_client_connection</span> <span class="k">import</span> <span class="n">CosmosClientConnection</span>
+<span class="kn">from</span> <span class="nn">._base</span> <span class="k">import</span> <span class="n">build_options</span>
+<span class="kn">from</span> <span class="nn">.container</span> <span class="k">import</span> <span class="n">ContainerProxy</span>
+<span class="kn">from</span> <span class="nn">.offer</span> <span class="k">import</span> <span class="n">Offer</span>
+<span class="kn">from</span> <span class="nn">.http_constants</span> <span class="k">import</span> <span class="n">StatusCodes</span>
+<span class="kn">from</span> <span class="nn">.errors</span> <span class="k">import</span> <span class="n">CosmosResourceNotFoundError</span>
+<span class="kn">from</span> <span class="nn">.user</span> <span class="k">import</span> <span class="n">UserProxy</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;DatabaseProxy&quot;</span><span class="p">,)</span>
+
+<span class="c1"># pylint: disable=protected-access</span>
+<span class="c1"># pylint: disable=missing-client-constructor-parameter-credential,missing-client-constructor-parameter-kwargs</span>
+
+
+<div class="viewcode-block" id="DatabaseProxy"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy">[docs]</a><span class="k">class</span> <span class="nc">DatabaseProxy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An interface to interact with a specific database.</span>
+<span class="sd">    This class should not be instantiated directly, use :func:`CosmosClient.get_database_client` method.</span>
+
+<span class="sd">    A database contains one or more containers, each of which can contain items,</span>
+<span class="sd">    stored procedures, triggers, and user-defined functions.</span>
+
+<span class="sd">    A database can also have associated users, each of which configured with</span>
+<span class="sd">    a set of permissions for accessing certain containers, stored procedures,</span>
+<span class="sd">    triggers, user defined functions, or items.</span>
+
+<span class="sd">    :ivar id: The ID (name) of the database.</span>
+
+<span class="sd">    An Azure Cosmos DB SQL API database has the following system-generated properties; these properties are read-only:</span>
+
+<span class="sd">    * `_rid`:   The resource ID.</span>
+<span class="sd">    * `_ts`:    When the resource was last updated. The value is a timestamp.</span>
+<span class="sd">    * `_self`:	The unique addressable URI for the resource.</span>
+<span class="sd">    * `_etag`:	The resource etag required for optimistic concurrency control.</span>
+<span class="sd">    * `_colls`:	The addressable path of the collections resource.</span>
+<span class="sd">    * `_users`:	The addressable path of the users resource.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_connection</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># pylint: disable=redefined-builtin</span>
+        <span class="c1"># type: (CosmosClientConnection, str, Dict[str, Any]) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param ClientSession client_connection: Client from which this database was retrieved.</span>
+<span class="sd">        :param str id: ID (name) of the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span> <span class="o">=</span> <span class="n">client_connection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;dbs/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="o">=</span> <span class="n">properties</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_container_id</span><span class="p">(</span><span class="n">container_or_id</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, ContainerProxy, Dict[str, Any]]) -&gt; str</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">container_or_id</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">container_or_id</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;ContainerProxy&quot;</span><span class="p">,</span> <span class="n">container_or_id</span><span class="p">)</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;Dict[str, str]&quot;</span><span class="p">,</span> <span class="n">container_or_id</span><span class="p">)[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_container_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">container_or_id</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, ContainerProxy, Dict[str, Any]]) -&gt; str</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/colls/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_container_id</span><span class="p">(</span><span class="n">container_or_id</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_get_user_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_or_id</span><span class="p">):</span>
+        <span class="c1"># type: (Union[UserProxy, str, Dict[str, Any]]) -&gt; str</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user_or_id</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="k">return</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/users/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">user_or_id</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;UserProxy&quot;</span><span class="p">,</span> <span class="n">user_or_id</span><span class="p">)</span><span class="o">.</span><span class="n">user_link</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/users/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;Dict[str, str]&quot;</span><span class="p">,</span> <span class="n">user_or_id</span><span class="p">)[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_get_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Dict[str, Any]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span>
+
+<div class="viewcode-block" id="DatabaseProxy.read"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.read">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[bool], Any) -&gt; Dict[str, Any]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read the database properties.</span>
+
+<span class="sd">        :param database: The ID (name), dict representing the properties or :class:`DatabaseProxy`</span>
+<span class="sd">            instance of the database to read.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param bool populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :rtype: Dict[Str, Any]</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: If the given database couldn&#39;t be retrieved.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO this helper function should be extracted from CosmosClient</span>
+        <span class="kn">from</span> <span class="nn">.cosmos_client</span> <span class="k">import</span> <span class="n">CosmosClient</span>
+
+        <span class="n">database_link</span> <span class="o">=</span> <span class="n">CosmosClient</span><span class="o">.</span><span class="n">_get_database_link</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReadDatabase</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s1">&#39;Dict[str, Any]&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.create_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.create_container">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">create_container</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">,</span>  <span class="c1"># type: str  # pylint: disable=redefined-builtin</span>
+        <span class="n">partition_key</span><span class="p">,</span>  <span class="c1"># type: Any</span>
+        <span class="n">indexing_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="n">default_ttl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+        <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+        <span class="n">offer_throughput</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+        <span class="n">unique_key_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="n">conflict_resolution_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; ContainerProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new container with the given ID (name).</span>
+
+<span class="sd">        If a container with the given ID already exists, a CosmosResourceExistsError is raised.</span>
+
+<span class="sd">        :param id: ID (name) of container to create.</span>
+<span class="sd">        :param partition_key: The partition key to use for the container.</span>
+<span class="sd">        :param indexing_policy: The indexing policy to apply to the container.</span>
+<span class="sd">        :param default_ttl: Default time to live (TTL) for items in the container. If unspecified, items do not expire.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param access_condition: Conditions Associated with the request.</span>
+<span class="sd">        :param populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param offer_throughput: The provisioned throughput for this offer.</span>
+<span class="sd">        :param unique_key_policy: The unique key policy to apply to the container.</span>
+<span class="sd">        :param conflict_resolution_policy: The conflict resolution policy to apply to the container.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: A `ContainerProxy` instance representing the new container.</span>
+<span class="sd">        :raise CosmosHttpResponseError: The container creation failed.</span>
+<span class="sd">        :rtype: ~azure.cosmos.container.ContainerProxy</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START create_container]</span>
+<span class="sd">            :end-before: [END create_container]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: Create a container with default settings:</span>
+<span class="sd">            :name: create_container</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START create_container_with_settings]</span>
+<span class="sd">            :end-before: [END create_container_with_settings]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: Create a container with specific settings; in this case, a custom partition key:</span>
+<span class="sd">            :name: create_container_with_settings</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">definition</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>  <span class="c1"># type: Dict[str, Any]</span>
+        <span class="k">if</span> <span class="n">partition_key</span><span class="p">:</span>
+            <span class="n">definition</span><span class="p">[</span><span class="s2">&quot;partitionKey&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">partition_key</span>
+        <span class="k">if</span> <span class="n">indexing_policy</span><span class="p">:</span>
+            <span class="n">definition</span><span class="p">[</span><span class="s2">&quot;indexingPolicy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">indexing_policy</span>
+        <span class="k">if</span> <span class="n">default_ttl</span><span class="p">:</span>
+            <span class="n">definition</span><span class="p">[</span><span class="s2">&quot;defaultTtl&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">default_ttl</span>
+        <span class="k">if</span> <span class="n">unique_key_policy</span><span class="p">:</span>
+            <span class="n">definition</span><span class="p">[</span><span class="s2">&quot;uniqueKeyPolicy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_key_policy</span>
+        <span class="k">if</span> <span class="n">conflict_resolution_policy</span><span class="p">:</span>
+            <span class="n">definition</span><span class="p">[</span><span class="s2">&quot;conflictResolutionPolicy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">conflict_resolution_policy</span>
+
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+        <span class="k">if</span> <span class="n">offer_throughput</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_options</span><span class="p">[</span><span class="s2">&quot;offerThroughput&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">offer_throughput</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">CreateContainer</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="n">definition</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ContainerProxy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.delete_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.delete_container">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">delete_container</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">container</span><span class="p">,</span>  <span class="c1"># type: Union[str, ContainerProxy, Dict[str, Any]]</span>
+        <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete the container</span>
+
+<span class="sd">        :param container: The ID (name) of the container to delete. You can either</span>
+<span class="sd">            pass in the ID of the container to delete, a :class:`ContainerProxy` instance or</span>
+<span class="sd">            a dict representing the properties of the container.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param access_condition: Conditions Associated with the request.</span>
+<span class="sd">        :param populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :raise CosmosHttpResponseError: If the container couldn&#39;t be deleted.</span>
+<span class="sd">        :rtype: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+
+        <span class="n">collection_link</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_container_link</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">DeleteContainer</span><span class="p">(</span><span class="n">collection_link</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.get_container_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.get_container_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_container_client</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">container</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, ContainerProxy, Dict[str, Any]]) -&gt; ContainerProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the specified `ContainerProxy`, or a container with specified ID (name).</span>
+
+<span class="sd">        :param container: The ID (name) of the container, a :class:`ContainerProxy` instance,</span>
+<span class="sd">            or a dict representing the properties of the container to be retrieved.</span>
+<span class="sd">        :rtype: ~azure.cosmos.container.ContainerProxy</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START get_container]</span>
+<span class="sd">            :end-before: [END get_container]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: Get an existing container, handling a failure if encountered:</span>
+<span class="sd">            :name: get_container</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">container</span><span class="p">,</span> <span class="n">ContainerProxy</span><span class="p">):</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">container</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">container</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">container</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">container</span>
+
+        <span class="k">return</span> <span class="n">ContainerProxy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">id_value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.list_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.list_containers">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">list_containers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Optional[bool], Any) -&gt; Iterable[Dict[str, Any]]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List the containers in the database.</span>
+
+<span class="sd">        :param max_item_count: Max number of items to be returned in the enumeration operation.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param feed_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: An Iterable of container properties (dicts).</span>
+<span class="sd">        :rtype: Iterable[dict[str, Any]]</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START list_containers]</span>
+<span class="sd">            :end-before: [END list_containers]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: List all containers in the database:</span>
+<span class="sd">            :name: list_containers</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">feed_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">max_item_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;maxItemCount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_item_count</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReadContainers</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.query_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.query_containers">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">query_containers</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[str]</span>
+        <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[List[str]]</span>
+        <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+        <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; Iterable[Dict[str, Any]]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List properties for containers in the current database.</span>
+
+<span class="sd">        :param query: The Azure Cosmos DB SQL query to execute.</span>
+<span class="sd">        :param parameters: Optional array of parameters to the query. Ignored if no query is provided.</span>
+<span class="sd">        :param max_item_count: Max number of items to be returned in the enumeration operation.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param feed_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: An Iterable of container properties (dicts).</span>
+<span class="sd">        :rtype: Iterable[dict[str, Any]]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">feed_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">max_item_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;maxItemCount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_item_count</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">QueryContainers</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span>
+            <span class="n">query</span><span class="o">=</span><span class="n">query</span> <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">dict</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">),</span>
+            <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.replace_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.replace_container">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">replace_container</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">container</span><span class="p">,</span>  <span class="c1"># type: Union[str, ContainerProxy, Dict[str, Any]]</span>
+        <span class="n">partition_key</span><span class="p">,</span>  <span class="c1"># type: Any</span>
+        <span class="n">indexing_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="n">default_ttl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[int]</span>
+        <span class="n">conflict_resolution_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[Dict[str, Any]]</span>
+        <span class="n">populate_query_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># type: Optional[bool]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; ContainerProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reset the properties of the container. Property changes are persisted immediately.</span>
+<span class="sd">        Any properties not specified will be reset to their default values.</span>
+
+<span class="sd">        :param container: The ID (name), dict representing the properties or</span>
+<span class="sd">            :class:`ContainerProxy` instance of the container to be replaced.</span>
+<span class="sd">        :param partition_key: The partition key to use for the container.</span>
+<span class="sd">        :param indexing_policy: The indexing policy to apply to the container.</span>
+<span class="sd">        :param default_ttl: Default time to live (TTL) for items in the container.</span>
+<span class="sd">            If unspecified, items do not expire.</span>
+<span class="sd">        :param conflict_resolution_policy: The conflict resolution policy to apply to the container.</span>
+<span class="sd">        :param session_token: Token for use with Session consistency.</span>
+<span class="sd">        :param access_condition: Conditions Associated with the request.</span>
+<span class="sd">        :param initial_headers: Initial headers to be sent as part of the request.</span>
+<span class="sd">        :param populate_query_metrics: Enable returning query metrics in response headers.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: Raised if the container couldn&#39;t be replaced. This includes</span>
+<span class="sd">            if the container with given id does not exist.</span>
+<span class="sd">        :returns: A `ContainerProxy` instance representing the container after replace completed.</span>
+<span class="sd">        :rtype: ~azure.cosmos.container.ContainerProxy</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START reset_container_properties]</span>
+<span class="sd">            :end-before: [END reset_container_properties]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: Reset the TTL property on a container, and display the updated properties:</span>
+<span class="sd">            :name: reset_container_properties</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">populate_query_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_options</span><span class="p">[</span><span class="s2">&quot;populateQueryMetrics&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">populate_query_metrics</span>
+
+        <span class="n">container_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_container_id</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
+        <span class="n">container_link</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_container_link</span><span class="p">(</span><span class="n">container_id</span><span class="p">)</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">key</span><span class="p">:</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">container_id</span><span class="p">,</span>
+                <span class="s2">&quot;partitionKey&quot;</span><span class="p">:</span> <span class="n">partition_key</span><span class="p">,</span>
+                <span class="s2">&quot;indexingPolicy&quot;</span><span class="p">:</span> <span class="n">indexing_policy</span><span class="p">,</span>
+                <span class="s2">&quot;defaultTtl&quot;</span><span class="p">:</span> <span class="n">default_ttl</span><span class="p">,</span>
+                <span class="s2">&quot;conflictResolutionPolicy&quot;</span><span class="p">:</span> <span class="n">conflict_resolution_policy</span><span class="p">,</span>
+            <span class="p">}</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">}</span>
+
+        <span class="n">container_properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReplaceContainer</span><span class="p">(</span>
+            <span class="n">container_link</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">container_properties</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ContainerProxy</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">container_properties</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="n">container_properties</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.list_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.list_users">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">list_users</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Any) -&gt; Iterable[Dict[str, Any]]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all users in the container.</span>
+
+<span class="sd">        :param max_item_count: Max number of users to be returned in the enumeration operation.</span>
+<span class="sd">        :param feed_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: An Iterable of user properties (dicts).</span>
+<span class="sd">        :rtype: Iterable[dict[str, Any]]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">feed_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">max_item_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;maxItemCount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_item_count</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReadUsers</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.query_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.query_users">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">query_users</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (str, Optional[List[str]], Optional[int], Any) -&gt; Iterable[Dict[str, Any]]</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return all users matching the given `query`.</span>
+
+<span class="sd">        :param query: The Azure Cosmos DB SQL query to execute.</span>
+<span class="sd">        :param parameters: Optional array of parameters to the query. Ignored if no query is provided.</span>
+<span class="sd">        :param max_item_count: Max number of users to be returned in the enumeration operation.</span>
+<span class="sd">        :param feed_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: An Iterable of user properties (dicts).</span>
+<span class="sd">        :rtype: Iterable[str, Any]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">feed_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">max_item_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">feed_options</span><span class="p">[</span><span class="s2">&quot;maxItemCount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_item_count</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">QueryUsers</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span>
+            <span class="n">query</span><span class="o">=</span><span class="n">query</span> <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">dict</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">),</span>
+            <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.get_user_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.get_user_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_client</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, UserProxy, Dict[str, Any]]) -&gt; UserProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the user identified by `user`.</span>
+
+<span class="sd">        :param user: The ID (name), dict representing the properties or :class:`UserProxy`</span>
+<span class="sd">            instance of the user to be retrieved.</span>
+<span class="sd">        :returns: A `UserProxy` instance representing the retrieved user.</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: If the given user couldn&#39;t be retrieved.</span>
+<span class="sd">        :rtype: ~azure.cosmos.user.UserProxy</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">UserProxy</span><span class="p">):</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">id_value</span> <span class="o">=</span> <span class="n">user</span>
+
+        <span class="k">return</span> <span class="n">UserProxy</span><span class="p">(</span><span class="n">client_connection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">id_value</span><span class="p">,</span> <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.create_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.create_user">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Dict[str, Any], Any) -&gt; UserProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a user in the container.</span>
+<span class="sd">        To update or replace an existing user, use the :func:`ContainerProxy.upsert_user` method.</span>
+
+<span class="sd">        :param body: A dict-like object with an `id` key and value representing the user to be created.</span>
+<span class="sd">        The user ID must be unique within the database, and consist of no more than 255 characters.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: A `UserProxy` instance representing the new user.</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: If the given user couldn&#39;t be created.</span>
+<span class="sd">        :rtype: ~azure.cosmos.user.UserProxy</span>
+
+<span class="sd">        .. literalinclude:: ../../samples/examples.py</span>
+<span class="sd">            :start-after: [START create_user]</span>
+<span class="sd">            :end-before: [END create_user]</span>
+<span class="sd">            :language: python</span>
+<span class="sd">            :dedent: 0</span>
+<span class="sd">            :caption: Create a database user:</span>
+<span class="sd">            :name: create_user</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">CreateUser</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">UserProxy</span><span class="p">(</span>
+            <span class="n">client_connection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">user</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="n">user</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.upsert_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.upsert_user">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">upsert_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Dict[str, Any], Any) -&gt; UserProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Insert or update the specified user.</span>
+<span class="sd">        If the user already exists in the container, it is replaced. If it does not, it is inserted.</span>
+
+<span class="sd">        :param body: A dict-like object representing the user to update or insert.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: A `UserProxy` instance representing the upserted user.</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: If the given user could not be upserted.</span>
+<span class="sd">        :rtype: ~azure.cosmos.user.UserProxy</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">UpsertUser</span><span class="p">(</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">UserProxy</span><span class="p">(</span>
+            <span class="n">client_connection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">user</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="n">user</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.replace_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.replace_user">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">replace_user</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">,</span>  <span class="c1"># type: Union[str, UserProxy, Dict[str, Any]]</span>
+        <span class="n">body</span><span class="p">,</span>  <span class="c1"># type: Dict[str, Any]</span>
+        <span class="o">**</span><span class="n">kwargs</span>  <span class="c1"># type: Any</span>
+    <span class="p">):</span>
+        <span class="c1"># type: (...) -&gt; UserProxy</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Replaces the specified user if it exists in the container.</span>
+
+<span class="sd">        :param user: The ID (name), dict representing the properties or :class:`UserProxy`</span>
+<span class="sd">            instance of the user to be replaced.</span>
+<span class="sd">        :param body: A dict-like object representing the user to replace.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: A `UserProxy` instance representing the user after replace went through.</span>
+<span class="sd">        :raise `CosmosHttpResponseError`: If the replace failed or the user with given id does not exist.</span>
+<span class="sd">        :rtype: ~azure.cosmos.user.UserProxy</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">replaced_user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReplaceUser</span><span class="p">(</span>
+            <span class="n">user_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_user_link</span><span class="p">(</span><span class="n">user</span><span class="p">),</span> <span class="n">user</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>  <span class="c1"># type: Dict[str, str]</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">replaced_user</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">UserProxy</span><span class="p">(</span>
+            <span class="n">client_connection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">replaced_user</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span>
+            <span class="n">properties</span><span class="o">=</span><span class="n">replaced_user</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.delete_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.delete_user">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">delete_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Union[str, UserProxy, Dict[str, Any]], Any) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete the specified user from the container.</span>
+
+<span class="sd">        :param user: The ID (name), dict representing the properties or :class:`UserProxy`</span>
+<span class="sd">            instance of the user to be deleted.</span>
+<span class="sd">        :param request_options: Dictionary of additional properties to be used for the request.</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :raises `CosmosHttpResponseError`: The user wasn&#39;t deleted successfully. If the user does not</span>
+<span class="sd">            exist in the container, a `404` error is returned.</span>
+<span class="sd">        :rtype: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">request_options</span> <span class="o">=</span> <span class="n">build_options</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">DeleteUser</span><span class="p">(</span>
+            <span class="n">user_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_user_link</span><span class="p">(</span><span class="n">user</span><span class="p">),</span> <span class="n">options</span><span class="o">=</span><span class="n">request_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.read_offer"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.read_offer">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">read_offer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Any) -&gt; Offer</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read the Offer object for this database.</span>
+
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: Offer for the database.</span>
+<span class="sd">        :raise CosmosHttpResponseError: If no offer exists for the database or if the offer could not be retrieved.</span>
+<span class="sd">        :rtype: ~azure.cosmos.offer.Offer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_properties</span><span class="p">()</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;_self&quot;</span><span class="p">]</span>
+        <span class="n">query_spec</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT * FROM root r WHERE r.resource=@link&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;@link&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">link</span><span class="p">}],</span>
+        <span class="p">}</span>
+        <span class="n">offers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">QueryOffers</span><span class="p">(</span><span class="n">query_spec</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">offers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">CosmosResourceNotFoundError</span><span class="p">(</span>
+                <span class="n">status_code</span><span class="o">=</span><span class="n">StatusCodes</span><span class="o">.</span><span class="n">NOT_FOUND</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Could not find Offer for database &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">offers</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">Offer</span><span class="p">(</span><span class="n">offer_throughput</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">][</span><span class="s2">&quot;offerThroughput&quot;</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="DatabaseProxy.replace_throughput"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.DatabaseProxy.replace_throughput">[docs]</a>    <span class="nd">@distributed_trace</span>
+    <span class="k">def</span> <span class="nf">replace_throughput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">throughput</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (Optional[int], Any) -&gt; Offer</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Replace the database level throughput.</span>
+
+<span class="sd">        :param throughput: The throughput to be set (an integer).</span>
+<span class="sd">        :param response_hook: a callable invoked with the response metadata</span>
+<span class="sd">        :returns: Offer for the database, updated with new throughput.</span>
+<span class="sd">        :raise CosmosHttpResponseError: If no offer exists for the database or if the offer could not be updated.</span>
+<span class="sd">        :rtype: ~azure.cosmos.offer.Offer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response_hook</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;response_hook&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_properties</span><span class="p">()</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;_self&quot;</span><span class="p">]</span>
+        <span class="n">query_spec</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT * FROM root r WHERE r.resource=@link&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;@link&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">link</span><span class="p">}],</span>
+        <span class="p">}</span>
+        <span class="n">offers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">QueryOffers</span><span class="p">(</span><span class="n">query_spec</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">offers</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">CosmosResourceNotFoundError</span><span class="p">(</span>
+                <span class="n">status_code</span><span class="o">=</span><span class="n">StatusCodes</span><span class="o">.</span><span class="n">NOT_FOUND</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Could not find Offer for collection &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">)</span>
+        <span class="n">new_offer</span> <span class="o">=</span> <span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">new_offer</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">][</span><span class="s2">&quot;offerThroughput&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">throughput</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">ReplaceOffer</span><span class="p">(</span><span class="n">offer_link</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;_self&quot;</span><span class="p">],</span> <span class="n">offer</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
+            <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Offer</span><span class="p">(</span><span class="n">offer_throughput</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">][</span><span class="s2">&quot;offerThroughput&quot;</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="n">data</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

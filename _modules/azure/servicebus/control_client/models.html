@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.servicebus.control_client.models &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.servicebus.control_client.models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.servicebus.control_client.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="c1"># pylint: disable=too-few-public-methods,too-many-instance-attributes</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+
+<span class="kn">from</span> <span class="nn">azure.common</span> <span class="k">import</span> <span class="n">AzureException</span>
+<span class="kn">from</span> <span class="nn">._common_models</span> <span class="k">import</span> <span class="n">WindowsAzureData</span><span class="p">,</span> <span class="n">_unicode_type</span>
+<span class="kn">from</span> <span class="nn">._common_error</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_DELETE</span><span class="p">,</span>
+    <span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_UNLOCK</span><span class="p">,</span>
+    <span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_RENEW_LOCK</span><span class="p">)</span>
+
+<div class="viewcode-block" id="AzureServiceBusPeekLockError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.AzureServiceBusPeekLockError">[docs]</a><span class="k">class</span> <span class="nc">AzureServiceBusPeekLockError</span><span class="p">(</span><span class="n">AzureException</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Indicates that peek-lock is required for this operation.&#39;&#39;&#39;</span></div>
+
+
+<div class="viewcode-block" id="AzureServiceBusResourceNotFound"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.AzureServiceBusResourceNotFound">[docs]</a><span class="k">class</span> <span class="nc">AzureServiceBusResourceNotFound</span><span class="p">(</span><span class="n">AzureException</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Indicates that the resource doesn&#39;t exist.&#39;&#39;&#39;</span></div>
+
+
+<div class="viewcode-block" id="Queue"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Queue">[docs]</a><span class="k">class</span> <span class="nc">Queue</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Queue class corresponding to Queue Description:</span>
+<span class="sd">    http://msdn.microsoft.com/en-us/library/windowsazure/hh780773&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lock_duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">requires_session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_delivery_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">size_in_bytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message_count</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lock_duration</span> <span class="o">=</span> <span class="n">lock_duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size_in_megabytes</span> <span class="o">=</span> <span class="n">max_size_in_megabytes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires_duplicate_detection</span> <span class="o">=</span> <span class="n">requires_duplicate_detection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="o">=</span> <span class="n">requires_session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_message_time_to_live</span> <span class="o">=</span> <span class="n">default_message_time_to_live</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dead_lettering_on_message_expiration</span> <span class="o">=</span> \
+            <span class="n">dead_lettering_on_message_expiration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duplicate_detection_history_time_window</span> <span class="o">=</span> \
+            <span class="n">duplicate_detection_history_time_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_delivery_count</span> <span class="o">=</span> <span class="n">max_delivery_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_batched_operations</span> <span class="o">=</span> <span class="n">enable_batched_operations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size_in_bytes</span> <span class="o">=</span> <span class="n">size_in_bytes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_count</span> <span class="o">=</span> <span class="n">message_count</span></div>
+
+
+<div class="viewcode-block" id="Topic"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Topic">[docs]</a><span class="k">class</span> <span class="nc">Topic</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Topic class corresponding to Topic Description:</span>
+<span class="sd">    https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription. &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_size_in_megabytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">requires_duplicate_detection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">duplicate_detection_history_time_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">size_in_bytes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_message_time_to_live</span> <span class="o">=</span> <span class="n">default_message_time_to_live</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size_in_megabytes</span> <span class="o">=</span> <span class="n">max_size_in_megabytes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires_duplicate_detection</span> <span class="o">=</span> <span class="n">requires_duplicate_detection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duplicate_detection_history_time_window</span> <span class="o">=</span> \
+            <span class="n">duplicate_detection_history_time_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_batched_operations</span> <span class="o">=</span> <span class="n">enable_batched_operations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size_in_bytes</span> <span class="o">=</span> <span class="n">size_in_bytes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_size_in_mega_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">warnings</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s1">&#39;This attribute has been changed to max_size_in_megabytes.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size_in_megabytes</span>
+
+    <span class="nd">@max_size_in_mega_bytes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_size_in_mega_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_size_in_megabytes</span> <span class="o">=</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Subscription"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Subscription">[docs]</a><span class="k">class</span> <span class="nc">Subscription</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Subscription class corresponding to Subscription Description:</span>
+<span class="sd">    http://msdn.microsoft.com/en-us/library/windowsazure/hh780763. &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lock_duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">requires_session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">default_message_time_to_live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dead_lettering_on_message_expiration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dead_lettering_on_filter_evaluation_exceptions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">enable_batched_operations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_delivery_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">message_count</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lock_duration</span> <span class="o">=</span> <span class="n">lock_duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires_session</span> <span class="o">=</span> <span class="n">requires_session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_message_time_to_live</span> <span class="o">=</span> <span class="n">default_message_time_to_live</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dead_lettering_on_message_expiration</span> <span class="o">=</span> \
+            <span class="n">dead_lettering_on_message_expiration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dead_lettering_on_filter_evaluation_exceptions</span> <span class="o">=</span> \
+            <span class="n">dead_lettering_on_filter_evaluation_exceptions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_batched_operations</span> <span class="o">=</span> <span class="n">enable_batched_operations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_delivery_count</span> <span class="o">=</span> <span class="n">max_delivery_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_count</span> <span class="o">=</span> <span class="n">message_count</span></div>
+
+
+<div class="viewcode-block" id="Rule"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Rule">[docs]</a><span class="k">class</span> <span class="nc">Rule</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Rule class corresponding to Rule Description:</span>
+<span class="sd">    http://msdn.microsoft.com/en-us/library/windowsazure/hh780753. &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filter_expression</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">action_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">action_expression</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filter_type</span> <span class="o">=</span> <span class="n">filter_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filter_expression</span> <span class="o">=</span> <span class="n">filter_expression</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_type</span> <span class="o">=</span> <span class="n">action_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_expression</span> <span class="o">=</span> <span class="n">action_expression</span></div>
+
+
+<div class="viewcode-block" id="EventHub"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.EventHub">[docs]</a><span class="k">class</span> <span class="nc">EventHub</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_retention_in_days</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">user_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partition_count</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_retention_in_days</span> <span class="o">=</span> <span class="n">message_retention_in_days</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_metadata</span> <span class="o">=</span> <span class="n">user_metadata</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_count</span> <span class="o">=</span> <span class="n">partition_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">authorization_rules</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_ids</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+
+<div class="viewcode-block" id="AuthorizationRule"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.AuthorizationRule">[docs]</a><span class="k">class</span> <span class="nc">AuthorizationRule</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">claim_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">claim_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">key_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">secondary_key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">claim_type</span> <span class="o">=</span> <span class="n">claim_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">claim_value</span> <span class="o">=</span> <span class="n">claim_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rights</span> <span class="o">=</span> <span class="n">rights</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">created_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modified_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key_name</span> <span class="o">=</span> <span class="n">key_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">primary_key</span> <span class="o">=</span> <span class="n">primary_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secondary_key</span> <span class="o">=</span> <span class="n">secondary_key</span></div>
+
+
+<div class="viewcode-block" id="Message"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message">[docs]</a><span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="n">WindowsAzureData</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Message class that used in send message/get message apis. &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_bus_service</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;application/atom+xml;type=entry;charset=utf-8&#39;</span><span class="p">,</span>  <span class="c1"># pylint: disable=redefined-builtin</span>
+                 <span class="n">broker_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">body</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span> <span class="o">=</span> <span class="n">broker_properties</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_properties</span> <span class="o">=</span> <span class="n">custom_properties</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span> <span class="o">=</span> <span class="n">service_bus_service</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">service_bus_service</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="c1"># if location is set, then extracts the queue name for queue message and</span>
+        <span class="c1"># extracts the topic and subscriptions name if it is topic message.</span>
+        <span class="k">if</span> <span class="n">location</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;/subscriptions/&#39;</span> <span class="ow">in</span> <span class="n">location</span><span class="p">:</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">host_base</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span><span class="o">+</span><span class="mi">1</span>
+                <span class="n">pos1</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/subscriptions/&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span> <span class="o">=</span> <span class="n">location</span><span class="p">[</span><span class="n">pos</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">host_base</span><span class="p">):</span><span class="n">pos1</span><span class="p">]</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">pos1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="s1">&#39;/subscriptions/&#39;</span><span class="p">)</span>
+                <span class="n">pos1</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span> <span class="o">=</span> <span class="n">location</span><span class="p">[</span><span class="n">pos</span><span class="p">:</span><span class="n">pos1</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="s1">&#39;/messages/&#39;</span> <span class="ow">in</span> <span class="n">location</span><span class="p">:</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">host_base</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span><span class="o">+</span><span class="mi">1</span>
+                <span class="n">pos1</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/messages/&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span> <span class="o">=</span> <span class="n">location</span><span class="p">[</span><span class="n">pos</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">host_base</span><span class="p">):</span><span class="n">pos1</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Message.delete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Deletes itself if find queue name or topic name and subscription</span>
+<span class="sd">        name. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">delete_queue_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">delete_subscription_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AzureServiceBusPeekLockError</span><span class="p">(</span><span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_DELETE</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.unlock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message.unlock">[docs]</a>    <span class="k">def</span> <span class="nf">unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Unlocks itself if find queue name or topic name and subscription</span>
+<span class="sd">        name. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">unlock_queue_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">unlock_subscription_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AzureServiceBusPeekLockError</span><span class="p">(</span><span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_UNLOCK</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Message.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Renew lock on itself if find queue name or topic name and subscription</span>
+<span class="sd">        name. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">renew_lock_queue_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_queue_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_bus_service</span><span class="o">.</span><span class="n">renew_lock_subscription_message</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_topic_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_subscription_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;SequenceNumber&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">[</span><span class="s1">&#39;LockToken&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">AzureServiceBusPeekLockError</span><span class="p">(</span><span class="n">_ERROR_MESSAGE_NOT_PEEK_LOCKED_ON_RENEW_LOCK</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_serialize_escaped_properties_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  <span class="c1"># pylint: disable=no-self-use</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_unicode_type</span><span class="p">):</span>
+            <span class="n">escaped_value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">escaped_value</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">escaped_value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">escaped_value</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">value</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S GMT&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_serialize_basic_properties_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  <span class="c1"># pylint: disable=no-self-use</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_unicode_type</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S GMT&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Message.add_headers"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message.add_headers">[docs]</a>    <span class="k">def</span> <span class="nf">add_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; add addtional headers to request for message request.&#39;&#39;&#39;</span>
+
+        <span class="c1"># Adds custom properties</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_properties</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_properties</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_escaped_properties_value</span><span class="p">(</span><span class="n">value</span><span class="p">)))</span>
+
+        <span class="c1"># Adds content-type</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">))</span>
+
+        <span class="c1"># Adds BrokerProperties</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">,</span> <span class="s1">&#39;items&#39;</span><span class="p">):</span>
+                <span class="n">broker_properties</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_basic_properties_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                                     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span>
+                                     <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">broker_properties</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">broker_properties</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">broker_properties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="p">(</span><span class="s1">&#39;BrokerProperties&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">broker_properties</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span></div>
+
+<div class="viewcode-block" id="Message.as_batch_body"><a class="viewcode-back" href="../../../../ref/azure.servicebus.control_client.html#azure.servicebus.control_client.models.Message.as_batch_body">[docs]</a>    <span class="k">def</span> <span class="nf">as_batch_body</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; return the current message as expected by batch body format&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="c1"># It HAS to be string to be serialized in JSON</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Python 2.7 people handle this themself</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Body&#39;</span><span class="p">:</span> <span class="n">body</span><span class="p">}</span>
+
+        <span class="c1"># Adds custom properties</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_properties</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;UserProperties&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_basic_properties_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                                        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span>
+                                        <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_properties</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="c1"># Adds BrokerProperties</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;BrokerProperties&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_basic_properties_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                                          <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span>
+                                          <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker_properties</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="k">return</span> <span class="n">result</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventhub.client_abstract &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.eventhub.client_abstract</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.eventhub.client_abstract</h1><div class="highlight"><pre>
+<span></span><span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for license information.</span>
+<span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
+
+<span class="kn">from</span> <span class="nn">azure.eventhub</span> <span class="k">import</span> <span class="n">__version__</span><span class="p">,</span> <span class="n">EventPosition</span>
+<span class="kn">from</span> <span class="nn">azure.eventhub.configuration</span> <span class="k">import</span> <span class="n">_Configuration</span>
+<span class="kn">from</span> <span class="nn">.common</span> <span class="k">import</span> <span class="n">EventHubSharedKeyCredential</span><span class="p">,</span> <span class="n">EventHubSASTokenCredential</span><span class="p">,</span> <span class="n">_Address</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="n">urlparse</span>  <span class="c1"># type: ignore</span>
+    <span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">urlencode</span><span class="p">,</span> <span class="n">quote_plus</span>  <span class="c1"># type: ignore</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">urlparse</span><span class="p">,</span> <span class="n">urlencode</span><span class="p">,</span> <span class="n">quote_plus</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">azure.core.credentials</span> <span class="k">import</span> <span class="n">TokenCredential</span>  <span class="c1"># type: ignore</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">MAX_USER_AGENT_LENGTH</span> <span class="o">=</span> <span class="mi">512</span>
+
+
+<span class="k">def</span> <span class="nf">_parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">):</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">shared_access_key_name</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">shared_access_key</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">entity_path</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">conn_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
+        <span class="n">key</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;endpoint&#39;</span><span class="p">:</span>
+            <span class="n">endpoint</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;hostname&#39;</span><span class="p">:</span>
+            <span class="n">endpoint</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;sharedaccesskeyname&#39;</span><span class="p">:</span>
+            <span class="n">shared_access_key_name</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">elif</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;sharedaccesskey&#39;</span><span class="p">:</span>
+            <span class="n">shared_access_key</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">elif</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;entitypath&#39;</span><span class="p">:</span>
+            <span class="n">entity_path</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="p">,</span> <span class="n">shared_access_key</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid connection string&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="p">,</span> <span class="n">shared_access_key</span><span class="p">,</span> <span class="n">entity_path</span>
+
+
+<span class="k">def</span> <span class="nf">_generate_sas_token</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a shared access signiture token as a string literal.</span>
+<span class="sd">    :returns: SAS token as string literal.</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">b64encode</span><span class="p">,</span> <span class="n">b64decode</span>
+    <span class="kn">from</span> <span class="nn">hashlib</span> <span class="k">import</span> <span class="n">sha256</span>
+    <span class="kn">from</span> <span class="nn">hmac</span> <span class="k">import</span> <span class="n">HMAC</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">expiry</span><span class="p">:</span>
+        <span class="n">expiry</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">3600</span>  <span class="c1"># Default to 1 hour.</span>
+    <span class="n">encoded_uri</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+    <span class="n">ttl</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">expiry</span><span class="p">)</span>
+    <span class="n">sign_key</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="se">\n</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">encoded_uri</span><span class="p">,</span> <span class="n">ttl</span><span class="p">)</span>
+    <span class="n">signature</span> <span class="o">=</span> <span class="n">b64encode</span><span class="p">(</span><span class="n">HMAC</span><span class="p">(</span><span class="n">b64decode</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">sign_key</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">())</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;sr&#39;</span><span class="p">:</span> <span class="n">uri</span><span class="p">,</span>
+        <span class="s1">&#39;sig&#39;</span><span class="p">:</span> <span class="n">signature</span><span class="p">,</span>
+        <span class="s1">&#39;se&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">ttl</span><span class="p">)}</span>
+    <span class="k">if</span> <span class="n">policy</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">[</span><span class="s1">&#39;skn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">policy</span>
+    <span class="k">return</span> <span class="s1">&#39;SharedAccessSignature &#39;</span> <span class="o">+</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_build_uri</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span>
+    <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">address</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">entity</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No EventHub specified&quot;</span><span class="p">)</span>
+    <span class="n">address</span> <span class="o">+=</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">address</span>
+
+
+<div class="viewcode-block" id="EventHubClientAbstract"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.client_abstract.EventHubClientAbstract">[docs]</a><span class="k">class</span> <span class="nc">EventHubClientAbstract</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint:disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The EventHubClientAbstract class defines a high level interface for sending</span>
+<span class="sd">    events to and receiving events from the Azure Event Hubs service.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">event_hub_path</span><span class="p">,</span> <span class="n">credential</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type:(str, str, Union[EventHubSharedKeyCredential, EventHubSASTokenCredential, TokenCredential], Any) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new EventHubClient.</span>
+
+<span class="sd">        :param host: The hostname of the Event Hub.</span>
+<span class="sd">        :type host: str</span>
+<span class="sd">        :param event_hub_path: The path of the specific Event Hub to connect the client to.</span>
+<span class="sd">        :type event_hub_path: str</span>
+<span class="sd">        :param network_tracing: Whether to output network trace logs to the logger. Default</span>
+<span class="sd">         is `False`.</span>
+<span class="sd">        :type network_tracing: bool</span>
+<span class="sd">        :param credential: The credential object used for authentication which implements particular interface</span>
+<span class="sd">         of getting tokens. It accepts ~azure.eventhub.EventHubSharedKeyCredential,</span>
+<span class="sd">         ~azure.eventhub.EventHubSASTokenCredential, credential objects generated by the azure-identity library and</span>
+<span class="sd">         objects that implement get_token(self, *scopes) method.</span>
+<span class="sd">        :param http_proxy: HTTP proxy settings. This must be a dictionary with the following</span>
+<span class="sd">         keys: &#39;proxy_hostname&#39; (str value) and &#39;proxy_port&#39; (int value).</span>
+<span class="sd">         Additionally the following keys may also be present: &#39;username&#39;, &#39;password&#39;.</span>
+<span class="sd">        :type http_proxy: dict[str, Any]</span>
+<span class="sd">        :param auth_timeout: The time in seconds to wait for a token to be authorized by the service.</span>
+<span class="sd">         The default value is 60 seconds. If set to 0, no timeout will be enforced from the client.</span>
+<span class="sd">        :type auth_timeout: float</span>
+<span class="sd">        :param user_agent: The user agent that needs to be appended to the built in user agent string.</span>
+<span class="sd">        :type user_agent: str</span>
+<span class="sd">        :param retry_total: The total number of attempts to redo the failed operation when an error happened. Default</span>
+<span class="sd">         value is 3.</span>
+<span class="sd">        :type retry_total: int</span>
+<span class="sd">        :param transport_type: The type of transport protocol that will be used for communicating with</span>
+<span class="sd">         the Event Hubs service. Default is ~azure.eventhub.TransportType.Amqp.</span>
+<span class="sd">        :type transport_type: ~azure.eventhub.TransportType</span>
+<span class="sd">        :param prefetch: The message prefetch count of the consumer. Default is 300.</span>
+<span class="sd">        :type prefetch: int</span>
+<span class="sd">        :param max_batch_size: Receive a batch of events. Batch size will be up to the maximum specified, but</span>
+<span class="sd">         will return as soon as service returns no new events. Default value is the same as prefetch.</span>
+<span class="sd">        :type max_batch_size: int</span>
+<span class="sd">        :param receive_timeout: The timeout in seconds to receive a batch of events from an Event Hub.</span>
+<span class="sd">         Default value is 0 seconds.</span>
+<span class="sd">        :type receive_timeout: float</span>
+<span class="sd">        :param send_timeout: The timeout in seconds for an individual event to be sent from the time that it is</span>
+<span class="sd">         queued. Default value is 60 seconds. If set to 0, there will be no timeout.</span>
+<span class="sd">        :type send_timeout: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eh_name</span> <span class="o">=</span> <span class="n">event_hub_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_container_id</span> <span class="o">=</span> <span class="s2">&quot;eventhub.pysdk-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())[:</span><span class="mi">8</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_address</span> <span class="o">=</span> <span class="n">_Address</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">event_hub_path</span> <span class="k">if</span> <span class="n">event_hub_path</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auth_config</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># type:Dict[str,str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_credential</span> <span class="o">=</span> <span class="n">credential</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="n">EventHubSharedKeyCredential</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_username</span> <span class="o">=</span> <span class="n">credential</span><span class="o">.</span><span class="n">policy</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">credential</span><span class="o">.</span><span class="n">key</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_auth_config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_username</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_auth_config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keep_alive</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;keep_alive&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_reconnect</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;auto_reconnect&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_target</span> <span class="o">=</span> <span class="s2">&quot;amqps://</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">eh_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auth_uri</span> <span class="o">=</span> <span class="s2">&quot;sb://</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_get_auth</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_create_auth</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">_Configuration</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_debug</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">network_tracing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_iothub</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_iothub_redirect_info</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_redirect_consumer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2">: Created the Event Hub client&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_container_id</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_iothub_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+        <span class="n">hub_name</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">@sas.root.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">hub_name</span><span class="p">)</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">_generate_sas_token</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="n">left_slash_pos</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;//&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">left_slash_pos</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">host</span> <span class="o">=</span> <span class="n">address</span><span class="p">[</span><span class="n">left_slash_pos</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">host</span> <span class="o">=</span> <span class="n">address</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">EventHubSharedKeyCredential</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">_auth_config</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># pylint: disable=protected-access</span>
+            <span class="s1">&#39;iot_username&#39;</span><span class="p">:</span> <span class="n">policy</span><span class="p">,</span>
+            <span class="s1">&#39;iot_password&#39;</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="n">password</span><span class="p">}</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">_is_iothub</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">_redirect_consumer</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_consumer</span><span class="p">(</span><span class="n">consumer_group</span><span class="o">=</span><span class="s1">&#39;$default&#39;</span><span class="p">,</span>  <span class="c1"># pylint: disable=protected-access, no-member</span>
+                                                           <span class="n">partition_id</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span>
+                                                           <span class="n">event_position</span><span class="o">=</span><span class="n">EventPosition</span><span class="p">(</span><span class="s1">&#39;-1&#39;</span><span class="p">),</span>
+                                                           <span class="n">operation</span><span class="o">=</span><span class="s1">&#39;/messages/events&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">client</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_create_auth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_create_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># pylint: disable=no-self-use</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format the properties with which to instantiate the connection.</span>
+<span class="sd">        This acts like a user agent over HTTP.</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">properties</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;product&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;eventhub.python&quot;</span>
+        <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
+        <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;framework&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python </span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;platform&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span>
+
+        <span class="n">final_user_agent</span> <span class="o">=</span> <span class="s1">&#39;azsdk-python-eventhub/</span><span class="si">{}</span><span class="s1"> (</span><span class="si">{}</span><span class="s1">; </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">__version__</span><span class="p">,</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;framework&quot;</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">user_agent</span><span class="p">:</span>
+            <span class="n">final_user_agent</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_user_agent</span><span class="p">,</span> <span class="n">user_agent</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">final_user_agent</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">MAX_USER_AGENT_LENGTH</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The user-agent string cannot be more than </span><span class="si">{}</span><span class="s2"> in length.&quot;</span>
+                             <span class="s2">&quot;Current user_agent string is: </span><span class="si">{}</span><span class="s2"> with length: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                <span class="n">MAX_USER_AGENT_LENGTH</span><span class="p">,</span> <span class="n">final_user_agent</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">final_user_agent</span><span class="p">)))</span>
+
+        <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;user-agent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">final_user_agent</span>
+        <span class="k">return</span> <span class="n">properties</span>
+
+    <span class="k">def</span> <span class="nf">_process_redirect_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redirect</span><span class="p">):</span>
+        <span class="n">redirect_uri</span> <span class="o">=</span> <span class="n">redirect</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">auth_uri</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">redirect_uri</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s2">&quot;/ConsumerGroups&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_address</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">auth_uri</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_host</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">hostname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eh_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auth_uri</span> <span class="o">=</span> <span class="s2">&quot;sb://</span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">hostname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_address</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mgmt_target</span> <span class="o">=</span> <span class="n">redirect_uri</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_iothub</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_iothub_redirect_info</span> <span class="o">=</span> <span class="n">redirect</span>
+
+<div class="viewcode-block" id="EventHubClientAbstract.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.eventhub.html#azure.eventhub.client_abstract.EventHubClientAbstract.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create an EventHubClient from an EventHub/IotHub connection string.</span>
+
+<span class="sd">        :param conn_str: The connection string of an eventhub or IoT hub</span>
+<span class="sd">        :type conn_str: str</span>
+<span class="sd">        :param event_hub_path: The path of the specific Event Hub to connect the client to, if the EntityName is</span>
+<span class="sd">         not included in the connection string.</span>
+<span class="sd">        :type event_hub_path: str</span>
+<span class="sd">        :param network_tracing: Whether to output network trace logs to the logger. Default</span>
+<span class="sd">         is `False`.</span>
+<span class="sd">        :type network_tracing: bool</span>
+<span class="sd">        :param http_proxy: HTTP proxy settings. This must be a dictionary with the following</span>
+<span class="sd">         keys: &#39;proxy_hostname&#39; (str value) and &#39;proxy_port&#39; (int value).</span>
+<span class="sd">         Additionally the following keys may also be present: &#39;username&#39;, &#39;password&#39;.</span>
+<span class="sd">        :type http_proxy: dict[str, Any]</span>
+<span class="sd">        :param auth_timeout: The time in seconds to wait for a token to be authorized by the service.</span>
+<span class="sd">         The default value is 60 seconds. If set to 0, no timeout will be enforced from the client.</span>
+<span class="sd">        :type auth_timeout: float</span>
+<span class="sd">        :param user_agent: The user agent that needs to be appended to the built in user agent string.</span>
+<span class="sd">        :type user_agent: str</span>
+<span class="sd">        :param retry_total: The total number of attempts to redo the failed operation when an error happened. Default</span>
+<span class="sd">         value is 3.</span>
+<span class="sd">        :type retry_total: int</span>
+<span class="sd">        :param transport_type: The type of transport protocol that will be used for communicating with</span>
+<span class="sd">         the Event Hubs service. Default is ~azure.eventhub.TransportType.Amqp.</span>
+<span class="sd">        :type transport_type: ~azure.eventhub.TransportType</span>
+<span class="sd">        :param prefetch: The message prefetch count of the consumer. Default is 300.</span>
+<span class="sd">        :type prefetch: int</span>
+<span class="sd">        :param max_batch_size: Receive a batch of events. Batch size will be up to the maximum specified, but</span>
+<span class="sd">         will return as soon as service returns no new events. Default value is the same as prefetch.</span>
+<span class="sd">        :type max_batch_size: int</span>
+<span class="sd">        :param receive_timeout: The timeout in seconds to receive a batch of events from an Event Hub.</span>
+<span class="sd">         Default value is 0 seconds, meaning there is no timeout.</span>
+<span class="sd">        :type receive_timeout: float</span>
+<span class="sd">        :param send_timeout: The timeout in seconds for an individual event to be sent from the time that it is</span>
+<span class="sd">         queued. Default value is 60 seconds. If set to 0, there will be no timeout.</span>
+<span class="sd">        :type send_timeout: float</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            .. literalinclude:: ../examples/test_examples_eventhub.py</span>
+<span class="sd">                :start-after: [START create_eventhub_client_connstr]</span>
+<span class="sd">                :end-before: [END create_eventhub_client_connstr]</span>
+<span class="sd">                :language: python</span>
+<span class="sd">                :dedent: 4</span>
+<span class="sd">                :caption: Create an EventHubClient from a connection string.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">event_hub_path</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;event_hub_path&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">is_iot_conn_str</span> <span class="o">=</span> <span class="n">conn_str</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_iot_conn_str</span><span class="p">:</span>  <span class="c1"># pylint:disable=no-else-return</span>
+            <span class="n">address</span><span class="p">,</span> <span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">_parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+            <span class="n">entity</span> <span class="o">=</span> <span class="n">event_hub_path</span> <span class="ow">or</span> <span class="n">entity</span>
+            <span class="n">left_slash_pos</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;//&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">left_slash_pos</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">host</span> <span class="o">=</span> <span class="n">address</span><span class="p">[</span><span class="n">left_slash_pos</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">host</span> <span class="o">=</span> <span class="n">address</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="n">EventHubSharedKeyCredential</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">key</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_from_iothub_connection_string</span><span class="p">(</span><span class="n">conn_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.file._shared.models &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.file._shared.models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.file._shared.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
+
+
+<span class="k">def</span> <span class="nf">get_enum_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;None&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+
+<div class="viewcode-block" id="StorageErrorCode"><a class="viewcode-back" href="../../../../../ref/azure.storage.file.aio.html#azure.storage.file.StorageErrorCode">[docs]</a><span class="k">class</span> <span class="nc">StorageErrorCode</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="c1"># Generic storage values</span>
+    <span class="n">account_already_exists</span> <span class="o">=</span> <span class="s2">&quot;AccountAlreadyExists&quot;</span>
+    <span class="n">account_being_created</span> <span class="o">=</span> <span class="s2">&quot;AccountBeingCreated&quot;</span>
+    <span class="n">account_is_disabled</span> <span class="o">=</span> <span class="s2">&quot;AccountIsDisabled&quot;</span>
+    <span class="n">authentication_failed</span> <span class="o">=</span> <span class="s2">&quot;AuthenticationFailed&quot;</span>
+    <span class="n">authorization_failure</span> <span class="o">=</span> <span class="s2">&quot;AuthorizationFailure&quot;</span>
+    <span class="n">condition_headers_not_supported</span> <span class="o">=</span> <span class="s2">&quot;ConditionHeadersNotSupported&quot;</span>
+    <span class="n">condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;ConditionNotMet&quot;</span>
+    <span class="n">empty_metadata_key</span> <span class="o">=</span> <span class="s2">&quot;EmptyMetadataKey&quot;</span>
+    <span class="n">insufficient_account_permissions</span> <span class="o">=</span> <span class="s2">&quot;InsufficientAccountPermissions&quot;</span>
+    <span class="n">internal_error</span> <span class="o">=</span> <span class="s2">&quot;InternalError&quot;</span>
+    <span class="n">invalid_authentication_info</span> <span class="o">=</span> <span class="s2">&quot;InvalidAuthenticationInfo&quot;</span>
+    <span class="n">invalid_header_value</span> <span class="o">=</span> <span class="s2">&quot;InvalidHeaderValue&quot;</span>
+    <span class="n">invalid_http_verb</span> <span class="o">=</span> <span class="s2">&quot;InvalidHttpVerb&quot;</span>
+    <span class="n">invalid_input</span> <span class="o">=</span> <span class="s2">&quot;InvalidInput&quot;</span>
+    <span class="n">invalid_md5</span> <span class="o">=</span> <span class="s2">&quot;InvalidMd5&quot;</span>
+    <span class="n">invalid_metadata</span> <span class="o">=</span> <span class="s2">&quot;InvalidMetadata&quot;</span>
+    <span class="n">invalid_query_parameter_value</span> <span class="o">=</span> <span class="s2">&quot;InvalidQueryParameterValue&quot;</span>
+    <span class="n">invalid_range</span> <span class="o">=</span> <span class="s2">&quot;InvalidRange&quot;</span>
+    <span class="n">invalid_resource_name</span> <span class="o">=</span> <span class="s2">&quot;InvalidResourceName&quot;</span>
+    <span class="n">invalid_uri</span> <span class="o">=</span> <span class="s2">&quot;InvalidUri&quot;</span>
+    <span class="n">invalid_xml_document</span> <span class="o">=</span> <span class="s2">&quot;InvalidXmlDocument&quot;</span>
+    <span class="n">invalid_xml_node_value</span> <span class="o">=</span> <span class="s2">&quot;InvalidXmlNodeValue&quot;</span>
+    <span class="n">md5_mismatch</span> <span class="o">=</span> <span class="s2">&quot;Md5Mismatch&quot;</span>
+    <span class="n">metadata_too_large</span> <span class="o">=</span> <span class="s2">&quot;MetadataTooLarge&quot;</span>
+    <span class="n">missing_content_length_header</span> <span class="o">=</span> <span class="s2">&quot;MissingContentLengthHeader&quot;</span>
+    <span class="n">missing_required_query_parameter</span> <span class="o">=</span> <span class="s2">&quot;MissingRequiredQueryParameter&quot;</span>
+    <span class="n">missing_required_header</span> <span class="o">=</span> <span class="s2">&quot;MissingRequiredHeader&quot;</span>
+    <span class="n">missing_required_xml_node</span> <span class="o">=</span> <span class="s2">&quot;MissingRequiredXmlNode&quot;</span>
+    <span class="n">multiple_condition_headers_not_supported</span> <span class="o">=</span> <span class="s2">&quot;MultipleConditionHeadersNotSupported&quot;</span>
+    <span class="n">operation_timed_out</span> <span class="o">=</span> <span class="s2">&quot;OperationTimedOut&quot;</span>
+    <span class="n">out_of_range_input</span> <span class="o">=</span> <span class="s2">&quot;OutOfRangeInput&quot;</span>
+    <span class="n">out_of_range_query_parameter_value</span> <span class="o">=</span> <span class="s2">&quot;OutOfRangeQueryParameterValue&quot;</span>
+    <span class="n">request_body_too_large</span> <span class="o">=</span> <span class="s2">&quot;RequestBodyTooLarge&quot;</span>
+    <span class="n">resource_type_mismatch</span> <span class="o">=</span> <span class="s2">&quot;ResourceTypeMismatch&quot;</span>
+    <span class="n">request_url_failed_to_parse</span> <span class="o">=</span> <span class="s2">&quot;RequestUrlFailedToParse&quot;</span>
+    <span class="n">resource_already_exists</span> <span class="o">=</span> <span class="s2">&quot;ResourceAlreadyExists&quot;</span>
+    <span class="n">resource_not_found</span> <span class="o">=</span> <span class="s2">&quot;ResourceNotFound&quot;</span>
+    <span class="n">server_busy</span> <span class="o">=</span> <span class="s2">&quot;ServerBusy&quot;</span>
+    <span class="n">unsupported_header</span> <span class="o">=</span> <span class="s2">&quot;UnsupportedHeader&quot;</span>
+    <span class="n">unsupported_xml_node</span> <span class="o">=</span> <span class="s2">&quot;UnsupportedXmlNode&quot;</span>
+    <span class="n">unsupported_query_parameter</span> <span class="o">=</span> <span class="s2">&quot;UnsupportedQueryParameter&quot;</span>
+    <span class="n">unsupported_http_verb</span> <span class="o">=</span> <span class="s2">&quot;UnsupportedHttpVerb&quot;</span>
+
+    <span class="c1"># Blob values</span>
+    <span class="n">append_position_condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;AppendPositionConditionNotMet&quot;</span>
+    <span class="n">blob_already_exists</span> <span class="o">=</span> <span class="s2">&quot;BlobAlreadyExists&quot;</span>
+    <span class="n">blob_not_found</span> <span class="o">=</span> <span class="s2">&quot;BlobNotFound&quot;</span>
+    <span class="n">blob_overwritten</span> <span class="o">=</span> <span class="s2">&quot;BlobOverwritten&quot;</span>
+    <span class="n">blob_tier_inadequate_for_content_length</span> <span class="o">=</span> <span class="s2">&quot;BlobTierInadequateForContentLength&quot;</span>
+    <span class="n">block_count_exceeds_limit</span> <span class="o">=</span> <span class="s2">&quot;BlockCountExceedsLimit&quot;</span>
+    <span class="n">block_list_too_long</span> <span class="o">=</span> <span class="s2">&quot;BlockListTooLong&quot;</span>
+    <span class="n">cannot_change_to_lower_tier</span> <span class="o">=</span> <span class="s2">&quot;CannotChangeToLowerTier&quot;</span>
+    <span class="n">cannot_verify_copy_source</span> <span class="o">=</span> <span class="s2">&quot;CannotVerifyCopySource&quot;</span>
+    <span class="n">container_already_exists</span> <span class="o">=</span> <span class="s2">&quot;ContainerAlreadyExists&quot;</span>
+    <span class="n">container_being_deleted</span> <span class="o">=</span> <span class="s2">&quot;ContainerBeingDeleted&quot;</span>
+    <span class="n">container_disabled</span> <span class="o">=</span> <span class="s2">&quot;ContainerDisabled&quot;</span>
+    <span class="n">container_not_found</span> <span class="o">=</span> <span class="s2">&quot;ContainerNotFound&quot;</span>
+    <span class="n">content_length_larger_than_tier_limit</span> <span class="o">=</span> <span class="s2">&quot;ContentLengthLargerThanTierLimit&quot;</span>
+    <span class="n">copy_across_accounts_not_supported</span> <span class="o">=</span> <span class="s2">&quot;CopyAcrossAccountsNotSupported&quot;</span>
+    <span class="n">copy_id_mismatch</span> <span class="o">=</span> <span class="s2">&quot;CopyIdMismatch&quot;</span>
+    <span class="n">feature_version_mismatch</span> <span class="o">=</span> <span class="s2">&quot;FeatureVersionMismatch&quot;</span>
+    <span class="n">incremental_copy_blob_mismatch</span> <span class="o">=</span> <span class="s2">&quot;IncrementalCopyBlobMismatch&quot;</span>
+    <span class="n">incremental_copy_of_eralier_version_snapshot_not_allowed</span> <span class="o">=</span> <span class="s2">&quot;IncrementalCopyOfEralierVersionSnapshotNotAllowed&quot;</span>
+    <span class="n">incremental_copy_source_must_be_snapshot</span> <span class="o">=</span> <span class="s2">&quot;IncrementalCopySourceMustBeSnapshot&quot;</span>
+    <span class="n">infinite_lease_duration_required</span> <span class="o">=</span> <span class="s2">&quot;InfiniteLeaseDurationRequired&quot;</span>
+    <span class="n">invalid_blob_or_block</span> <span class="o">=</span> <span class="s2">&quot;InvalidBlobOrBlock&quot;</span>
+    <span class="n">invalid_blob_tier</span> <span class="o">=</span> <span class="s2">&quot;InvalidBlobTier&quot;</span>
+    <span class="n">invalid_blob_type</span> <span class="o">=</span> <span class="s2">&quot;InvalidBlobType&quot;</span>
+    <span class="n">invalid_block_id</span> <span class="o">=</span> <span class="s2">&quot;InvalidBlockId&quot;</span>
+    <span class="n">invalid_block_list</span> <span class="o">=</span> <span class="s2">&quot;InvalidBlockList&quot;</span>
+    <span class="n">invalid_operation</span> <span class="o">=</span> <span class="s2">&quot;InvalidOperation&quot;</span>
+    <span class="n">invalid_page_range</span> <span class="o">=</span> <span class="s2">&quot;InvalidPageRange&quot;</span>
+    <span class="n">invalid_source_blob_type</span> <span class="o">=</span> <span class="s2">&quot;InvalidSourceBlobType&quot;</span>
+    <span class="n">invalid_source_blob_url</span> <span class="o">=</span> <span class="s2">&quot;InvalidSourceBlobUrl&quot;</span>
+    <span class="n">invalid_version_for_page_blob_operation</span> <span class="o">=</span> <span class="s2">&quot;InvalidVersionForPageBlobOperation&quot;</span>
+    <span class="n">lease_already_present</span> <span class="o">=</span> <span class="s2">&quot;LeaseAlreadyPresent&quot;</span>
+    <span class="n">lease_already_broken</span> <span class="o">=</span> <span class="s2">&quot;LeaseAlreadyBroken&quot;</span>
+    <span class="n">lease_id_mismatch_with_blob_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseIdMismatchWithBlobOperation&quot;</span>
+    <span class="n">lease_id_mismatch_with_container_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseIdMismatchWithContainerOperation&quot;</span>
+    <span class="n">lease_id_mismatch_with_lease_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseIdMismatchWithLeaseOperation&quot;</span>
+    <span class="n">lease_id_missing</span> <span class="o">=</span> <span class="s2">&quot;LeaseIdMissing&quot;</span>
+    <span class="n">lease_is_breaking_and_cannot_be_acquired</span> <span class="o">=</span> <span class="s2">&quot;LeaseIsBreakingAndCannotBeAcquired&quot;</span>
+    <span class="n">lease_is_breaking_and_cannot_be_changed</span> <span class="o">=</span> <span class="s2">&quot;LeaseIsBreakingAndCannotBeChanged&quot;</span>
+    <span class="n">lease_is_broken_and_cannot_be_renewed</span> <span class="o">=</span> <span class="s2">&quot;LeaseIsBrokenAndCannotBeRenewed&quot;</span>
+    <span class="n">lease_lost</span> <span class="o">=</span> <span class="s2">&quot;LeaseLost&quot;</span>
+    <span class="n">lease_not_present_with_blob_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseNotPresentWithBlobOperation&quot;</span>
+    <span class="n">lease_not_present_with_container_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseNotPresentWithContainerOperation&quot;</span>
+    <span class="n">lease_not_present_with_lease_operation</span> <span class="o">=</span> <span class="s2">&quot;LeaseNotPresentWithLeaseOperation&quot;</span>
+    <span class="n">max_blob_size_condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;MaxBlobSizeConditionNotMet&quot;</span>
+    <span class="n">no_pending_copy_operation</span> <span class="o">=</span> <span class="s2">&quot;NoPendingCopyOperation&quot;</span>
+    <span class="n">operation_not_allowed_on_incremental_copy_blob</span> <span class="o">=</span> <span class="s2">&quot;OperationNotAllowedOnIncrementalCopyBlob&quot;</span>
+    <span class="n">pending_copy_operation</span> <span class="o">=</span> <span class="s2">&quot;PendingCopyOperation&quot;</span>
+    <span class="n">previous_snapshot_cannot_be_newer</span> <span class="o">=</span> <span class="s2">&quot;PreviousSnapshotCannotBeNewer&quot;</span>
+    <span class="n">previous_snapshot_not_found</span> <span class="o">=</span> <span class="s2">&quot;PreviousSnapshotNotFound&quot;</span>
+    <span class="n">previous_snapshot_operation_not_supported</span> <span class="o">=</span> <span class="s2">&quot;PreviousSnapshotOperationNotSupported&quot;</span>
+    <span class="n">sequence_number_condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;SequenceNumberConditionNotMet&quot;</span>
+    <span class="n">sequence_number_increment_too_large</span> <span class="o">=</span> <span class="s2">&quot;SequenceNumberIncrementTooLarge&quot;</span>
+    <span class="n">snapshot_count_exceeded</span> <span class="o">=</span> <span class="s2">&quot;SnapshotCountExceeded&quot;</span>
+    <span class="n">snaphot_operation_rate_exceeded</span> <span class="o">=</span> <span class="s2">&quot;SnaphotOperationRateExceeded&quot;</span>
+    <span class="n">snapshots_present</span> <span class="o">=</span> <span class="s2">&quot;SnapshotsPresent&quot;</span>
+    <span class="n">source_condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;SourceConditionNotMet&quot;</span>
+    <span class="n">system_in_use</span> <span class="o">=</span> <span class="s2">&quot;SystemInUse&quot;</span>
+    <span class="n">target_condition_not_met</span> <span class="o">=</span> <span class="s2">&quot;TargetConditionNotMet&quot;</span>
+    <span class="n">unauthorized_blob_overwrite</span> <span class="o">=</span> <span class="s2">&quot;UnauthorizedBlobOverwrite&quot;</span>
+    <span class="n">blob_being_rehydrated</span> <span class="o">=</span> <span class="s2">&quot;BlobBeingRehydrated&quot;</span>
+    <span class="n">blob_archived</span> <span class="o">=</span> <span class="s2">&quot;BlobArchived&quot;</span>
+    <span class="n">blob_not_archived</span> <span class="o">=</span> <span class="s2">&quot;BlobNotArchived&quot;</span>
+
+    <span class="c1"># Queue values</span>
+    <span class="n">invalid_marker</span> <span class="o">=</span> <span class="s2">&quot;InvalidMarker&quot;</span>
+    <span class="n">message_not_found</span> <span class="o">=</span> <span class="s2">&quot;MessageNotFound&quot;</span>
+    <span class="n">message_too_large</span> <span class="o">=</span> <span class="s2">&quot;MessageTooLarge&quot;</span>
+    <span class="n">pop_receipt_mismatch</span> <span class="o">=</span> <span class="s2">&quot;PopReceiptMismatch&quot;</span>
+    <span class="n">queue_already_exists</span> <span class="o">=</span> <span class="s2">&quot;QueueAlreadyExists&quot;</span>
+    <span class="n">queue_being_deleted</span> <span class="o">=</span> <span class="s2">&quot;QueueBeingDeleted&quot;</span>
+    <span class="n">queue_disabled</span> <span class="o">=</span> <span class="s2">&quot;QueueDisabled&quot;</span>
+    <span class="n">queue_not_empty</span> <span class="o">=</span> <span class="s2">&quot;QueueNotEmpty&quot;</span>
+    <span class="n">queue_not_found</span> <span class="o">=</span> <span class="s2">&quot;QueueNotFound&quot;</span>
+
+    <span class="c1"># File values</span>
+    <span class="n">cannot_delete_file_or_directory</span> <span class="o">=</span> <span class="s2">&quot;CannotDeleteFileOrDirectory&quot;</span>
+    <span class="n">client_cache_flush_delay</span> <span class="o">=</span> <span class="s2">&quot;ClientCacheFlushDelay&quot;</span>
+    <span class="n">delete_pending</span> <span class="o">=</span> <span class="s2">&quot;DeletePending&quot;</span>
+    <span class="n">directory_not_empty</span> <span class="o">=</span> <span class="s2">&quot;DirectoryNotEmpty&quot;</span>
+    <span class="n">file_lock_conflict</span> <span class="o">=</span> <span class="s2">&quot;FileLockConflict&quot;</span>
+    <span class="n">invalid_file_or_directory_path_name</span> <span class="o">=</span> <span class="s2">&quot;InvalidFileOrDirectoryPathName&quot;</span>
+    <span class="n">parent_not_found</span> <span class="o">=</span> <span class="s2">&quot;ParentNotFound&quot;</span>
+    <span class="n">read_only_attribute</span> <span class="o">=</span> <span class="s2">&quot;ReadOnlyAttribute&quot;</span>
+    <span class="n">share_already_exists</span> <span class="o">=</span> <span class="s2">&quot;ShareAlreadyExists&quot;</span>
+    <span class="n">share_being_deleted</span> <span class="o">=</span> <span class="s2">&quot;ShareBeingDeleted&quot;</span>
+    <span class="n">share_disabled</span> <span class="o">=</span> <span class="s2">&quot;ShareDisabled&quot;</span>
+    <span class="n">share_not_found</span> <span class="o">=</span> <span class="s2">&quot;ShareNotFound&quot;</span>
+    <span class="n">sharing_violation</span> <span class="o">=</span> <span class="s2">&quot;SharingViolation&quot;</span>
+    <span class="n">share_snapshot_in_progress</span> <span class="o">=</span> <span class="s2">&quot;ShareSnapshotInProgress&quot;</span>
+    <span class="n">share_snapshot_count_exceeded</span> <span class="o">=</span> <span class="s2">&quot;ShareSnapshotCountExceeded&quot;</span>
+    <span class="n">share_snapshot_operation_not_supported</span> <span class="o">=</span> <span class="s2">&quot;ShareSnapshotOperationNotSupported&quot;</span>
+    <span class="n">share_has_snapshots</span> <span class="o">=</span> <span class="s2">&quot;ShareHasSnapshots&quot;</span>
+    <span class="n">container_quota_downgrade_not_allowed</span> <span class="o">=</span> <span class="s2">&quot;ContainerQuotaDowngradeNotAllowed&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">DictMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Compare objects by comparing all attributes.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Compare objects by comparing all attributes.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)})</span>
+
+    <span class="k">def</span> <span class="nf">has_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">default</span>
+
+
+<div class="viewcode-block" id="LocationMode"><a class="viewcode-back" href="../../../../../ref/azure.storage.file.aio.html#azure.storage.file.LocationMode">[docs]</a><span class="k">class</span> <span class="nc">LocationMode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the location the request should be sent to. This mode only applies</span>
+<span class="sd">    for RA-GRS accounts which allow secondary read access. All other account types</span>
+<span class="sd">    must use PRIMARY.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">PRIMARY</span> <span class="o">=</span> <span class="s1">&#39;primary&#39;</span>  <span class="c1">#: Requests should be sent to the primary location.</span>
+    <span class="n">SECONDARY</span> <span class="o">=</span> <span class="s1">&#39;secondary&#39;</span>  <span class="c1">#: Requests should be sent to the secondary location, if possible.</span></div>
+
+
+<div class="viewcode-block" id="ResourceTypes"><a class="viewcode-back" href="../../../../../ref/azure.storage.file.aio.html#azure.storage.file.ResourceTypes">[docs]</a><span class="k">class</span> <span class="nc">ResourceTypes</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the resource types that are accessible with the account SAS.</span>
+
+<span class="sd">    :cvar ResourceTypes ResourceTypes.CONTAINER:</span>
+<span class="sd">        Access to container-level APIs (e.g., Create/Delete Container,</span>
+<span class="sd">        Create/Delete Queue, Create/Delete Share,</span>
+<span class="sd">        List Blobs/Files and Directories)</span>
+<span class="sd">    :cvar ResourceTypes ResourceTypes.OBJECT:</span>
+<span class="sd">        Access to object-level APIs for blobs, queue messages, and</span>
+<span class="sd">        files(e.g. Put Blob, Query Entity, Get Messages, Create File, etc.)</span>
+<span class="sd">    :cvar ResourceTypes ResourceTypes.SERVICE:</span>
+<span class="sd">        Access to service-level APIs (e.g., Get/Set Service Properties,</span>
+<span class="sd">        Get Service Stats, List Containers/Queues/Shares)</span>
+<span class="sd">    :param bool service:</span>
+<span class="sd">        Access to service-level APIs (e.g., Get/Set Service Properties,</span>
+<span class="sd">        Get Service Stats, List Containers/Queues/Shares)</span>
+<span class="sd">    :param bool container:</span>
+<span class="sd">        Access to container-level APIs (e.g., Create/Delete Container,</span>
+<span class="sd">        Create/Delete Queue, Create/Delete Share,</span>
+<span class="sd">        List Blobs/Files and Directories)</span>
+<span class="sd">    :param bool object:</span>
+<span class="sd">        Access to object-level APIs for blobs, queue messages, and</span>
+<span class="sd">        files(e.g. Put Blob, Query Entity, Get Messages, Create File, etc.)</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the resource types.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">SERVICE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ResourceTypes</span>
+    <span class="n">CONTAINER</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ResourceTypes</span>
+    <span class="n">OBJECT</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ResourceTypes</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">container</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># pylint: disable=redefined-builtin</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="n">service</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;s&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">container</span> <span class="o">=</span> <span class="n">container</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object</span> <span class="o">=</span> <span class="nb">object</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;o&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ResourceTypes</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ResourceTypes</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;s&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">container</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;o&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span></div>
+
+
+<span class="n">ResourceTypes</span><span class="o">.</span><span class="n">SERVICE</span> <span class="o">=</span> <span class="n">ResourceTypes</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ResourceTypes</span><span class="o">.</span><span class="n">CONTAINER</span> <span class="o">=</span> <span class="n">ResourceTypes</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ResourceTypes</span><span class="o">.</span><span class="n">OBJECT</span> <span class="o">=</span> <span class="n">ResourceTypes</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="AccountPermissions"><a class="viewcode-back" href="../../../../../ref/azure.storage.file.aio.html#azure.storage.file.AccountPermissions">[docs]</a><span class="k">class</span> <span class="nc">AccountPermissions</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :class:`~ResourceTypes` class to be used with generate_shared_access_signature</span>
+<span class="sd">    method and for the AccessPolicies used with set_*_acl. There are two types of</span>
+<span class="sd">    SAS which may be used to grant resource access. One is to grant access to a</span>
+<span class="sd">    specific resource (resource-specific). Another is to grant access to the</span>
+<span class="sd">    entire service for a specific account and allow certain operations based on</span>
+<span class="sd">    perms found here.</span>
+
+<span class="sd">    :cvar AccountPermissions AccountPermissions.ADD:</span>
+<span class="sd">        Valid for the following Object resource types only: queue messages and append blobs.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.CREATE:</span>
+<span class="sd">        Valid for the following Object resource types only: blobs and files. Users</span>
+<span class="sd">        can create new blobs or files, but may not overwrite existing blobs or files.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.DELETE:</span>
+<span class="sd">        Valid for Container and Object resource types, except for queue messages.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.LIST:</span>
+<span class="sd">        Valid for Service and Container resource types only.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.PROCESS:</span>
+<span class="sd">        Valid for the following Object resource type only: queue messages.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.READ:</span>
+<span class="sd">        Valid for all signed resources types (Service, Container, and Object).</span>
+<span class="sd">        Permits read permissions to the specified resource type.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.UPDATE:</span>
+<span class="sd">        Valid for the following Object resource types only: queue messages.</span>
+<span class="sd">    :cvar AccountPermissions AccountPermissions.WRITE:</span>
+<span class="sd">        Valid for all signed resources types (Service, Container, and Object).</span>
+<span class="sd">        Permits write permissions to the specified resource type.</span>
+<span class="sd">    :param bool read:</span>
+<span class="sd">        Valid for all signed resources types (Service, Container, and Object).</span>
+<span class="sd">        Permits read permissions to the specified resource type.</span>
+<span class="sd">    :param bool write:</span>
+<span class="sd">        Valid for all signed resources types (Service, Container, and Object).</span>
+<span class="sd">        Permits write permissions to the specified resource type.</span>
+<span class="sd">    :param bool delete:</span>
+<span class="sd">        Valid for Container and Object resource types, except for queue messages.</span>
+<span class="sd">    :param bool list:</span>
+<span class="sd">        Valid for Service and Container resource types only.</span>
+<span class="sd">    :param bool add:</span>
+<span class="sd">        Valid for the following Object resource types only: queue messages, and append blobs.</span>
+<span class="sd">    :param bool create:</span>
+<span class="sd">        Valid for the following Object resource types only: blobs and files.</span>
+<span class="sd">        Users can create new blobs or files, but may not overwrite existing</span>
+<span class="sd">        blobs or files.</span>
+<span class="sd">    :param bool update:</span>
+<span class="sd">        Valid for the following Object resource types only: queue messages.</span>
+<span class="sd">    :param bool process:</span>
+<span class="sd">        Valid for the following Object resource type only: queue messages.</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the permissions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">READ</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">WRITE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">DELETE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">LIST</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">ADD</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">CREATE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">UPDATE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+    <span class="n">PROCESS</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: AccountPermissions</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">list</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># pylint: disable=redefined-builtin</span>
+                 <span class="n">add</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">process</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="o">=</span> <span class="n">read</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;r&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">write</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">delete</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="nb">list</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;l&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span> <span class="o">=</span> <span class="n">add</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create</span> <span class="o">=</span> <span class="n">create</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="o">=</span> <span class="n">update</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;u&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">process</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;r&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;l&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;u&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span></div>
+
+
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">READ</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">WRITE</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">DELETE</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">LIST</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="nb">list</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">ADD</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">CREATE</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">UPDATE</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">AccountPermissions</span><span class="o">.</span><span class="n">PROCESS</span> <span class="o">=</span> <span class="n">AccountPermissions</span><span class="p">(</span><span class="n">process</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Services</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the services accessible with the account SAS.</span>
+
+<span class="sd">    :cvar Services Services.BLOB: The blob service.</span>
+<span class="sd">    :cvar Services Services.FILE: The file service</span>
+<span class="sd">    :cvar Services Services.QUEUE: The queue service.</span>
+<span class="sd">    :param bool blob:</span>
+<span class="sd">        Access for the `~azure.storage.blob.blob_service_client.BlobServiceClient`</span>
+<span class="sd">    :param bool queue:</span>
+<span class="sd">        Access for the `~azure.storage.queue.queue_service_client.QueueServiceClient`</span>
+<span class="sd">    :param bool file:</span>
+<span class="sd">        Access for the `~azure.storage.file.file_service_client.FileServiceClient`</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the services.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">BLOB</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: Services</span>
+    <span class="n">QUEUE</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: Services</span>
+    <span class="n">FILE</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: Services</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blob</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">queue</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blob</span> <span class="o">=</span> <span class="n">blob</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;q&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;f&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Services</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Services</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;b&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">blob</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;q&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;f&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+
+<span class="n">Services</span><span class="o">.</span><span class="n">BLOB</span> <span class="o">=</span> <span class="n">Services</span><span class="p">(</span><span class="n">blob</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">Services</span><span class="o">.</span><span class="n">QUEUE</span> <span class="o">=</span> <span class="n">Services</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">Services</span><span class="o">.</span><span class="n">FILE</span> <span class="o">=</span> <span class="n">Services</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">UserDelegationKey</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a user delegation key, provided to the user by Azure Storage</span>
+<span class="sd">    based on their Azure Active Directory access token.</span>
+
+<span class="sd">    The fields are saved as simple strings since the user does not have to interact with this object;</span>
+<span class="sd">    to generate an identify SAS, the user can simply pass it to the right API.</span>
+
+<span class="sd">    :ivar str signed_oid:</span>
+<span class="sd">        Object ID of this token.</span>
+<span class="sd">    :ivar str signed_tid:</span>
+<span class="sd">        Tenant ID of the tenant that issued this token.</span>
+<span class="sd">    :ivar str signed_start:</span>
+<span class="sd">        The datetime this token becomes valid.</span>
+<span class="sd">    :ivar str signed_expiry:</span>
+<span class="sd">        The datetime this token expires.</span>
+<span class="sd">    :ivar str signed_service:</span>
+<span class="sd">        What service this key is valid for.</span>
+<span class="sd">    :ivar str signed_version:</span>
+<span class="sd">        The version identifier of the REST service that created this token.</span>
+<span class="sd">    :ivar str value:</span>
+<span class="sd">        The user delegation key.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_oid</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_tid</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_start</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_expiry</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_service</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signed_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

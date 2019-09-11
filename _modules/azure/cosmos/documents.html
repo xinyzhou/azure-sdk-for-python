@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cosmos.documents &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.cosmos.documents</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.cosmos.documents</h1><div class="highlight"><pre>
+<span></span><span class="c1"># The MIT License (MIT)</span>
+<span class="c1"># Copyright (c) 2014 Microsoft Corporation</span>
+
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="c1"># in the Software without restriction, including without limitation the rights</span>
+<span class="c1"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="c1"># copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+
+<span class="c1"># The above copyright notice and this permission notice shall be included in all</span>
+<span class="c1"># copies or substantial portions of the Software.</span>
+
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="c1"># SOFTWARE.</span>
+
+<span class="sd">&quot;&quot;&quot;AzureDocument classes and enums for the Azure Cosmos database service.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">_retry_options</span>
+
+
+<div class="viewcode-block" id="DatabaseAccount"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.DatabaseAccount">[docs]</a><span class="k">class</span> <span class="nc">DatabaseAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;Database account. A DatabaseAccount is the container for databases.</span>
+
+<span class="sd">    :ivar str DatabaseLink:</span>
+<span class="sd">        The self-link for Databases in the databaseAccount.</span>
+<span class="sd">    :ivar str MediaLink:</span>
+<span class="sd">        The self-link for Media in the databaseAccount.</span>
+<span class="sd">    :ivar int MaxMediaStorageUsageInMB:</span>
+<span class="sd">        Attachment content (media) storage quota in MBs (Retrieved from gateway).</span>
+<span class="sd">    :ivar int CurrentMediaStorageUsageInMB:</span>
+<span class="sd">        Current attachment content (media) usage in MBs (Retrieved from gateway).</span>
+<span class="sd">        Value is returned from cached information updated periodically and</span>
+<span class="sd">        is not guaranteed to be real time.</span>
+<span class="sd">    :ivar dict ConsistencyPolicy:</span>
+<span class="sd">        UserConsistencyPolicy settings.</span>
+<span class="sd">    :ivar dict ConsistencyPolicy[&#39;defaultConsistencyLevel&#39;]:</span>
+<span class="sd">        The default consistency level.</span>
+<span class="sd">    :ivar int ConsistencyPolicy[&#39;maxStalenessPrefix&#39;]:</span>
+<span class="sd">        In bounded staleness consistency, the maximum allowed staleness in</span>
+<span class="sd">        terms difference in sequence numbers (aka version).</span>
+<span class="sd">    :ivar int ConsistencyPolicy[&#39;maxStalenessIntervalInSeconds&#39;]:</span>
+<span class="sd">        In bounded staleness consistency, the maximum allowed staleness in</span>
+<span class="sd">        terms time interval.</span>
+<span class="sd">    :ivar boolean EnableMultipleWritableLocations:</span>
+<span class="sd">        Flag on the azure Cosmos account that indicates if writes can take</span>
+<span class="sd">        place in multiple locations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DatabasesLink</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MediaLink</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MaxMediaStorageUsageInMB</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CurrentMediaStorageUsageInMB</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConsumedDocumentStorageInMB</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ReservedDocumentStorageInMB</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ProvisionedDocumentStorageInMB</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConsistencyPolicy</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_WritableLocations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ReadableLocations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_EnableMultipleWritableLocations</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">WritableLocations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gets the list of writable locations for a geo-replicated database account.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_WritableLocations</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ReadableLocations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gets the list of readable locations for a geo-replicated database account.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ReadableLocations</span></div>
+
+
+<div class="viewcode-block" id="ConsistencyLevel"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.ConsistencyLevel">[docs]</a><span class="k">class</span> <span class="nc">ConsistencyLevel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the consistency levels supported for Azure Cosmos client</span>
+<span class="sd">    operations.</span>
+
+<span class="sd">    The requested ConsistencyLevel must match or be weaker than that provisioned</span>
+<span class="sd">    for the database account. Consistency levels.</span>
+
+<span class="sd">    Consistency levels by order of strength are Strong, BoundedStaleness,</span>
+<span class="sd">    Session, ConsistentPrefix and Eventual.</span>
+
+<span class="sd">    :ivar str ConsistencyLevel.Strong:</span>
+<span class="sd">        Strong Consistency guarantees that read operations always</span>
+<span class="sd">        return the value that was last written.</span>
+<span class="sd">    :ivar str ConsistencyLevel.BoundedStaleness:</span>
+<span class="sd">        Bounded Staleness guarantees that reads are not</span>
+<span class="sd">        too out-of-date. This can be configured based on number of operations</span>
+<span class="sd">        (MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds).</span>
+<span class="sd">    :ivar str ConsistencyLevel.Session:</span>
+<span class="sd">        Session Consistency guarantees monotonic reads (you never</span>
+<span class="sd">        read old data, then new, then old again), monotonic writes (writes</span>
+<span class="sd">        are ordered) and read your writes (your writes are immediately</span>
+<span class="sd">        visible to your reads) within any single session.</span>
+<span class="sd">    :ivar str ConsistencyLevel.Eventual:</span>
+<span class="sd">        Eventual Consistency guarantees that reads will return</span>
+<span class="sd">        a subset of writes. All writes will be eventually be available for</span>
+<span class="sd">        reads.</span>
+<span class="sd">    :ivar str ConsistencyLevel.ConsistentPrefix:</span>
+<span class="sd">        ConsistentPrefix Consistency guarantees that</span>
+<span class="sd">        reads will return some prefix of all writes with no gaps. All writes</span>
+<span class="sd">        will be eventually be available for reads.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Strong</span> <span class="o">=</span> <span class="s2">&quot;Strong&quot;</span>
+    <span class="n">BoundedStaleness</span> <span class="o">=</span> <span class="s2">&quot;BoundedStaleness&quot;</span>
+    <span class="n">Session</span> <span class="o">=</span> <span class="s2">&quot;Session&quot;</span>
+    <span class="n">Eventual</span> <span class="o">=</span> <span class="s2">&quot;Eventual&quot;</span>
+    <span class="n">ConsistentPrefix</span> <span class="o">=</span> <span class="s2">&quot;ConsistentPrefix&quot;</span></div>
+
+
+<div class="viewcode-block" id="IndexingMode"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.IndexingMode">[docs]</a><span class="k">class</span> <span class="nc">IndexingMode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the supported indexing modes.</span>
+
+<span class="sd">    :ivar str Consistent:</span>
+<span class="sd">        Index is updated synchronously with a create or</span>
+<span class="sd">        update operation. With consistent indexing, query behavior is the</span>
+<span class="sd">        same as the default consistency level for the collection.</span>
+
+<span class="sd">        The index is</span>
+<span class="sd">        always kept up to date with the data.</span>
+<span class="sd">    :ivar str Lazy:</span>
+<span class="sd">        Index is updated asynchronously with respect to a create</span>
+<span class="sd">        or update operation.</span>
+
+<span class="sd">        With lazy indexing, queries are eventually consistent. The index is</span>
+<span class="sd">        updated when the collection is idle.</span>
+<span class="sd">    :ivar str NoIndex:</span>
+<span class="sd">        No index is provided.</span>
+
+<span class="sd">        Setting IndexingMode to &quot;None&quot; drops the index. Use this if you don&#39;t</span>
+<span class="sd">        want to maintain the index for a document collection, to save the</span>
+<span class="sd">        storage cost or improve the write throughput. Your queries will</span>
+<span class="sd">        degenerate to scans of the entire collection.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Consistent</span> <span class="o">=</span> <span class="s2">&quot;consistent&quot;</span>
+    <span class="n">Lazy</span> <span class="o">=</span> <span class="s2">&quot;lazy&quot;</span>
+    <span class="n">NoIndex</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span></div>
+
+
+<div class="viewcode-block" id="IndexKind"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.IndexKind">[docs]</a><span class="k">class</span> <span class="nc">IndexKind</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the index kind of index specs.</span>
+
+<span class="sd">    :ivar str IndexKind.Hash:</span>
+<span class="sd">        The index entries are hashed to serve point look up queries.</span>
+<span class="sd">        Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop = 5</span>
+
+<span class="sd">    :ivar str IndexKind.Range:</span>
+<span class="sd">        The index entries are ordered. Range indexes are optimized for</span>
+<span class="sd">        inequality predicate queries with efficient range scans.</span>
+<span class="sd">        Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop &gt; 5</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Hash</span> <span class="o">=</span> <span class="s2">&quot;Hash&quot;</span>
+    <span class="n">Range</span> <span class="o">=</span> <span class="s2">&quot;Range&quot;</span></div>
+
+
+<div class="viewcode-block" id="PartitionKind"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.PartitionKind">[docs]</a><span class="k">class</span> <span class="nc">PartitionKind</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the kind of partitioning to be applied.</span>
+
+<span class="sd">    :ivar str PartitionKind.Hash:</span>
+<span class="sd">        The partition key definition path is hashed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Hash</span> <span class="o">=</span> <span class="s2">&quot;Hash&quot;</span></div>
+
+
+<div class="viewcode-block" id="DataType"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.DataType">[docs]</a><span class="k">class</span> <span class="nc">DataType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the data type of index specs.</span>
+
+<span class="sd">    :ivar str Number:</span>
+<span class="sd">        Represents a numeric data type.</span>
+<span class="sd">    :ivar str String:</span>
+<span class="sd">        Represents a string data type.</span>
+<span class="sd">    :ivar str Point:</span>
+<span class="sd">        Represents a point data type.</span>
+<span class="sd">    :ivar str LineString:</span>
+<span class="sd">        Represents a line string data type.</span>
+<span class="sd">    :ivar str Polygon:</span>
+<span class="sd">        Represents a polygon data type.</span>
+<span class="sd">    :ivar str MultiPolygon:</span>
+<span class="sd">        Represents a multi-polygon data type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Number</span> <span class="o">=</span> <span class="s2">&quot;Number&quot;</span>
+    <span class="n">String</span> <span class="o">=</span> <span class="s2">&quot;String&quot;</span>
+    <span class="n">Point</span> <span class="o">=</span> <span class="s2">&quot;Point&quot;</span>
+    <span class="n">LineString</span> <span class="o">=</span> <span class="s2">&quot;LineString&quot;</span>
+    <span class="n">Polygon</span> <span class="o">=</span> <span class="s2">&quot;Polygon&quot;</span>
+    <span class="n">MultiPolygon</span> <span class="o">=</span> <span class="s2">&quot;MultiPolygon&quot;</span></div>
+
+
+<div class="viewcode-block" id="IndexingDirective"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.IndexingDirective">[docs]</a><span class="k">class</span> <span class="nc">IndexingDirective</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies whether or not the resource is to be indexed.</span>
+
+<span class="sd">    :ivar int Default:</span>
+<span class="sd">        Use any pre-defined/pre-configured defaults.</span>
+<span class="sd">    :ivar int Exclude:</span>
+<span class="sd">        Index the resource.</span>
+<span class="sd">    :ivar int Include:</span>
+<span class="sd">        Do not index the resource.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Default</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">Exclude</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Include</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+
+<div class="viewcode-block" id="ConnectionMode"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.ConnectionMode">[docs]</a><span class="k">class</span> <span class="nc">ConnectionMode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the connection mode to be used by the client.</span>
+
+<span class="sd">    :ivar int Gateway:</span>
+<span class="sd">        Use the Azure Cosmos gateway to route all requests. The</span>
+<span class="sd">        gateway proxies requests to the right data partition.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Gateway</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="MediaReadMode"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.MediaReadMode">[docs]</a><span class="k">class</span> <span class="nc">MediaReadMode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the mode for use with downloading attachment content</span>
+<span class="sd">    (aka media).</span>
+
+<span class="sd">    :ivar str Buffered:</span>
+<span class="sd">        Content is buffered at the client and not directly</span>
+<span class="sd">        streamed from the content store.</span>
+
+<span class="sd">        Use Buffered to reduce the time taken to read and write media files.</span>
+<span class="sd">    :ivar str Streamed:</span>
+<span class="sd">        Content is directly streamed from the content store</span>
+<span class="sd">        without any buffering at the client.</span>
+
+<span class="sd">        Use Streamed to reduce the client memory overhead of reading and</span>
+<span class="sd">        writing media files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Buffered</span> <span class="o">=</span> <span class="s2">&quot;Buffered&quot;</span>
+    <span class="n">Streamed</span> <span class="o">=</span> <span class="s2">&quot;Streamed&quot;</span></div>
+
+
+<div class="viewcode-block" id="PermissionMode"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.PermissionMode">[docs]</a><span class="k">class</span> <span class="nc">PermissionMode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Enumeration specifying applicability of permission.</span>
+
+<span class="sd">    :ivar str PermissionMode.NoneMode:</span>
+<span class="sd">        None.</span>
+<span class="sd">    :ivar str PermissionMode.Read:</span>
+<span class="sd">        Permission applicable for read operations only.</span>
+<span class="sd">    :ivar str PermissionMode.All:</span>
+<span class="sd">        Permission applicable for all operations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NoneMode</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>  <span class="c1"># None is python&#39;s key word.</span>
+    <span class="n">Read</span> <span class="o">=</span> <span class="s2">&quot;read&quot;</span>
+    <span class="n">All</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span></div>
+
+
+<div class="viewcode-block" id="TriggerType"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.TriggerType">[docs]</a><span class="k">class</span> <span class="nc">TriggerType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the type of the trigger.</span>
+
+<span class="sd">    :ivar str TriggerType.Pre:</span>
+<span class="sd">        Trigger should be executed before the associated operation(s).</span>
+<span class="sd">    :ivar str TriggerType.Post:</span>
+<span class="sd">        Trigger should be executed after the associated operation(s).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Pre</span> <span class="o">=</span> <span class="s2">&quot;pre&quot;</span>
+    <span class="n">Post</span> <span class="o">=</span> <span class="s2">&quot;post&quot;</span></div>
+
+
+<div class="viewcode-block" id="TriggerOperation"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.TriggerOperation">[docs]</a><span class="k">class</span> <span class="nc">TriggerOperation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Specifies the operations on which a trigger should be executed.</span>
+
+<span class="sd">    :ivar str TriggerOperation.All:</span>
+<span class="sd">        All operations.</span>
+<span class="sd">    :ivar str TriggerOperation.Create:</span>
+<span class="sd">        Create operations only.</span>
+<span class="sd">    :ivar str TriggerOperation.Update:</span>
+<span class="sd">        Update operations only.</span>
+<span class="sd">    :ivar str TriggerOperation.Delete:</span>
+<span class="sd">        Delete operations only.</span>
+<span class="sd">    :ivar str TriggerOperation.Replace:</span>
+<span class="sd">        Replace operations only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">All</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
+    <span class="n">Create</span> <span class="o">=</span> <span class="s2">&quot;create&quot;</span>
+    <span class="n">Update</span> <span class="o">=</span> <span class="s2">&quot;update&quot;</span>
+    <span class="n">Delete</span> <span class="o">=</span> <span class="s2">&quot;delete&quot;</span>
+    <span class="n">Replace</span> <span class="o">=</span> <span class="s2">&quot;replace&quot;</span></div>
+
+
+<div class="viewcode-block" id="SSLConfiguration"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.SSLConfiguration">[docs]</a><span class="k">class</span> <span class="nc">SSLConfiguration</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Configurations for SSL connections.</span>
+
+<span class="sd">    Please refer to http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification for more detail.</span>
+
+<span class="sd">    :ivar str SSLKeyFIle:</span>
+<span class="sd">        The path of the key file for ssl connection.</span>
+<span class="sd">    :ivar str SSLCertFile:</span>
+<span class="sd">        The path of the cert file for ssl connection.</span>
+<span class="sd">    :ivar str SSLCaCerts:</span>
+<span class="sd">        The path of the CA_BUNDLE file with certificates of trusted CAs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SSLKeyFile</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SSLCertFile</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SSLCaCerts</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="ProxyConfiguration"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.ProxyConfiguration">[docs]</a><span class="k">class</span> <span class="nc">ProxyConfiguration</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Configurations for proxy.</span>
+
+<span class="sd">    :ivar str Host:</span>
+<span class="sd">        The host address of the proxy.</span>
+<span class="sd">    :ivar int Port:</span>
+<span class="sd">        The port number of the proxy.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Host</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Port</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="ConnectionPolicy"><a class="viewcode-back" href="../../../ref/azure.cosmos.documents.html#azure.cosmos.ConnectionPolicy">[docs]</a><span class="k">class</span> <span class="nc">ConnectionPolicy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-instance-attributes</span>
+    <span class="sd">&quot;&quot;&quot;Represents the Connection policy assocated with a CosmosClientConnection.</span>
+
+<span class="sd">    :ivar int RequestTimeout:</span>
+<span class="sd">        Gets or sets the request timeout (time to wait</span>
+<span class="sd">        for response from network peer).</span>
+<span class="sd">    :ivar int MediaRequestTimeout:</span>
+<span class="sd">        Gets or sets Time to wait for response</span>
+<span class="sd">        from network peer for attachment content (aka media) operations.</span>
+<span class="sd">    :ivar documents.ConnectionMode ConnectionMode:</span>
+<span class="sd">        Gets or sets the connection mode used in the client. Currently</span>
+<span class="sd">        only Gateway is supported.</span>
+<span class="sd">    :ivar MediaReadMode.Buffered MediaReadMode:</span>
+<span class="sd">        Gets or sets the attachment content (aka media) download mode.</span>
+<span class="sd">    :ivar documents.SSLConfiguration SSLConfiguration:</span>
+<span class="sd">        Gets or sets the SSL configuration.</span>
+<span class="sd">    :ivar documents.ProxyConfiguration ProxyConfiguration:</span>
+<span class="sd">        Gets or sets the proxy configuration.</span>
+<span class="sd">    :ivar boolean EnableEndpointDiscovery:</span>
+<span class="sd">        Gets or sets endpoint discovery flag for geo-replicated database accounts.</span>
+<span class="sd">        When EnableEndpointDiscovery is true, the client will automatically discover the</span>
+<span class="sd">        current write and read locations and direct the requests to the correct location</span>
+<span class="sd">        taking into consideration of the user&#39;s preference(if provided) as PreferredLocations.</span>
+<span class="sd">    :ivar list PreferredLocations:</span>
+<span class="sd">        Gets or sets the preferred locations for geo-replicated database accounts.</span>
+<span class="sd">        When EnableEndpointDiscovery is true and PreferredLocations is non-empty,</span>
+<span class="sd">        the client will use this list to evaluate the final location, taking into consideration</span>
+<span class="sd">        the order specified in PreferredLocations list. The locations in this list are specified</span>
+<span class="sd">        as the names of the azure Cosmos locations like, &#39;West US&#39;, &#39;East US&#39;, &#39;Central India&#39;</span>
+<span class="sd">        and so on.</span>
+<span class="sd">    :ivar RetryOptions RetryOptions:</span>
+<span class="sd">        Gets or sets the retry options to be applied to all requests when retrying.</span>
+<span class="sd">    :ivar boolean DisableSSLVerification:</span>
+<span class="sd">        Flag to disable SSL verification for the requests. SSL verification is enabled by default.</span>
+<span class="sd">        Don&#39;t set this when targeting production endpoints.</span>
+<span class="sd">        This is intended to be used only when targeting emulator endpoint to avoid failing your</span>
+<span class="sd">        requests with SSL related error.</span>
+<span class="sd">    :ivar boolean UseMultipleWriteLocations:</span>
+<span class="sd">        Flag to enable writes on any locations (regions) for geo-replicated database accounts</span>
+<span class="sd">        in the azure Cosmos service.</span>
+<span class="sd">    :ivar (int or requests.packages.urllib3.util.retry) ConnectionRetryConfiguration:</span>
+<span class="sd">        Retry Configuration to be used for urllib3 connection retries.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">__defaultRequestTimeout</span> <span class="o">=</span> <span class="mi">60000</span>  <span class="c1"># milliseconds</span>
+    <span class="c1"># defaultMediaRequestTimeout is based upon the blob client timeout and the</span>
+    <span class="c1"># retry policy.</span>
+    <span class="n">__defaultMediaRequestTimeout</span> <span class="o">=</span> <span class="mi">300000</span>  <span class="c1"># milliseconds</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">RequestTimeout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__defaultRequestTimeout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MediaRequestTimeout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__defaultMediaRequestTimeout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConnectionMode</span> <span class="o">=</span> <span class="n">ConnectionMode</span><span class="o">.</span><span class="n">Gateway</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MediaReadMode</span> <span class="o">=</span> <span class="n">MediaReadMode</span><span class="o">.</span><span class="n">Buffered</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SSLConfiguration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ProxyConfiguration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">EnableEndpointDiscovery</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">PreferredLocations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">RetryOptions</span> <span class="o">=</span> <span class="n">_retry_options</span><span class="o">.</span><span class="n">RetryOptions</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DisableSSLVerification</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">UseMultipleWriteLocations</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ConnectionRetryConfiguration</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<span class="k">class</span> <span class="nc">_OperationType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Represents the type of the operation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Create</span> <span class="o">=</span> <span class="s2">&quot;Create&quot;</span>
+    <span class="n">Delete</span> <span class="o">=</span> <span class="s2">&quot;Delete&quot;</span>
+    <span class="n">ExecuteJavaScript</span> <span class="o">=</span> <span class="s2">&quot;ExecuteJavaScript&quot;</span>
+    <span class="n">Head</span> <span class="o">=</span> <span class="s2">&quot;Head&quot;</span>
+    <span class="n">HeadFeed</span> <span class="o">=</span> <span class="s2">&quot;HeadFeed&quot;</span>
+    <span class="n">Query</span> <span class="o">=</span> <span class="s2">&quot;Query&quot;</span>
+    <span class="n">Read</span> <span class="o">=</span> <span class="s2">&quot;Read&quot;</span>
+    <span class="n">ReadFeed</span> <span class="o">=</span> <span class="s2">&quot;ReadFeed&quot;</span>
+    <span class="n">Recreate</span> <span class="o">=</span> <span class="s2">&quot;Recreate&quot;</span>
+    <span class="n">Replace</span> <span class="o">=</span> <span class="s2">&quot;Replace&quot;</span>
+    <span class="n">SqlQuery</span> <span class="o">=</span> <span class="s2">&quot;SqlQuery&quot;</span>
+    <span class="n">Update</span> <span class="o">=</span> <span class="s2">&quot;Update&quot;</span>
+    <span class="n">Upsert</span> <span class="o">=</span> <span class="s2">&quot;Upsert&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">IsWriteOperation</span><span class="p">(</span><span class="n">operationType</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operationType</span> <span class="ow">in</span> <span class="p">(</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Create</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Delete</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Recreate</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">ExecuteJavaScript</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Replace</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Upsert</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Update</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">IsReadOnlyOperation</span><span class="p">(</span><span class="n">operationType</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operationType</span> <span class="ow">in</span> <span class="p">(</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Read</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">ReadFeed</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Head</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">HeadFeed</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">Query</span><span class="p">,</span>
+            <span class="n">_OperationType</span><span class="o">.</span><span class="n">SqlQuery</span><span class="p">,</span>
+        <span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

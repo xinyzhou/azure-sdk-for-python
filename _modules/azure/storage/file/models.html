@@ -1,0 +1,1168 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.storage.file.models &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.storage.file.models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.storage.file.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># pylint: disable=too-few-public-methods, too-many-instance-attributes</span>
+<span class="c1"># pylint: disable=super-init-not-called, too-many-lines</span>
+
+<span class="kn">from</span> <span class="nn">azure.core.paging</span> <span class="k">import</span> <span class="n">PageIterator</span>
+<span class="kn">from</span> <span class="nn">azure.storage.file._parser</span> <span class="k">import</span> <span class="n">_parse_datetime_from_str</span>
+<span class="kn">from</span> <span class="nn">._shared.response_handlers</span> <span class="k">import</span> <span class="n">return_context_and_deserialized</span><span class="p">,</span> <span class="n">process_storage_error</span>
+<span class="kn">from</span> <span class="nn">._shared.models</span> <span class="k">import</span> <span class="n">DictMixin</span><span class="p">,</span> <span class="n">get_enum_value</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">StorageErrorException</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">Metrics</span> <span class="k">as</span> <span class="n">GeneratedMetrics</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">RetentionPolicy</span> <span class="k">as</span> <span class="n">GeneratedRetentionPolicy</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">CorsRule</span> <span class="k">as</span> <span class="n">GeneratedCorsRule</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">AccessPolicy</span> <span class="k">as</span> <span class="n">GenAccessPolicy</span>
+<span class="kn">from</span> <span class="nn">._generated.models</span> <span class="k">import</span> <span class="n">DirectoryItem</span>
+
+
+<span class="k">def</span> <span class="nf">_wrap_item</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">DirectoryItem</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;is_directory&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_length</span><span class="p">,</span> <span class="s1">&#39;is_directory&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="Metrics"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.Metrics">[docs]</a><span class="k">class</span> <span class="nc">Metrics</span><span class="p">(</span><span class="n">GeneratedMetrics</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A summary of request statistics grouped by API in hour or minute aggregates</span>
+<span class="sd">    for files.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar str version: The version of Storage Analytics to configure.</span>
+<span class="sd">    :ivar bool enabled: Required. Indicates whether metrics are enabled for the</span>
+<span class="sd">        File service.</span>
+<span class="sd">    :ivar bool include_ap_is: Indicates whether metrics should generate summary</span>
+<span class="sd">        statistics for called API operations.</span>
+<span class="sd">    :ivar retention_policy: Required. Determines how long the associated data should</span>
+<span class="sd">        persist.</span>
+<span class="sd">    :vartype retention_policy: ~azure.storage.file.models.RetentionPolicy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;1.0&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">include_apis</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;include_apis&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retention_policy</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;retention_policy&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">RetentionPolicy</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="RetentionPolicy"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.RetentionPolicy">[docs]</a><span class="k">class</span> <span class="nc">RetentionPolicy</span><span class="p">(</span><span class="n">GeneratedRetentionPolicy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The retention policy which determines how long the associated data should</span>
+<span class="sd">    persist.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param bool enabled: Required. Indicates whether a retention policy is enabled</span>
+<span class="sd">        for the storage service.</span>
+<span class="sd">    :param int days: Indicates the number of days that metrics or logging or</span>
+<span class="sd">        soft-deleted data should be retained. All data older than this value will</span>
+<span class="sd">        be deleted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="o">=</span> <span class="n">days</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;If policy is enabled, &#39;days&#39; must be specified.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CorsRule"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.CorsRule">[docs]</a><span class="k">class</span> <span class="nc">CorsRule</span><span class="p">(</span><span class="n">GeneratedCorsRule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;CORS is an HTTP feature that enables a web application running under one</span>
+<span class="sd">    domain to access resources in another domain. Web browsers implement a</span>
+<span class="sd">    security restriction known as same-origin policy that prevents a web page</span>
+<span class="sd">    from calling APIs in a different domain; CORS provides a secure way to</span>
+<span class="sd">    allow one domain (the origin domain) to call APIs in another domain.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param list(str) allowed_origins:</span>
+<span class="sd">        A list of origin domains that will be allowed via CORS, or &quot;*&quot; to allow</span>
+<span class="sd">        all domains. The list of must contain at least one entry. Limited to 64</span>
+<span class="sd">        origin domains. Each allowed origin can have up to 256 characters.</span>
+<span class="sd">    :param list(str) allowed_methods:</span>
+<span class="sd">        A list of HTTP methods that are allowed to be executed by the origin.</span>
+<span class="sd">        The list of must contain at least one entry. For Azure Storage,</span>
+<span class="sd">        permitted methods are DELETE, GET, HEAD, MERGE, POST, OPTIONS or PUT.</span>
+<span class="sd">    :param list(str) allowed_headers:</span>
+<span class="sd">        Defaults to an empty list. A list of headers allowed to be part of</span>
+<span class="sd">        the cross-origin request. Limited to 64 defined headers and 2 prefixed</span>
+<span class="sd">        headers. Each header can be up to 256 characters.</span>
+<span class="sd">    :param list(str) exposed_headers:</span>
+<span class="sd">        Defaults to an empty list. A list of response headers to expose to CORS</span>
+<span class="sd">        clients. Limited to 64 defined headers and two prefixed headers. Each</span>
+<span class="sd">        header can be up to 256 characters.</span>
+<span class="sd">    :param int max_age_in_seconds:</span>
+<span class="sd">        The number of seconds that the client/browser should cache a</span>
+<span class="sd">        preflight response.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_origins</span><span class="p">,</span> <span class="n">allowed_methods</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_origins</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">allowed_origins</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_methods</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">allowed_methods</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allowed_headers</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;allowed_headers&#39;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exposed_headers</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;exposed_headers&#39;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_age_in_seconds</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_age_in_seconds&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AccessPolicy"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.AccessPolicy">[docs]</a><span class="k">class</span> <span class="nc">AccessPolicy</span><span class="p">(</span><span class="n">GenAccessPolicy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Access Policy class used by the set and get acl methods in each service.</span>
+
+<span class="sd">    A stored access policy can specify the start time, expiry time, and</span>
+<span class="sd">    permissions for the Shared Access Signatures with which it&#39;s associated.</span>
+<span class="sd">    Depending on how you want to control access to your resource, you can</span>
+<span class="sd">    specify all of these parameters within the stored access policy, and omit</span>
+<span class="sd">    them from the URL for the Shared Access Signature. Doing so permits you to</span>
+<span class="sd">    modify the associated signature&#39;s behavior at any time, as well as to revoke</span>
+<span class="sd">    it. Or you can specify one or more of the access policy parameters within</span>
+<span class="sd">    the stored access policy, and the others on the URL. Finally, you can</span>
+<span class="sd">    specify all of the parameters on the URL. In this case, you can use the</span>
+<span class="sd">    stored access policy to revoke the signature, but not to modify its behavior.</span>
+
+<span class="sd">    Together the Shared Access Signature and the stored access policy must</span>
+<span class="sd">    include all fields required to authenticate the signature. If any required</span>
+<span class="sd">    fields are missing, the request will fail. Likewise, if a field is specified</span>
+<span class="sd">    both in the Shared Access Signature URL and in the stored access policy, the</span>
+<span class="sd">    request will fail with status code 400 (Bad Request).</span>
+
+<span class="sd">    :param str permission:</span>
+<span class="sd">        The permissions associated with the shared access signature. The</span>
+<span class="sd">        user is restricted to operations allowed by the permissions.</span>
+<span class="sd">        Required unless an id is given referencing a stored access policy</span>
+<span class="sd">        which contains this field. This field must be omitted if it has been</span>
+<span class="sd">        specified in an associated stored access policy.</span>
+<span class="sd">    :param expiry:</span>
+<span class="sd">        The time at which the shared access signature becomes invalid.</span>
+<span class="sd">        Required unless an id is given referencing a stored access policy</span>
+<span class="sd">        which contains this field. This field must be omitted if it has</span>
+<span class="sd">        been specified in an associated stored access policy. Azure will always</span>
+<span class="sd">        convert values to UTC. If a date is passed in without timezone info, it</span>
+<span class="sd">        is assumed to be UTC.</span>
+<span class="sd">    :type expiry: datetime or str</span>
+<span class="sd">    :param start:</span>
+<span class="sd">        The time at which the shared access signature becomes valid. If</span>
+<span class="sd">        omitted, start time for this call is assumed to be the time when the</span>
+<span class="sd">        storage service receives the request. Azure will always convert values</span>
+<span class="sd">        to UTC. If a date is passed in without timezone info, it is assumed to</span>
+<span class="sd">        be UTC.</span>
+<span class="sd">    :type start: datetime or str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">permission</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expiry</span> <span class="o">=</span> <span class="n">expiry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">permission</span> <span class="o">=</span> <span class="n">permission</span></div>
+
+
+<div class="viewcode-block" id="ContentSettings"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.ContentSettings">[docs]</a><span class="k">class</span> <span class="nc">ContentSettings</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Used to store the content settings of a file.</span>
+
+<span class="sd">    :param str content_type:</span>
+<span class="sd">        The content type specified for the file. If no content type was</span>
+<span class="sd">        specified, the default content type is application/octet-stream.</span>
+<span class="sd">    :param str content_encoding:</span>
+<span class="sd">        If the content_encoding has previously been set</span>
+<span class="sd">        for the file, that value is stored.</span>
+<span class="sd">    :param str content_language:</span>
+<span class="sd">        If the content_language has previously been set</span>
+<span class="sd">        for the file, that value is stored.</span>
+<span class="sd">    :param str content_disposition:</span>
+<span class="sd">        content_disposition conveys additional information about how to</span>
+<span class="sd">        process the response payload, and also can be used to attach</span>
+<span class="sd">        additional metadata. If content_disposition has previously been set</span>
+<span class="sd">        for the file, that value is stored.</span>
+<span class="sd">    :param str cache_control:</span>
+<span class="sd">        If the cache_control has previously been set for</span>
+<span class="sd">        the file, that value is stored.</span>
+<span class="sd">    :param str content_md5:</span>
+<span class="sd">        If the content_md5 has been set for the file, this response</span>
+<span class="sd">        header is stored so that the client can check for message content</span>
+<span class="sd">        integrity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">content_language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content_disposition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">cache_control</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content_md5</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">content_type</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_encoding</span> <span class="o">=</span> <span class="n">content_encoding</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Encoding&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_language</span> <span class="o">=</span> <span class="n">content_language</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Language&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_md5</span> <span class="o">=</span> <span class="n">content_md5</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-MD5&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_disposition</span> <span class="o">=</span> <span class="n">content_disposition</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Disposition&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache_control</span> <span class="o">=</span> <span class="n">cache_control</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Cache-Control&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_type</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">content_encoding</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_encoding</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">content_language</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_language</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">content_md5</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_md5</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">content_disposition</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_disposition</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">cache_control</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">cache_control</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">settings</span></div>
+
+
+<div class="viewcode-block" id="ShareProperties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.ShareProperties">[docs]</a><span class="k">class</span> <span class="nc">ShareProperties</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Share&#39;s properties class.</span>
+
+<span class="sd">    :ivar str name:</span>
+<span class="sd">        The name of the share.</span>
+<span class="sd">    :ivar datetime last_modified:</span>
+<span class="sd">        A datetime object representing the last time the share was modified.</span>
+<span class="sd">    :ivar str etag:</span>
+<span class="sd">        The ETag contains a value that you can use to perform operations</span>
+<span class="sd">        conditionally.</span>
+<span class="sd">    :ivar int quota:</span>
+<span class="sd">        The allocated quota.</span>
+<span class="sd">    :ivar dict metadata: A dict with name_value pairs to associate with the</span>
+<span class="sd">        share as metadata.</span>
+<span class="sd">    :ivar str snapshot:</span>
+<span class="sd">        Snapshot of the share.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Last-Modified&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ETag&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quota</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-share-quota&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">last_modified</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">etag</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">quota</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">quota</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">snapshot</span>
+        <span class="k">return</span> <span class="n">props</span></div>
+
+
+<div class="viewcode-block" id="SharePropertiesPaged"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.models.SharePropertiesPaged">[docs]</a><span class="k">class</span> <span class="nc">SharePropertiesPaged</span><span class="p">(</span><span class="n">PageIterator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An iterable of Share properties.</span>
+
+<span class="sd">    :ivar str service_endpoint: The service URL.</span>
+<span class="sd">    :ivar str prefix: A file name prefix being used to filter the list.</span>
+<span class="sd">    :ivar str marker: The continuation token of the current page of results.</span>
+<span class="sd">    :ivar int results_per_page: The maximum number of results retrieved per API call.</span>
+<span class="sd">    :ivar str continuation_token: The continuation token to retrieve the next page of results.</span>
+<span class="sd">    :ivar str location_mode: The location mode being used to list results. The available</span>
+<span class="sd">        options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :ivar current_page: The current page of listed results.</span>
+<span class="sd">    :vartype current_page: list(~azure.storage.file.models.ShareProperties)</span>
+
+<span class="sd">    :param callable command: Function to retrieve the next page of items.</span>
+<span class="sd">    :param str prefix: Filters the results to return only shares whose names</span>
+<span class="sd">        begin with the specified prefix.</span>
+<span class="sd">    :param int results_per_page: The maximum number of share names to retrieve per</span>
+<span class="sd">        call.</span>
+<span class="sd">    :param str continuation_token: An opaque continuation token.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">continuation_token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SharePropertiesPaged</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">get_next</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_next_cb</span><span class="p">,</span>
+            <span class="n">extract_data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extract_data_cb</span><span class="p">,</span>
+            <span class="n">continuation_token</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="n">results_per_page</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">_get_next_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">continuation_token</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">(</span>
+                <span class="n">marker</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">maxresults</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span><span class="p">,</span>
+                <span class="n">prefix</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_context_and_deserialized</span><span class="p">,</span>
+                <span class="n">use_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_extract_data_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_next_return</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span> <span class="o">=</span> <span class="n">get_next_return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">service_endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">marker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">max_results</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[</span><span class="n">ShareProperties</span><span class="o">.</span><span class="n">_from_generated</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">share_items</span><span class="p">]</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">next_marker</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span></div>
+
+
+<div class="viewcode-block" id="Handle"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.Handle">[docs]</a><span class="k">class</span> <span class="nc">Handle</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A listed Azure Storage handle item.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param handle_id: Required. XSMB service handle ID</span>
+<span class="sd">    :type handle_id: str</span>
+<span class="sd">    :param path: Required. File or directory name including full path starting</span>
+<span class="sd">     from share root</span>
+<span class="sd">    :type path: str</span>
+<span class="sd">    :param file_id: Required. FileId uniquely identifies the file or</span>
+<span class="sd">     directory.</span>
+<span class="sd">    :type file_id: str</span>
+<span class="sd">    :param parent_id: ParentId uniquely identifies the parent directory of the</span>
+<span class="sd">     object.</span>
+<span class="sd">    :type parent_id: str</span>
+<span class="sd">    :param session_id: Required. SMB session ID in context of which the file</span>
+<span class="sd">     handle was opened</span>
+<span class="sd">    :type session_id: str</span>
+<span class="sd">    :param client_ip: Required. Client IP that opened the handle</span>
+<span class="sd">    :type client_ip: str</span>
+<span class="sd">    :param open_time: Required. Time when the session that previously opened</span>
+<span class="sd">     the handle has last been reconnected. (UTC)</span>
+<span class="sd">    :type open_time: datetime</span>
+<span class="sd">    :param last_reconnect_time: Time handle was last connected to (UTC)</span>
+<span class="sd">    :type last_reconnect_time: datetime</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;handle_id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;file_id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;parent_id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;session_id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_ip</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;client_ip&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;open_time&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_reconnect_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;last_reconnect_time&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">handle</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">handle_id</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">path</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">file_id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">file_id</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">parent_id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">parent_id</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">session_id</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">client_ip</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">client_ip</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">open_time</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">open_time</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">last_reconnect_time</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">last_reconnect_time</span>
+        <span class="k">return</span> <span class="n">handle</span></div>
+
+
+<div class="viewcode-block" id="HandlesPaged"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.models.HandlesPaged">[docs]</a><span class="k">class</span> <span class="nc">HandlesPaged</span><span class="p">(</span><span class="n">PageIterator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An iterable of Handles.</span>
+
+<span class="sd">    :ivar str marker: The continuation token of the current page of results.</span>
+<span class="sd">    :ivar int results_per_page: The maximum number of results retrieved per API call.</span>
+<span class="sd">    :ivar str continuation_token: The continuation token to retrieve the next page of results.</span>
+<span class="sd">    :ivar str location_mode: The location mode being used to list results. The available</span>
+<span class="sd">        options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :ivar current_page: The current page of listed results.</span>
+<span class="sd">    :vartype current_page: list(~azure.storage.file.models.Handle)</span>
+
+<span class="sd">    :param callable command: Function to retrieve the next page of items.</span>
+<span class="sd">    :param int results_per_page: The maximum number of share names to retrieve per</span>
+<span class="sd">        call.</span>
+<span class="sd">    :param str continuation_token: An opaque continuation token.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">continuation_token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">HandlesPaged</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">get_next</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_next_cb</span><span class="p">,</span>
+            <span class="n">extract_data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extract_data_cb</span><span class="p">,</span>
+            <span class="n">continuation_token</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="n">results_per_page</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">_get_next_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">continuation_token</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">(</span>
+                <span class="n">marker</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">maxresults</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_context_and_deserialized</span><span class="p">,</span>
+                <span class="n">use_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_extract_data_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_next_return</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span> <span class="o">=</span> <span class="n">get_next_return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[</span><span class="n">Handle</span><span class="o">.</span><span class="n">_from_generated</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">handle_list</span><span class="p">]</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">next_marker</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span></div>
+
+
+<div class="viewcode-block" id="DirectoryProperties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.DirectoryProperties">[docs]</a><span class="k">class</span> <span class="nc">DirectoryProperties</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Directory&#39;s properties class.</span>
+
+<span class="sd">    :ivar str name:</span>
+<span class="sd">        The name of the directory.</span>
+<span class="sd">    :ivar datetime last_modified:</span>
+<span class="sd">        A datetime object representing the last time the directory was modified.</span>
+<span class="sd">    :ivar str etag:</span>
+<span class="sd">        The ETag contains a value that you can use to perform operations</span>
+<span class="sd">        conditionally.</span>
+<span class="sd">    :ivar bool server_encrypted:</span>
+<span class="sd">        Whether encryption is enabled.</span>
+<span class="sd">    :ivar dict metadata: A dict with name_value pairs to associate with the</span>
+<span class="sd">        directory as metadata.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Last-Modified&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ETag&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_encrypted</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-server-encrypted&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">change_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-change-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">creation_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-creation-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_write_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-last-write-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_attributes</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-attributes&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">permission_key</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-permission-key&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-parent-id&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">last_modified</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">etag</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">server_encrypted</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">server_encrypted</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="k">return</span> <span class="n">props</span></div>
+
+
+<div class="viewcode-block" id="DirectoryPropertiesPaged"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.models.DirectoryPropertiesPaged">[docs]</a><span class="k">class</span> <span class="nc">DirectoryPropertiesPaged</span><span class="p">(</span><span class="n">PageIterator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An iterable for the contents of a directory.</span>
+
+<span class="sd">    This iterable will yield dicts for the contents of the directory. The dicts</span>
+<span class="sd">    will have the keys &#39;name&#39; (str) and &#39;is_directory&#39; (bool).</span>
+<span class="sd">    Items that are files (is_directory=False) will have an additional &#39;content_length&#39; key.</span>
+
+<span class="sd">    :ivar str service_endpoint: The service URL.</span>
+<span class="sd">    :ivar str prefix: A file name prefix being used to filter the list.</span>
+<span class="sd">    :ivar str marker: The continuation token of the current page of results.</span>
+<span class="sd">    :ivar int results_per_page: The maximum number of results retrieved per API call.</span>
+<span class="sd">    :ivar str continuation_token: The continuation token to retrieve the next page of results.</span>
+<span class="sd">    :ivar str location_mode: The location mode being used to list results. The available</span>
+<span class="sd">        options include &quot;primary&quot; and &quot;secondary&quot;.</span>
+<span class="sd">    :ivar current_page: The current page of listed results.</span>
+<span class="sd">    :vartype current_page: list(dict(str, Any))</span>
+
+<span class="sd">    :param callable command: Function to retrieve the next page of items.</span>
+<span class="sd">    :param str prefix: Filters the results to return only directories whose names</span>
+<span class="sd">        begin with the specified prefix.</span>
+<span class="sd">    :param int results_per_page: The maximum number of share names to retrieve per</span>
+<span class="sd">        call.</span>
+<span class="sd">    :param str continuation_token: An opaque continuation token.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results_per_page</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">continuation_token</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DirectoryPropertiesPaged</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">get_next</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_next_cb</span><span class="p">,</span>
+            <span class="n">extract_data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extract_data_cb</span><span class="p">,</span>
+            <span class="n">continuation_token</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="n">results_per_page</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">_get_next_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">continuation_token</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">(</span>
+                <span class="n">marker</span><span class="o">=</span><span class="n">continuation_token</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">prefix</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span>
+                <span class="n">maxresults</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span><span class="p">,</span>
+                <span class="bp">cls</span><span class="o">=</span><span class="n">return_context_and_deserialized</span><span class="p">,</span>
+                <span class="n">use_location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">StorageErrorException</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">process_storage_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_extract_data_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_next_return</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span> <span class="o">=</span> <span class="n">get_next_return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_endpoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">service_endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">marker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results_per_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">max_results</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="p">[</span><span class="n">_wrap_item</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">segment</span><span class="o">.</span><span class="n">directory_items</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">_wrap_item</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">segment</span><span class="o">.</span><span class="n">file_items</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_response</span><span class="o">.</span><span class="n">next_marker</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span></div>
+
+
+<div class="viewcode-block" id="FileProperties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.FileProperties">[docs]</a><span class="k">class</span> <span class="nc">FileProperties</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File&#39;s properties class.</span>
+
+<span class="sd">    :ivar str name:</span>
+<span class="sd">        The name of the file.</span>
+<span class="sd">    :ivar str path:</span>
+<span class="sd">        The path of the file.</span>
+<span class="sd">    :ivar str share:</span>
+<span class="sd">        The name of share.</span>
+<span class="sd">    :ivar str snapshot:</span>
+<span class="sd">        File snapshot.</span>
+<span class="sd">    :ivar int content_length:</span>
+<span class="sd">        Size of file in bytes.</span>
+<span class="sd">    :ivar dict metadata: A dict with name_value pairs to associate with the</span>
+<span class="sd">        file as metadata.</span>
+<span class="sd">    :ivar str file_type:</span>
+<span class="sd">        Type of the file.</span>
+<span class="sd">    :ivar datetime last_modified:</span>
+<span class="sd">        A datetime object representing the last time the file was modified.</span>
+<span class="sd">    :ivar str etag:</span>
+<span class="sd">        The ETag contains a value that you can use to perform operations</span>
+<span class="sd">        conditionally.</span>
+<span class="sd">    :ivar int size:</span>
+<span class="sd">        Size of file in bytes.</span>
+<span class="sd">    :ivar str content_range:</span>
+<span class="sd">        The range of bytes.</span>
+<span class="sd">    :ivar bool server_encrypted:</span>
+<span class="sd">        Whether encryption is enabled.</span>
+<span class="sd">    :ivar copy:</span>
+<span class="sd">        The copy properties.</span>
+<span class="sd">    :vartype copy: ~azure.storage.file.models.CopyProperties</span>
+<span class="sd">    :ivar content_settings:</span>
+<span class="sd">        The content settings for the file.</span>
+<span class="sd">    :vartype content_settings: ~azure.storage.file.models.ContentSettings</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">share</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_length</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-type&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_modified</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Last-Modified&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etag</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ETag&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_range</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Range&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_encrypted</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-server-encrypted&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">copy</span> <span class="o">=</span> <span class="n">CopyProperties</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_settings</span> <span class="o">=</span> <span class="n">ContentSettings</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">change_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-change-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">creation_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-creation-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_write_time</span> <span class="o">=</span> <span class="n">_parse_datetime_from_str</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-last-write-time&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_attributes</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-attributes&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">permission_key</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-permission-key&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-file-parent-id&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">content_length</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">content_length</span>
+        <span class="n">props</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="k">return</span> <span class="n">props</span></div>
+
+
+<div class="viewcode-block" id="CopyProperties"><a class="viewcode-back" href="../../../../ref/azure.storage.file.html#azure.storage.file.models.CopyProperties">[docs]</a><span class="k">class</span> <span class="nc">CopyProperties</span><span class="p">(</span><span class="n">DictMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File Copy Properties.</span>
+
+<span class="sd">    :ivar str id:</span>
+<span class="sd">        String identifier for the last attempted Copy File operation where this file</span>
+<span class="sd">        was the destination file. This header does not appear if this file has never</span>
+<span class="sd">        been the destination in a Copy File operation, or if this file has been</span>
+<span class="sd">        modified after a concluded Copy File operation.</span>
+<span class="sd">    :ivar str source:</span>
+<span class="sd">        URL up to 2 KB in length that specifies the source file used in the last attempted</span>
+<span class="sd">        Copy File operation where this file was the destination file. This header does not</span>
+<span class="sd">        appear if this file has never been the destination in a Copy File operation, or if</span>
+<span class="sd">        this file has been modified after a concluded Copy File operation.</span>
+<span class="sd">    :ivar str status:</span>
+<span class="sd">        State of the copy operation identified by Copy ID, with these values:</span>
+<span class="sd">            success:</span>
+<span class="sd">                Copy completed successfully.</span>
+<span class="sd">            pending:</span>
+<span class="sd">                Copy is in progress. Check copy_status_description if intermittent,</span>
+<span class="sd">                non-fatal errors impede copy progress but don&#39;t cause failure.</span>
+<span class="sd">            aborted:</span>
+<span class="sd">                Copy was ended by Abort Copy File.</span>
+<span class="sd">            failed:</span>
+<span class="sd">                Copy failed. See copy_status_description for failure details.</span>
+<span class="sd">    :ivar str progress:</span>
+<span class="sd">        Contains the number of bytes copied and the total bytes in the source in the last</span>
+<span class="sd">        attempted Copy File operation where this file was the destination file. Can show</span>
+<span class="sd">        between 0 and Content-Length bytes copied.</span>
+<span class="sd">    :ivar datetime completion_time:</span>
+<span class="sd">        Conclusion time of the last attempted Copy File operation where this file was the</span>
+<span class="sd">        destination file. This value can specify the time of a completed, aborted, or</span>
+<span class="sd">        failed copy attempt.</span>
+<span class="sd">    :ivar str status_description:</span>
+<span class="sd">        Only appears when x-ms-copy-status is failed or pending. Describes cause of fatal</span>
+<span class="sd">        or non-fatal copy operation failure.</span>
+<span class="sd">    :ivar bool incremental_copy:</span>
+<span class="sd">        Copies the snapshot of the source file to a destination file.</span>
+<span class="sd">        The snapshot is copied such that only the differential changes between</span>
+<span class="sd">        the previously copied snapshot are transferred to the destination</span>
+<span class="sd">    :ivar datetime destination_snapshot:</span>
+<span class="sd">        Included if the file is incremental copy or incremental copy snapshot,</span>
+<span class="sd">        if x-ms-copy-status is success. Snapshot time of the last successful</span>
+<span class="sd">        incremental copy snapshot for this file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-id&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-source&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-status&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-progress&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completion_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-completion_time&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_description</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-status-description&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">incremental_copy</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-incremental-copy&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">destination_snapshot</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-copy-destination-snapshot&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_generated</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">generated</span><span class="p">):</span>
+        <span class="n">copy</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_id</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">get_enum_value</span><span class="p">(</span><span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_status</span><span class="p">)</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_source</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_progress</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">completion_time</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_completion_time</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">status_description</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">copy_status_description</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">incremental_copy</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">incremental_copy</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="n">copy</span><span class="o">.</span><span class="n">destination_snapshot</span> <span class="o">=</span> <span class="n">generated</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">destination_snapshot</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">copy</span></div>
+
+
+<div class="viewcode-block" id="FilePermissions"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.FilePermissions">[docs]</a><span class="k">class</span> <span class="nc">FilePermissions</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;FilePermissions class to be used with</span>
+<span class="sd">    generating shared access signature operations.</span>
+
+<span class="sd">    :cvar FilePermissions FilePermissions.CREATE:</span>
+<span class="sd">        Create a new file or copy a file to a new file.</span>
+<span class="sd">    :cvar FilePermissions FilePermissions.DELETE:</span>
+<span class="sd">        Delete the file.</span>
+<span class="sd">    :cvar FilePermissions FilePermissions.READ:</span>
+<span class="sd">        Read the content, properties, metadata. Use the file as the source of a copy</span>
+<span class="sd">        operation.</span>
+<span class="sd">    :cvar FilePermissions FilePermissions.WRITE:</span>
+<span class="sd">        Create or write content, properties, metadata. Resize the file. Use the file</span>
+<span class="sd">        as the destination of a copy operation within the same account.</span>
+<span class="sd">    :param bool read:</span>
+<span class="sd">        Read the content, properties, metadata. Use the file as the source of a copy</span>
+<span class="sd">        operation.</span>
+<span class="sd">    :param bool create:</span>
+<span class="sd">        Create a new file or copy a file to a new file.</span>
+<span class="sd">    :param bool write:</span>
+<span class="sd">        Create or write content, properties, metadata. Resize the file. Use the file</span>
+<span class="sd">        as the destination of a copy operation within the same account.</span>
+<span class="sd">    :param bool delete:</span>
+<span class="sd">        Delete the file.</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the permissions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CREATE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: FilePermissions</span>
+    <span class="n">DELETE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: FilePermissions</span>
+    <span class="n">READ</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: FilePermissions</span>
+    <span class="n">WRITE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: FilePermissions</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="o">=</span> <span class="n">read</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;r&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create</span> <span class="o">=</span> <span class="n">create</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">write</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">delete</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;r&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;c&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span></div>
+
+
+<span class="n">FilePermissions</span><span class="o">.</span><span class="n">CREATE</span> <span class="o">=</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">FilePermissions</span><span class="o">.</span><span class="n">DELETE</span> <span class="o">=</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">FilePermissions</span><span class="o">.</span><span class="n">READ</span> <span class="o">=</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">FilePermissions</span><span class="o">.</span><span class="n">WRITE</span> <span class="o">=</span> <span class="n">FilePermissions</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+
+
+<div class="viewcode-block" id="SharePermissions"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.SharePermissions">[docs]</a><span class="k">class</span> <span class="nc">SharePermissions</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;SharePermissions class to be used to be used with</span>
+<span class="sd">    generating shared access signature and access policy operations.</span>
+
+<span class="sd">    :cvar SharePermissions SharePermissions.DELETE:</span>
+<span class="sd">        Delete any file in the share.</span>
+<span class="sd">        Note: You cannot grant permissions to delete a share with a service SAS. Use</span>
+<span class="sd">        an account SAS instead.</span>
+<span class="sd">    :cvar SharePermissions SharePermissions.LIST:</span>
+<span class="sd">        List files and directories in the share.</span>
+<span class="sd">    :cvar SharePermissions SharePermissions.READ:</span>
+<span class="sd">        Read the content, properties or metadata of any file in the share. Use any</span>
+<span class="sd">        file in the share as the source of a copy operation.</span>
+<span class="sd">    :cvar SharePermissions SharePermissions.WRITE:</span>
+<span class="sd">        For any file in the share, create or write content, properties or metadata.</span>
+<span class="sd">        Resize the file. Use the file as the destination of a copy operation within</span>
+<span class="sd">        the same account.</span>
+<span class="sd">        Note: You cannot grant permissions to read or write share properties or</span>
+<span class="sd">        metadata with a service SAS. Use an account SAS instead.</span>
+<span class="sd">    :param bool read:</span>
+<span class="sd">        Read the content, properties or metadata of any file in the share. Use any</span>
+<span class="sd">        file in the share as the source of a copy operation.</span>
+<span class="sd">    :param bool write:</span>
+<span class="sd">        For any file in the share, create or write content, properties or metadata.</span>
+<span class="sd">        Resize the file. Use the file as the destination of a copy operation within</span>
+<span class="sd">        the same account.</span>
+<span class="sd">        Note: You cannot grant permissions to read or write share properties or</span>
+<span class="sd">        metadata with a service SAS. Use an account SAS instead.</span>
+<span class="sd">    :param bool delete:</span>
+<span class="sd">        Delete any file in the share.</span>
+<span class="sd">        Note: You cannot grant permissions to delete a share with a service SAS. Use</span>
+<span class="sd">        an account SAS instead.</span>
+<span class="sd">    :param bool list:</span>
+<span class="sd">        List files and directories in the share.</span>
+<span class="sd">    :param str _str:</span>
+<span class="sd">        A string representing the permissions</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">LIST</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: SharePermissions</span>
+    <span class="n">DELETE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: SharePermissions</span>
+    <span class="n">READ</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: SharePermissions</span>
+    <span class="n">WRITE</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: SharePermissions</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">list</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># pylint: disable=redefined-builtin</span>
+                 <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="o">=</span> <span class="n">read</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;r&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">write</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">delete</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="nb">list</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;l&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">((</span><span class="s1">&#39;r&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;w&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">write</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;d&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                <span class="p">(</span><span class="s1">&#39;l&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span></div>
+
+
+<span class="n">SharePermissions</span><span class="o">.</span><span class="n">DELETE</span> <span class="o">=</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">SharePermissions</span><span class="o">.</span><span class="n">LIST</span> <span class="o">=</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="nb">list</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">SharePermissions</span><span class="o">.</span><span class="n">READ</span> <span class="o">=</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+<span class="n">SharePermissions</span><span class="o">.</span><span class="n">WRITE</span> <span class="o">=</span> <span class="n">SharePermissions</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># type: ignore</span>
+
+
+<div class="viewcode-block" id="NTFSAttributes"><a class="viewcode-back" href="../../../../ref/azure.storage.file.aio.html#azure.storage.file.models.NTFSAttributes">[docs]</a><span class="k">class</span> <span class="nc">NTFSAttributes</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Valid set of attributes to set for file or directory.</span>
+<span class="sd">    To set attribute for directory, &#39;Directory&#39; should always be enabled except setting &#39;None&#39; for directory.</span>
+
+<span class="sd">    :ivar bool read_only:</span>
+<span class="sd">        Enable/disable &#39;ReadOnly&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool hidden:</span>
+<span class="sd">        Enable/disable &#39;Hidden&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool system:</span>
+<span class="sd">        Enable/disable &#39;System&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool none:</span>
+<span class="sd">        Enable/disable &#39;None&#39; attribute for DIRECTORY or FILE to clear all attributes of FILE/DIRECTORY</span>
+<span class="sd">    :ivar bool directory:</span>
+<span class="sd">        Enable/disable &#39;Directory&#39; attribute for DIRECTORY</span>
+<span class="sd">    :ivar bool archive:</span>
+<span class="sd">        Enable/disable &#39;Archive&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool temporary:</span>
+<span class="sd">        Enable/disable &#39;Temporary&#39; attribute for FILE</span>
+<span class="sd">    :ivar bool offline:</span>
+<span class="sd">        Enable/disable &#39;Offline&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool not_content_indexed:</span>
+<span class="sd">        Enable/disable &#39;NotContentIndexed&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    :ivar bool no_scrub_data:</span>
+<span class="sd">        Enable/disable &#39;NoScrubData&#39; attribute for DIRECTORY or FILE</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">read_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">system</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">none</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">archive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">temporary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">not_content_indexed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">no_scrub_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_str</span><span class="p">:</span>
+            <span class="n">_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read_only</span> <span class="o">=</span> <span class="n">read_only</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;ReadOnly&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="n">hidden</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">system</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;System&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">none</span> <span class="o">=</span> <span class="n">none</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;None&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="n">directory</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Directory&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">archive</span> <span class="o">=</span> <span class="n">archive</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Archive&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temporary</span> <span class="o">=</span> <span class="n">temporary</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Temporary&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offline</span> <span class="o">=</span> <span class="n">offline</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Offline&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">not_content_indexed</span> <span class="o">=</span> <span class="n">not_content_indexed</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;NotContentIndexed&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">no_scrub_data</span> <span class="o">=</span> <span class="n">no_scrub_data</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;NoScrubData&#39;</span> <span class="ow">in</span> <span class="n">_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">_str</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">concatenated_params</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;ReadOnly|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_only</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;Hidden|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;System|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;None|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">none</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;Directory|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;Archive|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">archive</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;Temporary|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">temporary</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;Offline|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">offline</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;NotContentIndexed|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">not_content_indexed</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+                               <span class="p">(</span><span class="s1">&#39;NoScrubData|&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">no_scrub_data</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">concatenated_params</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span></div>
+
+
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">READ_ONLY</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">HIDDEN</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">SYSTEM</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">NONE</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">none</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">DIRECTORY</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">ARCHIVE</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">archive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">TEMPORARY</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">temporary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">OFFLINE</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">offline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">NOT_CONTENT_INDEXED</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">not_content_indexed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NTFSAttributes</span><span class="o">.</span><span class="n">NO_SCRUB_DATA</span> <span class="o">=</span> <span class="n">NTFSAttributes</span><span class="p">(</span><span class="n">no_scrub_data</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

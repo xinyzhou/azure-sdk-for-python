@@ -1,0 +1,801 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.sql._sql_management_client &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.sql._sql_management_client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.sql._sql_management_client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
+<span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
+
+<span class="kn">from</span> <span class="nn">._configuration</span> <span class="k">import</span> <span class="n">SqlManagementClientConfiguration</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RecoverableDatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RestorableDroppedDatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServersOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerConnectionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseThreatDetectionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DataMaskingPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DataMaskingRulesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">FirewallRulesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">GeoBackupPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ElasticPoolsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RecommendedElasticPoolsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ReplicationLinksOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerAzureADAdministratorsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerCommunicationLinksOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServiceObjectivesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ElasticPoolActivitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ElasticPoolDatabaseActivitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServiceTierAdvisorsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">TransparentDataEncryptionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">TransparentDataEncryptionActivitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerUsagesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseUsagesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseAutomaticTuningOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">EncryptionProtectorsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">FailoverGroupsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">Operations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerKeysOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SyncAgentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SyncGroupsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SyncMembersOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SubscriptionUsagesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">VirtualClustersOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">VirtualNetworkRulesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ExtendedDatabaseBlobAuditingPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ExtendedServerBlobAuditingPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerBlobAuditingPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseBlobAuditingPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseVulnerabilityAssessmentRuleBaselinesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseVulnerabilityAssessmentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobAgentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobCredentialsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobExecutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobStepExecutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobStepsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobTargetExecutionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobTargetGroupsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">JobVersionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">LongTermRetentionBackupsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">BackupLongTermRetentionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedBackupShortTermRetentionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerAutomaticTuningOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerDnsAliasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerSecurityAlertPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RestorableDroppedManagedDatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RestorePointsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabaseSecurityAlertPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedServerSecurityAlertPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">SensitivityLabelsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstanceAdministratorsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ElasticPoolOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">CapabilitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">DatabaseVulnerabilityAssessmentScansOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentScansOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">InstanceFailoverGroupsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">BackupShortTermRetentionPoliciesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">TdeCertificatesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstanceTdeCertificatesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstanceKeysOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstanceEncryptionProtectorsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">RecoverableManagedDatabasesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstanceVulnerabilityAssessmentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ServerVulnerabilityAssessmentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedDatabaseSensitivityLabelsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">InstancePoolsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">UsagesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">ManagedInstancesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">PrivateEndpointConnectionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations</span> <span class="k">import</span> <span class="n">PrivateLinkResourcesOperations</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
+
+
+<div class="viewcode-block" id="SqlManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.sql.html#azure.mgmt.sql.SqlManagementClient">[docs]</a><span class="k">class</span> <span class="nc">SqlManagementClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The Azure SQL Database management API provides a RESTful set of web services that interact with Azure SQL Database services to manage your databases. The API enables you to create, retrieve, update, and delete databases.</span>
+
+<span class="sd">    :ivar config: Configuration for client.</span>
+<span class="sd">    :vartype config: SqlManagementClientConfiguration</span>
+
+<span class="sd">    :ivar recoverable_databases: RecoverableDatabases operations</span>
+<span class="sd">    :vartype recoverable_databases: azure.mgmt.sql.operations.RecoverableDatabasesOperations</span>
+<span class="sd">    :ivar restorable_dropped_databases: RestorableDroppedDatabases operations</span>
+<span class="sd">    :vartype restorable_dropped_databases: azure.mgmt.sql.operations.RestorableDroppedDatabasesOperations</span>
+<span class="sd">    :ivar servers: Servers operations</span>
+<span class="sd">    :vartype servers: azure.mgmt.sql.operations.ServersOperations</span>
+<span class="sd">    :ivar server_connection_policies: ServerConnectionPolicies operations</span>
+<span class="sd">    :vartype server_connection_policies: azure.mgmt.sql.operations.ServerConnectionPoliciesOperations</span>
+<span class="sd">    :ivar database_threat_detection_policies: DatabaseThreatDetectionPolicies operations</span>
+<span class="sd">    :vartype database_threat_detection_policies: azure.mgmt.sql.operations.DatabaseThreatDetectionPoliciesOperations</span>
+<span class="sd">    :ivar data_masking_policies: DataMaskingPolicies operations</span>
+<span class="sd">    :vartype data_masking_policies: azure.mgmt.sql.operations.DataMaskingPoliciesOperations</span>
+<span class="sd">    :ivar data_masking_rules: DataMaskingRules operations</span>
+<span class="sd">    :vartype data_masking_rules: azure.mgmt.sql.operations.DataMaskingRulesOperations</span>
+<span class="sd">    :ivar firewall_rules: FirewallRules operations</span>
+<span class="sd">    :vartype firewall_rules: azure.mgmt.sql.operations.FirewallRulesOperations</span>
+<span class="sd">    :ivar geo_backup_policies: GeoBackupPolicies operations</span>
+<span class="sd">    :vartype geo_backup_policies: azure.mgmt.sql.operations.GeoBackupPoliciesOperations</span>
+<span class="sd">    :ivar databases: Databases operations</span>
+<span class="sd">    :vartype databases: azure.mgmt.sql.operations.DatabasesOperations</span>
+<span class="sd">    :ivar elastic_pools: ElasticPools operations</span>
+<span class="sd">    :vartype elastic_pools: azure.mgmt.sql.operations.ElasticPoolsOperations</span>
+<span class="sd">    :ivar recommended_elastic_pools: RecommendedElasticPools operations</span>
+<span class="sd">    :vartype recommended_elastic_pools: azure.mgmt.sql.operations.RecommendedElasticPoolsOperations</span>
+<span class="sd">    :ivar replication_links: ReplicationLinks operations</span>
+<span class="sd">    :vartype replication_links: azure.mgmt.sql.operations.ReplicationLinksOperations</span>
+<span class="sd">    :ivar server_azure_ad_administrators: ServerAzureADAdministrators operations</span>
+<span class="sd">    :vartype server_azure_ad_administrators: azure.mgmt.sql.operations.ServerAzureADAdministratorsOperations</span>
+<span class="sd">    :ivar server_communication_links: ServerCommunicationLinks operations</span>
+<span class="sd">    :vartype server_communication_links: azure.mgmt.sql.operations.ServerCommunicationLinksOperations</span>
+<span class="sd">    :ivar service_objectives: ServiceObjectives operations</span>
+<span class="sd">    :vartype service_objectives: azure.mgmt.sql.operations.ServiceObjectivesOperations</span>
+<span class="sd">    :ivar elastic_pool_activities: ElasticPoolActivities operations</span>
+<span class="sd">    :vartype elastic_pool_activities: azure.mgmt.sql.operations.ElasticPoolActivitiesOperations</span>
+<span class="sd">    :ivar elastic_pool_database_activities: ElasticPoolDatabaseActivities operations</span>
+<span class="sd">    :vartype elastic_pool_database_activities: azure.mgmt.sql.operations.ElasticPoolDatabaseActivitiesOperations</span>
+<span class="sd">    :ivar service_tier_advisors: ServiceTierAdvisors operations</span>
+<span class="sd">    :vartype service_tier_advisors: azure.mgmt.sql.operations.ServiceTierAdvisorsOperations</span>
+<span class="sd">    :ivar transparent_data_encryptions: TransparentDataEncryptions operations</span>
+<span class="sd">    :vartype transparent_data_encryptions: azure.mgmt.sql.operations.TransparentDataEncryptionsOperations</span>
+<span class="sd">    :ivar transparent_data_encryption_activities: TransparentDataEncryptionActivities operations</span>
+<span class="sd">    :vartype transparent_data_encryption_activities: azure.mgmt.sql.operations.TransparentDataEncryptionActivitiesOperations</span>
+<span class="sd">    :ivar server_usages: ServerUsages operations</span>
+<span class="sd">    :vartype server_usages: azure.mgmt.sql.operations.ServerUsagesOperations</span>
+<span class="sd">    :ivar database_usages: DatabaseUsages operations</span>
+<span class="sd">    :vartype database_usages: azure.mgmt.sql.operations.DatabaseUsagesOperations</span>
+<span class="sd">    :ivar database_automatic_tuning: DatabaseAutomaticTuning operations</span>
+<span class="sd">    :vartype database_automatic_tuning: azure.mgmt.sql.operations.DatabaseAutomaticTuningOperations</span>
+<span class="sd">    :ivar encryption_protectors: EncryptionProtectors operations</span>
+<span class="sd">    :vartype encryption_protectors: azure.mgmt.sql.operations.EncryptionProtectorsOperations</span>
+<span class="sd">    :ivar failover_groups: FailoverGroups operations</span>
+<span class="sd">    :vartype failover_groups: azure.mgmt.sql.operations.FailoverGroupsOperations</span>
+<span class="sd">    :ivar operations: Operations operations</span>
+<span class="sd">    :vartype operations: azure.mgmt.sql.operations.Operations</span>
+<span class="sd">    :ivar server_keys: ServerKeys operations</span>
+<span class="sd">    :vartype server_keys: azure.mgmt.sql.operations.ServerKeysOperations</span>
+<span class="sd">    :ivar sync_agents: SyncAgents operations</span>
+<span class="sd">    :vartype sync_agents: azure.mgmt.sql.operations.SyncAgentsOperations</span>
+<span class="sd">    :ivar sync_groups: SyncGroups operations</span>
+<span class="sd">    :vartype sync_groups: azure.mgmt.sql.operations.SyncGroupsOperations</span>
+<span class="sd">    :ivar sync_members: SyncMembers operations</span>
+<span class="sd">    :vartype sync_members: azure.mgmt.sql.operations.SyncMembersOperations</span>
+<span class="sd">    :ivar subscription_usages: SubscriptionUsages operations</span>
+<span class="sd">    :vartype subscription_usages: azure.mgmt.sql.operations.SubscriptionUsagesOperations</span>
+<span class="sd">    :ivar virtual_clusters: VirtualClusters operations</span>
+<span class="sd">    :vartype virtual_clusters: azure.mgmt.sql.operations.VirtualClustersOperations</span>
+<span class="sd">    :ivar virtual_network_rules: VirtualNetworkRules operations</span>
+<span class="sd">    :vartype virtual_network_rules: azure.mgmt.sql.operations.VirtualNetworkRulesOperations</span>
+<span class="sd">    :ivar extended_database_blob_auditing_policies: ExtendedDatabaseBlobAuditingPolicies operations</span>
+<span class="sd">    :vartype extended_database_blob_auditing_policies: azure.mgmt.sql.operations.ExtendedDatabaseBlobAuditingPoliciesOperations</span>
+<span class="sd">    :ivar extended_server_blob_auditing_policies: ExtendedServerBlobAuditingPolicies operations</span>
+<span class="sd">    :vartype extended_server_blob_auditing_policies: azure.mgmt.sql.operations.ExtendedServerBlobAuditingPoliciesOperations</span>
+<span class="sd">    :ivar server_blob_auditing_policies: ServerBlobAuditingPolicies operations</span>
+<span class="sd">    :vartype server_blob_auditing_policies: azure.mgmt.sql.operations.ServerBlobAuditingPoliciesOperations</span>
+<span class="sd">    :ivar database_blob_auditing_policies: DatabaseBlobAuditingPolicies operations</span>
+<span class="sd">    :vartype database_blob_auditing_policies: azure.mgmt.sql.operations.DatabaseBlobAuditingPoliciesOperations</span>
+<span class="sd">    :ivar database_vulnerability_assessment_rule_baselines: DatabaseVulnerabilityAssessmentRuleBaselines operations</span>
+<span class="sd">    :vartype database_vulnerability_assessment_rule_baselines: azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentRuleBaselinesOperations</span>
+<span class="sd">    :ivar database_vulnerability_assessments: DatabaseVulnerabilityAssessments operations</span>
+<span class="sd">    :vartype database_vulnerability_assessments: azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentsOperations</span>
+<span class="sd">    :ivar job_agents: JobAgents operations</span>
+<span class="sd">    :vartype job_agents: azure.mgmt.sql.operations.JobAgentsOperations</span>
+<span class="sd">    :ivar job_credentials: JobCredentials operations</span>
+<span class="sd">    :vartype job_credentials: azure.mgmt.sql.operations.JobCredentialsOperations</span>
+<span class="sd">    :ivar job_executions: JobExecutions operations</span>
+<span class="sd">    :vartype job_executions: azure.mgmt.sql.operations.JobExecutionsOperations</span>
+<span class="sd">    :ivar jobs: Jobs operations</span>
+<span class="sd">    :vartype jobs: azure.mgmt.sql.operations.JobsOperations</span>
+<span class="sd">    :ivar job_step_executions: JobStepExecutions operations</span>
+<span class="sd">    :vartype job_step_executions: azure.mgmt.sql.operations.JobStepExecutionsOperations</span>
+<span class="sd">    :ivar job_steps: JobSteps operations</span>
+<span class="sd">    :vartype job_steps: azure.mgmt.sql.operations.JobStepsOperations</span>
+<span class="sd">    :ivar job_target_executions: JobTargetExecutions operations</span>
+<span class="sd">    :vartype job_target_executions: azure.mgmt.sql.operations.JobTargetExecutionsOperations</span>
+<span class="sd">    :ivar job_target_groups: JobTargetGroups operations</span>
+<span class="sd">    :vartype job_target_groups: azure.mgmt.sql.operations.JobTargetGroupsOperations</span>
+<span class="sd">    :ivar job_versions: JobVersions operations</span>
+<span class="sd">    :vartype job_versions: azure.mgmt.sql.operations.JobVersionsOperations</span>
+<span class="sd">    :ivar long_term_retention_backups: LongTermRetentionBackups operations</span>
+<span class="sd">    :vartype long_term_retention_backups: azure.mgmt.sql.operations.LongTermRetentionBackupsOperations</span>
+<span class="sd">    :ivar backup_long_term_retention_policies: BackupLongTermRetentionPolicies operations</span>
+<span class="sd">    :vartype backup_long_term_retention_policies: azure.mgmt.sql.operations.BackupLongTermRetentionPoliciesOperations</span>
+<span class="sd">    :ivar managed_backup_short_term_retention_policies: ManagedBackupShortTermRetentionPolicies operations</span>
+<span class="sd">    :vartype managed_backup_short_term_retention_policies: azure.mgmt.sql.operations.ManagedBackupShortTermRetentionPoliciesOperations</span>
+<span class="sd">    :ivar managed_databases: ManagedDatabases operations</span>
+<span class="sd">    :vartype managed_databases: azure.mgmt.sql.operations.ManagedDatabasesOperations</span>
+<span class="sd">    :ivar managed_restorable_dropped_database_backup_short_term_retention_policies: ManagedRestorableDroppedDatabaseBackupShortTermRetentionPolicies operations</span>
+<span class="sd">    :vartype managed_restorable_dropped_database_backup_short_term_retention_policies: azure.mgmt.sql.operations.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations</span>
+<span class="sd">    :ivar server_automatic_tuning: ServerAutomaticTuning operations</span>
+<span class="sd">    :vartype server_automatic_tuning: azure.mgmt.sql.operations.ServerAutomaticTuningOperations</span>
+<span class="sd">    :ivar server_dns_aliases: ServerDnsAliases operations</span>
+<span class="sd">    :vartype server_dns_aliases: azure.mgmt.sql.operations.ServerDnsAliasesOperations</span>
+<span class="sd">    :ivar server_security_alert_policies: ServerSecurityAlertPolicies operations</span>
+<span class="sd">    :vartype server_security_alert_policies: azure.mgmt.sql.operations.ServerSecurityAlertPoliciesOperations</span>
+<span class="sd">    :ivar restorable_dropped_managed_databases: RestorableDroppedManagedDatabases operations</span>
+<span class="sd">    :vartype restorable_dropped_managed_databases: azure.mgmt.sql.operations.RestorableDroppedManagedDatabasesOperations</span>
+<span class="sd">    :ivar restore_points: RestorePoints operations</span>
+<span class="sd">    :vartype restore_points: azure.mgmt.sql.operations.RestorePointsOperations</span>
+<span class="sd">    :ivar managed_database_security_alert_policies: ManagedDatabaseSecurityAlertPolicies operations</span>
+<span class="sd">    :vartype managed_database_security_alert_policies: azure.mgmt.sql.operations.ManagedDatabaseSecurityAlertPoliciesOperations</span>
+<span class="sd">    :ivar managed_server_security_alert_policies: ManagedServerSecurityAlertPolicies operations</span>
+<span class="sd">    :vartype managed_server_security_alert_policies: azure.mgmt.sql.operations.ManagedServerSecurityAlertPoliciesOperations</span>
+<span class="sd">    :ivar sensitivity_labels: SensitivityLabels operations</span>
+<span class="sd">    :vartype sensitivity_labels: azure.mgmt.sql.operations.SensitivityLabelsOperations</span>
+<span class="sd">    :ivar managed_instance_administrators: ManagedInstanceAdministrators operations</span>
+<span class="sd">    :vartype managed_instance_administrators: azure.mgmt.sql.operations.ManagedInstanceAdministratorsOperations</span>
+<span class="sd">    :ivar database_operations: DatabaseOperations operations</span>
+<span class="sd">    :vartype database_operations: azure.mgmt.sql.operations.DatabaseOperations</span>
+<span class="sd">    :ivar elastic_pool_operations: ElasticPoolOperations operations</span>
+<span class="sd">    :vartype elastic_pool_operations: azure.mgmt.sql.operations.ElasticPoolOperations</span>
+<span class="sd">    :ivar capabilities: Capabilities operations</span>
+<span class="sd">    :vartype capabilities: azure.mgmt.sql.operations.CapabilitiesOperations</span>
+<span class="sd">    :ivar database_vulnerability_assessment_scans: DatabaseVulnerabilityAssessmentScans operations</span>
+<span class="sd">    :vartype database_vulnerability_assessment_scans: azure.mgmt.sql.operations.DatabaseVulnerabilityAssessmentScansOperations</span>
+<span class="sd">    :ivar managed_database_vulnerability_assessment_rule_baselines: ManagedDatabaseVulnerabilityAssessmentRuleBaselines operations</span>
+<span class="sd">    :vartype managed_database_vulnerability_assessment_rule_baselines: azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations</span>
+<span class="sd">    :ivar managed_database_vulnerability_assessment_scans: ManagedDatabaseVulnerabilityAssessmentScans operations</span>
+<span class="sd">    :vartype managed_database_vulnerability_assessment_scans: azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentScansOperations</span>
+<span class="sd">    :ivar managed_database_vulnerability_assessments: ManagedDatabaseVulnerabilityAssessments operations</span>
+<span class="sd">    :vartype managed_database_vulnerability_assessments: azure.mgmt.sql.operations.ManagedDatabaseVulnerabilityAssessmentsOperations</span>
+<span class="sd">    :ivar instance_failover_groups: InstanceFailoverGroups operations</span>
+<span class="sd">    :vartype instance_failover_groups: azure.mgmt.sql.operations.InstanceFailoverGroupsOperations</span>
+<span class="sd">    :ivar backup_short_term_retention_policies: BackupShortTermRetentionPolicies operations</span>
+<span class="sd">    :vartype backup_short_term_retention_policies: azure.mgmt.sql.operations.BackupShortTermRetentionPoliciesOperations</span>
+<span class="sd">    :ivar tde_certificates: TdeCertificates operations</span>
+<span class="sd">    :vartype tde_certificates: azure.mgmt.sql.operations.TdeCertificatesOperations</span>
+<span class="sd">    :ivar managed_instance_tde_certificates: ManagedInstanceTdeCertificates operations</span>
+<span class="sd">    :vartype managed_instance_tde_certificates: azure.mgmt.sql.operations.ManagedInstanceTdeCertificatesOperations</span>
+<span class="sd">    :ivar managed_instance_keys: ManagedInstanceKeys operations</span>
+<span class="sd">    :vartype managed_instance_keys: azure.mgmt.sql.operations.ManagedInstanceKeysOperations</span>
+<span class="sd">    :ivar managed_instance_encryption_protectors: ManagedInstanceEncryptionProtectors operations</span>
+<span class="sd">    :vartype managed_instance_encryption_protectors: azure.mgmt.sql.operations.ManagedInstanceEncryptionProtectorsOperations</span>
+<span class="sd">    :ivar recoverable_managed_databases: RecoverableManagedDatabases operations</span>
+<span class="sd">    :vartype recoverable_managed_databases: azure.mgmt.sql.operations.RecoverableManagedDatabasesOperations</span>
+<span class="sd">    :ivar managed_instance_vulnerability_assessments: ManagedInstanceVulnerabilityAssessments operations</span>
+<span class="sd">    :vartype managed_instance_vulnerability_assessments: azure.mgmt.sql.operations.ManagedInstanceVulnerabilityAssessmentsOperations</span>
+<span class="sd">    :ivar server_vulnerability_assessments: ServerVulnerabilityAssessments operations</span>
+<span class="sd">    :vartype server_vulnerability_assessments: azure.mgmt.sql.operations.ServerVulnerabilityAssessmentsOperations</span>
+<span class="sd">    :ivar managed_database_sensitivity_labels: ManagedDatabaseSensitivityLabels operations</span>
+<span class="sd">    :vartype managed_database_sensitivity_labels: azure.mgmt.sql.operations.ManagedDatabaseSensitivityLabelsOperations</span>
+<span class="sd">    :ivar instance_pools: InstancePools operations</span>
+<span class="sd">    :vartype instance_pools: azure.mgmt.sql.operations.InstancePoolsOperations</span>
+<span class="sd">    :ivar usages: Usages operations</span>
+<span class="sd">    :vartype usages: azure.mgmt.sql.operations.UsagesOperations</span>
+<span class="sd">    :ivar managed_instances: ManagedInstances operations</span>
+<span class="sd">    :vartype managed_instances: azure.mgmt.sql.operations.ManagedInstancesOperations</span>
+<span class="sd">    :ivar private_endpoint_connections: PrivateEndpointConnections operations</span>
+<span class="sd">    :vartype private_endpoint_connections: azure.mgmt.sql.operations.PrivateEndpointConnectionsOperations</span>
+<span class="sd">    :ivar private_link_resources: PrivateLinkResources operations</span>
+<span class="sd">    :vartype private_link_resources: azure.mgmt.sql.operations.PrivateLinkResourcesOperations</span>
+
+<span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
+<span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
+<span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: The subscription ID that identifies an Azure</span>
+<span class="sd">     subscription.</span>
+<span class="sd">    :type subscription_id: str</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">SqlManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SqlManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+        <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">recoverable_databases</span> <span class="o">=</span> <span class="n">RecoverableDatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">restorable_dropped_databases</span> <span class="o">=</span> <span class="n">RestorableDroppedDatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">servers</span> <span class="o">=</span> <span class="n">ServersOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_connection_policies</span> <span class="o">=</span> <span class="n">ServerConnectionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_threat_detection_policies</span> <span class="o">=</span> <span class="n">DatabaseThreatDetectionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_masking_policies</span> <span class="o">=</span> <span class="n">DataMaskingPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_masking_rules</span> <span class="o">=</span> <span class="n">DataMaskingRulesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">firewall_rules</span> <span class="o">=</span> <span class="n">FirewallRulesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geo_backup_policies</span> <span class="o">=</span> <span class="n">GeoBackupPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">databases</span> <span class="o">=</span> <span class="n">DatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elastic_pools</span> <span class="o">=</span> <span class="n">ElasticPoolsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recommended_elastic_pools</span> <span class="o">=</span> <span class="n">RecommendedElasticPoolsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">replication_links</span> <span class="o">=</span> <span class="n">ReplicationLinksOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_azure_ad_administrators</span> <span class="o">=</span> <span class="n">ServerAzureADAdministratorsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_communication_links</span> <span class="o">=</span> <span class="n">ServerCommunicationLinksOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_objectives</span> <span class="o">=</span> <span class="n">ServiceObjectivesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elastic_pool_activities</span> <span class="o">=</span> <span class="n">ElasticPoolActivitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elastic_pool_database_activities</span> <span class="o">=</span> <span class="n">ElasticPoolDatabaseActivitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_tier_advisors</span> <span class="o">=</span> <span class="n">ServiceTierAdvisorsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transparent_data_encryptions</span> <span class="o">=</span> <span class="n">TransparentDataEncryptionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transparent_data_encryption_activities</span> <span class="o">=</span> <span class="n">TransparentDataEncryptionActivitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_usages</span> <span class="o">=</span> <span class="n">ServerUsagesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_usages</span> <span class="o">=</span> <span class="n">DatabaseUsagesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_automatic_tuning</span> <span class="o">=</span> <span class="n">DatabaseAutomaticTuningOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">encryption_protectors</span> <span class="o">=</span> <span class="n">EncryptionProtectorsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">failover_groups</span> <span class="o">=</span> <span class="n">FailoverGroupsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_keys</span> <span class="o">=</span> <span class="n">ServerKeysOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_agents</span> <span class="o">=</span> <span class="n">SyncAgentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_groups</span> <span class="o">=</span> <span class="n">SyncGroupsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_members</span> <span class="o">=</span> <span class="n">SyncMembersOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_usages</span> <span class="o">=</span> <span class="n">SubscriptionUsagesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">virtual_clusters</span> <span class="o">=</span> <span class="n">VirtualClustersOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">virtual_network_rules</span> <span class="o">=</span> <span class="n">VirtualNetworkRulesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extended_database_blob_auditing_policies</span> <span class="o">=</span> <span class="n">ExtendedDatabaseBlobAuditingPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extended_server_blob_auditing_policies</span> <span class="o">=</span> <span class="n">ExtendedServerBlobAuditingPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_blob_auditing_policies</span> <span class="o">=</span> <span class="n">ServerBlobAuditingPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_blob_auditing_policies</span> <span class="o">=</span> <span class="n">DatabaseBlobAuditingPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_vulnerability_assessment_rule_baselines</span> <span class="o">=</span> <span class="n">DatabaseVulnerabilityAssessmentRuleBaselinesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_vulnerability_assessments</span> <span class="o">=</span> <span class="n">DatabaseVulnerabilityAssessmentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_agents</span> <span class="o">=</span> <span class="n">JobAgentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_credentials</span> <span class="o">=</span> <span class="n">JobCredentialsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_executions</span> <span class="o">=</span> <span class="n">JobExecutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jobs</span> <span class="o">=</span> <span class="n">JobsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_step_executions</span> <span class="o">=</span> <span class="n">JobStepExecutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_steps</span> <span class="o">=</span> <span class="n">JobStepsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_target_executions</span> <span class="o">=</span> <span class="n">JobTargetExecutionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_target_groups</span> <span class="o">=</span> <span class="n">JobTargetGroupsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job_versions</span> <span class="o">=</span> <span class="n">JobVersionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">long_term_retention_backups</span> <span class="o">=</span> <span class="n">LongTermRetentionBackupsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backup_long_term_retention_policies</span> <span class="o">=</span> <span class="n">BackupLongTermRetentionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_backup_short_term_retention_policies</span> <span class="o">=</span> <span class="n">ManagedBackupShortTermRetentionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_databases</span> <span class="o">=</span> <span class="n">ManagedDatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_restorable_dropped_database_backup_short_term_retention_policies</span> <span class="o">=</span> <span class="n">ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_automatic_tuning</span> <span class="o">=</span> <span class="n">ServerAutomaticTuningOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_dns_aliases</span> <span class="o">=</span> <span class="n">ServerDnsAliasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_security_alert_policies</span> <span class="o">=</span> <span class="n">ServerSecurityAlertPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">restorable_dropped_managed_databases</span> <span class="o">=</span> <span class="n">RestorableDroppedManagedDatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">restore_points</span> <span class="o">=</span> <span class="n">RestorePointsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_database_security_alert_policies</span> <span class="o">=</span> <span class="n">ManagedDatabaseSecurityAlertPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_server_security_alert_policies</span> <span class="o">=</span> <span class="n">ManagedServerSecurityAlertPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sensitivity_labels</span> <span class="o">=</span> <span class="n">SensitivityLabelsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instance_administrators</span> <span class="o">=</span> <span class="n">ManagedInstanceAdministratorsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_operations</span> <span class="o">=</span> <span class="n">DatabaseOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elastic_pool_operations</span> <span class="o">=</span> <span class="n">ElasticPoolOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capabilities</span> <span class="o">=</span> <span class="n">CapabilitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_vulnerability_assessment_scans</span> <span class="o">=</span> <span class="n">DatabaseVulnerabilityAssessmentScansOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_database_vulnerability_assessment_rule_baselines</span> <span class="o">=</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentRuleBaselinesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_database_vulnerability_assessment_scans</span> <span class="o">=</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentScansOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_database_vulnerability_assessments</span> <span class="o">=</span> <span class="n">ManagedDatabaseVulnerabilityAssessmentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instance_failover_groups</span> <span class="o">=</span> <span class="n">InstanceFailoverGroupsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backup_short_term_retention_policies</span> <span class="o">=</span> <span class="n">BackupShortTermRetentionPoliciesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tde_certificates</span> <span class="o">=</span> <span class="n">TdeCertificatesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instance_tde_certificates</span> <span class="o">=</span> <span class="n">ManagedInstanceTdeCertificatesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instance_keys</span> <span class="o">=</span> <span class="n">ManagedInstanceKeysOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instance_encryption_protectors</span> <span class="o">=</span> <span class="n">ManagedInstanceEncryptionProtectorsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recoverable_managed_databases</span> <span class="o">=</span> <span class="n">RecoverableManagedDatabasesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instance_vulnerability_assessments</span> <span class="o">=</span> <span class="n">ManagedInstanceVulnerabilityAssessmentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_vulnerability_assessments</span> <span class="o">=</span> <span class="n">ServerVulnerabilityAssessmentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_database_sensitivity_labels</span> <span class="o">=</span> <span class="n">ManagedDatabaseSensitivityLabelsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instance_pools</span> <span class="o">=</span> <span class="n">InstancePoolsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">usages</span> <span class="o">=</span> <span class="n">UsagesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_instances</span> <span class="o">=</span> <span class="n">ManagedInstancesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">private_endpoint_connections</span> <span class="o">=</span> <span class="n">PrivateEndpointConnectionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">private_link_resources</span> <span class="o">=</span> <span class="n">PrivateLinkResourcesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

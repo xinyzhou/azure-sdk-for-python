@@ -1,0 +1,1451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.datalake.analytics.job.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.datalake.analytics.job.operations module" href="azure.mgmt.datalake.analytics.job.operations.html" />
+    <link rel="prev" title="azure.mgmt.datalake.analytics.job package" href="azure.mgmt.datalake.analytics.job.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.datalake.analytics.job.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.operations.html">azure.mgmt.datalake.analytics.job.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html#module-azure.mgmt.datalake.analytics.job">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a> &raquo;</li>
+        
+      <li>azure.mgmt.datalake.analytics.job.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.datalake.analytics.job.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.datalake.analytics.job.models">
+<span id="azure-mgmt-datalake-analytics-job-models-module"></span><h1>azure.mgmt.datalake.analytics.job.models module<a class="headerlink" href="#module-azure.mgmt.datalake.analytics.job.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobInnerError">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobInnerError</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_inner_error_py3.html#JobInnerError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobInnerError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job error details.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The specific identifier for the type of error encountered
+in the job.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity"><strong>severity</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes" title="azure.mgmt.datalake.analytics.job.models.SeverityTypes"><em>SeverityTypes</em></a>) – The severity level of the failure. Possible values
+include: ‘Warning’, ‘Error’, ‘Info’, ‘SevereWarning’, ‘Deprecated’,
+‘UserWarning’</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.FallbackRouteProperties.source" title="azure.mgmt.iothub.models.FallbackRouteProperties.source"><strong>source</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ultimate source of the failure (usually either SYSTEM or
+USER).</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user friendly error message for the failure.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message description.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.operations.html#azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details" title="azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details"><strong>details</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The details of the error message.</p></li>
+<li><p><strong>diagnostic_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The diagnostic error code.</p></li>
+<li><p><strong>component</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The component that failed.</p></li>
+<li><p><strong>resolution</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The recommended resolution for the failure, if any.</p></li>
+<li><p><strong>help_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to MSDN or Azure help for this type of error, if
+any.</p></li>
+<li><p><strong>internal_diagnostics</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The internal diagnostic stack trace if the
+user requesting the job error details has sufficient permissions it will
+be retrieved, otherwise it will be empty.</p></li>
+<li><p><strong>inner_error</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobInnerError" title="azure.mgmt.datalake.analytics.job.models.JobInnerError"><em>JobInnerError</em></a>) – The inner error of this specific job error message, if
+any.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobErrorDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobErrorDetails</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_error_details_py3.html#JobErrorDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobErrorDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job error details.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The specific identifier for the type of error encountered
+in the job.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity"><strong>severity</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes" title="azure.mgmt.datalake.analytics.job.models.SeverityTypes"><em>SeverityTypes</em></a>) – The severity level of the failure. Possible values
+include: ‘Warning’, ‘Error’, ‘Info’, ‘SevereWarning’, ‘Deprecated’,
+‘UserWarning’</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.FallbackRouteProperties.source" title="azure.mgmt.iothub.models.FallbackRouteProperties.source"><strong>source</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ultimate source of the failure (usually either SYSTEM or
+USER).</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user friendly error message for the failure.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message description.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.operations.html#azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details" title="azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details"><strong>details</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The details of the error message.</p></li>
+<li><p><strong>line_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The specific line number in the job where the error
+occured.</p></li>
+<li><p><strong>start_offset</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The start offset in the job where the error was found</p></li>
+<li><p><strong>end_offset</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The end offset in the job where the error was found.</p></li>
+<li><p><strong>resolution</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The recommended resolution for the failure, if any.</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path to any supplemental error files, if any.</p></li>
+<li><p><strong>help_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to MSDN or Azure help for this type of error, if
+any.</p></li>
+<li><p><strong>internal_diagnostics</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The internal diagnostic stack trace if the
+user requesting the job error details has sufficient permissions it will
+be retrieved, otherwise it will be empty.</p></li>
+<li><p><strong>inner_error</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobInnerError" title="azure.mgmt.datalake.analytics.job.models.JobInnerError"><em>JobInnerError</em></a>) – The inner error of this specific job error message, if
+any.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobStateAuditRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobStateAuditRecord</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_state_audit_record_py3.html#JobStateAuditRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobStateAuditRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job state audit records for tracking the lifecycle
+of a job.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The new state the job is in.</p></li>
+<li><p><strong>time_stamp</strong> (<em>datetime</em>) – The time stamp that the state change took place.</p></li>
+<li><p><strong>requested_by_user</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user who requests the change.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.operations.html#azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details" title="azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details"><strong>details</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The details of the audit log.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_properties_py3.html#JobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The common Data Lake Analytics job properties.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: USqlJobProperties, HiveJobProperties, ScopeJobProperties</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobInformation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">properties</em>, <em class="sig-param">degree_of_parallelism: int = 1</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">log_file_patterns=None</em>, <em class="sig-param">related=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_information_py3.html#JobInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.job_information_basic_py3.JobInformationBasic</span></code></p>
+<p>The extended Data Lake Analytics job information properties returned when
+retrieving a specific job.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The job’s unique identifier (a GUID).</p></li>
+<li><p><strong>submitter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user or account that submitted the job.</p></li>
+<li><p><strong>submit_time</strong> (<em>datetime</em>) – The time the job was submitted to the service.</p></li>
+<li><p><strong>start_time</strong> (<em>datetime</em>) – The start time of the job.</p></li>
+<li><p><strong>end_time</strong> (<em>datetime</em>) – The completion time of the job.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobState" title="azure.mgmt.datalake.analytics.job.models.JobState"><em>JobState</em></a>) – The job state. When the job is in the Ended state, refer to
+Result and ErrorMessage for details. Possible values include: ‘Accepted’,
+‘Compiling’, ‘Ended’, ‘New’, ‘Queued’, ‘Running’, ‘Scheduling’,
+‘Starting’, ‘Paused’, ‘WaitingForCapacity’</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.poller.LROPoller.result" title="azure.core.polling.poller.LROPoller.result"><strong>result</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobResult" title="azure.mgmt.datalake.analytics.job.models.JobResult"><em>JobResult</em></a>) – The result of job execution or the current result of the
+running job. Possible values include: ‘None’, ‘Succeeded’, ‘Cancelled’,
+‘Failed’</p></li>
+<li><p><strong>log_folder</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The log folder path to use in the following format:
+adl://&lt;accountName&gt;.azuredatalakestore.net/system/jobservice/jobs/Usql/2016/03/13/17/18/5fe51957-93bc-4de0-8ddc-c5a4753b068b/logs/.</p></li>
+<li><p><strong>error_message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobErrorDetails" title="azure.mgmt.datalake.analytics.job.models.JobErrorDetails"><em>JobErrorDetails</em></a><em>]</em>) – The error message details for the job, if the job
+failed.</p></li>
+<li><p><strong>state_audit_records</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStateAuditRecord" title="azure.mgmt.datalake.analytics.job.models.JobStateAuditRecord"><em>JobStateAuditRecord</em></a><em>]</em>) – The job state audit records, indicating when
+various operations have been performed on this job.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The friendly name of the job.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The degree of parallelism used for this job.
+This must be greater than 0, if set to less than 0 it will default to 1.
+Default value: 1 .</p></li>
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value for the current job. Lower numbers
+have a higher priority. By default, a job has a priority of 1000. This
+must be greater than 0.</p></li>
+<li><p><strong>log_file_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of log file name patterns to find in
+the logFolder. ‘*’ is the only matching character allowed. Example format:
+jobExecution*.log or <em>mylog</em>.txt</p></li>
+<li><p><strong>related</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties" title="azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties"><em>JobRelationshipProperties</em></a>) – The recurring job relationship information properties.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The key-value pairs used to add additional metadata to the
+job information. (Only for use internally with Scope job type.)</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobProperties" title="azure.mgmt.datalake.analytics.job.models.JobProperties"><em>JobProperties</em></a>) – Required. The job specific properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobRelationshipProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">recurrence_id: str</em>, <em class="sig-param">pipeline_id: str = None</em>, <em class="sig-param">pipeline_name: str = None</em>, <em class="sig-param">pipeline_uri: str = None</em>, <em class="sig-param">run_id: str = None</em>, <em class="sig-param">recurrence_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_relationship_properties_py3.html#JobRelationshipProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Job relationship information properties including pipeline information,
+correlation information, etc.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The job relationship pipeline identifier (a GUID).</p></li>
+<li><p><strong>pipeline_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The friendly name of the job relationship pipeline,
+which does not need to be unique.</p></li>
+<li><p><strong>pipeline_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pipeline uri, unique, links to the originating
+service for this pipeline.</p></li>
+<li><p><strong>run_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The run identifier (a GUID), unique identifier of the
+iteration of this pipeline.</p></li>
+<li><p><strong>recurrence_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The recurrence identifier (a GUID), unique
+per activity/script, regardless of iterations. This is something to link
+different occurrences of the same job together.</p></li>
+<li><p><strong>recurrence_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The recurrence name, user friendly name for the
+correlation between jobs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobInformationBasic">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobInformationBasic</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">degree_of_parallelism: int = 1</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">log_file_patterns=None</em>, <em class="sig-param">related=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_information_basic_py3.html#JobInformationBasic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobInformationBasic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The common Data Lake Analytics job information properties.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The job’s unique identifier (a GUID).</p></li>
+<li><p><strong>submitter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user or account that submitted the job.</p></li>
+<li><p><strong>submit_time</strong> (<em>datetime</em>) – The time the job was submitted to the service.</p></li>
+<li><p><strong>start_time</strong> (<em>datetime</em>) – The start time of the job.</p></li>
+<li><p><strong>end_time</strong> (<em>datetime</em>) – The completion time of the job.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobState" title="azure.mgmt.datalake.analytics.job.models.JobState"><em>JobState</em></a>) – The job state. When the job is in the Ended state, refer to
+Result and ErrorMessage for details. Possible values include: ‘Accepted’,
+‘Compiling’, ‘Ended’, ‘New’, ‘Queued’, ‘Running’, ‘Scheduling’,
+‘Starting’, ‘Paused’, ‘WaitingForCapacity’</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.poller.LROPoller.result" title="azure.core.polling.poller.LROPoller.result"><strong>result</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobResult" title="azure.mgmt.datalake.analytics.job.models.JobResult"><em>JobResult</em></a>) – The result of job execution or the current result of the
+running job. Possible values include: ‘None’, ‘Succeeded’, ‘Cancelled’,
+‘Failed’</p></li>
+<li><p><strong>log_folder</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The log folder path to use in the following format:
+adl://&lt;accountName&gt;.azuredatalakestore.net/system/jobservice/jobs/Usql/2016/03/13/17/18/5fe51957-93bc-4de0-8ddc-c5a4753b068b/logs/.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The friendly name of the job.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The degree of parallelism used for this job.
+This must be greater than 0, if set to less than 0 it will default to 1.
+Default value: 1 .</p></li>
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value for the current job. Lower numbers
+have a higher priority. By default, a job has a priority of 1000. This
+must be greater than 0.</p></li>
+<li><p><strong>log_file_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of log file name patterns to find in
+the logFolder. ‘*’ is the only matching character allowed. Example format:
+jobExecution*.log or <em>mylog</em>.txt</p></li>
+<li><p><strong>related</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties" title="azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties"><em>JobRelationshipProperties</em></a>) – The recurring job relationship information properties.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The key-value pairs used to add additional metadata to the
+job information. (Only for use internally with Scope job type.)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">resource_path: str = None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_resource_py3.html#JobResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><strong>resource_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path to the resource.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType" title="azure.mgmt.datalake.analytics.job.models.JobResourceType"><em>JobResourceType</em></a>) – The job resource type. Possible values include:
+‘VertexResource’, ‘JobManagerResource’, ‘StatisticsResource’,
+‘VertexResourceInUserFolder’, ‘JobManagerResourceInUserFolder’,
+‘StatisticsResourceInUserFolder’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobStatisticsVertex</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_statistics_vertex_py3.html#JobStatisticsVertex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The detailed information for a vertex.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.keys.html#azure.keyvault.keys.models.KeyBase.name" title="azure.keyvault.keys.models.KeyBase.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the vertex.</p></li>
+<li><p><strong>vertex_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the vertex.</p></li>
+<li><p><strong>execution_time</strong> (<em>timedelta</em>) – The amount of execution time of the vertex.</p></li>
+<li><p><strong>data_read</strong> (<em>long</em>) – The amount of data read of the vertex, in bytes.</p></li>
+<li><p><strong>peak_mem_usage</strong> (<em>long</em>) – The amount of peak memory usage of the vertex, in
+bytes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">ResourceUsageStatistics</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/resource_usage_statistics_py3.html#ResourceUsageStatistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The statistics information for resource usage.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.PrimaryAggregationType.average" title="azure.mgmt.cosmosdb.models.PrimaryAggregationType.average"><strong>average</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The average value.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.network.v2018_08_01.models.html#azure.mgmt.network.v2018_08_01.models.VerbosityLevel.minimum" title="azure.mgmt.network.v2018_08_01.models.VerbosityLevel.minimum"><strong>minimum</strong></a> (<em>long</em>) – The minimum value.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.PrimaryAggregationType.maximum" title="azure.mgmt.cosmosdb.models.PrimaryAggregationType.maximum"><strong>maximum</strong></a> (<em>long</em>) – The maximum value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertexStage">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobStatisticsVertexStage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_data_read_vertex=None</em>, <em class="sig-param">max_execution_time_vertex=None</em>, <em class="sig-param">max_peak_mem_usage_vertex=None</em>, <em class="sig-param">allocated_container_cpu_core_count=None</em>, <em class="sig-param">allocated_container_mem_size=None</em>, <em class="sig-param">used_vertex_cpu_core_count=None</em>, <em class="sig-param">used_vertex_peak_mem_size=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_statistics_vertex_stage_py3.html#JobStatisticsVertexStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertexStage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job statistics vertex stage information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_read</strong> (<em>long</em>) – The amount of data read, in bytes.</p></li>
+<li><p><strong>data_read_cross_pod</strong> (<em>long</em>) – The amount of data read across multiple pods,
+in bytes.</p></li>
+<li><p><strong>data_read_intra_pod</strong> (<em>long</em>) – The amount of data read in one pod, in bytes.</p></li>
+<li><p><strong>data_to_read</strong> (<em>long</em>) – The amount of data remaining to be read, in bytes.</p></li>
+<li><p><strong>data_written</strong> (<em>long</em>) – The amount of data written, in bytes.</p></li>
+<li><p><strong>duplicate_discard_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of duplicates that were
+discarded.</p></li>
+<li><p><strong>failed_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of failures that occured in this stage.</p></li>
+<li><p><strong>max_vertex_data_read</strong> (<em>long</em>) – The maximum amount of data read in a single
+vertex, in bytes.</p></li>
+<li><p><strong>min_vertex_data_read</strong> (<em>long</em>) – The minimum amount of data read in a single
+vertex, in bytes.</p></li>
+<li><p><strong>read_failure_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of read failures in this stage.</p></li>
+<li><p><strong>revocation_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of vertices that were revoked during
+this stage.</p></li>
+<li><p><strong>running_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of currently running vertices in this
+stage.</p></li>
+<li><p><strong>scheduled_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of currently scheduled vertices in this
+stage.</p></li>
+<li><p><strong>stage_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of this stage in job execution.</p></li>
+<li><p><strong>succeeded_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of vertices that succeeded in this
+stage.</p></li>
+<li><p><strong>temp_data_written</strong> (<em>long</em>) – The amount of temporary data written, in bytes.</p></li>
+<li><p><strong>total_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The total vertex count for this stage.</p></li>
+<li><p><strong>total_failed_time</strong> (<em>timedelta</em>) – The amount of time that failed vertices took up
+in this stage.</p></li>
+<li><p><strong>total_progress</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The current progress of this stage, as a percentage.</p></li>
+<li><p><strong>total_succeeded_time</strong> (<em>timedelta</em>) – The amount of time all successful vertices
+took in this stage.</p></li>
+<li><p><strong>total_peak_mem_usage</strong> (<em>long</em>) – The sum of the peak memory usage of all the
+vertices in the stage, in bytes.</p></li>
+<li><p><strong>total_execution_time</strong> (<em>timedelta</em>) – The sum of the total execution time of all the
+vertices in the stage.</p></li>
+<li><p><strong>estimated_vertex_cpu_core_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The estimated vertex CPU core
+count.</p></li>
+<li><p><strong>estimated_vertex_peak_cpu_core_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The estimated vertex peak CPU
+core count.</p></li>
+<li><p><strong>estimated_vertex_mem_size</strong> (<em>long</em>) – The estimated vertex memory size, in
+bytes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>max_data_read_vertex</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex" title="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex"><em>JobStatisticsVertex</em></a>) – the vertex with the maximum amount of data
+read.</p></li>
+<li><p><strong>max_execution_time_vertex</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex" title="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex"><em>JobStatisticsVertex</em></a>) – the vertex with the maximum execution
+time.</p></li>
+<li><p><strong>max_peak_mem_usage_vertex</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex" title="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertex"><em>JobStatisticsVertex</em></a>) – the vertex with the maximum peak memory
+usage.</p></li>
+<li><p><strong>allocated_container_cpu_core_count</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics" title="azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics"><em>ResourceUsageStatistics</em></a>) – The statistics information for
+the allocated container CPU core count.</p></li>
+<li><p><strong>allocated_container_mem_size</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics" title="azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics"><em>ResourceUsageStatistics</em></a>) – The statistics information for the
+allocated container memory size.</p></li>
+<li><p><strong>used_vertex_cpu_core_count</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics" title="azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics"><em>ResourceUsageStatistics</em></a>) – The statistics information for the used
+vertex CPU core count.</p></li>
+<li><p><strong>used_vertex_peak_mem_size</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics" title="azure.mgmt.datalake.analytics.job.models.ResourceUsageStatistics"><em>ResourceUsageStatistics</em></a>) – The statistics information for the used
+vertex peak memory size.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobStatistics">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobStatistics</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_statistics_py3.html#JobStatistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobStatistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Data Lake Analytics job execution statistics.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>last_update_time_utc</strong> (<em>datetime</em>) – The last update time for the statistics.</p></li>
+<li><p><strong>finalizing_time_utc</strong> (<em>datetime</em>) – The job finalizing start time.</p></li>
+<li><p><strong>stages</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStatisticsVertexStage" title="azure.mgmt.datalake.analytics.job.models.JobStatisticsVertexStage"><em>JobStatisticsVertexStage</em></a><em>]</em>) – The list of stages for the job.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobDataPath">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobDataPath</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_data_path_py3.html#JobDataPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobDataPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Data Lake Analytics job data path item.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the job this data is for.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.operations.html#azure.mgmt.datamigration.operations.TasksOperations.command" title="azure.mgmt.datamigration.operations.TasksOperations.command"><strong>command</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The command that this job data relates to.</p></li>
+<li><p><strong>paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of paths to all of the job data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.Diagnostics">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">Diagnostics</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/diagnostics_py3.html#Diagnostics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.Diagnostics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error diagnostic information for failed jobs.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.severity"><strong>severity</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes" title="azure.mgmt.datalake.analytics.job.models.SeverityTypes"><em>SeverityTypes</em></a>) – The severity of the error. Possible values include:
+‘Warning’, ‘Error’, ‘Info’, ‘SevereWarning’, ‘Deprecated’, ‘UserWarning’</p></li>
+<li><p><strong>line_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The line number the error occured on.</p></li>
+<li><p><strong>column_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The column where the error occured.</p></li>
+<li><p><a class="reference internal" href="azure.eventhub.aio.eventprocessor.html#azure.eventhub.aio.eventprocessor.event_processor.EventProcessor.start" title="azure.eventhub.aio.eventprocessor.event_processor.EventProcessor.start"><strong>start</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The starting index of the error.</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The ending index of the error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.USqlJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">USqlJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">statistics=None</em>, <em class="sig-param">debug_data=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/usql_job_properties_py3.html#USqlJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.USqlJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.job_properties_py3.JobProperties</span></code></p>
+<p>U-SQL job properties used when retrieving U-SQL jobs.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>statistics</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobStatistics" title="azure.mgmt.datalake.analytics.job.models.JobStatistics"><em>JobStatistics</em></a>) – The job specific statistics.</p></li>
+<li><p><strong>debug_data</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobDataPath" title="azure.mgmt.datalake.analytics.job.models.JobDataPath"><em>JobDataPath</em></a>) – The job specific debug data locations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.resource.resources.html#module-azure.mgmt.resource.resources" title="azure.mgmt.resource.resources"><strong>resources</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobResource" title="azure.mgmt.datalake.analytics.job.models.JobResource"><em>JobResource</em></a><em>]</em>) – The list of resources that are required by the job.</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.diagnostics.html#module-azure.cosmos.diagnostics" title="azure.cosmos.diagnostics"><strong>diagnostics</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.Diagnostics" title="azure.mgmt.datalake.analytics.job.models.Diagnostics"><em>Diagnostics</em></a><em>]</em>) – The diagnostics for the job.</p></li>
+<li><p><strong>algebra_file_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The algebra file path after the job has
+completed.</p></li>
+<li><p><strong>total_compilation_time</strong> (<em>timedelta</em>) – The total time this job spent compiling.
+This value should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_queued_time</strong> (<em>timedelta</em>) – The total time this job spent queued. This value
+should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_running_time</strong> (<em>timedelta</em>) – The total time this job spent executing. This
+value should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_paused_time</strong> (<em>timedelta</em>) – The total time this job spent paused. This value
+should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>root_process_node_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID used to identify the job manager
+coordinating job execution. This value should not be set by the user and
+will be ignored if it is.</p></li>
+<li><p><strong>yarn_application_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID used to identify the yarn application
+executing the job. This value should not be set by the user and will be
+ignored if it is.</p></li>
+<li><p><strong>yarn_application_time_stamp</strong> (<em>long</em>) – The timestamp (in ticks) for the yarn
+application executing the job. This value should not be set by the user
+and will be ignored if it is.</p></li>
+<li><p><strong>compile_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CompileMode" title="azure.mgmt.datalake.analytics.job.models.CompileMode"><em>CompileMode</em></a>) – The specific compilation mode for the job used during
+execution. If this is not specified during submission, the server will
+determine the optimal compilation mode. Possible values include:
+‘Semantic’, ‘Full’, ‘SingleBox’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.HiveJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">HiveJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/hive_job_properties_py3.html#HiveJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.HiveJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.job_properties_py3.JobProperties</span></code></p>
+<p>Hive job properties used when retrieving Hive jobs.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>logs_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Hive logs location.</p></li>
+<li><p><strong>output_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of Hive job output files (both
+execution output and results).</p></li>
+<li><p><strong>statement_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of statements that will be run based on
+the script.</p></li>
+<li><p><strong>executed_statement_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of statements that have been
+run based on the script.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.ScopeJobResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">ScopeJobResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">path: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/scope_job_resource_py3.html#ScopeJobResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.ScopeJobResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Scope job resources. (Only for use internally with Scope job type.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.ScopeJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">ScopeJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">notifier: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/scope_job_properties_py3.html#ScopeJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.ScopeJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.job_properties_py3.JobProperties</span></code></p>
+<p>Scope job properties used when submitting and retrieving Scope jobs. (Only
+for use internally with Scope job type.).</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>notifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The list of email addresses, separated by semi-colons, to
+notify when the job reaches a terminal state.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.resource.resources.html#module-azure.mgmt.resource.resources" title="azure.mgmt.resource.resources"><strong>resources</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ScopeJobResource" title="azure.mgmt.datalake.analytics.job.models.ScopeJobResource"><em>ScopeJobResource</em></a><em>]</em>) – The list of resources that are required by the job.</p></li>
+<li><p><strong>user_algebra_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The algebra file path after the job has
+completed.</p></li>
+<li><p><strong>total_compilation_time</strong> (<em>timedelta</em>) – The total time this job spent compiling.
+This value should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_queued_time</strong> (<em>timedelta</em>) – The total time this job spent queued. This value
+should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_running_time</strong> (<em>timedelta</em>) – The total time this job spent executing. This
+value should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>total_paused_time</strong> (<em>timedelta</em>) – The total time this job spent paused. This value
+should not be set by the user and will be ignored if it is.</p></li>
+<li><p><strong>root_process_node_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID used to identify the job manager
+coordinating job execution. This value should not be set by the user and
+will be ignored if it is.</p></li>
+<li><p><strong>yarn_application_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID used to identify the yarn application
+executing the job. This value should not be set by the user and will be
+ignored if it is.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobPipelineRunInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobPipelineRunInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_pipeline_run_information_py3.html#JobPipelineRunInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobPipelineRunInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Run info for a specific job pipeline.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The run identifier of an instance of pipeline executions (a
+GUID).</p></li>
+<li><p><strong>last_submit_time</strong> (<em>datetime</em>) – The time this instance was last submitted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobPipelineInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobPipelineInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_pipeline_information_py3.html#JobPipelineInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobPipelineInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Job Pipeline Information, showing the relationship of jobs and recurrences
+of those jobs in a pipeline.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The job relationship pipeline identifier (a GUID).</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.RunQueryFilterOperand.pipeline_name" title="azure.mgmt.datafactory.models.RunQueryFilterOperand.pipeline_name"><strong>pipeline_name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The friendly name of the job relationship pipeline,
+which does not need to be unique.</p></li>
+<li><p><strong>pipeline_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pipeline uri, unique, links to the originating
+service for this pipeline.</p></li>
+<li><p><strong>num_jobs_failed</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this pipeline that have
+failed.</p></li>
+<li><p><strong>num_jobs_canceled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this pipeline that have
+been canceled.</p></li>
+<li><p><strong>num_jobs_succeeded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this pipeline that have
+succeeded.</p></li>
+<li><p><strong>au_hours_failed</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted in
+failed jobs.</p></li>
+<li><p><strong>au_hours_canceled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted
+in canceled jobs.</p></li>
+<li><p><strong>au_hours_succeeded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted
+in successful jobs.</p></li>
+<li><p><strong>last_submit_time</strong> (<em>datetime</em>) – The last time a job in this pipeline was
+submitted.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.containerregistry.html#azure.mgmt.containerregistry.ContainerRegistryManagementClient.runs" title="azure.mgmt.containerregistry.ContainerRegistryManagementClient.runs"><strong>runs</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobPipelineRunInformation" title="azure.mgmt.datalake.analytics.job.models.JobPipelineRunInformation"><em>JobPipelineRunInformation</em></a><em>]</em>) – The list of recurrence identifiers representing each run of
+this pipeline.</p></li>
+<li><p><strong>recurrences</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of recurrence identifiers representing each
+run of this pipeline.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobRecurrenceInformation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_recurrence_information_py3.html#JobRecurrenceInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Recurrence job information for a specific recurrence.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>recurrence_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The recurrence identifier (a GUID), unique per
+activity/script, regardless of iterations. This is something to link
+different occurrences of the same job together.</p></li>
+<li><p><strong>recurrence_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The recurrence name, user friendly name for the
+correlation between jobs.</p></li>
+<li><p><strong>num_jobs_failed</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this recurrence that have
+failed.</p></li>
+<li><p><strong>num_jobs_canceled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this recurrence that have
+been canceled.</p></li>
+<li><p><strong>num_jobs_succeeded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of jobs in this recurrence that have
+succeeded.</p></li>
+<li><p><strong>au_hours_failed</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted in
+failed jobs.</p></li>
+<li><p><strong>au_hours_canceled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted
+in canceled jobs.</p></li>
+<li><p><strong>au_hours_succeeded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The number of job execution hours that resulted
+in successful jobs.</p></li>
+<li><p><strong>last_submit_time</strong> (<em>datetime</em>) – The last time a job in this recurrence was
+submitted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CreateJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CreateJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/create_job_properties_py3.html#CreateJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CreateJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The common Data Lake Analytics job properties for job submission.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: CreateUSqlJobProperties, CreateScopeJobProperties</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.BaseJobParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">BaseJobParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">properties</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/base_job_parameters_py3.html#BaseJobParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.BaseJobParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Data Lake Analytics Job Parameters base class for build and submit.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CreateJobProperties" title="azure.mgmt.datalake.analytics.job.models.CreateJobProperties"><em>CreateJobProperties</em></a>) – Required. The job specific properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CreateJobParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CreateJobParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">properties</em>, <em class="sig-param">name: str</em>, <em class="sig-param">degree_of_parallelism: int = 1</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">log_file_patterns=None</em>, <em class="sig-param">related=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/create_job_parameters_py3.html#CreateJobParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CreateJobParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.base_job_parameters_py3.BaseJobParameters</span></code></p>
+<p>The parameters used to submit a new Data Lake Analytics job.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CreateJobProperties" title="azure.mgmt.datalake.analytics.job.models.CreateJobProperties"><em>CreateJobProperties</em></a>) – Required. The job specific properties.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The friendly name of the job to submit.</p></li>
+<li><p><strong>degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The degree of parallelism to use for this
+job. This must be greater than 0, if set to less than 0 it will default to
+1. Default value: 1 .</p></li>
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value to use for the current job. Lower
+numbers have a higher priority. By default, a job has a priority of 1000.
+This must be greater than 0.</p></li>
+<li><p><strong>log_file_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of log file name patterns to find in
+the logFolder. ‘*’ is the only matching character allowed. Example format:
+jobExecution*.log or <em>mylog</em>.txt</p></li>
+<li><p><strong>related</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties" title="azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties"><em>JobRelationshipProperties</em></a>) – The recurring job relationship information properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CreateScopeJobParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CreateScopeJobParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">properties</em>, <em class="sig-param">name: str</em>, <em class="sig-param">degree_of_parallelism: int = 1</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">log_file_patterns=None</em>, <em class="sig-param">related=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/create_scope_job_parameters_py3.html#CreateScopeJobParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CreateScopeJobParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.create_job_parameters_py3.CreateJobParameters</span></code></p>
+<p>The parameters used to submit a new Data Lake Analytics Scope job. (Only
+for use internally with Scope job type.).</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CreateJobProperties" title="azure.mgmt.datalake.analytics.job.models.CreateJobProperties"><em>CreateJobProperties</em></a>) – Required. The job specific properties.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The friendly name of the job to submit.</p></li>
+<li><p><strong>degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The degree of parallelism to use for this
+job. This must be greater than 0, if set to less than 0 it will default to
+1. Default value: 1 .</p></li>
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value to use for the current job. Lower
+numbers have a higher priority. By default, a job has a priority of 1000.
+This must be greater than 0.</p></li>
+<li><p><strong>log_file_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of log file name patterns to find in
+the logFolder. ‘*’ is the only matching character allowed. Example format:
+jobExecution*.log or <em>mylog</em>.txt</p></li>
+<li><p><strong>related</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties" title="azure.mgmt.datalake.analytics.job.models.JobRelationshipProperties"><em>JobRelationshipProperties</em></a>) – The recurring job relationship information properties.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The key-value pairs used to add additional metadata to the
+job information.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CreateUSqlJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CreateUSqlJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">compile_mode=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/create_usql_job_properties_py3.html#CreateUSqlJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CreateUSqlJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.create_job_properties_py3.CreateJobProperties</span></code></p>
+<p>U-SQL job properties used when submitting U-SQL jobs.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>compile_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CompileMode" title="azure.mgmt.datalake.analytics.job.models.CompileMode"><em>CompileMode</em></a>) – The specific compilation mode for the job used during
+execution. If this is not specified during submission, the server will
+determine the optimal compilation mode. Possible values include:
+‘Semantic’, ‘Full’, ‘SingleBox’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CreateScopeJobProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CreateScopeJobProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">script: str</em>, <em class="sig-param">runtime_version: str = None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">notifier: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/create_scope_job_properties_py3.html#CreateScopeJobProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CreateScopeJobProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.create_job_properties_py3.CreateJobProperties</span></code></p>
+<p>Scope job properties used when submitting Scope jobs. (Only for use
+internally with Scope job type.).</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The runtime version of the Data Lake Analytics
+engine to use for the specific type of job being run.</p></li>
+<li><p><strong>script</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The script to run. Please note that the maximum
+script size is 3 MB.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.ScopeJobResource" title="azure.mgmt.datalake.analytics.job.models.ScopeJobResource"><em>ScopeJobResource</em></a><em>]</em>) – The list of resources that are required by the job.</p></li>
+<li><p><strong>notifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The list of email addresses, separated by semi-colons, to
+notify when the job reaches a terminal state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.BuildJobParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">BuildJobParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">properties</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/build_job_parameters_py3.html#BuildJobParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.BuildJobParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datalake.analytics.job.models.base_job_parameters_py3.BaseJobParameters</span></code></p>
+<p>The parameters used to build a new Data Lake Analytics job.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="azure.mgmt.datalake.analytics.job.models.JobType"><em>JobType</em></a>) – Required. The job type of the current job (Hive, USql, or
+Scope (for internal use only)). Possible values include: ‘USql’, ‘Hive’,
+‘Scope’</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.CreateJobProperties" title="azure.mgmt.datalake.analytics.job.models.CreateJobProperties"><em>CreateJobProperties</em></a>) – Required. The job specific properties.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The friendly name of the job to build.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.UpdateJobParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">UpdateJobParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">degree_of_parallelism: int = None</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/update_job_parameters_py3.html#UpdateJobParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.UpdateJobParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters that can be used to update existing Data Lake Analytics job
+information properties. (Only for use internally with Scope job type.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>degree_of_parallelism</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The degree of parallelism used for this job.
+This must be greater than 0, if set to less than 0 it will default to 1.</p></li>
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value for the current job. Lower numbers
+have a higher priority. By default, a job has a priority of 1000. This
+must be greater than 0.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The key-value pairs used to add additional metadata to the
+job information.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobInformationBasicPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobInformationBasicPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_information_basic_paged.html#JobInformationBasicPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobInformationBasicPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobInformationBasic" title="azure.mgmt.datalake.analytics.job.models.JobInformationBasic"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobInformationBasic</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobPipelineInformationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobPipelineInformationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_pipeline_information_paged.html#JobPipelineInformationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobPipelineInformationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobPipelineInformation" title="azure.mgmt.datalake.analytics.job.models.JobPipelineInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobPipelineInformation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformationPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobRecurrenceInformationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/job_recurrence_information_paged.html#JobRecurrenceInformationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformation" title="azure.mgmt.datalake.analytics.job.models.JobRecurrenceInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">JobRecurrenceInformation</span></code></a> object</p>
+<p>Bring async to Paging.</p>
+<p>“async_command” is mandatory keyword argument for this mixin to work.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">SeverityTypes</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#SeverityTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.deprecated">
+<code class="sig-name descname">deprecated</code><em class="property"> = 'Deprecated'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.error">
+<code class="sig-name descname">error</code><em class="property"> = 'Error'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.info">
+<code class="sig-name descname">info</code><em class="property"> = 'Info'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.severe_warning">
+<code class="sig-name descname">severe_warning</code><em class="property"> = 'SevereWarning'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.severe_warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.user_warning">
+<code class="sig-name descname">user_warning</code><em class="property"> = 'UserWarning'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.user_warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.SeverityTypes.warning">
+<code class="sig-name descname">warning</code><em class="property"> = 'Warning'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.SeverityTypes.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#JobType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobType.hive">
+<code class="sig-name descname">hive</code><em class="property"> = 'Hive'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobType.hive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobType.scope">
+<code class="sig-name descname">scope</code><em class="property"> = 'Scope'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobType.scope" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobType.usql">
+<code class="sig-name descname">usql</code><em class="property"> = 'USql'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobType.usql" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobState</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#JobState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.accepted">
+<code class="sig-name descname">accepted</code><em class="property"> = 'Accepted'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.compiling">
+<code class="sig-name descname">compiling</code><em class="property"> = 'Compiling'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.compiling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.ended">
+<code class="sig-name descname">ended</code><em class="property"> = 'Ended'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.ended" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.new">
+<code class="sig-name descname">new</code><em class="property"> = 'New'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.new" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.paused">
+<code class="sig-name descname">paused</code><em class="property"> = 'Paused'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.paused" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.queued">
+<code class="sig-name descname">queued</code><em class="property"> = 'Queued'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.queued" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.running">
+<code class="sig-name descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.scheduling">
+<code class="sig-name descname">scheduling</code><em class="property"> = 'Scheduling'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.scheduling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.starting">
+<code class="sig-name descname">starting</code><em class="property"> = 'Starting'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.starting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobState.waiting_for_capacity">
+<code class="sig-name descname">waiting_for_capacity</code><em class="property"> = 'WaitingForCapacity'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobState.waiting_for_capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobResult</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#JobResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResult.cancelled">
+<code class="sig-name descname">cancelled</code><em class="property"> = 'Cancelled'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResult.cancelled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResult.failed">
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResult.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResult.none">
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResult.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResult.succeeded">
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResult.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">JobResourceType</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#JobResourceType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource">
+<code class="sig-name descname">job_manager_resource</code><em class="property"> = 'JobManagerResource'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder">
+<code class="sig-name descname">job_manager_resource_in_user_folder</code><em class="property"> = 'JobManagerResourceInUserFolder'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.job_manager_resource_in_user_folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource">
+<code class="sig-name descname">statistics_resource</code><em class="property"> = 'StatisticsResource'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder">
+<code class="sig-name descname">statistics_resource_in_user_folder</code><em class="property"> = 'StatisticsResourceInUserFolder'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.statistics_resource_in_user_folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource">
+<code class="sig-name descname">vertex_resource</code><em class="property"> = 'VertexResource'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder">
+<code class="sig-name descname">vertex_resource_in_user_folder</code><em class="property"> = 'VertexResourceInUserFolder'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.JobResourceType.vertex_resource_in_user_folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datalake.analytics.job.models.CompileMode">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datalake.analytics.job.models.</code><code class="sig-name descname">CompileMode</code><a class="reference internal" href="../_modules/azure/mgmt/datalake/analytics/job/models/data_lake_analytics_job_management_client_enums.html#CompileMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CompileMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.CompileMode.full">
+<code class="sig-name descname">full</code><em class="property"> = 'Full'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CompileMode.full" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.CompileMode.semantic">
+<code class="sig-name descname">semantic</code><em class="property"> = 'Semantic'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CompileMode.semantic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datalake.analytics.job.models.CompileMode.single_box">
+<code class="sig-name descname">single_box</code><em class="property"> = 'SingleBox'</em><a class="headerlink" href="#azure.mgmt.datalake.analytics.job.models.CompileMode.single_box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.datalake.analytics.job.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.datalake.analytics.job.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.datalake.analytics.job.html" class="btn btn-neutral float-left" title="azure.mgmt.datalake.analytics.job package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

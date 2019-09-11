@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.apimanagement.api_management_client &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.apimanagement.api_management_client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.apimanagement.api_management_client</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
+<span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
+<span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
+<span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
+<span class="kn">from</span> <span class="nn">.operations.api_operations</span> <span class="k">import</span> <span class="n">ApiOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_revision_operations</span> <span class="k">import</span> <span class="n">ApiRevisionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_release_operations</span> <span class="k">import</span> <span class="n">ApiReleaseOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_operation_operations</span> <span class="k">import</span> <span class="n">ApiOperationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_operation_policy_operations</span> <span class="k">import</span> <span class="n">ApiOperationPolicyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.tag_operations</span> <span class="k">import</span> <span class="n">TagOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_product_operations</span> <span class="k">import</span> <span class="n">ApiProductOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_policy_operations</span> <span class="k">import</span> <span class="n">ApiPolicyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_schema_operations</span> <span class="k">import</span> <span class="n">ApiSchemaOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_diagnostic_operations</span> <span class="k">import</span> <span class="n">ApiDiagnosticOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_issue_operations</span> <span class="k">import</span> <span class="n">ApiIssueOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_issue_comment_operations</span> <span class="k">import</span> <span class="n">ApiIssueCommentOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_issue_attachment_operations</span> <span class="k">import</span> <span class="n">ApiIssueAttachmentOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_tag_description_operations</span> <span class="k">import</span> <span class="n">ApiTagDescriptionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.operation_operations</span> <span class="k">import</span> <span class="n">OperationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_version_set_operations</span> <span class="k">import</span> <span class="n">ApiVersionSetOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.authorization_server_operations</span> <span class="k">import</span> <span class="n">AuthorizationServerOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.backend_operations</span> <span class="k">import</span> <span class="n">BackendOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.cache_operations</span> <span class="k">import</span> <span class="n">CacheOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.certificate_operations</span> <span class="k">import</span> <span class="n">CertificateOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_management_operations</span> <span class="k">import</span> <span class="n">ApiManagementOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_management_service_skus_operations</span> <span class="k">import</span> <span class="n">ApiManagementServiceSkusOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_management_service_operations</span> <span class="k">import</span> <span class="n">ApiManagementServiceOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.diagnostic_operations</span> <span class="k">import</span> <span class="n">DiagnosticOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.email_template_operations</span> <span class="k">import</span> <span class="n">EmailTemplateOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.group_operations</span> <span class="k">import</span> <span class="n">GroupOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.group_user_operations</span> <span class="k">import</span> <span class="n">GroupUserOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.identity_provider_operations</span> <span class="k">import</span> <span class="n">IdentityProviderOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.issue_operations</span> <span class="k">import</span> <span class="n">IssueOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.logger_operations</span> <span class="k">import</span> <span class="n">LoggerOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.network_status_operations</span> <span class="k">import</span> <span class="n">NetworkStatusOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.notification_operations</span> <span class="k">import</span> <span class="n">NotificationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.notification_recipient_user_operations</span> <span class="k">import</span> <span class="n">NotificationRecipientUserOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.notification_recipient_email_operations</span> <span class="k">import</span> <span class="n">NotificationRecipientEmailOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.open_id_connect_provider_operations</span> <span class="k">import</span> <span class="n">OpenIdConnectProviderOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.policy_operations</span> <span class="k">import</span> <span class="n">PolicyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.policy_snippet_operations</span> <span class="k">import</span> <span class="n">PolicySnippetOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.sign_in_settings_operations</span> <span class="k">import</span> <span class="n">SignInSettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.sign_up_settings_operations</span> <span class="k">import</span> <span class="n">SignUpSettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.delegation_settings_operations</span> <span class="k">import</span> <span class="n">DelegationSettingsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.product_operations</span> <span class="k">import</span> <span class="n">ProductOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.product_api_operations</span> <span class="k">import</span> <span class="n">ProductApiOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.product_group_operations</span> <span class="k">import</span> <span class="n">ProductGroupOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.product_subscriptions_operations</span> <span class="k">import</span> <span class="n">ProductSubscriptionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.product_policy_operations</span> <span class="k">import</span> <span class="n">ProductPolicyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.property_operations</span> <span class="k">import</span> <span class="n">PropertyOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.quota_by_counter_keys_operations</span> <span class="k">import</span> <span class="n">QuotaByCounterKeysOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.quota_by_period_keys_operations</span> <span class="k">import</span> <span class="n">QuotaByPeriodKeysOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.region_operations</span> <span class="k">import</span> <span class="n">RegionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.reports_operations</span> <span class="k">import</span> <span class="n">ReportsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.subscription_operations</span> <span class="k">import</span> <span class="n">SubscriptionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.tag_resource_operations</span> <span class="k">import</span> <span class="n">TagResourceOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.tenant_access_operations</span> <span class="k">import</span> <span class="n">TenantAccessOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.tenant_access_git_operations</span> <span class="k">import</span> <span class="n">TenantAccessGitOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.tenant_configuration_operations</span> <span class="k">import</span> <span class="n">TenantConfigurationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.user_operations</span> <span class="k">import</span> <span class="n">UserOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.user_group_operations</span> <span class="k">import</span> <span class="n">UserGroupOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.user_subscription_operations</span> <span class="k">import</span> <span class="n">UserSubscriptionOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.user_identities_operations</span> <span class="k">import</span> <span class="n">UserIdentitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.user_confirmation_password_operations</span> <span class="k">import</span> <span class="n">UserConfirmationPasswordOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_export_operations</span> <span class="k">import</span> <span class="n">ApiExportOperations</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
+
+
+<span class="k">class</span> <span class="nc">ApiManagementClientConfiguration</span><span class="p">(</span><span class="n">AzureConfiguration</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Configuration for ApiManagementClient</span>
+<span class="sd">    Note that all parameters used to create this instance are saved as instance</span>
+<span class="sd">    attributes.</span>
+
+<span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
+<span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
+<span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: Subscription credentials which uniquely identify</span>
+<span class="sd">     Microsoft Azure subscription. The subscription ID forms part of the URI</span>
+<span class="sd">     for every service call.</span>
+<span class="sd">    :type subscription_id: str</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">credentials</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter &#39;credentials&#39; must not be None.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subscription_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter &#39;subscription_id&#39; must not be None.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">base_url</span><span class="p">:</span>
+            <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://management.azure.com&#39;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">ApiManagementClientConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s1">&#39;azure-mgmt-apimanagement/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">VERSION</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s1">&#39;Azure-SDK-For-Python&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="o">=</span> <span class="n">credentials</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span> <span class="o">=</span> <span class="n">subscription_id</span>
+
+
+<div class="viewcode-block" id="ApiManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.apimanagement.html#azure.mgmt.apimanagement.ApiManagementClient">[docs]</a><span class="k">class</span> <span class="nc">ApiManagementClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;ApiManagement Client</span>
+
+<span class="sd">    :ivar config: Configuration for client.</span>
+<span class="sd">    :vartype config: ApiManagementClientConfiguration</span>
+
+<span class="sd">    :ivar api: Api operations</span>
+<span class="sd">    :vartype api: azure.mgmt.apimanagement.operations.ApiOperations</span>
+<span class="sd">    :ivar api_revision: ApiRevision operations</span>
+<span class="sd">    :vartype api_revision: azure.mgmt.apimanagement.operations.ApiRevisionOperations</span>
+<span class="sd">    :ivar api_release: ApiRelease operations</span>
+<span class="sd">    :vartype api_release: azure.mgmt.apimanagement.operations.ApiReleaseOperations</span>
+<span class="sd">    :ivar api_operation: ApiOperation operations</span>
+<span class="sd">    :vartype api_operation: azure.mgmt.apimanagement.operations.ApiOperationOperations</span>
+<span class="sd">    :ivar api_operation_policy: ApiOperationPolicy operations</span>
+<span class="sd">    :vartype api_operation_policy: azure.mgmt.apimanagement.operations.ApiOperationPolicyOperations</span>
+<span class="sd">    :ivar tag: Tag operations</span>
+<span class="sd">    :vartype tag: azure.mgmt.apimanagement.operations.TagOperations</span>
+<span class="sd">    :ivar api_product: ApiProduct operations</span>
+<span class="sd">    :vartype api_product: azure.mgmt.apimanagement.operations.ApiProductOperations</span>
+<span class="sd">    :ivar api_policy: ApiPolicy operations</span>
+<span class="sd">    :vartype api_policy: azure.mgmt.apimanagement.operations.ApiPolicyOperations</span>
+<span class="sd">    :ivar api_schema: ApiSchema operations</span>
+<span class="sd">    :vartype api_schema: azure.mgmt.apimanagement.operations.ApiSchemaOperations</span>
+<span class="sd">    :ivar api_diagnostic: ApiDiagnostic operations</span>
+<span class="sd">    :vartype api_diagnostic: azure.mgmt.apimanagement.operations.ApiDiagnosticOperations</span>
+<span class="sd">    :ivar api_issue: ApiIssue operations</span>
+<span class="sd">    :vartype api_issue: azure.mgmt.apimanagement.operations.ApiIssueOperations</span>
+<span class="sd">    :ivar api_issue_comment: ApiIssueComment operations</span>
+<span class="sd">    :vartype api_issue_comment: azure.mgmt.apimanagement.operations.ApiIssueCommentOperations</span>
+<span class="sd">    :ivar api_issue_attachment: ApiIssueAttachment operations</span>
+<span class="sd">    :vartype api_issue_attachment: azure.mgmt.apimanagement.operations.ApiIssueAttachmentOperations</span>
+<span class="sd">    :ivar api_tag_description: ApiTagDescription operations</span>
+<span class="sd">    :vartype api_tag_description: azure.mgmt.apimanagement.operations.ApiTagDescriptionOperations</span>
+<span class="sd">    :ivar operation: Operation operations</span>
+<span class="sd">    :vartype operation: azure.mgmt.apimanagement.operations.OperationOperations</span>
+<span class="sd">    :ivar api_version_set: ApiVersionSet operations</span>
+<span class="sd">    :vartype api_version_set: azure.mgmt.apimanagement.operations.ApiVersionSetOperations</span>
+<span class="sd">    :ivar authorization_server: AuthorizationServer operations</span>
+<span class="sd">    :vartype authorization_server: azure.mgmt.apimanagement.operations.AuthorizationServerOperations</span>
+<span class="sd">    :ivar backend: Backend operations</span>
+<span class="sd">    :vartype backend: azure.mgmt.apimanagement.operations.BackendOperations</span>
+<span class="sd">    :ivar cache: Cache operations</span>
+<span class="sd">    :vartype cache: azure.mgmt.apimanagement.operations.CacheOperations</span>
+<span class="sd">    :ivar certificate: Certificate operations</span>
+<span class="sd">    :vartype certificate: azure.mgmt.apimanagement.operations.CertificateOperations</span>
+<span class="sd">    :ivar api_management_operations: ApiManagementOperations operations</span>
+<span class="sd">    :vartype api_management_operations: azure.mgmt.apimanagement.operations.ApiManagementOperations</span>
+<span class="sd">    :ivar api_management_service_skus: ApiManagementServiceSkus operations</span>
+<span class="sd">    :vartype api_management_service_skus: azure.mgmt.apimanagement.operations.ApiManagementServiceSkusOperations</span>
+<span class="sd">    :ivar api_management_service: ApiManagementService operations</span>
+<span class="sd">    :vartype api_management_service: azure.mgmt.apimanagement.operations.ApiManagementServiceOperations</span>
+<span class="sd">    :ivar diagnostic: Diagnostic operations</span>
+<span class="sd">    :vartype diagnostic: azure.mgmt.apimanagement.operations.DiagnosticOperations</span>
+<span class="sd">    :ivar email_template: EmailTemplate operations</span>
+<span class="sd">    :vartype email_template: azure.mgmt.apimanagement.operations.EmailTemplateOperations</span>
+<span class="sd">    :ivar group: Group operations</span>
+<span class="sd">    :vartype group: azure.mgmt.apimanagement.operations.GroupOperations</span>
+<span class="sd">    :ivar group_user: GroupUser operations</span>
+<span class="sd">    :vartype group_user: azure.mgmt.apimanagement.operations.GroupUserOperations</span>
+<span class="sd">    :ivar identity_provider: IdentityProvider operations</span>
+<span class="sd">    :vartype identity_provider: azure.mgmt.apimanagement.operations.IdentityProviderOperations</span>
+<span class="sd">    :ivar issue: Issue operations</span>
+<span class="sd">    :vartype issue: azure.mgmt.apimanagement.operations.IssueOperations</span>
+<span class="sd">    :ivar logger: Logger operations</span>
+<span class="sd">    :vartype logger: azure.mgmt.apimanagement.operations.LoggerOperations</span>
+<span class="sd">    :ivar network_status: NetworkStatus operations</span>
+<span class="sd">    :vartype network_status: azure.mgmt.apimanagement.operations.NetworkStatusOperations</span>
+<span class="sd">    :ivar notification: Notification operations</span>
+<span class="sd">    :vartype notification: azure.mgmt.apimanagement.operations.NotificationOperations</span>
+<span class="sd">    :ivar notification_recipient_user: NotificationRecipientUser operations</span>
+<span class="sd">    :vartype notification_recipient_user: azure.mgmt.apimanagement.operations.NotificationRecipientUserOperations</span>
+<span class="sd">    :ivar notification_recipient_email: NotificationRecipientEmail operations</span>
+<span class="sd">    :vartype notification_recipient_email: azure.mgmt.apimanagement.operations.NotificationRecipientEmailOperations</span>
+<span class="sd">    :ivar open_id_connect_provider: OpenIdConnectProvider operations</span>
+<span class="sd">    :vartype open_id_connect_provider: azure.mgmt.apimanagement.operations.OpenIdConnectProviderOperations</span>
+<span class="sd">    :ivar policy: Policy operations</span>
+<span class="sd">    :vartype policy: azure.mgmt.apimanagement.operations.PolicyOperations</span>
+<span class="sd">    :ivar policy_snippet: PolicySnippet operations</span>
+<span class="sd">    :vartype policy_snippet: azure.mgmt.apimanagement.operations.PolicySnippetOperations</span>
+<span class="sd">    :ivar sign_in_settings: SignInSettings operations</span>
+<span class="sd">    :vartype sign_in_settings: azure.mgmt.apimanagement.operations.SignInSettingsOperations</span>
+<span class="sd">    :ivar sign_up_settings: SignUpSettings operations</span>
+<span class="sd">    :vartype sign_up_settings: azure.mgmt.apimanagement.operations.SignUpSettingsOperations</span>
+<span class="sd">    :ivar delegation_settings: DelegationSettings operations</span>
+<span class="sd">    :vartype delegation_settings: azure.mgmt.apimanagement.operations.DelegationSettingsOperations</span>
+<span class="sd">    :ivar product: Product operations</span>
+<span class="sd">    :vartype product: azure.mgmt.apimanagement.operations.ProductOperations</span>
+<span class="sd">    :ivar product_api: ProductApi operations</span>
+<span class="sd">    :vartype product_api: azure.mgmt.apimanagement.operations.ProductApiOperations</span>
+<span class="sd">    :ivar product_group: ProductGroup operations</span>
+<span class="sd">    :vartype product_group: azure.mgmt.apimanagement.operations.ProductGroupOperations</span>
+<span class="sd">    :ivar product_subscriptions: ProductSubscriptions operations</span>
+<span class="sd">    :vartype product_subscriptions: azure.mgmt.apimanagement.operations.ProductSubscriptionsOperations</span>
+<span class="sd">    :ivar product_policy: ProductPolicy operations</span>
+<span class="sd">    :vartype product_policy: azure.mgmt.apimanagement.operations.ProductPolicyOperations</span>
+<span class="sd">    :ivar property: Property operations</span>
+<span class="sd">    :vartype property: azure.mgmt.apimanagement.operations.PropertyOperations</span>
+<span class="sd">    :ivar quota_by_counter_keys: QuotaByCounterKeys operations</span>
+<span class="sd">    :vartype quota_by_counter_keys: azure.mgmt.apimanagement.operations.QuotaByCounterKeysOperations</span>
+<span class="sd">    :ivar quota_by_period_keys: QuotaByPeriodKeys operations</span>
+<span class="sd">    :vartype quota_by_period_keys: azure.mgmt.apimanagement.operations.QuotaByPeriodKeysOperations</span>
+<span class="sd">    :ivar region: Region operations</span>
+<span class="sd">    :vartype region: azure.mgmt.apimanagement.operations.RegionOperations</span>
+<span class="sd">    :ivar reports: Reports operations</span>
+<span class="sd">    :vartype reports: azure.mgmt.apimanagement.operations.ReportsOperations</span>
+<span class="sd">    :ivar subscription: Subscription operations</span>
+<span class="sd">    :vartype subscription: azure.mgmt.apimanagement.operations.SubscriptionOperations</span>
+<span class="sd">    :ivar tag_resource: TagResource operations</span>
+<span class="sd">    :vartype tag_resource: azure.mgmt.apimanagement.operations.TagResourceOperations</span>
+<span class="sd">    :ivar tenant_access: TenantAccess operations</span>
+<span class="sd">    :vartype tenant_access: azure.mgmt.apimanagement.operations.TenantAccessOperations</span>
+<span class="sd">    :ivar tenant_access_git: TenantAccessGit operations</span>
+<span class="sd">    :vartype tenant_access_git: azure.mgmt.apimanagement.operations.TenantAccessGitOperations</span>
+<span class="sd">    :ivar tenant_configuration: TenantConfiguration operations</span>
+<span class="sd">    :vartype tenant_configuration: azure.mgmt.apimanagement.operations.TenantConfigurationOperations</span>
+<span class="sd">    :ivar user: User operations</span>
+<span class="sd">    :vartype user: azure.mgmt.apimanagement.operations.UserOperations</span>
+<span class="sd">    :ivar user_group: UserGroup operations</span>
+<span class="sd">    :vartype user_group: azure.mgmt.apimanagement.operations.UserGroupOperations</span>
+<span class="sd">    :ivar user_subscription: UserSubscription operations</span>
+<span class="sd">    :vartype user_subscription: azure.mgmt.apimanagement.operations.UserSubscriptionOperations</span>
+<span class="sd">    :ivar user_identities: UserIdentities operations</span>
+<span class="sd">    :vartype user_identities: azure.mgmt.apimanagement.operations.UserIdentitiesOperations</span>
+<span class="sd">    :ivar user_confirmation_password: UserConfirmationPassword operations</span>
+<span class="sd">    :vartype user_confirmation_password: azure.mgmt.apimanagement.operations.UserConfirmationPasswordOperations</span>
+<span class="sd">    :ivar api_export: ApiExport operations</span>
+<span class="sd">    :vartype api_export: azure.mgmt.apimanagement.operations.ApiExportOperations</span>
+
+<span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
+<span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
+<span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: Subscription credentials which uniquely identify</span>
+<span class="sd">     Microsoft Azure subscription. The subscription ID forms part of the URI</span>
+<span class="sd">     for every service call.</span>
+<span class="sd">    :type subscription_id: str</span>
+<span class="sd">    :param str base_url: Service URL</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ApiManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ApiManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+        <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2019-01-01&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">api</span> <span class="o">=</span> <span class="n">ApiOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_revision</span> <span class="o">=</span> <span class="n">ApiRevisionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_release</span> <span class="o">=</span> <span class="n">ApiReleaseOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_operation</span> <span class="o">=</span> <span class="n">ApiOperationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_operation_policy</span> <span class="o">=</span> <span class="n">ApiOperationPolicyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">TagOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_product</span> <span class="o">=</span> <span class="n">ApiProductOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_policy</span> <span class="o">=</span> <span class="n">ApiPolicyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_schema</span> <span class="o">=</span> <span class="n">ApiSchemaOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_diagnostic</span> <span class="o">=</span> <span class="n">ApiDiagnosticOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_issue</span> <span class="o">=</span> <span class="n">ApiIssueOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_issue_comment</span> <span class="o">=</span> <span class="n">ApiIssueCommentOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_issue_attachment</span> <span class="o">=</span> <span class="n">ApiIssueAttachmentOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_tag_description</span> <span class="o">=</span> <span class="n">ApiTagDescriptionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operation</span> <span class="o">=</span> <span class="n">OperationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version_set</span> <span class="o">=</span> <span class="n">ApiVersionSetOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">authorization_server</span> <span class="o">=</span> <span class="n">AuthorizationServerOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="n">BackendOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="n">CacheOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">certificate</span> <span class="o">=</span> <span class="n">CertificateOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_management_operations</span> <span class="o">=</span> <span class="n">ApiManagementOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_management_service_skus</span> <span class="o">=</span> <span class="n">ApiManagementServiceSkusOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_management_service</span> <span class="o">=</span> <span class="n">ApiManagementServiceOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diagnostic</span> <span class="o">=</span> <span class="n">DiagnosticOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email_template</span> <span class="o">=</span> <span class="n">EmailTemplateOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group</span> <span class="o">=</span> <span class="n">GroupOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_user</span> <span class="o">=</span> <span class="n">GroupUserOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identity_provider</span> <span class="o">=</span> <span class="n">IdentityProviderOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">issue</span> <span class="o">=</span> <span class="n">IssueOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">LoggerOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">network_status</span> <span class="o">=</span> <span class="n">NetworkStatusOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notification</span> <span class="o">=</span> <span class="n">NotificationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notification_recipient_user</span> <span class="o">=</span> <span class="n">NotificationRecipientUserOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notification_recipient_email</span> <span class="o">=</span> <span class="n">NotificationRecipientEmailOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_id_connect_provider</span> <span class="o">=</span> <span class="n">OpenIdConnectProviderOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy</span> <span class="o">=</span> <span class="n">PolicyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">policy_snippet</span> <span class="o">=</span> <span class="n">PolicySnippetOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sign_in_settings</span> <span class="o">=</span> <span class="n">SignInSettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sign_up_settings</span> <span class="o">=</span> <span class="n">SignUpSettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delegation_settings</span> <span class="o">=</span> <span class="n">DelegationSettingsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">ProductOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">product_api</span> <span class="o">=</span> <span class="n">ProductApiOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">product_group</span> <span class="o">=</span> <span class="n">ProductGroupOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">product_subscriptions</span> <span class="o">=</span> <span class="n">ProductSubscriptionsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">product_policy</span> <span class="o">=</span> <span class="n">ProductPolicyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">property</span> <span class="o">=</span> <span class="n">PropertyOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quota_by_counter_keys</span> <span class="o">=</span> <span class="n">QuotaByCounterKeysOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quota_by_period_keys</span> <span class="o">=</span> <span class="n">QuotaByPeriodKeysOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="n">RegionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reports</span> <span class="o">=</span> <span class="n">ReportsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription</span> <span class="o">=</span> <span class="n">SubscriptionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag_resource</span> <span class="o">=</span> <span class="n">TagResourceOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tenant_access</span> <span class="o">=</span> <span class="n">TenantAccessOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tenant_access_git</span> <span class="o">=</span> <span class="n">TenantAccessGitOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tenant_configuration</span> <span class="o">=</span> <span class="n">TenantConfigurationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">UserOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_group</span> <span class="o">=</span> <span class="n">UserGroupOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_subscription</span> <span class="o">=</span> <span class="n">UserSubscriptionOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_identities</span> <span class="o">=</span> <span class="n">UserIdentitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_confirmation_password</span> <span class="o">=</span> <span class="n">UserConfirmationPasswordOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_export</span> <span class="o">=</span> <span class="n">ApiExportOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

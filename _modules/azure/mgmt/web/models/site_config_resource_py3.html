@@ -1,0 +1,618 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.web.models.site_config_resource_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.web.models.site_config_resource_py3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.web.models.site_config_resource_py3</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">.proxy_only_resource_py3</span> <span class="k">import</span> <span class="n">ProxyOnlyResource</span>
+
+
+<div class="viewcode-block" id="SiteConfigResource"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.web.models.html#azure.mgmt.web.models.SiteConfigResource">[docs]</a><span class="k">class</span> <span class="nc">SiteConfigResource</span><span class="p">(</span><span class="n">ProxyOnlyResource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Web app configuration ARM resource.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar id: Resource Id.</span>
+<span class="sd">    :vartype id: str</span>
+<span class="sd">    :ivar name: Resource Name.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :param kind: Kind of resource.</span>
+<span class="sd">    :type kind: str</span>
+<span class="sd">    :ivar type: Resource type.</span>
+<span class="sd">    :vartype type: str</span>
+<span class="sd">    :param number_of_workers: Number of workers.</span>
+<span class="sd">    :type number_of_workers: int</span>
+<span class="sd">    :param default_documents: Default documents.</span>
+<span class="sd">    :type default_documents: list[str]</span>
+<span class="sd">    :param net_framework_version: .NET Framework version. Default value:</span>
+<span class="sd">     &quot;v4.6&quot; .</span>
+<span class="sd">    :type net_framework_version: str</span>
+<span class="sd">    :param php_version: Version of PHP.</span>
+<span class="sd">    :type php_version: str</span>
+<span class="sd">    :param python_version: Version of Python.</span>
+<span class="sd">    :type python_version: str</span>
+<span class="sd">    :param node_version: Version of Node.js.</span>
+<span class="sd">    :type node_version: str</span>
+<span class="sd">    :param linux_fx_version: Linux App Framework and version</span>
+<span class="sd">    :type linux_fx_version: str</span>
+<span class="sd">    :param windows_fx_version: Xenon App Framework and version</span>
+<span class="sd">    :type windows_fx_version: str</span>
+<span class="sd">    :param request_tracing_enabled: &lt;code&gt;true&lt;/code&gt; if request tracing is</span>
+<span class="sd">     enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type request_tracing_enabled: bool</span>
+<span class="sd">    :param request_tracing_expiration_time: Request tracing expiration time.</span>
+<span class="sd">    :type request_tracing_expiration_time: datetime</span>
+<span class="sd">    :param remote_debugging_enabled: &lt;code&gt;true&lt;/code&gt; if remote debugging is</span>
+<span class="sd">     enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type remote_debugging_enabled: bool</span>
+<span class="sd">    :param remote_debugging_version: Remote debugging version.</span>
+<span class="sd">    :type remote_debugging_version: str</span>
+<span class="sd">    :param http_logging_enabled: &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled;</span>
+<span class="sd">     otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type http_logging_enabled: bool</span>
+<span class="sd">    :param logs_directory_size_limit: HTTP logs directory size limit.</span>
+<span class="sd">    :type logs_directory_size_limit: int</span>
+<span class="sd">    :param detailed_error_logging_enabled: &lt;code&gt;true&lt;/code&gt; if detailed error</span>
+<span class="sd">     logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type detailed_error_logging_enabled: bool</span>
+<span class="sd">    :param publishing_username: Publishing user name.</span>
+<span class="sd">    :type publishing_username: str</span>
+<span class="sd">    :param app_settings: Application settings.</span>
+<span class="sd">    :type app_settings: list[~azure.mgmt.web.models.NameValuePair]</span>
+<span class="sd">    :param azure_storage_accounts: User-provided Azure storage accounts.</span>
+<span class="sd">    :type azure_storage_accounts: dict[str,</span>
+<span class="sd">     ~azure.mgmt.web.models.AzureStorageInfoValue]</span>
+<span class="sd">    :param connection_strings: Connection strings.</span>
+<span class="sd">    :type connection_strings: list[~azure.mgmt.web.models.ConnStringInfo]</span>
+<span class="sd">    :ivar machine_key: Site MachineKey.</span>
+<span class="sd">    :vartype machine_key: ~azure.mgmt.web.models.SiteMachineKey</span>
+<span class="sd">    :param handler_mappings: Handler mappings.</span>
+<span class="sd">    :type handler_mappings: list[~azure.mgmt.web.models.HandlerMapping]</span>
+<span class="sd">    :param document_root: Document root.</span>
+<span class="sd">    :type document_root: str</span>
+<span class="sd">    :param scm_type: SCM type. Possible values include: &#39;None&#39;, &#39;Dropbox&#39;,</span>
+<span class="sd">     &#39;Tfs&#39;, &#39;LocalGit&#39;, &#39;GitHub&#39;, &#39;CodePlexGit&#39;, &#39;CodePlexHg&#39;, &#39;BitbucketGit&#39;,</span>
+<span class="sd">     &#39;BitbucketHg&#39;, &#39;ExternalGit&#39;, &#39;ExternalHg&#39;, &#39;OneDrive&#39;, &#39;VSO&#39;</span>
+<span class="sd">    :type scm_type: str or ~azure.mgmt.web.models.ScmType</span>
+<span class="sd">    :param use32_bit_worker_process: &lt;code&gt;true&lt;/code&gt; to use 32-bit worker</span>
+<span class="sd">     process; otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type use32_bit_worker_process: bool</span>
+<span class="sd">    :param web_sockets_enabled: &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled;</span>
+<span class="sd">     otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type web_sockets_enabled: bool</span>
+<span class="sd">    :param always_on: &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise,</span>
+<span class="sd">     &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type always_on: bool</span>
+<span class="sd">    :param java_version: Java version.</span>
+<span class="sd">    :type java_version: str</span>
+<span class="sd">    :param java_container: Java container.</span>
+<span class="sd">    :type java_container: str</span>
+<span class="sd">    :param java_container_version: Java container version.</span>
+<span class="sd">    :type java_container_version: str</span>
+<span class="sd">    :param app_command_line: App command line to launch.</span>
+<span class="sd">    :type app_command_line: str</span>
+<span class="sd">    :param managed_pipeline_mode: Managed pipeline mode. Possible values</span>
+<span class="sd">     include: &#39;Integrated&#39;, &#39;Classic&#39;</span>
+<span class="sd">    :type managed_pipeline_mode: str or</span>
+<span class="sd">     ~azure.mgmt.web.models.ManagedPipelineMode</span>
+<span class="sd">    :param virtual_applications: Virtual applications.</span>
+<span class="sd">    :type virtual_applications:</span>
+<span class="sd">     list[~azure.mgmt.web.models.VirtualApplication]</span>
+<span class="sd">    :param load_balancing: Site load balancing. Possible values include:</span>
+<span class="sd">     &#39;WeightedRoundRobin&#39;, &#39;LeastRequests&#39;, &#39;LeastResponseTime&#39;,</span>
+<span class="sd">     &#39;WeightedTotalTraffic&#39;, &#39;RequestHash&#39;</span>
+<span class="sd">    :type load_balancing: str or ~azure.mgmt.web.models.SiteLoadBalancing</span>
+<span class="sd">    :param experiments: This is work around for polymorphic types.</span>
+<span class="sd">    :type experiments: ~azure.mgmt.web.models.Experiments</span>
+<span class="sd">    :param limits: Site limits.</span>
+<span class="sd">    :type limits: ~azure.mgmt.web.models.SiteLimits</span>
+<span class="sd">    :param auto_heal_enabled: &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled;</span>
+<span class="sd">     otherwise, &lt;code&gt;false&lt;/code&gt;.</span>
+<span class="sd">    :type auto_heal_enabled: bool</span>
+<span class="sd">    :param auto_heal_rules: Auto Heal rules.</span>
+<span class="sd">    :type auto_heal_rules: ~azure.mgmt.web.models.AutoHealRules</span>
+<span class="sd">    :param tracing_options: Tracing options.</span>
+<span class="sd">    :type tracing_options: str</span>
+<span class="sd">    :param vnet_name: Virtual Network name.</span>
+<span class="sd">    :type vnet_name: str</span>
+<span class="sd">    :param cors: Cross-Origin Resource Sharing (CORS) settings.</span>
+<span class="sd">    :type cors: ~azure.mgmt.web.models.CorsSettings</span>
+<span class="sd">    :param push: Push endpoint settings.</span>
+<span class="sd">    :type push: ~azure.mgmt.web.models.PushSettings</span>
+<span class="sd">    :param api_definition: Information about the formal API definition for the</span>
+<span class="sd">     app.</span>
+<span class="sd">    :type api_definition: ~azure.mgmt.web.models.ApiDefinitionInfo</span>
+<span class="sd">    :param auto_swap_slot_name: Auto-swap slot name.</span>
+<span class="sd">    :type auto_swap_slot_name: str</span>
+<span class="sd">    :param local_my_sql_enabled: &lt;code&gt;true&lt;/code&gt; to enable local MySQL;</span>
+<span class="sd">     otherwise, &lt;code&gt;false&lt;/code&gt;. Default value: False .</span>
+<span class="sd">    :type local_my_sql_enabled: bool</span>
+<span class="sd">    :param managed_service_identity_id: Managed Service Identity Id</span>
+<span class="sd">    :type managed_service_identity_id: int</span>
+<span class="sd">    :param x_managed_service_identity_id: Explicit Managed Service Identity Id</span>
+<span class="sd">    :type x_managed_service_identity_id: int</span>
+<span class="sd">    :param ip_security_restrictions: IP security restrictions for main.</span>
+<span class="sd">    :type ip_security_restrictions:</span>
+<span class="sd">     list[~azure.mgmt.web.models.IpSecurityRestriction]</span>
+<span class="sd">    :param scm_ip_security_restrictions: IP security restrictions for scm.</span>
+<span class="sd">    :type scm_ip_security_restrictions:</span>
+<span class="sd">     list[~azure.mgmt.web.models.IpSecurityRestriction]</span>
+<span class="sd">    :param scm_ip_security_restrictions_use_main: IP security restrictions for</span>
+<span class="sd">     scm to use main.</span>
+<span class="sd">    :type scm_ip_security_restrictions_use_main: bool</span>
+<span class="sd">    :param http20_enabled: Http20Enabled: configures a web site to allow</span>
+<span class="sd">     clients to connect over http2.0. Default value: True .</span>
+<span class="sd">    :type http20_enabled: bool</span>
+<span class="sd">    :param min_tls_version: MinTlsVersion: configures the minimum version of</span>
+<span class="sd">     TLS required for SSL requests. Possible values include: &#39;1.0&#39;, &#39;1.1&#39;,</span>
+<span class="sd">     &#39;1.2&#39;</span>
+<span class="sd">    :type min_tls_version: str or ~azure.mgmt.web.models.SupportedTlsVersions</span>
+<span class="sd">    :param ftps_state: State of FTP / FTPS service. Possible values include:</span>
+<span class="sd">     &#39;AllAllowed&#39;, &#39;FtpsOnly&#39;, &#39;Disabled&#39;</span>
+<span class="sd">    :type ftps_state: str or ~azure.mgmt.web.models.FtpsState</span>
+<span class="sd">    :param reserved_instance_count: Number of reserved instances.</span>
+<span class="sd">     This setting only applies to the Consumption Plan</span>
+<span class="sd">    :type reserved_instance_count: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;machine_key&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;reserved_instance_count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;kind&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;number_of_workers&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.numberOfWorkers&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;default_documents&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.defaultDocuments&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;net_framework_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.netFrameworkVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;php_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.phpVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;python_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.pythonVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;node_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.nodeVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;linux_fx_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.linuxFxVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;windows_fx_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.windowsFxVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_tracing_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.requestTracingEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;request_tracing_expiration_time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.requestTracingExpirationTime&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;iso-8601&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;remote_debugging_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.remoteDebuggingEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;remote_debugging_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.remoteDebuggingVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;http_logging_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.httpLoggingEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;logs_directory_size_limit&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.logsDirectorySizeLimit&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;detailed_error_logging_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.detailedErrorLoggingEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;publishing_username&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.publishingUsername&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;app_settings&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.appSettings&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[NameValuePair]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;azure_storage_accounts&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.azureStorageAccounts&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{AzureStorageInfoValue}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;connection_strings&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.connectionStrings&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ConnStringInfo]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;machine_key&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.machineKey&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SiteMachineKey&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;handler_mappings&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.handlerMappings&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[HandlerMapping]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;document_root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.documentRoot&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;scm_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.scmType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;use32_bit_worker_process&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.use32BitWorkerProcess&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;web_sockets_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.webSocketsEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;always_on&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.alwaysOn&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;java_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.javaVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;java_container&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.javaContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;java_container_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.javaContainerVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;app_command_line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.appCommandLine&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;managed_pipeline_mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.managedPipelineMode&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ManagedPipelineMode&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;virtual_applications&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.virtualApplications&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[VirtualApplication]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;load_balancing&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.loadBalancing&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SiteLoadBalancing&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;experiments&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.experiments&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Experiments&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;limits&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.limits&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SiteLimits&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;auto_heal_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.autoHealEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;auto_heal_rules&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.autoHealRules&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoHealRules&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tracing_options&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.tracingOptions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;vnet_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.vnetName&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;cors&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.cors&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CorsSettings&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;push&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.push&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;PushSettings&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;api_definition&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.apiDefinition&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ApiDefinitionInfo&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;auto_swap_slot_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.autoSwapSlotName&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;local_my_sql_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.localMySqlEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;managed_service_identity_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.managedServiceIdentityId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;x_managed_service_identity_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.xManagedServiceIdentityId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;ip_security_restrictions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.ipSecurityRestrictions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[IpSecurityRestriction]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;scm_ip_security_restrictions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.scmIpSecurityRestrictions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[IpSecurityRestriction]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;scm_ip_security_restrictions_use_main&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.scmIpSecurityRestrictionsUseMain&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;http20_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.http20Enabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;min_tls_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.minTlsVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;ftps_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.ftpsState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;reserved_instance_count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reservedInstanceCount&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">number_of_workers</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_documents</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">net_framework_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&quot;v4.6&quot;</span><span class="p">,</span> <span class="n">php_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">python_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">node_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">linux_fx_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">windows_fx_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_tracing_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">request_tracing_expiration_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remote_debugging_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remote_debugging_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">http_logging_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logs_directory_size_limit</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">detailed_error_logging_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">publishing_username</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">app_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">azure_storage_accounts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">connection_strings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">handler_mappings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">document_root</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scm_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use32_bit_worker_process</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">web_sockets_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">always_on</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">java_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">java_container</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">java_container_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">app_command_line</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">managed_pipeline_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">virtual_applications</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">load_balancing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">experiments</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_heal_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_heal_rules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tracing_options</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vnet_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">push</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">api_definition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_swap_slot_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">local_my_sql_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">managed_service_identity_id</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_managed_service_identity_id</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ip_security_restrictions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scm_ip_security_restrictions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scm_ip_security_restrictions_use_main</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">http20_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_tls_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ftps_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reserved_instance_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SiteConfigResource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_workers</span> <span class="o">=</span> <span class="n">number_of_workers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_documents</span> <span class="o">=</span> <span class="n">default_documents</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_framework_version</span> <span class="o">=</span> <span class="n">net_framework_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">php_version</span> <span class="o">=</span> <span class="n">php_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">python_version</span> <span class="o">=</span> <span class="n">python_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_version</span> <span class="o">=</span> <span class="n">node_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linux_fx_version</span> <span class="o">=</span> <span class="n">linux_fx_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">windows_fx_version</span> <span class="o">=</span> <span class="n">windows_fx_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_tracing_enabled</span> <span class="o">=</span> <span class="n">request_tracing_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_tracing_expiration_time</span> <span class="o">=</span> <span class="n">request_tracing_expiration_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">remote_debugging_enabled</span> <span class="o">=</span> <span class="n">remote_debugging_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">remote_debugging_version</span> <span class="o">=</span> <span class="n">remote_debugging_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">http_logging_enabled</span> <span class="o">=</span> <span class="n">http_logging_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logs_directory_size_limit</span> <span class="o">=</span> <span class="n">logs_directory_size_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detailed_error_logging_enabled</span> <span class="o">=</span> <span class="n">detailed_error_logging_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publishing_username</span> <span class="o">=</span> <span class="n">publishing_username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app_settings</span> <span class="o">=</span> <span class="n">app_settings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">azure_storage_accounts</span> <span class="o">=</span> <span class="n">azure_storage_accounts</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection_strings</span> <span class="o">=</span> <span class="n">connection_strings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">handler_mappings</span> <span class="o">=</span> <span class="n">handler_mappings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">document_root</span> <span class="o">=</span> <span class="n">document_root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scm_type</span> <span class="o">=</span> <span class="n">scm_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use32_bit_worker_process</span> <span class="o">=</span> <span class="n">use32_bit_worker_process</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">web_sockets_enabled</span> <span class="o">=</span> <span class="n">web_sockets_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">always_on</span> <span class="o">=</span> <span class="n">always_on</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">java_version</span> <span class="o">=</span> <span class="n">java_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">java_container</span> <span class="o">=</span> <span class="n">java_container</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">java_container_version</span> <span class="o">=</span> <span class="n">java_container_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app_command_line</span> <span class="o">=</span> <span class="n">app_command_line</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_pipeline_mode</span> <span class="o">=</span> <span class="n">managed_pipeline_mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">virtual_applications</span> <span class="o">=</span> <span class="n">virtual_applications</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_balancing</span> <span class="o">=</span> <span class="n">load_balancing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experiments</span> <span class="o">=</span> <span class="n">experiments</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">limits</span> <span class="o">=</span> <span class="n">limits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_heal_enabled</span> <span class="o">=</span> <span class="n">auto_heal_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_heal_rules</span> <span class="o">=</span> <span class="n">auto_heal_rules</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tracing_options</span> <span class="o">=</span> <span class="n">tracing_options</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vnet_name</span> <span class="o">=</span> <span class="n">vnet_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cors</span> <span class="o">=</span> <span class="n">cors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">push</span> <span class="o">=</span> <span class="n">push</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_definition</span> <span class="o">=</span> <span class="n">api_definition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_swap_slot_name</span> <span class="o">=</span> <span class="n">auto_swap_slot_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">local_my_sql_enabled</span> <span class="o">=</span> <span class="n">local_my_sql_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">managed_service_identity_id</span> <span class="o">=</span> <span class="n">managed_service_identity_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x_managed_service_identity_id</span> <span class="o">=</span> <span class="n">x_managed_service_identity_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ip_security_restrictions</span> <span class="o">=</span> <span class="n">ip_security_restrictions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scm_ip_security_restrictions</span> <span class="o">=</span> <span class="n">scm_ip_security_restrictions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scm_ip_security_restrictions_use_main</span> <span class="o">=</span> <span class="n">scm_ip_security_restrictions_use_main</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">http20_enabled</span> <span class="o">=</span> <span class="n">http20_enabled</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_tls_version</span> <span class="o">=</span> <span class="n">min_tls_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ftps_state</span> <span class="o">=</span> <span class="n">ftps_state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reserved_instance_count</span> <span class="o">=</span> <span class="n">reserved_instance_count</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

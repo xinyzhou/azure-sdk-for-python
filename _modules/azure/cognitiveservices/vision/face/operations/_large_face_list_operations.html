@@ -1,0 +1,1296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.cognitiveservices.vision.face.operations._large_face_list_operations &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.extensions.html">azure.eventhub.extensions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.cognitiveservices.vision.face.operations._large_face_list_operations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.cognitiveservices.vision.face.operations._large_face_list_operations</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">msrest.pipeline</span> <span class="k">import</span> <span class="n">ClientRawResponse</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">models</span>
+
+
+<div class="viewcode-block" id="LargeFaceListOperations"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations">[docs]</a><span class="k">class</span> <span class="nc">LargeFaceListOperations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;LargeFaceListOperations operations.</span>
+
+<span class="sd">    You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</span>
+
+<span class="sd">    :param client: Client for service requests.</span>
+<span class="sd">    :param config: Configuration of service client.</span>
+<span class="sd">    :param serializer: An object model serializer.</span>
+<span class="sd">    :param deserializer: An object model deserializer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">serializer</span><span class="p">,</span> <span class="n">deserializer</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">serializer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">deserializer</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.create"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recognition_model</span><span class="o">=</span><span class="s2">&quot;recognition_01&quot;</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create an empty large face list with user-specified largeFaceListId,</span>
+<span class="sd">        name, an optional userData and recognitionModel.</span>
+<span class="sd">        &lt;br /&gt; Large face list is a list of faces, up to 1,000,000 faces, and</span>
+<span class="sd">        used by [Face - Find</span>
+<span class="sd">        Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span>
+<span class="sd">        &lt;br /&gt; After creation, user should use [LargeFaceList Face -</span>
+<span class="sd">        Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)</span>
+<span class="sd">        to import the faces and [LargeFaceList -</span>
+<span class="sd">        Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)</span>
+<span class="sd">        to make it ready for [Face - Find</span>
+<span class="sd">        Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span>
+<span class="sd">        No image will be stored. Only the extracted face features are stored on</span>
+<span class="sd">        server until [LargeFaceList -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Find Similar is used for scenario like finding celebrity-like</span>
+<span class="sd">        faces, similar face filtering, or as a light way face identification.</span>
+<span class="sd">        But if the actual use is to identify person, please use</span>
+<span class="sd">        [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)</span>
+<span class="sd">        /</span>
+<span class="sd">        [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)</span>
+<span class="sd">        and [Face -</span>
+<span class="sd">        Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span>
+<span class="sd">        &lt;br/&gt;&#39;recognitionModel&#39; should be specified to associate with this</span>
+<span class="sd">        large face list. The default value for &#39;recognitionModel&#39; is</span>
+<span class="sd">        &#39;recognition_01&#39;, if the latest model needed, please explicitly specify</span>
+<span class="sd">        the model you need in this parameter. New faces that are added to an</span>
+<span class="sd">        existing large face list will use the recognition model that&#39;s already</span>
+<span class="sd">        associated with the collection. Existing face features in a large face</span>
+<span class="sd">        list can&#39;t be updated to features extracted by another version of</span>
+<span class="sd">        recognition model.</span>
+<span class="sd">        * &#39;recognition_01&#39;: The default recognition model for [LargeFaceList-</span>
+<span class="sd">        Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc).</span>
+<span class="sd">        All those large face lists created before 2019 March are bonded with</span>
+<span class="sd">        this recognition model.</span>
+<span class="sd">        * &#39;recognition_02&#39;: Recognition model released in 2019 March.</span>
+<span class="sd">        &#39;recognition_02&#39; is recommended since its overall accuracy is improved</span>
+<span class="sd">        compared with &#39;recognition_01&#39;.</span>
+<span class="sd">        Large face list quota:</span>
+<span class="sd">        * Free-tier subscription quota: 64 large face lists.</span>
+<span class="sd">        * S0-tier subscription quota: 1,000,000 large face lists.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param name: User defined name, maximum length is 128.</span>
+<span class="sd">        :type name: str</span>
+<span class="sd">        :param user_data: User specified data. Length should not exceed 16KB.</span>
+<span class="sd">        :type user_data: str</span>
+<span class="sd">        :param recognition_model: Possible values include: &#39;recognition_01&#39;,</span>
+<span class="sd">         &#39;recognition_02&#39;</span>
+<span class="sd">        :type recognition_model: str or</span>
+<span class="sd">         ~azure.cognitiveservices.vision.face.models.RecognitionModel</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">MetaDataContract</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="n">user_data</span><span class="p">,</span> <span class="n">recognition_model</span><span class="o">=</span><span class="n">recognition_model</span><span class="p">)</span>
+
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct body</span>
+        <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;MetaDataContract&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">create</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.get"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">return_recognition_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Retrieve a large face list’s largeFaceListId, name, userData and</span>
+<span class="sd">        recognitionModel.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param return_recognition_model: A value indicating whether the</span>
+<span class="sd">         operation should return &#39;recognitionModel&#39; in response.</span>
+<span class="sd">        :type return_recognition_model: bool</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: LargeFaceList or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.vision.face.models.LargeFaceList or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">return_recognition_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;returnRecognitionModel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;return_recognition_model&quot;</span><span class="p">,</span> <span class="n">return_recognition_model</span><span class="p">,</span> <span class="s1">&#39;bool&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;LargeFaceList&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">get</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.update"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update information of a large face list.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param name: User defined name, maximum length is 128.</span>
+<span class="sd">        :type name: str</span>
+<span class="sd">        :param user_data: User specified data. Length should not exceed 16KB.</span>
+<span class="sd">        :type user_data: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">NameAndUserDataContract</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="n">user_data</span><span class="p">)</span>
+
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct body</span>
+        <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;NameAndUserDataContract&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">update</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.delete"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a specified large face list.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">delete</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.get_training_status"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_training_status">[docs]</a>    <span class="k">def</span> <span class="nf">get_training_status</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Retrieve the training status of a large face list (completed or</span>
+<span class="sd">        ongoing).</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: TrainingStatus or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.vision.face.models.TrainingStatus or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_training_status</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;TrainingStatus&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">get_training_status</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/training&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.list"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">return_recognition_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List large face lists’ information of largeFaceListId, name, userData</span>
+<span class="sd">        and recognitionModel. &lt;br /&gt;</span>
+<span class="sd">        To get face information inside largeFaceList use [LargeFaceList Face -</span>
+<span class="sd">        Get](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)&lt;br</span>
+<span class="sd">        /&gt;</span>
+<span class="sd">        * Large face lists are stored in alphabetical order of largeFaceListId.</span>
+<span class="sd">        * &quot;start&quot; parameter (string, optional) is a user-provided</span>
+<span class="sd">        largeFaceListId value that returned entries have larger ids by string</span>
+<span class="sd">        comparison. &quot;start&quot; set to empty to indicate return from the first</span>
+<span class="sd">        item.</span>
+<span class="sd">        * &quot;top&quot; parameter (int, optional) specifies the number of entries to</span>
+<span class="sd">        return. A maximal of 1000 entries can be returned in one call. To fetch</span>
+<span class="sd">        more, you can specify &quot;start&quot; with the last returned entry’s Id of the</span>
+<span class="sd">        current call.</span>
+<span class="sd">        &lt;br /&gt;</span>
+<span class="sd">        For example, total 5 large person lists: &quot;list1&quot;, ..., &quot;list5&quot;.</span>
+<span class="sd">        &lt;br /&gt; &quot;start=&amp;top=&quot; will return all 5 lists.</span>
+<span class="sd">        &lt;br /&gt; &quot;start=&amp;top=2&quot; will return &quot;list1&quot;, &quot;list2&quot;.</span>
+<span class="sd">        &lt;br /&gt; &quot;start=list2&amp;top=3&quot; will return &quot;list3&quot;, &quot;list4&quot;, &quot;list5&quot;.</span>
+<span class="sd">        .</span>
+
+<span class="sd">        :param return_recognition_model: A value indicating whether the</span>
+<span class="sd">         operation should return &#39;recognitionModel&#39; in response.</span>
+<span class="sd">        :type return_recognition_model: bool</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: list or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">         list[~azure.cognitiveservices.vision.face.models.LargeFaceList] or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">return_recognition_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;returnRecognitionModel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;return_recognition_model&quot;</span><span class="p">,</span> <span class="n">return_recognition_model</span><span class="p">,</span> <span class="s1">&#39;bool&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;[LargeFaceList]&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="nb">list</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.train"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.train">[docs]</a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Queue a large face list training task, the training task may not be</span>
+<span class="sd">        started immediately.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">train</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/train&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.delete_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete_face">[docs]</a>    <span class="k">def</span> <span class="nf">delete_face</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete a face from a large face list by specified largeFaceListId and</span>
+<span class="sd">        persistedFaceId.</span>
+<span class="sd">        &lt;br /&gt; Adding/deleting faces to/from a same large face list are</span>
+<span class="sd">        processed sequentially and to/from different large face lists are in</span>
+<span class="sd">        parallel.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param persisted_face_id: Id referencing a particular persistedFaceId</span>
+<span class="sd">         of an existing face.</span>
+<span class="sd">        :type persisted_face_id: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete_face</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;persistedFaceId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;persisted_face_id&quot;</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">delete_face</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces/</span><span class="si">{persistedFaceId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.get_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_face">[docs]</a>    <span class="k">def</span> <span class="nf">get_face</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Retrieve information about a persisted face (specified by</span>
+<span class="sd">        persistedFaceId and its belonging largeFaceListId).</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param persisted_face_id: Id referencing a particular persistedFaceId</span>
+<span class="sd">         of an existing face.</span>
+<span class="sd">        :type persisted_face_id: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: PersistedFace or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.vision.face.models.PersistedFace or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_face</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;persistedFaceId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;persisted_face_id&quot;</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;PersistedFace&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">get_face</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces/</span><span class="si">{persistedFaceId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.update_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update_face">[docs]</a>    <span class="k">def</span> <span class="nf">update_face</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update a persisted face&#39;s userData field.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param persisted_face_id: Id referencing a particular persistedFaceId</span>
+<span class="sd">         of an existing face.</span>
+<span class="sd">        :type persisted_face_id: str</span>
+<span class="sd">        :param user_data: User-provided data attached to the face. The size</span>
+<span class="sd">         limit is 1KB.</span>
+<span class="sd">        :type user_data: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: None or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: None or ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UpdateFaceRequest</span><span class="p">(</span><span class="n">user_data</span><span class="o">=</span><span class="n">user_data</span><span class="p">)</span>
+
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_face</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;persistedFaceId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;persisted_face_id&quot;</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct body</span>
+        <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;UpdateFaceRequest&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span></div>
+    <span class="n">update_face</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces/</span><span class="si">{persistedFaceId}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.add_face_from_url"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_url">[docs]</a>    <span class="k">def</span> <span class="nf">add_face_from_url</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_face</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">detection_model</span><span class="o">=</span><span class="s2">&quot;detection_01&quot;</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a face to a specified large face list, up to 1,000,000 faces.</span>
+<span class="sd">        &lt;br /&gt; To deal with an image contains multiple faces, input face can be</span>
+<span class="sd">        specified as an image with a targetFace rectangle. It returns a</span>
+<span class="sd">        persistedFaceId representing the added face. No image will be stored.</span>
+<span class="sd">        Only the extracted face feature will be stored on server until</span>
+<span class="sd">        [LargeFaceList Face -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)</span>
+<span class="sd">        or [LargeFaceList -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Note persistedFaceId is different from faceId generated by [Face</span>
+<span class="sd">        -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span>
+<span class="sd">        * Higher face image quality means better recognition precision. Please</span>
+<span class="sd">        consider high-quality faces: frontal, clear, and face size is 200x200</span>
+<span class="sd">        pixels (100 pixels between eyes) or bigger.</span>
+<span class="sd">        * JPEG, PNG, GIF (the first frame), and BMP format are supported. The</span>
+<span class="sd">        allowed image file size is from 1KB to 6MB.</span>
+<span class="sd">        * &quot;targetFace&quot; rectangle should contain one face. Zero or multiple</span>
+<span class="sd">        faces will be regarded as an error. If the provided &quot;targetFace&quot;</span>
+<span class="sd">        rectangle is not returned from [Face -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236),</span>
+<span class="sd">        there’s no guarantee to detect and add the face successfully.</span>
+<span class="sd">        * Out of detectable face size (36x36 - 4096x4096 pixels), large</span>
+<span class="sd">        head-pose, or large occlusions will cause failures.</span>
+<span class="sd">        * Adding/deleting faces to/from a same face list are processed</span>
+<span class="sd">        sequentially and to/from different face lists are in parallel.</span>
+<span class="sd">        * The minimum detectable face size is 36x36 pixels in an image no</span>
+<span class="sd">        larger than 1920x1080 pixels. Images with dimensions higher than</span>
+<span class="sd">        1920x1080 pixels will need a proportionally larger minimum face size.</span>
+<span class="sd">        * Different &#39;detectionModel&#39; values can be provided. To use and compare</span>
+<span class="sd">        different detection models, please refer to [How to specify a detection</span>
+<span class="sd">        model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span>
+<span class="sd">        | Model | Recommended use-case(s) |</span>
+<span class="sd">        | ---------- | -------- |</span>
+<span class="sd">        | &#39;detection_01&#39;: | The default detection model for [LargeFaceList -</span>
+<span class="sd">        Add</span>
+<span class="sd">        Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span>
+<span class="sd">        Recommend for near frontal face detection. For scenarios with</span>
+<span class="sd">        exceptionally large angle (head-pose) faces, occluded faces or wrong</span>
+<span class="sd">        image orientation, the faces in such cases may not be detected. |</span>
+<span class="sd">        | &#39;detection_02&#39;: | Detection model released in 2019 May with improved</span>
+<span class="sd">        accuracy especially on small, side and blurry faces. |</span>
+<span class="sd">        Quota:</span>
+<span class="sd">        * Free-tier subscription quota: 1,000 faces per large face list.</span>
+<span class="sd">        * S0-tier subscription quota: 1,000,000 faces per large face list.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param url: Publicly reachable URL of an image</span>
+<span class="sd">        :type url: str</span>
+<span class="sd">        :param user_data: User-specified data about the face for any purpose.</span>
+<span class="sd">         The maximum length is 1KB.</span>
+<span class="sd">        :type user_data: str</span>
+<span class="sd">        :param target_face: A face rectangle to specify the target face to be</span>
+<span class="sd">         added to a person in the format of &quot;targetFace=left,top,width,height&quot;.</span>
+<span class="sd">         E.g. &quot;targetFace=10,10,100,100&quot;. If there is more than one face in the</span>
+<span class="sd">         image, targetFace is required to specify which face to add. No</span>
+<span class="sd">         targetFace means there is only one face detected in the entire image.</span>
+<span class="sd">        :type target_face: list[int]</span>
+<span class="sd">        :param detection_model: Name of detection model. Detection model is</span>
+<span class="sd">         used to detect faces in the submitted image. A detection model name</span>
+<span class="sd">         can be provided when performing Face - Detect or (Large)FaceList - Add</span>
+<span class="sd">         Face or (Large)PersonGroup - Add Face. The default value is</span>
+<span class="sd">         &#39;detection_01&#39;, if another model is needed, please explicitly specify</span>
+<span class="sd">         it. Possible values include: &#39;detection_01&#39;, &#39;detection_02&#39;</span>
+<span class="sd">        :type detection_model: str or</span>
+<span class="sd">         ~azure.cognitiveservices.vision.face.models.DetectionModel</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: PersistedFace or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.vision.face.models.PersistedFace or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">image_url</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageUrl</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_face_from_url</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">user_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;userData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;user_data&quot;</span><span class="p">,</span> <span class="n">user_data</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_face</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;targetFace&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;target_face&quot;</span><span class="p">,</span> <span class="n">target_face</span><span class="p">,</span> <span class="s1">&#39;[int]&#39;</span><span class="p">,</span> <span class="n">div</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">detection_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;detectionModel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;detection_model&quot;</span><span class="p">,</span> <span class="n">detection_model</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct body</span>
+        <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">image_url</span><span class="p">,</span> <span class="s1">&#39;ImageUrl&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;PersistedFace&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">add_face_from_url</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.list_faces"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list_faces">[docs]</a>    <span class="k">def</span> <span class="nf">list_faces</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List all faces in a large face list, and retrieve face information</span>
+<span class="sd">        (including userData and persistedFaceIds of registered faces of the</span>
+<span class="sd">        face).</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param start: Starting face id to return (used to list a range of</span>
+<span class="sd">         faces).</span>
+<span class="sd">        :type start: str</span>
+<span class="sd">        :param top: Number of faces to return starting with the face id</span>
+<span class="sd">         indicated by the &#39;start&#39; parameter.</span>
+<span class="sd">        :type top: int</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: list or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">         list[~azure.cognitiveservices.vision.face.models.PersistedFace] or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_faces</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">top</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">minimum</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;[PersistedFace]&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">list_faces</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces&#39;</span><span class="p">}</span>
+
+<div class="viewcode-block" id="LargeFaceListOperations.add_face_from_stream"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_stream">[docs]</a>    <span class="k">def</span> <span class="nf">add_face_from_stream</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_face</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">detection_model</span><span class="o">=</span><span class="s2">&quot;detection_01&quot;</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a face to a specified large face list, up to 1,000,000 faces.</span>
+<span class="sd">        &lt;br /&gt; To deal with an image contains multiple faces, input face can be</span>
+<span class="sd">        specified as an image with a targetFace rectangle. It returns a</span>
+<span class="sd">        persistedFaceId representing the added face. No image will be stored.</span>
+<span class="sd">        Only the extracted face feature will be stored on server until</span>
+<span class="sd">        [LargeFaceList Face -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)</span>
+<span class="sd">        or [LargeFaceList -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Note persistedFaceId is different from faceId generated by [Face</span>
+<span class="sd">        -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span>
+<span class="sd">        * Higher face image quality means better recognition precision. Please</span>
+<span class="sd">        consider high-quality faces: frontal, clear, and face size is 200x200</span>
+<span class="sd">        pixels (100 pixels between eyes) or bigger.</span>
+<span class="sd">        * JPEG, PNG, GIF (the first frame), and BMP format are supported. The</span>
+<span class="sd">        allowed image file size is from 1KB to 6MB.</span>
+<span class="sd">        * &quot;targetFace&quot; rectangle should contain one face. Zero or multiple</span>
+<span class="sd">        faces will be regarded as an error. If the provided &quot;targetFace&quot;</span>
+<span class="sd">        rectangle is not returned from [Face -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236),</span>
+<span class="sd">        there’s no guarantee to detect and add the face successfully.</span>
+<span class="sd">        * Out of detectable face size (36x36 - 4096x4096 pixels), large</span>
+<span class="sd">        head-pose, or large occlusions will cause failures.</span>
+<span class="sd">        * Adding/deleting faces to/from a same face list are processed</span>
+<span class="sd">        sequentially and to/from different face lists are in parallel.</span>
+<span class="sd">        * The minimum detectable face size is 36x36 pixels in an image no</span>
+<span class="sd">        larger than 1920x1080 pixels. Images with dimensions higher than</span>
+<span class="sd">        1920x1080 pixels will need a proportionally larger minimum face size.</span>
+<span class="sd">        * Different &#39;detectionModel&#39; values can be provided. To use and compare</span>
+<span class="sd">        different detection models, please refer to [How to specify a detection</span>
+<span class="sd">        model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span>
+<span class="sd">        | Model | Recommended use-case(s) |</span>
+<span class="sd">        | ---------- | -------- |</span>
+<span class="sd">        | &#39;detection_01&#39;: | The default detection model for [LargeFaceList -</span>
+<span class="sd">        Add</span>
+<span class="sd">        Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span>
+<span class="sd">        Recommend for near frontal face detection. For scenarios with</span>
+<span class="sd">        exceptionally large angle (head-pose) faces, occluded faces or wrong</span>
+<span class="sd">        image orientation, the faces in such cases may not be detected. |</span>
+<span class="sd">        | &#39;detection_02&#39;: | Detection model released in 2019 May with improved</span>
+<span class="sd">        accuracy especially on small, side and blurry faces. |</span>
+<span class="sd">        Quota:</span>
+<span class="sd">        * Free-tier subscription quota: 1,000 faces per large face list.</span>
+<span class="sd">        * S0-tier subscription quota: 1,000,000 faces per large face list.</span>
+
+<span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
+<span class="sd">         list.</span>
+<span class="sd">        :type large_face_list_id: str</span>
+<span class="sd">        :param image: An image stream.</span>
+<span class="sd">        :type image: Generator</span>
+<span class="sd">        :param user_data: User-specified data about the face for any purpose.</span>
+<span class="sd">         The maximum length is 1KB.</span>
+<span class="sd">        :type user_data: str</span>
+<span class="sd">        :param target_face: A face rectangle to specify the target face to be</span>
+<span class="sd">         added to a person in the format of &quot;targetFace=left,top,width,height&quot;.</span>
+<span class="sd">         E.g. &quot;targetFace=10,10,100,100&quot;. If there is more than one face in the</span>
+<span class="sd">         image, targetFace is required to specify which face to add. No</span>
+<span class="sd">         targetFace means there is only one face detected in the entire image.</span>
+<span class="sd">        :type target_face: list[int]</span>
+<span class="sd">        :param detection_model: Name of detection model. Detection model is</span>
+<span class="sd">         used to detect faces in the submitted image. A detection model name</span>
+<span class="sd">         can be provided when performing Face - Detect or (Large)FaceList - Add</span>
+<span class="sd">         Face or (Large)PersonGroup - Add Face. The default value is</span>
+<span class="sd">         &#39;detection_01&#39;, if another model is needed, please explicitly specify</span>
+<span class="sd">         it. Possible values include: &#39;detection_01&#39;, &#39;detection_02&#39;</span>
+<span class="sd">        :type detection_model: str or</span>
+<span class="sd">         ~azure.cognitiveservices.vision.face.models.DetectionModel</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: returns the direct response alongside the</span>
+<span class="sd">         deserialized response</span>
+<span class="sd">        :param callback: When specified, will be called with each chunk of</span>
+<span class="sd">         data that is streamed. The callback should take two arguments, the</span>
+<span class="sd">         bytes of the current chunk of data and the response object. If the</span>
+<span class="sd">         data is uploading, response will be None.</span>
+<span class="sd">        :type callback: Callable[Bytes, response=None]</span>
+<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
+<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
+<span class="sd">        :return: PersistedFace or ClientRawResponse if raw=true</span>
+<span class="sd">        :rtype: ~azure.cognitiveservices.vision.face.models.PersistedFace or</span>
+<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`APIErrorException&lt;azure.cognitiveservices.vision.face.models.APIErrorException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_face_from_stream</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Endpoint&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.endpoint&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">skip_quote</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="s1">&#39;largeFaceListId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;large_face_list_id&quot;</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;^[a-z0-9-_]+$&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">user_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;userData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;user_data&quot;</span><span class="p">,</span> <span class="n">user_data</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_face</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;targetFace&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;target_face&quot;</span><span class="p">,</span> <span class="n">target_face</span><span class="p">,</span> <span class="s1">&#39;[int]&#39;</span><span class="p">,</span> <span class="n">div</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">detection_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;detectionModel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;detection_model&quot;</span><span class="p">,</span> <span class="n">detection_model</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/octet-stream&#39;</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+
+        <span class="c1"># Construct body</span>
+        <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">stream_upload</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">APIErrorException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;PersistedFace&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="k">return</span> <span class="n">deserialized</span></div>
+    <span class="n">add_face_from_stream</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/largefacelists/</span><span class="si">{largeFaceListId}</span><span class="s1">/persistedfaces&#39;</span><span class="p">}</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>
